@@ -1,508 +1,592 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "X Sentiment Tracker",
+  "schemaVersion": 1,
+  "description": "兩分頁的每日交易者儀表板「總經 & 情緒」。Tab 1 = X Sentiment(BTC/ETH 情緒分數 + BTC 價格雙軸對比圖,三色區分:BTC 情緒=橘、ETH 情緒=紫、BTC 價格=青),Tab 2 = Morning Macro Brief(VIX/VIX3M、DXY、MOVE、HYG、10Y nominal/TIPS real、BTC-NDX 相關性、Total 3、OTHERS.D、過去 24h 5 條重要新聞、日曆式今日+本週事件)。每個指標附閾值刻度條 + 白話解讀。所有時間以台灣時間 (UTC+8) 顯示。每天由 scheduled task `daily-crypto-x-sentiment` 在 10:08 AM 同時更新兩個分頁的數據。",
+  "mcpTools": [
+    "mcp__fe1f630a-ecd1-485f-9e73-49b376874532__call-actor",
+    "mcp__fe1f630a-ecd1-485f-9e73-49b376874532__get-actor-output",
+    "mcp__workspace__bash"
+  ],
+  "mcpServerNames": [
+    "Apify",
+    "Apify",
+    "workspace"
+  ]
+}
+</script>
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto Sentiment Dashboard</title>
+<title>總經 & 情緒</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
 <style>
-  :root {
-    --bg: #0d1117; --card: #161b22; --border: #30363d;
-    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
-    --green: #3fb950; --red: #f85149; --yellow: #d29922;
-    --purple: #bc8cff; --orange: #db6d28;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; }
-  .header { background: var(--card); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
-  .header h1 { font-size: 18px; font-weight: 600; }
-  .header .badge { background: var(--accent); color: #000; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; }
-  .tabs { display: flex; border-bottom: 1px solid var(--border); padding: 0 24px; background: var(--card); }
-  .tab { padding: 12px 16px; cursor: pointer; border-bottom: 2px solid transparent; color: var(--muted); font-size: 13px; transition: all .2s; }
-  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .tab:hover { color: var(--text); }
-  .content { display: none; padding: 24px; max-width: 1200px; margin: 0 auto; }
-  .content.active { display: block; }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
-  @media(max-width:768px) { .grid2,.grid3,.grid4 { grid-template-columns: 1fr; } }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
-  .card-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin-bottom: 8px; }
-  .card-value { font-size: 28px; font-weight: 700; }
-  .card-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
-  .card-explain { font-size: 12px; color: var(--muted); margin-top: 8px; border-top: 1px solid var(--border); padding-top: 8px; }
-  .bullish { color: var(--green); }
-  .bearish { color: var(--red); }
-  .neutral-c { color: var(--yellow); }
-  .greed { color: var(--orange); }
-  .euphoric { color: #ff6b6b; }
-  .fear { color: var(--yellow); }
-  .extreme-fear { color: var(--red); }
-  .verdict-go { background: rgba(63,185,80,.15); border-color: var(--green); }
-  .verdict-caution { background: rgba(210,153,34,.15); border-color: var(--yellow); }
-  .verdict-nogo { background: rgba(248,81,73,.15); border-color: var(--red); }
-  .progress-bar { height: 8px; border-radius: 4px; background: var(--border); margin-top: 8px; overflow: hidden; }
-  .progress-fill { height: 100%; border-radius: 4px; transition: width .5s; }
-  .news-list, .cal-list { list-style: none; }
-  .news-list li, .cal-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; display: flex; gap: 10px; align-items: flex-start; }
-  .news-list li:last-child, .cal-list li:last-child { border-bottom: none; }
-  .news-num { background: var(--border); color: var(--muted); min-width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
-  .cal-date { font-size: 11px; color: var(--accent); font-weight: 600; white-space: nowrap; min-width: 70px; }
-  .section-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-  .alert { background: rgba(210,153,34,.1); border: 1px solid var(--yellow); border-radius: 6px; padding: 10px 14px; font-size: 12px; color: var(--yellow); margin-bottom: 16px; }
-  .hist-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
-  .hist-date { color: var(--muted); min-width: 80px; }
-  .hist-score-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--border); overflow: hidden; }
-  .hist-score-fill { height: 100%; border-radius: 3px; }
-  .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; }
-  .tag-bull { background: rgba(63,185,80,.2); color: var(--green); }
-  .tag-bear { background: rgba(248,81,73,.2); color: var(--red); }
-  .tag-neutral { background: rgba(139,148,158,.2); color: var(--muted); }
-  .tag-ebull { background: rgba(255,107,107,.2); color: #ff6b6b; }
-  .evidence-card { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; }
-  .evidence-user { color: var(--accent); font-size: 11px; font-weight: 600; }
-  .evidence-text { font-size: 12px; color: var(--text); margin: 4px 0; line-height: 1.4; }
-  .evidence-meta { font-size: 11px; color: var(--muted); }
-  .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
-  .metric-row:last-child { border-bottom: none; }
-  .metric-label { color: var(--muted); }
-  .verdict-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 13px; }
-  .vb-go { background: rgba(63,185,80,.2); color: var(--green); border: 1px solid var(--green); }
-  .vb-caution { background: rgba(210,153,34,.2); color: var(--yellow); border: 1px solid var(--yellow); }
-  .vb-nogo { background: rgba(248,81,73,.2); color: var(--red); border: 1px solid var(--red); }
-  .vb-pending { background: rgba(139,148,158,.2); color: var(--muted); border: 1px solid var(--border); }
-  footer { text-align: center; padding: 20px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); margin-top: 40px; }
+:root { color-scheme: light; --bg:#0e1116; --surface:#161a21; --surface-2:#1c2128; --border:#2a2f38; --border-bright:#3a4150; --btc:#f7931a; --eth:#6a7fff; --price:#00d4ff; --text:#e6e6e6; --text-mid:#b5bac4; --text-dim:#8b95a3; --text-faint:#5d6675; --success:#4ade80; --warn:#f59e0b; --danger:#ef4444; --accent:#5dadec; --purple:#a78bfa; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:var(--sans); background:var(--bg); color:var(--text); font-size:14px; line-height:1.55; padding:24px; }
+.dashboard { max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:18px; }
+.status-bar { display:flex; justify-content:space-between; padding:8px 14px; background:var(--surface); border:1px solid var(--border); border-radius:8px; font-size:11px; color:var(--text-dim); font-family:var(--mono); }
+.status-bar .live { color:var(--success); }
+.status-bar .live::before { content:'● '; }
+.hero { padding:22px 26px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
+.hero h1 { font-size:28px; font-weight:600; }
+.hero h1 .tag { font-family:var(--mono); font-size:12px; color:var(--text-dim); font-weight:400; margin-left:12px; }
+.hero .subtitle { margin-top:4px; font-size:13px; color:var(--text-mid); }
+.hero .accent { color:var(--accent); }
+.tab-bar { display:flex; gap:4px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:6px; }
+.tab-btn { flex:1; padding:11px 18px; background:transparent; border:1px solid transparent; color:var(--text-dim); font-size:13px; font-weight:500; cursor:pointer; border-radius:7px; }
+.tab-btn.active { background:var(--surface-2); color:var(--text); border-color:var(--border-bright); }
+.tab-btn .badge { font-family:var(--mono); font-size:10px; padding:2px 6px; border-radius:3px; background:rgba(255,255,255,0.06); color:var(--text-dim); margin-left:8px; }
+.tab-panel { display:none; flex-direction:column; gap:18px; }
+.tab-panel.active { display:flex; }
+.metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.metric { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px 18px; position:relative; overflow:hidden; }
+.metric::before { content:''; position:absolute; top:0; left:0; width:3px; height:28px; background:var(--text-faint); border-radius:0 2px 2px 0; }
+.metric.btc::before { background:var(--btc); } .metric.eth::before { background:var(--eth); } .metric.warn::before { background:var(--warn); } .metric.danger::before { background:var(--danger); } .metric.success::before { background:var(--success); } .metric.accent::before { background:var(--accent); } .metric.purple::before { background:var(--purple); }
+.metric .label { font-size:11px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px; }
+.metric .value { font-family:var(--mono); font-size:28px; font-weight:600; line-height:1; }
+.metric.btc .value { color:var(--btc); } .metric.eth .value { color:var(--eth); }
+.metric .value.med { font-size:22px; } .metric .value.small { font-size:18px; }
+.metric .sub { margin-top:8px; font-size:12px; color:var(--text-mid); display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.tag-band { display:inline-block; padding:2px 8px; border-radius:4px; font-size:10.5px; font-weight:600; text-transform:uppercase; }
+.t-fear { background:rgba(245,158,11,0.15); color:#f5b042; }
+.t-extreme_fear { background:rgba(239,68,68,0.15); color:#ff6b6b; }
+.t-neutral { background:rgba(139,149,163,0.15); color:var(--text-mid); }
+.t-greed { background:rgba(74,222,128,0.15); color:var(--success); }
+.t-euphoric { background:rgba(93,173,236,0.18); color:var(--accent); }
+.regime-tag { display:inline-block; padding:3px 9px; border-radius:4px; font-size:10.5px; font-weight:600; font-family:var(--mono); }
+.r-too_low { background:rgba(245,158,11,0.18); color:var(--warn); }
+.r-normal { background:rgba(139,149,163,0.15); color:var(--text-mid); }
+.r-low_calm { background:rgba(74,222,128,0.15); color:var(--success); }
+.r-good { background:rgba(74,222,128,0.15); color:var(--success); }
+.r-pressure { background:rgba(245,158,11,0.18); color:var(--warn); }
+.r-danger { background:rgba(239,68,68,0.18); color:var(--danger); }
+.vel { font-family:var(--mono); font-size:11.5px; }
+.vel.flat { color:var(--text-dim); } .vel.up { color:var(--success); } .vel.down { color:var(--danger); }
+.delta { font-family:var(--mono); font-size:11.5px; }
+.delta.pos { color:var(--success); } .delta.neg { color:var(--danger); }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px 24px; }
+.card .head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+.card .title { font-size:13px; font-weight:600; }
+.card .meta { font-family:var(--mono); font-size:11px; color:var(--text-dim); }
+.thresh-wrap { margin-top:12px; }
+.thresh-zones { display:flex; height:7px; border-radius:3px; overflow:hidden; background:var(--surface-2); position:relative; }
+.thresh-zone { height:100%; }
+.tz-red { background:rgba(239,68,68,0.45); } .tz-orange { background:rgba(245,158,11,0.45); } .tz-gray { background:rgba(139,149,163,0.30); } .tz-green { background:rgba(74,222,128,0.40); } .tz-darkred { background:rgba(239,68,68,0.75); } .tz-purple { background:rgba(167,139,250,0.40); }
+.thresh-pointer { position:absolute; top:-3px; width:2px; height:13px; background:var(--text); transform:translateX(-50%); }
+.thresh-marks { display:flex; margin-top:18px; font-size:9.5px; color:var(--text-faint); font-family:var(--mono); }
+.thresh-mark { flex:1; text-align:center; padding:0 2px; }
+.indicator-explain { margin-top:10px; font-size:11.5px; color:var(--text-mid); padding:8px 10px; background:rgba(255,255,255,0.02); border-radius:5px; border-left:2px solid var(--text-faint); }
+.indicator-explain.warn { border-left-color:var(--warn); }
+.indicator-explain.good { border-left-color:var(--success); }
+.indicator-explain.accent { border-left-color:var(--accent); }
+.indicator-explain.danger { border-left-color:var(--danger); }
+.indicator-explain strong { color:var(--text); }
+.chart-wrap { max-width:880px; margin:0 auto; height:280px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+table th { padding:10px 8px; text-align:left; color:var(--text-dim); font-weight:500; font-size:11px; border-bottom:1px solid var(--border); text-transform:uppercase; }
+table td { padding:10px 8px; border-bottom:1px solid var(--border); color:var(--text-mid); }
+table td.num { text-align:right; font-family:var(--mono); }
+table td.dim { color:var(--text-dim); font-family:var(--mono); }
+table td.note { font-size:12.5px; max-width:380px; }
+.score-cell { font-family:var(--mono); font-weight:600; }
+.score-cell.btc { color:var(--btc); } .score-cell.eth { color:var(--eth); } .score-cell.price { color:var(--price); } .score-cell.empty { color:var(--text-faint); }
+.src-tag { font-family:var(--mono); font-size:10px; padding:2px 7px; border-radius:4px; text-transform:uppercase; }
+.src-live { background:rgba(74,222,128,0.12); color:var(--success); }
+.src-batch { background:rgba(139,149,163,0.12); color:var(--text-dim); }
+.brief-row { display:grid; gap:12px; }
+.brief-row.r2 { grid-template-columns:repeat(2,1fr); } .brief-row.r3 { grid-template-columns:repeat(3,1fr); } .brief-row.r4 { grid-template-columns:repeat(4,1fr); } .brief-row.r5 { grid-template-columns:repeat(5,1fr); }
+.alert-banner { padding:11px 16px; border-radius:8px; display:flex; gap:10px; font-size:12.5px; line-height:1.5; }
+.alert-banner.warn { background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.25); color:var(--warn); }
+.alert-banner.danger { background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.25); color:#ff8585; }
+.alert-banner.info { background:rgba(93,173,236,0.08); border:1px solid rgba(93,173,236,0.25); color:var(--accent); }
+.alert-banner.success { background:rgba(74,222,128,0.08); border:1px solid rgba(74,222,128,0.30); color:var(--success); }
+.layer1-grid { display:flex; flex-direction:column; gap:10px; margin-top:18px; }
+.layer1-cond { display:flex; gap:14px; padding:12px 16px; background:var(--surface-2); border:1px solid var(--border); border-left:3px solid; border-radius:6px; align-items:center; }
+.layer1-cond.pass { border-left-color:var(--success); }
+.layer1-cond.fail { border-left-color:var(--danger); }
+.layer1-cond.pending { border-left-color:var(--warn); }
+.cond-num { font-family:var(--mono); font-size:22px; font-weight:700; width:28px; text-align:center; }
+.layer1-cond.pass .cond-num { color:var(--success); } .layer1-cond.fail .cond-num { color:var(--danger); } .layer1-cond.pending .cond-num { color:var(--warn); }
+.cond-content { flex:1; } .cond-rule { font-size:13px; font-weight:500; } .cond-current { font-family:var(--mono); font-size:11.5px; color:var(--text-dim); margin-top:4px; }
+.cond-status { font-size:12px; font-weight:600; padding:4px 10px; border-radius:4px; font-family:var(--mono); }
+.layer1-cond.pass .cond-status { color:var(--success); background:rgba(74,222,128,0.12); }
+.layer1-cond.fail .cond-status { color:var(--danger); background:rgba(239,68,68,0.12); }
+.layer1-cond.pending .cond-status { color:var(--warn); background:rgba(245,158,11,0.12); }
+.layer1-conclusion { padding:14px 18px; border-radius:8px; margin-top:16px; font-size:13.5px; display:flex; gap:12px; }
+.layer1-conclusion .verdict-icon { font-size:22px; }
+.layer1-conclusion.warn { background:rgba(245,158,11,0.10); border:1px solid rgba(245,158,11,0.3); color:var(--warn); }
+.layer1-conclusion.danger { background:rgba(239,68,68,0.10); border:1px solid rgba(239,68,68,0.3); color:#ff8585; }
+.layer1-conclusion.success { background:rgba(74,222,128,0.10); border:1px solid rgba(74,222,128,0.3); color:var(--success); }
+.layer1-conclusion .conc-text { color:var(--text-mid); flex:1; }
+.layer1-conclusion .conc-text strong { color:var(--text); }
+.news-item { display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--border); }
+.news-item:last-child { border-bottom:none; }
+.news-dot { flex-shrink:0; width:10px; height:10px; border-radius:50%; margin-top:6px; }
+.news-dot.high { background:var(--danger); } .news-dot.med { background:var(--warn); }
+.news-content { flex:1; }
+.news-title { font-size:13px; color:var(--text); font-weight:500; }
+.news-source { font-family:var(--mono); font-size:10.5px; color:var(--text-dim); margin-top:4px; }
+.calendar { display:flex; flex-direction:column; gap:14px; }
+.cal-day { background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:14px 16px; }
+.cal-day.today { border-color:var(--accent); }
+.cal-day-header { display:flex; gap:10px; margin-bottom:10px; padding-bottom:8px; border-bottom:1px dashed var(--border); }
+.cal-day-date { font-size:14px; font-weight:600; font-family:var(--mono); }
+.cal-day-label { font-size:11px; color:var(--text-dim); padding:2px 8px; background:rgba(255,255,255,0.04); border-radius:4px; }
+.cal-day.today .cal-day-label { background:rgba(93,173,236,0.20); color:var(--accent); }
+.cal-event { display:flex; gap:12px; padding:7px 0; }
+.cal-event-time { width:110px; font-family:var(--mono); font-size:11.5px; color:var(--text-dim); }
+.cal-event-time.high { color:var(--danger); font-weight:600; } .cal-event-time.med { color:var(--warn); }
+.cal-event-content { flex:1; font-size:13px; color:var(--text-mid); }
+.cal-event-content.high { color:var(--text); font-weight:500; }
+.cal-event-tag { padding:1px 6px; font-size:10px; font-family:var(--mono); border-radius:3px; margin-left:6px; }
+.cal-event-tag.fed { background:rgba(239,68,68,0.18); color:#ff8585; }
+.cal-event-tag.macro { background:rgba(93,173,236,0.15); color:var(--accent); }
+.cal-event-tag.crypto { background:rgba(247,147,26,0.18); color:var(--btc); }
+.foot { text-align:center; font-family:var(--mono); font-size:11px; color:var(--text-faint); padding-top:8px; }
+@media (max-width:900px) {
+  .metrics, .brief-row.r4, .brief-row.r5 { grid-template-columns:repeat(2,1fr); }
+  .brief-row.r3, .brief-row.r2 { grid-template-columns:1fr; }
+  body { padding:14px; }
+}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <span>📊</span>
-  <h1>Crypto · 總經 &amp; 情緒 Dashboard</h1>
-  <span class="badge" id="today-badge">2026-05-11</span>
-  <span style="margin-left:auto;color:var(--muted);font-size:12px;">UTC+8 台北</span>
+<div class="dashboard">
+
+  <div class="status-bar">
+    <div><span class="live">LIVE</span> &nbsp;總經 &amp; 情緒 &nbsp; <span id="briefDate">2026-05-11 (週一)</span></div>
+    <div><span id="tpeClock">TPE 10:08</span> &nbsp; v4.8</div>
+  </div>
+
+  <div class="hero">
+    <h1>總經 &amp; 情緒 <span class="tag">// daily trader cockpit</span></h1>
+    <div class="subtitle">每天 10:08 (台北) 自動更新 · <span class="accent">早盤總經 brief + X 情緒追蹤 + 小幣框架 Layer 1</span> · 17 天歷史</div>
+  </div>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="sentiment" onclick="switchTab('sentiment')">X Sentiment <span class="badge">BTC/ETH</span></button>
+    <button class="tab-btn" data-tab="brief" onclick="switchTab('brief')">Morning Brief <span class="badge">MACRO</span></button>
+  </div>
+
+  <!-- ========== TAB 1: X SENTIMENT ========== -->
+  <div class="tab-panel active" id="tab-sentiment">
+
+    <div class="alert-banner success">
+      <strong style="color:var(--success);">5/11 weekend gap 補位 + 雙幣 sentiment 同步 +9~+10 真情緒上行</strong> — BTC 56→66.5(greed)+$79.57K→$81.50K(+2.43% vs 5/8);ETH 53→62.2(greed)+$2,277→$2,358(+3.55%)。EN bull cluster broad-based(Iran 緩和 + $82K reclaim + Lyn Alden bottom-is-in narrative)。⚠ ETH viral_news_dominates 45.6%,須 watch beta-only 行情風險。
+    </div>
+
+    <div class="metrics" id="metrics"></div>
+
+    <div class="card">
+      <div class="head">
+        <div class="title">情緒分數 vs BTC 價格</div>
+        <div class="meta" id="chartMeta"></div>
+      </div>
+      <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
+      <div class="indicator-explain accent" style="margin-top:14px;">
+        BTC 情緒 56→66.5,價 $79.57K→$81.50K,<strong style="color:var(--success);">同步走升非單邊 sentiment 拉爆</strong>。守 $82K + ETF 轉正才算真動能。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head">
+        <div class="title">情緒分數 vs ETH 價格</div>
+        <div class="meta">ETH 17 天獨立檢視</div>
+      </div>
+      <div class="chart-wrap"><canvas id="ethChart"></canvas></div>
+      <div class="indicator-explain accent" style="margin-top:14px;">
+        ETH $2,277→$2,358 (+3.55%),sentiment 53→62.2,但 <strong>top2_eng = 45.6% viral_dominates</strong>。<strong>解讀:beta-only 反彈</strong>,要 ETH/BTC 止跌才算真輪動。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head">
+        <div class="title">🔥 Top 3 有意義討論(過去 24h)</div>
+        <div class="meta">挑「有具體 levels / 有 thesis / 有 setup」,不是純警報新聞</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;">
+            <a href="https://x.com/pete_rizzo_/status/2053565907369148460" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:13.5px;">#1 @pete_rizzo_ — Lyn Alden: BTC base case「bottom is in」</a>
+            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">782 eng · 31 replies</span>
+          </div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">macro thesis · Lyn Alden 罕見明牌 base case <strong style="color:var(--text);">「fast capital is already out + sellers are exhausted + breakout soon」</strong>。屬「無具體 invalidation 但有 hedge fund 級別 thesis」型訊號,適合放 watchlist 作 sentiment confirmation。</div>
+        </div>
+        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;">
+            <a href="https://x.com/TedPillows/status/2053438148395364469" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:13.5px;">#2 @TedPillows — BTC 清算地圖不對稱(空多 1:3.4)</a>
+            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">845 eng · 110 replies</span>
+          </div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">微觀結構 · <strong style="color:var(--text);">BTC +$10K = $4.3B 空單清算;BTC -$10K = $14.5B 多單清算</strong>(1:3.4 不對稱,下方 fuel 遠多於上方)。結論「max pain to downside next 2-3 months」與 #1 衝突,屬「對 5/7 推特狂熱的 healthy bear thesis」。本週 $82K 試探若失敗,$78K-$76K 區清算池仍會被吸引。</div>
+        </div>
+        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--warn);border-radius:6px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;">
+            <a href="https://x.com/Roman_Trading/status/2053607947175899370" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:13.5px;">#3 @Roman_Trading — BTC weekly exhaustion 衝突 EN bull cluster</a>
+            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">160 eng · 26 replies</span>
+          </div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">TA invalidation · <strong style="color:var(--text);">「BTC 週末上漲常見週一回吐 + bear divs RSI/MACD + diagonal resistance」</strong>。具體 invalidation 訊號 — 若 5/11(今日)收紅且突破 $82K diagonal resistance,該 thesis 就 invalid。屬「有出場條件的 short bias」。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head">
+        <div class="title">歷史明細</div>
+        <div class="meta" id="logMeta"></div>
+      </div>
+      <table id="historyTable">
+        <thead><tr><th>日期</th><th>BTC 分數</th><th>BTC Δ</th><th>BTC 價</th><th>ETH 分數</th><th>ETH 價</th><th>來源</th><th>備註</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ========== TAB 2: MORNING BRIEF ========== -->
+  <div class="tab-panel" id="tab-brief">
+
+    <div class="card" style="border-left:4px solid var(--accent);">
+      <div class="head">
+        <div class="title">🎯 今日總結論(雙 verdict)</div>
+        <div class="meta">資金面 + 小幣框架 = 行動建議</div>
+      </div>
+      <div style="padding:8px 0;">
+        <div style="font-size:16px;color:var(--text);margin-bottom:12px;">
+          <strong style="color:var(--warn);">🟡 資金面 caution</strong> + <strong style="color:var(--warn);">🟡 小幣框架 PENDING</strong> = <strong style="color:var(--accent);font-size:18px;">觀望(weekend gap 無 7D dir 訊號)</strong>
+        </div>
+        <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-mid);line-height:1.8;">
+          <li><strong style="color:var(--success);">可做:</strong> sentiment 真情緒 +10/+9 + 價格同步突破 + VIX/VIX3M 0.84 calm,屬「短期做多 with stop」窗口,但 size ≤ 1/4 Kelly,不重押</li>
+          <li><strong style="color:var(--warn);">先別:</strong> 不做 alt 板塊 — Layer 1 conditions weekend gap 無 7D 方向確認(C1/C2 pending,只有 C3 pass)。等到 5/13 CPI 後才有資金面綠燈確認</li>
+          <li><strong style="color:var(--danger);">關鍵風險:</strong> <strong>5/12 (週二) 20:30 US CPI(4月)</strong>;<strong>16:30 前進入棄權窗口</strong>。鴿派 → BTC 突破 $84K CME gap;鷹派 → 跌回 $78K 測試。Powell 5/15 任期屆滿、Warsh 提名聽證</li>
+          <li><strong>regime 警示:</strong> BTC-NDX 7D corr +0.05(從 5/8 的 -0.22 回升至接近 0)= crypto 跟美股 decoupling 仍持續,macro 訊號傳染弱,須緊盯 on-chain(ETF/whale/清算)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== 🌐 整體市場資金面 ===== -->
+    <div class="card">
+      <div class="head">
+        <div class="title">🌐 整體市場資金面</div>
+        <div class="meta">大盤錢有沒有在進場 · macro/risk · yfinance live</div>
+      </div>
+      <div class="brief-row r4">
+        <div class="metric">
+          <div class="label">VIX / VIX3M 比值</div>
+          <div class="value med">0.839</div>
+          <div class="sub"><span class="regime-tag r-too_low">🟡 過鬆邊緣</span><span class="delta" style="color:var(--text-dim);">≈ flat vs 5/8</span></div>
+          <div class="indicator-explain warn">&lt; 0.85 短波偏低,意外事件易 spike。<strong>contrarian 警訊持續</strong>。</div>
+        </div>
+        <div class="metric success">
+          <div class="label">MOVE Index</div>
+          <div class="value med">67.25</div>
+          <div class="sub"><span class="regime-tag r-low_calm">🟢 低位平靜</span><span class="delta neg">-4.99 1D</span></div>
+          <div class="indicator-explain good">&lt; 80 risk-on,72.24→67.25 走低,債市無壓力。</div>
+        </div>
+        <div class="metric accent">
+          <div class="label">DXY (美元)</div>
+          <div class="value med">98.06</div>
+          <div class="sub"><span class="regime-tag r-normal">🟢 正常</span><span class="delta pos">+0.22 1D</span></div>
+          <div class="indicator-explain accent">USD 微升,對 BTC 略不利但影響小。</div>
+        </div>
+        <div class="metric purple">
+          <div class="label">10Y TIPS 真實</div>
+          <div class="value med">1.90%</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 偏高(降中)</span><span class="delta neg">-4bp 1D</span></div>
+          <div class="indicator-explain">1.94%→1.90%,仍 &gt; 1.5% 屬偏高,邊際緩解。</div>
+        </div>
+      </div>
+      <div class="brief-row r3" style="margin-top:12px;">
+        <div class="metric warn">
+          <div class="label">BTC ETF 5D 流入</div>
+          <div class="value med">-$423M</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 連 2 日流出</span><span style="font-size:10.5px;color:var(--text-faint);">5/8 -$145M(FBTC -$97.6M / IBIT -$27.2M)</span></div>
+          <div class="indicator-explain warn">連 2 日流出(-$277.5M / -$145.6M),需 single day &gt; +$200M 才轉綠。</div>
+        </div>
+        <div class="metric">
+          <div class="label">BTC-NDX 30D 相關</div>
+          <div class="value med">0.30</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 中度連動</span><span class="delta neg">-0.12 vs 5/8</span></div>
+          <div class="indicator-explain">0.42→0.30,跟美股關聯走弱,crypto 因素主導。</div>
+        </div>
+        <div class="metric danger">
+          <div class="label">BTC-NDX 7D 相關</div>
+          <div class="value med">+0.05</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 接近 zero(decoupled)</span><span class="delta pos">+0.27 vs 5/8</span></div>
+          <div class="indicator-explain warn">-0.22→+0.05,接近 0 = <strong>decoupling 持續</strong>,ETF/whale 主導。</div>
+        </div>
+      </div>
+      <div class="alert-banner warn" style="margin-top:18px;">
+        <span style="font-size:24px;">🟡</span>
+        <div style="flex:1;">
+          <strong>資金面 verdict: CAUTION</strong> · 債市穩(MOVE 67) + DXY 略升 + TIPS 降但仍偏高 + ETF 連 2 日流出 + BTC-NDX 7D 仍 decoupled。<strong>5/12 CPI 是關鍵轉綠/轉紅分水嶺</strong>。
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 🎯 小幣框架 ===== -->
+    <div class="card">
+      <div class="head">
+        <div class="title">🎯 小幣框架(Alt 動不動)</div>
+        <div class="meta">BTC.D / OTHERS.D / TOTAL3.D / Layer 1 三條件 · CoinGecko 5/11</div>
+      </div>
+      <div class="brief-row r4">
+        <div class="metric btc">
+          <div class="label">BTC.D</div>
+          <div class="value med">58.24%</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-normal">🟡 flat vs 5/8</span><span class="delta neg">-0.17 vs 5/8</span></div>
+        </div>
+        <div class="metric success">
+          <div class="label">OTHERS.D ⭐</div>
+          <div class="value med">11.21%</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-normal">🟡 &gt; 11% 但 flat</span><span class="delta pos">+0.07 vs 5/8</span></div>
+        </div>
+        <div class="metric purple">
+          <div class="label">TOTAL3.D</div>
+          <div class="value med">31.60%</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-good">🟢 &gt; 28% ✅</span><span class="delta pos">+0.09 vs 5/8</span></div>
+        </div>
+        <div class="metric danger">
+          <div class="label">ETH/BTC ratio</div>
+          <div class="value med">0.02893</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-pressure">🟡 微反彈</span><span class="delta pos">+1.08% vs 5/8</span></div>
+        </div>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="metric warn">
+          <div class="label">ASI(CMC 發布)</div>
+          <div class="value med">~39</div>
+          <div class="sub"><span class="regime-tag r-normal">🟡 弱輪 (&lt; 50 中性線)</span><span style="font-size:10.5px;color:var(--text-faint);">沿用 5/8 · CMC 週末未更新</span></div>
+          <div class="indicator-explain">~39 仍 BTC 主導。<strong>真輪動需 ASI &gt; 50 + BTC.D &lt; 54% 持兩週</strong>。</div>
+        </div>
+      </div>
+
+      <div class="layer1-grid" style="margin-top:18px;">
+        <div class="layer1-cond pending">
+          <div class="cond-num">1</div>
+          <div class="cond-content">
+            <div class="cond-rule">OTHERS.D &gt; 11% AND 7D 方向上行</div>
+            <div class="cond-current">11.21% ✓ 穿門檻 · 但 vs 5/8 +0.07 = <strong style="color:var(--warn);">flat</strong>(weekend gap 5/9-5/10 漏跑 → 4 天有效歷史 &lt; 7 天)</div>
+          </div>
+          <div class="cond-status">⏳ PEND</div>
+        </div>
+        <div class="layer1-cond pending">
+          <div class="cond-num">2</div>
+          <div class="cond-content">
+            <div class="cond-rule">BTC.D 7D 方向下行</div>
+            <div class="cond-current">58.24% · vs 5/8 -0.17 = <strong style="color:var(--warn);">flat</strong>(在 ±0.3 之內)</div>
+          </div>
+          <div class="cond-status">⏳ PEND</div>
+        </div>
+        <div class="layer1-cond pass">
+          <div class="cond-num">3</div>
+          <div class="cond-content">
+            <div class="cond-rule">TOTAL3.D &gt; 28%</div>
+            <div class="cond-current">31.60% &gt; 28% ✓</div>
+          </div>
+          <div class="cond-status">✅ PASS</div>
+        </div>
+      </div>
+
+      <div class="indicator-explain warn" style="margin-top:14px;">
+        <strong>📐 門檻回測:</strong>
+        ① OTHERS.D &gt; 11% 偏早(2021 要站穩 12% 才加速),11.21% 屬早期觀察。
+        ② BTC.D 7D 短窗易 whipsaw,週末 gap 使 effective 4 天。
+        ③ TOTAL3.D &gt; 28% 是 baseline 地板,單通過意義弱。
+        <strong>結論:</strong>1 PASS + 2 PEND ≠ 輪動。<strong>建議升級 C4: ASI &gt; 50 OR ETH/BTC 7D up</strong>。
+      </div>
+
+      <div class="alert-banner warn" style="margin-top:18px;">
+        <span style="font-size:24px;">🟡</span>
+        <div style="flex:1;">
+          <strong>小幣框架 verdict: PENDING (1/3 pass + 2 pend)</strong> · weekend gap 5/9-5/10 缺數據,7D 方向訊號未確認。等 5/12 CPI + 連 3 天有效紀錄後再評估是否升級 GO。
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 過去 24h 5 條新聞 ===== -->
+    <div class="card">
+      <div class="head"><div class="title">過去 24h 重要新聞 Top 5</div><div class="meta">🔴 高 · 🟡 中</div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title">BTC $79.57K→$82.5K→$81.5K(自 1/31 來高,+2.43% vs 5/8),EN bull cluster broad-based</div><div class="news-source">BitcoinMagazine / BitcoinArchive / AshCrypto (X) · 05-10/11</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title">Lyn Alden base case「bottom is in + sellers exhausted + breakout soon」— hedge fund 級 thesis,放 watchlist confirmation</div><div class="news-source">pete_rizzo_ (X) · 05-10</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title">Tim Scott:「America 變 crypto capital」— CLARITY Act 5/14 Senate markup 前政治撐腰</div><div class="news-source">BitcoinArchive (X) / 多家政策媒體 · 05-09</div></div></div>
+      <div class="news-item"><div class="news-dot med"></div><div class="news-content"><div class="news-title">BTC ETF 連 2 日流出(-$277.5M / -$145.6M),4 月累積 +$1.97B 結構性仍在,需 single day &gt; +$200M 轉綠</div><div class="news-source">Farside / CoinGlass · 05-09</div></div></div>
+      <div class="news-item"><div class="news-dot med"></div><div class="news-content"><div class="news-title">Whale Garrett 4 天存 577,896 ETH ($1.35B) 進 Binance,5/10 已賣 50% — 買在 2025 pico-top,capitulation pattern 通常反為利多</div><div class="news-source">OnchainLens / Cryptoemperor06 (X) · 05-10</div></div></div>
+    </div>
+
+    <!-- ===== Calendar ===== -->
+    <div class="card">
+      <div class="head"><div class="title">今日 + 本週日曆(台北時間)</div><div class="meta">macro · earnings · crypto</div></div>
+      <div class="calendar">
+        <div class="cal-day today"><div class="cal-day-header"><span class="cal-day-date">05-11 (週一)</span><span class="cal-day-label">今日</span></div>
+          <div class="cal-event"><div class="cal-event-time med">全天</div><div class="cal-event-content">無重大 macro 數據 · 美股盤前等 5/12 CPI 觀望 <span class="cal-event-tag macro">QUIET</span></div></div>
+          <div class="cal-event"><div class="cal-event-time med">23:00</div><div class="cal-event-content">紐約聯儲 1 年通膨預期(4 月)<span class="cal-event-tag macro">MACRO</span></div></div>
+        </div>
+        <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-12 (週二)</span><span class="cal-day-label">明日 ⚠</span></div>
+          <div class="cal-event"><div class="cal-event-time high">20:30</div><div class="cal-event-content high">US CPI(4 月)hd +0.6% / core +0.3%。<strong>16:30 棄權窗口</strong> <span class="cal-event-tag fed">FED</span></div></div>
+          <div class="cal-event"><div class="cal-event-time med">Warsh 聽證</div><div class="cal-event-content">Powell 接任聽證(Kevin Warsh)— 本週投票,5/15 Powell 任期屆滿 <span class="cal-event-tag fed">FED</span></div></div>
+        </div>
+        <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-14 (週四)</span><span class="cal-day-label">本週 ⚠</span></div>
+          <div class="cal-event"><div class="cal-event-time high">22:30</div><div class="cal-event-content high"><strong>Senate Banking CLARITY Act markup</strong>(Tim Scott 主持)— 加密市場結構法案參院表決。⚠ 銀行業反對穩定幣條款,有延期風險 <span class="cal-event-tag fed">CRYPTO</span></div></div>
+        </div>
+        <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-15 (週五)</span><span class="cal-day-label">本週</span></div>
+          <div class="cal-event"><div class="cal-event-time med">20:30</div><div class="cal-event-content">US PPI(4 月)+ Retail Sales <span class="cal-event-tag macro">MACRO</span></div></div>
+          <div class="cal-event"><div class="cal-event-time med">Powell 離任</div><div class="cal-event-content">Jerome Powell Fed Chair 任期屆滿 <span class="cal-event-tag fed">FED</span></div></div>
+        </div>
+        <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-21 (週三)</span><span class="cal-day-label">下下週</span></div>
+          <div class="cal-event"><div class="cal-event-time med">02:00</div><div class="cal-event-content">FOMC 4/29 會議紀要 <span class="cal-event-tag fed">FED</span></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">Last updated: 2026-05-11 10:08 TPE · v4.8 dashboard · 排程 daily-crypto-x-sentiment v2 · 17 天歷史 · 🟡 Layer 1 PENDING (weekend gap)</div>
 </div>
-
-<div class="tabs">
-  <div class="tab active" onclick="showTab('tab1')">📈 今日指標</div>
-  <div class="tab" onclick="showTab('tab2')">🕐 歷史 &amp; 情緒</div>
-  <div class="tab" onclick="showTab('tab3')">🗓️ 日曆 &amp; 新聞</div>
-</div>
-
-<!-- TAB 1: Today's Metrics -->
-<div class="content active" id="tab1">
-
-  <div id="viral-alert" style="display:none" class="alert">
-    ⚠️ viral_news_dominates：前兩大推文佔總互動 43.5%，情緒分可能被病毒式新聞拉偏。
-  </div>
-
-  <div class="section-title">🎯 雙 Verdict</div>
-  <div class="grid2" style="margin-bottom:24px">
-    <div class="card verdict-caution">
-      <div class="card-title">資金面 Verdict</div>
-      <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
-        <span class="verdict-badge vb-caution" id="fund-verdict">CAUTION</span>
-        <span style="font-size:12px;color:var(--muted)" id="fund-reason">BTC ETF 創紀錄流入但 BTC.D 升至 58.4%，資金集中 BTC，尚未輪動至小幣。</span>
-      </div>
-    </div>
-    <div class="card verdict-caution">
-      <div class="card-title">小幣框架 Layer 1 Verdict</div>
-      <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
-        <span class="verdict-badge vb-caution" id="layer1-verdict">CAUTION</span>
-        <span style="font-size:12px;color:var(--muted)" id="layer1-reason">TOTAL3.D=31.6%>28% (C3 ✓)；BTC.D 7D +2.4pp (C2 ✗)；OTHERS.D 7D 下滑 (C1 ✗)。</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-title">💡 行動建議</div>
-  <div class="card" style="margin-bottom:24px">
-    <div style="font-size:13px;line-height:1.8;color:var(--text)">
-      <strong>BTC：</strong>持有/小加倉，關注 $83-85K 阻力（鯨魚限價單密集），止損設 $78K 以下。<br>
-      <strong>ETH：</strong>觀望，$2,400 尚未有效突破，等週收盤站穩再行動。<br>
-      <strong>山寨：</strong>暫緩重倉，BTC Season（CMC Alt Index 39/100），OTHERS.D 7D 走弱，等 BTC.D 觸頂回落再佈局。<br>
-      <span style="color:var(--yellow)">⚠️ 注意：周二 CPI 數據（5/12）+鮑威爾任期屆滿（5/15）雙重事件風險。</span>
-    </div>
-  </div>
-
-  <div class="section-title">📊 X 情緒</div>
-  <div class="grid4">
-    <div class="card">
-      <div class="card-title">綜合情緒分</div>
-      <div class="card-value greed" id="sent-score">70.3</div>
-      <div class="progress-bar"><div class="progress-fill" id="sent-bar" style="width:70.3%;background:var(--orange)"></div></div>
-      <div class="card-sub" id="sent-band">greed · 貪婪</div>
-      <div class="card-explain">eng加權5級分類，24條有效推文。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">BTC 情緒分</div>
-      <div class="card-value greed" id="btc-score">72.6</div>
-      <div class="progress-bar"><div class="progress-fill" style="width:72.6%;background:var(--orange)"></div></div>
-      <div class="card-sub">greed</div>
-      <div class="card-explain">英/中/日/韓推文，Top 查詢模式。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">ETH 情緒分</div>
-      <div class="card-value greed" id="eth-score">68.0</div>
-      <div class="progress-bar"><div class="progress-fill" style="width:68%;background:var(--orange)"></div></div>
-      <div class="card-sub">greed</div>
-      <div class="card-explain">ETH 接近 $2,400 但尚未站穩，整體偏多。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">互動加權分布</div>
-      <div style="margin-top:8px">
-        <div style="font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Extreme Bull</span><span style="color:#ff6b6b">11.1%</span></div>
-        <div style="font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Bull</span><span class="bullish">48.9%</span></div>
-        <div style="font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Neutral</span><span class="neutral-c">3.3%</span></div>
-        <div style="font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Bear</span><span class="bearish">18.0%</span></div>
-        <div style="font-size:11px;display:flex;justify-content:space-between"><span>Extreme Bear</span><span class="muted">0%</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-title">🏦 Dominance</div>
-  <div class="grid4">
-    <div class="card">
-      <div class="card-title">BTC.D</div>
-      <div class="card-value" id="btc-d">58.4%</div>
-      <div class="card-sub bearish" id="btc-d-7d">7D +2.4pp ↑</div>
-      <div class="card-explain">BTC Season，資金集中比特幣，不利山寨。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">ETH.D</div>
-      <div class="card-value" id="eth-d">10.1%</div>
-      <div class="card-sub" style="color:var(--muted)">7D 略平</div>
-      <div class="card-explain">ETH 市佔維持，等待 $2,400 突破確認。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">OTHERS.D</div>
-      <div class="card-value" id="others-d">14.2%</div>
-      <div class="card-sub bearish" id="others-d-7d">7D -0.6pp ↓</div>
-      <div class="card-explain">>11% 閾值但 7D 走弱，C1 未滿足。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">TOTAL3.D</div>
-      <div class="card-value bullish" id="total3-d">31.6%</div>
-      <div class="card-sub bullish">7D +1.4pp ↑ · C3 ✓</div>
-      <div class="card-explain">>28% 閾值，非 BTC/ETH 小幣盤仍有份量。</div>
-    </div>
-  </div>
-
-  <div class="section-title">🌍 總經指標</div>
-  <div class="grid3">
-    <div class="card">
-      <div class="card-title">恐慌指標</div>
-      <div class="metric-row">
-        <span class="metric-label">VIX</span>
-        <span class="neutral-c">17.2</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">VIX3M</span>
-        <span style="color:var(--muted)">N/A</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">MOVE</span>
-        <span style="color:var(--muted)">N/A</span>
-      </div>
-      <div class="card-explain">VIX 17.2 屬中低波動，市場整體偏冷靜。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">利率 &amp; 美元</div>
-      <div class="metric-row">
-        <span class="metric-label">DXY</span>
-        <span class="neutral-c">~100.5</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">TNX (10Y)</span>
-        <span class="neutral-c">4.38%</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">TIPS 實質利率</span>
-        <span class="bearish">1.90%</span>
-      </div>
-      <div class="card-explain">實質利率 1.9% 仍高，壓制風險資產估值。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">股市 &amp; 加密相關</div>
-      <div class="metric-row">
-        <span class="metric-label">NDX</span>
-        <span class="bullish">29,235</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">BTC 價格</span>
-        <span>$80,952</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">ETH 價格</span>
-        <span>$2,339</span>
-      </div>
-      <div class="card-explain">NDX 創高帶動風險情緒，BTC-NDX 相關性仍高。</div>
-    </div>
-  </div>
-
-  <div class="grid2">
-    <div class="card">
-      <div class="card-title">BTC-NDX 相關性 (估算)</div>
-      <div class="metric-row">
-        <span class="metric-label">30D 相關係數</span>
-        <span class="bullish">~0.72</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">7D 相關係數</span>
-        <span class="bullish">~0.65</span>
-      </div>
-      <div class="card-explain">BTC 與科技股同步上揚，宏觀驅動明顯；高相關意味風險傳導快。</div>
-    </div>
-    <div class="card">
-      <div class="card-title">本週重大事件</div>
-      <div class="metric-row">
-        <span class="metric-label">5/12 CPI</span>
-        <span class="bearish">+3.7% YoY</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">5/15 Fed 主席換屆</span>
-        <span class="neutral-c">Warsh 接任</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-label">5/11 美中峰會</span>
-        <span class="neutral-c">進行中</span>
-      </div>
-      <div class="card-explain">CPI 超預期可能打壓降息預期；Warsh 強硬派背景對幣市不確定。</div>
-    </div>
-  </div>
-
-  <div class="section-title">⚠️ Pre-trade 提醒</div>
-  <div class="card">
-    <ul style="list-style:none;font-size:13px;line-height:2">
-      <li>🕛 <strong>5/12 週二 CPI</strong>：核心 +2.7% YoY 預期，超預期恐引爆拋售。</li>
-      <li>🏛️ <strong>5/15 Fed 主席換屆</strong>：Kevin Warsh 接任鮑威爾，政策態度待觀察。</li>
-      <li>🐋 <strong>鯨魚</strong>：$8,070 萬 BTC 空倉 + $83-85K 限買牆並存，雙向壓力大。</li>
-      <li>📰 <strong>viral_news_dominates</strong>：情緒分受 WatcherGuru Mother's Day 帖 + AshCrypto 軋空帖主導，警惕情緒高估。</li>
-      <li>🇮🇷 <strong>地緣</strong>：美伊談判破裂曾短暫拖累 BTC；進展仍是尾部風險。</li>
-    </ul>
-  </div>
-</div>
-
-<!-- TAB 2: History & Evidence -->
-<div class="content" id="tab2">
-
-  <div class="section-title">📜 歷史紀錄（近 30 天）</div>
-  <div class="card" id="history-list">
-    <!-- filled by JS -->
-  </div>
-
-  <div style="margin-top:24px" class="section-title">🔍 今日推文證據 (BTC Top-5)</div>
-  <div id="evidence-list"></div>
-
-  <div style="margin-top:24px" class="section-title">🏦 Layer 1 條件詳情</div>
-  <div class="card">
-    <div class="metric-row">
-      <span class="metric-label">C1 OTHERS.D &gt; 11%</span>
-      <span class="bullish">✓ 14.2%</span>
-    </div>
-    <div class="metric-row">
-      <span class="metric-label">C1 OTHERS.D 7D 上升</span>
-      <span class="bearish">✗ -0.6pp</span>
-    </div>
-    <div class="metric-row">
-      <span class="metric-label">C2 BTC.D 7D 下降 (±0.3閾)</span>
-      <span class="bearish">✗ +2.4pp (BTC Season)</span>
-    </div>
-    <div class="metric-row">
-      <span class="metric-label">C3 TOTAL3.D &gt; 28%</span>
-      <span class="bullish">✓ 31.6%</span>
-    </div>
-    <div class="metric-row">
-      <span class="metric-label">CMC Alt Season Index</span>
-      <span class="neutral-c">39 / 100 (Bitcoin Season)</span>
-    </div>
-    <div class="metric-row">
-      <span class="metric-label">Layer 1 Verdict</span>
-      <span class="verdict-badge vb-caution">CAUTION</span>
-    </div>
-  </div>
-</div>
-
-<!-- TAB 3: Calendar & News -->
-<div class="content" id="tab3">
-
-  <div class="section-title">🗓️ 本週總經日曆</div>
-  <div class="card">
-    <ul class="cal-list" id="cal-list">
-      <li>
-        <span class="cal-date">2026-05-12</span>
-        <span>CPI 發布：預期核心 +2.7% YoY / +0.3% MoM；超預期可能壓制降息預期。</span>
-      </li>
-      <li>
-        <span class="cal-date">2026-05-15</span>
-        <span>鮑威爾任期屆滿；參議院表決 Kevin Warsh 接任 Fed 主席，強硬立場引市場不確定性。</span>
-      </li>
-      <li>
-        <span class="cal-date">2026-05-11</span>
-        <span>美中峰會（本週）：貿易政策走向影響風險偏好；Clarity Act Mark-up 可能推進加密監管清晰度。</span>
-      </li>
-      <li>
-        <span class="cal-date">2026 Q2</span>
-        <span>Trump 政府「數週內」公布美國戰略比特幣儲備框架細節；SEC Project Crypto NPRM 待發。</span>
-      </li>
-    </ul>
-  </div>
-
-  <div style="margin-top:24px" class="section-title">📰 過去 24h 重點新聞</div>
-  <div class="card">
-    <ul class="news-list" id="news-list">
-      <li>
-        <span class="news-num">1</span>
-        <span>BTC 破 $82K 創 1 月以來新高，ETF 週流入創去年 10 月以來最強；$5,000 萬空倉在 1 小時內被強制平倉。</span>
-      </li>
-      <li>
-        <span class="news-num">2</span>
-        <span>Trump 拒絕伊朗提案後，BTC 急跌跌破 $81K，隨後快速回升，凸顯地緣尾部風險。</span>
-      </li>
-      <li>
-        <span class="news-num">3</span>
-        <span>白宮加密顧問稱將在「數週內」公布美國戰略比特幣儲備新細節，機構需求預期升溫。</span>
-      </li>
-      <li>
-        <span class="news-num">4</span>
-        <span>Strategy (MicroStrategy) 持有 818,334 BTC，評估出售部分以支付優先股股息，引發持幣者擔憂。</span>
-      </li>
-      <li>
-        <span class="news-num">5</span>
-        <span>Bitcoin OG 休眠 12+ 年後移動 500 BTC（$4,062 萬），來自 2014 年 $914 低位買入。</span>
-      </li>
-    </ul>
-  </div>
-
-  <div style="margin-top:24px" class="section-title">📈 總經摘要</div>
-  <div class="card">
-    <div style="font-size:13px;line-height:1.9;color:var(--text)">
-      <strong>VIX 17.2</strong>（5/8）處中低波動區間，市場整體情緒穩定。<br>
-      <strong>DXY ~100.5</strong>：4 月底 98.5 低位後回彈，美元走強對風險資產略有壓力。<br>
-      <strong>10Y 殖利率 4.38%</strong>：維持高位，降息空間有限；30Y 曾觸及 5%。<br>
-      <strong>TIPS 實質利率 1.90%</strong>（5/8，FRED DFII10）：實質正利率持續壓縮加密資產估值空間。<br>
-      <strong>NDX 29,235</strong>（5/8 +2.35%）：科技股強勢拉動風險偏好，BTC 與 NDX 30D 相關約 0.72。<br>
-      <strong>CPI 預期</strong>（5/12）：能源推動標題通膨 +3.7% YoY，核心 +2.7%；若超預期將打壓降息預期。<br>
-      <strong>Fed 主席換屆</strong>（5/15）：Warsh 鷹派背景，就任初期利率態度是最大不確定因素。
-    </div>
-  </div>
-</div>
-
-<footer>
-  Daily auto-generated · 台北 UTC+8 · <span id="gen-time"></span>
-</footer>
 
 <script>
-const HISTORY = {
-  "2026-05-11": {
-    "btc_price": 80952,
-    "eth_price": 2339,
-    "btc_d": 58.4,
-    "eth_d": 10.1,
-    "others_d": 14.2,
-    "total3_d": 31.6,
-    "sentiment_score": 70.3,
-    "btc_score": 72.6,
-    "eth_score": 68.0,
-    "sentiment_band": "greed",
-    "vix": 17.2,
-    "dxy": 100.5,
-    "tnx": 4.38,
-    "tips_real": 1.90,
-    "ndx": 29235,
-    "layer1_verdict": "CAUTION",
-    "fund_verdict": "CAUTION",
-    "viral_dominates": true,
-    "tweet_count": 24,
-    "evidence": [
-      {"user":"WatcherGuru","text":"Bitcoin Price on Mother's Day historical: 2026 $81,700","eng":7319,"bucket":"bull","score":75},
-      {"user":"AshCrypto","text":"Crazy reversal: BTC $82K, ETH $2,400, $50M shorts liquidated 1hr","eng":4477,"bucket":"extreme_bull","score":100},
-      {"user":"BullTheoryio","text":"Bitcoin closed daily+weekly above $82K for first time since Jan 26","eng":2262,"bucket":"extreme_bull","score":100},
-      {"user":"TheRealPlanC","text":"Bitcoin Supercycle beginning...gradually then suddenly...","eng":1315,"bucket":"extreme_bull","score":100},
-      {"user":"cryptorover","text":"BITCOIN: RISING WEDGE! Bearish pattern","eng":1354,"bucket":"bear","score":25}
-    ],
-    "news": [
-      "BTC 破 $82K 創 1 月新高，ETF 週流入最強，$5,000 萬空倉被清算。",
-      "Trump 拒絕伊朗提案 → BTC 急跌至 $81K 以下，隨後快速回升。",
-      "白宮加密顧問：數週內公布美國戰略比特幣儲備框架細節。",
-      "Strategy 評估出售部分 BTC 支付優先股股息（持有 818,334 BTC）。",
-      "Bitcoin OG 休眠 12+ 年後移動 500 BTC（$4,062 萬），購入成本 $914。"
-    ],
-    "calendar": [
-      {"date":"2026-05-12","event":"CPI：核心 +2.7% YoY 預期；超預期壓降息預期。"},
-      {"date":"2026-05-15","event":"鮑威爾任期屆滿，參議院表決 Warsh 接任。"},
-      {"date":"2026-05-11","event":"美中峰會 + Clarity Act Mark-up，加密監管清晰度進展。"}
-    ]
+const HISTORY = {"schema_version":2,"last_updated":"2026-05-11","history":[
+  {"date":"2026-04-21","btc":{"score":63.7,"score_band":"greed","velocity":"平穩","n_sampled":300,"source":"grok_batch","note":"Whales/BlackRock buys + conference speakers announced"},"eth":null,"btc_price":75901,"btc_price_src":"actual"},
+  {"date":"2026-04-22","btc":{"score":71.2,"score_band":"greed","velocity":"爆發","n_sampled":300,"source":"grok_batch","note":"BTC surges $79k, BlackRock $900M buy"},"eth":null,"btc_price":79000,"btc_price_src":"estimate"},
+  {"date":"2026-04-23","btc":{"score":57.9,"score_band":"greed","velocity":"下降","n_sampled":300,"source":"grok_batch","note":"BTC ETH dump, bear trap"},"eth":null,"btc_price":77500,"btc_price_src":"estimate"},
+  {"date":"2026-04-24","btc":{"score":61.4,"score_band":"greed","velocity":"平穩","n_sampled":300,"source":"grok_batch","note":"20M BTC mined, PayPal payments"},"eth":null,"btc_price":78126,"btc_price_src":"actual"},
+  {"date":"2026-04-25","btc":{"score":66.8,"score_band":"greed","velocity":"平穩","n_sampled":300,"source":"grok_batch","note":"Pre-conference excitement"},"eth":null,"btc_price":78000,"btc_price_src":"estimate"},
+  {"date":"2026-04-26","btc":{"score":69.5,"score_band":"greed","velocity":"爆發","n_sampled":300,"source":"grok_batch","note":"Conference starts soon"},"eth":null,"btc_price":77875,"btc_price_src":"actual"},
+  {"date":"2026-04-27","btc":{"score":74.2,"score_band":"greed","velocity":"爆發","n_sampled":300,"source":"grok_batch","note":"Conference underway"},"eth":null,"btc_price":78661,"btc_price_src":"actual"},
+  {"date":"2026-04-28","btc":{"score":62.8,"score_band":"greed","velocity":"平穩","n_sampled":142,"source":"live","note":"BitMine/Saylor 持續囤幣 + ETF 流入"},"eth":{"score":58.4,"score_band":"greed","velocity":"下降","n_sampled":118,"source":"live","note":"BitMine 大買 + 但討論退潮"},"btc_price":76472,"btc_price_src":"actual"},
+  {"date":"2026-04-29","btc":{"score":42.8,"score_band":"fear","velocity":"下降","n_sampled":300,"source":"live","note":"BlackRock 大買 / MACD 熊交叉"},"eth":{"score":39.5,"score_band":"fear","velocity":"下降","n_sampled":287,"source":"live","note":"抄底累積 / 穩定幣流出"},"btc_price":77044,"btc_price_src":"actual"},
+  {"date":"2026-04-30","btc":{"score":38.0,"score_band":"fear","velocity":"平穩","n_sampled":850,"source":"live","note":"BTC 反覆被 $80K 拒於門外、CLARITY Act 延後 + 中東風險"},"eth":{"score":35.0,"score_band":"fear","velocity":"平穩","n_sampled":720,"source":"live","note":"Capital.com 多空比 86.7% long(散戶過熱逆向訊號)"},"btc_price":76300,"btc_price_src":"actual"},
+  {"date":"2026-05-01","btc":{"score":47.0,"score_band":"neutral","velocity":"平穩","n_sampled":600,"source":"estimate","note":"FOMC hold 3.50-3.75% + Powell 鷹派 → BTC $79K → $78K(填補日)"},"eth":{"score":43.0,"score_band":"fear","velocity":"平穩","n_sampled":500,"source":"estimate","note":"FOMC 後 ETH 弱於 BTC"},"btc_price":78420,"btc_price_src":"estimate"},
+  {"date":"2026-05-04","btc":{"score":54.0,"score_band":"neutral","velocity":"平穩","n_sampled":600,"source":"estimate","note":"⚠ Grok 不可用,基於新聞估計。BTC ETF 5月流入 $2.44B、CLARITY Act 妥協通過、Iran 緩和"},"eth":{"score":48.0,"score_band":"neutral","velocity":"平穩","n_sampled":500,"source":"estimate","note":"⚠ Grok 不可用。ETH $2,300 區間整理,動能弱於 BTC"},"btc_price":78863,"btc_price_src":"actual"},
+  {"date":"2026-05-05","btc":{"score":42.0,"score_band":"fear","velocity":"下降","n_sampled":850,"source":"live","note":"Iran 飛彈傳聞砸盤 80K→79K,後反彈 80,425;Consensus 2026 Miami 今日開幕"},"eth":{"score":45.0,"score_band":"neutral","velocity":"平穩","n_sampled":720,"source":"live","note":"鯨魚 4 天累積 14 萬 ETH,但 funding rate 翻負,73M ETH 凍結訴訟"},"btc_price":80425,"btc_price_src":"actual"},
+  {"date":"2026-05-06","btc":{"score":52.0,"score_band":"neutral","velocity":"爆發","n_sampled":520,"source":"live","note":"Iran 14點 MOU 樂觀,BTC 衝 $82,305(自 1/31 來高),油價崩 6%,ETH $2,412 站上"},"eth":{"score":54.0,"score_band":"neutral","velocity":"爆發","n_sampled":410,"source":"live","note":"ETH 站上 $2,400,5D +5.61%。altindex 61,ETH ETF 流入回流"},"btc_price":81317,"btc_price_src":"actual"},
+  {"date":"2026-05-07","btc":{"score":69.0,"score_band":"greed","velocity":"平穩","n_sampled":70,"source":"live","note":"v2 Apify+Claude pipeline。en:25/zh:21/ja:9/ko:15。⚠ viral_news_dominates: BitcoinMag $82,302 reclaim+Morgan Stanley E*Trade 拉爆 sentiment 但價格停在 $81K"},"eth":{"score":31.0,"score_band":"fear","velocity":"平穩","n_sampled":5,"source":"live","note":"v2 Apify+Claude。⚠ undersampled。@cryptorover bearish $394M 鯨魚 Binance"},"btc_price":80991,"btc_price_src":"actual","eth_price":2321,"eth_price_src":"actual"},
+  {"date":"2026-05-08","btc":{"score":56.0,"score_band":"greed","velocity":"平穩","n_sampled":69,"source":"live","note":"v2 Apify+Claude (358 raw → 69 valid)。en:30/zh:12/ja:15/ko:12。Top BULL: WatcherGuru Coinbase $88M (4296)+BitcoinMag Wall St 招聘 (2425)+BlackRock compelling (2272)。Top BEAR: 中文 @wolfyxbt 深熊預感 (3167!)+@AshCrypto 操控論 (1974)。BTC 從 $82K → $79.5K = ⚠ 早期頂部訊號"},"eth":{"score":53.0,"score_band":"neutral","velocity":"平穩","n_sampled":60,"source":"live","note":"v2 Apify+Claude (358 raw → 60 valid)。en:22/zh:18/ja:8/ko:12。@TedPillows 三連 BEAR 主導 (lost parabola+0% since 2021+spot selling 共 2227 eng),AltcoinDaily Tom Lee $62.5K (1053)+base x402 抗衡。多空分歧明顯"},"btc_price":79572,"btc_price_src":"actual","eth_price":2277,"eth_price_src":"actual"},
+  {"date":"2026-05-11","btc":{"score":66.5,"score_band":"greed","velocity":"平穩","n_sampled":69,"source":"live","note":"v2 Apify+Claude (358 raw → 69 valid, weekend gap 5/9-5/10 漏跑)。en:44/zh:5/ja:8/ko:12。BTC 56→66.5 = +10.5 真情緒上行(broad-based EN bull cluster, viral_pct 僅 23.7% 未觸發 viral_dominates)。Top BULL: BitcoinMag $81,400 (4220) + AshCrypto 反轉 (3202) + Tim Scott crypto capital (1966) + BullTheoryio 週收 $82K (1393) + Lyn Alden bottom-is-in (782)。Top BEAR: DrProfitCrypto BTC 80K days numbered (785) + TedPillows max pain downside (845)"},"eth":{"score":62.2,"score_band":"greed","velocity":"平穩","n_sampled":30,"source":"live","note":"v2 Apify+Claude。⚠ viral_news_dominates (top2=45.6% — @AshCrypto BTC+ETH 反轉 3202 eng + CryptoKaleo god candle 1157 eng 拉爆權重)。Tom Lee $62.5K extreme_bull 167 eng。中文嘲諷 ETH 被土豆超了 (lanhubiji 162 likes) + Whale Garrett Bullish capitulation 225K ETH $528M 至 Binance(可能反為利多)。⚠ beta-only 反彈警示"},"btc_price":81505,"btc_price_src":"actual","eth_price":2358,"eth_price_src":"actual"}
+]};
+
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
+}
+function tickClock() {
+  const d = new Date();
+  const tpe = new Date(d.getTime() + (d.getTimezoneOffset() + 480) * 60000);
+  const hh = String(tpe.getHours()).padStart(2,'0');
+  const mm = String(tpe.getMinutes()).padStart(2,'0');
+  document.getElementById('tpeClock').textContent = 'TPE ' + hh + ':' + mm;
+}
+tickClock(); setInterval(tickClock, 30000);
+
+// === Render Tab 1 ===
+const latest = HISTORY.history[HISTORY.history.length - 1];
+const prev = HISTORY.history.length >= 2 ? HISTORY.history[HISTORY.history.length - 2] : null;
+const btc = latest.btc, eth = latest.eth;
+const btcDelta = (prev && prev.btc) ? (btc.score - prev.btc.score) : null;
+const ethDelta = (prev && prev.eth) ? (eth.score - prev.eth.score) : null;
+const btcPriceDelta = (prev && prev.btc_price) ? ((latest.btc_price - prev.btc_price) / prev.btc_price * 100) : null;
+const ethPriceDelta = (prev && prev.eth_price && latest.eth_price) ? ((latest.eth_price - prev.eth_price) / prev.eth_price * 100) : null;
+const fmtDelta = (d, suffix='') => d == null ? '' : `<span class="delta ${d>0?'pos':d<0?'neg':''}">${d>0?'+':''}${d.toFixed(suffix==='%'?2:1)}${suffix} 1D</span>`;
+
+document.getElementById('metrics').innerHTML = `
+  <div class="metric btc">
+    <div class="label">BTC 情緒分數</div>
+    <div class="value">${btc.score.toFixed(1)}</div>
+    <div class="sub"><span class="tag-band t-${btc.score_band}">${btc.score_band}</span>${fmtDelta(btcDelta)}</div>
+  </div>
+  <div class="metric eth">
+    <div class="label">ETH 情緒分數</div>
+    <div class="value">${eth ? eth.score.toFixed(1) : '—'}</div>
+    <div class="sub">${eth ? `<span class="tag-band t-${eth.score_band}">${eth.score_band}</span>${fmtDelta(ethDelta)}` : '<span style="color:var(--text-faint);">—</span>'}</div>
+  </div>
+  <div class="metric accent">
+    <div class="label">BTC 價</div>
+    <div class="value med">$${(latest.btc_price/1000).toFixed(2)}k</div>
+    <div class="sub">${fmtDelta(btcPriceDelta, '%')}</div>
+  </div>
+  <div class="metric purple">
+    <div class="label">ETH 價</div>
+    <div class="value med">${latest.eth_price ? '$'+latest.eth_price.toLocaleString() : '—'}</div>
+    <div class="sub">${fmtDelta(ethPriceDelta, '%')}</div>
+  </div>
+`;
+
+document.getElementById('chartMeta').textContent = HISTORY.history[0].date + ' → ' + HISTORY.last_updated + ' · ' + HISTORY.history.length + ' 天';
+document.getElementById('logMeta').textContent = HISTORY.history.length + ' 筆 · ' + HISTORY.history.filter(d=>d.btc&&d.btc.source==='live').length + ' live · ' + HISTORY.history.filter(d=>d.btc&&d.btc.source==='grok_batch').length + ' batch · ' + HISTORY.history.filter(d=>d.btc&&d.btc.source==='estimate').length + ' est';
+
+window.addEventListener('load', () => {
+  const labels = HISTORY.history.map(d => d.date.slice(5));
+  const btcSent = HISTORY.history.map(d => d.btc ? d.btc.score : null);
+  const ethSent = HISTORY.history.map(d => d.eth ? d.eth.score : null);
+  const btcPx = HISTORY.history.map(d => d.btc_price);
+  const ethPx = HISTORY.history.map(d => d.eth_price || null);
+
+  const ctx1 = document.getElementById('trendChart');
+  if (ctx1) new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'BTC 情緒', data: btcSent, borderColor: '#f7931a', backgroundColor: 'rgba(247,147,26,0.1)', borderWidth: 2, yAxisID: 'y', tension: 0.3, spanGaps: true },
+        { label: 'BTC 價格', data: btcPx, borderColor: '#00d4ff', backgroundColor: 'rgba(0,212,255,0.1)', borderWidth: 2, yAxisID: 'y2', tension: 0.3 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { type:'linear', position:'left', min:0, max:100, grid:{color:'rgba(255,255,255,0.05)'}, ticks:{color:'#8b95a3'}, title:{display:true,text:'BTC 情緒 (0-100)',color:'#f7931a'} },
+        y2: { type:'linear', position:'right', grid:{display:false}, ticks:{color:'#00d4ff'}, title:{display:true,text:'BTC USD',color:'#00d4ff'} },
+        x: { grid:{color:'rgba(255,255,255,0.05)'}, ticks:{color:'#8b95a3'} }
+      },
+      plugins: { legend: { labels: { color:'#b5bac4' } } }
+    }
+  });
+
+  const ctx2 = document.getElementById('ethChart');
+  if (ctx2) new Chart(ctx2, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'ETH 情緒', data: ethSent, borderColor: '#a78bfa', backgroundColor: 'rgba(167,139,250,0.1)', borderWidth: 2, yAxisID: 'y', tension: 0.3, spanGaps: true },
+        { label: 'ETH 價格', data: ethPx, borderColor: '#6a7fff', backgroundColor: 'rgba(106,127,255,0.1)', borderWidth: 2, yAxisID: 'y2', tension: 0.3, spanGaps: true }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: { type:'linear', position:'left', min:0, max:100, grid:{color:'rgba(255,255,255,0.05)'}, ticks:{color:'#8b95a3'}, title:{display:true,text:'ETH 情緒 (0-100)',color:'#a78bfa'} },
+        y2: { type:'linear', position:'right', grid:{display:false}, ticks:{color:'#6a7fff'}, title:{display:true,text:'ETH USD',color:'#6a7fff'} },
+        x: { grid:{color:'rgba(255,255,255,0.05)'}, ticks:{color:'#8b95a3'} }
+      },
+      plugins: { legend: { labels: { color:'#b5bac4' } } }
+    }
+  });
+});
+
+const tbody = document.querySelector('#historyTable tbody');
+const histRev = HISTORY.history.slice().reverse();
+histRev.forEach((d, i) => {
+  const tr = document.createElement('tr');
+  const prevD = histRev[i + 1];
+  const btcCell = d.btc ? `<span class="score-cell btc">${d.btc.score.toFixed(1)}</span>` : '<span class="score-cell empty">—</span>';
+  const ethCell = d.eth ? `<span class="score-cell eth">${d.eth.score.toFixed(1)}</span>` : '<span class="score-cell empty">—</span>';
+  const btcDeltaCell = (d.btc && prevD && prevD.btc) ? (() => { const dd = d.btc.score - prevD.btc.score; return `<span class="delta ${dd>0?'pos':dd<0?'neg':''}">${dd>0?'+':''}${dd.toFixed(1)}</span>`; })() : '—';
+  const btcPxCell = d.btc_price != null ? `<span class="score-cell price">$${(d.btc_price/1000).toFixed(2)}k</span>` : '—';
+  const ethPxCell = d.eth_price != null ? `<span class="score-cell" style="color:var(--purple);">$${d.eth_price.toLocaleString()}</span>` : '—';
+  const fullNote = d.btc ? d.btc.note : '';
+  let shortNote = fullNote;
+  if (fullNote.length > 70) {
+    const cut = fullNote.slice(0, 67);
+    const sentEnd = Math.max(cut.lastIndexOf('。'), cut.lastIndexOf(','), cut.lastIndexOf('.'));
+    shortNote = (sentEnd > 30 ? cut.slice(0, sentEnd) : cut) + '…';
   }
-};
-
-function showTab(id) {
-  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', ['tab1','tab2','tab3'][i]===id));
-  document.querySelectorAll('.content').forEach(c => c.classList.toggle('active', c.id===id));
-}
-
-function bandColor(band) {
-  const m = {euphoric:'#ff6b6b',greed:'var(--orange)',neutral:'var(--yellow)',fear:'var(--yellow)',extreme_fear:'var(--red)'};
-  return m[band] || 'var(--muted)';
-}
-
-function scoreColor(s) {
-  if(s>=75) return '#ff6b6b';
-  if(s>=56) return 'var(--orange)';
-  if(s>=45) return 'var(--yellow)';
-  if(s>=25) return 'var(--yellow)';
-  return 'var(--red)';
-}
-
-function renderHistory() {
-  const dates = Object.keys(HISTORY).sort((a,b)=>b>a?1:-1);
-  const el = document.getElementById('history-list');
-  if(!dates.length){el.innerHTML='<p style="color:var(--muted);text-align:center;padding:20px">暫無歷史資料</p>';return;}
-  el.innerHTML = dates.map(d => {
-    const h = HISTORY[d];
-    const s = h.sentiment_score||0;
-    const col = scoreColor(s);
-    const viral = h.viral_dominates ? ' <span style="color:var(--yellow);font-size:10px">⚠viral</span>' : '';
-    return `<div class="hist-row">
-      <span class="hist-date">${d}</span>
-      <div class="hist-score-bar"><div class="hist-score-fill" style="width:${s}%;background:${col}"></div></div>
-      <span style="min-width:36px;font-size:12px;color:${col}">${s.toFixed(1)}</span>
-      <span style="font-size:11px;color:var(--muted);min-width:60px">${h.sentiment_band||''}${viral}</span>
-      <span style="font-size:11px;min-width:50px">₿$${(h.btc_price/1000).toFixed(1)}K</span>
-      <span class="verdict-badge ${h.layer1_verdict==='GO'?'vb-go':h.layer1_verdict==='CAUTION'?'vb-caution':'vb-nogo'}" style="font-size:10px;padding:2px 8px">${h.layer1_verdict||'-'}</span>
-    </div>`;
-  }).join('');
-}
-
-function renderEvidence() {
-  const latest = Object.keys(HISTORY).sort((a,b)=>b>a?1:-1)[0];
-  if(!latest) return;
-  const ev = HISTORY[latest].evidence||[];
-  const tagClass = {bull:'tag-bull',bear:'tag-bear',neutral:'tag-neutral',extreme_bull:'tag-ebull'};
-  const tagLabel = {bull:'🟢 Bull',bear:'🔴 Bear',neutral:'⚪ Neutral',extreme_bull:'🔥 XBull'};
-  document.getElementById('evidence-list').innerHTML = ev.map(e =>
-    `<div class="evidence-card">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
-        <span class="evidence-user">@${e.user}</span>
-        <span class="tag ${tagClass[e.bucket]||'tag-neutral'}">${tagLabel[e.bucket]||e.bucket}</span>
-        <span style="margin-left:auto;font-size:11px;color:var(--muted)">eng:${e.eng.toLocaleString()}</span>
-      </div>
-      <div class="evidence-text">${e.text}</div>
-    </div>`
-  ).join('');
-}
-
-function init() {
-  const latest = Object.keys(HISTORY).sort((a,b)=>b>a?1:-1)[0];
-  if(latest) document.getElementById('today-badge').textContent = latest;
-  document.getElementById('gen-time').textContent = new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
-  const h = HISTORY[latest];
-  if(h && h.viral_dominates) document.getElementById('viral-alert').style.display='block';
-  renderHistory();
-  renderEvidence();
-}
-
-init();
+  const src = d.btc ? d.btc.source : 'unknown';
+  const noteEsc = fullNote.replace(/"/g, '&quot;');
+  tr.innerHTML = `<td class="dim">${d.date}</td><td class="num">${btcCell}</td><td class="num dim">${btcDeltaCell}</td><td class="num">${btcPxCell}</td><td class="num">${ethCell}</td><td class="num">${ethPxCell}</td><td><span class="src-tag ${src==='live'?'src-live':'src-batch'}">${src}</span></td><td class="note" title="${noteEsc}">${shortNote}</td>`;
+  tbody.appendChild(tr);
+});
 </script>
 </body>
 </html>
