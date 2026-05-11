@@ -1,0 +1,11 @@
+{
+  "history": [
+    {"date":"2026-05-05","top3_14d":[],"top3_21d":["skyai","b","lunc"],"top10_14d":[],"top10_21d":["skyai","b","lunc","h","aero","gwei","pendle","ape","pieverse","dydx"]},
+    {"date":"2026-05-06","top3_14d":[],"top3_21d":["skyai","b","lunc"],"top10_14d":[],"top10_21d":["skyai","b","lunc","gwei","aero","h","pendle","pieverse","ape","zec"]},
+    {"date":"2026-05-07","top3_14d":[],"top3_21d":["b","skyai","lunc"],"top10_14d":[],"top10_21d":["b","skyai","lunc","aero","gwei","jto","h","zec","ape","pieverse"]},
+    {"date":"2026-05-08","top3_14d":[],"top3_21d":["b","skyai","lunc"],"top10_14d":[],"top10_21d":["b","skyai","lunc","zec","ondo","jto","siren","pieverse","gwei","ape"]},
+    {"date":"2026-05-09","top3_14d":[],"top3_21d":["b","skyai","lunc"],"top10_14d":[],"top10_21d":["b","skyai","lunc","zec","h","jto","siren","akt","strk","ondo"]},
+    {"date":"2026-05-10","top3_14d":[],"top3_21d":["lab","b","skyai"],"top10_14d":[],"top10_21d":["lab","b","skyai","ub","lunc","zec","h","vvv","jto","akt"]},
+    {"date":"2026-05-11","top3_14d":[],"top3_21d":["lab","b","ub"],"top10_14d":[],"top10_21d":["lab","b","ub","skyai","h","zec","ondo","ton","siren","akt"]}
+  ]
+}
