@@ -1,0 +1,79 @@
+{
+  "2026-05-11": {
+    "date": "2026-05-11",
+    "timestamp_utc": "2026-05-11T06:56:38Z",
+    "score": 70.3,
+    "btc_score": 72.6,
+    "eth_score": 68.0,
+    "band": "greed",
+    "tweet_count_valid": 24,
+    "tweet_count_raw": 358,
+    "total_engagement": 27090,
+    "top2_engagement_pct": 43.5,
+    "method_notes": "viral_news_dominates",
+    "bucket_distribution": {
+      "extreme_bear": 0,
+      "bear": 7,
+      "neutral": 5,
+      "bull": 9,
+      "extreme_bull": 3
+    },
+    "evidence": [
+      {
+        "user": "WatcherGuru",
+        "text": "Bitcoin Price on Mother's Day: ...2026: $81,700 (historical all-time price comparison)",
+        "likes": 5818,
+        "rt": 491,
+        "replies": 234,
+        "bookmarks": 336,
+        "eng": 7319,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "AshCrypto",
+        "text": "Crazy reversal: Bitcoin broke $82K, ETH closer to $2,400, $50M shorts liquidated in 1 hour",
+        "likes": 3252,
+        "rt": 414,
+        "replies": 252,
+        "bookmarks": 38,
+        "eng": 4477,
+        "bucket": "extreme_bull",
+        "bucket_score": 100
+      },
+      {
+        "user": "BullTheoryio",
+        "text": "Bitcoin closed daily and weekly candles above $82,000 for the first time since January 26th",
+        "likes": 1734,
+        "rt": 195,
+        "replies": 84,
+        "bookmarks": 25,
+        "eng": 2262,
+        "bucket": "extreme_bull",
+        "bucket_score": 100
+      },
+      {
+        "user": "TheRealPlanC",
+        "text": "It's beginning...gradually, then suddenly...the Bitcoin Supercycle...you were warned!",
+        "likes": 1065,
+        "rt": 67,
+        "replies": 64,
+        "bookmarks": 40,
+        "eng": 1315,
+        "bucket": "extreme_bull",
+        "bucket_score": 100
+      },
+      {
+        "user": "cryptorover",
+        "text": "BITCOIN: RISING WEDGE! Bearish $BTC pattern warning",
+        "likes": 888,
+        "rt": 106,
+        "replies": 150,
+        "bookmarks": 59,
+        "eng": 1354,
+        "bucket": "bear",
+        "bucket_score": 25
+      }
+    ]
+  }
+}
