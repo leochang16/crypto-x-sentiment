@@ -161,20 +161,21 @@ table td.note { font-size:12.5px; max-width:380px; }
   </div>
 
   <div class="hero">
-    <h1>總經 &amp; 情緒 <span class="tag">// daily trader cockpit</span></h1>
-    <div class="subtitle">每天 10:08 (台北) 自動更新 · <span class="accent">早盤總經 brief + X 情緒追蹤 + 小幣框架 Layer 1</span> · 17 天歷史</div>
+    <h1>總經 &amp; 情緒 <span class="tag">// 每日交易駕駛艙</span></h1>
+    <div class="subtitle">每天 08:30(台北)自動更新 · <span class="accent">早盤總經摘要 + X 情緒追蹤 + 小幣框架 + 21D 強勢幣排行</span></div>
   </div>
 
   <div class="tab-bar">
-    <button class="tab-btn active" data-tab="sentiment" onclick="switchTab('sentiment')">X Sentiment <span class="badge">BTC/ETH</span></button>
-    <button class="tab-btn" data-tab="brief" onclick="switchTab('brief')">Morning Brief <span class="badge">MACRO</span></button>
+    <button class="tab-btn active" data-tab="sentiment" onclick="switchTab('sentiment')">X 情緒 <span class="badge">BTC/ETH</span></button>
+    <button class="tab-btn" data-tab="brief" onclick="switchTab('brief')">早盤總經 <span class="badge">MACRO</span></button>
+    <button class="tab-btn" data-tab="top3" onclick="switchTab('top3')">21D 強勢幣 <span class="badge">TOP 3</span></button>
   </div>
 
   <!-- ========== TAB 1: X SENTIMENT ========== -->
   <div class="tab-panel active" id="tab-sentiment">
 
     <div class="alert-banner success">
-      <strong style="color:var(--success);">5/11 weekend gap 補位 + 雙幣 sentiment 同步 +9~+10 真情緒上行</strong> — BTC 56→66.5(greed)+$79.57K→$81.50K(+2.43% vs 5/8);ETH 53→62.2(greed)+$2,277→$2,358(+3.55%)。EN bull cluster broad-based(Iran 緩和 + $82K reclaim + Lyn Alden bottom-is-in narrative)。⚠ ETH viral_news_dominates 45.6%,須 watch beta-only 行情風險。
+      <strong style="color:var(--success);">週末資料補位 · 雙幣情緒同步上行 +9~+10</strong> — BTC 56→66.5(貪婪)·$79.57K→$81.50K(+2.43% vs 5/8);ETH 53→62.2(貪婪)·$2,277→$2,358(+3.55%)。英語圈多頭討論面廣(伊朗緩和 + $82K 重奪 + Lyn Alden 看底已成形)。⚠ ETH 病毒新聞主導 45.6%,需留意僅靠 BTC 順風帶起來的反彈風險。
     </div>
 
     <div class="metrics" id="metrics"></div>
@@ -204,7 +205,7 @@ table td.note { font-size:12.5px; max-width:380px; }
     <div class="card">
       <div class="head">
         <div class="title">🔥 Top 3 有意義討論(過去 24h)</div>
-        <div class="meta">挑「有具體 levels / 有 thesis / 有 setup」,不是純警報新聞</div>
+        <div class="meta">挑「有具體價位 / 有論述 / 有交易設定」,不是純警報新聞</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;">
         <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;">
@@ -212,21 +213,21 @@ table td.note { font-size:12.5px; max-width:380px; }
             <a href="https://x.com/pete_rizzo_/status/2053565907369148460" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:13.5px;">#1 @pete_rizzo_ — Lyn Alden: BTC base case「bottom is in」</a>
             <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">782 eng · 31 replies</span>
           </div>
-          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">macro thesis · Lyn Alden 罕見明牌 base case <strong style="color:var(--text);">「fast capital is already out + sellers are exhausted + breakout soon」</strong>。屬「無具體 invalidation 但有 hedge fund 級別 thesis」型訊號,適合放 watchlist 作 sentiment confirmation。</div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">總經論述 · Lyn Alden 罕見明牌:<strong style="color:var(--text);">「快錢已撤、賣方耗盡、突破將近」</strong>。屬「無具體破口但有對沖基金級論述」型訊號,放觀察清單作情緒佐證。</div>
         </div>
         <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;">
             <a href="https://x.com/TedPillows/status/2053438148395364469" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:13.5px;">#2 @TedPillows — BTC 清算地圖不對稱(空多 1:3.4)</a>
             <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">845 eng · 110 replies</span>
           </div>
-          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">微觀結構 · <strong style="color:var(--text);">BTC +$10K = $4.3B 空單清算;BTC -$10K = $14.5B 多單清算</strong>(1:3.4 不對稱,下方 fuel 遠多於上方)。結論「max pain to downside next 2-3 months」與 #1 衝突,屬「對 5/7 推特狂熱的 healthy bear thesis」。本週 $82K 試探若失敗,$78K-$76K 區清算池仍會被吸引。</div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">微觀結構 · <strong style="color:var(--text);">BTC +$10K = $4.3B 空單清算;BTC -$10K = $14.5B 多單清算</strong>(1:3.4 不對稱,下方燃料遠多於上方)。結論「未來 2-3 個月最痛點在下方」與 #1 對立,屬「對 5/7 推特狂熱的健康反向論述」。本週 $82K 試探若失敗,$78K-$76K 清算池仍會被吸引。</div>
         </div>
         <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--warn);border-radius:6px;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;">
-            <a href="https://x.com/Roman_Trading/status/2053607947175899370" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:13.5px;">#3 @Roman_Trading — BTC weekly exhaustion 衝突 EN bull cluster</a>
+            <a href="https://x.com/Roman_Trading/status/2053607947175899370" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;font-size:13.5px;">#3 @Roman_Trading — BTC 週線疲態 vs 英語圈多頭氛圍</a>
             <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">160 eng · 26 replies</span>
           </div>
-          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">TA invalidation · <strong style="color:var(--text);">「BTC 週末上漲常見週一回吐 + bear divs RSI/MACD + diagonal resistance」</strong>。具體 invalidation 訊號 — 若 5/11(今日)收紅且突破 $82K diagonal resistance,該 thesis 就 invalid。屬「有出場條件的 short bias」。</div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">技術線型反訊號 · <strong style="color:var(--text);">「BTC 週末上漲常見週一回吐 + RSI/MACD 熊背離 + 斜線壓力」</strong>。具體破口 — 若今日(5/11)收紅且突破 $82K 斜線壓力,該論述就失效。屬「有明確止損的偏空看法」。</div>
         </div>
       </div>
     </div>
@@ -249,18 +250,18 @@ table td.note { font-size:12.5px; max-width:380px; }
 
     <div class="card" style="border-left:4px solid var(--accent);">
       <div class="head">
-        <div class="title">🎯 今日總結論(雙 verdict)</div>
+        <div class="title">🎯 今日總結論(雙重判斷)</div>
         <div class="meta">資金面 + 小幣框架 = 行動建議</div>
       </div>
       <div style="padding:8px 0;">
         <div style="font-size:16px;color:var(--text);margin-bottom:12px;">
-          <strong style="color:var(--warn);">🟡 資金面 caution</strong> + <strong style="color:var(--warn);">🟡 小幣框架 PENDING</strong> = <strong style="color:var(--accent);font-size:18px;">觀望(weekend gap 無 7D dir 訊號)</strong>
+          <strong style="color:var(--warn);">🟡 資金面 注意</strong> + <strong style="color:var(--warn);">🟡 小幣框架 待確認</strong> = <strong style="color:var(--accent);font-size:18px;">觀望(週末跳空,7 日方向訊號不足)</strong>
         </div>
         <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-mid);line-height:1.8;">
           <li><strong style="color:var(--success);">可做:</strong> sentiment 真情緒 +10/+9 + 價格同步突破 + VIX/VIX3M 0.84 calm,屬「短期做多 with stop」窗口,但 size ≤ 1/4 Kelly,不重押</li>
           <li><strong style="color:var(--warn);">先別:</strong> 不做 alt 板塊 — Layer 1 conditions weekend gap 無 7D 方向確認(C1/C2 pending,只有 C3 pass)。等到 5/13 CPI 後才有資金面綠燈確認</li>
           <li><strong style="color:var(--danger);">關鍵風險:</strong> <strong>5/12 (週二) 20:30 US CPI(4月)</strong>;<strong>16:30 前進入棄權窗口</strong>。鴿派 → BTC 突破 $84K CME gap;鷹派 → 跌回 $78K 測試。Powell 5/15 任期屆滿、Warsh 提名聽證</li>
-          <li><strong>regime 警示:</strong> BTC-NDX 7D corr +0.05(從 5/8 的 -0.22 回升至接近 0)= crypto 跟美股 decoupling 仍持續,macro 訊號傳染弱,須緊盯 on-chain(ETF/whale/清算)</li>
+          <li><strong>市場結構警示:</strong>BTC-NDX 7 日相關係數 +0.05(從 5/8 的 -0.22 回升,但仍接近 0)= 加密與美股仍處於脫鉤狀態,總經傳染弱,需緊盯鏈上資料(ETF / 鯨魚 / 清算)</li>
         </ul>
       </div>
     </div>
@@ -275,14 +276,14 @@ table td.note { font-size:12.5px; max-width:380px; }
         <div class="metric">
           <div class="label">VIX / VIX3M 比值</div>
           <div class="value med">0.839</div>
-          <div class="sub"><span class="regime-tag r-too_low">🟡 過鬆邊緣</span><span class="delta" style="color:var(--text-dim);">≈ flat vs 5/8</span></div>
-          <div class="indicator-explain warn">&lt; 0.85 短波偏低,意外事件易 spike。<strong>contrarian 警訊持續</strong>。</div>
+          <div class="sub"><span class="regime-tag r-too_low">🟡 過鬆邊緣</span><span class="delta" style="color:var(--text-dim);">≈ 幾乎持平</span></div>
+          <div class="indicator-explain warn">&lt; 0.85 短波偏低,意外事件易 spike。<strong>反向警訊持續</strong>。</div>
         </div>
         <div class="metric success">
           <div class="label">MOVE Index</div>
           <div class="value med">67.25</div>
           <div class="sub"><span class="regime-tag r-low_calm">🟢 低位平靜</span><span class="delta neg">-4.99 1D</span></div>
-          <div class="indicator-explain good">&lt; 80 risk-on,72.24→67.25 走低,債市無壓力。</div>
+          <div class="indicator-explain good">&lt; 80 屬風險偏好,72.24→67.25 走低,債市無壓力。</div>
         </div>
         <div class="metric accent">
           <div class="label">DXY (美元)</div>
@@ -313,14 +314,14 @@ table td.note { font-size:12.5px; max-width:380px; }
         <div class="metric danger">
           <div class="label">BTC-NDX 7D 相關</div>
           <div class="value med">+0.05</div>
-          <div class="sub"><span class="regime-tag r-pressure">🟡 接近 zero(decoupled)</span><span class="delta pos">+0.27 vs 5/8</span></div>
-          <div class="indicator-explain warn">-0.22→+0.05,接近 0 = <strong>decoupling 持續</strong>,ETF/whale 主導。</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 接近零(脫鉤)</span><span class="delta pos">+0.27 vs 5/8</span></div>
+          <div class="indicator-explain warn">-0.22→+0.05,接近 0 = <strong>脫鉤狀態持續</strong>,由 ETF/鯨魚主導。</div>
         </div>
       </div>
       <div class="alert-banner warn" style="margin-top:18px;">
         <span style="font-size:24px;">🟡</span>
         <div style="flex:1;">
-          <strong>資金面 verdict: CAUTION</strong> · 債市穩(MOVE 67) + DXY 略升 + TIPS 降但仍偏高 + ETF 連 2 日流出 + BTC-NDX 7D 仍 decoupled。<strong>5/12 CPI 是關鍵轉綠/轉紅分水嶺</strong>。
+          <strong>資金面判斷:🟡 注意</strong> · 債市穩(MOVE 67) + DXY 略升 + TIPS 降但仍偏高 + ETF 連 2 日流出 + BTC-NDX 7 日仍脫鉤。<strong>5/12 CPI 是關鍵轉綠/轉紅分水嶺</strong>。
         </div>
       </div>
     </div>
@@ -335,7 +336,7 @@ table td.note { font-size:12.5px; max-width:380px; }
         <div class="metric btc">
           <div class="label">BTC.D</div>
           <div class="value med">58.24%</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-normal">🟡 flat vs 5/8</span><span class="delta neg">-0.17 vs 5/8</span></div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-normal">🟡 幾乎持平</span><span class="delta neg">-0.17 vs 5/8</span></div>
         </div>
         <div class="metric success">
           <div class="label">OTHERS.D ⭐</div>
@@ -400,7 +401,7 @@ table td.note { font-size:12.5px; max-width:380px; }
       <div class="alert-banner warn" style="margin-top:18px;">
         <span style="font-size:24px;">🟡</span>
         <div style="flex:1;">
-          <strong>小幣框架 verdict: PENDING (1/3 pass + 2 pend)</strong> · weekend gap 5/9-5/10 缺數據,7D 方向訊號未確認。等 5/12 CPI + 連 3 天有效紀錄後再評估是否升級 GO。
+          <strong>小幣框架判斷:🟡 待確認(1/3 通過 + 2/3 待定)</strong> · 週末 5/9-5/10 缺數據,7 日方向訊號未確認。等 5/12 CPI + 連 3 天有效紀錄後再評估是否升級為通過。
         </div>
       </div>
     </div>
@@ -442,7 +443,168 @@ table td.note { font-size:12.5px; max-width:380px; }
 
   </div>
 
-  <div class="foot">Last updated: 2026-05-11 10:08 TPE · v4.8 dashboard · 排程 daily-crypto-x-sentiment v2 · 17 天歷史 · 🟡 Layer 1 PENDING (weekend gap)</div>
+  <!-- ========== TAB 3: 21D TOP 3 ========== -->
+  <div class="tab-panel" id="tab-top3">
+
+    <div class="alert-banner info">
+      <strong>21 天漲幅排行 · 今日 Top 3:</strong>
+      <span style="font-family:var(--mono);color:var(--success);font-weight:600;">$LAB</span> ·
+      <span style="font-family:var(--mono);color:var(--success);font-weight:600;">$B</span> ·
+      <span style="font-family:var(--mono);color:var(--success);font-weight:600;">$UB</span>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <span style="color:var(--text-mid);">每日 08:33(台北)由 <code>crypto-top3-bot</code> 自動更新</span>
+    </div>
+
+    <div class="card">
+      <div class="head">
+        <div class="title">🏆 今日 21D Top 10(2026-05-11)</div>
+        <div class="meta">CoinGecko top 200 → 過濾穩定幣/包裝/RWA/小市值/新幣 → 21 日漲幅排序</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;padding:8px 0;">
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#1</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--success);font-weight:600;margin-top:4px;">LAB</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#2</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--success);font-weight:600;margin-top:4px;">B</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#3</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--success);font-weight:600;margin-top:4px;">UB</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#4</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">SKYAI</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#5</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">H</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#6</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">ZEC</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#7</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">ONDO</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#8</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">TON</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#9</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">SIREN</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-dim);">#10</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">AKT</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head">
+        <div class="title">📊 過去 7 日 Top 3 變化</div>
+        <div class="meta">看哪些幣連續在榜 → 進場訊號(連續 3 天在 Top 3 才買進)</div>
+      </div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:var(--surface-2);">
+              <th style="text-align:left;padding:10px;color:var(--text-mid);font-weight:500;">日期</th>
+              <th style="text-align:left;padding:10px;color:var(--text-mid);font-weight:500;">#1</th>
+              <th style="text-align:left;padding:10px;color:var(--text-mid);font-weight:500;">#2</th>
+              <th style="text-align:left;padding:10px;color:var(--text-mid);font-weight:500;">#3</th>
+              <th style="text-align:left;padding:10px;color:var(--text-mid);font-weight:500;">變動</th>
+            </tr>
+          </thead>
+          <tbody style="font-family:var(--mono);">
+            <tr style="border-bottom:1px solid var(--border);background:rgba(74,222,128,0.05);">
+              <td style="padding:10px;color:var(--success);font-weight:600;">05-11 今日</td>
+              <td style="padding:10px;color:var(--success);">LAB</td>
+              <td style="padding:10px;color:var(--success);">B</td>
+              <td style="padding:10px;color:var(--success);">UB ✨</td>
+              <td style="padding:10px;color:var(--text-dim);font-size:11.5px;">UB 新進、SKYAI 跌出</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px;color:var(--text-mid);">05-10</td>
+              <td style="padding:10px;">LAB ✨</td>
+              <td style="padding:10px;">B</td>
+              <td style="padding:10px;">SKYAI</td>
+              <td style="padding:10px;color:var(--text-dim);font-size:11.5px;">LAB 新進、LUNC 跌出</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px;color:var(--text-mid);">05-09</td>
+              <td style="padding:10px;">B</td>
+              <td style="padding:10px;">SKYAI</td>
+              <td style="padding:10px;">LUNC</td>
+              <td style="padding:10px;color:var(--text-dim);font-size:11.5px;">同前</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px;color:var(--text-mid);">05-08</td>
+              <td style="padding:10px;">B</td>
+              <td style="padding:10px;">SKYAI</td>
+              <td style="padding:10px;">LUNC</td>
+              <td style="padding:10px;color:var(--text-dim);font-size:11.5px;">同前</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px;color:var(--text-mid);">05-07</td>
+              <td style="padding:10px;">B</td>
+              <td style="padding:10px;">SKYAI</td>
+              <td style="padding:10px;">LUNC</td>
+              <td style="padding:10px;color:var(--text-dim);font-size:11.5px;">B 衝上 #1</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px;color:var(--text-mid);">05-06</td>
+              <td style="padding:10px;">SKYAI</td>
+              <td style="padding:10px;">B</td>
+              <td style="padding:10px;">LUNC</td>
+              <td style="padding:10px;color:var(--text-dim);font-size:11.5px;">同前</td>
+            </tr>
+            <tr>
+              <td style="padding:10px;color:var(--text-mid);">05-05</td>
+              <td style="padding:10px;">SKYAI</td>
+              <td style="padding:10px;">B</td>
+              <td style="padding:10px;">LUNC</td>
+              <td style="padding:10px;color:var(--text-dim);font-size:11.5px;">起算日</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="indicator-explain accent" style="margin-top:14px;">
+        <strong>已連續 3 天在 Top 3 的標的:</strong> <span style="font-family:var(--mono);color:var(--success);font-weight:600;">$B</span>(05-07 起,7 天)、<span style="font-family:var(--mono);color:var(--success);font-weight:600;">$SKYAI</span>(05-05~05-10,昨日跌出 Top 3 → 觸發出場條件)。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="head">
+        <div class="title">📘 策略規則(SOP)</div>
+        <div class="meta">15 個月回測:策略 +469%,BTC -18%,勝率 44%,最大回撤 -63%</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:6px 0;">
+        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;">
+          <div style="font-size:13px;color:var(--success);font-weight:600;margin-bottom:6px;">✅ 進場條件</div>
+          <div style="font-size:12.5px;color:var(--text-mid);line-height:1.55;">連續 <strong style="color:var(--text);">3 天</strong>在 21D Top 3 → 買入,最多同時持有 5 個標的</div>
+        </div>
+        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--danger);border-radius:6px;">
+          <div style="font-size:13px;color:var(--danger);font-weight:600;margin-bottom:6px;">🚪 出場條件(任一觸發)</div>
+          <div style="font-size:12.5px;color:var(--text-mid);line-height:1.55;">
+            ① 掉出 21D Top 10<br>
+            ② 從進場後高點回撤 <strong style="color:var(--text);">-20%</strong>(高點需先 +5% 才生效)<br>
+            ③ 進場後 <strong style="color:var(--text);">-30%</strong> 災難停損
+          </div>
+        </div>
+      </div>
+      <div class="indicator-explain warn" style="margin-top:14px;">
+        <strong>📐 配置:</strong>整體資產 <strong>5-10%</strong> 跑這策略。<strong>⚠ 注意:</strong>回測有倖存者偏差,實際 forward test 預期報酬約 +50~200% vs BTC,而非 +469%。
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">最近更新:2026-05-11 · v4.8 dashboard · 排程 daily-crypto-x-sentiment + crypto-top3-bot · 🟡 小幣框架 Layer 1 待確認(週末跳空)</div>
 </div>
 
 <script>
