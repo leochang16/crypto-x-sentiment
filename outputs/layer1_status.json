@@ -1,0 +1,23 @@
+{
+  "2026-05-11": {
+    "date": "2026-05-11",
+    "timestamp_utc": "2026-05-11T06:56:38Z",
+    "btc_d": 58.4,
+    "eth_d": 10.1,
+    "others_d": 14.2,
+    "total3_d": 31.6,
+    "altcoin_season_index": 39,
+    "conditions": {
+      "c1_others_d_gt11": true,
+      "c1_others_7d_up": false,
+      "c1_met": false,
+      "c2_btc_d_7d_change": 2.4,
+      "c2_btc_d_7d_down": false,
+      "c2_met": false,
+      "c3_total3_d_gt28": true,
+      "c3_met": true
+    },
+    "verdict": "CAUTION",
+    "verdict_reason": "TOTAL3.D=31.6%>28% (C3 met); OTHERS.D=14.2%>11% but 7D declining (C1 failed); BTC.D rose +2.4pp 7D (C2 failed)"
+  }
+}

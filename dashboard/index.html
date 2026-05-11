@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Sentiment Dashboard</title>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --red: #f85149; --yellow: #d29922;
+    --purple: #bc8cff; --orange: #db6d28;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; }
+  .header { background: var(--card); border-bottom: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+  .header h1 { font-size: 18px; font-weight: 600; }
+  .header .badge { background: var(--accent); color: #000; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; }
+  .tabs { display: flex; border-bottom: 1px solid var(--border); padding: 0 24px; background: var(--card); }
+  .tab { padding: 12px 16px; cursor: pointer; border-bottom: 2px solid transparent; color: var(--muted); font-size: 13px; transition: all .2s; }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab:hover { color: var(--text); }
+  .content { display: none; padding: 24px; max-width: 1200px; margin: 0 auto; }
+  .content.active { display: block; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
+  @media(max-width:768px) { .grid2,.grid3,.grid4 { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .card-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin-bottom: 8px; }
+  .card-value { font-size: 28px; font-weight: 700; }
+  .card-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .card-explain { font-size: 12px; color: var(--muted); margin-top: 8px; border-top: 1px solid var(--border); padding-top: 8px; }
+  .bullish { color: var(--green); }
+  .bearish { color: var(--red); }
+  .neutral-c { color: var(--yellow); }
+  .greed { color: var(--orange); }
+  .euphoric { color: #ff6b6b; }
+  .fear { color: var(--yellow); }
+  .extreme-fear { color: var(--red); }
+  .verdict-go { background: rgba(63,185,80,.15); border-color: var(--green); }
+  .verdict-caution { background: rgba(210,153,34,.15); border-color: var(--yellow); }
+  .verdict-nogo { background: rgba(248,81,73,.15); border-color: var(--red); }
+  .progress-bar { height: 8px; border-radius: 4px; background: var(--border); margin-top: 8px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 4px; transition: width .5s; }
+  .news-list, .cal-list { list-style: none; }
+  .news-list li, .cal-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; display: flex; gap: 10px; align-items: flex-start; }
+  .news-list li:last-child, .cal-list li:last-child { border-bottom: none; }
+  .news-num { background: var(--border); color: var(--muted); min-width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+  .cal-date { font-size: 11px; color: var(--accent); font-weight: 600; white-space: nowrap; min-width: 70px; }
+  .section-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .alert { background: rgba(210,153,34,.1); border: 1px solid var(--yellow); border-radius: 6px; padding: 10px 14px; font-size: 12px; color: var(--yellow); margin-bottom: 16px; }
+  .hist-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+  .hist-date { color: var(--muted); min-width: 80px; }
+  .hist-score-bar { flex: 1; height: 6px; border-radius: 3px; background: var(--border); overflow: hidden; }
+  .hist-score-fill { height: 100%; border-radius: 3px; }
+  .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+  .tag-bull { background: rgba(63,185,80,.2); color: var(--green); }
+  .tag-bear { background: rgba(248,81,73,.2); color: var(--red); }
+  .tag-neutral { background: rgba(139,148,158,.2); color: var(--muted); }
+  .tag-ebull { background: rgba(255,107,107,.2); color: #ff6b6b; }
+  .evidence-card { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; }
+  .evidence-user { color: var(--accent); font-size: 11px; font-weight: 600; }
+  .evidence-text { font-size: 12px; color: var(--text); margin: 4px 0; line-height: 1.4; }
+  .evidence-meta { font-size: 11px; color: var(--muted); }
+  .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-label { color: var(--muted); }
+  .verdict-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 13px; }
+  .vb-go { background: rgba(63,185,80,.2); color: var(--green); border: 1px solid var(--green); }
+  .vb-caution { background: rgba(210,153,34,.2); color: var(--yellow); border: 1px solid var(--yellow); }
+  .vb-nogo { background: rgba(248,81,73,.2); color: var(--red); border: 1px solid var(--red); }
+  .vb-pending { background: rgba(139,148,158,.2); color: var(--muted); border: 1px solid var(--border); }
+  footer { text-align: center; padding: 20px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span>📊</span>
+  <h1>Crypto · 總經 &amp; 情緒 Dashboard</h1>
+  <span class="badge" id="today-badge">2026-05-11</span>
+  <span style="margin-left:auto;color:var(--muted);font-size:12px;">UTC+8 台北</span>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('tab1')">📈 今日指標</div>
+  <div class="tab" onclick="showTab('tab2')">🕐 歷史 &amp; 情緒</div>
+  <div class="tab" onclick="showTab('tab3')">🗓️ 日曆 &amp; 新聞</div>
+</div>
+
+<!-- TAB 1: Today's Metrics -->
+<div class="content active" id="tab1">
+
+  <div id="viral-alert" style="display:none" class="alert">
+    ⚠️ viral_news_dominates：前兩大推文佔總互動 43.5%，情緒分可能被病毒式新聞拉偏。
+  </div>
+
+  <div class="section-title">🎯 雙 Verdict</div>
+  <div class="grid2" style="margin-bottom:24px">
+    <div class="card verdict-caution">
+      <div class="card-title">資金面 Verdict</div>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
+        <span class="verdict-badge vb-caution" id="fund-verdict">CAUTION</span>
+        <span style="font-size:12px;color:var(--muted)" id="fund-reason">BTC ETF 創紀錄流入但 BTC.D 升至 58.4%，資金集中 BTC，尚未輪動至小幣。</span>
+      </div>
+    </div>
+    <div class="card verdict-caution">
+      <div class="card-title">小幣框架 Layer 1 Verdict</div>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:8px">
+        <span class="verdict-badge vb-caution" id="layer1-verdict">CAUTION</span>
+        <span style="font-size:12px;color:var(--muted)" id="layer1-reason">TOTAL3.D=31.6%>28% (C3 ✓)；BTC.D 7D +2.4pp (C2 ✗)；OTHERS.D 7D 下滑 (C1 ✗)。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">💡 行動建議</div>
+  <div class="card" style="margin-bottom:24px">
+    <div style="font-size:13px;line-height:1.8;color:var(--text)">
+      <strong>BTC：</strong>持有/小加倉，關注 $83-85K 阻力（鯨魚限價單密集），止損設 $78K 以下。<br>
+      <strong>ETH：</strong>觀望，$2,400 尚未有效突破，等週收盤站穩再行動。<br>
+      <strong>山寨：</strong>暫緩重倉，BTC Season（CMC Alt Index 39/100），OTHERS.D 7D 走弱，等 BTC.D 觸頂回落再佈局。<br>
+      <span style="color:var(--yellow)">⚠️ 注意：周二 CPI 數據（5/12）+鮑威爾任期屆滿（5/15）雙重事件風險。</span>
+    </div>
+  </div>
+
+  <div class="section-title">📊 X 情緒</div>
+  <div class="grid4">
+    <div class="card">
+      <div class="card-title">綜合情緒分</div>
+      <div class="card-value greed" id="sent-score">70.3</div>
+      <div class="progress-bar"><div class="progress-fill" id="sent-bar" style="width:70.3%;background:var(--orange)"></div></div>
+      <div class="card-sub" id="sent-band">greed · 貪婪</div>
+      <div class="card-explain">eng加權5級分類，24條有效推文。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">BTC 情緒分</div>
+      <div class="card-value greed" id="btc-score">72.6</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:72.6%;background:var(--orange)"></div></div>
+      <div class="card-sub">greed</div>
+      <div class="card-explain">英/中/日/韓推文，Top 查詢模式。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">ETH 情緒分</div>
+      <div class="card-value greed" id="eth-score">68.0</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:68%;background:var(--orange)"></div></div>
+      <div class="card-sub">greed</div>
+      <div class="card-explain">ETH 接近 $2,400 但尚未站穩，整體偏多。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">互動加權分布</div>
+      <div style="margin-top:8px">
+        <div style="font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Extreme Bull</span><span style="color:#ff6b6b">11.1%</span></div>
+        <div style="font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Bull</span><span class="bullish">48.9%</span></div>
+        <div style="font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Neutral</span><span class="neutral-c">3.3%</span></div>
+        <div style="font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Bear</span><span class="bearish">18.0%</span></div>
+        <div style="font-size:11px;display:flex;justify-content:space-between"><span>Extreme Bear</span><span class="muted">0%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">🏦 Dominance</div>
+  <div class="grid4">
+    <div class="card">
+      <div class="card-title">BTC.D</div>
+      <div class="card-value" id="btc-d">58.4%</div>
+      <div class="card-sub bearish" id="btc-d-7d">7D +2.4pp ↑</div>
+      <div class="card-explain">BTC Season，資金集中比特幣，不利山寨。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">ETH.D</div>
+      <div class="card-value" id="eth-d">10.1%</div>
+      <div class="card-sub" style="color:var(--muted)">7D 略平</div>
+      <div class="card-explain">ETH 市佔維持，等待 $2,400 突破確認。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">OTHERS.D</div>
+      <div class="card-value" id="others-d">14.2%</div>
+      <div class="card-sub bearish" id="others-d-7d">7D -0.6pp ↓</div>
+      <div class="card-explain">>11% 閾值但 7D 走弱，C1 未滿足。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">TOTAL3.D</div>
+      <div class="card-value bullish" id="total3-d">31.6%</div>
+      <div class="card-sub bullish">7D +1.4pp ↑ · C3 ✓</div>
+      <div class="card-explain">>28% 閾值，非 BTC/ETH 小幣盤仍有份量。</div>
+    </div>
+  </div>
+
+  <div class="section-title">🌍 總經指標</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="card-title">恐慌指標</div>
+      <div class="metric-row">
+        <span class="metric-label">VIX</span>
+        <span class="neutral-c">17.2</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">VIX3M</span>
+        <span style="color:var(--muted)">N/A</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">MOVE</span>
+        <span style="color:var(--muted)">N/A</span>
+      </div>
+      <div class="card-explain">VIX 17.2 屬中低波動，市場整體偏冷靜。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">利率 &amp; 美元</div>
+      <div class="metric-row">
+        <span class="metric-label">DXY</span>
+        <span class="neutral-c">~100.5</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">TNX (10Y)</span>
+        <span class="neutral-c">4.38%</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">TIPS 實質利率</span>
+        <span class="bearish">1.90%</span>
+      </div>
+      <div class="card-explain">實質利率 1.9% 仍高，壓制風險資產估值。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">股市 &amp; 加密相關</div>
+      <div class="metric-row">
+        <span class="metric-label">NDX</span>
+        <span class="bullish">29,235</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">BTC 價格</span>
+        <span>$80,952</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">ETH 價格</span>
+        <span>$2,339</span>
+      </div>
+      <div class="card-explain">NDX 創高帶動風險情緒，BTC-NDX 相關性仍高。</div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">BTC-NDX 相關性 (估算)</div>
+      <div class="metric-row">
+        <span class="metric-label">30D 相關係數</span>
+        <span class="bullish">~0.72</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">7D 相關係數</span>
+        <span class="bullish">~0.65</span>
+      </div>
+      <div class="card-explain">BTC 與科技股同步上揚，宏觀驅動明顯；高相關意味風險傳導快。</div>
+    </div>
+    <div class="card">
+      <div class="card-title">本週重大事件</div>
+      <div class="metric-row">
+        <span class="metric-label">5/12 CPI</span>
+        <span class="bearish">+3.7% YoY</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">5/15 Fed 主席換屆</span>
+        <span class="neutral-c">Warsh 接任</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">5/11 美中峰會</span>
+        <span class="neutral-c">進行中</span>
+      </div>
+      <div class="card-explain">CPI 超預期可能打壓降息預期；Warsh 強硬派背景對幣市不確定。</div>
+    </div>
+  </div>
+
+  <div class="section-title">⚠️ Pre-trade 提醒</div>
+  <div class="card">
+    <ul style="list-style:none;font-size:13px;line-height:2">
+      <li>🕛 <strong>5/12 週二 CPI</strong>：核心 +2.7% YoY 預期，超預期恐引爆拋售。</li>
+      <li>🏛️ <strong>5/15 Fed 主席換屆</strong>：Kevin Warsh 接任鮑威爾，政策態度待觀察。</li>
+      <li>🐋 <strong>鯨魚</strong>：$8,070 萬 BTC 空倉 + $83-85K 限買牆並存，雙向壓力大。</li>
+      <li>📰 <strong>viral_news_dominates</strong>：情緒分受 WatcherGuru Mother's Day 帖 + AshCrypto 軋空帖主導，警惕情緒高估。</li>
+      <li>🇮🇷 <strong>地緣</strong>：美伊談判破裂曾短暫拖累 BTC；進展仍是尾部風險。</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TAB 2: History & Evidence -->
+<div class="content" id="tab2">
+
+  <div class="section-title">📜 歷史紀錄（近 30 天）</div>
+  <div class="card" id="history-list">
+    <!-- filled by JS -->
+  </div>
+
+  <div style="margin-top:24px" class="section-title">🔍 今日推文證據 (BTC Top-5)</div>
+  <div id="evidence-list"></div>
+
+  <div style="margin-top:24px" class="section-title">🏦 Layer 1 條件詳情</div>
+  <div class="card">
+    <div class="metric-row">
+      <span class="metric-label">C1 OTHERS.D &gt; 11%</span>
+      <span class="bullish">✓ 14.2%</span>
+    </div>
+    <div class="metric-row">
+      <span class="metric-label">C1 OTHERS.D 7D 上升</span>
+      <span class="bearish">✗ -0.6pp</span>
+    </div>
+    <div class="metric-row">
+      <span class="metric-label">C2 BTC.D 7D 下降 (±0.3閾)</span>
+      <span class="bearish">✗ +2.4pp (BTC Season)</span>
+    </div>
+    <div class="metric-row">
+      <span class="metric-label">C3 TOTAL3.D &gt; 28%</span>
+      <span class="bullish">✓ 31.6%</span>
+    </div>
+    <div class="metric-row">
+      <span class="metric-label">CMC Alt Season Index</span>
+      <span class="neutral-c">39 / 100 (Bitcoin Season)</span>
+    </div>
+    <div class="metric-row">
+      <span class="metric-label">Layer 1 Verdict</span>
+      <span class="verdict-badge vb-caution">CAUTION</span>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 3: Calendar & News -->
+<div class="content" id="tab3">
+
+  <div class="section-title">🗓️ 本週總經日曆</div>
+  <div class="card">
+    <ul class="cal-list" id="cal-list">
+      <li>
+        <span class="cal-date">2026-05-12</span>
+        <span>CPI 發布：預期核心 +2.7% YoY / +0.3% MoM；超預期可能壓制降息預期。</span>
+      </li>
+      <li>
+        <span class="cal-date">2026-05-15</span>
+        <span>鮑威爾任期屆滿；參議院表決 Kevin Warsh 接任 Fed 主席，強硬立場引市場不確定性。</span>
+      </li>
+      <li>
+        <span class="cal-date">2026-05-11</span>
+        <span>美中峰會（本週）：貿易政策走向影響風險偏好；Clarity Act Mark-up 可能推進加密監管清晰度。</span>
+      </li>
+      <li>
+        <span class="cal-date">2026 Q2</span>
+        <span>Trump 政府「數週內」公布美國戰略比特幣儲備框架細節；SEC Project Crypto NPRM 待發。</span>
+      </li>
+    </ul>
+  </div>
+
+  <div style="margin-top:24px" class="section-title">📰 過去 24h 重點新聞</div>
+  <div class="card">
+    <ul class="news-list" id="news-list">
+      <li>
+        <span class="news-num">1</span>
+        <span>BTC 破 $82K 創 1 月以來新高，ETF 週流入創去年 10 月以來最強；$5,000 萬空倉在 1 小時內被強制平倉。</span>
+      </li>
+      <li>
+        <span class="news-num">2</span>
+        <span>Trump 拒絕伊朗提案後，BTC 急跌跌破 $81K，隨後快速回升，凸顯地緣尾部風險。</span>
+      </li>
+      <li>
+        <span class="news-num">3</span>
+        <span>白宮加密顧問稱將在「數週內」公布美國戰略比特幣儲備新細節，機構需求預期升溫。</span>
+      </li>
+      <li>
+        <span class="news-num">4</span>
+        <span>Strategy (MicroStrategy) 持有 818,334 BTC，評估出售部分以支付優先股股息，引發持幣者擔憂。</span>
+      </li>
+      <li>
+        <span class="news-num">5</span>
+        <span>Bitcoin OG 休眠 12+ 年後移動 500 BTC（$4,062 萬），來自 2014 年 $914 低位買入。</span>
+      </li>
+    </ul>
+  </div>
+
+  <div style="margin-top:24px" class="section-title">📈 總經摘要</div>
+  <div class="card">
+    <div style="font-size:13px;line-height:1.9;color:var(--text)">
+      <strong>VIX 17.2</strong>（5/8）處中低波動區間，市場整體情緒穩定。<br>
+      <strong>DXY ~100.5</strong>：4 月底 98.5 低位後回彈，美元走強對風險資產略有壓力。<br>
+      <strong>10Y 殖利率 4.38%</strong>：維持高位，降息空間有限；30Y 曾觸及 5%。<br>
+      <strong>TIPS 實質利率 1.90%</strong>（5/8，FRED DFII10）：實質正利率持續壓縮加密資產估值空間。<br>
+      <strong>NDX 29,235</strong>（5/8 +2.35%）：科技股強勢拉動風險偏好，BTC 與 NDX 30D 相關約 0.72。<br>
+      <strong>CPI 預期</strong>（5/12）：能源推動標題通膨 +3.7% YoY，核心 +2.7%；若超預期將打壓降息預期。<br>
+      <strong>Fed 主席換屆</strong>（5/15）：Warsh 鷹派背景，就任初期利率態度是最大不確定因素。
+    </div>
+  </div>
+</div>
+
+<footer>
+  Daily auto-generated · 台北 UTC+8 · <span id="gen-time"></span>
+</footer>
+
+<script>
+const HISTORY = {
+  "2026-05-11": {
+    "btc_price": 80952,
+    "eth_price": 2339,
+    "btc_d": 58.4,
+    "eth_d": 10.1,
+    "others_d": 14.2,
+    "total3_d": 31.6,
+    "sentiment_score": 70.3,
+    "btc_score": 72.6,
+    "eth_score": 68.0,
+    "sentiment_band": "greed",
+    "vix": 17.2,
+    "dxy": 100.5,
+    "tnx": 4.38,
+    "tips_real": 1.90,
+    "ndx": 29235,
+    "layer1_verdict": "CAUTION",
+    "fund_verdict": "CAUTION",
+    "viral_dominates": true,
+    "tweet_count": 24,
+    "evidence": [
+      {"user":"WatcherGuru","text":"Bitcoin Price on Mother's Day historical: 2026 $81,700","eng":7319,"bucket":"bull","score":75},
+      {"user":"AshCrypto","text":"Crazy reversal: BTC $82K, ETH $2,400, $50M shorts liquidated 1hr","eng":4477,"bucket":"extreme_bull","score":100},
+      {"user":"BullTheoryio","text":"Bitcoin closed daily+weekly above $82K for first time since Jan 26","eng":2262,"bucket":"extreme_bull","score":100},
+      {"user":"TheRealPlanC","text":"Bitcoin Supercycle beginning...gradually then suddenly...","eng":1315,"bucket":"extreme_bull","score":100},
+      {"user":"cryptorover","text":"BITCOIN: RISING WEDGE! Bearish pattern","eng":1354,"bucket":"bear","score":25}
+    ],
+    "news": [
+      "BTC 破 $82K 創 1 月新高，ETF 週流入最強，$5,000 萬空倉被清算。",
+      "Trump 拒絕伊朗提案 → BTC 急跌至 $81K 以下，隨後快速回升。",
+      "白宮加密顧問：數週內公布美國戰略比特幣儲備框架細節。",
+      "Strategy 評估出售部分 BTC 支付優先股股息（持有 818,334 BTC）。",
+      "Bitcoin OG 休眠 12+ 年後移動 500 BTC（$4,062 萬），購入成本 $914。"
+    ],
+    "calendar": [
+      {"date":"2026-05-12","event":"CPI：核心 +2.7% YoY 預期；超預期壓降息預期。"},
+      {"date":"2026-05-15","event":"鮑威爾任期屆滿，參議院表決 Warsh 接任。"},
+      {"date":"2026-05-11","event":"美中峰會 + Clarity Act Mark-up，加密監管清晰度進展。"}
+    ]
+  }
+};
+
+function showTab(id) {
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', ['tab1','tab2','tab3'][i]===id));
+  document.querySelectorAll('.content').forEach(c => c.classList.toggle('active', c.id===id));
+}
+
+function bandColor(band) {
+  const m = {euphoric:'#ff6b6b',greed:'var(--orange)',neutral:'var(--yellow)',fear:'var(--yellow)',extreme_fear:'var(--red)'};
+  return m[band] || 'var(--muted)';
+}
+
+function scoreColor(s) {
+  if(s>=75) return '#ff6b6b';
+  if(s>=56) return 'var(--orange)';
+  if(s>=45) return 'var(--yellow)';
+  if(s>=25) return 'var(--yellow)';
+  return 'var(--red)';
+}
+
+function renderHistory() {
+  const dates = Object.keys(HISTORY).sort((a,b)=>b>a?1:-1);
+  const el = document.getElementById('history-list');
+  if(!dates.length){el.innerHTML='<p style="color:var(--muted);text-align:center;padding:20px">暫無歷史資料</p>';return;}
+  el.innerHTML = dates.map(d => {
+    const h = HISTORY[d];
+    const s = h.sentiment_score||0;
+    const col = scoreColor(s);
+    const viral = h.viral_dominates ? ' <span style="color:var(--yellow);font-size:10px">⚠viral</span>' : '';
+    return `<div class="hist-row">
+      <span class="hist-date">${d}</span>
+      <div class="hist-score-bar"><div class="hist-score-fill" style="width:${s}%;background:${col}"></div></div>
+      <span style="min-width:36px;font-size:12px;color:${col}">${s.toFixed(1)}</span>
+      <span style="font-size:11px;color:var(--muted);min-width:60px">${h.sentiment_band||''}${viral}</span>
+      <span style="font-size:11px;min-width:50px">₿$${(h.btc_price/1000).toFixed(1)}K</span>
+      <span class="verdict-badge ${h.layer1_verdict==='GO'?'vb-go':h.layer1_verdict==='CAUTION'?'vb-caution':'vb-nogo'}" style="font-size:10px;padding:2px 8px">${h.layer1_verdict||'-'}</span>
+    </div>`;
+  }).join('');
+}
+
+function renderEvidence() {
+  const latest = Object.keys(HISTORY).sort((a,b)=>b>a?1:-1)[0];
+  if(!latest) return;
+  const ev = HISTORY[latest].evidence||[];
+  const tagClass = {bull:'tag-bull',bear:'tag-bear',neutral:'tag-neutral',extreme_bull:'tag-ebull'};
+  const tagLabel = {bull:'🟢 Bull',bear:'🔴 Bear',neutral:'⚪ Neutral',extreme_bull:'🔥 XBull'};
+  document.getElementById('evidence-list').innerHTML = ev.map(e =>
+    `<div class="evidence-card">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <span class="evidence-user">@${e.user}</span>
+        <span class="tag ${tagClass[e.bucket]||'tag-neutral'}">${tagLabel[e.bucket]||e.bucket}</span>
+        <span style="margin-left:auto;font-size:11px;color:var(--muted)">eng:${e.eng.toLocaleString()}</span>
+      </div>
+      <div class="evidence-text">${e.text}</div>
+    </div>`
+  ).join('');
+}
+
+function init() {
+  const latest = Object.keys(HISTORY).sort((a,b)=>b>a?1:-1)[0];
+  if(latest) document.getElementById('today-badge').textContent = latest;
+  document.getElementById('gen-time').textContent = new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
+  const h = HISTORY[latest];
+  if(h && h.viral_dominates) document.getElementById('viral-alert').style.display='block';
+  renderHistory();
+  renderEvidence();
+}
+
+init();
+</script>
+</body>
+</html>
