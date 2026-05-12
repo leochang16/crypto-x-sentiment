@@ -75,5 +75,82 @@
         "bucket_score": 25
       }
     ]
+  },
+  "2026-05-12": {
+    "date": "2026-05-12",
+    "timestamp_utc": "2026-05-12T00:37:00Z",
+    "score": 64.8,
+    "btc_score": 72.7,
+    "eth_score": 50.4,
+    "band": "greed",
+    "tweet_count_valid": 84,
+    "tweet_count_raw": 358,
+    "total_engagement": 16528,
+    "top2_engagement_pct": 31.5,
+    "method_notes": "viral_news_dominates",
+    "bucket_distribution": {
+      "extreme_bear": 0,
+      "bear": 12,
+      "neutral": 21,
+      "bull": 36,
+      "extreme_bull": 15
+    },
+    "evidence": [
+      {
+        "user": "BitcoinArchive",
+        "text": "JUST IN: Bitcoin back above $82,000🚀",
+        "likes": 1575,
+        "rt": 152,
+        "replies": 128,
+        "bookmarks": 9,
+        "eng": 2076,
+        "bucket": "extreme_bull",
+        "bucket_score": 100
+      },
+      {
+        "user": "saylor",
+        "text": "A deep dive into $MSTR, $STRC, and our $BTC treasury strategy.",
+        "likes": 851,
+        "rt": 93,
+        "replies": 108,
+        "bookmarks": 152,
+        "eng": 1275,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "BitcoinArchive",
+        "text": "LATEST: Spot Bitcoin ETFs record 6 straight weeks of net inflows ($3.4B total). Longest streak since Aug 2025. Last week: $622.75M.",
+        "likes": 732,
+        "rt": 161,
+        "replies": 85,
+        "bookmarks": 26,
+        "eng": 1195,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "pete_rizzo_",
+        "text": "BREAKING: NEXT FEDERAL RESERVE CHAIR WARSH OFFICIALLY PASSES 1st SENATE VOTE - VERY BULLISH FOR #BITCOIN 🚀",
+        "likes": 385,
+        "rt": 49,
+        "replies": 15,
+        "bookmarks": 3,
+        "eng": 507,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "Cointelegraph",
+        "text": "UPDATE: The Ethereum Foundation just unstaked $49.6M worth of $ETH, per Arkham.",
+        "likes": 221,
+        "rt": 33,
+        "replies": 67,
+        "bookmarks": 7,
+        "eng": 391,
+        "bucket": "bear",
+        "bucket_score": 25
+      }
+    ]
   }
 }
