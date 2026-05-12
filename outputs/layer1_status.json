@@ -19,5 +19,26 @@
     },
     "verdict": "CAUTION",
     "verdict_reason": "TOTAL3.D=31.6%>28% (C3 met); OTHERS.D=14.2%>11% but 7D declining (C1 failed); BTC.D rose +2.4pp 7D (C2 failed)"
+  },
+  "2026-05-12": {
+    "date": "2026-05-12",
+    "timestamp_utc": "2026-05-12T00:37:00Z",
+    "btc_d": 58.27,
+    "eth_d": 10.07,
+    "others_d": 15.1,
+    "total3_d": 31.66,
+    "altcoin_season_index": 39,
+    "conditions": {
+      "c1_others_d_gt11": true,
+      "c1_others_7d_up": true,
+      "c1_met": true,
+      "c2_btc_d_7d_change": 1.77,
+      "c2_btc_d_7d_down": false,
+      "c2_met": false,
+      "c3_total3_d_gt28": true,
+      "c3_met": true
+    },
+    "verdict": "CAUTION",
+    "verdict_reason": "TOTAL3.D=31.66%>28% (C3 met); OTHERS.D=15.1%>11% + 7D +0.4pp (C1 met); BTC.D rose +1.77pp 7D (C2 failed)"
   }
 }
