@@ -76,6 +76,83 @@
       }
     ]
   },
+  "2026-05-13": {
+    "date": "2026-05-13",
+    "timestamp_utc": "2026-05-13T00:09:22Z",
+    "score": 56.4,
+    "btc_score": 63.0,
+    "eth_score": 44.0,
+    "band": "greed",
+    "tweet_count_valid": 61,
+    "tweet_count_raw": 358,
+    "total_engagement": 43632,
+    "top2_engagement_pct": 48.0,
+    "method_notes": "viral_news_dominates",
+    "bucket_distribution": {
+      "extreme_bear": 2,
+      "bear": 9,
+      "neutral": 6,
+      "bull": 28,
+      "extreme_bull": 1
+    },
+    "evidence": [
+      {
+        "user": "saylor",
+        "text": "CLARITY Act markup would unlock next wave of Digital Capital — institutional validation for $BTC",
+        "likes": 13347,
+        "rt": 1640,
+        "replies": 630,
+        "bookmarks": 414,
+        "eng": 17779,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "pete_rizzo_",
+        "text": "CLARITY Act final text released tonight — BTC officially commodity framework",
+        "likes": 2341,
+        "rt": 330,
+        "replies": 99,
+        "bookmarks": 52,
+        "eng": 3176,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "Kalshi",
+        "text": "JUST IN: 50% chance Bitcoin falls below $60,000",
+        "likes": 1445,
+        "rt": 84,
+        "replies": 257,
+        "bookmarks": 47,
+        "eng": 2022,
+        "bucket": "extreme_bear",
+        "bucket_score": 0
+      },
+      {
+        "user": "AshCrypto",
+        "text": "Bitcoin breaks below $80,000",
+        "likes": 957,
+        "rt": 141,
+        "replies": 216,
+        "bookmarks": 5,
+        "eng": 1566,
+        "bucket": "bear",
+        "bucket_score": 25
+      },
+      {
+        "user": "coinbureau",
+        "text": "Crypto Godfather Michael Terpin shorting BTC — sees $60-50K before recovery, $1M by 2033",
+        "likes": 649,
+        "rt": 96,
+        "replies": 124,
+        "bookmarks": 55,
+        "eng": 1055,
+        "bucket": "bear",
+        "bucket_score": 25
+      }
+    ]
+  },
   "2026-05-12": {
     "date": "2026-05-12",
     "timestamp_utc": "2026-05-12T00:37:00Z",
