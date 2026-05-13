@@ -20,27 +20,6 @@
     "verdict": "CAUTION",
     "verdict_reason": "TOTAL3.D=31.6%>28% (C3 met); OTHERS.D=14.2%>11% but 7D declining (C1 failed); BTC.D rose +2.4pp 7D (C2 failed)"
   },
-  "2026-05-13": {
-    "date": "2026-05-13",
-    "timestamp_utc": "2026-05-13T00:09:22Z",
-    "btc_d": 58.29,
-    "eth_d": 9.93,
-    "others_d": 15.2,
-    "total3_d": 31.78,
-    "altcoin_season_index": 40,
-    "conditions": {
-      "c1_others_d_gt11": true,
-      "c1_others_7d_up": true,
-      "c1_met": true,
-      "c2_btc_d_7d_change": 0.89,
-      "c2_btc_d_7d_down": false,
-      "c2_met": false,
-      "c3_total3_d_gt28": true,
-      "c3_met": true
-    },
-    "verdict": "CAUTION",
-    "verdict_reason": "TOTAL3.D=31.78%>28% (C3 met); OTHERS.D=15.2%>11% + 7D +0.1pp (C1 met); BTC.D 7D +0.89pp 仍上升(C2 fail)"
-  },
   "2026-05-12": {
     "date": "2026-05-12",
     "timestamp_utc": "2026-05-12T00:37:00Z",
@@ -61,5 +40,29 @@
     },
     "verdict": "CAUTION",
     "verdict_reason": "TOTAL3.D=31.66%>28% (C3 met); OTHERS.D=15.1%>11% + 7D +0.4pp (C1 met); BTC.D rose +1.77pp 7D (C2 failed)"
+  },
+  "2026-05-13": {
+    "date": "2026-05-13",
+    "timestamp_utc": "2026-05-13T10:20:41Z",
+    "btc_d": 58.27,
+    "eth_d": 9.87,
+    "others_d": 11.3,
+    "total3_d": 31.86,
+    "altcoin_season_index": 40,
+    "alt_mom7": 5.2,
+    "breadth": 73.3,
+    "btc_d_7d_chg": -0.38,
+    "conditions": {
+      "req1_btc_d_delta_lt0": true,
+      "req1_met": true,
+      "req2_alt_mom7_gt0": true,
+      "req2_met": true,
+      "bonus_a_btc_d_delta_lte_minus05": false,
+      "bonus_b_alt_mom7_gt15": true,
+      "bonus_c_others_d_gt12": false
+    },
+    "bonuses_passed": 1,
+    "verdict": "ALT-ON",
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 ALT-ON base · bonus a FAIL(Δ=-0.38pp>-0.5pp) · bonus b PASS(+5.2%>+1.5%) · bonus c FAIL(11.3%<12%)"
   }
 }
