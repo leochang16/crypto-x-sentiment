@@ -229,5 +229,82 @@
         "bucket_score": 25
       }
     ]
+  },
+  "2026-05-14": {
+    "date": "2026-05-14",
+    "timestamp_utc": "2026-05-14T00:06:33Z",
+    "score": 77.8,
+    "btc_score": 78.2,
+    "eth_score": 73.1,
+    "band": "euphoric",
+    "tweet_count_valid": 23,
+    "tweet_count_raw": 358,
+    "total_engagement": 19359,
+    "top2_engagement_pct": 30.7,
+    "method_notes": "viral_news_dominates",
+    "bucket_distribution": {
+      "extreme_bear": 0,
+      "bear": 2,
+      "neutral": 6,
+      "bull": 11,
+      "extreme_bull": 4
+    },
+    "evidence": [
+      {
+        "user": "BitcoinMagazine",
+        "text": "JUST IN: $12 trillion Charles Schwab is officially rolling out spot bitcoin trading to retail clients: 'Starting today, the first group of clients can trade Bitcoin'",
+        "likes": 2359,
+        "rt": 371,
+        "replies": 99,
+        "bookmarks": 78,
+        "eng": 3289,
+        "bucket": "extreme_bull",
+        "bucket_score": 100
+      },
+      {
+        "user": "pete_rizzo_",
+        "text": "BREAKING: $12 TRILLION CHARLES SCHWAB JUST ANNOUNCED THEY ARE ROLLING OUT #BITCOIN TO 40 MILLION CUSTOMERS TODAY. THEY ARE RECOMMENDING UP TO 7% ALLOCATIONS. THIS IS ABSOLUTELY HUGE",
+        "likes": 1821,
+        "rt": 325,
+        "replies": 72,
+        "bookmarks": 165,
+        "eng": 2662,
+        "bucket": "extreme_bull",
+        "bucket_score": 100
+      },
+      {
+        "user": "BitcoinMagazine",
+        "text": "JUST IN: Michael Saylor's Strategy is now estimated to have bought over 4,708 BTC today via STRC. That's over 10.5x the supply of daily mined BTC",
+        "likes": 1115,
+        "rt": 135,
+        "replies": 83,
+        "bookmarks": 23,
+        "eng": 1521,
+        "bucket": "extreme_bull",
+        "bucket_score": 100
+      },
+      {
+        "user": "Kalshi_Crypto",
+        "text": "JUST IN: BlackRock just deposited $169M worth of Bitcoin and Ethereum to Coinbase Prime",
+        "likes": 1059,
+        "rt": 78,
+        "replies": 74,
+        "bookmarks": 31,
+        "eng": 1342,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "coingecko",
+        "text": "NOW: $BTC falls under $79,000.",
+        "likes": 527,
+        "rt": 71,
+        "replies": 129,
+        "bookmarks": 3,
+        "eng": 864,
+        "bucket": "bear",
+        "bucket_score": 25
+      }
+    ]
   }
 }
