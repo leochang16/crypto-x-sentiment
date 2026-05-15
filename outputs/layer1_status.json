@@ -88,5 +88,30 @@
     "bonuses_passed": 1,
     "verdict": "ALT-ON",
     "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 ALT-ON base · bonus a FAIL(Δ=-0.39pp>-0.5pp) · bonus b PASS(+4.2%>+1.5%) · bonus c FAIL(11.5%<12%)"
+  },
+  "2026-05-15": {
+    "date": "2026-05-15",
+    "timestamp_utc": "2026-05-15T16:25:00Z",
+    "btc_d": 58.4,
+    "eth_d": 9.83,
+    "others_d": 11.4,
+    "total3_d": 31.77,
+    "altcoin_season_index": 37,
+    "alt_mom7": 3.5,
+    "breadth": 58.0,
+    "btc_d_7d_chg": -0.1,
+    "conditions": {
+      "req1_btc_d_delta_lt0": true,
+      "req1_met": true,
+      "req2_alt_mom7_gt0": true,
+      "req2_met": true,
+      "bonus_a_btc_d_delta_lte_minus05": false,
+      "bonus_b_alt_mom7_gt15": true,
+      "bonus_c_others_d_gt12": false
+    },
+    "bonuses_passed": 1,
+    "verdict_label": "🟢 GO",
+    "verdict_class": "success",
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 GO · bonus a FAIL(Δ=-0.1pp>-0.5pp) · bonus b PASS(3.5%>+1.5%) · bonus c FAIL(11.4%<12%)"
   }
 }
