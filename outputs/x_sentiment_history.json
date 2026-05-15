@@ -306,5 +306,82 @@
         "bucket_score": 25
       }
     ]
+  },
+  "2026-05-15": {
+    "date": "2026-05-15",
+    "timestamp_utc": "2026-05-15T16:25:00Z",
+    "score": 65.0,
+    "btc_score": 65.0,
+    "eth_score": 59.9,
+    "band": "greed",
+    "tweet_count_valid": 34,
+    "tweet_count_raw": 358,
+    "total_engagement": 16781,
+    "top2_engagement_pct": 37.6,
+    "method_notes": "viral_news_dominates",
+    "bucket_distribution": {
+      "extreme_bear": 1,
+      "bear": 12,
+      "neutral": 6,
+      "bull": 12,
+      "extreme_bull": 3
+    },
+    "evidence": [
+      {
+        "user": "BitcoinMagazine",
+        "text": "JUST IN: Strategy estimated 13,491 BTC today via STRC — 30x daily mined BTC 🚀",
+        "likes": 2650,
+        "rt": 397,
+        "replies": 142,
+        "bookmarks": 69,
+        "eng": 3692,
+        "bucket": "extreme_bull",
+        "bucket_score": 100
+      },
+      {
+        "user": "brian_armstrong",
+        "text": "14 years ago Coinbase was a simple Bitcoin wallet. Today millions of customers+institutions. Grateful",
+        "likes": 1810,
+        "rt": 151,
+        "replies": 323,
+        "bookmarks": 54,
+        "eng": 2624,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "TedPillows",
+        "text": "Take a look at the Coinbase Bitcoin Premium. $BTC is getting sold like crazy",
+        "likes": 718,
+        "rt": 84,
+        "replies": 156,
+        "bookmarks": 20,
+        "eng": 1130,
+        "bucket": "bear",
+        "bucket_score": 25
+      },
+      {
+        "user": "LLuciano_BTC",
+        "text": "Bitcoin has gained 18% this quarter so far, and I'm leaning bullish for a strong Q2 finish",
+        "likes": 559,
+        "rt": 12,
+        "replies": 35,
+        "bookmarks": 1,
+        "eng": 636,
+        "bucket": "bull",
+        "bucket_score": 75
+      },
+      {
+        "user": "Cointelegraph",
+        "text": "Today is Jerome Powell's last day in office. Bitcoin is up $76,000 since he started. Where with Warsh?",
+        "likes": 535,
+        "rt": 74,
+        "replies": 85,
+        "bookmarks": 10,
+        "eng": 816,
+        "bucket": "neutral",
+        "bucket_score": 50
+      }
+    ]
   }
 }
