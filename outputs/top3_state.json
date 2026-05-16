@@ -1,28 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-05-09",
-      "top3_14d": [],
-      "top3_21d": [
-        "b",
-        "skyai",
-        "lunc"
-      ],
-      "top10_14d": [],
-      "top10_21d": [
-        "b",
-        "skyai",
-        "lunc",
-        "zec",
-        "h",
-        "jto",
-        "siren",
-        "akt",
-        "strk",
-        "ondo"
-      ]
-    },
-    {
       "date": "2026-05-10",
       "top3_14d": [],
       "top3_21d": [
@@ -145,6 +123,28 @@
         "ub",
         "skyai",
         "ton",
+        "siren",
+        "zec",
+        "ondo",
+        "akt",
+        "sui"
+      ],
+      "top3_14d": [],
+      "top10_14d": []
+    },
+    {
+      "date": "2026-05-16",
+      "top3_21d": [
+        "lab",
+        "b",
+        "ub"
+      ],
+      "top10_21d": [
+        "lab",
+        "b",
+        "ub",
+        "ton",
+        "skyai",
         "siren",
         "zec",
         "ondo",

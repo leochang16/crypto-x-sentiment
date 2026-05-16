@@ -383,5 +383,17 @@
         "bucket_score": 50
       }
     ]
+  },
+  "2026-05-16": {
+    "date": "2026-05-16",
+    "btc_score": 45.0,
+    "btc_band": "neutral",
+    "eth_score": 50.0,
+    "eth_band": "neutral",
+    "btc_price": 79127,
+    "eth_price": 2226,
+    "n_tweets": 49,
+    "viral_dominates": false,
+    "method_notes": "v2 Apify+Claude (358 raw → 49 valid). en:BTC sentiment dominated by broad bear/recovery tweets. BTC -2.8% market pullback. Clarity Act moving through Senate. Coinbase Premium negative."
   }
 }
