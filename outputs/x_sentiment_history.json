@@ -395,5 +395,17 @@
     "n_tweets": 49,
     "viral_dominates": false,
     "method_notes": "v2 Apify+Claude (358 raw → 49 valid). en:BTC sentiment dominated by broad bear/recovery tweets. BTC -2.8% market pullback. Clarity Act moving through Senate. Coinbase Premium negative."
+  },
+  "2026-05-17": {
+    "date": "2026-05-17",
+    "btc_score": 31.0,
+    "btc_band": "fear",
+    "eth_score": 40.0,
+    "eth_band": "fear",
+    "btc_price": 78195,
+    "eth_price": 2173,
+    "n_tweets": 28,
+    "viral_dominates": true,
+    "method_notes": "v2 Apify+Claude (358 raw → 28 valid). viral_news_dominates 50.7%: WatcherGuru 'Bitcoin falls under $78,000'(7043 eng, extreme_bear) + DrProfitCrypto 'short $120K, long $71K'(2229 eng, bear). 多頭: BitcoinMagazine 'patience&conviction'(1094 eng, bull) + StockmoneyL '100K-120K 2026'(308 eng, extreme_bull). 30Y Treasury 5.12% 新高(2008以來最高). BTC $78,195(-1.1%), ETH $2,173(-2.4%). Polymarket 60% odds BTC below $75K月底前. CLARITY Act 100+修正案. FOMC紀要5/20(三)."
   }
 }
