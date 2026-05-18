@@ -407,5 +407,17 @@
     "n_tweets": 28,
     "viral_dominates": true,
     "method_notes": "v2 Apify+Claude (358 raw → 28 valid). viral_news_dominates 50.7%: WatcherGuru 'Bitcoin falls under $78,000'(7043 eng, extreme_bear) + DrProfitCrypto 'short $120K, long $71K'(2229 eng, bear). 多頭: BitcoinMagazine 'patience&conviction'(1094 eng, bull) + StockmoneyL '100K-120K 2026'(308 eng, extreme_bull). 30Y Treasury 5.12% 新高(2008以來最高). BTC $78,195(-1.1%), ETH $2,173(-2.4%). Polymarket 60% odds BTC below $75K月底前. CLARITY Act 100+修正案. FOMC紀要5/20(三)."
+  },
+  "2026-05-18": {
+    "date": "2026-05-18",
+    "btc_score": 47.0,
+    "btc_band": "neutral",
+    "eth_score": 35.0,
+    "eth_band": "fear",
+    "btc_price": 77400,
+    "eth_price": 2179,
+    "n_tweets": 35,
+    "viral_dominates": true,
+    "method_notes": "v2 Apify+Claude (358 raw → ~35 valid). viral_news_dominates: coingecko 'market is healing'(4006 eng, neutral)占35.4%+WatcherGuru 'Bitcoin falls under $77,000'(1105 eng, extreme_bear)。Strategy '週一大買BTC再次宣布'(1187 eng, extreme_bull)。DrProfitCrypto 'shorting BTC NOW'(536 eng, extreme_bear)。BTC $77,400(-1.0%), ETH $2,179(+0.3%)。情緒中性-恐慌混合。"
   }
 }

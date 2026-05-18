@@ -143,7 +143,7 @@
     "date": "2026-05-17",
     "timestamp_utc": "2026-05-17T00:30:00Z",
     "btc_d": 58.3,
-    "eth_d": 9.80,
+    "eth_d": 9.8,
     "others_d": 11.8,
     "total3_d": 31.9,
     "altcoin_season_index": 35,
@@ -163,5 +163,30 @@
     "verdict_label": "🟢 GO",
     "verdict_class": "success",
     "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 GO · bonus a FAIL(Δ=-0.1pp>-0.5pp) · bonus b PASS(2.2%>+1.5%) · bonus c FAIL(11.8%<12%)"
+  },
+  "2026-05-18": {
+    "date": "2026-05-18",
+    "timestamp_utc": "2026-05-18T00:03:00Z",
+    "btc_d": 58.2,
+    "eth_d": 9.78,
+    "others_d": 12.3,
+    "total3_d": 32.02,
+    "altcoin_season_index": 33,
+    "alt_mom7": 1.3,
+    "breadth": 62.0,
+    "btc_d_7d_chg": -0.2,
+    "conditions": {
+      "req1_btc_d_delta_lt0": true,
+      "req1_met": true,
+      "req2_alt_mom7_gt0": true,
+      "req2_met": true,
+      "bonus_a_btc_d_delta_lte_minus05": false,
+      "bonus_b_alt_mom7_gt15": false,
+      "bonus_c_others_d_gt12": true
+    },
+    "bonuses_passed": 1,
+    "verdict_label": "🟢 GO",
+    "verdict_class": "success",
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 GO · bonus a FAIL(Δ=-0.2pp>-0.5pp) · bonus b FAIL(1.3%<+1.5%) · bonus c PASS(12.3%>12%)"
   }
 }
