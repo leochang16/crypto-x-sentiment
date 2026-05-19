@@ -419,5 +419,17 @@
     "n_tweets": 35,
     "viral_dominates": true,
     "method_notes": "v2 Apify+Claude (358 raw → ~35 valid). viral_news_dominates: coingecko 'market is healing'(4006 eng, neutral)占35.4%+WatcherGuru 'Bitcoin falls under $77,000'(1105 eng, extreme_bear)。Strategy '週一大買BTC再次宣布'(1187 eng, extreme_bull)。DrProfitCrypto 'shorting BTC NOW'(536 eng, extreme_bear)。BTC $77,400(-1.0%), ETH $2,179(+0.3%)。情緒中性-恐慌混合。"
+  },
+  "2026-05-19": {
+    "date": "2026-05-19",
+    "btc_score": 63.6,
+    "btc_band": "greed",
+    "eth_score": 40.6,
+    "eth_band": "fear",
+    "btc_price": 77087,
+    "eth_price": 2107,
+    "n_tweets": 69,
+    "viral_dominates": true,
+    "method_notes": "v2 Apify+Claude (158 raw → 69 valid). viral_news_dominates 32.0%(BTC): Minnesota Governor 銀行加密保管法案(3219 eng,extreme_bull)+Strategy 4%+ BTC supply(2529 eng,bull)。viral 53.7%(ETH): ETF flows divergence BTC vs ETH(11986 eng,bear)占47.1%。BTC $77,087(-1.2%),ETH $2,107(-0.3%)。BTC greed(63.6) ETH fear(40.6)。EF研究員辭職+油價壓力繼續拖累ETH。FOMC紀要5/20(三)02:00 TPE。"
   }
 }
