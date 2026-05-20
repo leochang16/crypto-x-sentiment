@@ -213,5 +213,30 @@
     "verdict_label": "🔴 ALT-OFF",
     "verdict_class": "danger",
     "verdict_detail": "req1 PASS(Δ=-0.07pp<0✓) · req2 FAIL(alt_mom7=-4.0%< 0✗) · 任一必要 FAIL → 🔴 ALT-OFF · bonus a FAIL(Δ=-0.07pp>-0.5pp) · bonus b FAIL(-4.0%<+1.5%) · bonus c FAIL(11.3%<12%)"
+  },
+  "2026-05-20": {
+    "date": "2026-05-20",
+    "timestamp_utc": "2026-05-20T02:30:00Z",
+    "btc_d": 60.0,
+    "eth_d": 9.97,
+    "others_d": 9.8,
+    "total3_d": 30.0,
+    "altcoin_season_index": 32,
+    "alt_mom7": -6.0,
+    "breadth": 20.0,
+    "btc_d_7d_chg": 1.73,
+    "conditions": {
+      "req1_btc_d_delta_lt0": false,
+      "req1_met": false,
+      "req2_alt_mom7_gt0": false,
+      "req2_met": false,
+      "bonus_a_btc_d_delta_lte_minus05": false,
+      "bonus_b_alt_mom7_gt15": false,
+      "bonus_c_others_d_gt12": false
+    },
+    "bonuses_passed": 0,
+    "verdict_label": "🔴 ALT-OFF",
+    "verdict_class": "danger",
+    "verdict_detail": "req1 FAIL(Δ=+1.73pp>0✗ BTC.D急升) · req2 FAIL(alt_mom7=-6.0%<0✗) · 雙必要均 FAIL → 🔴 ALT-OFF · Moody's US Aaa→Aa1 + FOMC higher-for-longer + ETF -$648M BTC / -$255M ETH"
   }
 }

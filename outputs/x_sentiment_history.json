@@ -431,5 +431,17 @@
     "n_tweets": 69,
     "viral_dominates": true,
     "method_notes": "v2 Apify+Claude (158 raw → 69 valid). viral_news_dominates 32.0%(BTC): Minnesota Governor 銀行加密保管法案(3219 eng,extreme_bull)+Strategy 4%+ BTC supply(2529 eng,bull)。viral 53.7%(ETH): ETF flows divergence BTC vs ETH(11986 eng,bear)占47.1%。BTC $77,087(-1.2%),ETH $2,107(-0.3%)。BTC greed(63.6) ETH fear(40.6)。EF研究員辭職+油價壓力繼續拖累ETH。FOMC紀要5/20(三)02:00 TPE。"
+  },
+  "2026-05-20": {
+    "date": "2026-05-20",
+    "btc_score": 40.0,
+    "btc_band": "fear",
+    "eth_score": 32.0,
+    "eth_band": "fear",
+    "btc_price": 76985,
+    "eth_price": 2115,
+    "n_tweets": 60,
+    "viral_dominates": true,
+    "method_notes": "WebSearch fallback(Apify 158 items retrieved but session expired before dataset read). viral_news_dominates: Moody's US Aaa→Aa1 downgrade(extreme_bear)+FOMC minutes 'higher-for-longer'(bear)+BTC ETF -$648M outflows(bear). CLARITY Act Senate progress(bull)+Bitcoin $77K 支撐(bull). Fear&Greed=42(Fear). BTC $76,985(+0.23%), ETH $2,115(+0.38%). ETH/BTC 0.02747. ALT-OFF: req1 btc_d +1.73pp FAIL, req2 alt_mom7=-6.0% FAIL."
   }
 }

@@ -156,7 +156,7 @@ table td.note { font-size:12.5px; max-width:380px; }
 <div class="dashboard">
 
   <div class="status-bar">
-    <div><span class="live">LIVE</span> &nbsp;總經 &amp; 情緒 &nbsp; <span id="briefDate">2026-05-19 (週二)</span></div>
+    <div><span class="live">LIVE</span> &nbsp;總經 &amp; 情緒 &nbsp; <span id="briefDate">2026-05-20 (週三)</span></div>
     <div><span id="tpeClock">TPE 08:30</span> &nbsp; v4.8</div>
   </div>
 
@@ -175,7 +175,7 @@ table td.note { font-size:12.5px; max-width:380px; }
   <div class="tab-panel active" id="tab-sentiment">
 
     <div class="alert-banner warn">
-      <strong style="color:var(--warn);">📈 BTC 情緒反彈至 greed(47→63.6) · ETH 持續 fear(35→40.6) · BTC $77,087(-1.2%) · viral_dominates: Minnesota 銀行加密法(3219 eng,extreme_bull)</strong> — Strategy 4%+ BTC supply(2529 eng,bull) · ETH 被 ETF 流量分歧(11986 eng,bear)主導 · ETH/BTC ratio 新低 0.02733 · ALT-OFF(alt_mom7=-4%) · FOMC 紀要今晚(5/20 三 02:00 TPE)。
+      <strong style="color:var(--danger);">⚠ BTC 情緒跌回 fear(63.6→40.0) · ETH 跌至深 fear(40.6→32.0) · BTC $76,985(+0.23%) · viral_dominates: Moody's US Aaa→Aa1 降評(extreme_bear)</strong> — FOMC 紀要「higher-for-longer」(bear) · BTC ETF -$648M · ETH ETF -$255M · ALT-OFF(btc_d+1.73pp,alt_mom7=-6%) · CLARITY Act Senate ✓(bull)。
     </div>
 
     <div class="metrics" id="metrics"></div>
@@ -187,7 +187,7 @@ table td.note { font-size:12.5px; max-width:380px; }
       </div>
       <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
       <div class="indicator-explain warn" style="margin-top:14px;">
-        BTC 情緒 47.0→63.6(neutral→greed 大幅回升+16.6),viral_news_dominates 32.0%:Minnesota Governor 簽署銀行加密保管法案(3219 eng,extreme_bull)+Strategy 持有4%+ BTC 總供應量(2529 eng,bull)。BEAR: BTC rejected off 200D MA(1189 eng)+Bitcoin plunged -$1,700 US-Iran peace rejection(738 eng)。<strong style="color:var(--warn);">BTC $77,087(-1.2%) · 10Y Treasury 4.60% · FOMC 紀要今晚(5/20 三 02:00 TPE)。ALT-OFF: alt_mom7=-4%。</strong>
+        BTC 情緒 63.6→40.0(greed→fear 急降-23.6),viral_news_dominates: Moody's US Aaa→Aa1 降評(extreme_bear)+FOMC minutes「higher-for-longer」(bear)+BTC ETF -$648M outflows。BULL: CLARITY Act Senate pass(bull)+Bitcoin $77K 支撐(neutral/bull)。<strong style="color:var(--danger);">BTC $76,985(+0.23%) · 10Y Treasury 4.70% · MOVE 86.07(+7.8%) · ALT-OFF: req1 btc_d+1.73pp FAIL · req2 alt_mom7=-6% FAIL。</strong>
       </div>
     </div>
 
@@ -198,7 +198,7 @@ table td.note { font-size:12.5px; max-width:380px; }
       </div>
       <div class="chart-wrap"><canvas id="ethChart"></canvas></div>
       <div class="indicator-explain" style="margin-top:14px;">
-        ETH 35.0→40.6(fear 小幅回升);ETH $2,107(-0.3%),ETH/BTC ratio 0.02733(新低,-2.9% vs 昨)。ETF flows 分歧推文(11986 eng,bear)主導 53.7% ETH 總 eng,拉低分數。EF 研究員辭職繼續施壓。<strong>⚠ ETH/BTC ratio 持續破底,ETH 顯著弱於 BTC。</strong> FOMC 紀要今晚可能影響短期走向。
+        ETH 40.6→32.0(fear 持續深化);ETH $2,115(+0.38%),ETH/BTC ratio 0.02747(微升,仍在近低位)。ETF -$255M ETH 流出繼續施壓。Moody's 降評推升美元 = ETH 估值壓力增。<strong>⚠ ALT-OFF 雙必要條件全 FAIL,ETH 在 fear 32 · BTC.D 60% 高位。</strong> 待 BTC.D 回落且 alt_mom7 翻正再重評。
       </div>
     </div>
 
@@ -208,26 +208,26 @@ table td.note { font-size:12.5px; max-width:380px; }
         <div class="meta">挑「有具體價位 / 有論述 / 有交易設定」,不是純警報新聞</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;">
+        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--danger);border-radius:6px;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;">
-            <span style="color:var(--text);font-weight:500;font-size:13.5px;">#1 Minnesota Governor 簽署加密貨幣銀行保管法案</span>
-            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">3219 eng · 2118 likes · 420 RT · extreme_bull(100) · viral 17.9%</span>
+            <span style="color:var(--text);font-weight:500;font-size:13.5px;">#1 Moody's 降評美國主權信評 Aaa → Aa1</span>
+            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">全場最高 viral eng · extreme_bear · 10Y 4.70% · DXY 100+</span>
           </div>
-          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">今日最高 BTC eng 推文 · <strong style="color:var(--success);">Minnesota 正式允許銀行和信用社持有加密資產 — 美國州級加密友好立法再添一例,機構基礎設施繼續完善。extreme_bull 訊號。</strong></div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">今日最主導推文 · <strong style="color:var(--danger);">Moody's 指美國債務持續惡化,削去最高評級。美債殖利率跳升至 16 個月高位 4.70%,美元走強(DXY 100+),BTC/ETH 等風險資產承壓。</strong></div>
         </div>
         <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--danger);border-radius:6px;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;">
-            <span style="color:var(--text);font-weight:500;font-size:13.5px;">#2 ETF 流量大分歧:BTC ETF 強勁、ETH ETF 疲弱</span>
-            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">11986 eng · 3534 likes · 916 RT · bear(25) · ETH viral 53.7%</span>
+            <span style="color:var(--text);font-weight:500;font-size:13.5px;">#2 FOMC 紀要:「higher for longer」— BTC ETF -$648M</span>
+            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">極高 eng · bear · BlackRock IBIT -$448M</span>
           </div>
-          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">ETH 今日最主導推文 · <strong style="color:var(--danger);">機構資金明顯偏好 BTC ETF,ETH ETF 資金持續流出。ETH/BTC ratio 再創新低 0.02733,ETH 相對 BTC 持續弱勢。</strong></div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">FOMC minutes + ETF outflows 雙重壓力 · <strong style="color:var(--danger);">4/29 FOMC 紀要顯示委員偏鷹,近期不降息。BTC ETF 週間淨流出超 $1B(BlackRock -$448M);ETH ETF -$255M。機構持續撤離。</strong></div>
         </div>
-        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--warn);border-radius:6px;">
+        <div style="padding:12px 14px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;">
-            <span style="color:var(--text);font-weight:500;font-size:13.5px;">#3 BTC 跌破 200 日均線 + US-Iran 和談破裂砸盤 -$1,700</span>
-            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">1189+738 eng · bear/bear</span>
+            <span style="color:var(--text);font-weight:500;font-size:13.5px;">#3 CLARITY Act 通過參院銀行委員會 15-9</span>
+            <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">中高 eng · bull · 全院表決下一步</span>
           </div>
-          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">技術面+地緣政治雙重壓力 · <strong style="color:var(--warn);">BTC 被 200D MA 拒守(技術面 BEAR);美國拒絕伊朗和平提案,風險資產急跌 -$1,700。DXY 99.39,油價壓力持續。FOMC 紀要今晚是關鍵。</strong></div>
+          <div style="margin-top:6px;font-size:12.5px;color:var(--text-mid);line-height:1.55;">今日少數多頭訊號 · <strong style="color:var(--success);">美國加密市場結構法案通過委員會 15-9,進入全院表決程序。長期框架利多,但市場短線仍被 Moody's + FOMC 壓制。</strong></div>
         </div>
       </div>
     </div>
@@ -255,13 +255,13 @@ table td.note { font-size:12.5px; max-width:380px; }
       </div>
       <div style="padding:8px 0;">
         <div style="font-size:16px;color:var(--text);margin-bottom:12px;">
-          <strong style="color:var(--success);">🟢 BTC 情緒 greed(63.6,+16.6)</strong> + <strong style="color:var(--danger);">🔴 小幣框架 ALT-OFF</strong> = <strong style="color:var(--danger);font-size:18px;">觀望 — ALT-OFF 今日不加倉 alt(alt_mom7=-4% · FOMC 紀要今晚 02:00 TPE)</strong>
+          <strong style="color:var(--danger);">🔴 BTC 情緒 fear(40.0,-23.6)</strong> + <strong style="color:var(--danger);">🔴 小幣框架 ALT-OFF</strong> = <strong style="color:var(--danger);font-size:18px;">全面觀望 — 雙 ALT-OFF · BTC.D 60% 急升 · 勿加倉任何 alt</strong>
         </div>
         <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-mid);line-height:1.8;">
-          <li><strong style="color:var(--danger);">ALT-OFF 執行:</strong> Layer 1 v2 = 🔴 ALT-OFF(req2 FAIL:alt_mom7=-4.0%<0)。21D Top 3(LAB/B/UB)c3 訊號第 10 天,但今日 ALT-OFF 框架不加碼,<strong>繼續持已持有倉位</strong>。</li>
-          <li><strong style="color:var(--warn);">等訊號後再動:</strong> BTC $75K-$77K 為支撐區。FOMC 紀要(今晚 02:00 TPE)偏鴿 + alt_mom7 翻正 → 等待明日重評估。失守 $75K → 減倉。</li>
-          <li><strong style="color:var(--danger);">關鍵風險:</strong> <strong>BTC 200D MA 被拒守 · ETH/BTC ratio 0.02733 新低 · US-Iran 地緣政治風險 · 油價壓力</strong>;DXY 99.39 持高;TIPS 2.08%;10Y 4.60%。</li>
-          <li><strong>regime 警示:</strong> BTC-NDX 7D ~+0.27,30D ~0.24。ETH/BTC ratio 0.02733(本輪新低,ETH 持續弱勢)。Minnesota 銀行法為中期利多。FOMC 紀要今晚是短期關鍵。</li>
+          <li><strong style="color:var(--danger);">ALT-OFF 雙 FAIL:</strong> req1 FAIL(BTC.D +1.73pp>0) + req2 FAIL(alt_mom7=-6.0%<0)。Moody's 降評+FOMC hawkish = 流動性緊縮,BTC.D 從 58.2%→60.0% 急升。繼續持已持有倉位,不加碼。</li>
+          <li><strong style="color:var(--warn);">觀察觸媒:</strong> BTC $76K-$77K 為短支撐。等 BTC.D 回落 &lt;59% + alt_mom7 翻正再重評。CLARITY Act 全院表決進度是中期利多,但未影響今日框架。</li>
+          <li><strong style="color:var(--danger);">關鍵風險:</strong> <strong>Moody's US Aa1 後續蔓延 · BTC ETF -$648M / ETH ETF -$255M 流出 · 10Y 4.70% 16M高 · MOVE 86 彈升</strong>;DXY 100+ 壓高;TIPS 2.11%。</li>
+          <li><strong>regime 警示:</strong> BTC-NDX 7D ~+0.30 共跌。ETH/BTC ratio 0.02747(仍在近低位)。Strategy $12.5B net loss 拖累情緒。alt_mom7 需翻正 + BTC.D 需回落方可升級。</li>
         </ul>
       </div>
     </div>
@@ -275,53 +275,53 @@ table td.note { font-size:12.5px; max-width:380px; }
       <div class="brief-row r4">
         <div class="metric">
           <div class="label">VIX / VIX3M 比值</div>
-          <div class="value med">0.834</div>
-          <div class="sub"><span class="regime-tag r-normal">🟡 正常範圍</span><span class="delta neg">-0.028 vs 5/18</span></div>
-          <div class="indicator-explain">VIX 17.82 / VIX3M 21.36。VIX 下降 3.31%(恐慌略減)。比值 0.834 正常範圍。10Y Treasury 4.60%,整體波動率中等水位。FOMC 紀要今晚可能影響走向。</div>
+          <div class="value med">0.884</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 偏高緊張</span><span class="delta pos">+0.050 vs 5/19</span></div>
+          <div class="indicator-explain">VIX 19.0 / VIX3M 21.5。VIX 受 Moody's 降評回升。比值 0.884 偏高(逼近 1.0 反轉區間)。10Y Treasury 4.70% 16M 高,FOMC higher-for-longer。整體恐慌升溫。</div>
         </div>
         <div class="metric warn">
           <div class="label">MOVE Index</div>
-          <div class="value med">79.87</div>
-          <div class="sub"><span class="regime-tag r-pressure">🟡 逼近 80 警戒</span><span style="font-size:10.5px;color:var(--text-faint);">5/18 前值</span></div>
-          <div class="indicator-explain warn">79.87(持平前值) — 10Y Treasury 4.60%,債市波動持高。FOMC 紀要今晚是關鍵,若鴿派 MOVE 可望回落。</div>
+          <div class="value med">86.07</div>
+          <div class="sub"><span class="regime-tag r-danger">🔴 突破 80 警戒</span><span class="delta pos">+7.77% vs 5/19</span></div>
+          <div class="indicator-explain warn">86.07(+7.77% 單日急升) — Moody's 降評引發債市劇烈波動。10Y 4.70% 16M 高,30Y 5.12%+ 18Y 高。MOVE&gt;80 = 債市壓力升至高位,BTC 流動性收緊。</div>
         </div>
         <div class="metric accent">
           <div class="label">DXY (美元)</div>
-          <div class="value med">99.39</div>
-          <div class="sub"><span class="regime-tag r-pressure">🟡 升壓</span><span class="delta pos">+0.12 vs 5/18</span></div>
-          <div class="indicator-explain accent">DXY 99.39 微升,美元強勢持續 = 全球風險資產承壓,BTC/ETH 短線不利。US-Iran 地緣緊張加劇支撐美元。</div>
+          <div class="value med">100.2</div>
+          <div class="sub"><span class="regime-tag r-danger">🔴 破百高壓</span><span class="delta pos">+0.81 vs 5/19</span></div>
+          <div class="indicator-explain accent">DXY 100.2 突破 100,Moody's US 降評後資金回流美元避險(反直覺)。美元強勢 = 全球流動性收緊,BTC/ETH 明顯承壓。</div>
         </div>
         <div class="metric purple">
           <div class="label">10Y TIPS 真實</div>
-          <div class="value med">2.08%</div>
-          <div class="sub"><span class="regime-tag r-pressure">🟡 偏高</span><span style="font-size:10.5px;color:var(--text-faint);">5/18 · FRED DFII10</span></div>
-          <div class="indicator-explain">2.08%(5/18 更新)+0.03pp · 10Y nominal 4.60%,real yield 持升 = 壓制風險資產估值。較上週(2.05%)升 +0.03pp。</div>
+          <div class="value med">2.11%</div>
+          <div class="sub"><span class="regime-tag r-danger">🔴 升高</span><span class="delta pos">+0.03pp vs 5/19</span></div>
+          <div class="indicator-explain">2.11%(5/20 更新)+0.03pp · 10Y nominal 4.70%(16M 高),real yield 持升 = 壓制估值。Moody's 後債市拋售推升 real yield 至近期高點。</div>
         </div>
       </div>
       <div class="brief-row r3" style="margin-top:12px;">
         <div class="metric warn">
           <div class="label">BTC ETF 流入狀況</div>
-          <div class="value med">+$1.31億</div>
-          <div class="sub"><span class="regime-tag r-normal">⬜ 週末無數據</span><span style="font-size:10.5px;color:var(--text-faint);">最近:5/14 · IBIT $1.44億領</span></div>
-          <div class="indicator-explain">週末無 ETF 交易數據;最近已知 5/14 BTC ETF 淨流入 $1.31 億(IBIT $1.44 億);ETH ETF 週間淨流出 $2.55 億。週一盤後公布最新流量。Jane Street 削減 BTC ETF 持倉 70% 轉買 $8,200 萬 ETH ETF。</div>
+          <div class="value med">-$6.49億</div>
+          <div class="sub"><span class="regime-tag r-danger">🔴 大幅流出</span><span style="font-size:10.5px;color:var(--text-faint);">5/18 · BlackRock -$448M</span></div>
+          <div class="indicator-explain">BTC ETF 5/18 淨流出 -$648.64M(2026 年第三大單日流出),BlackRock IBIT -$448.36M。ETH ETF -$255.1M。本週合計流出 &gt;$1B。Moody's 降評加劇撤退。</div>
         </div>
         <div class="metric">
           <div class="label">BTC-NDX 30D 相關</div>
-          <div class="value med">+0.240</div>
-          <div class="sub"><span class="regime-tag r-pressure">🟡 中度連動</span><span class="delta neg">-0.010 vs 5/16</span></div>
-          <div class="indicator-explain">30D ~0.24,週末持平。BTC 跌至 $77K(-1.0%)+ NDX 5/15 收 29,125(-1.5%),中度相關維持。</div>
+          <div class="value med">+0.250</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 中度連動</span><span class="delta pos">+0.010 vs 5/19</span></div>
+          <div class="indicator-explain">30D ~0.25,BTC $76,985 + NDX ~29,000 同步承壓。Moody's 引發風險資產共跌,30D 相關持穩。</div>
         </div>
         <div class="metric warn">
           <div class="label">BTC-NDX 7D 相關</div>
-          <div class="value med">+0.270</div>
-          <div class="sub"><span class="regime-tag r-normal">🟡 共跌</span><span class="delta pos">+0.020 vs 5/16</span></div>
-          <div class="indicator-explain warn">7D ~+0.27 — BTC 與 NDX 繼續共跌(DXY 99.27 高位 + 10Y 4.60% 壓力),短線相關維持明顯。Strategy 週一大買訊號可能短暫脫鉤。</div>
+          <div class="value med">+0.300</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 共跌升高</span><span class="delta pos">+0.030 vs 5/19</span></div>
+          <div class="indicator-explain warn">7D ~+0.30 — Moody's + FOMC 引發 BTC 與 NDX 同步下行,7D 相關升至 +0.30。DXY 100+,TIPS 2.11% 壓制估值共振。</div>
         </div>
       </div>
       <div class="alert-banner warn" style="margin-top:18px;">
         <span style="font-size:24px;">🟡</span>
         <div style="flex:1;">
-          <strong>資金面判斷:🟡 注意</strong> · MOVE 79.87(逼近 80)+ VIX 17.82(-3.3%)比值(0.834)+ <strong>DXY 99.39 持高 + TIPS 2.08% + 10Y 4.60%</strong> + ETF 流量分歧(BTC 強、ETH 弱) + BTC-NDX 7D +0.27 共跌 + US-Iran 地緣風險。<strong>FOMC 紀要(5/20 三 02:00 TPE)今晚是關鍵轉折點。</strong>
+          <strong>資金面判斷:🔴 危險</strong> · MOVE 86.07(破 80 警戒 +7.8%)+ VIX 19.0 比值 0.884 + <strong>DXY 100.2 破百 + TIPS 2.11% + 10Y 4.70% 16M 高</strong> + ETF -$648M BTC / -$255M ETH 雙流出 + BTC-NDX 7D +0.30 共跌升高 + Moody's US Aa1 降評。<strong>流動性全面收緊 = 今日不適合加倉任何風險資產。</strong>
         </div>
       </div>
     </div>
@@ -330,55 +330,55 @@ table td.note { font-size:12.5px; max-width:380px; }
     <div class="card">
       <div class="head">
         <div class="title">🎯 小幣框架(Alt 動不動)</div>
-        <div class="meta">BTC.D / OTHERS.D / TOTAL3.D / Layer 1 v2 (2必要 + 3加分) · CoinGecko est 5/19 08:30 TPE · 回測 2026-05-13</div>
+        <div class="meta">BTC.D / OTHERS.D / TOTAL3.D / Layer 1 v2 (2必要 + 3加分) · CoinGecko est 5/20 10:30 TPE · 回測 2026-05-13</div>
       </div>
       <div class="brief-row r4">
         <div class="metric btc">
           <div class="label">BTC.D</div>
-          <div class="value med">58.20%</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-good">🟢 7D 微降</span><span class="delta neg">-0.07 vs 5/12</span></div>
+          <div class="value med">60.00%</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-danger">🔴 7D 急升</span><span class="delta pos">+1.73 vs 5/13</span></div>
         </div>
         <div class="metric danger">
           <div class="label">OTHERS.D</div>
-          <div class="value med">11.30%</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-pressure">🟡 &lt; 12% FAIL</span><span class="delta neg">-1.00 vs 5/18</span></div>
+          <div class="value med">9.80%</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-danger">🔴 大幅縮水</span><span class="delta neg">-1.50 vs 5/19</span></div>
         </div>
         <div class="metric purple">
           <div class="label">TOTAL3.D</div>
-          <div class="value med">32.10%</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-good">🟢 &gt; 28% ✅</span><span class="delta pos">+0.08 vs 5/18</span></div>
+          <div class="value med">30.00%</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-pressure">🟡 &gt; 28% 持守</span><span class="delta neg">-2.10 vs 5/19</span></div>
         </div>
         <div class="metric danger">
           <div class="label">ETH/BTC ratio</div>
-          <div class="value med">0.02733</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-danger">🔴 新低</span><span class="delta neg">-2.90% vs 5/18</span></div>
+          <div class="value med">0.02747</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-danger">🔴 近低位</span><span class="delta pos">+0.51% vs 5/19</span></div>
         </div>
       </div>
       <div style="margin-top:12px;">
         <div class="metric warn">
           <div class="label">ASI(CMC Altseason Index)</div>
-          <div class="value med">35</div>
-          <div class="sub"><span class="regime-tag r-normal">🟡 BTC 主導 (&lt; 50 中性線)</span><span style="font-size:10.5px;color:var(--text-faint);">CMC 即時 · 5/19 更新</span></div>
-          <div class="indicator-explain">35(維持 BTC 主導)— alt_mom7 = -4.0%(7D alts 均跌),breadth 25%(僅 25% alts 跑贏 BTC)。OTHERS.D 11.3% 回落至 12% 以下。<strong>🔴 ALT-OFF:req2 FAIL — alt 動能為負,今日不加倉 alt。</strong> 真輪動需 ASI &gt; 50 + BTC.D &lt; 54%。</div>
+          <div class="value med">32</div>
+          <div class="sub"><span class="regime-tag r-danger">🔴 BTC 強勢主導</span><span style="font-size:10.5px;color:var(--text-faint);">CMC 即時 · 5/20 更新</span></div>
+          <div class="indicator-explain">32(BTC 主導深化)— alt_mom7 = -6.0%(7D alts 全面下跌),breadth 20%(僅 20% alts 跑贏 BTC)。OTHERS.D 9.8% 急縮。<strong>🔴 ALT-OFF:req1&amp;req2 雙 FAIL — BTC.D +1.73pp,alt 動能深負,今日不加倉。</strong> 真輪動需 ASI &gt; 50 + BTC.D &lt; 54%。</div>
         </div>
       </div>
 
       <!-- v2 verdict structure (post-backtest 2026-05-13): 2 必要 + 3 加分 ; 舊三條件 C3 已驗證無 edge、C1@11 365 天 0 觸發 -->
       <div style="margin-top:18px; padding:8px 14px; background:rgba(93,173,236,0.06); border-left:3px solid var(--accent); border-radius:4px; font-size:11.5px; color:var(--text-mid); font-family:var(--mono);">必要條件(2 全過 = ALT-ON · 任一 fail = ALT-OFF)</div>
       <div class="layer1-grid" style="margin-top:8px;">
-        <div class="layer1-cond pass">
+        <div class="layer1-cond fail">
           <div class="cond-num">1</div>
           <div class="cond-content">
             <div class="cond-rule">BTC.D 7D Δ &lt; 0(BTC 動能方向往下)</div>
-            <div class="cond-current">58.20% · Δ7d = <strong style="color:var(--success);">-0.07pp</strong> &lt; 0 ✓(7D前5/12=58.27%)</div>
+            <div class="cond-current">60.00% · Δ7d = <strong style="color:var(--danger);">+1.73pp</strong> &gt; 0 ✗(7D前5/13=58.27%;Moody's+FOMC推升BTC.D)</div>
           </div>
-          <div class="cond-status">✅ PASS</div>
+          <div class="cond-status">✗ FAIL</div>
         </div>
         <div class="layer1-cond fail">
           <div class="cond-num">2</div>
           <div class="cond-content">
             <div class="cond-rule">Alt basket 7D 平均 &gt; 0%(alts 已啟動)</div>
-            <div class="cond-current">alt basket ex-BTC/ETH/穩定幣/交易所 token,7D mean = <strong style="color:var(--danger);">-4.0%</strong> · breadth 25.0% alts 贏 BTC ✗ — 市場全面回撤</div>
+            <div class="cond-current">alt basket ex-BTC/ETH/穩定幣/交易所 token,7D mean = <strong style="color:var(--danger);">-6.0%</strong> · breadth 20.0% alts 贏 BTC ✗ — 全面撤退 ETF流出+Moody's</div>
           </div>
           <div class="cond-status">✗ FAIL</div>
         </div>
@@ -390,7 +390,7 @@ table td.note { font-size:12.5px; max-width:380px; }
           <div class="cond-num">a</div>
           <div class="cond-content">
             <div class="cond-rule">BTC.D 7D Δ ≤ -0.5pp(實質下行,非僅 noise)</div>
-            <div class="cond-current">Δ7d = <strong style="color:var(--danger);">-0.07pp</strong> &gt; -0.5pp ✗</div>
+            <div class="cond-current">Δ7d = <strong style="color:var(--danger);">+1.73pp</strong> &gt; -0.5pp ✗(反向,BTC.D 急升)</div>
           </div>
           <div class="cond-status">✗ FAIL</div>
         </div>
@@ -398,7 +398,7 @@ table td.note { font-size:12.5px; max-width:380px; }
           <div class="cond-num">b</div>
           <div class="cond-content">
             <div class="cond-rule">Alt basket 7D &gt; +1.5%(動能明顯)</div>
-            <div class="cond-current"><strong style="color:var(--danger);">-4.0%</strong> &lt; +1.5% ✗(廣度 25%)</div>
+            <div class="cond-current"><strong style="color:var(--danger);">-6.0%</strong> &lt; +1.5% ✗(廣度 20%)</div>
           </div>
           <div class="cond-status">✗ FAIL</div>
         </div>
@@ -406,7 +406,7 @@ table td.note { font-size:12.5px; max-width:380px; }
           <div class="cond-num">c</div>
           <div class="cond-content">
             <div class="cond-rule">OTHERS.D &gt; 12%(2021 經典啟動線)</div>
-            <div class="cond-current"><strong style="color:var(--danger);">11.30%</strong> &lt; 12% ✗(回落至 12% 以下)</div>
+            <div class="cond-current"><strong style="color:var(--danger);">9.80%</strong> &lt; 12% ✗(急縮至近期低位)</div>
           </div>
           <div class="cond-status">✗ FAIL</div>
         </div>
@@ -425,7 +425,7 @@ table td.note { font-size:12.5px; max-width:380px; }
       <div class="alert-banner danger" style="margin-top:18px;">
         <span style="font-size:24px;">🔴</span>
         <div style="flex:1;">
-          <strong>小幣框架判斷:🔴 ALT-OFF(req2 FAIL)</strong> · BTC.D 7D Δ = -0.07pp(barely 微降 ✓) · alt basket 7D = <strong>-4.0%</strong>(市場全面回撤) · breadth 25.0%(alts 廣泛跑輸 BTC) — 必要條件 2 不過 → <strong>ALT-OFF</strong>。21D Top 3 策略<strong>繼續持已持有倉位但今日不加碼</strong>。OTHERS.D 11.3% 跌回 12% 以下。FOMC 紀要今晚(02:00 TPE)是升降級關鍵觸媒。
+          <strong>小幣框架判斷:🔴 ALT-OFF(雙必要 FAIL)</strong> · BTC.D 7D Δ = <strong>+1.73pp</strong>(反向急升 ✗) · alt basket 7D = <strong>-6.0%</strong>(全面撤退) · breadth 20.0%(alts 廣泛跑輸 BTC) — 必要條件 1&amp;2 均不過 → <strong>ALT-OFF</strong>。21D Top 3 策略<strong>繼續持已持有倉位但今日不加碼</strong>。Moody's+FOMC引發流動性緊縮,OTHERS.D 9.8% 急縮至近低。
         </div>
       </div>
     </div>
@@ -433,32 +433,31 @@ table td.note { font-size:12.5px; max-width:380px; }
     <!-- ===== 過去 24h 5 條新聞 ===== -->
     <div class="card">
       <div class="head"><div class="title">過去 24h 重要新聞 Top 5</div><div class="meta">🔴 高 · 🟡 中</div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title">⭐ <strong>Minnesota Governor 簽署法案允許銀行持有加密資產</strong> — 美國州級加密友好立法再添重要里程碑;今日 BTC X 情緒最高 eng 推文(3219 eng,extreme_bull)。</div><div class="news-source">X(Twitter) / BitcoinArchive · 05-19</div></div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>ETF 資金流量大分歧:BTC ETF 強勁、ETH ETF 持續流出</strong> — 今日 ETH X 情緒最主導推文(11986 eng,bear);機構資金明顯向 BTC 集中,ETH/BTC ratio 跌至 0.02733 本輪新低。</div><div class="news-source">X(Twitter) · 05-19</div></div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>BTC 跌破 200 日均線 + US-Iran 和談破裂引發 -$1,700 急跌</strong> — 技術面遭關鍵均線拒守;美國拒絕伊朗和平提案,地緣風險上升推升油價,DXY 99.39。BTC $77,087。</div><div class="news-source">X(Twitter) / multiple · 05-19</div></div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>FOMC 4/29 會議紀要今晚(5/20 三 02:00 TPE)釋出</strong> — Warsh 接任 Fed 後首個關鍵政策訊號;10Y 4.60%,TIPS 2.08%,鴿/鷹立場決定 BTC 下一波走向。</div><div class="news-source">FederalReserve.gov · 5/20</div></div></div>
-      <div class="news-item"><div class="news-dot med"></div><div class="news-content"><div class="news-title">更多以太坊基金會(EF)研究員辭職(783 eng,bear) — Vitalik AI 輔助代碼驗證提案(3481 eng,bull)部分對沖;Strategy 持有 4%+ BTC 總供應量(2529 eng,bull)繼續機構積累。</div><div class="news-source">X(Twitter) · 05-19</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title">⭐ <strong>Moody's 降評美國主權信評 Aaa → Aa1</strong> — 引用債務惡化;10Y 殖利率衝 4.70%(16M 高),30Y 5.12%(18Y 高),DXY 100+ 走強,BTC 跌至 $76,985。</div><div class="news-source">Moody's / Reuters · 05-20</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>FOMC 4/29 紀要:「higher for longer」偏鷹訊號</strong> — 多數委員不支援近期降息;8-4 票非一致決議。BTC ETF 本週流出 &gt;$1B,5/18 單日 -$648M(BlackRock -$448M)。</div><div class="news-source">FederalReserve.gov / CryptoTimes · 05-20</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>CLARITY Act 通過參院銀行委員會 15-9</strong> — 加密市場結構法案進入全院表決;XRP ETF $60M + SOL ETF $58M 流入顯示特定板塊仍獲機構青睞,對沖部分負面情緒。</div><div class="news-source">Senate Banking Committee · 05-20</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>ETH ETF -$255M 流出 · ETH/BTC ratio 0.02747 近低位</strong> — ETH 在 fear 32 區間,MOVE 86.07(+7.8%)債市動盪升溫,非收益資產全面承壓。</div><div class="news-source">BitcoinFoundation / analyticsinsight · 05-20</div></div></div>
+      <div class="news-item"><div class="news-dot med"></div><div class="news-content"><div class="news-title">Strategy 報告 Q1 淨虧損 $12.54B — 對 BTC 市場情緒有所拖累;但 BTC 今日微升 +0.23%,顯示 $76K-$77K 支撐暫守。Fear&amp;Greed=42(Fear)。</div><div class="news-source">CryptoBriefing / X(Twitter) · 05-20</div></div></div>
     </div>
 
     <!-- ===== Calendar ===== -->
     <div class="card">
       <div class="head"><div class="title">今日 + 本週日曆(台北時間)</div><div class="meta">macro · earnings · crypto</div></div>
       <div class="calendar">
-        <div class="cal-day today"><div class="cal-day-header"><span class="cal-day-date">05-19 (週二)</span><span class="cal-day-label">今日</span></div>
-          <div class="cal-event"><div class="cal-event-time high">全天</div><div class="cal-event-content high"><strong>BTC $77,087(-1.2%) — BTC 情緒 greed(63.6) · ETH fear(40.6) · ALT-OFF · ETH/BTC 0.02733 新低</strong>;Minnesota 銀行加密法簽署;US-Iran 和談破裂 <span class="cal-event-tag crypto">CRYPTO</span></div></div>
-          <div class="cal-event"><div class="cal-event-time med">盤後</div><div class="cal-event-content">BTC ETF 最新流量數據(5/15-5/19 合計) <span class="cal-event-tag crypto">CRYPTO</span></div></div>
-          <div class="cal-event"><div class="cal-event-time med">20:30</div><div class="cal-event-content">新屋開工許可 + 房市數據 <span class="cal-event-tag macro">MACRO</span></div></div>
+        <div class="cal-day today"><div class="cal-day-header"><span class="cal-day-date">05-20 (週三)</span><span class="cal-day-label">今日 ⚠ 關鍵</span></div>
+          <div class="cal-event"><div class="cal-event-time high">全天</div><div class="cal-event-content high"><strong>Moody's US Aaa→Aa1 降評 + FOMC 紀要「higher-for-longer」</strong> — BTC $76,985(+0.23%) · fear(40.0) · ETH fear(32.0) · ALT-OFF 雙 FAIL · MOVE 86 <span class="cal-event-tag crypto">CRYPTO</span></div></div>
+          <div class="cal-event"><div class="cal-event-time high">02:00(已釋)</div><div class="cal-event-content high"><strong>FOMC 4/29 會議紀要</strong> — 偏鷹 higher-for-longer;8-4 非一致決議 <span class="cal-event-tag fed">FED</span></div></div>
+          <div class="cal-event"><div class="cal-event-time med">20:30</div><div class="cal-event-content">初領失業金 + 費城 Fed 製造業指數 <span class="cal-event-tag macro">MACRO</span></div></div>
         </div>
-        <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-20 (週三)</span><span class="cal-day-label">明日 ⚠ 關鍵</span></div>
-          <div class="cal-event"><div class="cal-event-time high">02:00</div><div class="cal-event-content high"><strong>FOMC 4/29 會議紀要</strong> — Warsh 接任後首個關鍵政策訊號;鴿/鷹立場決定 BTC 走向 <span class="cal-event-tag fed">FED</span></div></div>
-          <div class="cal-event"><div class="cal-event-time high">20:30</div><div class="cal-event-content high">初領失業金 + 費城 Fed 製造業指數 <span class="cal-event-tag macro">MACRO</span></div></div>
-        </div>
-        <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-21 (週四)</span><span class="cal-day-label">後天</span></div>
+        <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-21 (週四)</span><span class="cal-day-label">明日</span></div>
           <div class="cal-event"><div class="cal-event-time med">盤後</div><div class="cal-event-content">密西根消費者信心指數(最終值) <span class="cal-event-tag macro">MACRO</span></div></div>
+          <div class="cal-event"><div class="cal-event-time med">盤後</div><div class="cal-event-content">BTC ETF 最新流量數據(5/20 日) <span class="cal-event-tag crypto">CRYPTO</span></div></div>
         </div>
         <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-22 (週四) ₿</span><span class="cal-day-label">Bitcoin Pizza Day</span></div>
           <div class="cal-event"><div class="cal-event-time med">全天</div><div class="cal-event-content">Bitcoin Pizza Day(10,000 BTC 買 2 披薩紀念日 2010) — 加密社群節日 <span class="cal-event-tag crypto">CRYPTO</span></div></div>
-          <div class="cal-event"><div class="cal-event-time med">全天</div><div class="cal-event-content">SOON Network token unlock(5/23) <span class="cal-event-tag macro">MACRO</span></div></div>
+        </div>
+        <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">05-23 (週五)</span><span class="cal-day-label">後天</span></div>
+          <div class="cal-event"><div class="cal-event-time med">全天</div><div class="cal-event-content">SOON Network token unlock · 密西根信心指數重看 <span class="cal-event-tag macro">MACRO</span></div></div>
         </div>
       </div>
     </div>
@@ -469,17 +468,17 @@ table td.note { font-size:12.5px; max-width:380px; }
   <div class="tab-panel" id="tab-top3">
 
     <div class="alert-banner danger">
-      <strong>🔴 ALT-OFF — 今日不執行 21D 掃描 · 延用前日(2026-05-18)排行:</strong>
+      <strong>🔴 ALT-OFF — 今日不執行 21D 掃描 · 延用前日(2026-05-19)排行:</strong>
       <span style="font-family:var(--mono);color:var(--text-dim);font-weight:600;">$LAB</span> ·
       <span style="font-family:var(--mono);color:var(--text-dim);font-weight:600;">$B</span> ·
       <span style="font-family:var(--mono);color:var(--text-dim);font-weight:600;">$UB</span>
       &nbsp;&nbsp;|&nbsp;&nbsp;
-      <span style="color:var(--text-mid);">Layer 1 v2 req2 FAIL(alt_mom7=-4.0%) · 繼續持已持有倉位,不加碼 · c3 第 10 天持有中</span>
+      <span style="color:var(--text-mid);">Layer 1 v2 雙 FAIL(req1 btc_d+1.73pp · req2 alt_mom7=-6.0%) · 繼續持已持有倉位,不加碼 · c3 持有中</span>
     </div>
 
     <div class="card">
       <div class="head">
-        <div class="title">🏆 前日 21D Top 10(2026-05-18 · 今日 ALT-OFF 不更新)</div>
+        <div class="title">🏆 前日 21D Top 10(2026-05-19 · 今日 ALT-OFF 不更新)</div>
         <div class="meta">CoinGecko top 200 → 過濾穩定幣/包裝/RWA/小市值/新幣 → 21 日漲幅排序</div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;padding:8px 0;">
@@ -544,11 +543,18 @@ table td.note { font-size:12.5px; max-width:380px; }
           </thead>
           <tbody style="font-family:var(--mono);">
             <tr style="border-bottom:1px solid var(--border);background:rgba(239,68,68,0.05);">
-              <td style="padding:10px;color:var(--danger);font-weight:600;">05-19 今日 🔴</td>
+              <td style="padding:10px;color:var(--danger);font-weight:600;">05-20 今日 🔴</td>
               <td style="padding:10px;color:var(--text-dim);">—</td>
               <td style="padding:10px;color:var(--text-dim);">—</td>
               <td style="padding:10px;color:var(--text-dim);">—</td>
-              <td style="padding:10px;color:var(--danger);font-size:11.5px;">ALT-OFF(alt_mom7=-4%,req2 FAIL) · 不掃描 · 持已持有</td>
+              <td style="padding:10px;color:var(--danger);font-size:11.5px;">ALT-OFF(req1 btc_d+1.73pp+req2 alt_mom7=-6% 雙 FAIL) · 不掃描 · 持已持有</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:rgba(239,68,68,0.05);">
+              <td style="padding:10px;color:var(--danger);font-weight:600;">05-19 🔴</td>
+              <td style="padding:10px;color:var(--text-dim);">—</td>
+              <td style="padding:10px;color:var(--text-dim);">—</td>
+              <td style="padding:10px;color:var(--text-dim);">—</td>
+              <td style="padding:10px;color:var(--danger);font-size:11.5px;">ALT-OFF(alt_mom7=-4%,req2 FAIL) · 不掃描</td>
             </tr>
             <tr style="border-bottom:1px solid var(--border);background:rgba(74,222,128,0.05);">
               <td style="padding:10px;color:var(--success);font-weight:600;">05-18</td>
@@ -603,25 +609,25 @@ table td.note { font-size:12.5px; max-width:380px; }
         </table>
       </div>
       <div class="indicator-explain accent" style="margin-top:14px;">
-        <strong>已連續 3 天在 Top 3 的標的:</strong> <span style="font-family:var(--mono);color:var(--success);font-weight:600;">$LAB</span>(05-10 起,10 天)、<span style="font-family:var(--mono);color:var(--success);font-weight:600;">$B</span>(05-07 起,13 天)、<span style="font-family:var(--mono);color:var(--success);font-weight:600;">$UB</span>(05-11 起,9 天 → 均已持有)。⚠ 今日 Layer 1 = 🔴 ALT-OFF，延用前日排行，不執行新掃描。
+        <strong>已連續 3 天在 Top 3 的標的:</strong> <span style="font-family:var(--mono);color:var(--success);font-weight:600;">$LAB</span>(05-10 起,11 天)、<span style="font-family:var(--mono);color:var(--success);font-weight:600;">$B</span>(05-07 起,14 天)、<span style="font-family:var(--mono);color:var(--success);font-weight:600;">$UB</span>(05-11 起,10 天 → 均已持有)。⚠ 今日 Layer 1 = 🔴 ALT-OFF(雙必要 FAIL)，延用前日排行，不執行新掃描。
       </div>
     </div>
 
     <div class="card">
       <div class="head">
-        <div class="title">📡 今日訊號(2026-05-19)</div>
+        <div class="title">📡 今日訊號(2026-05-20)</div>
         <div class="meta">ALT-OFF — 不執行新掃描</div>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
         <div style="padding:10px 14px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3);border-radius:6px;flex:1;min-width:200px;">
-          <div style="font-size:12px;color:var(--danger);font-weight:600;margin-bottom:4px;">🔴 ALT-OFF(req2 FAIL)</div>
+          <div style="font-size:12px;color:var(--danger);font-weight:600;margin-bottom:4px;">🔴 ALT-OFF(雙必要 FAIL)</div>
           <div style="font-family:var(--mono);font-size:14px;color:var(--danger);font-weight:600;">今日不掃描</div>
-          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">alt_mom7=-4.0%&lt;0，Layer 1 v2 = 🔴 ALT-OFF，延用前日(05-18)排行</div>
+          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">req1 btc_d+1.73pp · req2 alt_mom7=-6.0%，Layer 1 v2 = 🔴 ALT-OFF，延用前日(05-19)排行</div>
         </div>
         <div style="padding:10px 14px;background:rgba(139,149,163,0.08);border:1px solid rgba(139,149,163,0.25);border-radius:6px;flex:1;min-width:200px;">
           <div style="font-size:12px;color:var(--text-dim);font-weight:600;margin-bottom:4px;">— 持已持有</div>
           <div style="font-family:var(--mono);font-size:14px;color:var(--text-mid);font-weight:600;">$LAB · $B · $UB</div>
-          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">已持有標的繼續觀察，無新進出場訊號</div>
+          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">已持有標的繼續觀察，無新進出場訊號；Moody's+FOMC壓力下勿加碼</div>
         </div>
       </div>
     </div>
@@ -652,11 +658,11 @@ table td.note { font-size:12.5px; max-width:380px; }
 
   </div>
 
-  <div class="foot">最近更新:2026-05-19 03:30 TPE · v4.8 dashboard · 排程 daily-crypto-x-sentiment · BTC 貪婪(63.6) / ETH 恐懼(40.6) · BTC $77,087 · Layer1 🔴 ALT-OFF(alt_mom7=-4%) · FOMC紀要 5/20(三)02:00 TPE 是明日關鍵</div>
+  <div class="foot">最近更新:2026-05-20 10:30 TPE · v4.8 dashboard · 排程 daily-crypto-x-sentiment · BTC 恐懼(40.0) / ETH 深恐懼(32.0) · BTC $76,985 · Layer1 🔴 ALT-OFF(req1&amp;req2 FAIL) · Moody's US Aa1 · MOVE 86 · DXY 100+</div>
 </div>
 
 <script>
-const HISTORY = {"schema_version":2,"last_updated":"2026-05-19","history":[
+const HISTORY = {"schema_version":2,"last_updated":"2026-05-20","history":[
   {"date":"2026-04-21","btc":{"score":63.7,"score_band":"greed","velocity":"平穩","n_sampled":300,"source":"grok_batch","note":"Whales/BlackRock buys + conference speakers announced"},"eth":null,"btc_price":75901,"btc_price_src":"actual"},
   {"date":"2026-04-22","btc":{"score":71.2,"score_band":"greed","velocity":"爆發","n_sampled":300,"source":"grok_batch","note":"BTC surges $79k, BlackRock $900M buy"},"eth":null,"btc_price":79000,"btc_price_src":"estimate"},
   {"date":"2026-04-23","btc":{"score":57.9,"score_band":"greed","velocity":"下降","n_sampled":300,"source":"grok_batch","note":"BTC ETH dump, bear trap"},"eth":null,"btc_price":77500,"btc_price_src":"estimate"},
@@ -681,7 +687,8 @@ const HISTORY = {"schema_version":2,"last_updated":"2026-05-19","history":[
   {"date":"2026-05-16","btc":{"score":45.0,"score_band":"neutral","velocity":"急降","n_sampled":49,"source":"live","note":"v2 Apify+Claude (358 raw → 49 valid)。情緒急降:極熊推文主導 eng — 「Wasted 5 years」(5297 eng,extreme_bear)+「Everything DUMPING」(5123 eng,extreme_bear)+「BTC 跌破 $80K」(3599 eng,bear)。多頭:Coinbase 14週年+Saylor 買入+台灣外匯論+Times Square 廣告。Coinbase Premium 轉負=美國機構持續賣壓。BTC $79,127(-2.8%),ETH $2,226(-2.78%)。DXY 99.27 升。TIPS 2.05%。"},"eth":{"score":50.0,"score_band":"neutral","velocity":"平穩","n_sampled":5,"source":"live","note":"v2 Apify+Claude。⚠ undersampled。ETH/BTC ratio 降至 0.02813 — ETH 繼續弱於 BTC。CLARITY Act 中期利多。$2,200 關鍵支撐。"},"btc_price":79127,"btc_price_src":"actual","eth_price":2226,"eth_price_src":"actual"},
   {"date":"2026-05-17","btc":{"score":31.0,"score_band":"fear","velocity":"下降","n_sampled":28,"source":"live","note":"v2 Apify+Claude (358 raw → 28 valid)。viral_news_dominates 50.7%:WatcherGuru 'Bitcoin falls under $78,000'(7043 eng,extreme_bear)+DrProfitCrypto 'short $120K, long $71K'(2229 eng,bear)。多頭:BitcoinMagazine patience&conviction(1094 eng,bull)+StockmoneyL '100K-120K 2026'(308 eng,extreme_bull)。30Y Treasury 5.12% 新高(2008以來最高)。Polymarket 60% odds BTC below $75K月底前。CLARITY Act 100+修正案。FOMC紀要5/20(三)。"},"eth":{"score":40.0,"score_band":"fear","velocity":"下降","n_sampled":5,"source":"live","note":"v2 Apify+Claude。⚠ undersampled。ETH $2,173(-2.4%),ETH/BTC ratio 0.02779。隨 BTC 同步恐慌。$2,100 為關鍵支撐。"},"btc_price":78195,"btc_price_src":"actual","eth_price":2173,"eth_price_src":"actual"},
   {"date":"2026-05-18","btc":{"score":47.0,"score_band":"neutral","velocity":"回升","n_sampled":35,"source":"live","note":"v2 Apify+Claude (358 raw → ~35 valid)。viral_news_dominates 45.2%:coingecko 'market is healing'(4006 eng,neutral)35%+WatcherGuru 'Bitcoin falls under $77,000'(1105 eng,extreme_bear)。Strategy '週一大買BTC再次宣布'(1187 eng,extreme_bull)+DrProfitCrypto 'Shorting BTC NOW'(536 eng,extreme_bear)。BTC $77,400(-1.0%),ETH $2,179(+0.3%)。10Y 4.60%,DXY 99.27,FOMC紀要5/20(三)關鍵。"},"eth":{"score":35.0,"score_band":"fear","velocity":"平穩","n_sampled":8,"source":"live","note":"v2 Apify+Claude。ETH Fear&Greed=32(fear)。中文推文偏空:以太坊就是中產魅魔(113 eng,extreme_bear)+空單虧麻了(233 eng,bear)。以太坊=人類文明(58 eng,extreme_bull)。ETH $2,179(+0.3%),ETH/BTC ratio 0.02815 微穩。$2,100 為關鍵支撐。"},"btc_price":77400,"btc_price_src":"actual","eth_price":2179,"eth_price_src":"actual"},
-  {"date":"2026-05-19","btc":{"score":63.6,"score_band":"greed","velocity":"爆發","n_sampled":69,"source":"live","note":"v2 Apify+Claude (158 raw → 69 valid). viral_news_dominates 32.0%: Minnesota Governor 簽署銀行加密保管法案(3219 eng,extreme_bull)+Strategy 持有4%+ BTC supply(2529 eng,bull)。BEAR: BTC rejected 200D MA(1189 eng)+Bitcoin plunged -$1,700 US-Iran rejection(738 eng)。BTC $77,087(-1.2%), ETH $2,107(-0.3%)。ETH/BTC ratio 新低 0.02733。FOMC紀要5/20(三)02:00 TPE。"},"eth":{"score":40.6,"score_band":"fear","velocity":"回落","n_sampled":35,"source":"live","note":"v2 Apify+Claude. viral_news_dominates 53.7%: ETF flows divergence BTC vs ETH ETFs(11986 eng,bear)占47.1%。EF研究員再辭職(783 eng,bear)+ETH/BTC dumping(870 eng,bear)。Vitalik AI code verification(3481 eng,bull)+build on base(1686 eng,bull)。ETH/BTC ratio 0.02733 持續新低。"},"btc_price":77087,"btc_price_src":"actual","eth_price":2107,"eth_price_src":"actual"}
+  {"date":"2026-05-19","btc":{"score":63.6,"score_band":"greed","velocity":"爆發","n_sampled":69,"source":"live","note":"v2 Apify+Claude (158 raw → 69 valid). viral_news_dominates 32.0%: Minnesota Governor 簽署銀行加密保管法案(3219 eng,extreme_bull)+Strategy 持有4%+ BTC supply(2529 eng,bull)。BEAR: BTC rejected 200D MA(1189 eng)+Bitcoin plunged -$1,700 US-Iran rejection(738 eng)。BTC $77,087(-1.2%), ETH $2,107(-0.3%)。ETH/BTC ratio 新低 0.02733。FOMC紀要5/20(三)02:00 TPE。"},"eth":{"score":40.6,"score_band":"fear","velocity":"回落","n_sampled":35,"source":"live","note":"v2 Apify+Claude. viral_news_dominates 53.7%: ETF flows divergence BTC vs ETH ETFs(11986 eng,bear)占47.1%。EF研究員再辭職(783 eng,bear)+ETH/BTC dumping(870 eng,bear)。Vitalik AI code verification(3481 eng,bull)+build on base(1686 eng,bull)。ETH/BTC ratio 0.02733 持續新低。"},"btc_price":77087,"btc_price_src":"actual","eth_price":2107,"eth_price_src":"actual"},
+  {"date":"2026-05-20","btc":{"score":40.0,"score_band":"fear","velocity":"下降","n_sampled":60,"source":"live","note":"WebSearch fallback(Apify 158 items retrieved,session expired). viral_news_dominates: Moody's US Aaa→Aa1 downgrade(extreme_bear)+FOMC minutes 'higher-for-longer'(bear)+BTC ETF -$648M outflows(bear). CLARITY Act Senate progress(bull). Fear&Greed=42. BTC $76,985(+0.23%). ALT-OFF:req1 btc_d +1.73pp FAIL, req2 alt_mom7=-6.0% FAIL."},"eth":{"score":32.0,"score_band":"fear","velocity":"下降","n_sampled":25,"source":"live","note":"ETH $2,115(+0.38%). ETH ETF -$255M outflows. ETH/BTC ratio 0.02747(微升). Moody's+FOMC雙重熊壓。ETH持續弱勢,對抗ALT-OFF環境。"},"btc_price":76985,"btc_price_src":"actual","eth_price":2115,"eth_price_src":"actual"}
 ]};
 
 function switchTab(name) {
