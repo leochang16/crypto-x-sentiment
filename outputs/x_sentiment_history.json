@@ -131,7 +131,7 @@
       },
       {
         "user": "jessepollak",
-        "text": "x402 now supports batched settlement — unlocks tiny payments (<$0.0001) perfect for compute and inference",
+        "text": "x402 now supports batched settlement \u2014 unlocks tiny payments (<$0.0001) perfect for compute and inference",
         "likes": 419,
         "rt": 46,
         "replies": 61,
@@ -142,7 +142,7 @@
       },
       {
         "user": "Vivek4real_",
-        "text": "LEGENDARY INVESTOR RIC EDELMAN: BITCOIN → $150,000 IN 232 DAYS. CLARITY ACT COULD CREATE MASSIVE FLYWHEEL EFFECT FOR CRYPTO",
+        "text": "LEGENDARY INVESTOR RIC EDELMAN: BITCOIN \u2192 $150,000 IN 232 DAYS. CLARITY ACT COULD CREATE MASSIVE FLYWHEEL EFFECT FOR CRYPTO",
         "likes": 128,
         "rt": 29,
         "replies": 32,
@@ -175,7 +175,7 @@
     "evidence": [
       {
         "user": "BitcoinArchive",
-        "text": "JUST IN: Bitcoin back above $82,000🚀",
+        "text": "JUST IN: Bitcoin back above $82,000\ud83d\ude80",
         "likes": 1575,
         "rt": 152,
         "replies": 128,
@@ -208,7 +208,7 @@
       },
       {
         "user": "pete_rizzo_",
-        "text": "BREAKING: NEXT FEDERAL RESERVE CHAIR WARSH OFFICIALLY PASSES 1st SENATE VOTE - VERY BULLISH FOR #BITCOIN 🚀",
+        "text": "BREAKING: NEXT FEDERAL RESERVE CHAIR WARSH OFFICIALLY PASSES 1st SENATE VOTE - VERY BULLISH FOR #BITCOIN \ud83d\ude80",
         "likes": 385,
         "rt": 49,
         "replies": 15,
@@ -329,7 +329,7 @@
     "evidence": [
       {
         "user": "BitcoinMagazine",
-        "text": "JUST IN: Strategy estimated 13,491 BTC today via STRC — 30x daily mined BTC 🚀",
+        "text": "JUST IN: Strategy estimated 13,491 BTC today via STRC \u2014 30x daily mined BTC \ud83d\ude80",
         "likes": 2650,
         "rt": 397,
         "replies": 142,
@@ -394,7 +394,7 @@
     "eth_price": 2226,
     "n_tweets": 49,
     "viral_dominates": false,
-    "method_notes": "v2 Apify+Claude (358 raw → 49 valid). en:BTC sentiment dominated by broad bear/recovery tweets. BTC -2.8% market pullback. Clarity Act moving through Senate. Coinbase Premium negative."
+    "method_notes": "v2 Apify+Claude (358 raw \u2192 49 valid). en:BTC sentiment dominated by broad bear/recovery tweets. BTC -2.8% market pullback. Clarity Act moving through Senate. Coinbase Premium negative."
   },
   "2026-05-17": {
     "date": "2026-05-17",
@@ -406,7 +406,7 @@
     "eth_price": 2173,
     "n_tweets": 28,
     "viral_dominates": true,
-    "method_notes": "v2 Apify+Claude (358 raw → 28 valid). viral_news_dominates 50.7%: WatcherGuru 'Bitcoin falls under $78,000'(7043 eng, extreme_bear) + DrProfitCrypto 'short $120K, long $71K'(2229 eng, bear). 多頭: BitcoinMagazine 'patience&conviction'(1094 eng, bull) + StockmoneyL '100K-120K 2026'(308 eng, extreme_bull). 30Y Treasury 5.12% 新高(2008以來最高). BTC $78,195(-1.1%), ETH $2,173(-2.4%). Polymarket 60% odds BTC below $75K月底前. CLARITY Act 100+修正案. FOMC紀要5/20(三)."
+    "method_notes": "v2 Apify+Claude (358 raw \u2192 28 valid). viral_news_dominates 50.7%: WatcherGuru 'Bitcoin falls under $78,000'(7043 eng, extreme_bear) + DrProfitCrypto 'short $120K, long $71K'(2229 eng, bear). \u591a\u982d: BitcoinMagazine 'patience&conviction'(1094 eng, bull) + StockmoneyL '100K-120K 2026'(308 eng, extreme_bull). 30Y Treasury 5.12% \u65b0\u9ad8(2008\u4ee5\u4f86\u6700\u9ad8). BTC $78,195(-1.1%), ETH $2,173(-2.4%). Polymarket 60% odds BTC below $75K\u6708\u5e95\u524d. CLARITY Act 100+\u4fee\u6b63\u6848. FOMC\u7d00\u89815/20(\u4e09)."
   },
   "2026-05-18": {
     "date": "2026-05-18",
@@ -418,7 +418,7 @@
     "eth_price": 2179,
     "n_tweets": 35,
     "viral_dominates": true,
-    "method_notes": "v2 Apify+Claude (358 raw → ~35 valid). viral_news_dominates: coingecko 'market is healing'(4006 eng, neutral)占35.4%+WatcherGuru 'Bitcoin falls under $77,000'(1105 eng, extreme_bear)。Strategy '週一大買BTC再次宣布'(1187 eng, extreme_bull)。DrProfitCrypto 'shorting BTC NOW'(536 eng, extreme_bear)。BTC $77,400(-1.0%), ETH $2,179(+0.3%)。情緒中性-恐慌混合。"
+    "method_notes": "v2 Apify+Claude (358 raw \u2192 ~35 valid). viral_news_dominates: coingecko 'market is healing'(4006 eng, neutral)\u536035.4%+WatcherGuru 'Bitcoin falls under $77,000'(1105 eng, extreme_bear)\u3002Strategy '\u9031\u4e00\u5927\u8cb7BTC\u518d\u6b21\u5ba3\u5e03'(1187 eng, extreme_bull)\u3002DrProfitCrypto 'shorting BTC NOW'(536 eng, extreme_bear)\u3002BTC $77,400(-1.0%), ETH $2,179(+0.3%)\u3002\u60c5\u7dd2\u4e2d\u6027-\u6050\u614c\u6df7\u5408\u3002"
   },
   "2026-05-19": {
     "date": "2026-05-19",
@@ -430,7 +430,7 @@
     "eth_price": 2107,
     "n_tweets": 69,
     "viral_dominates": true,
-    "method_notes": "v2 Apify+Claude (158 raw → 69 valid). viral_news_dominates 32.0%(BTC): Minnesota Governor 銀行加密保管法案(3219 eng,extreme_bull)+Strategy 4%+ BTC supply(2529 eng,bull)。viral 53.7%(ETH): ETF flows divergence BTC vs ETH(11986 eng,bear)占47.1%。BTC $77,087(-1.2%),ETH $2,107(-0.3%)。BTC greed(63.6) ETH fear(40.6)。EF研究員辭職+油價壓力繼續拖累ETH。FOMC紀要5/20(三)02:00 TPE。"
+    "method_notes": "v2 Apify+Claude (158 raw \u2192 69 valid). viral_news_dominates 32.0%(BTC): Minnesota Governor \u9280\u884c\u52a0\u5bc6\u4fdd\u7ba1\u6cd5\u6848(3219 eng,extreme_bull)+Strategy 4%+ BTC supply(2529 eng,bull)\u3002viral 53.7%(ETH): ETF flows divergence BTC vs ETH(11986 eng,bear)\u536047.1%\u3002BTC $77,087(-1.2%),ETH $2,107(-0.3%)\u3002BTC greed(63.6) ETH fear(40.6)\u3002EF\u7814\u7a76\u54e1\u8fad\u8077+\u6cb9\u50f9\u58d3\u529b\u7e7c\u7e8c\u62d6\u7d2fETH\u3002FOMC\u7d00\u89815/20(\u4e09)02:00 TPE\u3002"
   },
   "2026-05-20": {
     "date": "2026-05-20",
@@ -442,6 +442,34 @@
     "eth_price": 2115,
     "n_tweets": 60,
     "viral_dominates": true,
-    "method_notes": "WebSearch fallback(Apify 158 items retrieved but session expired before dataset read). viral_news_dominates: Moody's US Aaa→Aa1 downgrade(extreme_bear)+FOMC minutes 'higher-for-longer'(bear)+BTC ETF -$648M outflows(bear). CLARITY Act Senate progress(bull)+Bitcoin $77K 支撐(bull). Fear&Greed=42(Fear). BTC $76,985(+0.23%), ETH $2,115(+0.38%). ETH/BTC 0.02747. ALT-OFF: req1 btc_d +1.73pp FAIL, req2 alt_mom7=-6.0% FAIL."
-  }
+    "method_notes": "WebSearch fallback(Apify 158 items retrieved but session expired before dataset read). viral_news_dominates: Moody's US Aaa\u2192Aa1 downgrade(extreme_bear)+FOMC minutes 'higher-for-longer'(bear)+BTC ETF -$648M outflows(bear). CLARITY Act Senate progress(bull)+Bitcoin $77K \u652f\u6490(bull). Fear&Greed=42(Fear). BTC $76,985(+0.23%), ETH $2,115(+0.38%). ETH/BTC 0.02747. ALT-OFF: req1 btc_d +1.73pp FAIL, req2 alt_mom7=-6.0% FAIL."
+  },
+  "entries": [
+    {
+      "date": "2026-05-21",
+      "timestamp_utc": "2026-05-21T00:07:00Z",
+      "btc_sentiment_score": 36,
+      "btc_sentiment_band": "fear",
+      "eth_sentiment_score": 33,
+      "eth_sentiment_band": "fear",
+      "btc_price": 77350,
+      "eth_price": 2128,
+      "fng": 27,
+      "n_tweets": 0,
+      "viral_dominates": false,
+      "macro": {
+        "vix": 17.96,
+        "vix3m": 20.76,
+        "move": 105.0,
+        "dxy": 99.1,
+        "tnx": 4.63,
+        "ndx": 28795,
+        "tips_real": 2.11,
+        "btc_ndx_corr_30d": 0.55,
+        "btc_ndx_corr_7d": 0.48,
+        "notes": "yfinance blocked; WebSearch fallback. VIX=17.96, VIX3M=20.76, MOVE~105, DXY~99.1, TNX=4.63%, TIPS=2.11%, NDX~28,795"
+      },
+      "method_notes": "WebSearch fallback(Apify needs approval; yfinance blocked). F&G=27(Fear). BTC $77,350(+0.4%), ETH $2,128(+0.5%). BTC sentiment=36(fear), ETH sentiment=33(fear). News: Bitcoin rebounds above $77K but declining futures OI; Bitfinex margin longs 2.5yr high; ETH concentrated selling pressure; Exa Labs $250M a16z; HYPE +7% SpaceX IPO perp launch. \ud83d\udd34 ALT-OFF: req1 FAIL(\u03947d=1.99pp>0) req2 PASS(alt_mom7=3.2%)."
+    }
+  ]
 }
