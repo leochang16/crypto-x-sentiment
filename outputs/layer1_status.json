@@ -259,20 +259,20 @@
   },
   "2026-05-22": {
     "date": "2026-05-22",
-    "timestamp_utc": "2026-05-22T00:10:00Z",
-    "btc_d": 60.0,
+    "timestamp_utc": "2026-05-22T03:25:00Z",
+    "btc_d": 60.05,
     "eth_d": 9.9,
-    "others_d": 10.44,
-    "btc_d_delta7": 1.6,
-    "alt_mom7": 1.2,
-    "breadth": 38.0,
+    "others_d": 8.53,
+    "total3_d": 30.05,
+    "btc_d_delta7": 1.65,
+    "alt_mom7": 8.34,
+    "breadth": 73.3,
     "req1_pass": false,
     "req2_pass": true,
-    "add_a": false,
-    "add_b": false,
-    "add_c": false,
-    "verdict_label": "🔴 ALT-OFF",
-    "verdict_class": "danger",
-    "verdict_detail": "req1 FAIL(Δ=+1.60pp >0✗ BTC.D高位持守) · req2 PASS(alt_mom7=1.2%✓) · → 🔴 ALT-OFF · BTC Pizza Day(+0%)·ETH flat·BTC.D 60%高位·Harvard $87M ETH dump·EF 8 resignations·ARMA Bitcoin Reserve bill bipartisan·SpaceX $789M BTC gains·ETF outflows easing $70M"
+    "bonus_a": false,
+    "bonus_b": true,
+    "bonus_c": false,
+    "verdict": "🔴 ALT-OFF",
+    "verdict_reason": "req1 FAIL: btc_d+1.65pp>0 (BTC.D=60.05%, 7d ago=58.4%)"
   }
 }
