@@ -63,7 +63,7 @@
     },
     "bonuses_passed": 1,
     "verdict": "ALT-ON",
-    "verdict_detail": "2/2 \u5fc5\u8981 PASS + 1/3 \u52a0\u5206 \u2192 \ud83d\udfe2 ALT-ON base \u00b7 bonus a FAIL(\u0394=-0.38pp>-0.5pp) \u00b7 bonus b PASS(+5.2%>+1.5%) \u00b7 bonus c FAIL(11.3%<12%)"
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 ALT-ON base · bonus a FAIL(Δ=-0.38pp>-0.5pp) · bonus b PASS(+5.2%>+1.5%) · bonus c FAIL(11.3%<12%)"
   },
   "2026-05-14": {
     "date": "2026-05-14",
@@ -87,7 +87,7 @@
     },
     "bonuses_passed": 1,
     "verdict": "ALT-ON",
-    "verdict_detail": "2/2 \u5fc5\u8981 PASS + 1/3 \u52a0\u5206 \u2192 \ud83d\udfe2 ALT-ON base \u00b7 bonus a FAIL(\u0394=-0.39pp>-0.5pp) \u00b7 bonus b PASS(+4.2%>+1.5%) \u00b7 bonus c FAIL(11.5%<12%)"
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 ALT-ON base · bonus a FAIL(Δ=-0.39pp>-0.5pp) · bonus b PASS(+4.2%>+1.5%) · bonus c FAIL(11.5%<12%)"
   },
   "2026-05-15": {
     "date": "2026-05-15",
@@ -110,9 +110,9 @@
       "bonus_c_others_d_gt12": false
     },
     "bonuses_passed": 1,
-    "verdict_label": "\ud83d\udfe2 GO",
+    "verdict_label": "🟢 GO",
     "verdict_class": "success",
-    "verdict_detail": "2/2 \u5fc5\u8981 PASS + 1/3 \u52a0\u5206 \u2192 \ud83d\udfe2 GO \u00b7 bonus a FAIL(\u0394=-0.1pp>-0.5pp) \u00b7 bonus b PASS(3.5%>+1.5%) \u00b7 bonus c FAIL(11.4%<12%)"
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 GO · bonus a FAIL(Δ=-0.1pp>-0.5pp) · bonus b PASS(3.5%>+1.5%) · bonus c FAIL(11.4%<12%)"
   },
   "2026-05-16": {
     "date": "2026-05-16",
@@ -135,9 +135,9 @@
       "bonus_c_others_d_gt12": false
     },
     "bonuses_passed": 1,
-    "verdict_label": "\ud83d\udfe2 GO",
+    "verdict_label": "🟢 GO",
     "verdict_class": "success",
-    "verdict_detail": "2/2 \u5fc5\u8981 PASS + 1/3 \u52a0\u5206 \u2192 \ud83d\udfe2 GO \u00b7 bonus a FAIL(\u0394=-0.1pp>-0.5pp) \u00b7 bonus b PASS(2.0%>+1.5%) \u00b7 bonus c FAIL(11.3%<12%)"
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 GO · bonus a FAIL(Δ=-0.1pp>-0.5pp) · bonus b PASS(2.0%>+1.5%) · bonus c FAIL(11.3%<12%)"
   },
   "2026-05-17": {
     "date": "2026-05-17",
@@ -160,9 +160,9 @@
       "bonus_c_others_d_gt12": false
     },
     "bonuses_passed": 1,
-    "verdict_label": "\ud83d\udfe2 GO",
+    "verdict_label": "🟢 GO",
     "verdict_class": "success",
-    "verdict_detail": "2/2 \u5fc5\u8981 PASS + 1/3 \u52a0\u5206 \u2192 \ud83d\udfe2 GO \u00b7 bonus a FAIL(\u0394=-0.1pp>-0.5pp) \u00b7 bonus b PASS(2.2%>+1.5%) \u00b7 bonus c FAIL(11.8%<12%)"
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 GO · bonus a FAIL(Δ=-0.1pp>-0.5pp) · bonus b PASS(2.2%>+1.5%) · bonus c FAIL(11.8%<12%)"
   },
   "2026-05-18": {
     "date": "2026-05-18",
@@ -185,9 +185,9 @@
       "bonus_c_others_d_gt12": true
     },
     "bonuses_passed": 1,
-    "verdict_label": "\ud83d\udfe2 GO",
+    "verdict_label": "🟢 GO",
     "verdict_class": "success",
-    "verdict_detail": "2/2 \u5fc5\u8981 PASS + 1/3 \u52a0\u5206 \u2192 \ud83d\udfe2 GO \u00b7 bonus a FAIL(\u0394=-0.2pp>-0.5pp) \u00b7 bonus b FAIL(1.3%<+1.5%) \u00b7 bonus c PASS(12.3%>12%)"
+    "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 GO · bonus a FAIL(Δ=-0.2pp>-0.5pp) · bonus b FAIL(1.3%<+1.5%) · bonus c PASS(12.3%>12%)"
   },
   "2026-05-19": {
     "date": "2026-05-19",
@@ -210,9 +210,9 @@
       "bonus_c_others_d_gt12": false
     },
     "bonuses_passed": 0,
-    "verdict_label": "\ud83d\udd34 ALT-OFF",
+    "verdict_label": "🔴 ALT-OFF",
     "verdict_class": "danger",
-    "verdict_detail": "req1 PASS(\u0394=-0.07pp<0\u2713) \u00b7 req2 FAIL(alt_mom7=-4.0%< 0\u2717) \u00b7 \u4efb\u4e00\u5fc5\u8981 FAIL \u2192 \ud83d\udd34 ALT-OFF \u00b7 bonus a FAIL(\u0394=-0.07pp>-0.5pp) \u00b7 bonus b FAIL(-4.0%<+1.5%) \u00b7 bonus c FAIL(11.3%<12%)"
+    "verdict_detail": "req1 PASS(Δ=-0.07pp<0✓) · req2 FAIL(alt_mom7=-4.0%< 0✗) · 任一必要 FAIL → 🔴 ALT-OFF · bonus a FAIL(Δ=-0.07pp>-0.5pp) · bonus b FAIL(-4.0%<+1.5%) · bonus c FAIL(11.3%<12%)"
   },
   "2026-05-20": {
     "date": "2026-05-20",
@@ -235,9 +235,9 @@
       "bonus_c_others_d_gt12": false
     },
     "bonuses_passed": 0,
-    "verdict_label": "\ud83d\udd34 ALT-OFF",
+    "verdict_label": "🔴 ALT-OFF",
     "verdict_class": "danger",
-    "verdict_detail": "req1 FAIL(\u0394=+1.73pp>0\u2717 BTC.D\u6025\u5347) \u00b7 req2 FAIL(alt_mom7=-6.0%<0\u2717) \u00b7 \u96d9\u5fc5\u8981\u5747 FAIL \u2192 \ud83d\udd34 ALT-OFF \u00b7 Moody's US Aaa\u2192Aa1 + FOMC higher-for-longer + ETF -$648M BTC / -$255M ETH"
+    "verdict_detail": "req1 FAIL(Δ=+1.73pp>0✗ BTC.D急升) · req2 FAIL(alt_mom7=-6.0%<0✗) · 雙必要均 FAIL → 🔴 ALT-OFF · Moody's US Aaa→Aa1 + FOMC higher-for-longer + ETF -$648M BTC / -$255M ETH"
   },
   "2026-05-21": {
     "date": "2026-05-21",
@@ -253,8 +253,26 @@
     "add_a": false,
     "add_b": true,
     "add_c": false,
-    "verdict_label": "\ud83d\udd34 ALT-OFF",
+    "verdict_label": "🔴 ALT-OFF",
     "verdict_class": "danger",
-    "verdict_detail": "req1 FAIL(\u0394=+1.99pp >0\u2717 BTC.D\u4e0a\u5347) \u00b7 req2 PASS(alt_mom7=3.2%\u2713) \u00b7 \u2192 \ud83d\udd34 ALT-OFF \u00b7 BTC+0.4%\u2191 ETH+0.5%\u2191 \u4f46BTC.D\u6301\u7e8c60%+; \u7121FOMC\u672c\u9031; HYPE+7%(SpaceX IPO); Exa Labs $250M a16z"
+    "verdict_detail": "req1 FAIL(Δ=+1.99pp >0✗ BTC.D上升) · req2 PASS(alt_mom7=3.2%✓) · → 🔴 ALT-OFF · BTC+0.4%↑ ETH+0.5%↑ 但BTC.D持續60%+; 無FOMC本週; HYPE+7%(SpaceX IPO); Exa Labs $250M a16z"
+  },
+  "2026-05-22": {
+    "date": "2026-05-22",
+    "timestamp_utc": "2026-05-22T00:10:00Z",
+    "btc_d": 60.0,
+    "eth_d": 9.9,
+    "others_d": 10.44,
+    "btc_d_delta7": 1.6,
+    "alt_mom7": 1.2,
+    "breadth": 38.0,
+    "req1_pass": false,
+    "req2_pass": true,
+    "add_a": false,
+    "add_b": false,
+    "add_c": false,
+    "verdict_label": "🔴 ALT-OFF",
+    "verdict_class": "danger",
+    "verdict_detail": "req1 FAIL(Δ=+1.60pp >0✗ BTC.D高位持守) · req2 PASS(alt_mom7=1.2%✓) · → 🔴 ALT-OFF · BTC Pizza Day(+0%)·ETH flat·BTC.D 60%高位·Harvard $87M ETH dump·EF 8 resignations·ARMA Bitcoin Reserve bill bipartisan·SpaceX $789M BTC gains·ETF outflows easing $70M"
   }
 }

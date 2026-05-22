@@ -241,5 +241,27 @@
     "altcoin_season_index": 39,
     "alt_mom7": 3.2,
     "breadth": 45.0
+  },
+  "2026-05-22": {
+    "date": "2026-05-22",
+    "timestamp_utc": "2026-05-22T00:10:00Z",
+    "total_market_cap_usd": 2590000000000,
+    "btc_price": 77158,
+    "eth_price": 2130,
+    "btc_mc": 1554000000000,
+    "eth_mc": 256500000000,
+    "btc_d": 60.0,
+    "eth_d": 9.9,
+    "top10_d": 89.55,
+    "others_d": 10.44,
+    "total3_d": 30.1,
+    "total3_b": 779590000000.0,
+    "btc_d_7d_prev": 58.4,
+    "btc_d_delta7": 1.6,
+    "others_d_7d_prev": 15.9,
+    "others_d_7d_chg": -5.46,
+    "altcoin_season_index": 35,
+    "alt_mom7": 1.2,
+    "breadth": 38.0
   }
 }

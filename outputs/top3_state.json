@@ -157,7 +157,7 @@
     {
       "date": "2026-05-19",
       "verdict": "ALT-OFF",
-      "note": "Layer 1 v2 = \ud83d\udd34 ALT-OFF (req2 FAIL: alt_mom7=-4.0%<0). \u4eca\u65e5\u4e0d\u57f7\u884c 21D \u6383\u63cf\u3002\u5ef6\u7528\u524d\u65e5(2026-05-18)\u6392\u884c\u3002",
+      "note": "Layer 1 v2 = 🔴 ALT-OFF (req2 FAIL: alt_mom7=-4.0%<0). 今日不執行 21D 掃描。延用前日(2026-05-18)排行。",
       "top3_21d": [
         "lab",
         "b",
@@ -181,7 +181,7 @@
     {
       "date": "2026-05-20",
       "verdict": "ALT-OFF",
-      "note": "Layer 1 v2 = \ud83d\udd34 ALT-OFF (req1 FAIL:btc_d+1.73pp>0\u2717 \u00b7 req2 FAIL:alt_mom7=-6.0%<0\u2717). Moody's US Aaa\u2192Aa1 + FOMC higher-for-longer. \u4eca\u65e5\u4e0d\u57f7\u884c 21D \u6383\u63cf\u3002\u5ef6\u7528\u524d\u65e5(2026-05-19)\u6392\u884c\u3002",
+      "note": "Layer 1 v2 = 🔴 ALT-OFF (req1 FAIL:btc_d+1.73pp>0✗ · req2 FAIL:alt_mom7=-6.0%<0✗). Moody's US Aaa→Aa1 + FOMC higher-for-longer. 今日不執行 21D 掃描。延用前日(2026-05-19)排行。",
       "top3_21d": [
         "lab",
         "b",
@@ -205,7 +205,7 @@
     {
       "date": "2026-05-21",
       "scan_skipped": true,
-      "skip_reason": "Layer 1 verdict=\ud83d\udd34 ALT-OFF \u2192 PART E scan skipped",
+      "skip_reason": "Layer 1 verdict=🔴 ALT-OFF → PART E scan skipped",
       "prev_date": "2026-05-20",
       "prev_top3": [
         "lab",
@@ -228,7 +228,35 @@
       "top10_21d": [],
       "top3_14d": [],
       "top10_14d": [],
-      "carry_signal": "ALT-OFF - hold \u73fe\u91d1 / BTC-only"
+      "carry_signal": "ALT-OFF - hold 現金 / BTC-only"
+    },
+    {
+      "date": "2026-05-22",
+      "scan_skipped": true,
+      "skip_reason": "Layer 1 verdict=🔴 ALT-OFF (req1 FAIL: btc_d+1.60pp>0) → PART E scan skipped",
+      "prev_date": "2026-05-21",
+      "prev_top3": [
+        "lab",
+        "b",
+        "ub"
+      ],
+      "prev_top10": [
+        "lab",
+        "b",
+        "ub",
+        "ton",
+        "zec",
+        "siren",
+        "ondo",
+        "skyai",
+        "akt",
+        "sui"
+      ],
+      "top3_21d": [],
+      "top10_21d": [],
+      "top3_14d": [],
+      "top10_14d": [],
+      "carry_signal": "ALT-OFF - hold 現金 / BTC-only"
     }
   ]
 }
