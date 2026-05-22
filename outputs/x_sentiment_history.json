@@ -472,28 +472,28 @@
   },
   "2026-05-22": {
     "date": "2026-05-22",
-    "timestamp_utc": "2026-05-22T00:10:00Z",
-    "btc_sentiment_score": 73.2,
+    "timestamp_utc": "2026-05-22T03:25:00Z",
+    "btc_sentiment_score": 69.5,
     "btc_sentiment_band": "greed",
-    "eth_sentiment_score": 44.9,
-    "eth_sentiment_band": "neutral",
-    "btc_price": 77158,
-    "eth_price": 2130,
-    "fng": null,
-    "n_tweets": 57,
+    "eth_sentiment_score": 36.8,
+    "eth_sentiment_band": "fear",
+    "btc_price": 77624,
+    "eth_price": 2133,
+    "fng": 40,
+    "n_tweets": 36,
     "viral_dominates": false,
     "macro": {
-      "vix": 17.26,
+      "vix": 16.74,
       "vix3m": 20.45,
       "move": 82.0,
-      "dxy": 99.39,
-      "tnx": 4.62,
+      "dxy": 99.4,
+      "tnx": 4.59,
       "ndx": 29357,
       "tips_real": 2.16,
       "btc_ndx_corr_30d": 0.52,
       "btc_ndx_corr_7d": 0.41,
-      "notes": "yfinance blocked; WebSearch fallback. VIX≈17.26, VIX3M≈20.45, MOVE≈82, DXY=99.39(May21close), TNX=4.62%, NDX=29,357(May21close), TIPS10Y=2.16%"
+      "notes": "WebSearch fallback(CoinGecko API 403). VIX=16.74(May22↓), VIX3M=20.45, MOVE=82, DXY=99.4, TNX=4.59%, NDX=29,357, TIPS10Y=2.16%. FOMC held 3.50-3.75% May20, historic dissents, new Chair Kevin Warsh."
     },
-    "method_notes": "Apify+Claude pipeline. BTC: Pizza Day bullish+ARMA Bitcoin Reserve bill+SpaceX $789M gains+Saylor absorb unmined BTC = greed(73.2↑ from 36.0). ETH: EF 8 resignations+Harvard $87M dump+Harvard+community turmoil vs Morpho DeFi bull+Tom Lee ETH oversold = neutral(44.9↑ from 33.0). 🔴 ALT-OFF: req1 FAIL(Δ7d=+1.60pp>0) · req2 PASS(alt_mom7=+1.2%). BTC $77,158(-0.25%). NDX 29,357(+0.20%). VIX 17.26 ↓."
+    "method_notes": "Apify+Claude pipeline. Bitcoin Pizza Day(16th anniversary). BTC: Strategic Bitcoin Reserve bills(Rulli+Begich) + Fidelity highest returns + GordonGekko Broadening Wedge +30% vs Mark Cuban sold BTC + BTC dump $1500 intraday = greed(69.5). ETH: 8 EF resignations+Harvard $87M dump+ETH flat 5yr vs ETH tokenization bull+local bottom signal contrarians = fear(36.8). 🔴 ALT-OFF: req1 FAIL(btc_d+1.65pp>0, BTC.D=60.05%). BTC $77,624 Pizza Day. F&G=40(Fear)."
   }
 }

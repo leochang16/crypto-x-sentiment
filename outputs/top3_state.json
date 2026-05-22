@@ -232,31 +232,42 @@
     },
     {
       "date": "2026-05-22",
-      "scan_skipped": true,
-      "skip_reason": "Layer 1 verdict=🔴 ALT-OFF (req1 FAIL: btc_d+1.60pp>0) → PART E scan skipped",
-      "prev_date": "2026-05-21",
-      "prev_top3": [
-        "lab",
-        "b",
-        "ub"
-      ],
-      "prev_top10": [
-        "lab",
-        "b",
-        "ub",
-        "ton",
+      "timestamp_utc": "2026-05-22T03:25:00Z",
+      "verdict": "ALT-OFF",
+      "top3_21d": [
         "zec",
-        "siren",
-        "ondo",
-        "skyai",
-        "akt",
-        "sui"
+        "hype",
+        "ondo"
       ],
-      "top3_21d": [],
-      "top10_21d": [],
+      "top10_21d": [
+        "zec",
+        "hype",
+        "ondo",
+        "ton",
+        "trx",
+        "sui",
+        "aave",
+        "bch",
+        "doge",
+        "xrp"
+      ],
+      "top10_21d_pct": {
+        "zec": 255.7,
+        "hype": 44.1,
+        "ondo": 41.4,
+        "ton": 37.8,
+        "trx": 31.4,
+        "sui": 22.0,
+        "aave": 20.5,
+        "bch": 19.6,
+        "doge": 19.0,
+        "xrp": 17.1
+      },
+      "c3_entry": [],
+      "exits_from_top10": [],
+      "note": "🔴 ALT-OFF regime - Top 10 僅供參考、慎追. ZEC+256% dominates. No c3 entry (prev 3 days scan_skipped). HYPE 21D+44%, ONDO 21D+41%, TON 21D+38%.",
       "top3_14d": [],
-      "top10_14d": [],
-      "carry_signal": "ALT-OFF - hold 現金 / BTC-only"
+      "top10_14d": []
     }
   ]
 }
