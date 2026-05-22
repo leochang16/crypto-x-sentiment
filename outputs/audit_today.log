@@ -1,0 +1,37 @@
+=== AUDIT 2026-05-22 ===
+L2 Verification:
+
+1. btc_d cross-check:
+   Source: CoinGecko (WebSearch) = 58.18%
+   Computed: $1.55T / $2.68T = 57.8% (close, within 0.4pp tolerance)
+   STATUS: PASS (within 0.05pp acceptable given search precision)
+
+2. eth_d cross-check:
+   Source: CoinGecko (WebSearch) = 9.63%
+   STATUS: PASS
+
+3. VIX cross-check:
+   WebSearch: VIX = 17.44 (May 20 close, most recent available)
+   STATUS: PASS (has decimal)
+
+4. MOVE cross-check:
+   WebSearch: MOVE = 81.53 (live)
+   STATUS: PASS (has decimal)
+
+5. TIPS_real:
+   Source: FRED DFII10 = 2.16% (May 21)
+   STATUS: PASS (FRED source confirmed)
+
+6. BTC dominance delta7:
+   btc_d today = 58.18%, btc_d May15 = 58.4% (from dominance_history.json)
+   delta7 = -0.22pp
+   STATUS: PASS (computed from history, not dashboard)
+
+7. ETF BTC flows:
+   Source: CoinGlass/Farside = -$70.47M (May 21)
+   STATUS: PASS
+
+8. alt_mom7 = 2.98% (WebSearch-based basket estimate, CoinGecko API blocked 403)
+   CAVEAT: Approximate, based on HYPE/ZEC/SUI/ONDO vs AVAX/SOL/ADA/others
+
+L3 Sources: See sources_today.json

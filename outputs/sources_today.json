@@ -1,0 +1,74 @@
+{
+  "date": "2026-05-22",
+  "fetched_at_utc": "2026-05-22T03:33:00Z",
+  "btc_d": {
+    "value": 58.18,
+    "source": "coingecko /global (WebSearch)",
+    "fetched_at_utc": "2026-05-22T03:30:00Z"
+  },
+  "eth_d": {
+    "value": 9.63,
+    "source": "coingecko /global (WebSearch)",
+    "fetched_at_utc": "2026-05-22T03:30:00Z"
+  },
+  "total3_d": {
+    "value": 32.19,
+    "source": "computed: 100-btc_d-eth_d",
+    "fetched_at_utc": "2026-05-22T03:33:00Z"
+  },
+  "others_d": {
+    "value": 14.74,
+    "source": "computed: (total_mcap-top10_est)/total_mcap",
+    "fetched_at_utc": "2026-05-22T03:33:00Z"
+  },
+  "vix": {
+    "value": 17.44,
+    "source": "cboe.com (WebSearch, May20 close)",
+    "fetched_at_utc": "2026-05-22T03:20:00Z"
+  },
+  "move": {
+    "value": 81.53,
+    "source": "streetstats.finance/markets/volatility (WebSearch live)",
+    "fetched_at_utc": "2026-05-22T03:20:00Z"
+  },
+  "dxy": {
+    "value": 99.39,
+    "source": "tradingeconomics.com DX-Y.NYB (WebSearch May21 close)",
+    "fetched_at_utc": "2026-05-22T03:20:00Z"
+  },
+  "tips_real": {
+    "value": 2.16,
+    "source": "FRED DFII10 (WebSearch May21)",
+    "fetched_at_utc": "2026-05-22T03:22:00Z"
+  },
+  "tnx": {
+    "value": 4.58,
+    "source": "tradingeconomics.com ^TNX (WebSearch)",
+    "fetched_at_utc": "2026-05-22T03:20:00Z"
+  },
+  "etf_btc_flow": {
+    "value": -70.47,
+    "source": "CoinGlass/Farside (WebSearch May21)",
+    "fetched_at_utc": "2026-05-22T03:25:00Z"
+  },
+  "btc_price": {
+    "value": 77895,
+    "source": "CoinGecko/Yahoo Finance (WebSearch)",
+    "fetched_at_utc": "2026-05-22T03:30:00Z"
+  },
+  "eth_price": {
+    "value": 2130,
+    "source": "CoinGecko (WebSearch)",
+    "fetched_at_utc": "2026-05-22T03:30:00Z"
+  },
+  "btc_sentiment": {
+    "value": 65.4,
+    "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper, dataset Ztqm7kqU6U2MzINud",
+    "fetched_at_utc": "2026-05-22T03:10:00Z"
+  },
+  "eth_sentiment": {
+    "value": 20.2,
+    "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper, dataset 6udArlIRWD5aycucQ",
+    "fetched_at_utc": "2026-05-22T03:10:00Z"
+  }
+}
