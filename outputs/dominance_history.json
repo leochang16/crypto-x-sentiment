@@ -259,5 +259,26 @@
     "btc_d_delta7": -0.22,
     "alt_mom7": 2.98,
     "breadth": 41.2
+  },
+  "2026-05-23": {
+    "date": "2026-05-23",
+    "timestamp_utc": "2026-05-23T00:05:00Z",
+    "total_market_cap_usd": 2669000000000,
+    "btc_price": 77400,
+    "eth_price": 2128,
+    "btc_mc": 1550000000000,
+    "eth_mc": 255000000000,
+    "btc_d": 58.07,
+    "eth_d": 9.57,
+    "top10_d": 87.41,
+    "others_d": 12.59,
+    "total3_d": 32.36,
+    "total3_b": 864000000000,
+    "btc_d_7d_prev": 58.4,
+    "btc_d_delta7": -0.33,
+    "alt_mom7": -0.63,
+    "breadth": 29.0,
+    "n_valid_basket": 14,
+    "source": "CoinGecko WebSearch fallback (API 403)"
   }
 }

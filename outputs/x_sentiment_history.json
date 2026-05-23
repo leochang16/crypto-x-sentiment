@@ -495,5 +495,31 @@
       "notes": "WebSearch fallback(CoinGecko API 403). VIX=17.44(May20close), VIX3M=20.76, MOVE=81.53(live), DXY=99.39(May21close), TNX=4.58%, NDX=29,357(May21close), TIPS=2.16%(DFII10 May21)"
     },
     "method_notes": "Apify+Claude pipeline. BTC: Pizza Day 16yr + Bitcoin Reserve Bill bipartisan(Rulli) + SpaceX $789M + Saylor 'bottomed $60K parabolic' + Cathie Wood $1.25M + UBS $35M exposure = greed(65.4). ETH: Harvard $87M dump + 8 EF resignations + 'community in turmoil' + ETH losing L1 race = extreme_fear(20.2). \ud83d\udfe2\ud83d\udfe2 STRONG GO: req1 PASS(\u03947d=-0.22pp<0) \u00b7 req2 PASS(alt_mom7=+2.98%) \u00b7 \u52a0\u5206b PASS(>1.5%) \u00b7 \u52a0\u5206c PASS(others_d=14.74%>12%). BTC.D\u9996\u5ea67D\u7ffb\u8ca0(-0.22pp vs 58.4%May15). ZEC+20%/HYPE+32%/ONDO+10%\u9078\u64c7\u6027\u5f37. ETF BTC -$70.5M(\u7de9\u548c). MOVE 81.53 \u6539\u5584."
+  },
+  "2026-05-23": {
+    "date": "2026-05-23",
+    "timestamp_utc": "2026-05-23T00:05:00Z",
+    "btc_sentiment_score": 59.55,
+    "btc_sentiment_band": "greed",
+    "eth_sentiment_score": 61.69,
+    "eth_sentiment_band": "greed",
+    "btc_price": 77400,
+    "eth_price": 2128,
+    "fng": null,
+    "n_tweets": 56,
+    "viral_dominates": true,
+    "macro": {
+      "vix": 16.76,
+      "vix3m": null,
+      "move": 79.72,
+      "dxy": 99.32,
+      "tnx": 4.55,
+      "ndx": 29357,
+      "tips_real": 2.16,
+      "btc_ndx_corr_30d": null,
+      "btc_ndx_corr_7d": null,
+      "notes": "WebSearch fallback (yfinance 403, CoinGecko 403). VIX=16.76(May22), MOVE=79.72, DXY=99.32, TNX=4.55%(May22), NDX=29,357(May21close), TIPS=2.16%(DFII10 May21). VIX3M/corr=null (API blocked)."
+    },
+    "method_notes": "Apify+Claude pipeline. BTC: Bitcoin Pizza Day dominates(16yr anniversary, 10kBTC=$774M), Saylor SATA/ASST credit market narrative bull, $500K predictions \u00d7 2, ZenKai BTC-next-after-gold bull, bears: step-down pattern+May seasonality+flush warning \u2192 greed(59.6). ETH: whale $38.4M long viral(AshCrypto), staking ATH 32.4%, HYPE/ZEC dominance, $20K ETH concern, underwater longs, new cycle low fear \u2192 greed(61.7). \ud83d\udd34 ALT-OFF: Req1 PASS(delta7=-0.33pp) \u00b7 Req2 FAIL(alt_mom7=-0.63%, most alts down 7d). Powell term ends today(May23)\u2192Warsh hawkish risk. ETF -$70M Wed. MOVE 79.72 moderate."
   }
 }

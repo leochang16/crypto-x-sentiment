@@ -1,74 +1,70 @@
 {
-  "date": "2026-05-22",
-  "fetched_at_utc": "2026-05-22T03:33:00Z",
+  "date": "2026-05-23",
+  "generated_utc": "2026-05-23T00:05:00Z",
   "btc_d": {
-    "value": 58.18,
-    "source": "coingecko /global (WebSearch)",
-    "fetched_at_utc": "2026-05-22T03:30:00Z"
+    "value": 58.07,
+    "source": "CoinGecko WebSearch fallback /global",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
   "eth_d": {
-    "value": 9.63,
-    "source": "coingecko /global (WebSearch)",
-    "fetched_at_utc": "2026-05-22T03:30:00Z"
+    "value": 9.57,
+    "source": "CoinGecko WebSearch fallback /global",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
   "total3_d": {
-    "value": 32.19,
-    "source": "computed: 100-btc_d-eth_d",
-    "fetched_at_utc": "2026-05-22T03:33:00Z"
+    "value": 32.36,
+    "source": "calc: 100 - btc_d - eth_d",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
   "others_d": {
-    "value": 14.74,
-    "source": "computed: (total_mcap-top10_est)/total_mcap",
-    "fetched_at_utc": "2026-05-22T03:33:00Z"
+    "value": 12.59,
+    "source": "calc: (total_mcap - top10_sum) / total_mcap * 100 (top10 estimated)",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
   "vix": {
-    "value": 17.44,
-    "source": "cboe.com (WebSearch, May20 close)",
-    "fetched_at_utc": "2026-05-22T03:20:00Z"
+    "value": 16.76,
+    "source": "WebSearch CBOE May22 close",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
+  },
+  "vix3m": {
+    "value": null,
+    "source": "null - API blocked / WebSearch no specific value",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
   "move": {
-    "value": 81.53,
-    "source": "streetstats.finance/markets/volatility (WebSearch live)",
-    "fetched_at_utc": "2026-05-22T03:20:00Z"
+    "value": 79.72,
+    "source": "WebSearch ICE BofA MOVE index live",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
   "dxy": {
-    "value": 99.39,
-    "source": "tradingeconomics.com DX-Y.NYB (WebSearch May21 close)",
-    "fetched_at_utc": "2026-05-22T03:20:00Z"
+    "value": 99.32,
+    "source": "WebSearch DXY May22 close",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
+  },
+  "tnx": {
+    "value": 4.55,
+    "source": "WebSearch 10Y Treasury May22 close",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
   "tips_real": {
     "value": 2.16,
-    "source": "FRED DFII10 (WebSearch May21)",
-    "fetched_at_utc": "2026-05-22T03:22:00Z"
-  },
-  "tnx": {
-    "value": 4.58,
-    "source": "tradingeconomics.com ^TNX (WebSearch)",
-    "fetched_at_utc": "2026-05-22T03:20:00Z"
+    "source": "FRED DFII10 WebSearch fallback May21",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
   "etf_btc_flow": {
     "value": -70.47,
-    "source": "CoinGlass/Farside (WebSearch May21)",
-    "fetched_at_utc": "2026-05-22T03:25:00Z"
+    "source": "WebSearch CoinGlass/TheBlock May20 (most recent)",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
-  "btc_price": {
-    "value": 77895,
-    "source": "CoinGecko/Yahoo Finance (WebSearch)",
-    "fetched_at_utc": "2026-05-22T03:30:00Z"
+  "alt_mom7": {
+    "value": -0.63,
+    "source": "WebSearch basket 14 coins (canton-network null)",
+    "n_valid": 14,
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   },
-  "eth_price": {
-    "value": 2130,
-    "source": "CoinGecko (WebSearch)",
-    "fetched_at_utc": "2026-05-22T03:30:00Z"
-  },
-  "btc_sentiment": {
-    "value": 65.4,
-    "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper, dataset Ztqm7kqU6U2MzINud",
-    "fetched_at_utc": "2026-05-22T03:10:00Z"
-  },
-  "eth_sentiment": {
-    "value": 20.2,
-    "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper, dataset 6udArlIRWD5aycucQ",
-    "fetched_at_utc": "2026-05-22T03:10:00Z"
+  "btc_d_delta7": {
+    "value": -0.33,
+    "source": "dominance_history.json 2026-05-16 entry",
+    "fetched_at_utc": "2026-05-23T00:05:00Z"
   }
 }

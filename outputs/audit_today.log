@@ -1,37 +1,17 @@
-=== AUDIT 2026-05-22 ===
-L2 Verification:
+2026-05-23T00:05:00Z AUDIT VERIFICATION REPORT
+=== L2 Verification ===
+btc_d source: CoinGecko WebSearch fallback 58.07%
+Previous api attempt: CoinGecko API 403 Forbidden
+Cross-check: CoinMarketCap says 59.86%, CoinGecko says 58.07% (methodology differs)
+Using CoinGecko as primary source per pipeline config.
 
-1. btc_d cross-check:
-   Source: CoinGecko (WebSearch) = 58.18%
-   Computed: $1.55T / $2.68T = 57.8% (close, within 0.4pp tolerance)
-   STATUS: PASS (within 0.05pp acceptable given search precision)
+btc_d delta check: 58.07 - 58.4(May16) = -0.33pp ✓
 
-2. eth_d cross-check:
-   Source: CoinGecko (WebSearch) = 9.63%
-   STATUS: PASS
+VIX: 16.76 (May22 close) ✓
+VIX3M: null - written null per L1 sanity check rule
+MOVE: 79.72 ✓
+DXY: 99.32 ✓
+TIPS (DFII10 May21): 2.16% ✓
 
-3. VIX cross-check:
-   WebSearch: VIX = 17.44 (May 20 close, most recent available)
-   STATUS: PASS (has decimal)
-
-4. MOVE cross-check:
-   WebSearch: MOVE = 81.53 (live)
-   STATUS: PASS (has decimal)
-
-5. TIPS_real:
-   Source: FRED DFII10 = 2.16% (May 21)
-   STATUS: PASS (FRED source confirmed)
-
-6. BTC dominance delta7:
-   btc_d today = 58.18%, btc_d May15 = 58.4% (from dominance_history.json)
-   delta7 = -0.22pp
-   STATUS: PASS (computed from history, not dashboard)
-
-7. ETF BTC flows:
-   Source: CoinGlass/Farside = -$70.47M (May 21)
-   STATUS: PASS
-
-8. alt_mom7 = 2.98% (WebSearch-based basket estimate, CoinGecko API blocked 403)
-   CAVEAT: Approximate, based on HYPE/ZEC/SUI/ONDO vs AVAX/SOL/ADA/others
-
-L3 Sources: See sources_today.json
+alt_mom7: -0.63% (14 valid coins, canton-network excluded)
+Layer1 verdict: ALT-OFF (req2 fail: alt_mom7 < 0)
