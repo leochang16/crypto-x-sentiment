@@ -275,23 +275,42 @@
     "verdict_class": "success",
     "verdict_detail": "req1 PASS(\u0394=-0.22pp<0\u2713 BTC.D 7D\u56de\u843d) \u00b7 req2 PASS(alt_mom7=+2.98%\u2713) \u00b7 \u52a0\u5206a FAIL(-0.22pp>-0.5pp) \u00b7 \u52a0\u5206b PASS(2.98%>1.5%) \u00b7 \u52a0\u5206c PASS(others_d=14.74%>12%) \u00b7 \u2192 \ud83d\udfe2\ud83d\udfe2 STRONG GO \u00b7 BTC Pizza Day +1.7%\u2191 \u00b7 ETH -0.1% \u00b7 ZEC+20%/HYPE+32%/SUI+20% \u9078\u64c7\u6027alt\u5f37 \u00b7 Harvard $87M ETH dump \u00b7 EF 8\u8fad\u8077 \u00b7 SpaceX $789M BTC gains \u00b7 BTC.D 7D\u9996\u5ea6\u7ffb\u8ca0(-0.22pp)"
   },
+  "2026-05-23": {
+    "date": "2026-05-23",
+    "timestamp_utc": "2026-05-23T09:17:00Z",
+    "btc_d": 58.09,
+    "eth_d": 9.55,
+    "others_d": 13.43,
+    "btc_d_delta7": -0.31,
+    "alt_mom7": 0.09,
+    "breadth": 46.0,
+    "n_valid_basket": 13,
+    "req1_pass": true,
+    "req2_pass": true,
+    "add_a": false,
+    "add_b": false,
+    "add_c": true,
+    "verdict_label": "\ud83d\udfe2 GO",
+    "verdict_class": "success",
+    "verdict_detail": "req1 PASS(\u0394=-0.31pp<0\u2713 BTC.D 7D\u56de\u843d) \u00b7 req2 PASS(alt_mom7=+0.09%\u2713 \u9996\u5ea6\u8f49\u6b63) \u00b7 \u52a0\u5206a FAIL(-0.31pp>-0.5pp) \u00b7 \u52a0\u5206b FAIL(0.09%<+1.5%) \u00b7 \u52a0\u5206c PASS(others_d=13.43%>12%) \u00b7 \u2192 \ud83d\udfe2 GO \u00b7 Warsh\u5c31\u8077Fed Chair \u00b7 CLARITY Act 100+\u4fee\u6b63\u6848 \u00b7 ETF\u9031\u6d41\u51fa-$1.26B \u00b7 HYPE ATH+ZEC SEC\u64a4\u6848 \u00b7 NEAR\u65b0\u5165#5(+52% 21D) \u00b7 SUI\u8dcc\u51fa\u2192\u51fa\u5834\u8a0a\u865f"
+  },
   "entries": [
     {
       "date": "2026-05-23",
-      "timestamp_utc": "2026-05-23T00:05:00Z",
-      "btc_d": 58.07,
-      "eth_d": 9.57,
-      "others_d": 12.59,
-      "btc_d_delta7": -0.33,
-      "alt_mom7": -0.63,
-      "breadth": 29.0,
-      "verdict": "ALT-OFF",
+      "timestamp_utc": "2026-05-23T09:17:00Z",
+      "btc_d": 58.09,
+      "eth_d": 9.55,
+      "others_d": 13.43,
+      "btc_d_delta7": -0.31,
+      "alt_mom7": 0.09,
+      "breadth": 46.0,
+      "verdict": "GO",
       "req1_pass": true,
-      "req2_pass": false,
+      "req2_pass": true,
       "bonus_a": false,
       "bonus_b": false,
       "bonus_c": true,
-      "notes": "Req1 PASS(delta7=-0.33pp<0) | Req2 FAIL(alt_mom7=-0.63%<0) \u2192 ALT-OFF"
+      "notes": "fresh 17:17 TPE run (2nd run). Req1 PASS(delta7=-0.31pp<0) | Req2 PASS(alt_mom7=+0.09%>0, first positive) | bonus_c PASS(13.43%>12%) \u2192 GO. Earlier 00:05 run had ALT-OFF (alt_mom7=-0.63%)."
     }
   ]
 }

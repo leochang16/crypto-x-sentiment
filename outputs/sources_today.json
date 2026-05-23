@@ -1,70 +1,108 @@
 {
   "date": "2026-05-23",
-  "generated_utc": "2026-05-23T00:05:00Z",
+  "generated_utc": "2026-05-23T09:17:00Z",
+  "run_label": "fresh 17:17 TPE run (second daily run)",
   "btc_d": {
-    "value": 58.07,
-    "source": "CoinGecko WebSearch fallback /global",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 58.09,
+    "source": "CoinGecko WebSearch fallback /global (API 403)",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "eth_d": {
-    "value": 9.57,
-    "source": "CoinGecko WebSearch fallback /global",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 9.55,
+    "source": "CoinGecko WebSearch fallback /global (API 403)",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "total3_d": {
     "value": 32.36,
     "source": "calc: 100 - btc_d - eth_d",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "others_d": {
-    "value": 12.59,
-    "source": "calc: (total_mcap - top10_sum) / total_mcap * 100 (top10 estimated)",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 13.43,
+    "source": "calc: (total_mcap - top10_sum) / total_mcap * 100 (top10 estimated via WebSearch)",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "vix": {
     "value": 16.76,
     "source": "WebSearch CBOE May22 close",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "vix3m": {
-    "value": null,
-    "source": "null - API blocked / WebSearch no specific value",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 19.92,
+    "source": "WebSearch ^VIX3M May23 intraday (CBOE 3-month VIX)",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "move": {
     "value": 79.72,
     "source": "WebSearch ICE BofA MOVE index live",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "dxy": {
     "value": 99.32,
     "source": "WebSearch DXY May22 close",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "tnx": {
     "value": 4.55,
     "source": "WebSearch 10Y Treasury May22 close",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "tips_real": {
     "value": 2.16,
-    "source": "FRED DFII10 WebSearch fallback May21",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "source": "FRED DFII10 WebSearch fallback May21 (direct API 403)",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
-  "etf_btc_flow": {
+  "etf_btc_flow_weekly": {
+    "value": -1260,
+    "source": "WebSearch CoinGlass May19-23 weekly net flow (largest single-week outflow)",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
+  },
+  "etf_btc_flow_daily": {
     "value": -70.47,
-    "source": "WebSearch CoinGlass/TheBlock May20 (most recent)",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "source": "WebSearch CoinGlass/TheBlock May20 (most recent daily)",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "alt_mom7": {
-    "value": -0.63,
-    "source": "WebSearch basket 14 coins (canton-network null)",
-    "n_valid": 14,
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 0.09,
+    "source": "WebSearch basket 13 coins (stellar XLM excluded - no 7D data; canton-network excluded - API 404)",
+    "n_valid": 13,
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   },
   "btc_d_delta7": {
-    "value": -0.33,
-    "source": "dominance_history.json 2026-05-16 entry",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": -0.31,
+    "source": "dominance_history.json 2026-05-16 entry (btc_d=58.4) vs today 58.09",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
+  },
+  "btc_price": {
+    "value": 77336,
+    "source": "Apify tweet data + WebSearch CoinGecko May23 live",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
+  },
+  "eth_price": {
+    "value": 2130,
+    "source": "WebSearch CoinGecko May23 live",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
+  },
+  "btc_sentiment": {
+    "score": 61.9,
+    "band": "greed",
+    "n_valid": 37,
+    "source": "Apify kaitoeasyapi pipeline 156 raw tweets",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
+  },
+  "eth_sentiment": {
+    "score": 36.1,
+    "band": "fear",
+    "n_valid": 46,
+    "source": "Apify kaitoeasyapi pipeline 156 raw tweets",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
+  },
+  "layer1_verdict": {
+    "value": "GO",
+    "req1": "PASS (btc_d_delta7=-0.31pp < +0.5pp threshold)",
+    "req2": "PASS (alt_mom7=+0.09% > 0% threshold, first positive since May18)",
+    "bonus_c": "PASS (others_d=13.43% > 12%)",
+    "source": "computed from dominance_history.json + alt basket WebSearch",
+    "fetched_at_utc": "2026-05-23T09:17:00Z"
   }
 }

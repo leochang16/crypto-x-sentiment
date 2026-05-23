@@ -1,17 +1,63 @@
-2026-05-23T00:05:00Z AUDIT VERIFICATION REPORT
-=== L2 Verification ===
-btc_d source: CoinGecko WebSearch fallback 58.07%
-Previous api attempt: CoinGecko API 403 Forbidden
-Cross-check: CoinMarketCap says 59.86%, CoinGecko says 58.07% (methodology differs)
-Using CoinGecko as primary source per pipeline config.
+=== DAILY AUDIT LOG: 2026-05-23 (run: 17:17 TPE / 09:17 UTC) ===
 
-btc_d delta check: 58.07 - 58.4(May16) = -0.33pp ✓
+PART A: X SENTIMENT (Apify pipeline)
+  - Actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
+  - runId: (completed, datasetId: N0MsmQQMGzsRH1xiA)
+  - raw_tweets: 156 | btc_valid: 37 | eth_valid: 46
+  - BTC score: 61.9 (greed) | ETH score: 36.1 (fear)
+  - viral_dominates: true (top2 = 38% of total engagement)
+  - BTC top viral: Saylor(3830.5, bull), AshCrypto(3650.5, bear)
+  - ETH top viral: CryptoKaleo(2728.5, bear), moonbag(377, extreme_bear)
 
-VIX: 16.76 (May22 close) ✓
-VIX3M: null - written null per L1 sanity check rule
-MOVE: 79.72 ✓
-DXY: 99.32 ✓
-TIPS (DFII10 May21): 2.16% ✓
+PART B: DOMINANCE / LAYER 1 v2
+  - CoinGecko API: 403 (both /global and /coins/markets)
+  - WebSearch fallback: BTC.D=58.09%, ETH.D=9.55%, total_mcap=$2.59T
+  - btc_d_delta7: -0.31pp (prev May16=58.4%)
+  - alt_mom7: +0.09% (13 valid coins; stellar XLM excluded; canton-network excluded)
+  - breadth: 46% (6/13 coins beat BTC 7D return of -1.6%)
+  - LAYER 1 VERDICT: GO (req1 PASS + req2 PASS + bonus_c PASS)
+  - VERDICT CHANGE: ALT-OFF (00:05 run) → GO (17:17 run)
 
-alt_mom7: -0.63% (14 valid coins, canton-network excluded)
-Layer1 verdict: ALT-OFF (req2 fail: alt_mom7 < 0)
+PART C: MACRO
+  - VIX: 16.76 (CBOE May22 close, WebSearch)
+  - VIX3M: 19.92 (WebSearch ^VIX3M May23 intraday) [was null in 00:05 run]
+  - MOVE: 79.72 (ICE BofA, WebSearch)
+  - DXY: 99.32 (May22 close, WebSearch)
+  - TNX: 4.55% (May22 close, WebSearch)
+  - TIPS_REAL: 2.16% (FRED DFII10 May21, WebSearch; direct API 403)
+  - ETF flow weekly: -$1.26B (CoinGlass, May19-23)
+  - KEY EVENT: Kevin Warsh sworn in as Fed Chair (replaces Powell)
+  - KEY EVENT: CLARITY Act 100+ amendments passed House
+
+PART D: DASHBOARD
+  - 29 surgical edits to dashboard/index.html
+  - wc -l: 830 lines
+  - Layer1 banner: danger/ALT-OFF → warn/GO
+  - Tab3 banner: danger/ALT-OFF → warn/GO
+  - Top 10 grid: HYPE 47%→60%, #5 NEAR new (+52%), SUI removed, ONDO→#6, TON→#7
+  - History table row 05-23: danger row → success/GO row
+  - Signal card: ALT-OFF box → GO box (SUI exit signal, NEAR enters #5)
+  - Footer: updated all values, timestamp→17:17 TPE
+  - Viral tweet cards: updated to 2026-05-23 (Saylor/AshCrypto/CryptoKaleo)
+  - News section: updated to Warsh/CLARITY/ETF-$1.26B/AI tokens/SEC
+  - Calendar: updated 05-23 entry (GO, Warsh就職)
+
+PART E: 21D SCAN
+  - top3_21d: [ZEC(~+110%), TAO(~+80%), HYPE(~+60%)]
+  - top10_21d: ZEC, TAO, HYPE, FET, NEAR, ONDO, TON, AKT, VIRTUAL, TRX
+  - exits_today: [SUI] (dropped -4.3% 7D)
+  - c3_signals: [] (intersection of May23∩May22∩May21 top3 = empty)
+  - NEAR enters at #5 (~+52% 21D, AI cross-chain narrative)
+
+DEDUP CHECK: same-day re-run (2nd run of 2026-05-23)
+  - All JSON files updated with fresh values (dedup by date, overwrite)
+  - dominance_history.json 2026-05-23 entry: overwritten
+  - top3_state.json 2026-05-23 entry: overwritten
+  - x_sentiment_history.json 2026-05-23 entry: overwritten
+  - sources_today.json: overwritten
+
+VERIFICATION:
+  - BTC.D 58.09% [WebSearch] vs 58.07% [00:05 run] — delta 0.02pp (acceptable)
+  - VIX 16.76 [May22] — no newer data available (weekend)
+  - MOVE 79.72 [WebSearch] — confirmed live feed
+  - TIPS 2.16% [FRED DFII10 May21] — only source (API 403)

@@ -498,28 +498,41 @@
   },
   "2026-05-23": {
     "date": "2026-05-23",
-    "timestamp_utc": "2026-05-23T00:05:00Z",
-    "btc_sentiment_score": 59.55,
+    "timestamp_utc": "2026-05-23T09:17:00Z",
+    "btc_sentiment_score": 61.9,
     "btc_sentiment_band": "greed",
-    "eth_sentiment_score": 61.69,
-    "eth_sentiment_band": "greed",
-    "btc_price": 77400,
-    "eth_price": 2128,
+    "eth_sentiment_score": 36.1,
+    "eth_sentiment_band": "fear",
+    "btc_price": 77336,
+    "eth_price": 2130,
     "fng": null,
-    "n_tweets": 56,
+    "n_tweets": 83,
+    "n_btc_valid": 37,
+    "n_eth_valid": 46,
     "viral_dominates": true,
+    "viral_top2_pct": 38,
     "macro": {
       "vix": 16.76,
-      "vix3m": null,
+      "vix3m": 19.92,
       "move": 79.72,
       "dxy": 99.32,
       "tnx": 4.55,
-      "ndx": 29357,
+      "ndx": null,
       "tips_real": 2.16,
       "btc_ndx_corr_30d": null,
       "btc_ndx_corr_7d": null,
-      "notes": "WebSearch fallback (yfinance 403, CoinGecko 403). VIX=16.76(May22), MOVE=79.72, DXY=99.32, TNX=4.55%(May22), NDX=29,357(May21close), TIPS=2.16%(DFII10 May21). VIX3M/corr=null (API blocked)."
+      "etf_btc_flow_weekly": -1260,
+      "notes": "Warsh sworn in as Fed Chair. VIX=16.76(May22 close), VIX3M=19.92(May23 intraday WebSearch), MOVE=79.72, DXY=99.32, TNX=4.55%(May22 close), TIPS=2.16%(FRED DFII10 May21). NDX/corr=null (API blocked). ETF weekly flow=-$1.26B (CoinGlass)."
     },
-    "method_notes": "Apify+Claude pipeline. BTC: Bitcoin Pizza Day dominates(16yr anniversary, 10kBTC=$774M), Saylor SATA/ASST credit market narrative bull, $500K predictions \u00d7 2, ZenKai BTC-next-after-gold bull, bears: step-down pattern+May seasonality+flush warning \u2192 greed(59.6). ETH: whale $38.4M long viral(AshCrypto), staking ATH 32.4%, HYPE/ZEC dominance, $20K ETH concern, underwater longs, new cycle low fear \u2192 greed(61.7). \ud83d\udd34 ALT-OFF: Req1 PASS(delta7=-0.33pp) \u00b7 Req2 FAIL(alt_mom7=-0.63%, most alts down 7d). Powell term ends today(May23)\u2192Warsh hawkish risk. ETF -$70M Wed. MOVE 79.72 moderate."
+    "layer1": {
+      "verdict": "GO",
+      "btc_d": 58.09,
+      "btc_d_delta7": -0.31,
+      "alt_mom7": 0.09,
+      "others_d": 13.43,
+      "breadth": 46,
+      "n_valid_basket": 13
+    },
+    "method_notes": "Apify pipeline 156 raw tweets, 83 classified (37 BTC-valid, 46 ETH-valid). BTC greed(61.9): viral_dominates=true(top2=38%). Saylor strategy conviction(3830 eng, bull)+AshCrypto extreme bearish(3650 eng, bear)+SBR bill 21 cosponsors(2330 eng, bull). HYPE ATH+ZEC SEC case dropped+ETF weekly -$1.26B. Layer1 GO: alt_mom7=+0.09% FIRST POSITIVE. ETH fear(36.1): viral_dominates=true. CryptoKaleo FTX-like(2728 eng, bear)+moonbag anything-can-flip-ETH(377 eng, extreme_bear). Tom Lee -$7.8B+65K ETH to Coinbase. ETH/BTC ratio 0.02754."
   }
 }

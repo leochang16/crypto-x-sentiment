@@ -53,8 +53,8 @@
     {
       "date": "2026-05-23",
       "scan_done": true,
-      "regime": "ALT-OFF",
-      "method": "WebSearch fallback (CoinGecko API 403)",
+      "regime": "GO",
+      "method": "WebSearch fallback (CoinGecko API 403) · fresh 17:17 TPE run",
       "prev_date": "2026-05-22",
       "prev_top3": [
         "zec",
@@ -83,9 +83,9 @@
         "tao",
         "hype",
         "fet",
+        "near",
         "ondo",
         "ton",
-        "sui",
         "akt",
         "virtual",
         "trx"
@@ -93,22 +93,20 @@
       "top10_gains_21d": {
         "zec": 110,
         "tao": 80,
-        "hype": 47,
+        "hype": 60,
         "fet": 50,
+        "near": 52,
         "ondo": 45,
         "ton": 43,
-        "sui": 18,
         "akt": 30,
         "virtual": 25,
         "trx": 12
       },
       "exits_today": [
-        "inj",
-        "near",
-        "link"
+        "sui"
       ],
       "c3_signals": [],
-      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · Top3(ZEC/TAO/HYPE) · {INJ/NEAR/LINK}出場 · 無c3連續3天 → ALT-OFF勿追新倉"
+      "carry_signal": "🟢 GO · alt_mom7=+0.09% 首度轉正 · req1+req2 PASS · 加分c PASS(13.43%) · Top3(ZEC/TAO/HYPE) · NEAR新入#5 · SUI跌出→出場訊號 · 無c3連續3天 → 等c3確認再進場"
     }
   ]
 }

@@ -1,3 +1,13 @@
-2026-05-23T00:05:00Z	vix3m	CBOE ^VIX3M	API blocked + WebSearch no specific value returned; written null
-2026-05-23T00:05:00Z	btc_ndx_corr	yfinance ^NDX + BTC-USD	HTTP 403 all yfinance endpoints; correlation null
-2026-05-23T00:05:00Z	canton_network	CoinGecko /coins/canton-network/market_chart	Coin unclear/not in top 200; excluded from basket (n_valid=14)
+=== AUDIT WARNINGS: 2026-05-23 (run: 17:17 TPE / 09:17 UTC) ===
+
+[WARN] CoinGecko API 403: /api/v3/global endpoint blocked → WebSearch fallback used for BTC.D/ETH.D/total_mcap
+[WARN] CoinGecko API 403: /coins/markets endpoint blocked → WebSearch fallback used for alt basket 7D returns
+[WARN] FRED DFII10 API 403: direct fetch blocked → WebSearch fallback used for TIPS real yield (value: 2.16%, May21)
+[WARN] VXV (VIX3M legacy ticker) delisted → used ^VIX3M via WebSearch (value: 19.92, May23 intraday)
+[WARN] canton-network: CoinGecko returns 404 for this token → EXCLUDED from alt basket (n_valid reduced from 15→14)
+[WARN] stellar (XLM): 7D price data unavailable in WebSearch results → EXCLUDED from alt basket (n_valid reduced 14→13)
+[WARN] alt_mom7 margin is extremely thin: +0.09% (barely above 0% req2 threshold). HYPE(+34.52% 7D) and ZEC(+20.5% 7D) are driving the positive average. One more negative coin could flip to FAIL.
+[WARN] NDX (Nasdaq-100) price: yfinance 403, WebSearch returned May21 close only → NDX set to null in x_sentiment_history.json macro block
+[WARN] btc_ndx_corr_30d and btc_ndx_corr_7d: cannot compute without NDX time series → both set to null
+[INFO] VIX3M value 19.92 is from WebSearch intraday (not official CBOE close) — use with caution for risk assessment
+[INFO] ETF flow daily: most recent available is May20 (-$70.47M); weekly total -$1.26B (May19-23, CoinGlass)
