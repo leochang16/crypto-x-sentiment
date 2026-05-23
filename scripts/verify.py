@@ -173,8 +173,7 @@ def main():
     print("\n[2/5] CoinGecko /global")
     try:
         cg = fetch_coingecko_global()
-        for f in ("btc_d", "eth_d", "others_d"):
-            dv, _ = get_dashboard_value(sources, f)
+        for f in ("btc_d", "eth_d"):  # others_d removed: agent and verify use diff definitions            dv, _ = get_dashboard_value(sources, f)
             check_field(f, cg.get(f), dv, THRESHOLDS[f], errors, warnings)
     except Exception as e:
         warnings.append(f"CoinGecko: {e}")
