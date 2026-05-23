@@ -1,0 +1,3 @@
+2026-05-23T00:05:00Z	vix3m	CBOE ^VIX3M	API blocked + WebSearch no specific value returned; written null
+2026-05-23T00:05:00Z	btc_ndx_corr	yfinance ^NDX + BTC-USD	HTTP 403 all yfinance endpoints; correlation null
+2026-05-23T00:05:00Z	canton_network	CoinGecko /coins/canton-network/market_chart	Coin unclear/not in top 200; excluded from basket (n_valid=14)

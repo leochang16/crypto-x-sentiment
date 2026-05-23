@@ -48,7 +48,67 @@
         "skyai"
       ],
       "c3_signals": [],
-      "carry_signal": "\ud83d\udfe2\ud83d\udfe2 STRONG GO \u00b7 \u65b0Top3(ZEC/HYPE/SUI) \u00b7 LAB/B/UB/SIREN/SKYAI\u8dcc\u51faTop10(exit\u8a0a\u865f) \u00b7 \u7121c3\u9023\u7e8c3\u5929 \u2192 \u89c0\u671b\u65b0\u8f2a\u6b21,\u52ff\u8ffd\u9ad8"
+      "carry_signal": "🟢🟢 STRONG GO · 新Top3(ZEC/HYPE/SUI) · LAB/B/UB/SIREN/SKYAI跌出Top10(exit訊號) · 無c3連續3天 → 觀望新輪次,勿追高"
+    },
+    {
+      "date": "2026-05-23",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "method": "WebSearch fallback (CoinGecko API 403)",
+      "prev_date": "2026-05-22",
+      "prev_top3": [
+        "zec",
+        "hype",
+        "sui"
+      ],
+      "prev_top10": [
+        "zec",
+        "hype",
+        "sui",
+        "ondo",
+        "akt",
+        "ton",
+        "virtual",
+        "inj",
+        "near",
+        "link"
+      ],
+      "top3_21d": [
+        "zec",
+        "tao",
+        "hype"
+      ],
+      "top10_21d": [
+        "zec",
+        "tao",
+        "hype",
+        "fet",
+        "ondo",
+        "ton",
+        "sui",
+        "akt",
+        "virtual",
+        "trx"
+      ],
+      "top10_gains_21d": {
+        "zec": 110,
+        "tao": 80,
+        "hype": 47,
+        "fet": 50,
+        "ondo": 45,
+        "ton": 43,
+        "sui": 18,
+        "akt": 30,
+        "virtual": 25,
+        "trx": 12
+      },
+      "exits_today": [
+        "inj",
+        "near",
+        "link"
+      ],
+      "c3_signals": [],
+      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · Top3(ZEC/TAO/HYPE) · {INJ/NEAR/LINK}出場 · 無c3連續3天 → ALT-OFF勿追新倉"
     }
   ]
 }
