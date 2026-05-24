@@ -109,6 +109,33 @@
       ],
       "c3_signals": [],
       "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · Top3(ZEC/TAO/HYPE) · {INJ/NEAR/LINK}出場 · 無c3連續3天 → ALT-OFF勿追新倉"
+    },
+    {
+      "date": "2026-05-24",
+      "scan_done": true,
+      "regime": "GO",
+      "method": "WebSearch fallback (CoinGecko API 403)",
+      "prev_date": "2026-05-23",
+      "prev_top3": ["zec", "tao", "hype"],
+      "prev_top10": ["zec", "tao", "hype", "fet", "ondo", "ton", "sui", "akt", "virtual", "trx"],
+      "top3_21d": ["zec", "hype", "near"],
+      "top10_21d": ["zec", "hype", "near", "tao", "fet", "ondo", "sui", "akt", "trx", "ton"],
+      "top10_gains_21d": {
+        "zec": 112,
+        "hype": 90,
+        "near": 50,
+        "tao": 65,
+        "fet": 45,
+        "ondo": 35,
+        "sui": 30,
+        "akt": 18,
+        "trx": 15,
+        "ton": 12
+      },
+      "exits_today": ["virtual"],
+      "new_entrants": ["near"],
+      "c3_signals": ["zec", "hype"],
+      "carry_signal": "🟢 GO · c3進場訊號: ZEC+HYPE(連3天Top3，今日GO可入場) · NEAR新#3(今日+50% 21D，未達c3) · VIRTUAL跌出Top10(出場訊號) · Arthur Hayes 'holy trinity' ZEC/HYPE/NEAR"
     }
   ]
 }

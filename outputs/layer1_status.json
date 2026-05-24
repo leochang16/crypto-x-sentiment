@@ -292,6 +292,24 @@
       "bonus_b": false,
       "bonus_c": true,
       "notes": "Req1 PASS(delta7=-0.33pp<0) | Req2 FAIL(alt_mom7=-0.63%<0) \u2192 ALT-OFF"
+    },
+    {
+      "date": "2026-05-24",
+      "timestamp_utc": "2026-05-24T00:02:36Z",
+      "btc_d": 58.09,
+      "eth_d": 9.61,
+      "others_d": 11.15,
+      "btc_d_delta7": -0.21,
+      "alt_mom7": 2.10,
+      "breadth": 40,
+      "n_valid_basket": 13,
+      "verdict": "GO",
+      "req1_pass": true,
+      "req2_pass": true,
+      "bonus_a": false,
+      "bonus_b": true,
+      "bonus_c": false,
+      "notes": "Req1 PASS(delta7=-0.21pp<0) | Req2 PASS(alt_mom7=+2.10%>0) | bonus_a FAIL(-0.21>-0.5) | bonus_b PASS(2.10>1.5%) | bonus_c FAIL(others_d=11.15%<12%) \u2192 \ud83d\udfe2 GO"
     }
   ]
 }

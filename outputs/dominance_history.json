@@ -280,5 +280,25 @@
     "breadth": 29.0,
     "n_valid_basket": 14,
     "source": "CoinGecko WebSearch fallback (API 403)"
+  },
+  "2026-05-24": {
+    "date": "2026-05-24",
+    "timestamp_utc": "2026-05-24T00:02:36Z",
+    "total_market_cap_usd": 2599000000000,
+    "btc_price": 76749,
+    "eth_price": 2098,
+    "btc_mc": 1510000000000,
+    "eth_mc": 249800000000,
+    "btc_d": 58.09,
+    "eth_d": 9.61,
+    "others_d": 11.15,
+    "total3_d": 32.30,
+    "btc_d_7d_prev": 58.3,
+    "btc_d_delta7": -0.21,
+    "alt_mom7": 2.10,
+    "breadth": 40,
+    "n_valid_basket": 13,
+    "source": "CoinGecko WebSearch fallback (API 403) — btc_d/eth_d from CMC/CoinGecko web",
+    "alt_basket_notes": "canton-network 404 excluded; TON unavailable; 13/15 valid. ZEC+28.7%, HYPE+25%, SUI+14.1%, XMR+1.5%, BCH+1.5%, TRX+2.06%, SOL-4.76%, BNB-2.48%, DOGE-4%, ADA-6.19%, XRP-7%, LINK-9.45%, XLM-8.01%. BTC 7D=-1.85%"
   }
 }
