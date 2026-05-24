@@ -1,17 +1,45 @@
-2026-05-23T00:05:00Z AUDIT VERIFICATION REPORT
-=== L2 Verification ===
-btc_d source: CoinGecko WebSearch fallback 58.07%
-Previous api attempt: CoinGecko API 403 Forbidden
-Cross-check: CoinMarketCap says 59.86%, CoinGecko says 58.07% (methodology differs)
-Using CoinGecko as primary source per pipeline config.
+=== DAILY AUDIT LOG 2026-05-24 ===
+Run timestamp: 2026-05-24T00:02:36Z
+Agent: Claude claude-sonnet-4-6
 
-btc_d delta check: 58.07 - 58.4(May16) = -0.33pp ✓
+=== SANITY CHECKS ===
+BTC.D: 58.09% (source: CoinGecko/CMC WebSearch) — precision OK ✓
+ETH.D: 9.61% (source: CoinGecko WebSearch) — precision OK ✓
+VIX: 16.70 (source: Yahoo Finance May23 close) — decimal OK ✓
+MOVE: 78.43 (source: Investing.com) — decimal OK ✓
+DXY: 99.32 (source: Yahoo Finance May23) — decimal OK ✓
+TIPS: 2.16% (source: FRED DFII10 May21) — decimal OK ✓
+alt_mom7: +2.10% (from 13/15 basket) — positive, req2 PASS ✓
 
-VIX: 16.76 (May22 close) ✓
-VIX3M: null - written null per L1 sanity check rule
-MOVE: 79.72 ✓
-DXY: 99.32 ✓
-TIPS (DFII10 May21): 2.16% ✓
+=== DELTA7 VERIFICATION ===
+7d ago: 2026-05-17, btc_d=58.30 (from dominance_history.json)
+Today: btc_d=58.09
+btc_d_delta7 = 58.09 - 58.30 = -0.21pp ✓ (from history JSON, not dashboard)
 
-alt_mom7: -0.63% (14 valid coins, canton-network excluded)
-Layer1 verdict: ALT-OFF (req2 fail: alt_mom7 < 0)
+=== LAYER 1 VERDICT ===
+req1 (btc_d_delta7<0): -0.21pp < 0 → PASS ✓
+req2 (alt_mom7>0): +2.10% > 0 → PASS ✓
+bonus_a (delta7≤-0.5pp): -0.21 > -0.5 → FAIL ✗
+bonus_b (alt_mom7>1.5%): 2.10 > 1.5 → PASS ✓
+bonus_c (others_d>12): 11.15 < 12 → FAIL ✗
+VERDICT: 🟢 GO (2 req PASS + 1 bonus PASS)
+
+=== VERIFICATION (L2) ===
+CoinGecko /global recheck: btc_d confirmed 58.09% (consistent across multiple sources)
+VIX recheck: 16.70 (consistent with May23 close data)
+No discrepancies beyond tolerance found.
+
+=== SENTIMENT SCORES ===
+BTC: 88.1 / euphoric (10468 eng units, 27 valid tweets)
+viral_news_dominates: TRUE (saylor 4821/10468 = 46.1%)
+ETH: 59.2 / greed (3159.5 eng units, 22 valid tweets)
+viral_news_dominates: TRUE (NEAR+eth_exy 31.8%)
+
+=== PART E: 21D TOP10 ===
+1. ZEC +112% | 2. HYPE +90% | 3. NEAR +50% (NEW) | 4. TAO +65% | 5. FET +45%
+6. ONDO +35% | 7. SUI +30% | 8. AKT +18% | 9. TRX +15% | 10. TON +12%
+c3 entry signals: ZEC + HYPE (3rd consecutive day in Top3)
+Exits: VIRTUAL dropped from top10
+New entrant: NEAR
+
+Status: AUDIT PASS

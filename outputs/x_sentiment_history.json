@@ -521,5 +521,34 @@
       "notes": "WebSearch fallback (yfinance 403, CoinGecko 403). VIX=16.76(May22), MOVE=79.72, DXY=99.32, TNX=4.55%(May22), NDX=29,357(May21close), TIPS=2.16%(DFII10 May21). VIX3M/corr=null (API blocked)."
     },
     "method_notes": "Apify+Claude pipeline. BTC: Bitcoin Pizza Day dominates(16yr anniversary, 10kBTC=$774M), Saylor SATA/ASST credit market narrative bull, $500K predictions \u00d7 2, ZenKai BTC-next-after-gold bull, bears: step-down pattern+May seasonality+flush warning \u2192 greed(59.6). ETH: whale $38.4M long viral(AshCrypto), staking ATH 32.4%, HYPE/ZEC dominance, $20K ETH concern, underwater longs, new cycle low fear \u2192 greed(61.7). \ud83d\udd34 ALT-OFF: Req1 PASS(delta7=-0.33pp) \u00b7 Req2 FAIL(alt_mom7=-0.63%, most alts down 7d). Powell term ends today(May23)\u2192Warsh hawkish risk. ETF -$70M Wed. MOVE 79.72 moderate."
+  },
+  "2026-05-24": {
+    "date": "2026-05-24",
+    "timestamp_utc": "2026-05-24T00:02:36Z",
+    "btc_sentiment_score": 88.1,
+    "btc_sentiment_band": "euphoric",
+    "eth_sentiment_score": 59.2,
+    "eth_sentiment_band": "greed",
+    "btc_price": 76749,
+    "eth_price": 2098,
+    "fng": null,
+    "n_tweets": 100,
+    "viral_dominates": true,
+    "btc_viral_note": "saylor tweet 46% of total engagement (4821/10468 eng)",
+    "eth_viral_note": "NEARProtocol+eth_exy combined 31.8% of total ETH engagement",
+    "macro": {
+      "vix": 16.70,
+      "vix3m": null,
+      "move": 78.43,
+      "dxy": 99.32,
+      "tnx": 4.55,
+      "ndx": null,
+      "tips_real": 2.16,
+      "btc_ndx_corr_30d": null,
+      "btc_ndx_corr_7d": null,
+      "etf_btc_flow": -105.0,
+      "notes": "WebSearch fallback. VIX=16.70(May23 close), MOVE=78.43(-2.23% 24h), DXY=99.32, TNX=4.55%, TIPS=2.16%(FRED DFII10 May21). VIX3M/NDX/corr=null(API blocked). ETF=-$105M(May22, 6th consecutive outflow day)."
+    },
+    "method_notes": "Apify+Claude pipeline (4 search terms). BTC: Saylor conversation(4821 eng,extreme_bull) dominates + Adam Back $1.5M prediction + Coredao bull + DeFiTracer Iran deal pump + roger73005305 buy signal \u2192 euphoric(88.1). viral_dominates=true. ETH: NEAR Protocol cross-chain(646 eng) + ryanberckmans/satyaki44 extreme_bull(Bankless saga ETH revival) + QuintenFrancois bearish S&P > crypto + fexir1 'ETH holders cooked' \u2192 greed(59.2). Layer1: \ud83d\udfe2 GO(req1 PASS delta7=-0.21pp, req2 PASS alt_mom7=+2.10%, bonus_b PASS >1.5%). c3 entry signals: ZEC+HYPE(3rd consecutive day in Top3). NEAR new #3(+50% 21D surge today). VIRTUAL exits top10. Arthur Hayes 'holy trinity' ZEC/HYPE/NEAR."
   }
 }

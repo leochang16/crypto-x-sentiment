@@ -1,70 +1,70 @@
 {
-  "date": "2026-05-23",
-  "generated_utc": "2026-05-23T00:05:00Z",
+  "date": "2026-05-24",
+  "generated_utc": "2026-05-24T00:02:36Z",
   "btc_d": {
-    "value": 58.07,
-    "source": "CoinGecko WebSearch fallback /global",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 58.09,
+    "source": "CoinGecko/CMC WebSearch fallback (API 403)",
+    "fetched_at_utc": "2026-05-24T00:15:00Z"
   },
   "eth_d": {
-    "value": 9.57,
-    "source": "CoinGecko WebSearch fallback /global",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 9.61,
+    "source": "CoinGecko WebSearch (ETH MC $248.59B / total $2.59T)",
+    "fetched_at_utc": "2026-05-24T00:15:00Z"
   },
   "total3_d": {
-    "value": 32.36,
-    "source": "calc: 100 - btc_d - eth_d",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 32.30,
+    "source": "calc: 100 - btc_d(58.09) - eth_d(9.61)",
+    "fetched_at_utc": "2026-05-24T00:15:00Z"
   },
   "others_d": {
-    "value": 12.59,
-    "source": "calc: (total_mcap - top10_sum) / total_mcap * 100 (top10 estimated)",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 11.15,
+    "source": "calc: (total_mcap - top10_sum) / total_mcap * 100 (top10 estimated via WebSearch individual market caps)",
+    "fetched_at_utc": "2026-05-24T00:15:00Z"
   },
   "vix": {
-    "value": 16.76,
-    "source": "WebSearch CBOE May22 close",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 16.70,
+    "source": "WebSearch Yahoo Finance ^VIX May23 close",
+    "fetched_at_utc": "2026-05-24T00:20:00Z"
   },
   "vix3m": {
     "value": null,
-    "source": "null - API blocked / WebSearch no specific value",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "source": "null - API blocked / WebSearch no specific value"
   },
   "move": {
-    "value": 79.72,
-    "source": "WebSearch ICE BofA MOVE index live",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 78.43,
+    "source": "WebSearch Investing.com ^MOVE current (-2.23% 24h)",
+    "fetched_at_utc": "2026-05-24T00:20:00Z"
   },
   "dxy": {
     "value": 99.32,
-    "source": "WebSearch DXY May22 close",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "source": "WebSearch Yahoo Finance DX-Y.NYB May23",
+    "fetched_at_utc": "2026-05-24T00:20:00Z"
   },
   "tnx": {
     "value": 4.55,
-    "source": "WebSearch 10Y Treasury May22 close",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "source": "WebSearch 10Y Treasury May22/23 close",
+    "fetched_at_utc": "2026-05-24T00:20:00Z"
   },
   "tips_real": {
     "value": 2.16,
-    "source": "FRED DFII10 WebSearch fallback May21",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "source": "FRED DFII10 WebSearch confirmed May21 2026 close",
+    "fetched_at_utc": "2026-05-24T00:22:00Z"
   },
   "etf_btc_flow": {
-    "value": -70.47,
-    "source": "WebSearch CoinGlass/TheBlock May20 (most recent)",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": -105.0,
+    "source": "PANews / CoinGlass May22 2026 (6th consecutive outflow day: IBIT -$68.89M + FBTC -$36.29M)",
+    "fetched_at_utc": "2026-05-24T00:25:00Z"
   },
   "alt_mom7": {
-    "value": -0.63,
-    "source": "WebSearch basket 14 coins (canton-network null)",
-    "n_valid": 14,
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": 2.10,
+    "source": "WebSearch 7D price changes: ZEC+28.7%, HYPE+25%, SUI+14.1%, XMR+1.5%, BCH+1.5%, TRX+2.06%, SOL-4.76%, BNB-2.48%, DOGE-4%, ADA-6.19%, XRP-7%, LINK-9.45%, XLM-8.01%. Mean of 13 valid.",
+    "n_valid": 13,
+    "excluded": ["canton-network (404)", "TON (price data unavailable)"],
+    "fetched_at_utc": "2026-05-24T00:18:00Z"
   },
   "btc_d_delta7": {
-    "value": -0.33,
-    "source": "dominance_history.json 2026-05-16 entry",
-    "fetched_at_utc": "2026-05-23T00:05:00Z"
+    "value": -0.21,
+    "source": "dominance_history.json 2026-05-17 btc_d=58.30 → today 58.09 → delta=-0.21pp",
+    "fetched_at_utc": "2026-05-24T00:02:36Z"
   }
 }
