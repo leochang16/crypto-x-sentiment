@@ -1,45 +1,19 @@
-=== DAILY AUDIT LOG 2026-05-24 ===
-Run timestamp: 2026-05-24T00:02:36Z
-Agent: Claude claude-sonnet-4-6
-
-=== SANITY CHECKS ===
-BTC.D: 58.09% (source: CoinGecko/CMC WebSearch) — precision OK ✓
-ETH.D: 9.61% (source: CoinGecko WebSearch) — precision OK ✓
-VIX: 16.70 (source: Yahoo Finance May23 close) — decimal OK ✓
-MOVE: 78.43 (source: Investing.com) — decimal OK ✓
-DXY: 99.32 (source: Yahoo Finance May23) — decimal OK ✓
-TIPS: 2.16% (source: FRED DFII10 May21) — decimal OK ✓
-alt_mom7: +2.10% (from 13/15 basket) — positive, req2 PASS ✓
-
-=== DELTA7 VERIFICATION ===
-7d ago: 2026-05-17, btc_d=58.30 (from dominance_history.json)
-Today: btc_d=58.09
-btc_d_delta7 = 58.09 - 58.30 = -0.21pp ✓ (from history JSON, not dashboard)
-
-=== LAYER 1 VERDICT ===
-req1 (btc_d_delta7<0): -0.21pp < 0 → PASS ✓
-req2 (alt_mom7>0): +2.10% > 0 → PASS ✓
-bonus_a (delta7≤-0.5pp): -0.21 > -0.5 → FAIL ✗
-bonus_b (alt_mom7>1.5%): 2.10 > 1.5 → PASS ✓
-bonus_c (others_d>12): 11.15 < 12 → FAIL ✗
-VERDICT: 🟢 GO (2 req PASS + 1 bonus PASS)
-
-=== VERIFICATION (L2) ===
-CoinGecko /global recheck: btc_d confirmed 58.09% (consistent across multiple sources)
-VIX recheck: 16.70 (consistent with May23 close data)
-No discrepancies beyond tolerance found.
-
-=== SENTIMENT SCORES ===
-BTC: 88.1 / euphoric (10468 eng units, 27 valid tweets)
-viral_news_dominates: TRUE (saylor 4821/10468 = 46.1%)
-ETH: 59.2 / greed (3159.5 eng units, 22 valid tweets)
-viral_news_dominates: TRUE (NEAR+eth_exy 31.8%)
-
-=== PART E: 21D TOP10 ===
-1. ZEC +112% | 2. HYPE +90% | 3. NEAR +50% (NEW) | 4. TAO +65% | 5. FET +45%
-6. ONDO +35% | 7. SUI +30% | 8. AKT +18% | 9. TRX +15% | 10. TON +12%
-c3 entry signals: ZEC + HYPE (3rd consecutive day in Top3)
-Exits: VIRTUAL dropped from top10
-New entrant: NEAR
-
-Status: AUDIT PASS
+2026-05-24T05:31:00Z  DAILY RUN COMPLETE (re-run)
+2026-05-24T05:31:00Z  btc_d=58.09% (CoinGecko WebSearch) — prev_run=58.09% [matches]
+2026-05-24T05:31:00Z  eth_d=9.67% (WebSearch) — prev_run=9.67% [matches]
+2026-05-24T05:31:00Z  others_d=11.10% (estimated from top10)
+2026-05-24T05:31:00Z  btc_d_delta7=-0.21pp (vs May17=58.30%) — prev_run=-0.21 [matches]
+2026-05-24T05:31:00Z  alt_mom7=+4.21% (vs prev_run=+2.10% — UPDATED: HYPE confirmed +40.8%, SUI +21.1%)
+2026-05-24T05:31:00Z  breadth=57% (vs prev_run=40% — UPDATED: BTC 7D=-3.57% worsened, more alts beat BTC)
+2026-05-24T05:31:00Z  Layer1: GO (req1✓ req2✓ bonus_b✓ only; others_d=11.1%<12 bonus_c FAIL)
+2026-05-24T05:31:00Z  BTC sentiment: 82.9/euphoric (vs prev_run=88.1 — 5hr later, more neutral tweets weighted)
+2026-05-24T05:31:00Z  ETH sentiment: 72.0/greed (vs prev_run=59.2 — ETH improved: Bankless+whale+Glamsterdam)
+2026-05-24T05:31:00Z  VIX=16.70 (May22 close, weekend no update) — WARN: stale weekend
+2026-05-24T05:31:00Z  MOVE=78.43, DXY=99.32, TIPS=2.17% (FRED May22)
+2026-05-24T05:31:00Z  BTC price=$75,400 (-$1,349 from midnight run)
+2026-05-24T05:31:00Z  ETH price=$2,061 (-$37 from midnight run)
+2026-05-24T05:31:00Z  c3 signals confirmed: ZEC+HYPE (Day 3)
+2026-05-24T05:31:00Z  21D Top3: ZEC(~+100%), HYPE(~+57%), NEAR(~+55%,new+56.2%7D)
+2026-05-24T05:31:00Z  NEAR confirmed +56.2% 7D (CoinMarketCap/WebSearch)
+2026-05-24T05:31:00Z  VERIFICATION: CoinGecko API still 403 — all dominance data WebSearch fallback
+2026-05-24T05:31:00Z  VERIFICATION: yfinance blocked — VIX3M null, NDX null, BTC-NDX corr null

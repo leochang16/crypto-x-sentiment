@@ -1,9 +1,5 @@
-2026-05-24T00:02:36Z	btc_d	CoinGecko /global API	HTTP 403 → WebSearch fallback
-2026-05-24T00:02:36Z	eth_d	CoinGecko /global API	HTTP 403 → WebSearch fallback
-2026-05-24T00:02:36Z	others_d	CoinGecko /coins/markets	HTTP 403 → estimated from individual coin market caps
-2026-05-24T00:02:36Z	alt_mom7_canton-network	CoinGecko /coins/canton-network	404 → excluded from basket (n_valid=13)
-2026-05-24T00:02:36Z	alt_mom7_ton	WebSearch	TON 7D price data unavailable → excluded from basket (n_valid=13)
-2026-05-24T00:02:36Z	vix3m	yfinance ^VIX3M	API blocked → null
-2026-05-24T00:02:36Z	btc_ndx_corr	yfinance NDX/BTC	API blocked → null
-2026-05-24T00:02:36Z	tips_real	FRED DFII10	WebSearch confirmed May21 close (2.16%), not live API
-2026-05-24T00:02:36Z	etf_btc_flow	CoinGlass/TheBlock	May22 data used (-$105M), May23/24 not yet available (weekend)
+2026-05-24T05:31:00Z	vix3m	CBOE/yfinance	API blocked — null
+2026-05-24T05:31:00Z	btc_ndx_corr	yfinance	API blocked — null
+2026-05-24T05:31:00Z	ndx	yfinance	API blocked — null
+2026-05-24T05:31:00Z	others_d	coingecko	API 403 — estimated from top10 approximate
+2026-05-24T05:31:00Z	alt_mom7	coingecko	API 403 — HYPE/SUI confirmed via WebSearch; rest estimated
