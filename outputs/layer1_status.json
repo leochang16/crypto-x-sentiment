@@ -309,6 +309,23 @@
       "others_d": 11.1,
       "n_valid": 14,
       "source": "WebSearch fallback (CoinGecko API 403)"
+    },
+    {
+      "date": "2026-05-25",
+      "timestamp_utc": "2026-05-25T00:35:00Z",
+      "verdict": "GO",
+      "req1_pass": true,
+      "req2_pass": true,
+      "bonus_a_pass": false,
+      "bonus_b_pass": true,
+      "bonus_c_pass": false,
+      "btc_d": 58.11,
+      "btc_d_delta7": -0.09,
+      "alt_mom7": 3.88,
+      "breadth": 57,
+      "others_d": 11.0,
+      "n_valid": 14,
+      "source": "WebSearch fallback (CoinGecko API 403)"
     }
   ]
 }

@@ -1,19 +1,9 @@
-2026-05-24T05:31:00Z  DAILY RUN COMPLETE (re-run)
-2026-05-24T05:31:00Z  btc_d=58.09% (CoinGecko WebSearch) — prev_run=58.09% [matches]
-2026-05-24T05:31:00Z  eth_d=9.67% (WebSearch) — prev_run=9.67% [matches]
-2026-05-24T05:31:00Z  others_d=11.10% (estimated from top10)
-2026-05-24T05:31:00Z  btc_d_delta7=-0.21pp (vs May17=58.30%) — prev_run=-0.21 [matches]
-2026-05-24T05:31:00Z  alt_mom7=+4.21% (vs prev_run=+2.10% — UPDATED: HYPE confirmed +40.8%, SUI +21.1%)
-2026-05-24T05:31:00Z  breadth=57% (vs prev_run=40% — UPDATED: BTC 7D=-3.57% worsened, more alts beat BTC)
-2026-05-24T05:31:00Z  Layer1: GO (req1✓ req2✓ bonus_b✓ only; others_d=11.1%<12 bonus_c FAIL)
-2026-05-24T05:31:00Z  BTC sentiment: 82.9/euphoric (vs prev_run=88.1 — 5hr later, more neutral tweets weighted)
-2026-05-24T05:31:00Z  ETH sentiment: 72.0/greed (vs prev_run=59.2 — ETH improved: Bankless+whale+Glamsterdam)
-2026-05-24T05:31:00Z  VIX=16.70 (May22 close, weekend no update) — WARN: stale weekend
-2026-05-24T05:31:00Z  MOVE=78.43, DXY=99.32, TIPS=2.17% (FRED May22)
-2026-05-24T05:31:00Z  BTC price=$75,400 (-$1,349 from midnight run)
-2026-05-24T05:31:00Z  ETH price=$2,061 (-$37 from midnight run)
-2026-05-24T05:31:00Z  c3 signals confirmed: ZEC+HYPE (Day 3)
-2026-05-24T05:31:00Z  21D Top3: ZEC(~+100%), HYPE(~+57%), NEAR(~+55%,new+56.2%7D)
-2026-05-24T05:31:00Z  NEAR confirmed +56.2% 7D (CoinMarketCap/WebSearch)
-2026-05-24T05:31:00Z  VERIFICATION: CoinGecko API still 403 — all dominance data WebSearch fallback
-2026-05-24T05:31:00Z  VERIFICATION: yfinance blocked — VIX3M null, NDX null, BTC-NDX corr null
+=== AUDIT 2026-05-25 ===
+btc_d CHECK: WebSearch=58.11% | prev_day=58.09% | delta=+0.02pp (within tolerance)
+vix CHECK: 16.70 (May22 close) | no update Memorial Day | source=Yahoo Finance
+VERIFICATION NOTE: US Memorial Day - all market data from May 22-24; no new intraday data available.
+BTC price: ~$76,700 from Coinbase/Yahoo/CoinDesk sources (WebSearch)
+ETH price: ~$2,093 from tweet data and PulsePredictor
+alt_mom7: +3.88% (14 valid coins, canton-network excluded)
+breadth: 57% (8/14 alts beat BTC 7D of -0.90%)
+Layer1: GO (req1 PASS Δ=-0.09pp, req2 PASS +3.88%, bonus_b PASS, bonus_a FAIL, bonus_c FAIL)

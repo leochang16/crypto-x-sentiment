@@ -568,5 +568,33 @@
         "bucket_score": 25
       }
     ]
+  },
+  "2026-05-25": {
+    "date": "2026-05-25",
+    "timestamp_utc": "2026-05-25T00:35:00Z",
+    "btc_sentiment_score": 71.7,
+    "btc_sentiment_band": "greed",
+    "eth_sentiment_score": 46.0,
+    "eth_sentiment_band": "neutral",
+    "btc_price": 76700,
+    "eth_price": 2093,
+    "n_tweets": 32,
+    "viral_dominates_btc": true,
+    "viral_dominates_eth": true,
+    "viral_pct_btc": 73.6,
+    "macro": {
+      "vix": 16.7,
+      "vix3m": null,
+      "move": 79.72,
+      "dxy": 99.01,
+      "tnx": 4.56,
+      "ndx": null,
+      "tips_real": 2.17,
+      "btc_ndx_corr_30d": null,
+      "btc_ndx_corr_7d": null,
+      "etf_btc_flow": -70.47,
+      "notes": "US Memorial Day (markets closed). VIX=16.70(May22), MOVE=79.72(last avail), DXY=99.01(May24 close), TNX=4.56%(May22), NDX=null, TIPS=2.17%(FRED DFII10 May22). Saylor 'bought bonds not BTC, BitVac charging' - massive viral (73.6% eng)."
+    },
+    "method_notes": "Apify+Claude pipeline (79 raw → 32 valid BTC/ETH). BTC: Saylor 'bought bonds/BitVac charging'(eng=15352,73.6% viral)=bull(75)+TedPillows demand 5-month low(747,bear)+Bitcoin Magazine Memorial Day(1843,bull)+altseason 40% loading(298,bull) → greed(71.7). ETH: HTX 1ETH vs 27SOL poll dominant(578,neutral)+TylerG ETH shorts(124,bear)+Gainzy 'ETH embarrassment'(57,extreme_bear)+Vitalik 90% ETH(28,bull)+EF new hire(88,bull) → neutral(46.0). 🟢 GO: req1 PASS(btc_d_delta7=-0.09pp<0) · req2 PASS(alt_mom7=+3.88%) · bonus_b PASS(>1.5%) · bonus_a FAIL(-0.09pp>-0.5pp) · bonus_c FAIL(11.0%<12%). Memorial Day US markets closed."
   }
 }
