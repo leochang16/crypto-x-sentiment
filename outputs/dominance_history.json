@@ -300,5 +300,22 @@
     "n_valid_basket": 14,
     "source": "CoinGecko WebSearch fallback (API 403) — btc_d/eth_d from CoinGecko web",
     "alt_basket_notes": "ZEC+22%, HYPE+40.8%(confirmed CMC), SUI+21.1%(confirmed), XMR+10%, XRP+3%, BCH+3%, TRX+2%, TON+3%, BNB-4%, SOL-6%, ADA-7%, XLM-9%, DOGE-9%, LINK-11%. BTC 7D=-3.57%. canton-network excluded."
+  },
+  "2026-05-25": {
+    "date": "2026-05-25",
+    "timestamp_utc": "2026-05-25T00:35:00Z",
+    "total_market_cap_usd": 2640000000000,
+    "btc_price": 76700,
+    "eth_price": 2093,
+    "btc_d": 58.11,
+    "eth_d": 9.65,
+    "others_d": 11.0,
+    "total3_d": 32.24,
+    "btc_d_7day_prev": 58.2,
+    "btc_d_delta7": -0.09,
+    "alt_mom7": 3.88,
+    "breadth": 57,
+    "n_valid_basket": 14,
+    "source": "CoinGecko WebSearch fallback (API 403) · US Memorial Day (markets closed)"
   }
 }
