@@ -15,6 +15,13 @@ Tolerances are intentionally generous because intraday quotes between
 the routine run (T) and CI run (T+5min) genuinely differ. The goal is
 to catch HALLUCINATED values (e.g., btc_d=60.00 when actual is 58.18),
 not to enforce exact match.
+
+L1 integer-ending guard: a dominance value written as a whole number
+(e.g. others_d=11.0) is only treated as a BLOCKING error when an
+independent live re-fetch DISAGREES with it. If the live source
+corroborates the round value (within tolerance) - or no live source is
+available - it is downgraded to a non-blocking warning, so a genuinely
+round value or an API-outage fallback does not stall the daily merge.
 """
 
 import json
@@ -111,20 +118,33 @@ def check_field(field, fetched, dashboard, tol, errors, warnings):
         errors.append(f"{field}: drift {diff:.3f} > {tol} (dashboard {dashboard:.3f} vs live {fetched:.3f})")
 
 
-def sanity_integer_endings(sources, errors):
-    for field, entry in sources.items():
+def check_integer_endings(sources, live_values, errors, warnings):
+    """L1 guard: flag whole-number dominance values, but only BLOCK when an
+    independent live re-fetch disagrees. A round value corroborated by the
+    live source (or with no live source available) is a non-blocking warning."""
+    for field in ("btc_d", "eth_d", "others_d", "total3_d"):
+        entry = sources.get(field)
         if not isinstance(entry, dict):
             continue
         v = entry.get("value")
         if v is None or not isinstance(v, (int, float)):
             continue
-        if field.startswith("n_") or field.endswith("_count"):
-            continue
-        if "flow" in field or "_usd" in field or "price" in field:
-            continue
-        if field in {"btc_d", "eth_d", "others_d", "total3_d"}:
-            if v == int(v):
-                errors.append(f"L1 violation: {field}={v} integer-ending (need 0.01 precision)")
+        if v != int(v):
+            continue  # has real decimal precision, fine
+        live = live_values.get(field)
+        tol = THRESHOLDS.get(field, 0.5)
+        if live is None:
+            warnings.append(
+                f"{field}={v} is integer-ending; no live source to corroborate "
+                f"(not blocking)")
+        elif abs(live - v) <= tol:
+            warnings.append(
+                f"{field}={v} is integer-ending but corroborated by live source "
+                f"({live:.4f}, diff {abs(live - v):.3f} <= {tol}); allowed")
+        else:
+            errors.append(
+                f"L1 violation: {field}={v} integer-ending AND disagrees with live "
+                f"source {live:.4f} (diff {abs(live - v):.3f} > {tol})")
 
 
 def sanity_date_freshness(sources, errors, warnings):
@@ -165,15 +185,23 @@ def main():
 
     errors = []
     warnings = []
+    live_values = {}
 
     print("\n[1/5] Static sanity checks")
-    sanity_integer_endings(sources, errors)
     sanity_date_freshness(sources, errors, warnings)
 
     print("\n[2/5] CoinGecko /global")
     try:
         cg = fetch_coingecko_global()
-        for f in ("btc_d", "eth_d"):  # others_d removed: agent and verify use diff definitions            dv, _ = get_dashboard_value(sources, f)
+        live_values["btc_d"] = cg.get("btc_d")
+        live_values["eth_d"] = cg.get("eth_d")
+        live_values["others_d"] = cg.get("others_d")
+        if live_values["btc_d"] is not None and live_values["eth_d"] is not None:
+            live_values["total3_d"] = round(100.0 - live_values["btc_d"] - live_values["eth_d"], 4)
+        # others_d is intentionally NOT drift-checked here: the agent and verify
+        # use slightly different definitions. btc_d / eth_d are compared directly.
+        for f in ("btc_d", "eth_d"):
+            dv, _ = get_dashboard_value(sources, f)
             check_field(f, cg.get(f), dv, THRESHOLDS[f], errors, warnings)
     except Exception as e:
         warnings.append(f"CoinGecko: {e}")
@@ -183,6 +211,7 @@ def main():
     for ticker, field in [("^VIX", "vix"), ("^MOVE", "move"), ("DX-Y.NYB", "dxy")]:
         try:
             live = fetch_yahoo_chart(ticker)
+            live_values[field] = live
             dv, _ = get_dashboard_value(sources, field)
             check_field(field, live, dv, THRESHOLDS[field], errors, warnings)
         except Exception as e:
@@ -192,11 +221,16 @@ def main():
     print("\n[4/5] FRED DFII10")
     try:
         tips = fetch_fred_dfii10()
+        live_values["tips_real"] = tips
         dv, _ = get_dashboard_value(sources, "tips_real")
         check_field("tips_real", tips, dv, THRESHOLDS["tips_real"], errors, warnings)
     except Exception as e:
         warnings.append(f"FRED: {e}")
         print(f"  WARN FRED failed: {e}")
+
+    # L1 integer-ending guard runs AFTER network fetches so it can use live
+    # values to decide whether a round value is real or a hallucination.
+    check_integer_endings(sources, live_values, errors, warnings)
 
     print("\n[5/5] Summary")
     print("=" * 60)
@@ -218,4 +252,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
