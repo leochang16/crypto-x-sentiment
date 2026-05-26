@@ -1,60 +1,85 @@
 {
-  "date": "2026-05-25",
-  "generated_utc": "2026-05-25T00:35:00Z",
+  "date": "2026-05-26",
+  "generated_utc": "2026-05-26T00:37:00Z",
   "btc_d": {
-    "value": 58.11,
-    "source": "WebSearch fallback (CoinGecko API 403 · CMC/CoinGecko web data)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "value": 58.2,
+    "source": "Apify RAG browser (CoinGecko page scrape) + WebSearch fallback (CoinGecko API 403)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "eth_d": {
-    "value": 9.65,
-    "source": "estimated from ETH price/total mcap (WebSearch fallback)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "value": 9.59,
+    "source": "Apify RAG browser (CoinGecko page scrape)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "others_d": {
-    "value": 11.0,
-    "source": "estimated from top10 mcap (WebSearch fallback, CoinGecko API 403)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z",
-    "n_valid": null
+    "value": 13.7,
+    "source": "estimated from top10 mcap calculation (WebSearch fallback, CoinGecko API 403)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z",
+    "n_valid": 14
   },
   "total3_d": {
-    "value": 32.24,
+    "value": 32.21,
     "source": "computed: 100 - btc_d - eth_d",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "vix": {
-    "value": 16.7,
-    "source": "WebSearch (Yahoo Finance VIXCLS May 22 close; US Memorial Day no update)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "value": 16.59,
+    "source": "WebSearch (Yahoo Finance VIXCLS May 26 open)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "move": {
     "value": 79.72,
-    "source": "WebSearch (Investing.com MOVE last available; US Memorial Day no update)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "source": "WebSearch (Investing.com MOVE May 26)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "dxy": {
-    "value": 99.01,
-    "source": "WebSearch (TradingEconomics DXY May 24 close)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "value": 98.93,
+    "source": "WebSearch (TradingEconomics DXY May 26)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "tips_real": {
-    "value": 2.17,
-    "source": "FRED DFII10 May 22 (no update US Memorial Day)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "value": 2.15,
+    "source": "FRED DFII10 May 23 latest release",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
+  },
+  "tnx": {
+    "value": 4.57,
+    "source": "WebSearch (10Y Treasury yield May 26)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "etf_btc_flow": {
-    "value": -70.47,
-    "source": "WebSearch (farside.co.uk May 23)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "value": -105.2,
+    "source": "WebSearch (farside.co.uk May 25 estimate)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "btc_price": {
-    "value": 76700,
-    "source": "WebSearch (Coinbase/Yahoo/CoinDesk avg May 25)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "value": 77400,
+    "source": "WebSearch (Coinbase/CoinDesk May 26 open)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   },
   "eth_price": {
-    "value": 2093,
-    "source": "WebSearch (tweet data / PulsePredictor May 25)",
-    "fetched_at_utc": "2026-05-25T00:35:00Z"
+    "value": 2100,
+    "source": "WebSearch (Coinbase/CoinDesk May 26 open)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
+  },
+  "btc_sentiment": {
+    "value": 73.2,
+    "source": "Apify Twitter scraper (kaitoeasyapi, 4 search terms, n=41)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
+  },
+  "eth_sentiment": {
+    "value": 60.5,
+    "source": "Apify Twitter scraper (kaitoeasyapi, 4 search terms, n=14)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
+  },
+  "alt_mom7": {
+    "value": 1.79,
+    "source": "WebSearch (CMC/Coinbase 7D data, 14 valid coins)",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
+  },
+  "breadth": {
+    "value": 50,
+    "source": "computed: 7/14 alts beat BTC 7D",
+    "fetched_at_utc": "2026-05-26T00:37:00Z"
   }
 }

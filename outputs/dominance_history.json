@@ -317,5 +317,21 @@
     "breadth": 57,
     "n_valid_basket": 14,
     "source": "CoinGecko WebSearch fallback (API 403) · US Memorial Day (markets closed)"
+  },
+  "2026-05-26": {
+    "date": "2026-05-26",
+    "timestamp_utc": "2026-05-26T00:37:00Z",
+    "total_market_cap_usd": 2652000000000,
+    "btc_price": 77400,
+    "eth_price": 2100,
+    "btc_d": 58.2,
+    "eth_d": 9.59,
+    "others_d": 13.7,
+    "total3_d": 32.21,
+    "btc_d_delta7": 0.0,
+    "alt_mom7": 1.79,
+    "breadth": 50,
+    "n_valid_alt_basket": 14,
+    "source": "CoinGecko header (API 403) + WebSearch fallback"
   }
 }
