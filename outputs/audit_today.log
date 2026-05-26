@@ -1,9 +1,23 @@
-=== AUDIT 2026-05-25 ===
-btc_d CHECK: WebSearch=58.11% | prev_day=58.09% | delta=+0.02pp (within tolerance)
-vix CHECK: 16.70 (May22 close) | no update Memorial Day | source=Yahoo Finance
-VERIFICATION NOTE: US Memorial Day - all market data from May 22-24; no new intraday data available.
-BTC price: ~$76,700 from Coinbase/Yahoo/CoinDesk sources (WebSearch)
-ETH price: ~$2,093 from tweet data and PulsePredictor
-alt_mom7: +3.88% (14 valid coins, canton-network excluded)
-breadth: 57% (8/14 alts beat BTC 7D of -0.90%)
-Layer1: GO (req1 PASS Δ=-0.09pp, req2 PASS +3.88%, bonus_b PASS, bonus_a FAIL, bonus_c FAIL)
+=== AUDIT 2026-05-26 ===
+btc_d CHECK: Apify RAG browser (CoinGecko page scrape)=58.20% | prev_day=58.11% | delta=+0.09pp (within tolerance)
+eth_d CHECK: Apify RAG browser=9.59% | prev_day=9.65% | delta=-0.06pp (within tolerance)
+vix CHECK: 16.59 (May 26 market open) | source=WebSearch Yahoo Finance
+move CHECK: 79.72 | source=WebSearch Investing.com
+dxy CHECK: 98.93 | source=WebSearch TradingEconomics
+tips_real CHECK: 2.15% FRED DFII10 May 23 latest | L4 rule: FRED DFII10 only (^TNX forbidden)
+tnx CHECK: 4.57% 10Y Treasury | source=WebSearch
+etf_btc_flow CHECK: -$105.2M (May 25 estimate) | source=farside.co.uk WebSearch
+BTC price: $77,400 | source=Coinbase/CoinDesk WebSearch
+ETH price: $2,100 | source=Coinbase/CoinDesk WebSearch
+alt_mom7: +1.79% (14 valid coins, canton-network excluded)
+breadth: 50% (7/14 alts beat BTC 7D of +0.91%)
+btc_d_delta7: 0.00pp (today=58.20% vs May19=58.20% → EQUAL → req1 FAILS strictly)
+Layer1 verdict: ALT-OFF (req1 FAIL btc_d_delta7=0.00pp, req2 PASS alt_mom7=+1.79%, bonus_b PASS breadth=50%, bonus_c PASS others_d=13.70%)
+BTC sentiment: 73.2 (greed) | viral: Saylor "Bitcoin Summer" 67.1% eng share
+ETH sentiment: 60.5 (greed) | n=14 tweets
+NEAR c3 TRIGGERED: Day3 in Top3 (~130% 21D, $2.74 +79% 7D)
+ZEC continuing c3: ~115% 21D
+HYPE continuing c3: ~65% 21D
+sources_today.json: WRITTEN
+top3_state.json: WRITTEN (NEAR c3 appended)
+audit_warnings_today.log: WRITTEN

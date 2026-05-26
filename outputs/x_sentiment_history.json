@@ -596,5 +596,34 @@
       "notes": "US Memorial Day (markets closed). VIX=16.70(May22), MOVE=79.72(last avail), DXY=99.01(May24 close), TNX=4.56%(May22), NDX=null, TIPS=2.17%(FRED DFII10 May22). Saylor 'bought bonds not BTC, BitVac charging' - massive viral (73.6% eng)."
     },
     "method_notes": "Apify+Claude pipeline (79 raw → 32 valid BTC/ETH). BTC: Saylor 'bought bonds/BitVac charging'(eng=15352,73.6% viral)=bull(75)+TedPillows demand 5-month low(747,bear)+Bitcoin Magazine Memorial Day(1843,bull)+altseason 40% loading(298,bull) → greed(71.7). ETH: HTX 1ETH vs 27SOL poll dominant(578,neutral)+TylerG ETH shorts(124,bear)+Gainzy 'ETH embarrassment'(57,extreme_bear)+Vitalik 90% ETH(28,bull)+EF new hire(88,bull) → neutral(46.0). 🟢 GO: req1 PASS(btc_d_delta7=-0.09pp<0) · req2 PASS(alt_mom7=+3.88%) · bonus_b PASS(>1.5%) · bonus_a FAIL(-0.09pp>-0.5pp) · bonus_c FAIL(11.0%<12%). Memorial Day US markets closed."
+  },
+  "2026-05-26": {
+    "date": "2026-05-26",
+    "timestamp_utc": "2026-05-26T00:37:00Z",
+    "btc_sentiment_score": 73.2,
+    "btc_sentiment_band": "greed",
+    "eth_sentiment_score": 60.5,
+    "eth_sentiment_band": "greed",
+    "btc_price": 77400,
+    "eth_price": 2100,
+    "n_tweets": 41,
+    "viral_dominates_btc": true,
+    "viral_pct_btc": 67.1,
+    "viral_dominates_eth": false,
+    "viral_pct_eth": 21.6,
+    "macro": {
+      "vix": 16.59,
+      "vix3m": null,
+      "move": 79.72,
+      "dxy": 98.93,
+      "tnx": 4.57,
+      "ndx": null,
+      "tips_real": 2.15,
+      "btc_ndx_corr_30d": null,
+      "btc_ndx_corr_7d": null,
+      "etf_btc_flow": -105.2,
+      "notes": "Memorial Day re-open. VIX=16.59(live), MOVE=79.72(May22), DXY=98.93(live), TNX=4.57%(May22), TIPS=2.15%(FRED DFII10 May22). ETF $1.26B outflows May18-22, daily May22=-$105.2M. PCE due May 29."
+    },
+    "method_notes": "Apify+Claude (115 raw→41 valid). BTC: saylor 'Bitcoin Summer'(eng=21135,67.1%viral)+Strive$80M(948,EB)+US Reserve push(1084,B)+BitcoinArchive business cycle(1366,B)+TedPillows 2026red(384,bear)+BCH-19%/SOL-6.6% → greed(73.2). ETH: coingecko throwback XRP>ETH(1299,neutral)+blockaid$3M exploit(699,bear)+Aave$85M(167,bull)+ETH$2500(339,EB)+GreenMorning(1138,bull) → greed(60.5). 🔴 ALT-OFF: btc_d_delta7=0.00pp NOT<0. NEAR c3 TRIGGERED(Day3,~+130% 21D)."
   }
 }

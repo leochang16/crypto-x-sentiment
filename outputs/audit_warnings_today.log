@@ -1,6 +1,12 @@
-2026-05-25T00:35:00Z	btc_d	coingecko_api	HTTP 403 Forbidden — using WebSearch fallback
-2026-05-25T00:35:00Z	eth_d	coingecko_api	HTTP 403 Forbidden — estimated from price/mcap
-2026-05-25T00:35:00Z	others_d	coingecko_api	HTTP 403 Forbidden — estimated from yesterday's top10 structure
-2026-05-25T00:35:00Z	vix	yfinance	US Memorial Day — no market data; using May 22 close
-2026-05-25T00:35:00Z	ndx	yfinance	US Memorial Day — market closed
-2026-05-25T00:35:00Z	btc_ndx_corr	yfinance	HTTP 403/market closed — null
+2026-05-26T00:37:00Z	btc_d	coingecko_api	HTTP 403 Forbidden — using Apify RAG browser + WebSearch fallback
+2026-05-26T00:37:00Z	eth_d	coingecko_api	HTTP 403 Forbidden — using Apify RAG browser fallback
+2026-05-26T00:37:00Z	others_d	coingecko_api	HTTP 403 Forbidden — estimated from top10 mcap via WebSearch
+2026-05-26T00:37:00Z	alt_basket_7d	lunarcrush_api	Subscription required — using WebSearch CMC/Coinbase fallback
+2026-05-26T00:37:00Z	vix	yfinance	ImportError: yfinance not available — using WebSearch fallback
+2026-05-26T00:37:00Z	dxy	yfinance	ImportError: yfinance not available — using WebSearch fallback
+2026-05-26T00:37:00Z	tnx	yfinance	ImportError: yfinance not available — using WebSearch fallback
+2026-05-26T00:37:00Z	ndx	yfinance	ImportError: yfinance not available — value=null
+2026-05-26T00:37:00Z	btc_ndx_corr_30d	yfinance	ImportError: yfinance not available — value=null
+2026-05-26T00:37:00Z	btc_ndx_corr_7d	yfinance	ImportError: yfinance not available — value=null
+2026-05-26T00:37:00Z	vix3m	yfinance	ImportError: yfinance not available — value=null
+WARNING: 3+ fields null (ndx, btc_ndx_corr_30d, btc_ndx_corr_7d, vix3m) — red alert banner triggered in dashboard

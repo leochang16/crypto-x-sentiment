@@ -237,6 +237,77 @@
       ],
       "near_day2": true,
       "carry_signal": "🟢 GO · c3維持: ZEC+HYPE連4天Top3 · NEAR第2天(明日c3) · 無新退出 · alt_mom7=+3.88%(breadth 57%) · Saylor BitVac蓄力中"
+    },
+    {
+      "date": "2026-05-26",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "method": "WebSearch fallback (CoinGecko API 403)",
+      "prev_date": "2026-05-25",
+      "prev_top3": [
+        "zec",
+        "hype",
+        "near"
+      ],
+      "prev_top10": [
+        "zec",
+        "hype",
+        "near",
+        "tao",
+        "sui",
+        "ondo",
+        "fet",
+        "trx",
+        "ton",
+        "akt"
+      ],
+      "top3_21d": [
+        "near",
+        "zec",
+        "hype"
+      ],
+      "top10_21d": [
+        "near",
+        "zec",
+        "hype",
+        "tao",
+        "sui",
+        "ondo",
+        "fet",
+        "trx",
+        "ton",
+        "akt"
+      ],
+      "top10_gains_21d": {
+        "near": 130,
+        "zec": 115,
+        "hype": 65,
+        "tao": 40,
+        "sui": 27,
+        "ondo": 25,
+        "fet": 22,
+        "trx": 14,
+        "ton": 11,
+        "akt": 9
+      },
+      "exits_today": [],
+      "new_entrants": [],
+      "c3_signals": [
+        "near"
+      ],
+      "c3_new_today": [
+        "near"
+      ],
+      "c3_continuing": [
+        "zec",
+        "hype"
+      ],
+      "near_c3_triggered": true,
+      "near_day3": true,
+      "near_7d_confirmed": 79.0,
+      "zec_7d_confirmed": 20.5,
+      "hype_7d_confirmed": 46.0,
+      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · NEAR c3 NEW(連3天Top3+~130% 21D) · ZEC/HYPE c3繼續 · btc_d_delta7=0.00pp FAIL → ALT-OFF勿追新倉"
     }
   ]
 }
