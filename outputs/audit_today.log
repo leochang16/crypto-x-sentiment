@@ -1,23 +1,20 @@
-=== AUDIT 2026-05-26 ===
-btc_d CHECK: Apify RAG browser (CoinGecko page scrape)=58.20% | prev_day=58.11% | delta=+0.09pp (within tolerance)
-eth_d CHECK: Apify RAG browser=9.59% | prev_day=9.65% | delta=-0.06pp (within tolerance)
-vix CHECK: 16.59 (May 26 market open) | source=WebSearch Yahoo Finance
-move CHECK: 79.72 | source=WebSearch Investing.com
-dxy CHECK: 98.93 | source=WebSearch TradingEconomics
-tips_real CHECK: 2.15% FRED DFII10 May 23 latest | L4 rule: FRED DFII10 only (^TNX forbidden)
-tnx CHECK: 4.57% 10Y Treasury | source=WebSearch
-etf_btc_flow CHECK: -$105.2M (May 25 estimate) | source=farside.co.uk WebSearch
-BTC price: $77,400 | source=Coinbase/CoinDesk WebSearch
-ETH price: $2,100 | source=Coinbase/CoinDesk WebSearch
-alt_mom7: +1.79% (14 valid coins, canton-network excluded)
-breadth: 50% (7/14 alts beat BTC 7D of +0.91%)
-btc_d_delta7: 0.00pp (today=58.20% vs May19=58.20% → EQUAL → req1 FAILS strictly)
-Layer1 verdict: ALT-OFF (req1 FAIL btc_d_delta7=0.00pp, req2 PASS alt_mom7=+1.79%, bonus_b PASS breadth=50%, bonus_c PASS others_d=13.70%)
-BTC sentiment: 73.2 (greed) | viral: Saylor "Bitcoin Summer" 67.1% eng share
-ETH sentiment: 60.5 (greed) | n=14 tweets
-NEAR c3 TRIGGERED: Day3 in Top3 (~130% 21D, $2.74 +79% 7D)
-ZEC continuing c3: ~115% 21D
-HYPE continuing c3: ~65% 21D
-sources_today.json: WRITTEN
-top3_state.json: WRITTEN (NEAR c3 appended)
-audit_warnings_today.log: WRITTEN
+=== 2026-05-27 Daily Run ===
+BTC.D: 58.03% (CMC WebSearch)
+ETH.D: 9.54% (CMC WebSearch)
+OTHERS.D: 10.57% (calculated from top10 estimate)
+TOTAL3.D: 32.43%
+VIX: 16.59 (Yahoo Finance WebSearch)
+MOVE: 78.43 (Investing.com WebSearch)
+DXY: 98.93 (Yahoo Finance open WebSearch)
+TIPS_real: NULL (FRED 403)
+BTC.D Δ7d: -1.97pp (58.03 - 60.0 from May 20 history)
+alt_mom7: +2.67% (14 valid, canton excluded)
+breadth: 78.6% (11/14 alts beat BTC 7D=-1.02%)
+Layer1 verdict: STRONG GO (req1✓ req2✓ bonus_a✓ bonus_b✓ bonus_c✗)
+BTC sentiment: 68.67 greed
+ETH sentiment: 31.37 fear (viral_news_dominates=True, ole_eth 61%)
+--- Verification ---
+Expected btc_d range: 57.5-58.5%; got 58.03% ✓
+VIX check: 16.59 (not integer) ✓
+DXY check: 98.93 (not integer) ✓
+MOVE check: 78.43 (not integer) ✓

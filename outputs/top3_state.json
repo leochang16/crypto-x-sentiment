@@ -48,7 +48,7 @@
         "skyai"
       ],
       "c3_signals": [],
-      "carry_signal": "🟢🟢 STRONG GO · 新Top3(ZEC/HYPE/SUI) · LAB/B/UB/SIREN/SKYAI跌出Top10(exit訊號) · 無c3連續3天 → 觀望新輪次,勿追高"
+      "carry_signal": "\ud83d\udfe2\ud83d\udfe2 STRONG GO \u00b7 \u65b0Top3(ZEC/HYPE/SUI) \u00b7 LAB/B/UB/SIREN/SKYAI\u8dcc\u51faTop10(exit\u8a0a\u865f) \u00b7 \u7121c3\u9023\u7e8c3\u5929 \u2192 \u89c0\u671b\u65b0\u8f2a\u6b21,\u52ff\u8ffd\u9ad8"
     },
     {
       "date": "2026-05-23",
@@ -108,7 +108,7 @@
         "link"
       ],
       "c3_signals": [],
-      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · Top3(ZEC/TAO/HYPE) · {INJ/NEAR/LINK}出場 · 無c3連續3天 → ALT-OFF勿追新倉"
+      "carry_signal": "\ud83d\udd34 ALT-OFF \u00b7 \u26a0 \u50c5\u4f9b\u53c3\u8003 \u00b7 Top3(ZEC/TAO/HYPE) \u00b7 {INJ/NEAR/LINK}\u51fa\u5834 \u00b7 \u7121c3\u9023\u7e8c3\u5929 \u2192 ALT-OFF\u52ff\u8ffd\u65b0\u5009"
     },
     {
       "date": "2026-05-24",
@@ -175,7 +175,7 @@
       "near_7d_confirmed": 56.2,
       "hype_7d_confirmed": 40.8,
       "sui_7d_confirmed": 21.1,
-      "carry_signal": "🟢 GO · c3進場訊號: ZEC+HYPE連3天Top3(今日再次確認) · NEAR+56.2% 7D持守#3(等c3明日) · VIRTUAL跌出Top10(出場確認) · ZEC~+100% 21D / HYPE~+57% 21D"
+      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3\u9032\u5834\u8a0a\u865f: ZEC+HYPE\u90233\u5929Top3(\u4eca\u65e5\u518d\u6b21\u78ba\u8a8d) \u00b7 NEAR+56.2% 7D\u6301\u5b88#3(\u7b49c3\u660e\u65e5) \u00b7 VIRTUAL\u8dcc\u51faTop10(\u51fa\u5834\u78ba\u8a8d) \u00b7 ZEC~+100% 21D / HYPE~+57% 21D"
     },
     {
       "date": "2026-05-25",
@@ -236,7 +236,7 @@
         "hype"
       ],
       "near_day2": true,
-      "carry_signal": "🟢 GO · c3維持: ZEC+HYPE連4天Top3 · NEAR第2天(明日c3) · 無新退出 · alt_mom7=+3.88%(breadth 57%) · Saylor BitVac蓄力中"
+      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3\u7dad\u6301: ZEC+HYPE\u90234\u5929Top3 \u00b7 NEAR\u7b2c2\u5929(\u660e\u65e5c3) \u00b7 \u7121\u65b0\u9000\u51fa \u00b7 alt_mom7=+3.88%(breadth 57%) \u00b7 Saylor BitVac\u84c4\u529b\u4e2d"
     },
     {
       "date": "2026-05-26",
@@ -307,7 +307,78 @@
       "near_7d_confirmed": 79.0,
       "zec_7d_confirmed": 20.5,
       "hype_7d_confirmed": 46.0,
-      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · NEAR c3 NEW(連3天Top3+~130% 21D) · ZEC/HYPE c3繼續 · btc_d_delta7=0.00pp FAIL → ALT-OFF勿追新倉"
+      "carry_signal": "\ud83d\udd34 ALT-OFF \u00b7 \u26a0 \u50c5\u4f9b\u53c3\u8003 \u00b7 NEAR c3 NEW(\u90233\u5929Top3+~130% 21D) \u00b7 ZEC/HYPE c3\u7e7c\u7e8c \u00b7 btc_d_delta7=0.00pp FAIL \u2192 ALT-OFF\u52ff\u8ffd\u65b0\u5009"
+    },
+    {
+      "date": "2026-05-27",
+      "scan_done": true,
+      "regime": "STRONG GO",
+      "method": "WebSearch fallback (CoinGecko API 403)",
+      "prev_date": "2026-05-26",
+      "prev_top3": [
+        "near",
+        "zec",
+        "hype"
+      ],
+      "prev_top10": [
+        "near",
+        "zec",
+        "hype",
+        "tao",
+        "sui",
+        "ondo",
+        "fet",
+        "trx",
+        "ton",
+        "akt"
+      ],
+      "top3_21d": [
+        "near",
+        "hype",
+        "zec"
+      ],
+      "top10_21d": [
+        "near",
+        "hype",
+        "zec",
+        "tao",
+        "sui",
+        "ondo",
+        "fet",
+        "trx",
+        "ton",
+        "sol"
+      ],
+      "top10_gains_21d": {
+        "near": 145,
+        "hype": 58,
+        "zec": 45,
+        "tao": 38,
+        "sui": 22,
+        "ondo": 21,
+        "fet": 19,
+        "trx": 13,
+        "ton": 11,
+        "sol": 10
+      },
+      "exits_today": [
+        "akt"
+      ],
+      "new_entrants": [
+        "sol"
+      ],
+      "c3_signals": [
+        "near",
+        "hype",
+        "zec"
+      ],
+      "near_day4_c3_continuing": true,
+      "hype_c3_continuing": true,
+      "zec_c3_continuing": true,
+      "near_7d": 61.2,
+      "hype_7d": 26.0,
+      "zec_7d": 5.65,
+      "carry_signal": "\ud83d\udfe2\ud83d\udfe2 STRONG GO \u00b7 c3\u7e7c\u7e8c: NEAR+HYPE+ZEC \u9023 4/5+\u5929 Top3 \u00b7 SOL\u65b0\u5165 #10 \u00b7 AKT\u8dcc\u51fa \u00b7 btc_d_delta7=-1.97pp\u2713 alt_mom7=+2.67%\u2713 \u00b7 \u7b49 PCE \u660e\u65e5 20:30 \u6c7a\u5b9a\u52a0\u5009"
     }
   ]
 }
