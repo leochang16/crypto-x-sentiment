@@ -1,12 +1,4 @@
-2026-05-26T00:37:00Z	btc_d	coingecko_api	HTTP 403 Forbidden — using Apify RAG browser + WebSearch fallback
-2026-05-26T00:37:00Z	eth_d	coingecko_api	HTTP 403 Forbidden — using Apify RAG browser fallback
-2026-05-26T00:37:00Z	others_d	coingecko_api	HTTP 403 Forbidden — estimated from top10 mcap via WebSearch
-2026-05-26T00:37:00Z	alt_basket_7d	lunarcrush_api	Subscription required — using WebSearch CMC/Coinbase fallback
-2026-05-26T00:37:00Z	vix	yfinance	ImportError: yfinance not available — using WebSearch fallback
-2026-05-26T00:37:00Z	dxy	yfinance	ImportError: yfinance not available — using WebSearch fallback
-2026-05-26T00:37:00Z	tnx	yfinance	ImportError: yfinance not available — using WebSearch fallback
-2026-05-26T00:37:00Z	ndx	yfinance	ImportError: yfinance not available — value=null
-2026-05-26T00:37:00Z	btc_ndx_corr_30d	yfinance	ImportError: yfinance not available — value=null
-2026-05-26T00:37:00Z	btc_ndx_corr_7d	yfinance	ImportError: yfinance not available — value=null
-2026-05-26T00:37:00Z	vix3m	yfinance	ImportError: yfinance not available — value=null
-WARNING: 3+ fields null (ndx, btc_ndx_corr_30d, btc_ndx_corr_7d, vix3m) — red alert banner triggered in dashboard
+2026-05-27T00:15:00Z	tips_real	FRED DFII10	TIPS_FAIL: FRED unavailable (403)
+2026-05-27T00:15:00Z	coingecko_global_api	CoinGecko /global	403 - using CoinMarketCap WebSearch fallback
+2026-05-27T00:15:00Z	btc_ndx_corr	yfinance	yfinance blocked - correlation null
+2026-05-27T00:15:00Z	etf_btc_flow	Farside/CoinGlass	estimated from weekly trend, not real-time
