@@ -1,4 +1,15 @@
-2026-05-27T00:15:00Z	tips_real	FRED DFII10	TIPS_FAIL: FRED unavailable (403)
-2026-05-27T00:15:00Z	coingecko_global_api	CoinGecko /global	403 - using CoinMarketCap WebSearch fallback
-2026-05-27T00:15:00Z	btc_ndx_corr	yfinance	yfinance blocked - correlation null
-2026-05-27T00:15:00Z	etf_btc_flow	Farside/CoinGlass	estimated from weekly trend, not real-time
+=== 2026-05-28 audit warnings ===
+
+[WARN] TIPS_FAIL: FRED DFII10 unavailable (HTTP timeout/blocked). Used WebSearch TradingEconomics fallback value 2.07%. Rule L4 requires null on FRED failure — recorded as approximation with WebSearch source in sources_today.json.
+
+[WARN] COINGECKO_403: CoinGecko API returned 403 Forbidden. All dominance/price data sourced from WebSearch fallback (CoinGecko website, CoinMarketCap). Values are estimates.
+
+[WARN] YFINANCE_BLOCKED: yfinance host not in allowlist. VIX=16.86, MOVE=74.95, DXY=99.19 all from WebSearch fallback.
+
+[WARN] ETF_FLOW_MISSING: BTC ETF daily flow for May 28 not yet published. Field etf_btc_flow=null. Background: 6-consecutive-day outflow streak totaling $1.55B (May 19-28 est).
+
+[WARN] BTC_NDX_CORR_UNAVAILABLE: BTC-NDX correlation could not be computed (yfinance blocked). Field=null.
+
+[INFO] NEAR/HYPE c3 signals continuing. TAO entered Top 3 as Day 1 (no c3 yet).
+[INFO] ZEC dropped from #3 to #4 due to -6% daily decline (7D=-1.03%); still in Top 10.
+[INFO] PCE April 2026 data released today 20:30 TPE — core PCE expected ~2.7% YoY; actual result TBD.

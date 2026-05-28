@@ -1,20 +1,62 @@
-=== 2026-05-27 Daily Run ===
-BTC.D: 58.03% (CMC WebSearch)
-ETH.D: 9.54% (CMC WebSearch)
-OTHERS.D: 10.57% (calculated from top10 estimate)
-TOTAL3.D: 32.43%
-VIX: 16.59 (Yahoo Finance WebSearch)
-MOVE: 78.43 (Investing.com WebSearch)
-DXY: 98.93 (Yahoo Finance open WebSearch)
-TIPS_real: NULL (FRED 403)
-BTC.D Δ7d: -1.97pp (58.03 - 60.0 from May 20 history)
-alt_mom7: +2.67% (14 valid, canton excluded)
-breadth: 78.6% (11/14 alts beat BTC 7D=-1.02%)
-Layer1 verdict: STRONG GO (req1✓ req2✓ bonus_a✓ bonus_b✓ bonus_c✗)
-BTC sentiment: 68.67 greed
-ETH sentiment: 31.37 fear (viral_news_dominates=True, ole_eth 61%)
---- Verification ---
-Expected btc_d range: 57.5-58.5%; got 58.03% ✓
-VIX check: 16.59 (not integer) ✓
-DXY check: 98.93 (not integer) ✓
-MOVE check: 78.43 (not integer) ✓
+=== 2026-05-28 daily-crypto-x-sentiment audit ===
+run_date: 2026-05-28
+timestamp_utc: 2026-05-28T00:35:00Z
+
+PART A: X Sentiment (Apify)
+  actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
+  terms: ["Bitcoin BTC", "Ethereum ETH", "#BTC", "#ETH"]
+  items_per_term: 25
+  btc_score: 59.0 (greed)
+  eth_score: 48.0 (neutral)
+  n_valid_btc: 32
+  viral_dominates_btc: false
+  viral_dominates_eth: false
+
+PART B: Dominance & Layer 1 v2
+  btc_d: 57.63%
+  eth_d: 9.49%
+  others_d: 13.8%
+  total3_d: 32.88%
+  btc_d_delta7: -2.47pp (today 57.63 - 2026-05-21 60.10)
+  alt_mom7: -0.19% (basket 14 alts, canton excluded)
+  breadth: 57% (8/14 alts > BTC 7D -3.25%)
+  req1 (btc_d_delta7 < 0): -2.47 → PASS
+  req2 (alt_mom7 > 0): -0.19 → FAIL
+  bonus_a (delta7 ≤ -0.5pp): -2.47 → PASS (moot, req2 failed)
+  bonus_b (alt_mom7 > 1.5%): -0.19 → FAIL
+  bonus_c (others_d > 12%): 13.8% → PASS (moot)
+  VERDICT: 🔴 ALT-OFF
+
+PART C: Macro
+  VIX: 16.86 (WebSearch fallback, yfinance blocked)
+  MOVE: 74.95 (WebSearch fallback)
+  DXY: 99.19 (WebSearch fallback)
+  TIPS: 2.07% (WebSearch TradingEconomics; FRED DFII10 unavailable — TIPS_FAIL logged)
+  ETF_flow: null (daily May 28 flow unavailable; 6-day streak $1.55B)
+  BTC-NDX_corr: n/a (yfinance blocked)
+
+PART D: Dashboard surgical edits
+  file: dashboard/index.html
+  edit_tool_only: true
+  write_tool_used: false
+  verdict_updated: STRONG GO → ALT-OFF
+
+PART E: 21D Top 10 scan
+  top3: NEAR / HYPE / TAO
+  zec: dropped to #4 (-6% daily)
+  tao: new #3 Day1
+  c3_new_today: [] (none)
+  c3_continuing: [near, hype]
+  regime: ALT-OFF → Top 10 reference only ⚠
+
+files_updated:
+  - outputs/dominance_history.json ✓
+  - outputs/layer1_status.json ✓
+  - outputs/x_sentiment_history.json ✓
+  - outputs/top3_state.json ✓
+  - outputs/sources_today.json ✓
+  - outputs/audit_today.log ✓
+  - outputs/audit_warnings_today.log ✓
+  - dashboard/index.html ✓ (surgical edits)
+
+git: committed + pushed to claude/confident-pascal-s73d8
