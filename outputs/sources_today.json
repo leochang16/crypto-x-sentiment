@@ -1,47 +1,97 @@
 {
-  "btc_d": {
-    "value": 58.03,
-    "source": "CoinMarketCap WebSearch /charts (API 403)",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
+  "date": "2026-05-28",
+  "generated_at_utc": "2026-05-28T00:35:00Z",
+  "fields": {
+    "btc_price": {
+      "value": 75139,
+      "source": "WebSearch (CoinDesk/CoinMarketCap)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "eth_price": {
+      "value": 2065,
+      "source": "WebSearch (CoinMarketCap/Coinbase)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "btc_d": {
+      "value": 57.63,
+      "source": "WebSearch (CoinGecko fallback; API 403)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "eth_d": {
+      "value": 9.49,
+      "source": "WebSearch (CoinGecko fallback; API 403)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "others_d": {
+      "value": 13.8,
+      "source": "WebSearch (CoinGecko fallback; API 403)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "total3_d": {
+      "value": 32.88,
+      "source": "calculated (100 - btc_d - eth_d)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "btc_d_delta7": {
+      "value": -2.47,
+      "source": "dominance_history.json (today 57.63 - 2026-05-21 60.10)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "alt_mom7": {
+      "value": -0.19,
+      "source": "WebSearch basket 14 alts (canton excluded); mean 7D returns",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "breadth": {
+      "value": 57,
+      "source": "calculated 8/14 alts with 7D return > BTC 7D (-3.25%)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "vix": {
+      "value": 16.86,
+      "source": "WebSearch (CBOE/Yahoo Finance)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "move": {
+      "value": 74.95,
+      "source": "WebSearch (ICE MOVE index)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "dxy": {
+      "value": 99.19,
+      "source": "WebSearch (TradingEconomics/Yahoo Finance)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "tips_real": {
+      "value": 2.07,
+      "source": "WebSearch TradingEconomics (FRED DFII10 unavailable — TIPS_FAIL logged)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "etf_btc_flow_today": {
+      "value": null,
+      "source": "unavailable — May 28 daily flow not yet published; 6-day streak total $1.55B",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "btc_sentiment_score": {
+      "value": 59.0,
+      "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper (engagement-weighted)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "eth_sentiment_score": {
+      "value": 48.0,
+      "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper (engagement-weighted)",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    },
+    "verdict": {
+      "value": "ALT-OFF",
+      "source": "layer1_v2_computed",
+      "fetched_at_utc": "2026-05-28T00:35:00Z"
+    }
   },
-  "eth_d": {
-    "value": 9.54,
-    "source": "CoinMarketCap WebSearch /charts",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
-  },
-  "others_d": {
-    "value": 10.57,
-    "source": "calculated (total_mcap - top10_sum_est) / total_mcap \u00d7 100; WebSearch fallback",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
-  },
-  "total3_d": {
-    "value": 32.43,
-    "source": "100 - btc_d - eth_d",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
-  },
-  "vix": {
-    "value": 16.59,
-    "source": "Yahoo Finance ^VIX WebSearch",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
-  },
-  "move": {
-    "value": 78.43,
-    "source": "Investing.com MOVE WebSearch",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
-  },
-  "dxy": {
-    "value": 98.93,
-    "source": "Yahoo Finance DX-Y.NYB WebSearch (open)",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
-  },
-  "tips_real": {
-    "value": null,
-    "source": "TIPS_FAIL: FRED DFII10 unavailable (403)",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
-  },
-  "etf_btc_flow": {
-    "value": -180.0,
-    "source": "estimate: weekly -$1.47B trend / 5 days; IBIT $1.3B absorbed May 26 per X",
-    "fetched_at_utc": "2026-05-27T00:15:00Z"
-  }
+  "warnings": [
+    "TIPS_FAIL: FRED DFII10 unavailable; used WebSearch TradingEconomics fallback 2.07% (rule requires null — logged as approximation)",
+    "ETF_FLOW_MISSING: May 28 daily BTC ETF flow data not published; showing null",
+    "COINGECKO_403: All dominance/price data from WebSearch fallback (not live API)",
+    "YFINANCE_BLOCKED: VIX/MOVE/DXY from WebSearch fallback"
+  ]
 }
