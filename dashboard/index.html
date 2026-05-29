@@ -767,6 +767,7 @@ function tickClock() {
 tickClock(); setInterval(tickClock, 30000);
 
 // === Render Tab 1 ===
+try {
 const latest = HISTORY.history[HISTORY.history.length - 1];
 const prev = HISTORY.history.length >= 2 ? HISTORY.history[HISTORY.history.length - 2] : null;
 const btc = latest.btc, eth = latest.eth;
@@ -779,8 +780,8 @@ const fmtDelta = (d, suffix='') => d == null ? '' : `<span class="delta ${d>0?'p
 document.getElementById('metrics').innerHTML = `
   <div class="metric btc">
     <div class="label">BTC 情緒分數</div>
-    <div class="value">${btc.score.toFixed(1)}</div>
-    <div class="sub"><span class="tag-band t-${btc.score_band}">${btc.score_band}</span>${fmtDelta(btcDelta)}</div>
+    <div class="value">${btc ? btc.score.toFixed(1) : '—'}</div>
+    <div class="sub">${btc ? `<span class="tag-band t-${btc.score_band}">${btc.score_band}</span>${fmtDelta(btcDelta)}` : '<span style="color:var(--text-faint);">—</span>'}</div>
   </div>
   <div class="metric eth">
     <div class="label">ETH 情緒分數</div>
@@ -789,7 +790,7 @@ document.getElementById('metrics').innerHTML = `
   </div>
   <div class="metric accent">
     <div class="label">BTC 價</div>
-    <div class="value med">$${(latest.btc_price/1000).toFixed(2)}k</div>
+    <div class="value med">${latest.btc_price ? '$'+(latest.btc_price/1000).toFixed(2)+'k' : '—'}</div>
     <div class="sub">${fmtDelta(btcPriceDelta, '%')}</div>
   </div>
   <div class="metric purple">
@@ -801,7 +802,8 @@ document.getElementById('metrics').innerHTML = `
 
 document.getElementById('chartMeta').textContent = HISTORY.history[0].date + ' → ' + HISTORY.last_updated + ' · ' + HISTORY.history.length + ' 天';
 
-window.addEventListener('load', () => {
+} catch(e) { console.error('tab1 sync render failed:', e); const m=document.getElementById('metrics'); if(m) m.innerHTML='<div class="alert-banner danger" style="grid-column:1/-1;padding:14px;">&#9888; Tab 1 渲染失敗: '+(e.message||e)+'</div>'; }
+window.addEventListener('load', () => { try {
   const labels = HISTORY.history.map(d => d.date.slice(5));
   const btcSent = HISTORY.history.map(d => d.btc ? d.btc.score : null);
   const ethSent = HISTORY.history.map(d => d.eth ? d.eth.score : null);
@@ -849,6 +851,7 @@ window.addEventListener('load', () => {
       plugins: { legend: { labels: { color:'#b5bac4' } } }
     }
   });
+  } catch(e) { console.error('chart render failed:', e); }
 });
 
 </script>
