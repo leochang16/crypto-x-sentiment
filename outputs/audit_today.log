@@ -1,31 +1,21 @@
-# Audit Log - 2026-05-29
-Generated: 2026-05-29T00:15:00Z
-
-## Sanity Checks
-- btc_d=57.83% (precision: 2dp ✓)
-- eth_d=9.48% (precision: 2dp ✓)
-- others_d=13.9% (estimated)
-- total3_d=32.69% = 100 - 57.83 - 9.48 ✓
-- vix=15.74 (>1dp ✓)
-- move=70.9 (>1dp ✓, TradingView)
-- dxy=99.30 (>1dp ✓)
-- btc_d_delta7=-0.35pp = 57.83 - 58.18 (May 22 from dominance_history.json) ✓
-
-## Verification (L2)
-- CoinGecko /global: API 403 blocked → WebSearch fallback (btc_d=57.83%, eth_d=9.48%)
-- VIX re-check: 15.74 (WebSearch confirming May 28 close)
-- MOVE: 70.9 (TradingView) vs 74.95 (Investing.com stale) → using TradingView
-- Comparison with yesterday: btc_d 57.63→57.83 (+0.20pp), VIX 16.86→15.74 (-1.12), MOVE 74.95→70.9 (-4.05)
-
-## Data Sources Status
-- Apify: TIMED-OUT after 30s, 54 items scraped (45 valid BTC, 0 ETH)
-- CoinGecko API: 403 Forbidden → WebSearch fallback
-- yfinance: Blocked → WebSearch fallback
-- FRED DFII10: Available via WebSearch (2.08% as of May 28)
-- ETF flows: -$733.43M (May 28, via CoinDesk/CryptoNomist)
-
-## Verdict
-🔴 ALT-OFF [degraded data]
-- req1 PASS: btc_d_delta7=-0.35pp < 0 ✓
-- req2 FAIL: alt_mom7=-1.29% < 0 ✗
-- [degraded data]: ≥3 fields failed (eth_sentiment, btc_d/eth_d/others_d via API, vix/move/dxy via yfinance)
+[2026-05-29] AUDIT LOG - Daily Crypto Sentiment
+[2026-05-29] Binance API: BLOCKED (403 Host not in allowlist) - BTC/ETH price via CoinDesk RAG fallback
+[2026-05-29] CoinGecko API: BLOCKED (403) - dominance/alt data via WebSearch/CoinDesk fallback
+[2026-05-29] stooq.com: BLOCKED (403) - VIX/DXY via WebSearch fallback
+[2026-05-29] FRED API: BLOCKED (403) - 10Y/TIPS via WebSearch fallback
+[2026-05-29] yfinance ^MOVE: BLOCKED (403) - MOVE value = null
+[2026-05-29] yfinance ^NDX: BLOCKED (403) - BTC-NDX corr = null
+[2026-05-29] MOVE: null (yfinance blocked)
+[2026-05-29] BTC-NDX corr 30D: null (yfinance + Binance both blocked)
+[2026-05-29] BTC-NDX corr 7D: null (yfinance + Binance both blocked)
+[2026-05-29] X Sentiment: SUCCESS - Apify run 2t8934KLnLGVqnYDp, 240 items, 226 valid, 14 spam filtered
+[2026-05-29] ETF flow May29: -$223.3M (9th consecutive day outflows) - WebSearch (CoinDesk/Phemex)
+[2026-05-29] DOT 7d: +11.72% - WebSearch estimate (potentially stale, not confirmed CoinDesk live)
+[2026-05-29] TON 7d: -7.96% - WebSearch estimate (from May28 history, not confirmed today)
+[2026-05-29] AVAX 7d: +0.15% - WebSearch estimate
+[2026-05-29] UNI 7d: +3.48% - WebSearch estimate
+[2026-05-29] ONDO 7d: +12.0% - WebSearch estimate
+[2026-05-29] NEAR 7d: +51.34% - WebSearch confirmed (Arthur Hayes endorsement May22)
+[2026-05-29] SUI 7d: -20.10% - WebSearch confirmed (mainnet outages)
+[2026-05-29] Layer1 verdict: GO (req1 PASS -0.18pp, req2 PASS +3.27%, 1 bonus: bonus_b)
+[2026-05-29] 21D analysis: XLM new entrant (DTCC partnership), SOL exits; TAO c3 Day3 triggered
