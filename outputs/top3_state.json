@@ -1,56 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-05-22",
-      "scan_done": true,
-      "regime": "STRONG GO",
-      "method": "WebSearch fallback (CoinGecko API 403)",
-      "prev_date": "2026-05-21",
-      "prev_top3": [
-        "lab",
-        "b",
-        "ub"
-      ],
-      "prev_top10": [
-        "lab",
-        "b",
-        "ub",
-        "ton",
-        "zec",
-        "siren",
-        "ondo",
-        "skyai",
-        "akt",
-        "sui"
-      ],
-      "top3_21d": [
-        "zec",
-        "hype",
-        "sui"
-      ],
-      "top10_21d": [
-        "zec",
-        "hype",
-        "sui",
-        "ondo",
-        "akt",
-        "ton",
-        "virtual",
-        "inj",
-        "near",
-        "link"
-      ],
-      "exits_today": [
-        "lab",
-        "b",
-        "ub",
-        "siren",
-        "skyai"
-      ],
-      "c3_signals": [],
-      "carry_signal": "🟢🟢 STRONG GO · 新Top3(ZEC/HYPE/SUI) · LAB/B/UB/SIREN/SKYAI跌出Top10(exit訊號) · 無c3連續3天 → 觀望新輪次,勿追高"
-    },
-    {
       "date": "2026-05-23",
       "scan_done": true,
       "regime": "ALT-OFF",
@@ -458,8 +408,8 @@
     {
       "date": "2026-05-29",
       "scan_done": true,
-      "regime": "ALT-OFF [degraded data]",
-      "method": "WebSearch fallback (CoinGecko API 403)",
+      "regime": "GO",
+      "method": "WebSearch+CoinDesk RAG fallback (CoinGecko API 403)",
       "prev_date": "2026-05-28",
       "prev_top3": [
         "near",
@@ -470,10 +420,10 @@
         "near",
         "hype",
         "tao",
+        "fet",
         "zec",
         "sui",
         "ondo",
-        "fet",
         "trx",
         "ton",
         "sol"
@@ -488,44 +438,53 @@
         "hype",
         "tao",
         "fet",
+        "xlm",
         "zec",
-        "sui",
         "ondo",
+        "sui",
         "trx",
-        "ton",
-        "sol"
+        "ton"
       ],
       "top10_gains_21d": {
-        "near": 120,
-        "hype": 55,
-        "tao": 42,
-        "fet": 38,
-        "zec": 22,
-        "sui": 18,
+        "near": 104,
+        "hype": 46,
+        "tao": 38,
+        "fet": 37,
+        "xlm": 35,
+        "zec": 29,
         "ondo": 17,
-        "trx": 12,
-        "ton": 8,
-        "sol": 6
+        "sui": 16,
+        "trx": 10,
+        "ton": 8
       },
-      "exits_today": [],
-      "new_entrants": [],
+      "exits_today": [
+        "sol"
+      ],
+      "new_entrants": [
+        "xlm"
+      ],
       "c3_signals": [
         "near",
-        "hype"
+        "hype",
+        "tao"
       ],
-      "c3_new_today": [],
+      "c3_new_today": [
+        "tao"
+      ],
       "c3_continuing": [
         "near",
         "hype"
       ],
-      "tao_day2": true,
-      "near_day6_c3_continuing": true,
+      "near_day7_c3_continuing": true,
       "hype_c3_continuing": true,
-      "near_7d": -1.7,
-      "hype_7d": 30.0,
-      "tao_7d": -7.1,
-      "fet_7d": 7.0,
-      "carry_signal": "🔴 ALT-OFF [degraded data] · ⚠ 僅供參考 · Top3(NEAR/HYPE/TAO) · NEAR c3 Day6 · HYPE c3繼續 · TAO Day2(等c3) · FET升至#4 · btc_d_delta7=-0.35pp✓ alt_mom7=-1.29%<0 FAIL → 🔴 ALT-OFF · BTC ETF -$733M 8天連出 · $8B選擇權到期今日"
+      "tao_day3_c3_new": true,
+      "near_7d": 51.34,
+      "hype_7d": 15.01,
+      "tao_7d": -13.1,
+      "xlm_7d": 45.74,
+      "sui_7d": -20.1,
+      "zec_7d": -5.04,
+      "carry_signal": "🟢 GO · c3: NEAR Day7繼續 · HYPE c3繼續 · TAO Day3 NEW c3入場訊號🔔 · XLM新#5(DTCC+Stellar+45.7% 7D) · SOL跌出Top10 · SUI -20.1% 7D(主網宕機) · btc_d_delta7=-0.18pp✓ · alt_mom7=+3.27%✓ · 1bonus(bonus_b) → 🟢 GO · CFTC BTC perp futures今日獲批 · ETF -$223M 第9天"
     }
   ]
 }
