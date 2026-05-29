@@ -403,5 +403,40 @@
       "solana": -6.59,
       "sui": -3.5
     }
+  },
+  "2026-05-29": {
+    "date": "2026-05-29",
+    "timestamp_utc": "2026-05-29T00:15:00Z",
+    "total_market_cap_usd": 2570000000000,
+    "btc_price": 73255,
+    "eth_price": 1985,
+    "btc_mc": 1486000000000,
+    "eth_mc": 243600000000,
+    "btc_d": 57.83,
+    "eth_d": 9.48,
+    "others_d": 13.9,
+    "total3_d": 32.69,
+    "btc_d_7day_prev": 58.18,
+    "btc_d_delta7": -0.35,
+    "alt_mom7": -1.29,
+    "breadth": 64,
+    "n_valid_basket": 14,
+    "source": "WebSearch fallback (CoinGecko API 403)",
+    "basket_7d_returns": {
+      "monero": -9.92,
+      "bitcoin-cash": -2.0,
+      "cardano": -3.5,
+      "stellar": 15.59,
+      "ripple": -2.55,
+      "binancecoin": -2.0,
+      "hyperliquid": 30.0,
+      "chainlink": -9.45,
+      "dogecoin": -6.78,
+      "ton": -12.0,
+      "zcash": -5.0,
+      "tron": 5.7,
+      "solana": 0.9,
+      "sui": -17.0
+    }
   }
 }
