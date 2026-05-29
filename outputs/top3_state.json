@@ -454,6 +454,78 @@
       "tao_7d": 10.0,
       "zec_7d": -1.03,
       "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · Top3(NEAR/HYPE/TAO) · ZEC -6%日跌→#4 · TAO新#3 Day1(等c3) · NEAR c3 Day5 · HYPE c3繼續 · alt_mom7=-0.19%<0 FAIL → 🔴 ALT-OFF · PCE日慎追"
+    },
+    {
+      "date": "2026-05-29",
+      "scan_done": true,
+      "regime": "ALT-OFF [degraded data]",
+      "method": "WebSearch fallback (CoinGecko API 403)",
+      "prev_date": "2026-05-28",
+      "prev_top3": [
+        "near",
+        "hype",
+        "tao"
+      ],
+      "prev_top10": [
+        "near",
+        "hype",
+        "tao",
+        "zec",
+        "sui",
+        "ondo",
+        "fet",
+        "trx",
+        "ton",
+        "sol"
+      ],
+      "top3_21d": [
+        "near",
+        "hype",
+        "tao"
+      ],
+      "top10_21d": [
+        "near",
+        "hype",
+        "tao",
+        "fet",
+        "zec",
+        "sui",
+        "ondo",
+        "trx",
+        "ton",
+        "sol"
+      ],
+      "top10_gains_21d": {
+        "near": 120,
+        "hype": 55,
+        "tao": 42,
+        "fet": 38,
+        "zec": 22,
+        "sui": 18,
+        "ondo": 17,
+        "trx": 12,
+        "ton": 8,
+        "sol": 6
+      },
+      "exits_today": [],
+      "new_entrants": [],
+      "c3_signals": [
+        "near",
+        "hype"
+      ],
+      "c3_new_today": [],
+      "c3_continuing": [
+        "near",
+        "hype"
+      ],
+      "tao_day2": true,
+      "near_day6_c3_continuing": true,
+      "hype_c3_continuing": true,
+      "near_7d": -1.7,
+      "hype_7d": 30.0,
+      "tao_7d": -7.1,
+      "fet_7d": 7.0,
+      "carry_signal": "🔴 ALT-OFF [degraded data] · ⚠ 僅供參考 · Top3(NEAR/HYPE/TAO) · NEAR c3 Day6 · HYPE c3繼續 · TAO Day2(等c3) · FET升至#4 · btc_d_delta7=-0.35pp✓ alt_mom7=-1.29%<0 FAIL → 🔴 ALT-OFF · BTC ETF -$733M 8天連出 · $8B選擇權到期今日"
     }
   ]
 }

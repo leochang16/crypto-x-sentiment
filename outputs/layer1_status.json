@@ -392,5 +392,28 @@
     "verdict_detail": "req1 PASS(Δ7d=-2.47pp<0✓ BTC.D下行) · req2 FAIL(alt_mom7=-0.19%<0✗ alt動能轉負) · 任一必要FAIL → 🔴 ALT-OFF · bonus_a PASS(-2.47pp≤-0.5pp) · bonus_b FAIL(-0.19%<1.5%) · bonus_c PASS(others_d=13.8%>12%) · PCE日·alts普跌",
     "source": "WebSearch fallback (CoinGecko API 403)",
     "notes": "ZEC -6% 日跌→#4; TAO升#3 Day1; HYPE+28.8% 7D持守; BTC $75,139(-1.4% 1D); PCE release 20:30 TPE"
+  },
+  "2026-05-29": {
+    "date": "2026-05-29",
+    "timestamp_utc": "2026-05-29T00:15:00Z",
+    "btc_d": 57.83,
+    "eth_d": 9.48,
+    "others_d": 13.9,
+    "total3_d": 32.69,
+    "btc_d_delta7": -0.35,
+    "alt_mom7": -1.29,
+    "breadth": 64,
+    "n_valid_basket": 14,
+    "req1_pass": true,
+    "req2_pass": false,
+    "bonus_a": false,
+    "bonus_b": false,
+    "bonus_c": true,
+    "bonuses_passed": 0,
+    "verdict_label": "🔴 ALT-OFF",
+    "verdict_class": "danger",
+    "verdict_detail": "req1 PASS(Δ7d=-0.35pp<0✓ BTC.D下行) · req2 FAIL(alt_mom7=-1.29%<0✗ alt動能轉負) · 任一必要FAIL → 🔴 ALT-OFF · bonus_a FAIL(-0.35pp>-0.5pp) · bonus_b FAIL(-1.29%<1.5%) · bonus_c PASS(others_d=13.9%>12%) · ETF -$733M · BTC ETF連出8天",
+    "source": "WebSearch fallback (CoinGecko API 403)",
+    "notes": "HYPE+30% 7D領漲; XLM+15.59%; TRX+5.7% PASS · XMR-9.92%/SUI-17%/TON-12%/LINK-9.45% 拖低 · BTC $73,255(-2.9% 1D) · ETF -$733.43M(BlackRock-528M,Fidelity-60M,Grayscale-105M)"
   }
 }
