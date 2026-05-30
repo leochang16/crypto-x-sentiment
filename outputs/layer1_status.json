@@ -418,5 +418,19 @@
     "verdict_detail": "2/2 必要 PASS + 1/3 加分 → 🟢 GO · bonus_a FAIL(Δ=-0.18pp>-0.5pp) · bonus_b PASS(+3.27%>+1.5%) · bonus_c FAIL(11.14%<12%)",
     "source": "WebSearch+CoinDesk RAG fallback",
     "notes": "NEAR+51.34% 7D(Arthur Hayes), HYPE+15% 7D, XLM+45.7% 7D(DTCC partnership). SUI -20.1% 7D(mainnet outages). TAO c3 Day3 triggered. SOL exits 21D top10."
+  },
+  "2026-05-30": {
+    "verdict": "GO",
+    "req1_btc_d_delta7": -0.47,
+    "req1_pass": true,
+    "req2_alt_mom7": 5.71,
+    "req2_pass": true,
+    "bonus_a_pass": false,
+    "bonus_b_pass": true,
+    "bonus_c_pass": false,
+    "bonus_count": 1,
+    "others_d": 11.0,
+    "breadth": 71,
+    "timestamp_utc": "2026-05-30T00:38:00Z"
   }
 }
