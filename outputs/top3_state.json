@@ -1,66 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-05-23",
-      "scan_done": true,
-      "regime": "ALT-OFF",
-      "method": "WebSearch fallback (CoinGecko API 403)",
-      "prev_date": "2026-05-22",
-      "prev_top3": [
-        "zec",
-        "hype",
-        "sui"
-      ],
-      "prev_top10": [
-        "zec",
-        "hype",
-        "sui",
-        "ondo",
-        "akt",
-        "ton",
-        "virtual",
-        "inj",
-        "near",
-        "link"
-      ],
-      "top3_21d": [
-        "zec",
-        "tao",
-        "hype"
-      ],
-      "top10_21d": [
-        "zec",
-        "tao",
-        "hype",
-        "fet",
-        "ondo",
-        "ton",
-        "sui",
-        "akt",
-        "virtual",
-        "trx"
-      ],
-      "top10_gains_21d": {
-        "zec": 110,
-        "tao": 80,
-        "hype": 47,
-        "fet": 50,
-        "ondo": 45,
-        "ton": 43,
-        "sui": 18,
-        "akt": 30,
-        "virtual": 25,
-        "trx": 12
-      },
-      "exits_today": [
-        "inj",
-        "near",
-        "link"
-      ],
-      "c3_signals": [],
-      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · Top3(ZEC/TAO/HYPE) · {INJ/NEAR/LINK}出場 · 無c3連續3天 → ALT-OFF勿追新倉"
-    },
-    {
       "date": "2026-05-24",
       "scan_done": true,
       "regime": "GO",
@@ -485,6 +425,82 @@
       "sui_7d": -20.1,
       "zec_7d": -5.04,
       "carry_signal": "🟢 GO · c3: NEAR Day7繼續 · HYPE c3繼續 · TAO Day3 NEW c3入場訊號🔔 · XLM新#5(DTCC+Stellar+45.7% 7D) · SOL跌出Top10 · SUI -20.1% 7D(主網宕機) · btc_d_delta7=-0.18pp✓ · alt_mom7=+3.27%✓ · 1bonus(bonus_b) → 🟢 GO · CFTC BTC perp futures今日獲批 · ETF -$223M 第9天"
+    },
+    {
+      "date": "2026-05-30",
+      "scan_done": true,
+      "regime": "GO",
+      "method": "Apify + WebSearch (CoinGecko API 403)",
+      "prev_date": "2026-05-29",
+      "prev_top3": [
+        "near",
+        "hype",
+        "tao"
+      ],
+      "prev_top10": [
+        "near",
+        "hype",
+        "tao",
+        "fet",
+        "xlm",
+        "zec",
+        "ondo",
+        "sui",
+        "trx",
+        "ton"
+      ],
+      "top3_21d": [
+        "near",
+        "hype",
+        "zec"
+      ],
+      "top10_21d": [
+        "near",
+        "hype",
+        "zec",
+        "tao",
+        "fet",
+        "xlm",
+        "ondo",
+        "uni",
+        "dot",
+        "sui"
+      ],
+      "top10_gains_21d": {
+        "near": 120,
+        "hype": 53,
+        "zec": 42,
+        "tao": 38,
+        "fet": 35,
+        "xlm": 28,
+        "ondo": 23,
+        "uni": 22,
+        "dot": 16,
+        "sui": 8
+      },
+      "exits_today": [
+        "trx",
+        "ton"
+      ],
+      "new_entrants": [
+        "uni",
+        "dot"
+      ],
+      "c3_signals": [
+        "near",
+        "hype"
+      ],
+      "c3_new_today": [],
+      "c3_continuing": [
+        "near",
+        "hype"
+      ],
+      "near_consecutive_days": 7,
+      "near_7d": 55.0,
+      "hype_7d": 15.1,
+      "zec_7d": 10.0,
+      "tao_7d": 5.14,
+      "carry_signal": "🟢 GO · c3繼續: NEAR+HYPE · NEAR Day7 Top3 c3(+120% 21D) · HYPE近ATH $65.47(+53% 21D) · ZEC升#3(+42% 21D / +10% 7D) · TRX/TON出場 · btc_d_delta7=-0.47pp✓ alt_mom7=+5.71%✓ · 1bonus(bonus_b) → 🟢 GO"
     }
   ]
 }

@@ -722,5 +722,35 @@
       "ETF 9-day record outflow streak, -$223M today - bear"
     ],
     "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper"
+  },
+  "2026-05-30": {
+    "date": "2026-05-30",
+    "timestamp_utc": "2026-05-30T00:38:00Z",
+    "btc_score": 55.7,
+    "eth_score": 64.2,
+    "overall_score": 57.1,
+    "band": "greed",
+    "n_valid_tweets": 148,
+    "n_total_tweets": 160,
+    "viral_dominates": false,
+    "top2_viral_pct": 23.9,
+    "btc_en_score": 54.5,
+    "btc_zh_score": 60.1,
+    "eth_en_score": 76.3,
+    "eth_zh_score": 47.1,
+    "crypto_en_score": null,
+    "market_zh_score": null,
+    "apify_run_id": "kGmNobpynVF5vXWC0",
+    "key_signals": [
+      "CFTC approves first US Bitcoin perpetual futures contracts - extreme bull",
+      "Trump Strait of Hormuz naval blockade news, BTC reclaims $74K - neutral/bull",
+      "Saylor Strategy deposits $30M BTC to Coinbase Prime - bull",
+      "Bitcoin ETFs: $2.8B 9-day outflow streak (3rd biggest monthly outflow) - bear",
+      "Nakamoto worst BTC treasury: $679M bought at avg $118K - bear",
+      "JPMorgan CEO Dimon opposes Clarity Act, banks to fight it - bear",
+      "US seized $1B Iran crypto (Bessent) - neutral",
+      "US-Iran 60-day truce extension on president's desk - bull catalyst"
+    ],
+    "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper"
   }
 }
