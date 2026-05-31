@@ -432,5 +432,31 @@
     "others_d": 11.0,
     "breadth": 71,
     "timestamp_utc": "2026-05-30T00:38:00Z"
+  },
+  "2026-05-31": {
+    "date": "2026-05-31",
+    "timestamp_utc": "2026-05-31T00:08:00Z",
+    "btc_d": 57.3,
+    "eth_d": 9.45,
+    "others_d": 11.2,
+    "total3_d": 21.05,
+    "btc_d_delta7": -0.79,
+    "alt_mom7": 0.3,
+    "breadth": 71.0,
+    "n_valid_basket": 14,
+    "conditions": {
+      "req1_btc_d_delta_lt0": true,
+      "req1_met": true,
+      "req2_alt_mom7_gt0": true,
+      "req2_met": true,
+      "bonus_a_btc_d_delta_lte_minus05": true,
+      "bonus_b_alt_mom7_gt15": false,
+      "bonus_c_others_d_gt12": false
+    },
+    "bonuses_passed": 1,
+    "verdict_label": "🟢 GO",
+    "verdict_class": "success",
+    "verdict_detail": "req1 PASS(Δ7d=-0.79pp<0✓) · req2 PASS(alt_mom7=+0.3%>0✓) · bonus_a PASS(Δ=-0.79pp≤-0.5pp✓) · bonus_b FAIL(0.3%<+1.5%) · bonus_c FAIL(11.2%<12%) · → 🟢 GO · BTC.D 57.3%(7D 顯著下滑) · alt basket 勉強正 · ZEC/TON/SUI/SOL拖低",
+    "source": "WebSearch fallback (direct APIs blocked)"
   }
 }

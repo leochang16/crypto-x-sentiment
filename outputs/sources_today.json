@@ -1,144 +1,121 @@
 {
-  "date": "2026-05-30",
-  "generated_at_utc": "2026-05-30T00:38:00Z",
-  "btc_price": {
-    "value": 73675,
-    "source": "WebSearch/CoinMarketCap",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "eth_price": {
-    "value": 2034,
-    "source": "WebSearch/Coinbase+CoinGecko",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "btc_24h_chg": {
-    "value": -0.06,
-    "source": "WebSearch/CoinMarketCap",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "eth_24h_chg": {
-    "value": 1.9,
-    "source": "WebSearch/Coinbase",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "btc_d": {
-    "value": 57.6,
-    "source": "WebSearch/CoinGecko",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "eth_d": {
-    "value": 9.5,
-    "source": "WebSearch/CoinGecko",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "others_d": {
-    "value": 11.0,
-    "source": "estimated (top10 - btc - eth - stables)",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "total3_d": {
-    "value": 24.4,
-    "source": "calculated",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "total_market_cap": {
-    "value": 2620000000000,
-    "source": "WebSearch/CoinGecko",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "btc_d_7day_prev": {
-    "value": 58.07,
-    "source": "dominance_history.json[2026-05-23]",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "btc_d_delta7": {
-    "value": -0.47,
-    "source": "calculated",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "alt_mom7": {
-    "value": 5.71,
-    "source": "WebSearch per-coin 7D + calculated mean",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "breadth": {
-    "value": 71,
-    "source": "calculated",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "layer1_verdict": {
-    "value": "GO",
-    "source": "calculated",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "vix": {
-    "value": 16.33,
-    "source": "WebSearch/Investing.com",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "dxy": {
-    "value": 98.89,
-    "source": "WebSearch/TradingEconomics",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "tnx_10y": {
-    "value": 4.44,
-    "source": "WebSearch/TradingEconomics",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "tips_real": {
-    "value": null,
-    "source": "null (FRED 403)",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "move": {
-    "value": null,
-    "source": "null (yfinance blocked)",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "btc_ndx_corr_30d": {
-    "value": null,
-    "source": "null (yfinance blocked)",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "btc_ndx_corr_7d": {
-    "value": null,
-    "source": "null (yfinance blocked)",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "etf_btc_flow": {
-    "value": null,
-    "source": "null (May 30 not yet published; 9-day streak -$2.8B total)",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "sentiment_btc_score": {
-    "value": 55.7,
-    "source": "Apify kGmNobpynVF5vXWC0 (160 tweets)",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "sentiment_eth_score": {
-    "value": 64.2,
-    "source": "Apify kGmNobpynVF5vXWC0",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "sentiment_overall_score": {
-    "value": 57.1,
-    "source": "Apify kGmNobpynVF5vXWC0",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "sentiment_band": {
-    "value": "greed",
-    "source": "calculated",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "viral_dominates": {
-    "value": false,
-    "source": "calculated",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
-  },
-  "viral_pct": {
-    "value": 23.9,
-    "source": "calculated",
-    "fetched_at_utc": "2026-05-30T00:38:00Z"
+  "date": "2026-05-31",
+  "generated_at_utc": "2026-05-31T00:08:00Z",
+  "fields": {
+    "btc_price": {
+      "value": 73906,
+      "source": "CoinGecko live",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "eth_price": {
+      "value": 2013,
+      "source": "CoinGecko live",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "btc_24h_chg": {
+      "value": 0.08,
+      "source": "CoinGecko live",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "eth_24h_chg": {
+      "value": -1.05,
+      "source": "CoinGecko live",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "btc_d": {
+      "value": 57.3,
+      "source": "CoinGecko global (WebSearch)",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "eth_d": {
+      "value": 9.45,
+      "source": "CoinGecko global (WebSearch)",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "stablecoin_d": {
+      "value": 12.2,
+      "source": "DefiLlama/WebSearch estimate",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "others_d": {
+      "value": 11.2,
+      "source": "WebSearch estimate",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "total3_d": {
+      "value": 21.05,
+      "source": "Calculated: 100-57.3-9.45-12.2",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "btc_d_delta7": {
+      "value": -0.79,
+      "source": "Today 57.3% - May24 58.09% (dominance_history.json)",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "alt_mom7": {
+      "value": 0.3,
+      "source": "WebSearch basket estimate (n=14)",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "breadth": {
+      "value": 71,
+      "source": "Calculated: 10/14 alts > BTC 7D(-5.1%)",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "vix": {
+      "value": 16.33,
+      "source": "Stooq ^vix (May30 carry-forward)",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "dxy": {
+      "value": 98.94,
+      "source": "Stooq DXY (May29/30 carry-forward)",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "tnx_10y": {
+      "value": 4.45,
+      "source": "FRED DGS10 (May29 carry-forward)",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "tips_10y": {
+      "value": null,
+      "source": "FRED DFII10 blocked",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "move": {
+      "value": null,
+      "source": "yfinance ^MOVE blocked",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "etf_flow_btc_1d": {
+      "value": null,
+      "source": "Farside - today data not yet published",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "btc_ndx_corr_30d": {
+      "value": null,
+      "source": "yfinance ^NDX blocked",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "btc_ndx_corr_7d": {
+      "value": null,
+      "source": "yfinance ^NDX blocked",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "btc_sentiment_score": {
+      "value": 37.29,
+      "source": "Apify kaitoeasyapi run 73QHnrilSFhmeqJY6",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "eth_sentiment_score": {
+      "value": 59.15,
+      "source": "Apify kaitoeasyapi run 73QHnrilSFhmeqJY6",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    },
+    "fear_greed_index": {
+      "value": 25,
+      "source": "Alternative.me WebSearch",
+      "fetched_at_utc": "2026-05-31T00:08:00Z"
+    }
   }
 }

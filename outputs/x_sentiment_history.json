@@ -752,5 +752,48 @@
       "US-Iran 60-day truce extension on president's desk - bull catalyst"
     ],
     "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper"
+  },
+  "2026-05-31": {
+    "date": "2026-05-31",
+    "timestamp_utc": "2026-05-31T00:08:00Z",
+    "btc": {
+      "score": 37.29,
+      "score_band": "fear",
+      "velocity": "下降",
+      "n_sampled": 72,
+      "total_engagement": 15633,
+      "source": "apify_pipeline",
+      "viral_dominates": false,
+      "viral_pct": 20.5,
+      "note": "Apify 73QHnrilSFhmeqJY6(160 raw→72 BTC-valid). Fear&Greed=25 Extreme Fear. Top BEAR: @TedPillows BTC failed $74,500→dump $70-71K(883 eng)+@cryptorover Downtrending Channel(818)+@cryptorover short $1M profits(664). Top BULL: @binance BTC long-term value(702)+@pete_rizzo_ Saylor will send BTC to $1M(551). @AshCrypto BTC.D below 60% since Apr20 alts holding(2490,neutral). viral_dominates=False(20.5%). BTC $73,906 +0.08% 24h."
+    },
+    "eth": {
+      "score": 59.15,
+      "score_band": "greed",
+      "velocity": "平穩",
+      "n_sampled": 79,
+      "total_engagement": 3954,
+      "source": "apify_pipeline",
+      "note": "Apify pipeline ETH terms. Top BULL: @LLuciano_BTC Tom Lee buying $50M ETH(962 eng,extreme_bull). Top BEAR: @giantcutie666 Vitalik省流 ETH未來靠自己(658,bear)+@CryptoApprenti1 幣圈生命周期已完成(598,extreme_bear). ETH $2,013 -1.0% 24h. ETH/BTC ratio 0.02724(-1.35% vs 5/30). ethconf NYC 6/8催化劑."
+    },
+    "btc_price": 73906,
+    "btc_price_src": "CoinGecko live",
+    "eth_price": 2013,
+    "eth_price_src": "CoinGecko live",
+    "layer1": "GO",
+    "btc_d": 57.3,
+    "others_d": 11.2,
+    "macro": {
+      "vix": 16.33,
+      "vix3m": null,
+      "move": null,
+      "dxy": 98.94,
+      "tnx": 4.45,
+      "ndx": null,
+      "tips_real": null,
+      "btc_ndx_corr_30d": null,
+      "btc_ndx_corr_7d": null,
+      "etf_btc_flow": null
+    }
   }
 }

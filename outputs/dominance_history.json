@@ -474,5 +474,44 @@
       "zcash": 10.0,
       "ondo-finance": 8.0
     }
+  },
+  "2026-05-31": {
+    "date": "2026-05-31",
+    "timestamp_utc": "2026-05-31T00:08:00Z",
+    "btc_d": 57.3,
+    "eth_d": 9.45,
+    "others_d": 11.2,
+    "total3_d": 21.05,
+    "btc_d_7d_ago": 58.09,
+    "btc_d_delta7": -0.79,
+    "alt_mom7": 0.3,
+    "breadth": 71,
+    "n_valid_basket": 14,
+    "req1_pass": true,
+    "req2_pass": true,
+    "bonus_a_pass": true,
+    "bonus_b_pass": false,
+    "bonus_c_pass": false,
+    "bonuses_passed": 1,
+    "verdict_label": "🟢 GO",
+    "verdict_class": "success",
+    "verdict_detail": "req1 PASS(Δ7d=-0.79pp<0✓ BTC.D 7D顯著下行) · req2 PASS(alt_mom7=+0.3%>0✓ 勉強正值) · bonus_a PASS(-0.79pp≤-0.5pp✓) · bonus_b FAIL(0.3%<+1.5%) · bonus_c FAIL(others_d=11.2%<12%) · → 🟢 GO · ZEC/TON/SUI/SOL拖低 · NEAR/HYPE支撐",
+    "basket_7d_returns": {
+      "solana": -6.78,
+      "binancecoin": 1.0,
+      "ripple": 2.0,
+      "tron": 3.0,
+      "toncoin": -12.0,
+      "avalanche-2": -4.7,
+      "polkadot": 4.0,
+      "uniswap": 6.0,
+      "chainlink": -5.0,
+      "near": 17.9,
+      "hyperliquid": 15.1,
+      "sui": -8.0,
+      "zcash": -13.4,
+      "ondo-finance": 3.0
+    },
+    "source": "WebSearch fallback (CoinGecko API 403)"
   }
 }

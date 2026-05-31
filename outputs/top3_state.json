@@ -1,73 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-05-24",
-      "scan_done": true,
-      "regime": "GO",
-      "method": "WebSearch fallback (CoinGecko API 403)",
-      "prev_date": "2026-05-23",
-      "prev_top3": [
-        "zec",
-        "tao",
-        "hype"
-      ],
-      "prev_top10": [
-        "zec",
-        "tao",
-        "hype",
-        "fet",
-        "ondo",
-        "ton",
-        "sui",
-        "akt",
-        "virtual",
-        "trx"
-      ],
-      "top3_21d": [
-        "zec",
-        "hype",
-        "near"
-      ],
-      "top10_21d": [
-        "zec",
-        "hype",
-        "near",
-        "tao",
-        "sui",
-        "fet",
-        "ondo",
-        "trx",
-        "ton",
-        "akt"
-      ],
-      "top10_gains_21d": {
-        "zec": 100,
-        "hype": 57,
-        "near": 55,
-        "tao": 40,
-        "sui": 30,
-        "fet": 25,
-        "ondo": 22,
-        "trx": 15,
-        "ton": 12,
-        "akt": 10
-      },
-      "exits_today": [
-        "virtual"
-      ],
-      "new_entrants": [
-        "near"
-      ],
-      "c3_signals": [
-        "zec",
-        "hype"
-      ],
-      "near_7d_confirmed": 56.2,
-      "hype_7d_confirmed": 40.8,
-      "sui_7d_confirmed": 21.1,
-      "carry_signal": "🟢 GO · c3進場訊號: ZEC+HYPE連3天Top3(今日再次確認) · NEAR+56.2% 7D持守#3(等c3明日) · VIRTUAL跌出Top10(出場確認) · ZEC~+100% 21D / HYPE~+57% 21D"
-    },
-    {
       "date": "2026-05-25",
       "scan_done": true,
       "regime": "GO",
@@ -501,6 +434,82 @@
       "zec_7d": 10.0,
       "tao_7d": 5.14,
       "carry_signal": "🟢 GO · c3繼續: NEAR+HYPE · NEAR Day7 Top3 c3(+120% 21D) · HYPE近ATH $65.47(+53% 21D) · ZEC升#3(+42% 21D / +10% 7D) · TRX/TON出場 · btc_d_delta7=-0.47pp✓ alt_mom7=+5.71%✓ · 1bonus(bonus_b) → 🟢 GO"
+    },
+    {
+      "date": "2026-05-31",
+      "scan_done": true,
+      "regime": "GO",
+      "method": "WebSearch (CoinGecko API 403)",
+      "prev_date": "2026-05-30",
+      "prev_top3": [
+        "near",
+        "hype",
+        "zec"
+      ],
+      "prev_top10": [
+        "near",
+        "hype",
+        "zec",
+        "tao",
+        "fet",
+        "xlm",
+        "ondo",
+        "uni",
+        "dot",
+        "sui"
+      ],
+      "top3_21d": [
+        "near",
+        "hype",
+        "zec"
+      ],
+      "top10_21d": [
+        "near",
+        "hype",
+        "zec",
+        "tao",
+        "fet",
+        "xlm",
+        "ondo",
+        "uni",
+        "dot",
+        "render"
+      ],
+      "top10_gains_21d": {
+        "near": 100,
+        "hype": 53,
+        "zec": 42,
+        "tao": 40,
+        "fet": 35,
+        "xlm": 24,
+        "ondo": 22,
+        "uni": 18,
+        "dot": 14,
+        "render": 12
+      },
+      "exits_today": [
+        "sui"
+      ],
+      "new_entrants": [
+        "render"
+      ],
+      "c3_signals": [
+        "near",
+        "hype"
+      ],
+      "c3_new_today": [],
+      "c3_continuing": [
+        "near",
+        "hype"
+      ],
+      "near_consecutive_days": 9,
+      "near_7d": 17.9,
+      "hype_7d": 15.1,
+      "zec_7d": -13.4,
+      "tao_7d": 5.0,
+      "zec_c3_day": 2,
+      "carry_signal": "🟢 GO · c3繼續: NEAR+HYPE · NEAR Day9 Top3 c3(+100% 21D/-16% 7D窗回調) · HYPE ATH $65.47(+53% 21D/+15.1% 7D) · ZEC Day2 #3(+42% 21D/-13.4% 7D↓ 等Day3 c3) · SUI出場(宕機弱勢) · RENDER新入#10 · btc_d_delta7=-0.79pp✓ bonus_a✓ alt_mom7=+0.3%✓(勉強) · 1bonus(bonus_a) → 🟢 GO · Fear&Greed=25 極度恐慌"
     }
-  ]
+  ],
+  "last_updated": "2026-05-31"
 }
