@@ -1,91 +1,24 @@
-=== AUDIT LOG 2026-05-30 ===
-=== DATA FETCHING ===
-BTC price: $73,675 [source: WebSearch/CoinMarketCap] - OK
-ETH price: $2,034 [source: WebSearch/Coinbase+CoinGecko] - OK
-BTC 24h chg: -0.06% [source: WebSearch/CoinMarketCap] - OK
-ETH 24h chg: +1.9% [source: WebSearch/Coinbase] - OK
-Binance REST API: BLOCKED (allowlist restriction) - FALLBACK to WebSearch
-CoinGecko API /v3/global: BLOCKED (403) - FALLBACK to WebSearch
-CoinGecko API /v3/coins/markets: BLOCKED (403) - FALLBACK to WebSearch
-VIX: 16.33 [source: WebSearch/Investing.com, current intraday May 30] - OK
-DXY: 98.89 [source: WebSearch/TradingEconomics] - OK
-10Y Treasury: 4.44% [source: WebSearch/TradingEconomics, as of May 29] - OK
-TIPS real yield (DFII10): NULL - FRED API returned 403
-MOVE index: NULL - yfinance blocked
-BTC-NDX corr: NULL - yfinance blocked
-ETF BTC flow May 30: NULL - not yet published (9-day streak -$2.8B total)
-BTC dominance: 57.6% [source: WebSearch/CoinGecko] - OK
-ETH dominance: 9.5% [source: WebSearch/CoinGecko] - OK
-others_d: 11.0% [ESTIMATED from top10 context] - APPROXIMATE
-stables_sum: 8.5% [ESTIMATED: USDT+USDC+others] - APPROXIMATE
+=== AUDIT LOG 2026-05-31 ===
+Generated: 2026-05-31T00:08:00Z
 
-=== APIFY TWITTER SCRAPE ===
-Actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
-Run ID: kGmNobpynVF5vXWC0
-Status: SUCCEEDED in 49.4s
-Items collected: 160 raw, 148 after spam filter
-BTC EN score: 54.5 (eng=52420), BTC ZH score: 60.1 (eng=15338)
-ETH EN score: 76.3 (eng=7505), ETH ZH score: 47.1 (eng=5272)
-Crypto EN: 0 items (search term returned no results)
-Market ZH: 0 items (search term returned no results)
-Spam filtered: giveaway contest tweets (BitcoinIntelX +58274 eng, BitcoinPulseX +5235 eng)
-Top2 viral%: 23.9% → viral_dominates=False
+APIs blocked (null values recorded):
+  - FRED DFII10 (TIPS real): 403 blocked → null
+  - yfinance ^MOVE: blocked → null
+  - yfinance ^NDX: blocked → BTC-NDX corr null
+  - Binance API: allowlist blocked → WebSearch fallback used
+  - CoinGecko API: 403 → WebSearch fallback used
+  - Farside BTC ETF May31: data not yet published → null
 
-=== ALT BASKET 7D (14 coins) ===
-SOL: -6.7% [WebSearch/Metamask, estimated from ~$88->$82]
-BNB: +2.7% [ESTIMATED]
-XRP: -1.5% [ESTIMATED]
-TRX: +0.78% [WebSearch]
-TON: +5.27% [WebSearch]
-AVAX: -5.0% [ESTIMATED, price $9.20]
-DOT: +11.72% [WebSearch confirmed]
-UNI: +10.19% [WebSearch confirmed]
-LINK: -9.45% [WebSearch confirmed]
-NEAR: +55.0% [WebSearch multiple sources confirmed ~51-65% 7D]
-HYPE: +15.1% [WebSearch: $56.87->$65.47]
-SUI: -16.2% [WebSearch confirmed]
-ZEC: +10.0% [WebSearch confirmed]
-ONDO: +8.0% [WebSearch confirmed]
-alt_mom7: 5.71%
+Data sources used:
+  - BTC/ETH price: CoinGecko (via WebSearch)
+  - Dominance: CoinGecko global (via WebSearch, BTC.D=57.3%, ETH.D=9.45%)
+  - Alt basket 7D: WebSearch (n=14; SOL/TON/AVAX/ZEC/NEAR/HYPE confirmed, rest estimated)
+  - VIX: 16.33 (Stooq carry-forward from May30)
+  - DXY: 98.94 (Stooq carry-forward from May29/30)
+  - 10Y: 4.45% (FRED DGS10 carry-forward from May29)
+  - X sentiment: Apify kaitoeasyapi run 73QHnrilSFhmeqJY6 (160 raw, 151 valid, BTC=72 ETH=79)
+  - 21D ranking: WebSearch estimate (NEAR/HYPE/ZEC/TAO confirmed, others estimated)
 
-=== 21D TOP10 ===
-NOTE: CoinGecko/Binance APIs blocked. Values estimated from WebSearch + yesterday's history.
-NEAR: ~120% 21D (continuing strong momentum, NEAR at $2.55, 7D +55%)
-HYPE: ~53% 21D (near ATH $65.47, 7D +15.1%)
-ZEC: ~42% 21D (was 29% yesterday + strong weekly gain)
-TAO: ~38% 21D (stable, $262.81)
-FET: ~35% 21D
-XLM: ~28% 21D (was 35%, some consolidation)
-ONDO: ~23% 21D (was 17% + 8% weekly)
-UNI: ~22% 21D (10% weekly gain)
-DOT: ~16% 21D
-SUI: ~8% 21D (was 16% - 16% weekly loss)
-Exits from top10: TRX, TON
-New entrants: UNI, DOT
-
-=== C3 SIGNALS ===
-NEAR: Day 7 in Top3, c3 continuing (strong signal)
-HYPE: c3 continuing
-ZEC: Day 1 in Top3 (not yet c3)
-TAO: dropped to #4, no longer c3 trigger
-
-=== LAYER 1 VERDICT ===
-req1 (btc_d_delta7 < 0): -0.47pp → PASS
-req2 (alt_mom7 > 0): +5.71% → PASS
-bonus_a (btc_d_delta7 <= -0.5pp): -0.47 > -0.5 → FAIL
-bonus_b (alt_mom7 > 1.5%): 5.71% > 1.5% → PASS
-bonus_c (others_d > 12%): 11.0% < 12% → FAIL
-bonus_count=1 → verdict=GO
-
-=== ERRORS/NULLS ===
-TIPS real yield: null (FRED 403)
-MOVE index: null (yfinance/APIs blocked)
-BTC-NDX corr: null (yfinance blocked)
-ETF BTC flow May 30: null (not published yet; 9-day outflow streak ongoing)
-SOL 7D: estimated (-6.7%), not confirmed by direct API
-BNB 7D: estimated (+2.7%), not confirmed
-XRP 7D: estimated (-1.5%), not confirmed
-AVAX 7D: estimated (-5.0%), not confirmed
-others_d: estimated (11.0%), CoinGecko top10 API blocked
-stables_sum: estimated (8.5%)
-21D gains: all WebSearch estimates, Binance klines API blocked
+WARNING: alt_mom7=+0.3% is barely positive (high uncertainty, may be negative with market selloff)
+WARNING: req2 PASS is marginal - ZEC(-13.4%7D)/TON(-12%7D)/SOL(-6.78%7D) dragging basket down
+NOTE: Fear&Greed=25 (Extreme Fear), worst weekly ETF outflow of 2026 (-$1.47B)
