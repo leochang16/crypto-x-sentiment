@@ -513,5 +513,41 @@
       "ondo-finance": 3.0
     },
     "source": "WebSearch fallback (CoinGecko API 403)"
+  },
+  "2026-06-01": {
+    "date": "2026-06-01",
+    "timestamp_utc": "2026-06-01T02:15:00Z",
+    "total_market_cap_usd": 2570000000000,
+    "btc_price": 73600,
+    "eth_price": 2008,
+    "btc_mc": 1471839000000,
+    "eth_mc": 241293000000,
+    "btc_d": 57.27,
+    "eth_d": 9.39,
+    "stables_sum": 12.3,
+    "others_d": 7.04,
+    "total3_d": 21.04,
+    "btc_d_7day_prev": 58.11,
+    "btc_d_delta7": -0.84,
+    "alt_mom7": -0.66,
+    "breadth": 64.3,
+    "n_valid_basket": 14,
+    "source": "WebSearch fallback (CoinGecko API 403)",
+    "basket_7d_returns": {
+      "solana": -4.6,
+      "binancecoin": 5.13,
+      "ripple": 2.45,
+      "tron": -4.99,
+      "toncoin": 4.4,
+      "avalanche-2": -3.6,
+      "polkadot": 11.72,
+      "uniswap": 3.88,
+      "chainlink": -3.0,
+      "near": -4.2,
+      "hyperliquid": 8.6,
+      "sui": -16.7,
+      "zcash": -3.3,
+      "ondo-finance": -5.0
+    }
   }
 }

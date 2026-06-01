@@ -1,67 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-05-25",
-      "scan_done": true,
-      "regime": "GO",
-      "method": "WebSearch fallback (CoinGecko API 403)",
-      "prev_date": "2026-05-24",
-      "prev_top3": [
-        "zec",
-        "hype",
-        "near"
-      ],
-      "prev_top10": [
-        "zec",
-        "hype",
-        "near",
-        "tao",
-        "sui",
-        "fet",
-        "ondo",
-        "trx",
-        "ton",
-        "akt"
-      ],
-      "top3_21d": [
-        "zec",
-        "hype",
-        "near"
-      ],
-      "top10_21d": [
-        "zec",
-        "hype",
-        "near",
-        "tao",
-        "sui",
-        "ondo",
-        "fet",
-        "trx",
-        "ton",
-        "akt"
-      ],
-      "top10_gains_21d": {
-        "zec": 115,
-        "hype": 65,
-        "near": 65,
-        "tao": 42,
-        "sui": 28,
-        "ondo": 28,
-        "fet": 26,
-        "trx": 14,
-        "ton": 13,
-        "akt": 10
-      },
-      "exits_today": [],
-      "new_entrants": [],
-      "c3_signals": [
-        "zec",
-        "hype"
-      ],
-      "near_day2": true,
-      "carry_signal": "🟢 GO · c3維持: ZEC+HYPE連4天Top3 · NEAR第2天(明日c3) · 無新退出 · alt_mom7=+3.88%(breadth 57%) · Saylor BitVac蓄力中"
-    },
-    {
       "date": "2026-05-26",
       "scan_done": true,
       "regime": "ALT-OFF",
@@ -509,7 +448,86 @@
       "tao_7d": 5.0,
       "zec_c3_day": 2,
       "carry_signal": "🟢 GO · c3繼續: NEAR+HYPE · NEAR Day9 Top3 c3(+100% 21D/-16% 7D窗回調) · HYPE ATH $65.47(+53% 21D/+15.1% 7D) · ZEC Day2 #3(+42% 21D/-13.4% 7D↓ 等Day3 c3) · SUI出場(宕機弱勢) · RENDER新入#10 · btc_d_delta7=-0.79pp✓ bonus_a✓ alt_mom7=+0.3%✓(勉強) · 1bonus(bonus_a) → 🟢 GO · Fear&Greed=25 極度恐慌"
+    },
+    {
+      "date": "2026-06-01",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "method": "WebSearch (CoinGecko API 403)",
+      "prev_date": "2026-05-31",
+      "prev_top3": [
+        "near",
+        "hype",
+        "zec"
+      ],
+      "prev_top10": [
+        "near",
+        "hype",
+        "zec",
+        "tao",
+        "fet",
+        "xlm",
+        "ondo",
+        "uni",
+        "dot",
+        "render"
+      ],
+      "top3_21d": [
+        "hype",
+        "zec",
+        "near"
+      ],
+      "top10_21d": [
+        "hype",
+        "zec",
+        "near",
+        "fet",
+        "xlm",
+        "uni",
+        "dot",
+        "ondo",
+        "render",
+        "bnb"
+      ],
+      "top10_gains_21d": {
+        "hype": 82,
+        "zec": 60,
+        "near": 48,
+        "fet": 35,
+        "xlm": 28,
+        "uni": 20,
+        "dot": 16,
+        "ondo": 15,
+        "render": 12,
+        "bnb": 10
+      },
+      "exits_today": [
+        "tao"
+      ],
+      "new_entrants": [
+        "bnb"
+      ],
+      "c3_signals": [
+        "hype",
+        "zec",
+        "near"
+      ],
+      "c3_new_today": [
+        "zec"
+      ],
+      "c3_continuing": [
+        "hype",
+        "near"
+      ],
+      "zec_c3_day3_new": true,
+      "hype_c3_continuing": true,
+      "near_consecutive_days": 10,
+      "near_7d": -4.2,
+      "hype_7d": 8.6,
+      "zec_7d": -3.3,
+      "bnb_7d": 5.13,
+      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · ZEC c3 NEW(Day3,+60% 21D)🔔 · HYPE ATH $70(c3繼續,+82% 21D) · NEAR c3 Day10(+48% 21D) · TAO跌出Top10 · BNB新入#10 · btc_d_delta7=-0.84pp✓ alt_mom7=-0.66%<0 FAIL → 🔴 ALT-OFF · Saylor買入訊號+Mastercard$1.8B加密收購"
     }
   ],
-  "last_updated": "2026-05-31"
+  "last_updated": "2026-06-01"
 }
