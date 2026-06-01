@@ -1,24 +1,28 @@
-=== AUDIT LOG 2026-05-31 ===
-Generated: 2026-05-31T00:08:00Z
+=== AUDIT LOG 2026-06-01 ===
+Generated: 2026-06-01T02:15:00Z
+APIs blocked: Binance (allowlist), Stooq (allowlist), FRED (allowlist), CoinGecko direct (403)
+Fallback: WebSearch for all macro + price data
 
-APIs blocked (null values recorded):
-  - FRED DFII10 (TIPS real): 403 blocked → null
-  - yfinance ^MOVE: blocked → null
-  - yfinance ^NDX: blocked → BTC-NDX corr null
-  - Binance API: allowlist blocked → WebSearch fallback used
-  - CoinGecko API: 403 → WebSearch fallback used
-  - Farside BTC ETF May31: data not yet published → null
+NULLS:
+- etf_btc_flow: null (June 1 Monday, Farside not yet published)
+- btc_ndx_corr_30d/7d: null (yfinance blocked, NDX data unavailable)
+- vix3m: null (API blocked)
 
-Data sources used:
-  - BTC/ETH price: CoinGecko (via WebSearch)
-  - Dominance: CoinGecko global (via WebSearch, BTC.D=57.3%, ETH.D=9.45%)
-  - Alt basket 7D: WebSearch (n=14; SOL/TON/AVAX/ZEC/NEAR/HYPE confirmed, rest estimated)
-  - VIX: 16.33 (Stooq carry-forward from May30)
-  - DXY: 98.94 (Stooq carry-forward from May29/30)
-  - 10Y: 4.45% (FRED DGS10 carry-forward from May29)
-  - X sentiment: Apify kaitoeasyapi run 73QHnrilSFhmeqJY6 (160 raw, 151 valid, BTC=72 ETH=79)
-  - 21D ranking: WebSearch estimate (NEAR/HYPE/ZEC/TAO confirmed, others estimated)
+ESTIMATES (WebSearch):
+- btc_price: $73,600 (avg Coinbase $73,413 + CMC $73,839 + TV $73,586)
+- eth_price: $2,008 (avg Bybit $2,008 + CoinGecko $1,999 + Yahoo $2,027)  
+- vix: 15.32 (May 29 close; June 1 Mon market open, fresh data delayed)
+- tao_21d: -15% estimate (exits top10; was #4 May31)
+- ondo_7d: -5% estimate (distribution pressure, limited search data)
+- zec_21d: ~60% estimate based on price reconstruction
 
-WARNING: alt_mom7=+0.3% is barely positive (high uncertainty, may be negative with market selloff)
-WARNING: req2 PASS is marginal - ZEC(-13.4%7D)/TON(-12%7D)/SOL(-6.78%7D) dragging basket down
-NOTE: Fear&Greed=25 (Extreme Fear), worst weekly ETF outflow of 2026 (-$1.47B)
+X SENTIMENT:
+- Apify run: Li7ctrSSCibhrV277 (SUCCEEDED, 240 items, 227 valid post-filter)
+- Viral check: 41.3% top2/total → viral_dominates=True
+  Top viral: Saylor 'Working ₿etter' [eng=15890] + Mastercard $1.8B [eng=5613]
+- BTC score: 86.7 (euphoric) — viral_dominates=True WARNING: Saylor + Mastercard distort BTC signal upward
+- ETH score: 33.5 (fear) — RichardHeart anti-ETH rant dominant
+
+DATA QUALITY WARNINGS:
+- BTC score 86.7 may be inflated by Saylor buying hint (viral_dominates=True, 41.3%)
+- Layer 1 uses May 25 btc_d (58.11%) as 7D reference point

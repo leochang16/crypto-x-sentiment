@@ -795,5 +795,45 @@
       "btc_ndx_corr_7d": null,
       "etf_btc_flow": null
     }
+  },
+  "2026-06-01": {
+    "date": "2026-06-01",
+    "timestamp_utc": "2026-06-01T02:15:00Z",
+    "btc_score": 86.7,
+    "btc_score_band": "euphoric",
+    "eth_score": 33.5,
+    "eth_score_band": "fear",
+    "overall_score": 69.6,
+    "band": "greed",
+    "n_valid_tweets": 227,
+    "n_total_tweets": 240,
+    "viral_dominates": true,
+    "top2_viral_pct": 41.3,
+    "apify_run_id": "Li7ctrSSCibhrV277",
+    "btc_price": 73600,
+    "eth_price": 2008,
+    "layer1": "ALT-OFF",
+    "macro": {
+      "vix": 15.32,
+      "vix3m": null,
+      "move": 70.22,
+      "dxy": 98.94,
+      "tnx": 4.44,
+      "tips_real": 2.04,
+      "etf_btc_flow": null,
+      "fng": 28
+    },
+    "key_signals": [
+      "Saylor 'Working ₿etter' hints BTC buy Monday - extreme bull (viral #1, eng=15890)",
+      "Mastercard acquires $1.8B Bitcoin/crypto company - extreme bull (Pete Rizzo/AshCrypto)",
+      "HYPE new ATH $70 (+82% 21D) - extreme bull (AshCrypto eng=2280)",
+      "OTHERS/BTC 1W downtrend broken - altcoin strength signal (AshCrypto eng=1827)",
+      "CryptoNobler: worst day of 2026 ahead, new Fed chair confirmed rate hikes - extreme bear",
+      "USDT market cap drops $1.2B in 24h (Tether burns) - bear signal",
+      "TedPillows: ETH bottom $1,400-1,500 in 2026 - ETH bear",
+      "RichardHeart anti-ETH rant dominates ETH sentiment - extreme bear",
+      "Cointelegraph: ETH never closed 3 red quarters - first time risk? - bear",
+      "Fear & Greed = 28 (Fear)"
+    ]
   }
 }

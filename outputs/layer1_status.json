@@ -458,5 +458,32 @@
     "verdict_class": "success",
     "verdict_detail": "req1 PASS(Δ7d=-0.79pp<0✓) · req2 PASS(alt_mom7=+0.3%>0✓) · bonus_a PASS(Δ=-0.79pp≤-0.5pp✓) · bonus_b FAIL(0.3%<+1.5%) · bonus_c FAIL(11.2%<12%) · → 🟢 GO · BTC.D 57.3%(7D 顯著下滑) · alt basket 勉強正 · ZEC/TON/SUI/SOL拖低",
     "source": "WebSearch fallback (direct APIs blocked)"
+  },
+  "2026-06-01": {
+    "date": "2026-06-01",
+    "timestamp_utc": "2026-06-01T02:15:00Z",
+    "btc_d": 57.27,
+    "eth_d": 9.39,
+    "others_d": 7.04,
+    "total3_d": 21.04,
+    "btc_d_delta7": -0.84,
+    "alt_mom7": -0.66,
+    "breadth": 64.3,
+    "n_valid_basket": 14,
+    "conditions": {
+      "req1_btc_d_delta_lt0": true,
+      "req1_met": true,
+      "req2_alt_mom7_gt0": false,
+      "req2_met": false,
+      "bonus_a_btc_d_delta_lte_minus05": true,
+      "bonus_b_alt_mom7_gt15": false,
+      "bonus_c_others_d_gt12": false
+    },
+    "bonuses_passed": 0,
+    "verdict_label": "🔴 ALT-OFF",
+    "verdict_class": "danger",
+    "verdict_detail": "req1 PASS(Δ7d=-0.84pp<0✓ BTC.D繼續下滑) · req2 FAIL(alt_mom7=-0.66%<0✗ alt動能轉負) · 任一必要FAIL → 🔴 ALT-OFF · bonus_a PASS(-0.84pp≤-0.5pp) · bonus_b FAIL(-0.66%<1.5%) · bonus_c FAIL(others_d=7.04%<12%) · SUI-16.7% 7D / SOL-4.6% / TRX-4.99% / NEAR-4.2% 拖低",
+    "source": "WebSearch fallback (CoinGecko API 403)",
+    "notes": "HYPE ATH $70(+82% 21D) · ZEC $639(+60% 21D) · NEAR $2.27(+48% 21D) · FET +40% 21D(+30% 7D) · TAO-16% 21D 出場 · Mastercard $1.8B BTC收購 · Saylor hint · ethconf NYC 6/8前"
   }
 }

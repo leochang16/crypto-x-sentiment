@@ -1,121 +1,129 @@
 {
-  "date": "2026-05-31",
-  "generated_at_utc": "2026-05-31T00:08:00Z",
-  "fields": {
-    "btc_price": {
-      "value": 73906,
-      "source": "CoinGecko live",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "eth_price": {
-      "value": 2013,
-      "source": "CoinGecko live",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "btc_24h_chg": {
-      "value": 0.08,
-      "source": "CoinGecko live",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "eth_24h_chg": {
-      "value": -1.05,
-      "source": "CoinGecko live",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "btc_d": {
-      "value": 57.3,
-      "source": "CoinGecko global (WebSearch)",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "eth_d": {
-      "value": 9.45,
-      "source": "CoinGecko global (WebSearch)",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "stablecoin_d": {
-      "value": 12.2,
-      "source": "DefiLlama/WebSearch estimate",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "others_d": {
-      "value": 11.2,
-      "source": "WebSearch estimate",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "total3_d": {
-      "value": 21.05,
-      "source": "Calculated: 100-57.3-9.45-12.2",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "btc_d_delta7": {
-      "value": -0.79,
-      "source": "Today 57.3% - May24 58.09% (dominance_history.json)",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "alt_mom7": {
-      "value": 0.3,
-      "source": "WebSearch basket estimate (n=14)",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "breadth": {
-      "value": 71,
-      "source": "Calculated: 10/14 alts > BTC 7D(-5.1%)",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "vix": {
-      "value": 16.33,
-      "source": "Stooq ^vix (May30 carry-forward)",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "dxy": {
-      "value": 98.94,
-      "source": "Stooq DXY (May29/30 carry-forward)",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "tnx_10y": {
-      "value": 4.45,
-      "source": "FRED DGS10 (May29 carry-forward)",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "tips_10y": {
-      "value": null,
-      "source": "FRED DFII10 blocked",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "move": {
-      "value": null,
-      "source": "yfinance ^MOVE blocked",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "etf_flow_btc_1d": {
-      "value": null,
-      "source": "Farside - today data not yet published",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "btc_ndx_corr_30d": {
-      "value": null,
-      "source": "yfinance ^NDX blocked",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "btc_ndx_corr_7d": {
-      "value": null,
-      "source": "yfinance ^NDX blocked",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "btc_sentiment_score": {
-      "value": 37.29,
-      "source": "Apify kaitoeasyapi run 73QHnrilSFhmeqJY6",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "eth_sentiment_score": {
-      "value": 59.15,
-      "source": "Apify kaitoeasyapi run 73QHnrilSFhmeqJY6",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    },
-    "fear_greed_index": {
-      "value": 25,
-      "source": "Alternative.me WebSearch",
-      "fetched_at_utc": "2026-05-31T00:08:00Z"
-    }
+  "date": "2026-06-01",
+  "generated_utc": "2026-06-01T02:15:00Z",
+  "btc_price": {
+    "value": 73600,
+    "source": "WebSearch (Coinbase/CMC/Yahoo avg)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "eth_price": {
+    "value": 2008,
+    "source": "WebSearch (Bybit/Coinbase/CoinGecko avg)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "btc_d": {
+    "value": 57.27,
+    "source": "WebSearch CoinGecko/CoinMarketCap",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "eth_d": {
+    "value": 9.39,
+    "source": "WebSearch CoinGecko",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "total_market_cap": {
+    "value": 2570000000000,
+    "source": "WebSearch CoinGecko ($2.57T)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "stables_sum_pct": {
+    "value": 12.3,
+    "source": "WebSearch ($316B / $2.57T)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "vix": {
+    "value": 15.32,
+    "source": "WebSearch (StreetStats/Yahoo, May 29 close - Mon Jun1 market open, delay)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "dxy": {
+    "value": 98.94,
+    "source": "WebSearch TradingView/Yahoo (May 30 close)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "tnx_10y": {
+    "value": 4.44,
+    "source": "WebSearch (US-Iran peace ~4.44%)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "tips_real_10y": {
+    "value": 2.04,
+    "source": "WebSearch TradingEconomics (May 29)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "move": {
+    "value": 70.22,
+    "source": "WebSearch StreetStats/MacroMicro",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "etf_btc_flow": {
+    "value": null,
+    "source": "null - June 1 Monday not yet reported",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "btc_ndx_corr_30d": {
+    "value": null,
+    "source": "null - APIs blocked",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "fng": {
+    "value": 28,
+    "source": "WebSearch feargreedmeter.com",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "x_sentiment_apify_run": {
+    "value": "Li7ctrSSCibhrV277",
+    "source": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "x_btc_score": {
+    "value": 86.7,
+    "source": "Apify 240 raw → 227 valid, engagement-weighted",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "x_eth_score": {
+    "value": 33.5,
+    "source": "Apify 240 raw → 227 valid, engagement-weighted",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "x_overall_score": {
+    "value": 69.6,
+    "source": "Apify 240 raw → 227 valid, engagement-weighted",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "alt_mom7": {
+    "value": -0.66,
+    "source": "WebSearch 14-coin basket mean 7D %",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "breadth": {
+    "value": 64.3,
+    "source": "9/14 coins > BTC 7D (-4.04%)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "btc_d_delta7": {
+    "value": -0.84,
+    "source": "57.27%(Jun1) - 58.11%(May25)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "near_21d_pct": {
+    "value": 48.4,
+    "source": "WebSearch ($1.53 May11 → $2.27 Jun1)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "hype_21d_pct": {
+    "value": 81.7,
+    "source": "WebSearch ($38 May11 → $69.03 Jun1)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "zec_21d_pct": {
+    "value": 59.8,
+    "source": "WebSearch estimate (~$400 May11 → $639 Jun1)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
+  },
+  "tao_21d_pct": {
+    "value": -15.0,
+    "source": "WebSearch ($305 May13 → $255 Jun1; exits top10)",
+    "fetched_at_utc": "2026-06-01T02:15:00Z"
   }
 }
