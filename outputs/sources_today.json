@@ -72,8 +72,8 @@
     "fetched_at_utc": "2026-06-02T00:30:00Z"
   },
   "others_d": {
-    "value": 7.0,
-    "source": "Estimated from CoinGecko data",
+    "value": 7.04,
+    "source": "CoinGecko WebSearch (Others category)",
     "fetched_at_utc": "2026-06-02T00:30:00Z"
   },
   "total3_d": {
