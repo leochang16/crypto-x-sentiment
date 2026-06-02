@@ -1,28 +1,29 @@
-=== AUDIT LOG 2026-06-01 ===
-Generated: 2026-06-01T02:15:00Z
-APIs blocked: Binance (allowlist), Stooq (allowlist), FRED (allowlist), CoinGecko direct (403)
-Fallback: WebSearch for all macro + price data
+=== AUDIT LOG 2026-06-02 ===
+NULLS (required to log):
+  - ^MOVE: null (yfinance blocked in cloud environment)
+  - etf_btc_flow: null (Farside Jun 2 data not yet published)
+  - btc_ndx_corr_30d: null (yfinance blocked)
+  - btc_ndx_corr_7d: null (yfinance blocked)
 
-NULLS:
-- etf_btc_flow: null (June 1 Monday, Farside not yet published)
-- btc_ndx_corr_30d/7d: null (yfinance blocked, NDX data unavailable)
-- vix3m: null (API blocked)
+API STATUS:
+  - Binance API: BLOCKED (Host not in allowlist)
+  - CoinGecko API: 403 Forbidden
+  - Stooq CSV: 403 Forbidden (redirected to WebSearch)
+  - FRED CSV: 403 Forbidden (redirected to WebSearch)
+  - Apify Twitter: SUCCESS (240 raw, 228 valid after filter)
 
-ESTIMATES (WebSearch):
-- btc_price: $73,600 (avg Coinbase $73,413 + CMC $73,839 + TV $73,586)
-- eth_price: $2,008 (avg Bybit $2,008 + CoinGecko $1,999 + Yahoo $2,027)  
-- vix: 15.32 (May 29 close; June 1 Mon market open, fresh data delayed)
-- tao_21d: -15% estimate (exits top10; was #4 May31)
-- ondo_7d: -5% estimate (distribution pressure, limited search data)
-- zec_21d: ~60% estimate based on price reconstruction
+DATA SOURCES:
+  - BTC/ETH price: CoinGecko WebSearch
+  - VIX: Yahoo Finance WebSearch (May 29 close reference, ~15.32)
+  - DXY: WebSearch 99.009
+  - 10Y nominal: FRED WebSearch 4.51% (Jun 1)
+  - 10Y TIPS real: FRED WebSearch 2.04% (May 29)
+  - BTC dominance: CoinGecko WebSearch 56.81%
+  - Altcoin basket 7D: WebSearch (per-coin searches)
+  - 21D top coins: WebSearch estimates based on yesterday's history + today's data
 
-X SENTIMENT:
-- Apify run: Li7ctrSSCibhrV277 (SUCCEEDED, 240 items, 227 valid post-filter)
-- Viral check: 41.3% top2/total → viral_dominates=True
-  Top viral: Saylor 'Working ₿etter' [eng=15890] + Mastercard $1.8B [eng=5613]
-- BTC score: 86.7 (euphoric) — viral_dominates=True WARNING: Saylor + Mastercard distort BTC signal upward
-- ETH score: 33.5 (fear) — RichardHeart anti-ETH rant dominant
-
-DATA QUALITY WARNINGS:
-- BTC score 86.7 may be inflated by Saylor buying hint (viral_dominates=True, 41.3%)
-- Layer 1 uses May 25 btc_d (58.11%) as 7D reference point
+VERDICTS:
+  - Layer1: GO (req1✓ Δ=-1.39pp, req2✓ alt_mom7=+0.47%, bonus_a✓, 1/3)
+  - X Sentiment: neutral (48.05)
+  - BTC score: 50.5 neutral
+  - ETH score: 47.7 neutral

@@ -485,5 +485,30 @@
     "verdict_detail": "req1 PASS(Δ7d=-0.84pp<0✓ BTC.D繼續下滑) · req2 FAIL(alt_mom7=-0.66%<0✗ alt動能轉負) · 任一必要FAIL → 🔴 ALT-OFF · bonus_a PASS(-0.84pp≤-0.5pp) · bonus_b FAIL(-0.66%<1.5%) · bonus_c FAIL(others_d=7.04%<12%) · SUI-16.7% 7D / SOL-4.6% / TRX-4.99% / NEAR-4.2% 拖低",
     "source": "WebSearch fallback (CoinGecko API 403)",
     "notes": "HYPE ATH $70(+82% 21D) · ZEC $639(+60% 21D) · NEAR $2.27(+48% 21D) · FET +40% 21D(+30% 7D) · TAO-16% 21D 出場 · Mastercard $1.8B BTC收購 · Saylor hint · ethconf NYC 6/8前"
+  },
+  "2026-06-02": {
+    "date": "2026-06-02",
+    "timestamp_utc": "2026-06-02T00:30:00Z",
+    "btc_d": 56.81,
+    "eth_d": 9.57,
+    "others_d": 7.0,
+    "total3_d": 21.05,
+    "btc_d_delta7": -1.39,
+    "alt_mom7": 0.47,
+    "breadth": 78.6,
+    "n_valid_basket": 14,
+    "conditions": {
+      "req1_btc_d_delta_lt0": true,
+      "req1_met": true,
+      "req2_alt_mom7_gt0": true,
+      "req2_met": true,
+      "bonus_a_btc_d_delta_lte_minus05": true,
+      "bonus_b_alt_mom7_gt15": false,
+      "bonus_c_others_d_gt12": false
+    },
+    "bonuses_passed": 1,
+    "verdict": "GO",
+    "verdict_emoji": "🟢",
+    "source": "WebSearch fallback (CoinGecko API 403)"
   }
 }

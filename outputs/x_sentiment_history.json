@@ -835,5 +835,59 @@
       "Cointelegraph: ETH never closed 3 red quarters - first time risk? - bear",
       "Fear & Greed = 28 (Fear)"
     ]
+  },
+  "2026-06-02": {
+    "date": "2026-06-02",
+    "timestamp_utc": "2026-06-02T00:30:00Z",
+    "score": 48.05,
+    "btc_score": 50.5,
+    "eth_score": 47.7,
+    "band": "neutral",
+    "tweet_count_valid": 228,
+    "tweet_count_raw": 240,
+    "total_engagement": 282614,
+    "top2_engagement_pct": 9.1,
+    "viral_dominates": false,
+    "method_notes": "apify_pipeline",
+    "bucket_distribution": {
+      "extreme_bear": 0,
+      "bear": 8,
+      "neutral": 14,
+      "bull": 2,
+      "extreme_bull": 0
+    },
+    "evidence": [
+      {
+        "user": "WatcherGuru",
+        "text": "BREAKING: Michael Saylor's 'Strategy' sold 32 Bitcoin worth $2.5 million.",
+        "likes": 10000,
+        "rt": 2800,
+        "replies": 600,
+        "bookmarks": 500,
+        "eng": 15953,
+        "bucket": "neutral"
+      },
+      {
+        "user": "WatcherGuru",
+        "text": "JUST IN: Bitcoin falls under $74,000. $ETH falls under $2,000",
+        "likes": 6200,
+        "rt": 1680,
+        "replies": 300,
+        "bookmarks": 234,
+        "eng": 9674,
+        "bucket": "neutral"
+      },
+      {
+        "user": "WatcherGuru",
+        "text": "JUST IN: Over $250,000,000 liquidated from the crypto market in the past 15 minutes.",
+        "likes": 4800,
+        "rt": 1600,
+        "replies": 300,
+        "bookmarks": 200,
+        "eng": 7492,
+        "bucket": "bear"
+      }
+    ],
+    "source": "Apify kaitoeasyapi 6-term scrape"
   }
 }
