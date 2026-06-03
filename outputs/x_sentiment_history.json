@@ -892,9 +892,9 @@
   },
   "2026-06-03": {
     "date": "2026-06-03",
-    "timestamp_utc": "2026-06-03T00:30:00Z",
+    "timestamp_utc": "2026-06-03T12:00:00Z",
     "btc": {
-      "score": 47.7,
+      "score": 46.5,
       "score_band": "neutral",
       "velocity": "下降",
       "n_sampled": 235,
@@ -915,12 +915,12 @@
         {"text": "US Treasury seized $1B Iran crypto", "eng": 4442, "bucket": "neutral"},
         {"text": "Clarity Act Senate Calendar", "eng": 2049, "bucket": "bull"}
       ],
-      "note": "BTC崩$67,400(-8.4% vs $73,594 6/02). Google+Berkshire $80B AI fund機構輪動. ZEC逆勢+13%伊朗隱私幣敘事. ALT-OFF:req1 PASS(Δ7d=-2.23pp) req2 FAIL(alt_mom7=-4.41%)."
+      "note": "BTC neutral(46.5). BTC $67,154(-3.41% 24h). Google+Berkshire $80B AI fund機構輪動. ZEC逆勢+23% 7D伊朗隱私幣敘事. Layer1: 🟢 GO req1 PASS(Δ7d=-0.03pp) req2 PASS(alt_mom7=+1.04%)."
     },
     "eth": {
-      "score": 45.2,
+      "score": 51.8,
       "score_band": "neutral",
-      "velocity": "下降",
+      "velocity": "平穩",
       "n_sampled": 79,
       "viral_dominates": false,
       "sentiment_counts": {
@@ -930,8 +930,10 @@
         "bull": 2,
         "extreme_bull": 0
       },
-      "note": "ETH neutral(45.2) 小跌. ETH $1,880(-5.9% vs $1,997 6/02). ETH/BTC ratio 0.02789(+2.8% vs 6/02,ETH相對抗跌). ethconf NYC(6/8)催化劑近在咫尺。"
+      "note": "ETH neutral(51.8). ETH $1,882(-4.94% 24h). ETH/BTC ratio 0.02803(ETH相對抗跌). ethconf NYC(6/8)催化劑近在咫尺。"
     },
-    "source": "Apify kaitoeasyapi 6-term scrape"
+    "overall_score": 48.1,
+    "overall_band": "neutral",
+    "source": "Apify kaitoeasyapi 6-term scrape (fresh run 2026-06-03)"
   }
 }
