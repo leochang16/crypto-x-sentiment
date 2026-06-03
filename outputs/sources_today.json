@@ -1,119 +1,129 @@
 {
-  "date": "2026-06-02",
-  "fetched_at_utc": "2026-06-02T00:30:00Z",
+  "date": "2026-06-03",
+  "fetched_at_utc": "2026-06-03T00:30:00Z",
   "btc_price": {
-    "value": 73594,
-    "source": "CoinGecko WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "value": 67400,
+    "source": "CoinMarketCap WebSearch",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
   "btc_24h_change": {
-    "value": -0.6,
-    "source": "CoinGecko WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "value": -8.4,
+    "source": "calculated vs 6/02 $73,594",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
   "eth_price": {
-    "value": 1997,
-    "source": "CoinGecko WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "value": 1880,
+    "source": "estimate (derived from total MC $2.38T × ETH dominance 9.39% / supply 120.5M)",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
   "eth_24h_change": {
-    "value": 0.25,
-    "source": "CoinGecko WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "value": -5.9,
+    "source": "calculated vs 6/02 $1,997",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "btc_d": {
+    "value": 55.8,
+    "source": "CoinGecko WebSearch fallback",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "eth_d": {
+    "value": 9.39,
+    "source": "derived from MC ratio",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "others_d": {
+    "value": 9.76,
+    "source": "CoinGecko WebSearch fallback",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "total3_d": {
+    "value": 20.4,
+    "source": "estimate",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "btc_d_delta7": {
+    "value": -2.23,
+    "source": "calculated: 55.8 - 58.03(2026-05-27)",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "alt_mom7": {
+    "value": -4.41,
+    "source": "calculated mean of 14-coin basket 7D returns",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "breadth": {
+    "value": 85.7,
+    "source": "calculated: 12/14 coins 7D return > BTC 7D return (-11.55%)",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
   "vix": {
-    "value": 15.32,
-    "source": "Yahoo Finance WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "value": 16.05,
+    "source": "WebSearch (Stooq blocked)",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
-  "dxy": {
-    "value": 99.009,
-    "source": "Stooq/WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+  "vix3m": {
+    "value": null,
+    "source": "null - yfinance/Stooq blocked",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
   "move": {
     "value": null,
     "source": "null - yfinance blocked",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "dxy": {
+    "value": 99.1,
+    "source": "WebSearch (Stooq blocked)",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
   "tnx_10y": {
-    "value": 4.51,
-    "source": "FRED WebSearch (Jun 1 est)",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "value": 4.46,
+    "source": "WebSearch fallback",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
-  "tips_real_10y": {
+  "tips_real": {
     "value": 2.04,
-    "source": "FRED WebSearch (May 29 est)",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "source": "carry-forward from 6/01 (FRED/yfinance blocked)",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
-  "etf_btc_flow": {
+  "dfii10": {
     "value": null,
-    "source": "null - Farside Jun 2 not yet available",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "source": "null - FRED blocked",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
   "btc_ndx_corr_30d": {
     "value": null,
     "source": "null - yfinance blocked",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
-  "btc_d": {
-    "value": 56.81,
-    "source": "CoinGecko WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+  "btc_ndx_corr_7d": {
+    "value": null,
+    "source": "null - yfinance blocked",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
-  "eth_d": {
-    "value": 9.57,
-    "source": "CoinGecko WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+  "etf_btc_flow": {
+    "value": null,
+    "source": "null - Farside not yet published for 6/02",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
-  "stables_sum": {
-    "value": 12.57,
-    "source": "CoinGecko WebSearch",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
-  },
-  "others_d": {
-    "value": 7.04,
-    "source": "CoinGecko WebSearch (Others category)",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
-  },
-  "total3_d": {
-    "value": 21.05,
-    "source": "Calculated (100-btc_d-eth_d-stables_sum)",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
-  },
-  "btc_d_delta7": {
-    "value": -1.39,
-    "source": "dominance_history.json 2026-05-26 btc_d=58.2",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
-  },
-  "alt_mom7": {
-    "value": 0.47,
-    "source": "WebSearch basket 14 alts",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
-  },
-  "breadth": {
-    "value": 78.6,
-    "source": "WebSearch (11/14 alts beat BTC -4.91% 7D)",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
-  },
-  "sentiment_btc": {
-    "value": 50.5,
-    "source": "Apify kaitoeasyapi 74 valid tweets",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
-  },
-  "sentiment_eth": {
+  "btc_sentiment_score": {
     "value": 47.7,
-    "source": "Apify kaitoeasyapi 75 valid tweets",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "source": "Apify kaitoeasyapi twitter scraper - 240 raw → 235 valid tweets, 6 search terms",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
-  "sentiment_combined": {
-    "value": 48.05,
-    "source": "Apify kaitoeasyapi 228 valid tweets",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+  "eth_sentiment_score": {
+    "value": 45.2,
+    "source": "Apify kaitoeasyapi twitter scraper - 79 valid tweets",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   },
   "layer1_verdict": {
-    "value": "GO",
-    "source": "Calculated",
-    "fetched_at_utc": "2026-06-02T00:30:00Z"
+    "value": "ALT-OFF",
+    "source": "computed: req1✓(Δ7d=-2.23pp<0) req2✗(alt_mom7=-4.41%<0) → ALT-OFF",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  },
+  "eth_btc_ratio": {
+    "value": 0.02789,
+    "source": "calculated: 1880/67400",
+    "fetched_at_utc": "2026-06-03T00:30:00Z"
   }
 }

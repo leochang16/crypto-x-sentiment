@@ -1,29 +1,48 @@
-=== AUDIT LOG 2026-06-02 ===
+=== AUDIT LOG 2026-06-03 ===
 NULLS (required to log):
   - ^MOVE: null (yfinance blocked in cloud environment)
   - etf_btc_flow: null (Farside Jun 2 data not yet published)
   - btc_ndx_corr_30d: null (yfinance blocked)
   - btc_ndx_corr_7d: null (yfinance blocked)
+  - vix3m: null (yfinance/Stooq blocked)
+  - dfii10: null (FRED blocked)
+  - ndx: null (yfinance blocked)
 
 API STATUS:
   - Binance API: BLOCKED (Host not in allowlist)
   - CoinGecko API: 403 Forbidden
-  - Stooq CSV: 403 Forbidden (redirected to WebSearch)
-  - FRED CSV: 403 Forbidden (redirected to WebSearch)
-  - Apify Twitter: SUCCESS (240 raw, 228 valid after filter)
+  - Stooq CSV: BLOCKED (Host not in allowlist)
+  - FRED CSV: BLOCKED (Host not in allowlist)
+  - yfinance: BLOCKED (Host not in allowlist)
+  - Apify Twitter: SUCCESS (240 raw, 235 valid after filter, 6 search terms)
 
 DATA SOURCES:
-  - BTC/ETH price: CoinGecko WebSearch
-  - VIX: Yahoo Finance WebSearch (May 29 close reference, ~15.32)
-  - DXY: WebSearch 99.009
-  - 10Y nominal: FRED WebSearch 4.51% (Jun 1)
-  - 10Y TIPS real: FRED WebSearch 2.04% (May 29)
-  - BTC dominance: CoinGecko WebSearch 56.81%
-  - Altcoin basket 7D: WebSearch (per-coin searches)
-  - 21D top coins: WebSearch estimates based on yesterday's history + today's data
+  - BTC price: CoinMarketCap WebSearch ($67,400, -8.4% vs 6/02)
+  - ETH price: estimate derived from total MC $2.38T × ETH dominance 9.39% / supply 120.5M = $1,880
+  - VIX: WebSearch 16.05 (geopolitical tensions, AI fund rotation)
+  - DXY: WebSearch 99.1
+  - 10Y nominal: WebSearch 4.46% (slight drop)
+  - 10Y TIPS real: carry-forward 2.04% from 6/01 (FRED blocked)
+  - BTC dominance: WebSearch 55.8% (-2.23pp 7D from 58.03% on 5/27)
+  - OTHERS.D: WebSearch 9.76% (up from 7.04% on 6/02)
+  - Altcoin basket 7D: WebSearch estimates (alt_mom7=-4.41%)
+  - ETH/BTC ratio: calculated 1880/67400=0.02789 (+2.8% vs 6/02, ETH relatively resilient)
+  - 21D top coins: WebSearch estimates based on yesterday's history + today's crash data
 
 VERDICTS:
-  - Layer1: GO (req1✓ Δ=-1.39pp, req2✓ alt_mom7=+0.47%, bonus_a✓, 1/3)
-  - X Sentiment: neutral (48.05)
-  - BTC score: 50.5 neutral
-  - ETH score: 47.7 neutral
+  - Layer1: ALT-OFF (req1✓ Δ=-2.23pp, req2✗ alt_mom7=-4.41% BTC crash dragged all alts)
+  - X Sentiment BTC: neutral (47.7) - slight drop
+  - X Sentiment ETH: neutral (45.2) - slight drop
+  - 21D Top3: ZEC c3 Day5 / HYPE c3 / NEAR c3 Day12 (all holding ALT-OFF)
+  - Exits: RENDER (dropped from Top10)
+  - New entrants: SOL (#6, +15% 21D, relatively resilient in crash)
+
+KEY EVENTS:
+  - BTC crashed to $67,400 (-8.4% vs $73,594 on 6/02)
+  - $700M liquidations across crypto market
+  - Google+Berkshire $80B AI fund = institutional rotation away from crypto
+  - Strategy sold 32 BTC (first sell in 4 years) - eng=18,838
+  - US Treasury seized $1B Iran crypto assets - Iran deal collapse
+  - ZEC surged +13% on privacy coin narrative (Iran seizure) - c3 Day5 (+80% 21D)
+  - Clarity Act ranked on Senate calendar - regulatory positive
+  - ethconf NYC (6/8-10) approaching catalyst

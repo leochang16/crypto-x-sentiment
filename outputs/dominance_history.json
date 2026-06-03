@@ -585,5 +585,41 @@
       "zcash": 14.0,
       "ondo-finance": 12.0
     }
+  },
+  "2026-06-03": {
+    "date": "2026-06-03",
+    "timestamp_utc": "2026-06-03T00:30:00Z",
+    "total_market_cap_usd": 2380000000000,
+    "btc_price": 67400,
+    "eth_price": 1880,
+    "btc_mc": 1328000000000,
+    "eth_mc": 223500000000,
+    "btc_d": 55.8,
+    "eth_d": 9.39,
+    "stables_sum": 13.05,
+    "others_d": 9.76,
+    "total3_d": 20.4,
+    "btc_d_7day_prev": 58.03,
+    "btc_d_delta7": -2.23,
+    "alt_mom7": -4.41,
+    "breadth": 85.7,
+    "n_valid_basket": 14,
+    "source": "WebSearch fallback (CoinGecko API 403). BTC crash -8.4% dragged all alts. ZEC+13%(Iran privacy narrative), HYPE+7%, SOL+15%(21D). alt_mom7=-4.41% FAIL → ALT-OFF.",
+    "basket_7d_returns": {
+      "solana": 5.2,
+      "binancecoin": -8.1,
+      "ripple": -7.5,
+      "tron": -6.2,
+      "toncoin": -3.8,
+      "avalanche-2": -9.1,
+      "polkadot": -8.7,
+      "uniswap": -12.3,
+      "chainlink": -9.5,
+      "near": -7.2,
+      "hyperliquid": 7.0,
+      "sui": -14.8,
+      "zcash": 23.0,
+      "ondo-finance": -5.6
+    }
   }
 }

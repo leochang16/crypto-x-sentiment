@@ -889,5 +889,49 @@
       }
     ],
     "source": "Apify kaitoeasyapi 6-term scrape"
+  },
+  "2026-06-03": {
+    "date": "2026-06-03",
+    "timestamp_utc": "2026-06-03T00:30:00Z",
+    "btc": {
+      "score": 47.7,
+      "score_band": "neutral",
+      "velocity": "下降",
+      "n_sampled": 235,
+      "n_raw": 240,
+      "search_terms": ["bitcoin", "比特幣", "ethereum", "以太坊", "crypto market", "加密市場"],
+      "viral_dominates": false,
+      "viral_pct": 11.7,
+      "sentiment_counts": {
+        "extreme_bear": 3,
+        "bear": 9,
+        "neutral": 15,
+        "bull": 3,
+        "extreme_bull": 0
+      },
+      "top_evidence": [
+        {"text": "Strategy sold 32 BTC first time in 4 years", "eng": 18838, "bucket": "neutral"},
+        {"text": "BTC <$67K $700M liquidated", "eng": 8809, "bucket": "extreme_bear"},
+        {"text": "US Treasury seized $1B Iran crypto", "eng": 4442, "bucket": "neutral"},
+        {"text": "Clarity Act Senate Calendar", "eng": 2049, "bucket": "bull"}
+      ],
+      "note": "BTC崩$67,400(-8.4% vs $73,594 6/02). Google+Berkshire $80B AI fund機構輪動. ZEC逆勢+13%伊朗隱私幣敘事. ALT-OFF:req1 PASS(Δ7d=-2.23pp) req2 FAIL(alt_mom7=-4.41%)."
+    },
+    "eth": {
+      "score": 45.2,
+      "score_band": "neutral",
+      "velocity": "下降",
+      "n_sampled": 79,
+      "viral_dominates": false,
+      "sentiment_counts": {
+        "extreme_bear": 2,
+        "bear": 8,
+        "neutral": 14,
+        "bull": 2,
+        "extreme_bull": 0
+      },
+      "note": "ETH neutral(45.2) 小跌. ETH $1,880(-5.9% vs $1,997 6/02). ETH/BTC ratio 0.02789(+2.8% vs 6/02,ETH相對抗跌). ethconf NYC(6/8)催化劑近在咫尺。"
+    },
+    "source": "Apify kaitoeasyapi 6-term scrape"
   }
 }
