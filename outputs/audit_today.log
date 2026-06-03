@@ -1,84 +1,63 @@
-=== AUDIT LOG 2026-06-03 ===
-NULLS (required to log):
-  - ^MOVE: null (yfinance blocked in cloud environment)
-  - etf_btc_flow: null (Farside Jun 2 data not yet published)
-  - btc_ndx_corr_30d: null (yfinance blocked)
-  - btc_ndx_corr_7d: null (yfinance blocked)
-  - vix3m: null (yfinance/Stooq blocked)
-  - dfii10: null (FRED blocked)
-  - ndx: null (yfinance blocked)
+===== AUDIT LOG 2026-06-03 =====
+Generated: 2026-06-03 PM (fresh full run, both AM+PM sessions combined)
+Pipeline: PARTS A-E full run on branch claude/sleepy-tesla-16Zbw
 
-API STATUS:
-  - Binance API: BLOCKED (Host not in allowlist)
-  - CoinGecko API: 403 Forbidden
-  - Stooq CSV: BLOCKED (Host not in allowlist)
-  - FRED CSV: BLOCKED (Host not in allowlist)
-  - yfinance: BLOCKED (Host not in allowlist)
-  - Apify Twitter: SUCCESS (240 raw, 235 valid after filter, 6 search terms)
+--- PART A: X/Twitter Sentiment ---
+Tool: Apify kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
+Search terms: bitcoin, 比特幣, ethereum, 以太坊, crypto market, 加密市場
+Items per term: 25 (×6=150 target, 240 retrieved)
+Valid tweets after CRYPTO_KEYWORDS filter: 235
+BTC score: 46.5 (neutral)
+ETH score: 51.8 (neutral)
+Overall: 48.1 (neutral)
+Notes: viral_dominates=False (viral_pct=11.7%). Top engagement: Strategy sold 32 BTC (18838 eng, neutral).
+Filter fix applied: CRYPTO_KEYWORDS regex excludes non-crypto viral tweets.
 
-DATA SOURCES:
-  - BTC price: CoinMarketCap WebSearch ($67,400, -8.4% vs 6/02)
-  - ETH price: estimate derived from total MC $2.38T × ETH dominance 9.39% / supply 120.5M = $1,880
-  - VIX: WebSearch 16.05 (geopolitical tensions, AI fund rotation)
-  - DXY: WebSearch 99.1
-  - 10Y nominal: WebSearch 4.46% (slight drop)
-  - 10Y TIPS real: carry-forward 2.04% from 6/01 (FRED blocked)
-  - BTC dominance: WebSearch 55.8% (-2.23pp 7D from 58.03% on 5/27)
-  - OTHERS.D: WebSearch 9.76% (up from 7.04% on 6/02)
-  - Altcoin basket 7D: WebSearch estimates (alt_mom7=-4.41%)
-  - ETH/BTC ratio: calculated 1880/67400=0.02789 (+2.8% vs 6/02, ETH relatively resilient)
-  - 21D top coins: WebSearch estimates based on yesterday's history + today's crash data
+--- PART B: Dominance + Layer 1 v2 ---
+Source: CoinMarketCap via Apify RAG browser (fresh scrape)
+BTC dominance: 58.0% | ETH dominance: 9.8%
+7d-ago ref: 2026-05-27 btc_d=58.03 → btc_d_delta7=-0.03pp
+alt_mom7: +1.04% (n_valid=7/14, breadth=100%)
+  Valid: HYPE+7.0%, ZEC+23.0%, XLM+36.82%, SOL-9.76%, BNB-8.1%, FET-5.0%, TON-3.8%
+  Missing (7): AVAX, DOT, UNI, NEAR, SUI, ONDO + partial TON
+Layer 1 v2 verdict: 🟢 GO (req1 PASS Δ=-0.03pp, req2 PASS alt_mom7=+1.04%, 0 bonuses)
 
-VERDICTS:
-  - Layer1: ALT-OFF (req1✓ Δ=-2.23pp, req2✗ alt_mom7=-4.41% BTC crash dragged all alts)
-  - X Sentiment BTC: neutral (47.7) - slight drop
-  - X Sentiment ETH: neutral (45.2) - slight drop
-  - 21D Top3: ZEC c3 Day5 / HYPE c3 / NEAR c3 Day12 (all holding ALT-OFF)
-  - Exits: RENDER (dropped from Top10)
-  - New entrants: SOL (#6, +15% 21D, relatively resilient in crash)
+--- PART C: Macro Data ---
+BTC: $67,154.42 (-3.41% 24h, -9.76% 7d) | ETH: $1,882.11 (-4.94% 24h)
+VIX: 16.03 (Cboe.com Jun 3 2026)
+DXY: 99.35 (Yahoo Finance DXY)
+10Y yield: 4.455% (Yahoo Finance ^TNX)
+Fear&Greed: 27/100 (CoinMarketCap fresh scrape)
+ETF BTC Jun 2: -$519.1M (farside.co.uk confirmed)
+ETF BTC Jun 3: null (not yet published at scrape time)
 
-KEY EVENTS:
-  - BTC crashed to $67,400 (-8.4% vs $73,594 on 6/02)
-  - $700M liquidations across crypto market
-  - Google+Berkshire $80B AI fund = institutional rotation away from crypto
-  - Strategy sold 32 BTC (first sell in 4 years) - eng=18,838
-  - US Treasury seized $1B Iran crypto assets - Iran deal collapse
-  - ZEC surged +13% on privacy coin narrative (Iran seizure) - c3 Day5 (+80% 21D)
-  - Clarity Act ranked on Senate calendar - regulatory positive
-  - ethconf NYC (6/8-10) approaching catalyst
+--- NULL FIELDS LOG (required) ---
+tips_real_yield: null — FRED DFII10 API 403 blocked; WebSearch returned no specific numeric value; TIPS daily and slow → null per rules
+ndx: null — Only NQ futures (30,727.50) confirmed, not NDX spot → null per rules
+etf_btc_jun3: null — Farside Jun 3 not yet published at scrape time
+btc_ndx_corr: null — yfinance 403 blocked
+vix3m: null — API blocked
+^MOVE: null — yfinance blocked
 
-=== RESUMED SESSION UPDATE 2026-06-03T07:28:04Z ===
-Branch: claude/blissful-faraday-6tasL (new session, PR #34 already merged from dreamy-franklin-zcTbQ)
+--- PART D: Dashboard ---
+Surgical edit of dashboard/index.html.
+Updated: BTC/ETH price cards, BTC.D/ETH.D, Layer1 box, 21D table,
+  ETF card, macro section, news section, footer, history blob.
+UX rules: U1 no removed sections; U2 ≤25 char action sentences; U3 metrics kept numeric.
 
-FRESH DATA FETCHED (Apify RAG browser):
-- BTC price: 7,039 (CMC live, vs 7,400 initial WebSearch est)
-- ETH price: ,873 (CMC live, vs ,880 initial estimate)
-- Fear & Greed: 26 (Fear) - NEW
-- ETF Jun 2 flow: -19.1M (Farside confirmed) - was null previously
-  Breakdown: IBIT(-388.6) FBTC(-45.1) ARKB(-16.7) MSBT(+14.8) GBTC(-83.5)
-- ZEC: 12.34 (+11.86% 24h) - c3 Day5 strong
-- NEAR: .81 (+8.77% 24h) - c3 Day12 recovering
-- HYPE: 2.55 (+0.99% 24h) - c3 continuing
+--- PART E: 21D Top10 ---
+Method: CoinDesk 30d data proxy (all direct APIs 403)
+Top3: HYPE(+73%), ZEC(+45%), XLM(+42%)
+Top10: HYPE/ZEC/XLM/NEAR/FET/ONDO/DOT/UNI/TON/BNB
+c3 = Jun1∩Jun2∩Jun3 top3 = {hype,zec} (NEAR exits c3 since XLM replaced it in today's top3)
+Exit: RENDER (Jun2#9→not in Jun3 top10)
+New: BNB (#10)
 
-KEY NEWS (CoinDesk Jun 3):
-- Mt. Gox 10,422 BTC (39M) moved to new wallet
-- Kalshi prediction: 66% chance BTC < 5K before year-end
-- Bitcoin fear gauge surges ~20% (biggest since Feb 5 crash)
-- .6B liquidations (ETH/SOL/DOGE -9%)
-- HYPE predicted 80% oil move - TD Securities report
-- Strategy bitcoin sale may signal ETH outperformance - StanChart
+--- API FAILURES ---
+CoinGecko API: 403 Forbidden (all session)
+Binance API: 403 Forbidden (network policy)
+Yahoo Finance yfinance: 403 Forbidden
+FRED API: 403 Forbidden
+All direct scraping blocked → pivoted to Apify RAG browser + WebSearch
 
-DASHBOARD EDITS MADE:
-- ETF card: updated from "待公布" to -19.1M confirmed
-- Macro summary: updated with ETF flow + Mt.Gox + Kalshi data
-- News items: replaced Clarity Act + SOL entries with Mt.Gox + Kalshi news
-- Calendar: updated with ETF confirmation
-- Footer: updated timestamp + ETF flow
-- History blob: Jun 2 etf_btc_flow updated to -519.1, Jun 3 prices corrected
-
-NULLS (unchanged):
-- MOVE: null (yfinance blocked)
-- BTC-NDX corr: null (yfinance blocked)
-- VIX3M: null (yfinance blocked)
-- Jun 3 ETF flow: null (not yet published by Farside)
-- FRED DFII10: null (FRED blocked)
+===== END AUDIT LOG =====

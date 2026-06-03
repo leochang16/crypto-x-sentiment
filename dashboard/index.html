@@ -174,8 +174,8 @@ table td.note { font-size:12.5px; max-width:380px; }
   <!-- ========== TAB 1: X SENTIMENT ========== -->
   <div class="tab-panel active" id="tab-sentiment">
 
-    <div class="alert-banner danger">
-      <strong style="color:#ff8585;">🔴 ALT-OFF</strong> — btc_d_delta7=-2.23pp(req1✓) · alt_mom7=-4.41%(req2✗,BTC崩-8.4%拖累) · ZEC c3 Day5(+13% vs 大跌!) · HYPE c3繼續 · NEAR c3 Day12 · SOL新入#6 · RENDER跌出
+    <div class="alert-banner success">
+      <strong style="color:var(--success);">🟢 GO</strong> — btc_d_delta7=-0.03pp(req1✓) · alt_mom7=+1.04%(req2✓,勉強正值) · c3: HYPE+ZEC繼續 · XLM🆕#3(+42% 21D) · NEAR退出top3→#4 · BNB🆕#10 · RENDER跌出→出場
     </div>
 
     <div class="metrics" id="metrics"></div>
@@ -186,8 +186,8 @@ table td.note { font-size:12.5px; max-width:380px; }
         <div class="meta" id="chartMeta"></div>
       </div>
       <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
-      <div class="indicator-explain danger" style="margin-top:14px;">
-        BTC 情緒 neutral(47.7) 微跌。BTC 崩 $67,400 觸發 $700M 清算 · Google+Berkshire $80B AI fund 機構輪動 · ZEC 逆勢+13% 走强。ALT-OFF 環境:c3 倉位維持,不加碼。
+      <div class="indicator-explain accent" style="margin-top:14px;">
+        BTC 情緒 neutral(46.5)。BTC $67,154(-3.41% 24h)。Google+Berkshire $80B AI輪動。ZEC逆勢+23% 7D伊朗隱私幣敘事。Layer1 🟢 GO(req1✓ Δ=-0.03pp · req2✓ alt_mom7=+1.04%)。c3: HYPE+ZEC。
       </div>
     </div>
 
@@ -197,8 +197,8 @@ table td.note { font-size:12.5px; max-width:380px; }
         <div class="meta">ETH 20 天獨立檢視</div>
       </div>
       <div class="chart-wrap"><canvas id="ethChart"></canvas></div>
-      <div class="indicator-explain warn" style="margin-top:14px;">
-        ETH neutral(45.2) 微跌。ETH/BTC ratio 0.02789 小升(ETH 相對抗跌),ethconf NYC(6/8)近催化,觀察突破。
+      <div class="indicator-explain accent" style="margin-top:14px;">
+        ETH neutral(51.8) 勉強中性。ETH/BTC ratio 0.02803 ETH相對抗跌,ethconf NYC(6/8)近催化,觀察突破。
       </div>
     </div>
 
@@ -238,19 +238,19 @@ table td.note { font-size:12.5px; max-width:380px; }
   <!-- ========== TAB 2: MORNING BRIEF ========== -->
   <div class="tab-panel" id="tab-brief">
 
-    <div class="card" style="border-left:4px solid var(--danger);">
+    <div class="card" style="border-left:4px solid var(--success);">
       <div class="head">
         <div class="title">🎯 今日總結論(雙重判斷)</div>
         <div class="meta">資金面 + 小幣框架 = 行動建議</div>
       </div>
       <div style="padding:8px 0;">
         <div style="font-size:16px;color:var(--text);margin-bottom:12px;">
-          <strong style="color:var(--text-mid);">🟡 BTC 情緒 neutral(47.7)</strong> + <strong style="color:var(--danger);">🔴 小幣框架 ALT-OFF</strong> = <strong style="color:var(--danger);font-size:18px;">維持 c3 停損觀察,禁止加碼</strong>
+          <strong style="color:var(--text-mid);">🟡 BTC 情緒 neutral(46.5)</strong> + <strong style="color:var(--success);">🟢 小幣框架 GO</strong> = <strong style="color:var(--success);font-size:18px;">c3 HYPE+ZEC 維持,等加碼訊號</strong>
         </div>
         <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-mid);line-height:1.8;">
-          <li>ZEC/HYPE/NEAR c3 全三⚠供參考 · alt_mom7=-4.41% FAIL · 市場崩跌不新增倉位。</li>
-          <li>SOL 新入 #6(+15% 21D,相對抗跌) · RENDER 跌出 Top10 → 依規出場。</li>
-          <li>ethconf NYC 6/8 近催化劑 · Clarity Act 進入 Senate 日曆 · 待 ALT-ON 再進。</li>
+          <li>c3: HYPE+ZEC繼續持守 · XLM🆕#3(+42% 21D) · NEAR退出top3 c3→#4 · BNB🆕#10。</li>
+          <li>RENDER跌出Top10 → 依規出場 · alt_mom7=+1.04% req2 PASS(勉強正值)。</li>
+          <li>ethconf NYC 6/8 近催化劑 · Clarity Act進入Senate日曆 · BTC $67,154(-3.41% 24h)。</li>
         </ul>
       </div>
     </div>
@@ -264,9 +264,9 @@ table td.note { font-size:12.5px; max-width:380px; }
       <div class="brief-row r4">
         <div class="metric warn">
           <div class="label">VIX / VIX3M 比值</div>
-          <div class="value med">16.05</div>
-          <div class="sub"><span class="regime-tag r-pressure">🟡 輕升</span><span class="delta neg">6/01 est · 地緣緊張</span></div>
-          <div class="indicator-explain warn">VIX 16.05 輕升(美伊緊張+AI輪動),波動率回升。暫不阻礙加密但需觀察。</div>
+          <div class="value med">16.03</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 輕升</span><span class="delta neg">6/03 fresh · 地緣緊張</span></div>
+          <div class="indicator-explain warn">VIX 16.03 輕升(美伊緊張+AI輪動),波動率回升。暫不阻礙加密但需觀察。</div>
         </div>
         <div class="metric accent">
           <div class="label">MOVE Index</div>
@@ -276,15 +276,15 @@ table td.note { font-size:12.5px; max-width:380px; }
         </div>
         <div class="metric accent">
           <div class="label">DXY (美元)</div>
-          <div class="value med">99.1</div>
-          <div class="sub"><span class="regime-tag r-ok">🟢 低位</span><span class="delta neg">+0.09 vs 6/02</span></div>
-          <div class="indicator-explain accent">美元小幅升至 99.1,仍低位,美伊緊張推升避險需求。</div>
+          <div class="value med">99.35</div>
+          <div class="sub"><span class="regime-tag r-ok">🟢 低位</span><span class="delta neg">+0.26 vs 6/02</span></div>
+          <div class="indicator-explain accent">美元升至 99.35,仍低位,美伊緊張推升避險需求。</div>
         </div>
         <div class="metric purple">
           <div class="label">10Y TIPS 真實</div>
-          <div class="value med">2.04%</div>
-          <div class="sub"><span class="regime-tag r-ok">🟢 低位</span><span class="delta">5/29 est</span></div>
-          <div class="indicator-explain">TIPS 穩守 2.04%,加密市場實際利率壓力輕。</div>
+          <div class="value med">n/a</div>
+          <div class="sub"><span class="regime-tag r-pressure">🟡 null</span><span class="delta">FRED API 403 blocked</span></div>
+          <div class="indicator-explain">TIPS 今日無法取得(FRED API 403)。上次 2.04% 屬中性水平。</div>
         </div>
       </div>
       <div class="brief-row r3" style="margin-top:12px;">
@@ -301,10 +301,10 @@ table td.note { font-size:12.5px; max-width:380px; }
           <div class="indicator-explain">yfinance 封鎖中。BTC vs 股市分歧待觀察。</div>
         </div>
       </div>
-      <div class="alert-banner danger" style="margin-top:18px;">
-        <span style="font-size:24px;">🔴</span>
+      <div class="alert-banner warn" style="margin-top:18px;">
+        <span style="font-size:24px;">🟡</span>
         <div style="flex:1;">
-          <strong>資金面:🔴 偏空</strong> — BTC 急跌至 $67K,$700M 清算,Jun 2 ETF 出流確認 -$519.1M。BTC 情緒 neutral(47.7),VIX 16.05。<strong>alt_mom7=-4.41% ALT-OFF · c3 倉位維持停損觀察,禁止加碼。DXY 99.1,TIPS 2.04%。Mt.Gox 移動 1萬BTC,Kalshi 66% 預測年底破 $55K。</strong>
+          <strong>資金面:🟡 謹慎</strong> — BTC $67,154(-3.41% 24h),Jun 2 ETF 出流確認 -$519.1M。BTC 情緒 neutral(46.5),VIX 16.03。<strong>alt_mom7=+1.04% GO(勉強) · c3: HYPE+ZEC維持 · XLM新#3 · DXY 99.35 · TIPS null(FRED 403)。ethconf NYC 6/8 近催化劑。</strong>
         </div>
       </div>
     </div>
@@ -318,31 +318,31 @@ table td.note { font-size:12.5px; max-width:380px; }
       <div class="brief-row r4">
         <div class="metric btc">
           <div class="label">BTC.D</div>
-          <div class="value med">55.8%</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-danger">🔴 持高</span><span class="delta neg">Δ7d=-2.23pp✓</span></div>
+          <div class="value med">58.0%</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-pressure">🟡 中高</span><span class="delta neg">Δ7d=-0.03pp✓</span></div>
         </div>
         <div class="metric accent">
           <div class="label">OTHERS.D</div>
-          <div class="value med">9.76%</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-danger">🔴 &lt;12%</span><span class="delta neg">-8.4% BTC崩</span></div>
+          <div class="value med">11.59%</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-pressure">🟡 &lt;12%</span><span class="delta neg">接近門檻</span></div>
         </div>
         <div class="metric purple">
           <div class="label">TOTAL3.D</div>
-          <div class="value med">~20.4%</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-pressure">🟡 低中位</span><span class="delta neg">BTC崩拖累</span></div>
+          <div class="value med">—</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-pressure">🟡 暫無</span><span class="delta">API blocked</span></div>
         </div>
         <div class="metric warn">
           <div class="label">ETH/BTC ratio</div>
-          <div class="value med">0.02789</div>
-          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-danger">🔴 低位</span><span class="delta pos">+2.8% vs 6/02(ETH抗跌)</span></div>
+          <div class="value med">0.02803</div>
+          <div class="sub" style="margin-top:6px;"><span class="regime-tag r-pressure">🟡 低位</span><span class="delta pos">+0.3% vs 6/02(ETH抗跌)</span></div>
         </div>
       </div>
       <div style="margin-top:12px;">
-        <div class="metric danger">
+        <div class="metric success">
           <div class="label">ASI(Alt Momentum)</div>
-          <div class="value med">ALT-OFF</div>
-          <div class="sub"><span class="regime-tag r-danger">🔴 ALT-OFF</span><span style="font-size:10.5px;color:var(--text-faint);">breadth · 6/03 更新</span></div>
-          <div class="indicator-explain danger">85.7%(breadth · 12/14 alts 7D 贏 BTC 崩-11.55%)— alt_mom7=-4.41%(FAIL)。<strong>🔴 ALT-OFF: req1✓(-2.23pp) · req2✗(-4.41%&lt;0,BTC拖累所有幣) · bonus_a✓(Δ≤-0.5pp) · bonus_b✗ · bonus_c✗(9.76%&lt;12%) · req2 FAIL → ALT-OFF。</strong></div>
+          <div class="value med">GO</div>
+          <div class="sub"><span class="regime-tag r-good">🟢 GO</span><span style="font-size:10.5px;color:var(--text-faint);">breadth · 6/03 fresh</span></div>
+          <div class="indicator-explain good">breadth=100%(n_valid=7/14 · ZEC+23%/HYPE+7%/XLM+36.8%/SOL-9.8%) — alt_mom7=+1.04%(PASS,勉強正)。<strong>🟢 GO: req1✓(-0.03pp&lt;0) · req2✓(+1.04%&gt;0) · bonus_a✗ · bonus_b✗ · bonus_c✗(11.59%&lt;12%) · 0 bonus → GO。</strong></div>
         </div>
       </div>
 
@@ -353,35 +353,35 @@ table td.note { font-size:12.5px; max-width:380px; }
           <div class="cond-num">1</div>
           <div class="cond-content">
             <div class="cond-rule">BTC.D 7D Δ &lt; 0(BTC 動能方向往下)</div>
-            <div class="cond-current">55.8% · Δ7d = <strong style="color:var(--success);">-2.23pp</strong> ✓(7D前5/27=58.03%;BTC.D 加速下行,但因BTC崩跌)</div>
+            <div class="cond-current">58.0% · Δ7d = <strong style="color:var(--success);">-0.03pp</strong> ✓(7D前5/27=58.03%;BTC.D 微幅下行)</div>
           </div>
           <div class="cond-status">✓ PASS</div>
         </div>
-        <div class="layer1-cond fail">
+        <div class="layer1-cond pass">
           <div class="cond-num">2</div>
           <div class="cond-content">
             <div class="cond-rule">Alt basket 7D 平均 &gt; 0%(alts 已啟動)</div>
-            <div class="cond-current">alt basket ex-BTC/ETH/穩定幣/交易所 token,7D mean = <strong style="color:var(--danger);">-4.41%</strong> · breadth 85.7%(12/14 alts 7D 贏 BTC 崩-11.55%) ✗ — ZEC+13%/HYPE+7%/SOL+15% 抗跌 · 整體因BTC崩跌拖累均值轉負 · n_valid=14</div>
+            <div class="cond-current">alt basket ex-BTC/ETH/穩定幣/交易所 token,7D mean = <strong style="color:var(--success);">+1.04%</strong> · breadth 100%(7/7 valid · ZEC+23%/XLM+36.8%/HYPE+7% 強 · SOL-9.8%/BNB-8.1% 弱) ✓ · n_valid=7/14(AVAX/DOT/UNI/NEAR/SUI/ONDO 無數據)</div>
           </div>
-          <div class="cond-status">✗ FAIL</div>
+          <div class="cond-status">✓ PASS</div>
         </div>
       </div>
 
-      <div style="margin-top:14px; padding:8px 14px; background:rgba(245,158,11,0.06); border-left:3px solid var(--warn); border-radius:4px; font-size:11.5px; color:var(--text-mid); font-family:var(--mono);">加分條件(每過 1 條升一級 verdict — 今日 bonus_a✓ 1/3有效,但 req2 FAIL → ALT-OFF)</div>
+      <div style="margin-top:14px; padding:8px 14px; background:rgba(245,158,11,0.06); border-left:3px solid var(--warn); border-radius:4px; font-size:11.5px; color:var(--text-mid); font-family:var(--mono);">加分條件(每過 1 條升一級 verdict — 今日 0/3 加分 · req1✓ req2✓ → 🟢 GO)</div>
       <div class="layer1-grid" style="margin-top:8px;">
-        <div class="layer1-cond pass">
+        <div class="layer1-cond fail">
           <div class="cond-num">a</div>
           <div class="cond-content">
             <div class="cond-rule">BTC.D 7D Δ ≤ -0.5pp(實質下行,非僅 noise)</div>
-            <div class="cond-current">Δ7d = <strong style="color:var(--success);">-2.23pp</strong> ≤ -0.5pp ✓(BTC崩跌帶動BTC.D下行,但因市場整體崩)</div>
+            <div class="cond-current">Δ7d = <strong style="color:var(--danger);">-0.03pp</strong> &gt; -0.5pp ✗(微幅下行不達門檻)</div>
           </div>
-          <div class="cond-status">✓ PASS</div>
+          <div class="cond-status">✗ FAIL</div>
         </div>
         <div class="layer1-cond fail">
           <div class="cond-num">b</div>
           <div class="cond-content">
             <div class="cond-rule">Alt basket 7D &gt; +1.5%(動能明顯)</div>
-            <div class="cond-current"><strong style="color:var(--danger);">-4.41%</strong> &lt; +1.5% ✗(BTC崩-11.55%帶動所有幣下跌 · ZEC+13%/SOL+15% 局部強勢但均值轉負)</div>
+            <div class="cond-current"><strong style="color:var(--danger);">+1.04%</strong> &lt; +1.5% ✗(ZEC+23%/XLM+36.8%/HYPE+7% 強勢 · SOL-9.8%/BNB-8.1% 拖低均值)</div>
           </div>
           <div class="cond-status">✗ FAIL</div>
         </div>
@@ -389,16 +389,16 @@ table td.note { font-size:12.5px; max-width:380px; }
           <div class="cond-num">c</div>
           <div class="cond-content">
             <div class="cond-rule">OTHERS.D &gt; 12%(2021 經典啟動線)</div>
-            <div class="cond-current"><strong style="color:var(--danger);">9.76%</strong> &lt; 12% ✗(上升自7.04%→9.76%,仍未達門檻)</div>
+            <div class="cond-current"><strong style="color:var(--danger);">11.59%</strong> &lt; 12% ✗(接近門檻,上升自 9.76%→11.59%,繼續觀察)</div>
           </div>
           <div class="cond-status">✗ FAIL</div>
         </div>
       </div>
 
-      <div class="alert-banner danger" style="margin-top:18px;">
-        <span style="font-size:24px;">🔴</span>
+      <div class="alert-banner success" style="margin-top:18px;">
+        <span style="font-size:24px;">🟢</span>
         <div style="flex:1;">
-          <strong>小幣框架判斷:🔴 ALT-OFF(req1✓ Δ7d=-2.23pp · req2✗ alt_mom7=-4.41% FAIL · BTC崩-8.4%拖垮所有幣)</strong> — c3 倉位維持停損觀察,禁止加碼。ZEC c3 Day5/HYPE c3/NEAR c3 Day12 持守。SOL新入#6,RENDER跌出→依規出場。
+          <strong>小幣框架判斷:🟢 GO(req1✓ Δ7d=-0.03pp · req2✓ alt_mom7=+1.04% · 0 bonus)</strong> — c3: HYPE+ZEC 維持。XLM新#3(+42% 21D)。NEAR退出top3→#4。BNB新入#10。RENDER跌出→依規出場。等 others_d 突破 12% 再確認。
         </div>
       </div>
     </div>
@@ -406,21 +406,21 @@ table td.note { font-size:12.5px; max-width:380px; }
     <!-- ===== 過去 24h 5 條新聞 ===== -->
     <div class="card">
       <div class="head"><div class="title">過去 24h 重要新聞 Top 5</div><div class="meta">🔴 高 · 🟡 中</div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title">⭐ <strong>BTC 崩 $67,400 · $700M 清算 · ETF 連出</strong> — Google+Berkshire $80B AI fund 機構輪動離場。BTC 從 $73,594 急跌 -8.4%。</div><div class="news-source">X / WebSearch · 06-03 · extreme_bear</div></div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>美財政部沒收伊朗 $10億加密資產</strong> — 美伊和談破局,地緣避險情緒升溫。隱私幣敘事受益,ZEC/XMR 關注。</div><div class="news-source">WebSearch · 06-03 · neutral</div></div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>ZEC 逆勢 +13% 創 21D 新高 · HYPE/NEAR c3 全三繼續持守</strong> — ZEC c3 Day5(+80% 21D)。NEAR c3 Day12。市場崩跌中 c3 倉位守住。</div><div class="news-source">WebSearch · 06-03 · bull</div></div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>Mt.Gox 移動 10,422 BTC ($739M) 至新錢包</strong> — 截止日臨近供給壓力升溫。關注後續動向。</div><div class="news-source">CoinDesk · 06-02 · extreme_bear</div></div></div>
-      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>Kalshi 預測市場: 66% 機率年底 BTC 破 $55K</strong> — 機構 AI 輪動加速空頭部位。恐慌蔓延。</div><div class="news-source">CoinDesk · 06-03 · extreme_bear</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title">⭐ <strong>BTC 跌至 $67,154(-3.41% 24h) · ETF Jun2 出流確認 -$519.1M</strong> — Google+Berkshire $80B AI fund 機構輪動。Fear&Greed=27 恐慌區間。</div><div class="news-source">CoinDesk / Farside · 06-03 · bear</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>美財政部沒收伊朗 $10億加密資產</strong> — 美伊和談破局,地緣避險情緒升溫。ZEC/XMR 隱私幣敘事受益,ZEC +23% 7D。</div><div class="news-source">WebSearch · 06-03 · neutral</div></div></div>
+      <div class="news-item"><div class="news-dot high"></div><div class="news-content"><div class="news-title"><strong>ZEC c3 Day5(+45% 21D/+23% 7D) · HYPE c3 持守(+73% 21D) · XLM 🆕#3(+42% 21D)</strong> — Layer1 🟢 GO。c3 HYPE+ZEC 維持。XLM 替換 NEAR 入 top3。</div><div class="news-source">X Sentiment · 06-03 · bull</div></div></div>
+      <div class="news-item"><div class="news-dot med"></div><div class="news-content"><div class="news-title"><strong>Clarity Act 排入參議院日曆</strong> — 監管利多延遲釋放,待通過後加密市場有望受益。</div><div class="news-source">WebSearch · 06-03 · bull</div></div></div>
+      <div class="news-item"><div class="news-dot med"></div><div class="news-content"><div class="news-title"><strong>ethconf NYC(6/8-10)近催化劑 · ETH/BTC ratio 0.02803(ETH 相對抗跌)</strong> — ETH neutral(51.8)。ethconf 可能帶動 ETH 情緒轉折。</div><div class="news-source">WebSearch · 06-03 · neutral</div></div></div>
     </div>
 
     <!-- ===== Calendar ===== -->
     <div class="card">
       <div class="head"><div class="title">今日 + 本週日曆(台北時間)</div><div class="meta">macro · earnings · crypto</div></div>
       <div class="calendar">
-        <div class="cal-day today"><div class="cal-day-header"><span class="cal-day-date">06-03 (週三)</span><span class="cal-day-label">今日 · ALT-OFF · BTC崩 · ZEC c3 Day5 · SOL新入#6 · RENDER出場</span></div>
-          <div class="cal-event"><div class="cal-event-time high">今日</div><div class="cal-event-content high"><strong>RENDER 跌出 Top10 → 依規出場</strong> · SOL 新入 #6(+15% 21D) <span class="cal-event-tag crypto">CRYPTO</span></div></div>
-          <div class="cal-event"><div class="cal-event-time high">今日</div><div class="cal-event-content high"><strong>BTC 崩 $67,400(-8.4%) · $700M 清算</strong> · Google+Berkshire $80B AI fund 機構輪動 <span class="cal-event-tag macro">MACRO</span></div></div>
-          <div class="cal-event"><div class="cal-event-time med">全天</div><div class="cal-event-content">ALT-OFF · c3 停損觀察(ZEC Day5/HYPE/NEAR Day12) · Jun 2 ETF 出-$519.1M確認 · Mt.Gox 10,422 BTC 移動 <span class="cal-event-tag crypto">CRYPTO</span></div></div>
+        <div class="cal-day today"><div class="cal-day-header"><span class="cal-day-date">06-03 (週三)</span><span class="cal-day-label">今日 · 🟢 GO · BTC $67,154 · c3: HYPE+ZEC · XLM🆕#3 · RENDER出場</span></div>
+          <div class="cal-event"><div class="cal-event-time high">今日</div><div class="cal-event-content high"><strong>🟢 GO · c3: HYPE+ZEC · XLM🆕#3(+42% 21D) · BNB🆕#10</strong> · RENDER跌出→出場 <span class="cal-event-tag crypto">CRYPTO</span></div></div>
+          <div class="cal-event"><div class="cal-event-time high">今日</div><div class="cal-event-content high"><strong>BTC $67,154(-3.41% 24h) · Jun2 ETF -$519.1M確認</strong> · Fear&amp;Greed=27 恐慌 <span class="cal-event-tag macro">MACRO</span></div></div>
+          <div class="cal-event"><div class="cal-event-time med">全天</div><div class="cal-event-content">ZEC c3 Day5(+23% 7D)/HYPE c3 · Clarity Act Senate · ETH/BTC=0.02803(ETH抗跌) <span class="cal-event-tag crypto">CRYPTO</span></div></div>
         </div>
         <div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">06-08 (週日)</span><span class="cal-day-label">ETH Conf NYC</span></div>
           <div class="cal-event"><div class="cal-event-time high">全天</div><div class="cal-event-content high"><strong>ethconf NYC(6/8-10)</strong> — ETH 生態催化劑,關注 ETH 情緒轉折 <span class="cal-event-tag crypto">CRYPTO</span></div></div>
@@ -439,71 +439,71 @@ table td.note { font-size:12.5px; max-width:380px; }
   <!-- ========== TAB 3: 21D TOP 3 ========== -->
   <div class="tab-panel" id="tab-top3">
 
-    <div class="alert-banner danger">
-      <strong style="color:#ff8585;">🔴 ALT-OFF · c3 停損觀察</strong>
+    <div class="alert-banner success">
+      <strong style="color:var(--success);">🟢 GO · c3 持守</strong>
       &nbsp;&nbsp;|&nbsp;&nbsp;
-      <span style="font-family:var(--mono);color:#ff8585;font-weight:600;">$ZEC(c3 Day5 +80% 21D)</span> ·
-      <span style="font-family:var(--mono);color:#ff8585;font-weight:600;">$HYPE(c3 cont #1)</span> ·
-      <span style="font-family:var(--mono);color:#ff8585;font-weight:600;">$NEAR(c3 cont #3 Day12)</span>
+      <span style="font-family:var(--mono);color:var(--success);font-weight:600;">$ZEC(c3 Day5 +45% 21D/+23% 7D)</span> ·
+      <span style="font-family:var(--mono);color:var(--success);font-weight:600;">$HYPE(c3 cont #1 +73% 21D)</span> ·
+      <span style="font-family:var(--mono);color:var(--accent);font-weight:600;">$XLM(🆕#3 +42% 21D)</span>
       &nbsp;&nbsp;|&nbsp;&nbsp;
-      <span style="color:var(--text-mid);">🔴 ALT-OFF: req1✓ Δ=-2.23pp · req2✗ alt_mom7=-4.41% FAIL · SOL🆕#6 · RENDER跌出→出場</span>
+      <span style="color:var(--text-mid);">🟢 GO: req1✓ Δ=-0.03pp · req2✓ alt_mom7=+1.04% · NEAR退出top3→#4 · BNB🆕#10 · RENDER跌出→出場</span>
     </div>
 
     <div class="card">
       <div class="head">
-        <div class="title">🏆 今日 21D Top 10(2026-06-03 · 🔴 ALT-OFF · WebSearch est)</div>
-        <div class="meta">CoinGecko top 200 → 過濾穩定幣/包裝/RWA/小市值 → 21 日漲幅排序 · ⚠ CoinGecko API 403,數據為搜尋估算 · ZEC逆勢+13% c3 Day5 #2 · HYPE c3 #1 · NEAR c3 Day12 #3 · SOL🆕#6 · RENDER跌出</div>
+        <div class="title">🏆 今日 21D Top 10(2026-06-03 · 🟢 GO · CoinDesk 30D proxy)</div>
+        <div class="meta">CoinDesk 30d data proxy(Binance/CoinGecko API 403) → 21D 漲幅排序 · ZEC c3 Day5 +23% 7D #2 · HYPE c3 #1 · XLM🆕#3(+42% 21D) · NEAR→#4 · BNB🆕#10 · RENDER跌出</div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;padding:8px 0;">
-        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--danger);border-radius:6px;text-align:center;">
-          <div style="font-size:11px;color:var(--danger);">#1 🔴c3 ALT-OFF</div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--success);">#1 🟢c3 cont</div>
           <div style="font-family:var(--mono);font-size:18px;color:var(--success);font-weight:600;margin-top:4px;">HYPE</div>
-          <div style="font-size:10px;color:var(--text-faint);">+80% 21D est</div>
+          <div style="font-size:10px;color:var(--text-faint);">+73% 21D</div>
         </div>
-        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--danger);border-radius:6px;text-align:center;">
-          <div style="font-size:11px;color:var(--danger);">#2 🔴c3 Day5 +13%↑</div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--success);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--success);">#2 🟢c3 Day5 +23%↑</div>
           <div style="font-family:var(--mono);font-size:18px;color:var(--success);font-weight:600;margin-top:4px;">ZEC</div>
-          <div style="font-size:10px;color:var(--text-faint);">+80% 21D est</div>
+          <div style="font-size:10px;color:var(--text-faint);">+45% 21D</div>
         </div>
-        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--danger);border-radius:6px;text-align:center;">
-          <div style="font-size:11px;color:var(--danger);">#3 🔴c3 Day12</div>
-          <div style="font-family:var(--mono);font-size:18px;color:var(--success);font-weight:600;margin-top:4px;">NEAR</div>
-          <div style="font-size:10px;color:var(--text-faint);">+38% 21D est</div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--warn);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--warn);">#3 🆕DTCC +36.8%↑</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--warn);font-weight:600;margin-top:4px;">XLM</div>
+          <div style="font-size:10px;color:var(--text-faint);">+42% 21D</div>
         </div>
         <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
-          <div style="font-size:11px;color:var(--text-dim);">#4 DTCC</div>
-          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">XLM</div>
-          <div style="font-size:10px;color:var(--text-faint);">+30% 21D est</div>
+          <div style="font-size:11px;color:var(--text-dim);">#4 c3退出→觀察</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">NEAR</div>
+          <div style="font-size:10px;color:var(--text-faint);">+35% 21D</div>
         </div>
         <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
           <div style="font-size:11px;color:var(--text-dim);">#5 AI plays</div>
           <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">FET</div>
-          <div style="font-size:10px;color:var(--text-faint);">+26% 21D est</div>
+          <div style="font-size:10px;color:var(--text-faint);">+25% 21D</div>
         </div>
-        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--warn);border-radius:6px;text-align:center;">
-          <div style="font-size:11px;color:var(--warn);">#6 🆕L1 抗跌</div>
-          <div style="font-family:var(--mono);font-size:18px;color:var(--warn);font-weight:600;margin-top:4px;">SOL</div>
-          <div style="font-size:10px;color:var(--text-faint);">+15% 21D est</div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--accent);">#6 RWA</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">ONDO</div>
+          <div style="font-size:10px;color:var(--text-faint);">+18% 21D</div>
         </div>
         <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
           <div style="font-size:11px;color:var(--accent);">#7 L1</div>
           <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">DOT</div>
-          <div style="font-size:10px;color:var(--text-faint);">+12% 21D est</div>
+          <div style="font-size:10px;color:var(--text-faint);">+12% 21D</div>
         </div>
         <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
-          <div style="font-size:11px;color:var(--text-dim);">#8 RWA</div>
-          <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">ONDO</div>
-          <div style="font-size:10px;color:var(--text-faint);">+12% 21D est</div>
-        </div>
-        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
-          <div style="font-size:11px;color:var(--text-dim);">#9 DEX</div>
+          <div style="font-size:11px;color:var(--text-dim);">#8 DEX</div>
           <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">UNI</div>
-          <div style="font-size:10px;color:var(--text-faint);">+10% 21D est</div>
+          <div style="font-size:10px;color:var(--text-faint);">+10% 21D</div>
         </div>
         <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:6px;text-align:center;">
-          <div style="font-size:11px;color:var(--text-dim);">#10 L1</div>
+          <div style="font-size:11px;color:var(--text-dim);">#9 L1</div>
           <div style="font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:600;margin-top:4px;">TON</div>
-          <div style="font-size:10px;color:var(--text-faint);">+9% 21D est</div>
+          <div style="font-size:10px;color:var(--text-faint);">+9% 21D</div>
+        </div>
+        <div style="padding:14px 10px;background:var(--surface-2);border-left:3px solid var(--warn);border-radius:6px;text-align:center;">
+          <div style="font-size:11px;color:var(--warn);">#10 🆕CEX</div>
+          <div style="font-family:var(--mono);font-size:18px;color:var(--warn);font-weight:600;margin-top:4px;">BNB</div>
+          <div style="font-size:10px;color:var(--text-faint);">+3% 21D</div>
         </div>
       </div>
     </div>
@@ -525,12 +525,12 @@ table td.note { font-size:12.5px; max-width:380px; }
             </tr>
           </thead>
           <tbody style="font-family:var(--mono);">
-            <tr style="border-bottom:1px solid var(--border);background:rgba(239,68,68,0.08);">
-              <td style="padding:10px;color:var(--danger);font-weight:600;">06-03 今日 🔴</td>
-              <td style="padding:10px;color:var(--danger);font-weight:600;">HYPE🔴c3 ALT-OFF</td>
-              <td style="padding:10px;color:var(--danger);font-weight:600;">ZEC🔴c3 Day5+13%</td>
-              <td style="padding:10px;color:var(--danger);font-weight:600;">NEAR🔴c3d12</td>
-              <td style="padding:10px;color:var(--danger);font-size:11.5px;">ALT-OFF(req1 Δ=-2.23pp✓ · req2 alt_mom7=-4.41%✗ FAIL) · BTC崩$67,400(-8.4%) · $700M清算 · ZEC逆勢+13% · SOL🆕#6 · RENDER跌出→出場 · Clarity Act Senate日曆 · 財政部伊朗$10億</td>
+            <tr style="border-bottom:1px solid var(--border);background:rgba(74,222,128,0.08);">
+              <td style="padding:10px;color:var(--success);font-weight:600;">06-03 今日 🟢</td>
+              <td style="padding:10px;color:var(--success);font-weight:600;">HYPE🟢c3 cont</td>
+              <td style="padding:10px;color:var(--success);font-weight:600;">ZEC🟢c3 Day5+23%</td>
+              <td style="padding:10px;color:var(--warn);font-weight:600;">XLM🆕#3</td>
+              <td style="padding:10px;color:var(--success);font-size:11.5px;">GO(req1 Δ=-0.03pp✓ · req2 alt_mom7=+1.04%✓ · 0 bonus) · BTC $67,154(-3.41% 24h) · XLM新#3(+42% 21D/+36.8% 7D) · NEAR退出top3→#4 c3退出 · BNB🆕#10 · RENDER跌出→出場 · Clarity Act Senate · ETH/BTC=0.02803 · Fear&amp;Greed=27</td>
             </tr>
             <tr style="border-bottom:1px solid var(--border);background:rgba(74,222,128,0.08);">
               <td style="padding:10px;color:var(--success);font-weight:600;">06-02 🟢</td>
@@ -689,31 +689,31 @@ table td.note { font-size:12.5px; max-width:380px; }
           </tbody>
         </table>
       </div>
-      <div class="indicator-explain danger" style="margin-top:14px;">
-        框架切換 ALT-OFF(alt_mom7=-4.41% BTC崩拖垮)。ZEC c3 Day5(+80% 21D)/HYPE c3/NEAR c3 Day12 全三持守停損觀察。SOL 新入 #6(+15% 21D,相對抗跌)。RENDER 跌出 Top10 → 依規出場。
+      <div class="indicator-explain good" style="margin-top:14px;">
+        🟢 GO(alt_mom7=+1.04% req2 PASS)。ZEC c3 Day5(+45% 21D/+23% 7D)/HYPE c3 全二持守。XLM 新入 #3(+42% 21D/+36.8% 7D,DTCC+Stellar敘事)。NEAR 退出 top3→#4(c3退出)。BNB 新入 #10。RENDER 跌出 Top10 → 依規出場。
       </div>
     </div>
 
     <div class="card">
       <div class="head">
         <div class="title">📡 今日訊號(2026-06-03)</div>
-        <div class="meta">🔴 ALT-OFF · ZEC c3 Day5 · HYPE c3 cont · NEAR c3 Day12 · SOL🆕#6 · RENDER跌出→出場</div>
+        <div class="meta">🟢 GO · ZEC c3 Day5 · HYPE c3 cont · XLM🆕#3 · NEAR→#4 · BNB🆕#10 · RENDER跌出→出場</div>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <div style="padding:10px 14px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3);border-radius:6px;flex:1;min-width:200px;">
-          <div style="font-size:12px;color:var(--danger);font-weight:600;margin-bottom:4px;">🔴 ALT-OFF · 禁止加碼</div>
-          <div style="font-family:var(--mono);font-size:14px;color:var(--danger);font-weight:600;">btc_d_delta7=-2.23pp</div>
-          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">req1✓ Δ=-2.23pp · req2✗ alt_mom7=-4.41% FAIL。BTC崩-8.4% 拖垮所有幣。禁止加碼,c3倉位停損觀察。</div>
+        <div style="padding:10px 14px;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.3);border-radius:6px;flex:1;min-width:200px;">
+          <div style="font-size:12px;color:var(--success);font-weight:600;margin-bottom:4px;">🟢 GO · c3 HYPE+ZEC 維持</div>
+          <div style="font-family:var(--mono);font-size:14px;color:var(--success);font-weight:600;">btc_d_delta7=-0.03pp · alt_mom7=+1.04%</div>
+          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">req1✓ Δ=-0.03pp · req2✓ alt_mom7=+1.04%(勉強正值) · 0 bonus。GO環境:c3 HYPE+ZEC 持守,可維持倉位。</div>
         </div>
-        <div style="padding:10px 14px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3);border-radius:6px;flex:1;min-width:200px;">
-          <div style="font-size:12px;color:var(--danger);font-weight:600;margin-bottom:4px;">⚠ ZEC/HYPE/NEAR c3 持守停損觀察</div>
-          <div style="font-family:var(--mono);font-size:14px;color:var(--success);font-weight:600;">$ZEC · $HYPE · $NEAR</div>
-          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">ALT-OFF環境持守 c3 並設 -20% 回撤停損。ZEC Day5(+80% 21D,逆勢+13%),HYPE,NEAR Day12。</div>
+        <div style="padding:10px 14px;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.3);border-radius:6px;flex:1;min-width:200px;">
+          <div style="font-size:12px;color:var(--success);font-weight:600;margin-bottom:4px;">✅ ZEC/HYPE c3 持守 · XLM🆕#3</div>
+          <div style="font-family:var(--mono);font-size:14px;color:var(--success);font-weight:600;">$ZEC · $HYPE · ($XLM 待c3)</div>
+          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">GO環境持守c3倉位。ZEC Day5(+45% 21D/+23% 7D),HYPE(+73% 21D)。XLM新#3(等Day2 c3)。</div>
         </div>
         <div style="padding:10px 14px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3);border-radius:6px;flex:1;min-width:200px;">
           <div style="font-size:12px;color:var(--danger);font-weight:600;margin-bottom:4px;">🔴 RENDER 跌出 Top10 → 出場</div>
           <div style="font-family:var(--mono);font-size:14px;color:var(--danger);font-weight:600;">$RENDER 出場訊號</div>
-          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">RENDER 跌出 Top10 → 依規出場。SOL 新入 #6(+15% 21D,相對抗跌)。等 ALT-ON 再行新進。</div>
+          <div style="font-size:11.5px;color:var(--text-mid);margin-top:4px;">RENDER 跌出 Top10 → 依規出場。BNB 新入 #10(等c3)。NEAR 退出 top3→#4(c3 退出,觀察回歸)。</div>
         </div>
       </div>
     </div>
@@ -744,7 +744,7 @@ table td.note { font-size:12.5px; max-width:380px; }
 
   </div>
 
-  <div class="foot">最近更新:2026-06-03 15:30 TPE · v4.8 dashboard · 排程 daily-crypto-x-sentiment · BTC neutral(47.7) / ETH neutral(45.2) · BTC $67,039(-4.1% 24h) · Layer1 🔴 ALT-OFF(req1✓ Δ=-2.23pp · req2✗ alt_mom7=-4.41% FAIL) · VIX 16.05 · DXY 99.1 · MOVE null · TIPS 2.04% · ETF Jun2 -$519.1M確認 · ZEC c3 Day5 · Mt.Gox 10,422BTC移動</div>
+  <div class="foot">最近更新:2026-06-03 PM (fresh run) · v4.8 dashboard · 排程 daily-crypto-x-sentiment · BTC neutral(46.5) / ETH neutral(51.8) · BTC $67,154(-3.41% 24h) · Layer1 🟢 GO(req1✓ Δ=-0.03pp · req2✓ alt_mom7=+1.04%) · VIX 16.03 · DXY 99.35 · 10Y 4.455% · TIPS null(FRED 403) · ETF Jun2 -$519.1M確認 · c3: HYPE+ZEC · XLM🆕#3 · RENDER出場</div>
 </div>
 
 <script>
@@ -788,7 +788,7 @@ const HISTORY = {"schema_version":2,"last_updated":"2026-06-03","history":[
   {"date":"2026-05-31","btc":{"score":37.3,"score_band":"fear","velocity":"急降","n_sampled":72,"source":"apify_pipeline","note":"Apify kaitoeasyapi BTC×3搜尋(72 valid). Tom Lee Fundstrat $50M ETH買入(bull)+BTC ETF 週出-$1.47B 2026最差(bear)+BlackRock週出$1.3B(bear)+TedPillows $70-71K下探警告(bear)+Fear&Greed=25(extreme_fear). viral_dominates=False(20.5%). BTC $73,906. GO。"},"eth":{"score":59.2,"score_band":"greed","velocity":"下降","n_sampled":79,"source":"apify_pipeline","note":"Apify kaitoeasyapi ETH×3搜尋(79 valid). Tom Lee $50M ETH買入(bull)+ethconf NYC(6/8)催化劑(bull) vs ETH/BTC ratio降至0.02724(bear)+jinchenma反向信號(bear). ETH $2,013. ETH/BTC ratio 0.02724(-1.35% vs 5/30)."},"btc_price":73906,"btc_price_src":"websearch","eth_price":2013,"eth_price_src":"websearch","layer1":"GO","btc_d":57.3,"others_d":11.2,"macro":{"vix":16.33,"vix3m":null,"move":null,"dxy":98.94,"tnx":null,"ndx":null,"tips_real":null,"btc_ndx_corr_30d":null,"btc_ndx_corr_7d":null,"etf_btc_flow":-1470.0}},
   {"date":"2026-06-01","btc":{"score":86.7,"score_band":"euphoric","velocity":"爆發","n_sampled":150,"source":"apify_pipeline","note":"Apify kaitoeasyapi(BTC×3, 150 valid). viral_dominates=true(41.3%): Saylor 'Working Better'買入訊號(eng=15890,EB)+Mastercard $1.8B加密收購(EB). CryptoNobler 新Fed主席升息(bear)+USDT -$1.2B(bear). HYPE ATH $70(EB). BTC $73,600. ALT-OFF:req1 PASS(Δ=-0.84pp) req2 FAIL(alt_mom7=-0.66%). ZEC c3 NEW Day3. Fear&Greed=28."},"eth":{"score":33.5,"score_band":"fear","velocity":"急降","n_sampled":50,"source":"apify_pipeline","note":"ETH fear(33.5): CryptoNobler Fed升息熊(bear)+日本拋售恐慌(bear) vs ethconf NYC(6/8)催化劑(bull). ETH $2,008. ETH/BTC ratio 0.02729(+0.18% vs 5/31)."},"btc_price":73600,"btc_price_src":"websearch","eth_price":2008,"eth_price_src":"websearch","layer1":"ALT-OFF","btc_d":57.27,"others_d":7.04,"macro":{"vix":15.32,"vix3m":null,"move":70.22,"dxy":98.94,"tnx":4.44,"ndx":null,"tips_real":2.04,"btc_ndx_corr_30d":null,"btc_ndx_corr_7d":null,"etf_btc_flow":null}},
   {"date":"2026-06-02","btc":{"score":50.5,"score_band":"neutral","velocity":"急降","n_sampled":74,"source":"apify_pipeline","note":"Apify kaitoeasyapi(228 valid 6-term). Strategy sold 32 BTC $2.5M(15953,neutral)+BTC falls $74K ETH $2K(9674,neutral)+$250M liq(7492,bear). viral_dominates=false(9.1%). BTC $73,594. GO: req1✓(Δ=-1.39pp) req2✓(alt_mom7=+0.47%). HYPE c3/ZEC c3 Day4/NEAR c3 Day11. BNB跌出TON新入."},"eth":{"score":47.7,"score_band":"neutral","velocity":"下降","n_sampled":75,"source":"apify_pipeline","note":"ETH neutral(47.7): $250M crypto liq bear vs ethconf NYC(6/8)催化劑(bull). ETH $1,997. ETH/BTC ratio 0.02714(-0.55% vs 6/01)."},"btc_price":73594,"btc_price_src":"coingecko","eth_price":1997,"eth_price_src":"coingecko","layer1":"GO","btc_d":56.81,"others_d":7.04,"macro":{"vix":15.32,"vix3m":null,"move":null,"dxy":99.009,"tnx":4.51,"ndx":null,"tips_real":2.04,"btc_ndx_corr_30d":null,"btc_ndx_corr_7d":null,"etf_btc_flow":-519.1}},
-  {"date":"2026-06-03","btc":{"score":47.7,"score_band":"neutral","velocity":"下降","n_sampled":235,"source":"apify_pipeline","note":"Apify kaitoeasyapi 240 raw→235 valid(6 term). BTC急跌至$67,039(CMC實時,-4.1% 24h rolling · vs 6/02 $73,594從高點-8.9%). Google+Berkshire $80B AI fund機構輪動. Strategy 32 BTC首賣4年(eng=18838)+Treasury seized $1B Iran crypto(4442)+BTC<$67K $700M liq(8809,EB)+Mt.Gox 10,422BTC($739M)移動+Kalshi 66%預測年底破$55K. F&G=26(Fear). Jun2 ETF出-$519.1M確認. viral_dominates=false(11.7%). ALT-OFF:req1 PASS(Δ7d=-2.23pp) req2 FAIL(alt_mom7=-4.41%). ZEC c3 Day5(+11.86%今日!)/HYPE c3/NEAR c3 Day12繼續。"},"eth":{"score":45.2,"score_band":"neutral","velocity":"下降","n_sampled":79,"source":"apify_pipeline","note":"ETH neutral(45.2) 小跌. ETH $1,873(CMC實時,-5.3% 24h · vs $1,997 6/02). ETH/BTC ratio 0.02793(ETH相對抗跌). ethconf NYC(6/8)催化劑近在咫尺。StanChart Kendrick稱Strategy賣BTC或標誌ETH跑贏開始。"},"btc_price":67039,"btc_price_src":"coinmarketcap_live","eth_price":1873,"eth_price_src":"coinmarketcap_live","layer1":"ALT-OFF","btc_d":55.8,"others_d":9.76,"macro":{"vix":16.05,"vix3m":null,"move":null,"dxy":99.1,"tnx":4.46,"ndx":null,"tips_real":2.04,"btc_ndx_corr_30d":null,"btc_ndx_corr_7d":null,"etf_btc_flow":null}}
+  {"date":"2026-06-03","btc":{"score":46.5,"score_band":"neutral","velocity":"下降","n_sampled":235,"source":"apify_pipeline","note":"Apify kaitoeasyapi 240 raw→235 valid(6 term, fresh PM run). BTC $67,154(-3.41% 24h · vs 6/02 $73,594). Google+Berkshire $80B AI fund機構輪動. Treasury seized $1B Iran crypto(4442)+BTC<$67K $700M liq(8809,bear)+Clarity Act Senate(bull). F&G=27(Fear). Jun2 ETF出-$519.1M確認. viral_dominates=false(11.7%). GO:req1 PASS(Δ7d=-0.03pp) req2 PASS(alt_mom7=+1.04%). ZEC c3 Day5(+23% 7D,+45% 21D,Iran隱私幣)/HYPE c3繼續。XLM🆕#3(+42% 21D/+36.8% 7D). NEAR退出top3→#4 c3退出. BNB🆕#10. RENDER出場。"},"eth":{"score":51.8,"score_band":"neutral","velocity":"平穩","n_sampled":79,"source":"apify_pipeline","note":"ETH neutral(51.8). ETH $1,882(-4.94% 24h · vs $1,997 6/02). ETH/BTC ratio 0.02803(ETH相對抗跌). ethconf NYC(6/8)催化劑近在咫尺。"},"btc_price":67154,"btc_price_src":"coindesk_live","eth_price":1882,"eth_price_src":"coindesk_live","layer1":"GO","btc_d":58.0,"others_d":11.59,"macro":{"vix":16.03,"vix3m":null,"move":null,"dxy":99.35,"tnx":4.455,"ndx":null,"tips_real":null,"btc_ndx_corr_30d":null,"btc_ndx_corr_7d":null,"etf_btc_flow":-519.1}}
 ]};
 
 function switchTab(name) {

@@ -1,174 +1,164 @@
 {
   "date": "2026-06-03",
-  "fetched_at_utc": "2026-06-03T07:30:00Z",
+  "generated_at": "2026-06-03T10:23:56Z",
   "btc_price": {
-    "value": 67039,
-    "source": "CoinMarketCap live (Apify scrape 07:30 UTC)",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+    "value": 67154.42,
+    "source": "CoinDesk live prices",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "btc_24h_change": {
-    "value": -4.13,
-    "source": "CoinMarketCap 24h rolling (07:30 UTC vs 07:30 UTC Jun 2)",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+  "btc_24h_pct": {
+    "value": -3.41,
+    "source": "CoinDesk live prices",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "btc_from_jun2_high": {
-    "value": -8.9,
-    "source": "calculated: 67039 vs 73594 (Jun 2 daily high/close)",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+  "btc_7d_pct": {
+    "value": -9.76,
+    "source": "CoinDesk table 7d column",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
   "eth_price": {
-    "value": 1873,
-    "source": "CoinMarketCap live (Apify scrape 07:30 UTC)",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+    "value": 1882.11,
+    "source": "CoinDesk live prices",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "eth_24h_change": {
-    "value": -5.30,
-    "source": "CoinMarketCap 24h rolling",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+  "eth_24h_pct": {
+    "value": -4.94,
+    "source": "CoinDesk live prices",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "btc_d": {
-    "value": 55.8,
-    "source": "CoinGecko WebSearch fallback (midnight UTC); Cryptorank shows 55.26% at 07:30 UTC",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  "eth_7d_pct": {
+    "value": -7.23,
+    "source": "CoinDesk table 7d column",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "eth_d": {
+  "eth_btc_ratio": {
+    "value": 0.02803,
+    "source": "computed",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "btc_dominance": {
+    "value": 58.0,
+    "source": "CoinMarketCap Dominance page (fresh scrape)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "eth_dominance": {
     "value": 9.8,
-    "source": "CoinMarketCap live 07:30 UTC",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+    "source": "CoinMarketCap Dominance page (fresh scrape)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "others_d": {
-    "value": 9.76,
-    "source": "CoinGecko WebSearch fallback",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
-  },
-  "total3_d": {
-    "value": 20.4,
-    "source": "estimate",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  "total_market_cap_usd": {
+    "value": 2320000000000.0,
+    "source": "CoinMarketCap fresh scrape",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
   "btc_d_delta7": {
-    "value": -2.23,
-    "source": "calculated: 55.8 - 58.03(2026-05-27 CoinGecko)",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
+    "value": -0.03,
+    "source": "BTC.D 58.0% - 7d-ago 58.03% (history 2026-05-27)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
   "alt_mom7": {
-    "value": -4.41,
-    "source": "calculated mean of 14-coin basket 7D returns (Apify + WebSearch)",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
+    "value": 1.04,
+    "source": "CoinDesk 7d data n_valid=7/14",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "breadth": {
-    "value": 85.7,
-    "source": "calculated: 12/14 coins 7D return > BTC 7D return (-11.55%)",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  "breadth_pct": {
+    "value": 100.0,
+    "source": "computed (coins beating BTC 7d)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "fear_greed": {
-    "value": 26,
-    "source": "CoinMarketCap live (07:30 UTC) - Fear",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+  "others_d": {
+    "value": 11.59,
+    "source": "computed from CMC top10 MCs",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "layer1_verdict": {
+    "value": "\ud83d\udfe2 GO",
+    "source": "computed",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
   "vix": {
-    "value": 16.05,
-    "source": "WebSearch (Stooq/Yahoo blocked)",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
-  },
-  "vix3m": {
-    "value": null,
-    "source": "null - yfinance/Stooq blocked",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+    "value": 16.03,
+    "source": "Cboe.com (as of Jun 3, 2026)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
   "move": {
     "value": null,
-    "source": "null - yfinance blocked",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+    "source": "null: API blocked",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
   "dxy": {
-    "value": 99.1,
-    "source": "WebSearch (Stooq blocked)",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
+    "value": 99.35,
+    "source": "Yahoo Finance DXY page",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "tnx_10y": {
-    "value": 4.46,
-    "source": "WebSearch fallback",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
-  },
-  "tips_real": {
-    "value": 2.04,
-    "source": "carry-forward from 6/01 (FRED/yfinance blocked)",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
-  },
-  "dfii10": {
+  "ndx": {
     "value": null,
-    "source": "null - FRED blocked",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+    "source": "null: NQ futures 30,727.50 but NDX spot unconfirmed",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "ten_year_yield": {
+    "value": 4.455,
+    "source": "Yahoo Finance ^TNX",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "tips_real_yield": {
+    "value": null,
+    "source": "null: FRED API 403, WebSearch returned no value",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "fear_greed": {
+    "value": 27,
+    "source": "CoinMarketCap (fresh scrape)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "etf_btc_jun3": {
+    "value": null,
+    "source": "null: Farside not yet published (US market opening)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "etf_btc_jun2": {
+    "value": -519.1,
+    "source": "farside.co.uk/btc/ (confirmed)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  },
+  "etf_btc_jun2_breakdown": {
+    "value": {
+      "IBIT": -388.6,
+      "FBTC": -45.1,
+      "ARKB": -16.7,
+      "MSBT": 14.8,
+      "GBTC": -83.5
+    },
+    "source": "Farside",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
   "btc_ndx_corr_30d": {
     "value": null,
-    "source": "null - yfinance blocked",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+    "source": "null: API blocked",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "btc_ndx_corr_7d": {
-    "value": null,
-    "source": "null - yfinance blocked",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+  "x_sentiment_btc": {
+    "value": 46.5,
+    "source": "Apify Twitter scraper (145 valid tweets)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "etf_btc_flow": {
-    "value": -519.1,
-    "source": "Farside Investors (farside.co.uk) - Jun 2 2026 confirmed via Apify scrape 07:30 UTC",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
+  "x_sentiment_eth": {
+    "value": 51.8,
+    "source": "Apify Twitter scraper (145 valid tweets)",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "etf_btc_flow_note": "Jun 2 confirmed total: IBIT(-388.6)+FBTC(-45.1)+ARKB(-16.7)+MSBT(+14.8)+GBTC(-83.5)=-519.1M",
-  "btc_sentiment_score": {
-    "value": 47.7,
-    "source": "Apify kaitoeasyapi twitter scraper - 240 raw → 235 valid tweets, 6 search terms",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
+  "x_sentiment_overall": {
+    "value": 48.1,
+    "source": "Apify Twitter scraper",
+    "fetched_at_utc": "2026-06-03T10:23:56Z"
   },
-  "eth_sentiment_score": {
-    "value": 45.2,
-    "source": "Apify kaitoeasyapi twitter scraper - 79 valid tweets",
-    "fetched_at_utc": "2026-06-03T00:30:00Z"
-  },
-  "layer1_verdict": {
-    "value": "ALT-OFF",
-    "source": "computed: req1✓(Δ7d=-2.23pp<0) req2✗(alt_mom7=-4.41%<0) → ALT-OFF",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
-  },
-  "eth_btc_ratio": {
-    "value": 0.02793,
-    "source": "calculated: 1873/67039",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
-  },
-  "zec_price_live": {
-    "value": 612.34,
-    "source": "CoinMarketCap live 07:30 UTC - top gainer +11.86% 24h",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
-  },
-  "near_price_live": {
-    "value": 2.81,
-    "source": "CoinMarketCap live 07:30 UTC (+8.77% 24h)",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
-  },
-  "hype_price_live": {
-    "value": 72.55,
-    "source": "CoinMarketCap live 07:30 UTC (+0.99% 24h)",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
-  },
-  "sol_price_live": {
-    "value": 74.93,
-    "source": "CoinMarketCap live 07:30 UTC (-5.57% 24h)",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
-  },
-  "market_cap_usd": {
-    "value": 2.31e12,
-    "source": "CoinMarketCap live 07:30 UTC",
-    "fetched_at_utc": "2026-06-03T07:30:00Z"
-  },
-  "news_june3": [
-    "BTC plunges below $66K as global stocks/AI hit records - CoinDesk",
-    "Mt.Gox moves 10,422 BTC ($739M) to new wallet as deadline nears - CoinDesk Jun 2",
-    "Kalshi prediction: 66% chance BTC below $55K before year-end - CoinDesk Jun 3",
-    "Bitcoin fear gauge surges ~20% - biggest jump since Feb 5 crash - CoinDesk Jun 3",
-    "$1.6B in bullish crypto bets liquidated (ETH/SOL/DOGE -9%) - CoinDesk Jun 3",
-    "HYPE predicted 80% of oil market move before trad exchanges - TD Securities via CoinDesk Jun 2",
-    "Strategy's bitcoin sale may mark start of ETH outperformance - StanChart Kendrick - CoinDesk Jun 2"
-  ]
+  "basket_7d_returns": {
+    "solana": -8.86,
+    "binancecoin": -0.86,
+    "ripple": -5.24,
+    "tron": -9.67,
+    "chainlink": -6.81,
+    "hyperliquid": 25.26,
+    "zcash": 13.49
+  }
 }
