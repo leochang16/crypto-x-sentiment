@@ -46,3 +46,39 @@ KEY EVENTS:
   - ZEC surged +13% on privacy coin narrative (Iran seizure) - c3 Day5 (+80% 21D)
   - Clarity Act ranked on Senate calendar - regulatory positive
   - ethconf NYC (6/8-10) approaching catalyst
+
+=== RESUMED SESSION UPDATE 2026-06-03T07:28:04Z ===
+Branch: claude/blissful-faraday-6tasL (new session, PR #34 already merged from dreamy-franklin-zcTbQ)
+
+FRESH DATA FETCHED (Apify RAG browser):
+- BTC price: 7,039 (CMC live, vs 7,400 initial WebSearch est)
+- ETH price: ,873 (CMC live, vs ,880 initial estimate)
+- Fear & Greed: 26 (Fear) - NEW
+- ETF Jun 2 flow: -19.1M (Farside confirmed) - was null previously
+  Breakdown: IBIT(-388.6) FBTC(-45.1) ARKB(-16.7) MSBT(+14.8) GBTC(-83.5)
+- ZEC: 12.34 (+11.86% 24h) - c3 Day5 strong
+- NEAR: .81 (+8.77% 24h) - c3 Day12 recovering
+- HYPE: 2.55 (+0.99% 24h) - c3 continuing
+
+KEY NEWS (CoinDesk Jun 3):
+- Mt. Gox 10,422 BTC (39M) moved to new wallet
+- Kalshi prediction: 66% chance BTC < 5K before year-end
+- Bitcoin fear gauge surges ~20% (biggest since Feb 5 crash)
+- .6B liquidations (ETH/SOL/DOGE -9%)
+- HYPE predicted 80% oil move - TD Securities report
+- Strategy bitcoin sale may signal ETH outperformance - StanChart
+
+DASHBOARD EDITS MADE:
+- ETF card: updated from "待公布" to -19.1M confirmed
+- Macro summary: updated with ETF flow + Mt.Gox + Kalshi data
+- News items: replaced Clarity Act + SOL entries with Mt.Gox + Kalshi news
+- Calendar: updated with ETF confirmation
+- Footer: updated timestamp + ETF flow
+- History blob: Jun 2 etf_btc_flow updated to -519.1, Jun 3 prices corrected
+
+NULLS (unchanged):
+- MOVE: null (yfinance blocked)
+- BTC-NDX corr: null (yfinance blocked)
+- VIX3M: null (yfinance blocked)
+- Jun 3 ETF flow: null (not yet published by Farside)
+- FRED DFII10: null (FRED blocked)
