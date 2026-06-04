@@ -617,5 +617,36 @@
       "fetch-ai": -5.0,
       "toncoin": -3.8
     }
+  },
+  "2026-06-04": {
+    "date": "2026-06-04",
+    "timestamp_utc": "2026-06-04T08:30:00Z",
+    "btc_price": 64265,
+    "eth_price": 1814,
+    "btc_d": 57.37,
+    "eth_d": 9.8,
+    "others_d": null,
+    "btc_d_7day_prev": 57.63,
+    "btc_d_delta7": -0.26,
+    "alt_mom7": 7.81,
+    "breadth": 33.3,
+    "n_valid_basket": 6,
+    "req1_pass": true,
+    "req2_pass": true,
+    "bonus_a_pass": false,
+    "bonus_b_pass": true,
+    "bonus_c_pass": false,
+    "bonuses_passed": 1,
+    "verdict_label": "🟢 GO",
+    "verdict_detail": "req1 PASS(Δ7d=-0.26pp<0✓) · req2 PASS(alt_mom7=+7.81%>0✓) · bonus_a FAIL(-0.26pp>-0.5pp) · bonus_b PASS(+7.81%≥+1.5%✓) · bonus_c FAIL(others_d=null,保守) · 1 bonus → 🟢 GO",
+    "source": "CoinMarketCap via Apify RAG browser (fresh scrape 2026-06-04). n_valid_basket=6/14(TON/AVAX/DOT/UNI/LINK/NEAR/SUI/ONDO 7d% unavailable).",
+    "basket_7d_returns": {
+      "solana": -12.79,
+      "binancecoin": -3.69,
+      "ripple": 7.68,
+      "tron": 9.44,
+      "hyperliquid": 29.95,
+      "zcash": 16.26
+    }
   }
 }

@@ -538,5 +538,33 @@
     "verdict_detail": "req1 PASS(Δ7d=-0.03pp<0✓ BTC.D微幅下行) · req2 PASS(alt_mom7=+1.04%>0✓ 勉強正值) · bonus_a FAIL(-0.03pp>-0.5pp) · bonus_b FAIL(1.04%<1.5%) · bonus_c FAIL(11.59%<12%) · 0 bonus → 🟢 GO",
     "source": "CoinMarketCap + CoinDesk via Apify RAG browser (fresh scrape 2026-06-03 PM). BTC $67,154 (-3.41% 24h). n_valid=7/14.",
     "notes": "ZEC c3 Day5繼續(+45% 21D/+23% 7D) · HYPE c3繼續(+73% 21D) · XLM新入top3(+42% 21D) · NEAR跌出top3→top4 · BNB新入top10 · RENDER出場 · Clarity Act Senate日曆 · ethconf NYC 6/8"
+  },
+  "2026-06-04": {
+    "date": "2026-06-04",
+    "timestamp_utc": "2026-06-04T08:30:00Z",
+    "btc_d": 57.37,
+    "eth_d": 9.8,
+    "others_d": null,
+    "btc_d_delta7": -0.26,
+    "alt_mom7": 7.81,
+    "breadth": 33.3,
+    "n_valid_basket": 6,
+    "conditions": {
+      "req1_btc_d_delta_lt0": true,
+      "req1_met": true,
+      "req2_alt_mom7_gt0": true,
+      "req2_met": true,
+      "bonus_a_btc_d_delta_lte_minus05": false,
+      "bonus_b_alt_mom7_gt15": true,
+      "bonus_c_others_d_gt12": false
+    },
+    "bonuses_passed": 1,
+    "verdict": "GO",
+    "verdict_label": "🟢 GO",
+    "verdict_emoji": "🟢",
+    "verdict_class": "success",
+    "verdict_detail": "req1 PASS(Δ7d=-0.26pp<0✓ BTC.D微幅下行) · req2 PASS(alt_mom7=+7.81%>0✓ 強勢正值) · bonus_a FAIL(-0.26pp>-0.5pp) · bonus_b PASS(+7.81%≥+1.5%✓) · bonus_c FAIL(others_d=null,保守FAIL) · 1 bonus → 🟢 GO",
+    "source": "CoinMarketCap via Apify RAG (fresh scrape 2026-06-04). n_valid=6/14. HYPE+29.95%/ZEC+16.26%/XRP+7.68%/TRX+9.44% 強 · SOL-12.79%/BNB-3.69% 弱.",
+    "notes": "HYPE c3持守(+78% 21D) · ZEC c3 Day6(+48% 21D/+16.26% 7D) · XLM Day2 top3(等c3 Day3) · BNB跌出Top10 · XMR新入Top10(Iran隱私幣) · SpaceX IPO路演Jun4 · ethconf NYC(6/8-10)"
   }
 }

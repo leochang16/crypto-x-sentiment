@@ -1,164 +1,73 @@
 {
-  "date": "2026-06-03",
-  "generated_at": "2026-06-03T10:23:56Z",
+  "date": "2026-06-04",
+  "generated_at": "2026-06-04T08:30:00Z",
   "btc_price": {
-    "value": 67154.42,
-    "source": "CoinDesk live prices",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "btc_24h_pct": {
-    "value": -3.41,
-    "source": "CoinDesk live prices",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "btc_7d_pct": {
-    "value": -9.76,
-    "source": "CoinDesk table 7d column",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
+    "value": 64265,
+    "source": "CoinMarketCap via Apify RAG browser",
+    "fresh": true
   },
   "eth_price": {
-    "value": 1882.11,
-    "source": "CoinDesk live prices",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "eth_24h_pct": {
-    "value": -4.94,
-    "source": "CoinDesk live prices",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "eth_7d_pct": {
-    "value": -7.23,
-    "source": "CoinDesk table 7d column",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "eth_btc_ratio": {
-    "value": 0.02803,
-    "source": "computed",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
+    "value": 1814,
+    "source": "CoinMarketCap via Apify RAG browser",
+    "fresh": true
   },
   "btc_dominance": {
-    "value": 58.0,
-    "source": "CoinMarketCap Dominance page (fresh scrape)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
+    "value": 57.37,
+    "source": "CoinMarketCap charts via Apify RAG browser",
+    "fresh": true
   },
   "eth_dominance": {
     "value": 9.8,
-    "source": "CoinMarketCap Dominance page (fresh scrape)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "total_market_cap_usd": {
-    "value": 2320000000000.0,
-    "source": "CoinMarketCap fresh scrape",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "btc_d_delta7": {
-    "value": -0.03,
-    "source": "BTC.D 58.0% - 7d-ago 58.03% (history 2026-05-27)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "alt_mom7": {
-    "value": 1.04,
-    "source": "CoinDesk 7d data n_valid=7/14",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "breadth_pct": {
-    "value": 100.0,
-    "source": "computed (coins beating BTC 7d)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "others_d": {
-    "value": 11.59,
-    "source": "computed from CMC top10 MCs",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "layer1_verdict": {
-    "value": "\ud83d\udfe2 GO",
-    "source": "computed",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "vix": {
-    "value": 16.03,
-    "source": "Cboe.com (as of Jun 3, 2026)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "move": {
-    "value": null,
-    "source": "null: API blocked",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "dxy": {
-    "value": 99.35,
-    "source": "Yahoo Finance DXY page",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "ndx": {
-    "value": null,
-    "source": "null: NQ futures 30,727.50 but NDX spot unconfirmed",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "ten_year_yield": {
-    "value": 4.455,
-    "source": "Yahoo Finance ^TNX",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "tips_real_yield": {
-    "value": null,
-    "source": "null: FRED API 403, WebSearch returned no value",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
+    "source": "CoinMarketCap charts via Apify RAG browser",
+    "fresh": true
   },
   "fear_greed": {
-    "value": 27,
-    "source": "CoinMarketCap (fresh scrape)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
+    "value": 21,
+    "band": "extreme_fear",
+    "source": "CoinMarketCap via Apify RAG browser",
+    "fresh": true
   },
-  "etf_btc_jun3": {
-    "value": null,
-    "source": "null: Farside not yet published (US market opening)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "etf_btc_jun2": {
-    "value": -519.1,
-    "source": "farside.co.uk/btc/ (confirmed)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "etf_btc_jun2_breakdown": {
-    "value": {
-      "IBIT": -388.6,
-      "FBTC": -45.1,
-      "ARKB": -16.7,
-      "MSBT": 14.8,
-      "GBTC": -83.5
+  "alt_basket_7d": {
+    "n_valid": 6,
+    "n_total": 14,
+    "source": "CoinMarketCap page1 table via Apify RAG browser",
+    "coins": {
+      "solana": -12.79,
+      "binancecoin": -3.69,
+      "ripple": 7.68,
+      "tron": 9.44,
+      "hyperliquid": 29.95,
+      "zcash": 16.26
     },
-    "source": "Farside",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
+    "unavailable": ["toncoin", "avalanche-2", "polkadot", "uniswap", "chainlink", "near", "sui", "ondo-finance"],
+    "fresh": true
   },
-  "btc_ndx_corr_30d": {
-    "value": null,
-    "source": "null: API blocked",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
+  "tips_real_yield": {
+    "value": 2.08,
+    "source": "FRED DFII10 via WebSearch (permitted exception for TIPS only)",
+    "data_date": "2026-06-03",
+    "fresh": false
   },
-  "x_sentiment_btc": {
-    "value": 46.5,
-    "source": "Apify Twitter scraper (145 valid tweets)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "x_sentiment_eth": {
-    "value": 51.8,
-    "source": "Apify Twitter scraper (145 valid tweets)",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "x_sentiment_overall": {
-    "value": 48.1,
-    "source": "Apify Twitter scraper",
-    "fetched_at_utc": "2026-06-03T10:23:56Z"
-  },
-  "basket_7d_returns": {
-    "solana": -8.86,
-    "binancecoin": -0.86,
-    "ripple": -5.24,
-    "tron": -9.67,
-    "chainlink": -6.81,
-    "hyperliquid": 25.26,
-    "zcash": 13.49
+  "vix": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
+  "move": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
+  "dxy": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
+  "tnx": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
+  "ndx": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
+  "etf_btc_flow": {"value": null, "source": "Farside unavailable today", "fresh": false},
+  "x_sentiment": {
+    "provider": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest",
+    "terms": ["bitcoin", "比特幣", "ethereum", "以太坊", "crypto market", "加密市場"],
+    "maxItems_per_term": 25,
+    "queryType": "Top",
+    "scores": {
+      "btc_en": 59.9,
+      "btc_zh": 38.0,
+      "eth_en": 41.5,
+      "eth_zh": 29.7,
+      "crypto_en": 29.4,
+      "crypto_zh": 44.9,
+      "overall": 40.6
+    },
+    "fresh": true
   }
 }
