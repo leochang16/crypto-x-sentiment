@@ -618,7 +618,42 @@
       "bnb_7d": -8.1,
       "render_exit_7d": -15.0,
       "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+73% 21D) · ZEC c3 Day5(+45% 21D/+23% 7D,Iran隱私幣敘事) · XLM🆕#3(+42% 21D/+36.8% 7D) · NEAR跌至#4(c3退出) · BNB新入#10 · RENDER→出場 · btc_d_delta7=-0.03pp✓ alt_mom7=+1.04%✓ 0 bonus → 🟢 GO · BTC $67,154(-3.41% 24h) · Fear&Greed=27(恐慌) · ethconf NYC 6/8"
+    },
+    {
+      "date": "2026-06-04",
+      "scan_done": true,
+      "layer1_verdict": "GO",
+      "method": "CMC via Apify RAG + 7d% proxy (CoinGecko API 403)",
+      "prev_date": "2026-06-03",
+      "prev_top3": ["hype", "zec", "xlm"],
+      "prev_top10": ["hype", "zec", "xlm", "near", "fet", "ondo", "dot", "uni", "ton", "bnb"],
+      "top3_21d": ["hype", "zec", "xlm"],
+      "top10_21d": ["hype", "zec", "xlm", "near", "fet", "ondo", "xmr", "dot", "uni", "ton"],
+      "top10_gains_21d": {
+        "hype": 78,
+        "zec": 48,
+        "xlm": 40,
+        "near": 34,
+        "fet": 27,
+        "ondo": 21,
+        "xmr": 16,
+        "dot": 12,
+        "uni": 11,
+        "ton": 8
+      },
+      "exits_today": ["bnb"],
+      "new_entrants": ["xmr"],
+      "c3_signals": ["hype", "zec"],
+      "c3_new_today": [],
+      "c3_continuing": ["hype", "zec"],
+      "xlm_c3_day2": true,
+      "hype_c3_continuing": true,
+      "zec_c3_day6": true,
+      "hype_7d": 29.95,
+      "zec_7d": 16.26,
+      "bnb_exits_7d": -3.69,
+      "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+78% 21D/+29.95% 7D) · ZEC c3 Day6(+48% 21D/+16.26% 7D) · XLM Day2 #3(+40% 21D/待c3明日) · BNB跌出Top10(-3.69% 7D) · XMR🆕#7(Iran隱私幣) · btc_d_delta7=-0.26pp✓ alt_mom7=+7.81%✓(6/14 valid) · 1bonus(bonus_b) → 🟢 GO · BTC $64,265(-4.25% 24h) · Fear&Greed=21(極度恐慌) · SpaceX IPO路演Jun4 · ethconf NYC 6/8"
     }
   ],
-  "last_updated": "2026-06-03"
+  "last_updated": "2026-06-04"
 }

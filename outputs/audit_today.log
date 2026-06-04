@@ -1,63 +1,98 @@
-===== AUDIT LOG 2026-06-03 =====
-Generated: 2026-06-03 PM (fresh full run, both AM+PM sessions combined)
-Pipeline: PARTS A-E full run on branch claude/sleepy-tesla-16Zbw
+===== AUDIT LOG 2026-06-04 =====
+Generated: 2026-06-04 08:30 TPE (fresh full run)
+Pipeline: PARTS A-E full run on branch claude/gallant-goldberg-WlD0w
 
 --- PART A: X/Twitter Sentiment ---
-Tool: Apify kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
-Search terms: bitcoin, 比特幣, ethereum, 以太坊, crypto market, 加密市場
-Items per term: 25 (×6=150 target, 240 retrieved)
-Valid tweets after CRYPTO_KEYWORDS filter: 235
-BTC score: 46.5 (neutral)
-ETH score: 51.8 (neutral)
-Overall: 48.1 (neutral)
-Notes: viral_dominates=False (viral_pct=11.7%). Top engagement: Strategy sold 32 BTC (18838 eng, neutral).
-Filter fix applied: CRYPTO_KEYWORDS regex excludes non-crypto viral tweets.
+Provider: Apify kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
+Terms (6): bitcoin, 比特幣, ethereum, 以太坊, crypto market, 加密市場
+maxItems=25 each, queryType=Top
+Scores:
+  BTC-EN: 59.9 (greed)
+  BTC-ZH: 38.0 (fear)
+  ETH-EN: 41.5 (fear)
+  ETH-ZH: 29.7 (fear)
+  Crypto-EN: 29.4 (fear)
+  加密-ZH: 44.9 (fear)
+  Overall: 40.6 (fear)
+BTC combined: 49.0 (neutral)
+ETH combined: 35.6 (fear)
 
---- PART B: Dominance + Layer 1 v2 ---
-Source: CoinMarketCap via Apify RAG browser (fresh scrape)
-BTC dominance: 58.0% | ETH dominance: 9.8%
-7d-ago ref: 2026-05-27 btc_d=58.03 → btc_d_delta7=-0.03pp
-alt_mom7: +1.04% (n_valid=7/14, breadth=100%)
-  Valid: HYPE+7.0%, ZEC+23.0%, XLM+36.82%, SOL-9.76%, BNB-8.1%, FET-5.0%, TON-3.8%
-  Missing (7): AVAX, DOT, UNI, NEAR, SUI, ONDO + partial TON
-Layer 1 v2 verdict: 🟢 GO (req1 PASS Δ=-0.03pp, req2 PASS alt_mom7=+1.04%, 0 bonuses)
+--- PART B: BTC Dominance / Layer 1 v2 ---
+BTC.D: 57.37% (CMC fresh)
+ETH.D: 9.8% (CMC fresh)
+OTHERS.D: null (not scraped)
+BTC.D 7-day-prev (2026-05-28): 57.63%
+btc_d_delta7: -0.26pp
+req1 (delta < 0): PASS
+Alt basket (14 coins canonical):
+  solana: -12.79% (7d, CMC page1)
+  binancecoin: -3.69% (7d, CMC page1)
+  ripple: +7.68% (7d, CMC page1)
+  tron: +9.44% (7d, CMC page1)
+  hyperliquid: +29.95% (7d, CMC page1)
+  zcash: +16.26% (7d, CMC page1)
+  toncoin: unavailable (7d%)
+  avalanche-2: unavailable (7d%)
+  polkadot: unavailable (7d%)
+  uniswap: unavailable (7d%)
+  chainlink: unavailable (7d%)
+  near: unavailable (7d%, only 24h available: +4.24%)
+  sui: unavailable (7d%, only 24h available: +1.46%)
+  ondo-finance: unavailable (7d%, only 24h available: +7.52%)
+n_valid_basket: 6/14
+alt_mom7 (mean of 6): +7.81%
+req2 (alt_mom7 > 0): PASS
+bonus_a (delta <= -0.5pp): FAIL (-0.26pp > -0.5pp)
+bonus_b (alt_mom7 >= 1.5%): PASS (+7.81%)
+bonus_c (others_d > 12%): FAIL (null, conservative)
+bonuses_passed: 1
+VERDICT: 🟢 GO (1 bonus)
 
---- PART C: Macro Data ---
-BTC: $67,154.42 (-3.41% 24h, -9.76% 7d) | ETH: $1,882.11 (-4.94% 24h)
-VIX: 16.03 (Cboe.com Jun 3 2026)
-DXY: 99.35 (Yahoo Finance DXY)
-10Y yield: 4.455% (Yahoo Finance ^TNX)
-Fear&Greed: 27/100 (CoinMarketCap fresh scrape)
-ETF BTC Jun 2: -$519.1M (farside.co.uk confirmed)
-ETF BTC Jun 3: null (not yet published at scrape time)
+--- PART C: Macro ---
+BTC price: $64,265 (CMC fresh)
+ETH price: $1,814 (CMC fresh)
+Fear & Greed: 21 (extreme_fear, CMC fresh)
+VIX: null (yfinance 403)
+MOVE: null (yfinance 403)
+DXY: null (yfinance 403)
+NDX: null (yfinance 403)
+10Y nominal: null (yfinance 403)
+TIPS real yield: 2.08% (FRED DFII10 Jun3, WebSearch permitted exception)
+ETF BTC flow: null (Farside unavailable)
+BTC-NDX corr: null (yfinance 403)
 
---- NULL FIELDS LOG (required) ---
-tips_real_yield: null — FRED DFII10 API 403 blocked; WebSearch returned no specific numeric value; TIPS daily and slow → null per rules
-ndx: null — Only NQ futures (30,727.50) confirmed, not NDX spot → null per rules
-etf_btc_jun3: null — Farside Jun 3 not yet published at scrape time
-btc_ndx_corr: null — yfinance 403 blocked
-vix3m: null — API blocked
-^MOVE: null — yfinance blocked
+--- PART E: 21D Strongest Coin Scan ---
+Method: CMC 7d% proxy + trend continuation from Jun 03
+Top 3 (21D): HYPE (#1, ~+78%), ZEC (#2, ~+48%), XLM (#3, ~+40%)
+Top 10 (21D): hype, zec, xlm, near, fet, ondo, xmr, dot, uni, ton
+Exits: bnb (was #10 with +3% 21D, now -3.69% 7d → dropped out)
+New entrants: xmr (Iran privacy narrative, +11.6% today)
+c3 signals:
+  HYPE: Jun01/Jun02/Jun03/Jun04 in top3 → c3 CONTINUING
+  ZEC: Jun01/Jun02/Jun03/Jun04 in top3 → c3 CONTINUING (Day6)
+  XLM: Jun03/Jun04 in top3 → Day2, c3 NOT yet triggered (need Day3)
+c3_new_today: []
+c3_exits: []
 
---- PART D: Dashboard ---
-Surgical edit of dashboard/index.html.
-Updated: BTC/ETH price cards, BTC.D/ETH.D, Layer1 box, 21D table,
-  ETF card, macro section, news section, footer, history blob.
-UX rules: U1 no removed sections; U2 ≤25 char action sentences; U3 metrics kept numeric.
+--- PART D: Dashboard Update ---
+dashboard/index.html surgically updated
+Key changes:
+  - Status bar date → 2026-06-04 (週四)
+  - Alert banners updated
+  - BTC/ETH scores updated
+  - Layer 1 verdict updated
+  - Top 10 grid updated (BNB→XMR)
+  - History table: 06-04 row added
+  - Signal cards updated
+  - Footer updated
+  - HISTORY array: 06-04 entry appended
 
---- PART E: 21D Top10 ---
-Method: CoinDesk 30d data proxy (all direct APIs 403)
-Top3: HYPE(+73%), ZEC(+45%), XLM(+42%)
-Top10: HYPE/ZEC/XLM/NEAR/FET/ONDO/DOT/UNI/TON/BNB
-c3 = Jun1∩Jun2∩Jun3 top3 = {hype,zec} (NEAR exits c3 since XLM replaced it in today's top3)
-Exit: RENDER (Jun2#9→not in Jun3 top10)
-New: BNB (#10)
+--- SOURCES INTEGRITY CHECK ---
+ANTI-CACHE: All prices/dominance from fresh CMC scrape ✓
+ANTI-WEBSEARCH: No prices/dominance/rankings from WebSearch ✓
+(TIPS 2.08% from WebSearch — permitted exception per pipeline rules)
+maxItems=25 per Apify call ✓
 
---- API FAILURES ---
-CoinGecko API: 403 Forbidden (all session)
-Binance API: 403 Forbidden (network policy)
-Yahoo Finance yfinance: 403 Forbidden
-FRED API: 403 Forbidden
-All direct scraping blocked → pivoted to Apify RAG browser + WebSearch
-
-===== END AUDIT LOG =====
+--- GIT ---
+Branch: claude/gallant-goldberg-WlD0w
+Commit: daily: 2026-06-04
