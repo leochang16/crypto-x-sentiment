@@ -1,233 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-05-27",
-      "scan_done": true,
-      "regime": "STRONG GO",
-      "method": "WebSearch fallback (CoinGecko API 403)",
-      "prev_date": "2026-05-26",
-      "prev_top3": [
-        "near",
-        "zec",
-        "hype"
-      ],
-      "prev_top10": [
-        "near",
-        "zec",
-        "hype",
-        "tao",
-        "sui",
-        "ondo",
-        "fet",
-        "trx",
-        "ton",
-        "akt"
-      ],
-      "top3_21d": [
-        "near",
-        "hype",
-        "zec"
-      ],
-      "top10_21d": [
-        "near",
-        "hype",
-        "zec",
-        "tao",
-        "sui",
-        "ondo",
-        "fet",
-        "trx",
-        "ton",
-        "sol"
-      ],
-      "top10_gains_21d": {
-        "near": 145,
-        "hype": 58,
-        "zec": 45,
-        "tao": 38,
-        "sui": 22,
-        "ondo": 21,
-        "fet": 19,
-        "trx": 13,
-        "ton": 11,
-        "sol": 10
-      },
-      "exits_today": [
-        "akt"
-      ],
-      "new_entrants": [
-        "sol"
-      ],
-      "c3_signals": [
-        "near",
-        "hype",
-        "zec"
-      ],
-      "near_day4_c3_continuing": true,
-      "hype_c3_continuing": true,
-      "zec_c3_continuing": true,
-      "near_7d": 61.2,
-      "hype_7d": 26.0,
-      "zec_7d": 5.65,
-      "carry_signal": "🟢🟢 STRONG GO · c3繼續: NEAR+HYPE+ZEC 連 4/5+天 Top3 · SOL新入 #10 · AKT跌出 · btc_d_delta7=-1.97pp✓ alt_mom7=+2.67%✓ · 等 PCE 明日 20:30 決定加倉"
-    },
-    {
-      "date": "2026-05-28",
-      "scan_done": true,
-      "regime": "ALT-OFF",
-      "method": "WebSearch fallback (CoinGecko API 403)",
-      "prev_date": "2026-05-27",
-      "prev_top3": [
-        "near",
-        "hype",
-        "zec"
-      ],
-      "prev_top10": [
-        "near",
-        "hype",
-        "zec",
-        "tao",
-        "sui",
-        "ondo",
-        "fet",
-        "trx",
-        "ton",
-        "sol"
-      ],
-      "top3_21d": [
-        "near",
-        "hype",
-        "tao"
-      ],
-      "top10_21d": [
-        "near",
-        "hype",
-        "tao",
-        "zec",
-        "sui",
-        "ondo",
-        "fet",
-        "trx",
-        "ton",
-        "sol"
-      ],
-      "top10_gains_21d": {
-        "near": 125,
-        "hype": 50,
-        "tao": 35,
-        "zec": 30,
-        "sui": 20,
-        "ondo": 19,
-        "fet": 17,
-        "trx": 12,
-        "ton": 10,
-        "sol": 8
-      },
-      "exits_today": [],
-      "new_entrants": [
-        "tao"
-      ],
-      "zec_drops_to_4": true,
-      "c3_signals": [
-        "near",
-        "hype"
-      ],
-      "c3_new_today": [],
-      "c3_continuing": [
-        "near",
-        "hype"
-      ],
-      "near_day5_c3_continuing": true,
-      "hype_c3_continuing": true,
-      "tao_day1": true,
-      "near_7d": 55.0,
-      "hype_7d": 28.8,
-      "tao_7d": 10.0,
-      "zec_7d": -1.03,
-      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · Top3(NEAR/HYPE/TAO) · ZEC -6%日跌→#4 · TAO新#3 Day1(等c3) · NEAR c3 Day5 · HYPE c3繼續 · alt_mom7=-0.19%<0 FAIL → 🔴 ALT-OFF · PCE日慎追"
-    },
-    {
-      "date": "2026-05-29",
-      "scan_done": true,
-      "regime": "GO",
-      "method": "WebSearch+CoinDesk RAG fallback (CoinGecko API 403)",
-      "prev_date": "2026-05-28",
-      "prev_top3": [
-        "near",
-        "hype",
-        "tao"
-      ],
-      "prev_top10": [
-        "near",
-        "hype",
-        "tao",
-        "fet",
-        "zec",
-        "sui",
-        "ondo",
-        "trx",
-        "ton",
-        "sol"
-      ],
-      "top3_21d": [
-        "near",
-        "hype",
-        "tao"
-      ],
-      "top10_21d": [
-        "near",
-        "hype",
-        "tao",
-        "fet",
-        "xlm",
-        "zec",
-        "ondo",
-        "sui",
-        "trx",
-        "ton"
-      ],
-      "top10_gains_21d": {
-        "near": 104,
-        "hype": 46,
-        "tao": 38,
-        "fet": 37,
-        "xlm": 35,
-        "zec": 29,
-        "ondo": 17,
-        "sui": 16,
-        "trx": 10,
-        "ton": 8
-      },
-      "exits_today": [
-        "sol"
-      ],
-      "new_entrants": [
-        "xlm"
-      ],
-      "c3_signals": [
-        "near",
-        "hype",
-        "tao"
-      ],
-      "c3_new_today": [
-        "tao"
-      ],
-      "c3_continuing": [
-        "near",
-        "hype"
-      ],
-      "near_day7_c3_continuing": true,
-      "hype_c3_continuing": true,
-      "tao_day3_c3_new": true,
-      "near_7d": 51.34,
-      "hype_7d": 15.01,
-      "tao_7d": -13.1,
-      "xlm_7d": 45.74,
-      "sui_7d": -20.1,
-      "zec_7d": -5.04,
-      "carry_signal": "🟢 GO · c3: NEAR Day7繼續 · HYPE c3繼續 · TAO Day3 NEW c3入場訊號🔔 · XLM新#5(DTCC+Stellar+45.7% 7D) · SOL跌出Top10 · SUI -20.1% 7D(主網宕機) · btc_d_delta7=-0.18pp✓ · alt_mom7=+3.27%✓ · 1bonus(bonus_b) → 🟢 GO · CFTC BTC perp futures今日獲批 · ETF -$223M 第9天"
-    },
-    {
       "date": "2026-05-30",
       "scan_done": true,
       "regime": "GO",
@@ -301,7 +74,7 @@
       "hype_7d": 15.1,
       "zec_7d": 10.0,
       "tao_7d": 5.14,
-      "carry_signal": "🟢 GO · c3繼續: NEAR+HYPE · NEAR Day7 Top3 c3(+120% 21D) · HYPE近ATH $65.47(+53% 21D) · ZEC升#3(+42% 21D / +10% 7D) · TRX/TON出場 · btc_d_delta7=-0.47pp✓ alt_mom7=+5.71%✓ · 1bonus(bonus_b) → 🟢 GO"
+      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3\u7e7c\u7e8c: NEAR+HYPE \u00b7 NEAR Day7 Top3 c3(+120% 21D) \u00b7 HYPE\u8fd1ATH $65.47(+53% 21D) \u00b7 ZEC\u5347#3(+42% 21D / +10% 7D) \u00b7 TRX/TON\u51fa\u5834 \u00b7 btc_d_delta7=-0.47pp\u2713 alt_mom7=+5.71%\u2713 \u00b7 1bonus(bonus_b) \u2192 \ud83d\udfe2 GO"
     },
     {
       "date": "2026-05-31",
@@ -376,7 +149,7 @@
       "zec_7d": -13.4,
       "tao_7d": 5.0,
       "zec_c3_day": 2,
-      "carry_signal": "🟢 GO · c3繼續: NEAR+HYPE · NEAR Day9 Top3 c3(+100% 21D/-16% 7D窗回調) · HYPE ATH $65.47(+53% 21D/+15.1% 7D) · ZEC Day2 #3(+42% 21D/-13.4% 7D↓ 等Day3 c3) · SUI出場(宕機弱勢) · RENDER新入#10 · btc_d_delta7=-0.79pp✓ bonus_a✓ alt_mom7=+0.3%✓(勉強) · 1bonus(bonus_a) → 🟢 GO · Fear&Greed=25 極度恐慌"
+      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3\u7e7c\u7e8c: NEAR+HYPE \u00b7 NEAR Day9 Top3 c3(+100% 21D/-16% 7D\u7a97\u56de\u8abf) \u00b7 HYPE ATH $65.47(+53% 21D/+15.1% 7D) \u00b7 ZEC Day2 #3(+42% 21D/-13.4% 7D\u2193 \u7b49Day3 c3) \u00b7 SUI\u51fa\u5834(\u5b95\u6a5f\u5f31\u52e2) \u00b7 RENDER\u65b0\u5165#10 \u00b7 btc_d_delta7=-0.79pp\u2713 bonus_a\u2713 alt_mom7=+0.3%\u2713(\u52c9\u5f37) \u00b7 1bonus(bonus_a) \u2192 \ud83d\udfe2 GO \u00b7 Fear&Greed=25 \u6975\u5ea6\u6050\u614c"
     },
     {
       "date": "2026-06-01",
@@ -455,7 +228,7 @@
       "hype_7d": 8.6,
       "zec_7d": -3.3,
       "bnb_7d": 5.13,
-      "carry_signal": "🔴 ALT-OFF · ⚠ 僅供參考 · ZEC c3 NEW(Day3,+60% 21D)🔔 · HYPE ATH $70(c3繼續,+82% 21D) · NEAR c3 Day10(+48% 21D) · TAO跌出Top10 · BNB新入#10 · btc_d_delta7=-0.84pp✓ alt_mom7=-0.66%<0 FAIL → 🔴 ALT-OFF · Saylor買入訊號+Mastercard$1.8B加密收購"
+      "carry_signal": "\ud83d\udd34 ALT-OFF \u00b7 \u26a0 \u50c5\u4f9b\u53c3\u8003 \u00b7 ZEC c3 NEW(Day3,+60% 21D)\ud83d\udd14 \u00b7 HYPE ATH $70(c3\u7e7c\u7e8c,+82% 21D) \u00b7 NEAR c3 Day10(+48% 21D) \u00b7 TAO\u8dcc\u51faTop10 \u00b7 BNB\u65b0\u5165#10 \u00b7 btc_d_delta7=-0.84pp\u2713 alt_mom7=-0.66%<0 FAIL \u2192 \ud83d\udd34 ALT-OFF \u00b7 Saylor\u8cb7\u5165\u8a0a\u865f+Mastercard$1.8B\u52a0\u5bc6\u6536\u8cfc"
     },
     {
       "date": "2026-06-02",
@@ -535,7 +308,7 @@
       "xlm_7d": 77.52,
       "bnb_7d": -6.23,
       "ton_new_entry_7d": 12.1,
-      "carry_signal": "🟢 GO · c3繼續: HYPE+ZEC+NEAR · HYPE c3持守(+87% 21D/ATH $71.44) · ZEC c3 Day4(+62% 21D/+14% 7D) · NEAR c3 Day11(+45% 21D/+1% 7D) · XLM大漲新#4(+38% 21D/+77.5% 7D) · BNB跌出Top10 · TON新入#10 · btc_d_delta7=-1.39pp✓ bonus_a✓ alt_mom7=+0.47%✓(勉強) · 1bonus → 🟢 GO · Strategy賣32BTC($2.5M) · ETF Flow null"
+      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3\u7e7c\u7e8c: HYPE+ZEC+NEAR \u00b7 HYPE c3\u6301\u5b88(+87% 21D/ATH $71.44) \u00b7 ZEC c3 Day4(+62% 21D/+14% 7D) \u00b7 NEAR c3 Day11(+45% 21D/+1% 7D) \u00b7 XLM\u5927\u6f32\u65b0#4(+38% 21D/+77.5% 7D) \u00b7 BNB\u8dcc\u51faTop10 \u00b7 TON\u65b0\u5165#10 \u00b7 btc_d_delta7=-1.39pp\u2713 bonus_a\u2713 alt_mom7=+0.47%\u2713(\u52c9\u5f37) \u00b7 1bonus \u2192 \ud83d\udfe2 GO \u00b7 Strategy\u8ce332BTC($2.5M) \u00b7 ETF Flow null"
     },
     {
       "date": "2026-06-03",
@@ -607,7 +380,7 @@
       "c3_exited": [
         "near"
       ],
-      "near_exits_top3_note": "NEAR drops from top3 (XLM替入). NEAR仍#4. c3條件: Jun1∩Jun2∩Jun3 top3 = {hype,zec,near}∩{hype,zec,near}∩{hype,zec,xlm} = {hype,zec}",
+      "near_exits_top3_note": "NEAR drops from top3 (XLM\u66ff\u5165). NEAR\u4ecd#4. c3\u689d\u4ef6: Jun1\u2229Jun2\u2229Jun3 top3 = {hype,zec,near}\u2229{hype,zec,near}\u2229{hype,zec,xlm} = {hype,zec}",
       "hype_c3_continuing": true,
       "zec_c3_day5": true,
       "near_exits_c3": true,
@@ -617,7 +390,7 @@
       "near_7d": -7.2,
       "bnb_7d": -8.1,
       "render_exit_7d": -15.0,
-      "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+73% 21D) · ZEC c3 Day5(+45% 21D/+23% 7D,Iran隱私幣敘事) · XLM🆕#3(+42% 21D/+36.8% 7D) · NEAR跌至#4(c3退出) · BNB新入#10 · RENDER→出場 · btc_d_delta7=-0.03pp✓ alt_mom7=+1.04%✓ 0 bonus → 🟢 GO · BTC $67,154(-3.41% 24h) · Fear&Greed=27(恐慌) · ethconf NYC 6/8"
+      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3: HYPE+ZEC\u7e7c\u7e8c \u00b7 HYPE c3\u6301\u5b88(+73% 21D) \u00b7 ZEC c3 Day5(+45% 21D/+23% 7D,Iran\u96b1\u79c1\u5e63\u6558\u4e8b) \u00b7 XLM\ud83c\udd95#3(+42% 21D/+36.8% 7D) \u00b7 NEAR\u8dcc\u81f3#4(c3\u9000\u51fa) \u00b7 BNB\u65b0\u5165#10 \u00b7 RENDER\u2192\u51fa\u5834 \u00b7 btc_d_delta7=-0.03pp\u2713 alt_mom7=+1.04%\u2713 0 bonus \u2192 \ud83d\udfe2 GO \u00b7 BTC $67,154(-3.41% 24h) \u00b7 Fear&Greed=27(\u6050\u614c) \u00b7 ethconf NYC 6/8"
     },
     {
       "date": "2026-06-04",
@@ -692,14 +465,57 @@
       "hype_7d": 29.95,
       "zec_7d": 16.26,
       "bnb_exits_7d": -3.69,
-      "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+78% 21D/+29.95% 7D) · ZEC c3 Day6(+48% 21D/+16.26% 7D) · XLM Day2 #3(+40% 21D/待c3明日) · BNB跌出Top10(-3.69% 7D) · XMR🆕#7(Iran隱私幣) · btc_d_delta7=-0.26pp✓ alt_mom7=+7.81%✓(6/14 valid) · 1bonus(bonus_b) → 🟢 GO · BTC $64,265(-4.25% 24h) · Fear&Greed=21(極度恐慌) · SpaceX IPO路演Jun4 · ethconf NYC 6/8"
+      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3: HYPE+ZEC\u7e7c\u7e8c \u00b7 HYPE c3\u6301\u5b88(+78% 21D/+29.95% 7D) \u00b7 ZEC c3 Day6(+48% 21D/+16.26% 7D) \u00b7 XLM Day2 #3(+40% 21D/\u5f85c3\u660e\u65e5) \u00b7 BNB\u8dcc\u51faTop10(-3.69% 7D) \u00b7 XMR\ud83c\udd95#7(Iran\u96b1\u79c1\u5e63) \u00b7 btc_d_delta7=-0.26pp\u2713 alt_mom7=+7.81%\u2713(6/14 valid) \u00b7 1bonus(bonus_b) \u2192 \ud83d\udfe2 GO \u00b7 BTC $64,265(-4.25% 24h) \u00b7 Fear&Greed=21(\u6975\u5ea6\u6050\u614c) \u00b7 SpaceX IPO\u8def\u6f14Jun4 \u00b7 ethconf NYC 6/8"
     },
     {
       "date": "2026-06-05",
-      "scan_done": true,
-      "layer1_verdict": "STRONG GO",
-      "method": "CMC via Apify RAG + 7d% proxy (yesterday 7D × (1+today 24h))",
-      "prev_date": "2026-06-04",
+      "top3_21d": [
+        "lab",
+        "beat",
+        "h"
+      ],
+      "top10_21d": [
+        "lab",
+        "beat",
+        "h",
+        "wld",
+        "rain",
+        "dexe",
+        "near",
+        "vvv",
+        "hype",
+        "inj"
+      ],
+      "top3_gains_30d": {
+        "lab": 271.7,
+        "beat": 198.5,
+        "h": 183.9
+      },
+      "top10_gains_30d": {
+        "lab": 271.7,
+        "beat": 198.5,
+        "h": 183.9,
+        "wld": 97.9,
+        "rain": 91.7,
+        "dexe": 87.6,
+        "near": 65.9,
+        "vvv": 55.3,
+        "hype": 41.8,
+        "inj": 39.5
+      },
+      "c3_entry": [],
+      "c3_exit": [
+        "zec",
+        "xlm",
+        "fet",
+        "ondo",
+        "xmr",
+        "dot",
+        "uni",
+        "ton"
+      ],
+      "regime": "ALT-OFF",
+      "layer1_verdict": "ALT-OFF",
       "prev_top3": [
         "hype",
         "zec",
@@ -716,59 +532,7 @@
         "dot",
         "uni",
         "ton"
-      ],
-      "top3_21d": [
-        "hype",
-        "zec",
-        "near"
-      ],
-      "top10_21d": [
-        "hype",
-        "zec",
-        "near",
-        "xlm",
-        "fet",
-        "ondo",
-        "xmr",
-        "dot",
-        "uni",
-        "ton"
-      ],
-      "top10_gains_21d": {
-        "hype": 104,
-        "zec": 87,
-        "near": 63,
-        "xlm": 45,
-        "fet": 28,
-        "ondo": 22,
-        "xmr": 17,
-        "dot": 13,
-        "uni": 12,
-        "ton": 9
-      },
-      "exits_today": [],
-      "new_entrants": [],
-      "c3_signals": [
-        "hype",
-        "zec"
-      ],
-      "c3_new_today": [],
-      "c3_continuing": [
-        "hype",
-        "zec"
-      ],
-      "c3_exited": [],
-      "xlm_c3_failed": true,
-      "xlm_note": "XLM was Day1(Jun3)+Day2(Jun4) but NEAR+22% surge today pushed NEAR to #3 and XLM to #4. XLM Day3 FAIL - c3 NOT triggered.",
-      "near_c3_day1": true,
-      "near_note": "NEAR surged +22% today, moved from #4 to #3. Day1 of potential c3 watch.",
-      "hype_c3_continuing": true,
-      "zec_c3_day7": true,
-      "hype_7d": 48.68,
-      "zec_7d": 46.82,
-      "near_24h": 22.0,
-      "xlm_24h": 3.82,
-      "carry_signal": "🟢🟢 STRONG GO · c3: HYPE+ZEC持守 · HYPE c3持守(+104% 21D) · ZEC c3 Day7(+87% 21D) · NEAR🆕#3 Day1(+63% 21D,+22% 今日) · XLM Day3 FAIL→#4(+45% 21D,c3未觸發) · btc_d_delta7=-3.12pp✓ alt_mom7=+16.11%✓(6/14 proxy) · 2bonus(bonus_a bonus_b) → 🟢🟢 STRONG GO · BTC $63,700(-0.88% 24h) · Fear&Greed=21(極度恐慌) · ethconf NYC(6/8)明日開幕"
+      ]
     }
   ],
   "last_updated": "2026-06-05"
