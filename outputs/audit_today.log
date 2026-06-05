@@ -1,53 +1,44 @@
-=== AUDIT LOG: 2026-06-05 ===
-Run timestamp: 2026-06-05T08:30:00Z
+2026-06-05 AUDIT LOG - Full fresh re-fetch run
+=================================================
+PART A: X Sentiment (Apify kaitoeasyapi, all 6 terms fresh)
+  BTC en=43.4(fear,n=32), BTC zh=36.0(fear,n=18)
+  ETH en=47.9(neutral,n=35), ETH zh=44.8(neutral,n=38)  
+  crypto en=47.2(neutral,n=19), 加密 zh=null(n=0 all spam)
+  BTC composite=39.7(fear)
 
---- PART A: SENTIMENT ---
-[OK] BTC sentiment = 49.9 (neutral) — Apify kaitoeasyapi 6-term fresh run
-[OK] ETH sentiment = 51.7 (neutral) — Apify kaitoeasyapi 6-term fresh run
-[OK] n_sampled = 150 per asset (BTC EN+ZH, ETH EN+ZH)
+PART B: Dominance+Layer1
+  btc_d=58.0%(CMC fresh), eth_d=9.6%, total_mc=$2.18T
+  btc_d_delta7=NULL: dominance_history was empty - no 7-day prior
+  alt_mom7=-11.50%(14 valid coins, FAIL req2>0)
+  breadth=57.1%(8/14 coins > BTC 7D -13.91%)
+  Layer1 verdict: ALT-OFF (req2 FAIL definitively)
+  
+PART C: Macro (all fresh except where noted)
+  BTC=$63,011 ETH=$1,729 (CoinGecko)
+  VIX=15.40 (Cboe Jun4 close), DXY=99.41 (CNBC/Yahoo)
+  10Y=4.477% (Yahoo ^TNX), TIPS=2.11% (FRED DFII10 Jun3)
+  NDX=30173 proxy (NQ futures; spot not directly fetched)
+  MOVE=null (no source available)
+  ETF flow Jun4=-44.5M (Farside, IBIT pending)
+  Fear&Greed=17(Extreme Fear, CMC)
+  BTC-NDX corr=null (no time series)
 
---- PART B: DOMINANCE ---
-[WARN] btc_d = 54.88% — ESTIMATE only. Direct CMC/CoinGecko API blocked.
-  Method: BTC supply 19.73M × $63,700 = $1,257B / total market cap $2,290B (from news) = 54.88%
-  This is not a real dominance read. Use with caution.
-[WARN] btc_d_delta7 = -3.12pp — Based on estimated btc_d today (54.88%) vs May29 (58.0%, from dominance_history.json)
-[WARN] alt_mom7 = +16.11% — PROXY ESTIMATE. Formula: (1+yesterday_7D%) × (1+today_24h%) - 1
-  Applied to 6 valid coins: HYPE+48.68%/ZEC+46.82%/XRP+4.47%/TRX+9.44%/SOL-9.04%/BNB-3.69%
-  n_valid=6/14. Real 7D API unavailable.
-[OK] Verdict: STRONG GO (2 bonus: bonus_a✓ bonus_b✓)
+PART E: Strong Coins (benthepythondev/crypto-intelligence 120 coins)
+  Filters applied: stables/exchange tokens/non-ASCII/canton-network
+  Top3(30D): LAB+271.7%, BEAT+198.5%, H+183.9%
+  Top10: LAB,BEAT,H,WLD,RAIN,DEXE,NEAR,VVV,HYPE,INJ
+  c3_entry=[] (today's LAB/BEAT/H not in Jun3-4 top3)
+  c3_exit=[zec,xlm,fet,ondo,xmr,dot,uni,ton] - regime rotation
+  Note: Major market rotation - old momentum coins dropped, new entrants
 
---- PART C: MACRO ---
-[OK] BTC price = $63,700 — CMC via Apify RAG
-[OK] ETH price = $1,766 — CMC via Apify RAG
-[OK] VIX = 15.40 — Yahoo Finance ^VIX via Apify RAG
-[OK] DXY = 99.43 — Yahoo Finance DX-Y.NYB via Apify RAG
-[OK] 10Y = 4.477% — Yahoo Finance ^TNX via Apify RAG
-[OK] TIPS = 2.07% — FRED DFII10 Jun2 data (carry-forward allowed per rules)
-[PARTIAL] ETF flow = -$26.4M — Farside Jun4 partial. IBIT/FBTC unconfirmed.
-[NULL] NDX — not available
-[NULL] MOVE — API blocked
-[NULL] Fear&Greed — Jun4 value 21 carried forward
-
---- PART D: DASHBOARD ---
-[OK] dashboard/index.html surgically updated
-  - Date: 2026-06-05 (週五)
-  - Alert banner: STRONG GO
-  - BTC sentiment: 49.9, ETH sentiment: 51.7
-  - BTC.D: 54.88%, delta7: -3.12pp
-  - VIX: 15.40, DXY: 99.43, TIPS: 2.07%
-  - ETF: -$26.4M partial
-  - 21D Top3: HYPE(+104%), ZEC(+87%), NEAR(+63% Day1)
-  - History table: Jun 5 row added
-
---- PART E: TOP COINS ---
-[OK] Top 3 today: HYPE(#1,+104%), ZEC(#2,+87%), NEAR(#3,+63%)
-[NOTE] XLM: Day3 FAIL — was Day1(Jun3)+Day2(Jun4) but NEAR surged +22% pushing XLM to #4
-[NOTE] NEAR: Day1 new entry to top3
-[OK] c3 continuing: HYPE + ZEC (Day7 for ZEC)
-[NOTE] All 21D values are proxy estimates (yesterday_21D × (1+today_24h))
-
---- RULE COMPLIANCE ---
-[OK] No WebSearch used for prices, dominance, or macro indicators
-[OK] Null written for NDX, MOVE, Fear&Greed fresh (rather than estimated)
-[OK] btc_d and alt_mom7 flagged as estimates in audit log
-[OK] No structural rewrite of dashboard — surgical edits only
+News highlights:
+  - CFTC approved BTC perpetual contract (historic regulatory action)
+  - US Treasury seized $1B Iran crypto
+  - Strategy sold 29,847 BTC @$67,142 ($2B proceeds)
+  - Mt Gox moved $739M BTC
+  - ETF outflows: 13 consecutive days, cumul ~$43.7B
+  - BTC below 200-week MA support
+  - Clarity Act on Senate calendar
+  - JPMorgan Dimon fighting Clarity Act
+  - BTC broke 14-year trendline (per top viral tweet)
+  - AI IPO wave: SpaceX+Anthropic+OpenAI capital extraction narrative

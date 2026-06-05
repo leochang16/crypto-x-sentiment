@@ -1,97 +1,214 @@
 {
   "date": "2026-06-05",
-  "generated_at": "2026-06-05T08:30:00Z",
+  "generated_at": "2026-06-05T04:45:00Z",
   "btc_price": {
-    "value": 63700,
-    "source": "CoinMarketCap via Apify RAG browser",
-    "fetched_at_utc": "2026-06-05T00:09:00Z",
-    "note": "CMC live price page scrape"
+    "value": 63011,
+    "source": "CoinGecko via benthepythondev/crypto-intelligence actor",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
   },
   "eth_price": {
-    "value": 1766,
-    "source": "CoinMarketCap via Apify RAG browser",
-    "fetched_at_utc": "2026-06-05T00:05:00Z",
-    "note": "CMC live price page scrape"
+    "value": 1729,
+    "source": "CoinGecko via benthepythondev/crypto-intelligence actor",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "btc_24h_pct": {
+    "value": -2.04,
+    "source": "Yahoo Finance ^BTC-USD",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "eth_24h_pct": {
+    "value": null,
+    "source": "null - not fetched directly",
+    "note": "use 7D: -13.56%"
+  },
+  "btc_7d_pct": {
+    "value": -13.91,
+    "source": "CoinGecko via benthepythondev/crypto-intelligence actor",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "eth_7d_pct": {
+    "value": -13.56,
+    "source": "CoinGecko via benthepythondev/crypto-intelligence actor",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "btc_dominance": {
+    "value": 58.0,
+    "source": "CoinMarketCap bitcoin-dominance page fresh scrape",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "eth_dominance": {
+    "value": 9.6,
+    "source": "CoinMarketCap bitcoin-dominance page fresh scrape",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "total_market_cap_B": {
+    "value": 2180,
+    "source": "CoinMarketCap bitcoin-dominance page ($2.18T)",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "stable_pct": {
+    "value": 13.39,
+    "source": "Computed: USDT+USDC+USDS+USD1+USDe+DAI+PYUSD+rlusd / total MC",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "others_d": {
+    "value": 10.33,
+    "source": "Computed: top10_pct - btc_d - eth_d - stable_pct",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "total3_d": {
+    "value": 19.01,
+    "source": "Computed: 100 - btc_d - eth_d - stable_pct",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "btc_d_delta7": {
+    "value": null,
+    "source": "null - dominance_history.json empty, no 7-day prior data",
+    "note": "audit: dominance_history.json was empty array"
+  },
+  "alt_mom7": {
+    "value": -11.5,
+    "source": "CoinGecko 14-coin alt basket 7D mean via crypto-intelligence actor",
+    "n_valid": 14,
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "alt_breadth": {
+    "value": 57.1,
+    "source": "Computed: 8/14 coins > BTC 7D (-13.91%)",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
   },
   "vix": {
     "value": 15.4,
-    "source": "Yahoo Finance ^VIX via Apify RAG browser",
-    "fetched_at_utc": "2026-06-05T00:07:00Z"
+    "source": "Cboe VIX page + Yahoo Finance, close June 4 2026",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
   },
   "dxy": {
-    "value": 99.43,
-    "source": "Yahoo Finance DX-Y.NYB via Apify RAG browser",
-    "fetched_at_utc": "2026-06-05T00:07:00Z"
+    "value": 99.41,
+    "source": "CNBC DXY + Yahoo Finance DX-Y.NYB",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
   },
   "ten_year_yield": {
     "value": 4.477,
-    "source": "Yahoo Finance ^TNX via Apify RAG browser",
-    "fetched_at_utc": "2026-06-05T00:07:00Z"
+    "source": "Yahoo Finance ^TNX (confirmed multiple pages)",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
   },
   "tips_real": {
-    "value": 2.07,
-    "source": "FRED DFII10 via Apify RAG browser",
-    "fetched_at_utc": "2026-06-05T00:15:00Z",
-    "note": "FRED DFII10 Jun2 data (latest available). Carry-forward allowed."
-  },
-  "etf_flow_btc_1d": {
-    "value": -26.4,
-    "source": "Farside Investors Jun4 partial via Apify RAG browser",
-    "fetched_at_utc": "2026-06-05T00:08:00Z",
-    "note": "Jun4 partial. IBIT/FBTC final numbers unconfirmed."
-  },
-  "btc_dominance": {
-    "value": 54.88,
-    "source": "ESTIMATE: BTC MC $1,257B / total $2,290B",
-    "fetched_at_utc": "2026-06-05T00:10:00Z",
-    "note": "Not a real dominance read. Direct API blocked. Calculated from supply * price / total market cap from news."
-  },
-  "btc_d_delta7": {
-    "value": -3.12,
-    "source": "Calculated: 54.88% minus May29 58.0% from dominance_history.json",
-    "note": "7-day delta based on estimated btc_d"
-  },
-  "alt_mom7": {
-    "value": 16.11,
-    "source": "Proxy estimate: (1+yesterday_7D) x (1+today_24h) - 1, n_valid=6/14",
-    "note": "ESTIMATE. Formula applied to 6 valid coins. Real 7D API blocked."
+    "value": 2.11,
+    "source": "FRED DFII10 via RAG browser, as of 2026-06-03",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
   },
   "ndx": {
-    "value": null,
-    "source": "null - not available via allowed sources",
-    "fetched_at_utc": null
+    "value": 30173,
+    "source": "NQ Futures proxy from Yahoo Finance (^NDX spot not directly fetched)",
+    "note": "NQ futures at 30173.50; QQQ at 740.61 suggests NDX ~29600",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
   },
   "move": {
     "value": null,
-    "source": "null - MOVE Index API blocked",
+    "source": "null - MOVE index not available via allowed sources",
     "fetched_at_utc": null
   },
+  "s_and_p500": {
+    "value": 7584.31,
+    "source": "Yahoo Finance ^GSPC",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "nasdaq_composite": {
+    "value": 26830.96,
+    "source": "Yahoo Finance ^IXIC",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "brent_oil": {
+    "value": 95.39,
+    "source": "Yahoo Finance BZ=F",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
+  "etf_flow_btc_1d": {
+    "value": -44.5,
+    "source": "Farside Investors June 4 2026 (IBIT=-; partial)",
+    "note": "IBIT pending. Total=-44.5M. Jun5 not yet available.",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  },
   "fear_greed": {
-    "value": 21,
-    "source": "CMC Fear & Greed Jun4 carry-forward (extreme fear)",
-    "fetched_at_utc": null,
-    "note": "Jun4 value. Fresh Jun5 not available at run time."
+    "value": 17,
+    "source": "CMC Fear & Greed Index page, Extreme Fear",
+    "fetched_at_utc": "2026-06-05T04:45:00Z"
   },
-  "sentiment_btc": {
-    "value": 49.9,
-    "score_band": "neutral",
-    "n_sampled": 150,
-    "source": "Apify kaitoeasyapi 6-term fresh run"
+  "btc_ndx_corr_30d": {
+    "value": null,
+    "source": "null - no time series data available in sandbox",
+    "fetched_at_utc": null
   },
-  "sentiment_eth": {
-    "value": 51.7,
-    "score_band": "neutral",
-    "n_sampled": 150,
-    "source": "Apify kaitoeasyapi 6-term fresh run"
+  "sentiment_btc_en": {
+    "value": 43.4,
+    "band": "fear",
+    "n_sampled": 32,
+    "source": "Apify kaitoeasyapi BTC OR Bitcoin lang:en fresh run"
   },
-  "layer1_verdict": "STRONG GO",
-  "c3_signals": [
-    "hype",
-    "zec"
-  ],
+  "sentiment_btc_zh": {
+    "value": 36.0,
+    "band": "fear",
+    "n_sampled": 18,
+    "source": "Apify kaitoeasyapi BTC OR 比特幣 lang:zh fresh run"
+  },
+  "sentiment_eth_en": {
+    "value": 47.9,
+    "band": "neutral",
+    "n_sampled": 35,
+    "source": "Apify kaitoeasyapi ETH OR Ethereum lang:en fresh run"
+  },
+  "sentiment_eth_zh": {
+    "value": 44.8,
+    "band": "neutral",
+    "n_sampled": 38,
+    "source": "Apify kaitoeasyapi ETH OR 以太坊 lang:zh fresh run"
+  },
+  "sentiment_crypto_en": {
+    "value": 47.2,
+    "band": "neutral",
+    "n_sampled": 19,
+    "source": "Apify kaitoeasyapi crypto market lang:en fresh run"
+  },
+  "sentiment_crypto_zh": {
+    "value": null,
+    "band": null,
+    "n_sampled": 0,
+    "source": "null - all tweets filtered as spam/n=0"
+  },
+  "sentiment_btc_composite": {
+    "value": 39.7,
+    "band": "fear",
+    "source": "Computed: mean(btc_en=43.4, btc_zh=36.0)"
+  },
+  "layer1_verdict": "🔴 ALT-OFF",
+  "layer1_req1": "btc_d_delta7=null (unknown)",
+  "layer1_req2_fail": "alt_mom7=-11.50% < 0% FAIL",
   "top3_today": [
+    "lab",
+    "beat",
+    "h"
+  ],
+  "top10_today": [
+    "lab",
+    "beat",
+    "h",
+    "wld",
+    "rain",
+    "dexe",
+    "near",
+    "vvv",
     "hype",
+    "inj"
+  ],
+  "c3_entry": [],
+  "c3_exit": [
     "zec",
-    "near"
+    "xlm",
+    "fet",
+    "ondo",
+    "xmr",
+    "dot",
+    "uni",
+    "ton"
   ]
 }
