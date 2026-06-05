@@ -648,5 +648,37 @@
       "hyperliquid": 29.95,
       "zcash": 16.26
     }
+  },
+  "2026-06-05": {
+    "date": "2026-06-05",
+    "timestamp_utc": "2026-06-05T08:30:00Z",
+    "btc_price": 63700,
+    "eth_price": 1766,
+    "btc_d": 54.88,
+    "eth_d": null,
+    "others_d": null,
+    "btc_d_7day_prev": 58.0,
+    "btc_d_delta7": -3.12,
+    "alt_mom7": 16.11,
+    "breadth": null,
+    "n_valid_basket": 6,
+    "req1_pass": true,
+    "req2_pass": true,
+    "bonus_a_pass": true,
+    "bonus_b_pass": true,
+    "bonus_c_pass": false,
+    "bonuses_passed": 2,
+    "verdict_label": "🟢🟢 STRONG GO",
+    "verdict_detail": "req1 PASS(Δ7d=-3.12pp<0✓) · req2 PASS(alt_mom7=+16.11%>0✓) · bonus_a PASS(-3.12pp≤-0.5pp✓) · bonus_b PASS(+16.11%≥+1.5%✓) · bonus_c FAIL(others_d=null,保守) · 2 bonus → 🟢🟢 STRONG GO",
+    "source": "Estimated: BTC MC $1,257B / total $2,290B (CMC via Apify RAG). 7D prev=May29 btc_d=58.0%(from dominance_history.json). alt_mom7=+16.11%(proxy from yesterday 7D + today 24h adjustment, n_valid=6/14).",
+    "basket_7d_returns": {
+      "solana": -9.04,
+      "binancecoin": -3.69,
+      "ripple": 4.47,
+      "tron": 9.44,
+      "hyperliquid": 48.68,
+      "zcash": 46.82
+    },
+    "audit_note": "btc_d=54.88 is an estimate (BTC MC $1,257B / total $2,290B from news). alt_mom7=+16.11% is a proxy estimate (yesterday 7D × (1+today 24h)). Real API blocked."
   }
 }

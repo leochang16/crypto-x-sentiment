@@ -1,73 +1,97 @@
 {
-  "date": "2026-06-04",
-  "generated_at": "2026-06-04T08:30:00Z",
+  "date": "2026-06-05",
+  "generated_at": "2026-06-05T08:30:00Z",
   "btc_price": {
-    "value": 64265,
+    "value": 63700,
     "source": "CoinMarketCap via Apify RAG browser",
-    "fresh": true
+    "fetched_at_utc": "2026-06-05T00:09:00Z",
+    "note": "CMC live price page scrape"
   },
   "eth_price": {
-    "value": 1814,
+    "value": 1766,
     "source": "CoinMarketCap via Apify RAG browser",
-    "fresh": true
+    "fetched_at_utc": "2026-06-05T00:05:00Z",
+    "note": "CMC live price page scrape"
+  },
+  "vix": {
+    "value": 15.4,
+    "source": "Yahoo Finance ^VIX via Apify RAG browser",
+    "fetched_at_utc": "2026-06-05T00:07:00Z"
+  },
+  "dxy": {
+    "value": 99.43,
+    "source": "Yahoo Finance DX-Y.NYB via Apify RAG browser",
+    "fetched_at_utc": "2026-06-05T00:07:00Z"
+  },
+  "ten_year_yield": {
+    "value": 4.477,
+    "source": "Yahoo Finance ^TNX via Apify RAG browser",
+    "fetched_at_utc": "2026-06-05T00:07:00Z"
+  },
+  "tips_real": {
+    "value": 2.07,
+    "source": "FRED DFII10 via Apify RAG browser",
+    "fetched_at_utc": "2026-06-05T00:15:00Z",
+    "note": "FRED DFII10 Jun2 data (latest available). Carry-forward allowed."
+  },
+  "etf_flow_btc_1d": {
+    "value": -26.4,
+    "source": "Farside Investors Jun4 partial via Apify RAG browser",
+    "fetched_at_utc": "2026-06-05T00:08:00Z",
+    "note": "Jun4 partial. IBIT/FBTC final numbers unconfirmed."
   },
   "btc_dominance": {
-    "value": 57.37,
-    "source": "CoinMarketCap charts via Apify RAG browser",
-    "fresh": true
+    "value": 54.88,
+    "source": "ESTIMATE: BTC MC $1,257B / total $2,290B",
+    "fetched_at_utc": "2026-06-05T00:10:00Z",
+    "note": "Not a real dominance read. Direct API blocked. Calculated from supply * price / total market cap from news."
   },
-  "eth_dominance": {
-    "value": 9.8,
-    "source": "CoinMarketCap charts via Apify RAG browser",
-    "fresh": true
+  "btc_d_delta7": {
+    "value": -3.12,
+    "source": "Calculated: 54.88% minus May29 58.0% from dominance_history.json",
+    "note": "7-day delta based on estimated btc_d"
+  },
+  "alt_mom7": {
+    "value": 16.11,
+    "source": "Proxy estimate: (1+yesterday_7D) x (1+today_24h) - 1, n_valid=6/14",
+    "note": "ESTIMATE. Formula applied to 6 valid coins. Real 7D API blocked."
+  },
+  "ndx": {
+    "value": null,
+    "source": "null - not available via allowed sources",
+    "fetched_at_utc": null
+  },
+  "move": {
+    "value": null,
+    "source": "null - MOVE Index API blocked",
+    "fetched_at_utc": null
   },
   "fear_greed": {
     "value": 21,
-    "band": "extreme_fear",
-    "source": "CoinMarketCap via Apify RAG browser",
-    "fresh": true
+    "source": "CMC Fear & Greed Jun4 carry-forward (extreme fear)",
+    "fetched_at_utc": null,
+    "note": "Jun4 value. Fresh Jun5 not available at run time."
   },
-  "alt_basket_7d": {
-    "n_valid": 6,
-    "n_total": 14,
-    "source": "CoinMarketCap page1 table via Apify RAG browser",
-    "coins": {
-      "solana": -12.79,
-      "binancecoin": -3.69,
-      "ripple": 7.68,
-      "tron": 9.44,
-      "hyperliquid": 29.95,
-      "zcash": 16.26
-    },
-    "unavailable": ["toncoin", "avalanche-2", "polkadot", "uniswap", "chainlink", "near", "sui", "ondo-finance"],
-    "fresh": true
+  "sentiment_btc": {
+    "value": 49.9,
+    "score_band": "neutral",
+    "n_sampled": 150,
+    "source": "Apify kaitoeasyapi 6-term fresh run"
   },
-  "tips_real_yield": {
-    "value": 2.08,
-    "source": "FRED DFII10 via WebSearch (permitted exception for TIPS only)",
-    "data_date": "2026-06-03",
-    "fresh": false
+  "sentiment_eth": {
+    "value": 51.7,
+    "score_band": "neutral",
+    "n_sampled": 150,
+    "source": "Apify kaitoeasyapi 6-term fresh run"
   },
-  "vix": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
-  "move": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
-  "dxy": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
-  "tnx": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
-  "ndx": {"value": null, "source": "yfinance blocked (403)", "fresh": false},
-  "etf_btc_flow": {"value": null, "source": "Farside unavailable today", "fresh": false},
-  "x_sentiment": {
-    "provider": "Apify kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest",
-    "terms": ["bitcoin", "比特幣", "ethereum", "以太坊", "crypto market", "加密市場"],
-    "maxItems_per_term": 25,
-    "queryType": "Top",
-    "scores": {
-      "btc_en": 59.9,
-      "btc_zh": 38.0,
-      "eth_en": 41.5,
-      "eth_zh": 29.7,
-      "crypto_en": 29.4,
-      "crypto_zh": 44.9,
-      "overall": 40.6
-    },
-    "fresh": true
-  }
+  "layer1_verdict": "STRONG GO",
+  "c3_signals": [
+    "hype",
+    "zec"
+  ],
+  "top3_today": [
+    "hype",
+    "zec",
+    "near"
+  ]
 }

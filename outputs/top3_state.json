@@ -625,10 +625,40 @@
       "layer1_verdict": "GO",
       "method": "CMC via Apify RAG + 7d% proxy (CoinGecko API 403)",
       "prev_date": "2026-06-03",
-      "prev_top3": ["hype", "zec", "xlm"],
-      "prev_top10": ["hype", "zec", "xlm", "near", "fet", "ondo", "dot", "uni", "ton", "bnb"],
-      "top3_21d": ["hype", "zec", "xlm"],
-      "top10_21d": ["hype", "zec", "xlm", "near", "fet", "ondo", "xmr", "dot", "uni", "ton"],
+      "prev_top3": [
+        "hype",
+        "zec",
+        "xlm"
+      ],
+      "prev_top10": [
+        "hype",
+        "zec",
+        "xlm",
+        "near",
+        "fet",
+        "ondo",
+        "dot",
+        "uni",
+        "ton",
+        "bnb"
+      ],
+      "top3_21d": [
+        "hype",
+        "zec",
+        "xlm"
+      ],
+      "top10_21d": [
+        "hype",
+        "zec",
+        "xlm",
+        "near",
+        "fet",
+        "ondo",
+        "xmr",
+        "dot",
+        "uni",
+        "ton"
+      ],
       "top10_gains_21d": {
         "hype": 78,
         "zec": 48,
@@ -641,11 +671,21 @@
         "uni": 11,
         "ton": 8
       },
-      "exits_today": ["bnb"],
-      "new_entrants": ["xmr"],
-      "c3_signals": ["hype", "zec"],
+      "exits_today": [
+        "bnb"
+      ],
+      "new_entrants": [
+        "xmr"
+      ],
+      "c3_signals": [
+        "hype",
+        "zec"
+      ],
       "c3_new_today": [],
-      "c3_continuing": ["hype", "zec"],
+      "c3_continuing": [
+        "hype",
+        "zec"
+      ],
       "xlm_c3_day2": true,
       "hype_c3_continuing": true,
       "zec_c3_day6": true,
@@ -653,7 +693,83 @@
       "zec_7d": 16.26,
       "bnb_exits_7d": -3.69,
       "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+78% 21D/+29.95% 7D) · ZEC c3 Day6(+48% 21D/+16.26% 7D) · XLM Day2 #3(+40% 21D/待c3明日) · BNB跌出Top10(-3.69% 7D) · XMR🆕#7(Iran隱私幣) · btc_d_delta7=-0.26pp✓ alt_mom7=+7.81%✓(6/14 valid) · 1bonus(bonus_b) → 🟢 GO · BTC $64,265(-4.25% 24h) · Fear&Greed=21(極度恐慌) · SpaceX IPO路演Jun4 · ethconf NYC 6/8"
+    },
+    {
+      "date": "2026-06-05",
+      "scan_done": true,
+      "layer1_verdict": "STRONG GO",
+      "method": "CMC via Apify RAG + 7d% proxy (yesterday 7D × (1+today 24h))",
+      "prev_date": "2026-06-04",
+      "prev_top3": [
+        "hype",
+        "zec",
+        "xlm"
+      ],
+      "prev_top10": [
+        "hype",
+        "zec",
+        "xlm",
+        "near",
+        "fet",
+        "ondo",
+        "xmr",
+        "dot",
+        "uni",
+        "ton"
+      ],
+      "top3_21d": [
+        "hype",
+        "zec",
+        "near"
+      ],
+      "top10_21d": [
+        "hype",
+        "zec",
+        "near",
+        "xlm",
+        "fet",
+        "ondo",
+        "xmr",
+        "dot",
+        "uni",
+        "ton"
+      ],
+      "top10_gains_21d": {
+        "hype": 104,
+        "zec": 87,
+        "near": 63,
+        "xlm": 45,
+        "fet": 28,
+        "ondo": 22,
+        "xmr": 17,
+        "dot": 13,
+        "uni": 12,
+        "ton": 9
+      },
+      "exits_today": [],
+      "new_entrants": [],
+      "c3_signals": [
+        "hype",
+        "zec"
+      ],
+      "c3_new_today": [],
+      "c3_continuing": [
+        "hype",
+        "zec"
+      ],
+      "c3_exited": [],
+      "xlm_c3_failed": true,
+      "xlm_note": "XLM was Day1(Jun3)+Day2(Jun4) but NEAR+22% surge today pushed NEAR to #3 and XLM to #4. XLM Day3 FAIL - c3 NOT triggered.",
+      "near_c3_day1": true,
+      "near_note": "NEAR surged +22% today, moved from #4 to #3. Day1 of potential c3 watch.",
+      "hype_c3_continuing": true,
+      "zec_c3_day7": true,
+      "hype_7d": 48.68,
+      "zec_7d": 46.82,
+      "near_24h": 22.0,
+      "xlm_24h": 3.82,
+      "carry_signal": "🟢🟢 STRONG GO · c3: HYPE+ZEC持守 · HYPE c3持守(+104% 21D) · ZEC c3 Day7(+87% 21D) · NEAR🆕#3 Day1(+63% 21D,+22% 今日) · XLM Day3 FAIL→#4(+45% 21D,c3未觸發) · btc_d_delta7=-3.12pp✓ alt_mom7=+16.11%✓(6/14 proxy) · 2bonus(bonus_a bonus_b) → 🟢🟢 STRONG GO · BTC $63,700(-0.88% 24h) · Fear&Greed=21(極度恐慌) · ethconf NYC(6/8)明日開幕"
     }
   ],
-  "last_updated": "2026-06-04"
+  "last_updated": "2026-06-05"
 }

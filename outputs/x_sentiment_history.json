@@ -899,7 +899,14 @@
       "velocity": "下降",
       "n_sampled": 235,
       "n_raw": 240,
-      "search_terms": ["bitcoin", "比特幣", "ethereum", "以太坊", "crypto market", "加密市場"],
+      "search_terms": [
+        "bitcoin",
+        "比特幣",
+        "ethereum",
+        "以太坊",
+        "crypto market",
+        "加密市場"
+      ],
       "viral_dominates": false,
       "viral_pct": 11.7,
       "sentiment_counts": {
@@ -910,10 +917,26 @@
         "extreme_bull": 0
       },
       "top_evidence": [
-        {"text": "Strategy sold 32 BTC first time in 4 years", "eng": 18838, "bucket": "neutral"},
-        {"text": "BTC <$67K $700M liquidated", "eng": 8809, "bucket": "extreme_bear"},
-        {"text": "US Treasury seized $1B Iran crypto", "eng": 4442, "bucket": "neutral"},
-        {"text": "Clarity Act Senate Calendar", "eng": 2049, "bucket": "bull"}
+        {
+          "text": "Strategy sold 32 BTC first time in 4 years",
+          "eng": 18838,
+          "bucket": "neutral"
+        },
+        {
+          "text": "BTC <$67K $700M liquidated",
+          "eng": 8809,
+          "bucket": "extreme_bear"
+        },
+        {
+          "text": "US Treasury seized $1B Iran crypto",
+          "eng": 4442,
+          "bucket": "neutral"
+        },
+        {
+          "text": "Clarity Act Senate Calendar",
+          "eng": 2049,
+          "bucket": "bull"
+        }
       ],
       "note": "BTC neutral(46.5). BTC $67,154(-3.41% 24h). Google+Berkshire $80B AI fund機構輪動. ZEC逆勢+23% 7D伊朗隱私幣敘事. Layer1: 🟢 GO req1 PASS(Δ7d=-0.03pp) req2 PASS(alt_mom7=+1.04%)."
     },
@@ -981,5 +1004,51 @@
     },
     "source": "Apify kaitoeasyapi 6-term scrape (fresh run 2026-06-04)",
     "method_notes": "Apify kaitoeasyapi 6-term(BTC EN/ZH, ETH EN/ZH, crypto EN/ZH, maxItems=25 each). SpaceX IPO路演Jun4. ethconf NYC(6/8-10). Clarity Act. HYPE+ZEC c3繼續. XLM Day2 top3(待c3). BNB跌出Top10. XMR新入. alt_mom7=+7.81%(n_valid=6/14)."
+  },
+  "2026-06-05": {
+    "date": "2026-06-05",
+    "timestamp_utc": "2026-06-05T08:30:00Z",
+    "btc": {
+      "score": 49.9,
+      "score_band": "neutral",
+      "velocity": "平穩",
+      "n_sampled": 150,
+      "viral_dominates": false,
+      "source": "apify_pipeline",
+      "note": "BTC-EN+BTC-ZH avg 49.9. BTC $63,700(-0.88% 24h). ethconf NYC(6/8)明日開幕。Fear&G=21. STRONG GO:req1✓(-3.12pp) req2✓(+16.11%) bonus_a✓ bonus_b✓. HYPE c3持守(+104% 21D)/ZEC c3 Day7(+87% 21D). NEAR🆕#3 Day1(+63% 21D). XLM Day3 FAIL→#4."
+    },
+    "eth": {
+      "score": 51.7,
+      "score_band": "neutral",
+      "velocity": "回升",
+      "n_sampled": 150,
+      "viral_dominates": false,
+      "source": "apify_pipeline",
+      "note": "ETH neutral(51.7)回升自35.6. ETH $1,766(-2.65% 24h). ETH/BTC ratio 0.02773. ethconf NYC(6/8)明日開幕催化劑。"
+    },
+    "overall_score": 50.8,
+    "overall_band": "neutral",
+    "btc_price": 63700,
+    "btc_price_src": "cmc_live",
+    "eth_price": 1766,
+    "eth_price_src": "cmc_live",
+    "layer1": "STRONG GO",
+    "btc_d": 54.88,
+    "others_d": null,
+    "macro": {
+      "vix": 15.4,
+      "vix3m": null,
+      "move": null,
+      "dxy": 99.43,
+      "tnx": 4.477,
+      "ndx": null,
+      "tips_real": 2.07,
+      "btc_ndx_corr_30d": null,
+      "btc_ndx_corr_7d": null,
+      "etf_btc_flow": -26.4,
+      "notes": "VIX=15.40(Yahoo Finance RAG). DXY=99.43(Yahoo Finance RAG). 10Y=4.477%(Yahoo Finance RAG). TIPS=2.07%(FRED DFII10 Jun2). ETF=-$26.4M(Farside Jun4 partial, IBIT/FBTC unconfirmed). BTC $63,700(-0.88% 24h). Fear&Greed=21(極度恐慌)."
+    },
+    "source": "Apify kaitoeasyapi 6-term scrape (fresh run 2026-06-05)",
+    "method_notes": "Apify kaitoeasyapi 6-term(BTC EN/ZH, ETH EN/ZH, crypto EN/ZH, maxItems=25 each). ethconf NYC(6/8)明日開幕. Clarity Act. HYPE+ZEC c3繼續. NEAR🆕#3 Day1. XLM Day3 FAIL→#4. alt_mom7=+16.11%(n_valid=6/14 proxy). BTC.D=54.88%(estimated from MC ratio)."
   }
 }
