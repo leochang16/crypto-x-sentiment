@@ -8,5 +8,15 @@
     "others_d": 10.33,
     "total3_d": 19.01,
     "source": "CoinMarketCap fresh scrape"
+  },
+  {
+    "date": "2026-06-06",
+    "btc_d": 57.25,
+    "eth_d": 8.94,
+    "total_mc_B": 2136,
+    "stable_pct": 15.36,
+    "others_d": 10.55,
+    "total3_d": 18.45,
+    "source": "benthepythondev/crypto-intelligence top120 sample via Apify"
   }
 ]

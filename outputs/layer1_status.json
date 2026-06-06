@@ -11,5 +11,18 @@
     "req2_pass": false,
     "verdict": "ALT-OFF",
     "reason": "alt_mom7=-11.50% < 0 (req2 FAIL)"
+  },
+  {
+    "date": "2026-06-06",
+    "verdict": "ALT-OFF",
+    "req1_pass": true,
+    "btc_d_delta7": -0.35,
+    "req2_pass": false,
+    "alt_mom7": -15.89,
+    "bonus_a": false,
+    "bonus_b": false,
+    "bonus_c": false,
+    "n_bonus": 0,
+    "breadth": 0.36
   }
 ]

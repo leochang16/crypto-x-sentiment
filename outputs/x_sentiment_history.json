@@ -9,5 +9,18 @@
     "crypto_en": 47.2,
     "band": "fear",
     "n_total": 142
+  },
+  {
+    "date": "2026-06-06",
+    "btc_en": 35.2,
+    "btc_zh": 42.9,
+    "btc_composite": 39.1,
+    "eth_en": 48.0,
+    "eth_zh": 48.8,
+    "eth_composite": 48.4,
+    "crypto_en": 30.5,
+    "jia_mi_zh": 60.6,
+    "overall": 44.3,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify"
   }
 ]
