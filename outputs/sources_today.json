@@ -1,214 +1,163 @@
 {
-  "date": "2026-06-05",
-  "generated_at": "2026-06-05T04:45:00Z",
+  "date": "2026-06-06",
+  "fetched_at_utc": "2026-06-06T00:17:14Z",
   "btc_price": {
-    "value": 63011,
-    "source": "CoinGecko via benthepythondev/crypto-intelligence actor",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": 61274,
+    "source": "benthepythondev/crypto-intelligence via Apify",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "btc_price_change_24h_pct": {
+    "value": -2.75,
+    "source": "derived from yesterday 63011",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "eth_price": {
-    "value": 1729,
-    "source": "CoinGecko via benthepythondev/crypto-intelligence actor",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": 1594.45,
+    "source": "benthepythondev/crypto-intelligence via Apify",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "btc_24h_pct": {
-    "value": -2.04,
-    "source": "Yahoo Finance ^BTC-USD",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  "eth_price_change_24h_pct": {
+    "value": -7.78,
+    "source": "derived from yesterday 1729",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "eth_24h_pct": {
-    "value": null,
-    "source": "null - not fetched directly",
-    "note": "use 7D: -13.56%"
+  "btc_sentiment_en": {
+    "value": 35.2,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify, n=40",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "btc_7d_pct": {
-    "value": -13.91,
-    "source": "CoinGecko via benthepythondev/crypto-intelligence actor",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  "btc_sentiment_zh": {
+    "value": 42.9,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify, n=40",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "eth_7d_pct": {
-    "value": -13.56,
-    "source": "CoinGecko via benthepythondev/crypto-intelligence actor",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  "btc_sentiment_composite": {
+    "value": 39.1,
+    "source": "Apify Twitter scraper composite",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "eth_sentiment_en": {
+    "value": 48.0,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify, n=40",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "eth_sentiment_zh": {
+    "value": 48.8,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify, n=40",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "eth_sentiment_composite": {
+    "value": 48.4,
+    "source": "Apify Twitter scraper composite",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "crypto_sentiment_en": {
+    "value": 30.5,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify, n=40",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "jia_mi_sentiment_zh": {
+    "value": 60.6,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify, n=38",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "btc_dominance": {
-    "value": 58.0,
-    "source": "CoinMarketCap bitcoin-dominance page fresh scrape",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": 57.25,
+    "source": "benthepythondev/crypto-intelligence top120 sample",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "eth_dominance": {
-    "value": 9.6,
-    "source": "CoinMarketCap bitcoin-dominance page fresh scrape",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "total_market_cap_B": {
-    "value": 2180,
-    "source": "CoinMarketCap bitcoin-dominance page ($2.18T)",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": 8.94,
+    "source": "benthepythondev/crypto-intelligence top120 sample",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "stable_pct": {
-    "value": 13.39,
-    "source": "Computed: USDT+USDC+USDS+USD1+USDe+DAI+PYUSD+rlusd / total MC",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": 15.36,
+    "source": "benthepythondev/crypto-intelligence top120 sample",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "others_d": {
-    "value": 10.33,
-    "source": "Computed: top10_pct - btc_d - eth_d - stable_pct",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": 10.55,
+    "source": "benthepythondev/crypto-intelligence top120 sample",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "total3_d": {
-    "value": 19.01,
-    "source": "Computed: 100 - btc_d - eth_d - stable_pct",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": 18.45,
+    "source": "benthepythondev/crypto-intelligence top120 sample",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "total_mc_B": {
+    "value": 2136,
+    "source": "benthepythondev/crypto-intelligence top120 sum",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "btc_d_delta7": {
-    "value": null,
-    "source": "null - dominance_history.json empty, no 7-day prior data",
-    "note": "audit: dominance_history.json was empty array"
+    "value": -0.35,
+    "source": "today(57.25%) - 2026-05-30(57.6%)",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "alt_mom7": {
-    "value": -11.5,
-    "source": "CoinGecko 14-coin alt basket 7D mean via crypto-intelligence actor",
-    "n_valid": 14,
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": -15.89,
+    "source": "14-alt basket mean 7D change",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "alt_breadth": {
-    "value": 57.1,
-    "source": "Computed: 8/14 coins > BTC 7D (-13.91%)",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+  "layer1_verdict": {
+    "value": "ALT-OFF",
+    "source": "req2 FAIL alt_mom7=-15.89%<0",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "vix": {
-    "value": 15.4,
-    "source": "Cboe VIX page + Yahoo Finance, close June 4 2026",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "dxy": {
-    "value": 99.41,
-    "source": "CNBC DXY + Yahoo Finance DX-Y.NYB",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "ten_year_yield": {
-    "value": 4.477,
-    "source": "Yahoo Finance ^TNX (confirmed multiple pages)",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "tips_real": {
-    "value": 2.11,
-    "source": "FRED DFII10 via RAG browser, as of 2026-06-03",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "ndx": {
-    "value": 30173,
-    "source": "NQ Futures proxy from Yahoo Finance (^NDX spot not directly fetched)",
-    "note": "NQ futures at 30173.50; QQQ at 740.61 suggests NDX ~29600",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
+    "value": null,
+    "source": "NULL - Yahoo Finance blocked from sandbox",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
   "move": {
     "value": null,
-    "source": "null - MOVE index not available via allowed sources",
-    "fetched_at_utc": null
+    "source": "NULL - Yahoo Finance blocked from sandbox",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "s_and_p500": {
-    "value": 7584.31,
-    "source": "Yahoo Finance ^GSPC",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "nasdaq_composite": {
-    "value": 26830.96,
-    "source": "Yahoo Finance ^IXIC",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "brent_oil": {
-    "value": 95.39,
-    "source": "Yahoo Finance BZ=F",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "etf_flow_btc_1d": {
-    "value": -44.5,
-    "source": "Farside Investors June 4 2026 (IBIT=-; partial)",
-    "note": "IBIT pending. Total=-44.5M. Jun5 not yet available.",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "fear_greed": {
-    "value": 17,
-    "source": "CMC Fear & Greed Index page, Extreme Fear",
-    "fetched_at_utc": "2026-06-05T04:45:00Z"
-  },
-  "btc_ndx_corr_30d": {
+  "dxy": {
     "value": null,
-    "source": "null - no time series data available in sandbox",
-    "fetched_at_utc": null
+    "source": "NULL - Yahoo Finance blocked from sandbox",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "sentiment_btc_en": {
-    "value": 43.4,
-    "band": "fear",
-    "n_sampled": 32,
-    "source": "Apify kaitoeasyapi BTC OR Bitcoin lang:en fresh run"
-  },
-  "sentiment_btc_zh": {
-    "value": 36.0,
-    "band": "fear",
-    "n_sampled": 18,
-    "source": "Apify kaitoeasyapi BTC OR 比特幣 lang:zh fresh run"
-  },
-  "sentiment_eth_en": {
-    "value": 47.9,
-    "band": "neutral",
-    "n_sampled": 35,
-    "source": "Apify kaitoeasyapi ETH OR Ethereum lang:en fresh run"
-  },
-  "sentiment_eth_zh": {
-    "value": 44.8,
-    "band": "neutral",
-    "n_sampled": 38,
-    "source": "Apify kaitoeasyapi ETH OR 以太坊 lang:zh fresh run"
-  },
-  "sentiment_crypto_en": {
-    "value": 47.2,
-    "band": "neutral",
-    "n_sampled": 19,
-    "source": "Apify kaitoeasyapi crypto market lang:en fresh run"
-  },
-  "sentiment_crypto_zh": {
+  "ndx": {
     "value": null,
-    "band": null,
-    "n_sampled": 0,
-    "source": "null - all tweets filtered as spam/n=0"
+    "source": "NULL - Yahoo Finance blocked from sandbox",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "sentiment_btc_composite": {
-    "value": 39.7,
-    "band": "fear",
-    "source": "Computed: mean(btc_en=43.4, btc_zh=36.0)"
+  "tnx_10y": {
+    "value": null,
+    "source": "NULL - Yahoo Finance blocked from sandbox",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
   },
-  "layer1_verdict": "🔴 ALT-OFF",
-  "layer1_req1": "btc_d_delta7=null (unknown)",
-  "layer1_req2_fail": "alt_mom7=-11.50% < 0% FAIL",
-  "top3_today": [
-    "lab",
-    "beat",
-    "h"
-  ],
-  "top10_today": [
-    "lab",
-    "beat",
-    "h",
-    "wld",
-    "rain",
-    "dexe",
-    "near",
-    "vvv",
-    "hype",
-    "inj"
-  ],
-  "c3_entry": [],
-  "c3_exit": [
-    "zec",
-    "xlm",
-    "fet",
-    "ondo",
-    "xmr",
-    "dot",
-    "uni",
-    "ton"
-  ]
+  "tips_real": {
+    "value": null,
+    "source": "NULL - FRED 403 + WebSearch returned no specific value",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "etf_btc_flow": {
+    "value": null,
+    "source": "NULL - June 6 data not yet published (last known: Jun3 -$396.6M)",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "top3_30d": {
+    "value": [
+      "BEAT",
+      "H",
+      "LAB"
+    ],
+    "source": "benthepythondev/crypto-intelligence via Apify",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "c3_entry": {
+    "value": [],
+    "source": "Day2 for BEAT/H/LAB (need day3)",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  },
+  "c3_exit": {
+    "value": [],
+    "source": "Same Top10 as yesterday",
+    "fetched_at_utc": "2026-06-06T00:17:14Z"
+  }
 }

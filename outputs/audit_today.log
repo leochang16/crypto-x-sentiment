@@ -1,44 +1,17 @@
-2026-06-05 AUDIT LOG - Full fresh re-fetch run
-=================================================
-PART A: X Sentiment (Apify kaitoeasyapi, all 6 terms fresh)
-  BTC en=43.4(fear,n=32), BTC zh=36.0(fear,n=18)
-  ETH en=47.9(neutral,n=35), ETH zh=44.8(neutral,n=38)  
-  crypto en=47.2(neutral,n=19), 加密 zh=null(n=0 all spam)
-  BTC composite=39.7(fear)
-
-PART B: Dominance+Layer1
-  btc_d=58.0%(CMC fresh), eth_d=9.6%, total_mc=$2.18T
-  btc_d_delta7=NULL: dominance_history was empty - no 7-day prior
-  alt_mom7=-11.50%(14 valid coins, FAIL req2>0)
-  breadth=57.1%(8/14 coins > BTC 7D -13.91%)
-  Layer1 verdict: ALT-OFF (req2 FAIL definitively)
-  
-PART C: Macro (all fresh except where noted)
-  BTC=$63,011 ETH=$1,729 (CoinGecko)
-  VIX=15.40 (Cboe Jun4 close), DXY=99.41 (CNBC/Yahoo)
-  10Y=4.477% (Yahoo ^TNX), TIPS=2.11% (FRED DFII10 Jun3)
-  NDX=30173 proxy (NQ futures; spot not directly fetched)
-  MOVE=null (no source available)
-  ETF flow Jun4=-44.5M (Farside, IBIT pending)
-  Fear&Greed=17(Extreme Fear, CMC)
-  BTC-NDX corr=null (no time series)
-
-PART E: Strong Coins (benthepythondev/crypto-intelligence 120 coins)
-  Filters applied: stables/exchange tokens/non-ASCII/canton-network
-  Top3(30D): LAB+271.7%, BEAT+198.5%, H+183.9%
-  Top10: LAB,BEAT,H,WLD,RAIN,DEXE,NEAR,VVV,HYPE,INJ
-  c3_entry=[] (today's LAB/BEAT/H not in Jun3-4 top3)
-  c3_exit=[zec,xlm,fet,ondo,xmr,dot,uni,ton] - regime rotation
-  Note: Major market rotation - old momentum coins dropped, new entrants
-
-News highlights:
-  - CFTC approved BTC perpetual contract (historic regulatory action)
-  - US Treasury seized $1B Iran crypto
-  - Strategy sold 29,847 BTC @$67,142 ($2B proceeds)
-  - Mt Gox moved $739M BTC
-  - ETF outflows: 13 consecutive days, cumul ~$43.7B
-  - BTC below 200-week MA support
-  - Clarity Act on Senate calendar
-  - JPMorgan Dimon fighting Clarity Act
-  - BTC broke 14-year trendline (per top viral tweet)
-  - AI IPO wave: SpaceX+Anthropic+OpenAI capital extraction narrative
+[2026-06-06] AUDIT LOG
+btc_price: OK via Apify crypto-intelligence ($61,274)
+eth_price: OK via Apify crypto-intelligence ($1,594.45)
+x_sentiment: OK 240 tweets (kaitoeasyapi), 6 terms processed
+btc_dominance: OK via Apify sample (57.25%, sample-based estimate)
+btc_d_delta7: OK -0.35pp (today 57.25% - 2026-05-30 57.6%)
+alt_mom7: OK -15.89% (14 alts, n_valid=14)
+top10_30d: OK via Apify crypto-intelligence
+vix: NULL - all direct curl blocked (not in allowlist)
+move: NULL - all direct curl blocked (not in allowlist)
+dxy: NULL - all direct curl blocked (not in allowlist)
+ndx: NULL - all direct curl blocked (not in allowlist)
+tnx_10y: NULL - all direct curl blocked (not in allowlist)
+tips_real: NULL - FRED blocked + WebSearch no specific value
+etf_btc_flow: NULL - June 6 data not yet published
+btc_ndx_corr: NULL - data sources blocked
+RAG web browser: skipped (memory limit 8192MB exceeded with concurrent actors)
