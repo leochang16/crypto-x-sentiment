@@ -1,17 +1,51 @@
-[2026-06-06] AUDIT LOG
-btc_price: OK via Apify crypto-intelligence ($61,274)
-eth_price: OK via Apify crypto-intelligence ($1,594.45)
-x_sentiment: OK 240 tweets (kaitoeasyapi), 6 terms processed
-btc_dominance: OK via Apify sample (57.25%, sample-based estimate)
-btc_d_delta7: OK -0.35pp (today 57.25% - 2026-05-30 57.6%)
-alt_mom7: OK -15.89% (14 alts, n_valid=14)
-top10_30d: OK via Apify crypto-intelligence
-vix: NULL - all direct curl blocked (not in allowlist)
-move: NULL - all direct curl blocked (not in allowlist)
-dxy: NULL - all direct curl blocked (not in allowlist)
-ndx: NULL - all direct curl blocked (not in allowlist)
-tnx_10y: NULL - all direct curl blocked (not in allowlist)
-tips_real: NULL - FRED blocked + WebSearch no specific value
-etf_btc_flow: NULL - June 6 data not yet published
-btc_ndx_corr: NULL - data sources blocked
-RAG web browser: skipped (memory limit 8192MB exceeded with concurrent actors)
+2026-06-07 DAILY PIPELINE AUDIT LOG
+=====================================
+Date: 2026-06-07 (Sunday)
+
+=== API FAILURES ===
+[FAIL] Yahoo Finance chart API (VIX/^VIX): HTTP 403 Forbidden - sandbox blocked
+[FAIL] Yahoo Finance chart API (MOVE/^MOVE): HTTP 403 Forbidden - sandbox blocked
+[FAIL] Yahoo Finance chart API (DXY/DX-Y.NYB): HTTP 403 Forbidden - sandbox blocked
+[FAIL] Yahoo Finance chart API (NDX/^NDX): HTTP 403 Forbidden - sandbox blocked
+[FAIL] Yahoo Finance chart API (10Y TNX/^TNX): HTTP 403 Forbidden - sandbox blocked
+[FAIL] FRED API (DFII10): HTTP 403 Forbidden - sandbox blocked -> WebSearch fallback: 2.17% (Jun5)
+[FAIL] Binance API (BTC/ETH price): sandbox blocked -> benthepythondev/crypto-intelligence used
+[FAIL] CoinGecko API (top coins 30D): HTTP 403 - sandbox blocked -> crypto-intelligence used
+
+=== DATA GAPS ===
+[NULL] btc_d_delta7: dominance_history only has Jun05+Jun06; no May31 baseline
+       req1 cannot be verified -> FAIL -> contributes to ALT-OFF
+[NULL] etf_flow_today: Jun7 is Sunday, no ETF trading
+[NULL] vix, move, dxy, ndx, tnx: all Yahoo Finance endpoints blocked
+
+=== DATA QUALITY NOTES ===
+[WARN] BTC price $60,864 / ETH price $1,568.93 from Apify crypto-intelligence, not direct exchange API
+[WARN] btc_d 55.9% estimated from top-120 MC sample
+[WARN] alt_mom7=-18.2% from 14-coin basket, all coins negative 7D
+[WARN] TIPS 2.17% is Jun5 value (last trading day before Sunday Jun7)
+[WARN] ETF weekly flow -$1.67B from WebSearch (week ~May29); Jun3 confirmed -$397M (Farside)
+
+=== c3 SIGNAL ===
+[INFO] c3 ENTRY TRIGGERED: BEAT + H + LAB (Day3 in Top3)
+       Jun05: top3=[lab,beat,h] (Day1)
+       Jun06: top3=[beat,h,lab] (Day2)
+       Jun07: top3=[beat,h,lab] (Day3) -> ENTRY confirmed
+[INFO] NEAR EXIT: was #10 Jun06 (+32.5% 30D), dropped out of today's top10
+[INFO] XLM new entrant #8 (+34.4% 30D)
+
+=== SENTIMENT SCORES ===
+BTC-EN : 23.7  extreme_bear  n_valid=24  dataset=dm0BYF41FZ0fc0jAI
+ETH-EN : 35.6  bear          n_valid=24  dataset=k1Q1nyEK3mHsBCRNm
+Crypto-EN: 16.7 extreme_bear n_valid=24  dataset=df30odu5Fv2YRz7ZF
+BTC-ZH : 44.7  neutral       n_valid=24  dataset=dm0BYF41FZ0fc0jAI
+ETH-ZH : 29.8  bear          n_valid=24  dataset=k1Q1nyEK3mHsBCRNm
+Crypto-ZH: 47.1 neutral      n_valid=24  dataset=df30odu5Fv2YRz7ZF
+Composite: 32.9  bear/fear
+
+=== LAYER 1 VERDICT ===
+req1 (btc_d_delta7 < 0): FAIL (btc_d_delta7=null, no May31 baseline)
+req2 (alt_mom7 > 0%): FAIL (alt_mom7=-18.2% < 0)
+bonus_a (delta7 <= -0.5pp): FAIL (delta7=null)
+bonus_b (alt_mom7 > +1.5%): FAIL (-18.2% < +1.5%)
+bonus_c (others_d > 12%): FAIL (others_d=11.2% < 12%)
+VERDICT: RED ALT-OFF (0/2 req + 0/3 bonus)

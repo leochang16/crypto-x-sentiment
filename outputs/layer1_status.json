@@ -24,5 +24,20 @@
     "bonus_c": false,
     "n_bonus": 0,
     "breadth": 0.36
+  },
+  {
+    "date": "2026-06-07",
+    "verdict": "ALT-OFF",
+    "req1_pass": false,
+    "btc_d_delta7": null,
+    "req1_reason": "無May31基準數據 (dominance_history最早至Jun05)",
+    "req2_pass": false,
+    "alt_mom7": -18.2,
+    "bonus_a": false,
+    "bonus_b": false,
+    "bonus_c": false,
+    "n_bonus": 0,
+    "breadth": 0.0,
+    "n_valid": 14
   }
 ]
