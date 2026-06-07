@@ -573,7 +573,35 @@
       "c3_entry": [],
       "c3_exit": [],
       "notes": "BEAT/H/LAB Day2 in Top3 (need day3 for c3). No exits. ALT-OFF: alt_mom7=-15.89%(req2 FAIL)."
+    },
+    {
+      "date": "2026-06-07",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "method": "benthepythondev/crypto-intelligence via Apify (30D sort)",
+      "prev_date": "2026-06-06",
+      "prev_top3": ["beat", "h", "lab"],
+      "prev_top10": ["beat", "h", "lab", "wld", "rain", "dexe", "vvv", "hype", "inj", "near"],
+      "top3": ["beat", "h", "lab"],
+      "top10": ["beat", "h", "lab", "rain", "wld", "dexe", "inj", "xlm", "hype", "vvv"],
+      "top10_details": [
+        {"symbol": "beat", "name": "Audiera", "price_change_percentage_30d": 357.8},
+        {"symbol": "h", "name": "Humanity", "price_change_percentage_30d": 223.3},
+        {"symbol": "lab", "name": "LAB", "price_change_percentage_30d": 194.6},
+        {"symbol": "rain", "name": "Rain", "price_change_percentage_30d": 73.4},
+        {"symbol": "wld", "name": "Worldcoin", "price_change_percentage_30d": 64.8},
+        {"symbol": "dexe", "name": "DeXe", "price_change_percentage_30d": 64.3},
+        {"symbol": "inj", "name": "Injective", "price_change_percentage_30d": 34.9},
+        {"symbol": "xlm", "name": "Stellar", "price_change_percentage_30d": 34.4},
+        {"symbol": "hype", "name": "Hyperliquid", "price_change_percentage_30d": 33.5},
+        {"symbol": "vvv", "name": "Venice Token", "price_change_percentage_30d": 27.5}
+      ],
+      "exits_today": ["near"],
+      "new_entrants": ["xlm"],
+      "c3_entry": ["beat", "h", "lab"],
+      "c3_exit": [],
+      "notes": "🔔 c3 ENTRY TRIGGERED: BEAT/H/LAB Day3 in Top3 → Entry signal. NEAR出場(+32.5% 30D跌出Top10). XLM新入#8(+34.4% 30D). ALT-OFF: req1=null(無May31基準) · req2 FAIL(alt_mom7=-18.2%). ALT-OFF環境: 記錄c3訊號。"
     }
   ],
-  "last_updated": "2026-06-05"
+  "last_updated": "2026-06-07"
 }

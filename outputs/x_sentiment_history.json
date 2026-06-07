@@ -22,5 +22,19 @@
     "jia_mi_zh": 60.6,
     "overall": 44.3,
     "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify"
+  },
+  {
+    "date": "2026-06-07",
+    "btc_en": 23.7,
+    "btc_zh": 44.7,
+    "btc_composite": 34.2,
+    "eth_en": 35.6,
+    "eth_zh": 29.8,
+    "eth_composite": 32.7,
+    "crypto_en": 16.7,
+    "jia_mi_zh": 47.1,
+    "overall": 32.9,
+    "label": "bear",
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify"
   }
 ]
