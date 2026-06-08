@@ -1,51 +1,69 @@
-2026-06-07 DAILY PIPELINE AUDIT LOG
-=====================================
-Date: 2026-06-07 (Sunday)
+=== 2026-06-08 Daily Pipeline Audit Log ===
 
-=== API FAILURES ===
-[FAIL] Yahoo Finance chart API (VIX/^VIX): HTTP 403 Forbidden - sandbox blocked
-[FAIL] Yahoo Finance chart API (MOVE/^MOVE): HTTP 403 Forbidden - sandbox blocked
-[FAIL] Yahoo Finance chart API (DXY/DX-Y.NYB): HTTP 403 Forbidden - sandbox blocked
-[FAIL] Yahoo Finance chart API (NDX/^NDX): HTTP 403 Forbidden - sandbox blocked
-[FAIL] Yahoo Finance chart API (10Y TNX/^TNX): HTTP 403 Forbidden - sandbox blocked
-[FAIL] FRED API (DFII10): HTTP 403 Forbidden - sandbox blocked -> WebSearch fallback: 2.17% (Jun5)
-[FAIL] Binance API (BTC/ETH price): sandbox blocked -> benthepythondev/crypto-intelligence used
-[FAIL] CoinGecko API (top coins 30D): HTTP 403 - sandbox blocked -> crypto-intelligence used
+PART A - X Sentiment (Apify kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest)
+  Actor run: 9oX7NKEF7fvfeuc8v | Dataset: Gdw29bJKmBVMzTEGO
+  Items: 238 total | Fetched: 2026-06-08T00:04:16Z
+  BTC-EN: score=49.5 (neutral) n=39
+  BTC-ZH: score=53.4 (neutral) n=39
+  ETH-EN: score=52.9 (neutral) n=39
+  ETH-ZH: score=42.9 (fear) n=38
+  CRYPTO-EN: score=46.2 (neutral) n=40
+  CRYPTO-ZH: score=50.3 (neutral) n=38
+  BTC composite: 51.5 (neutral)
+  ETH composite: 47.9 (neutral)
+  Overall: 49.2 (neutral)
 
-=== DATA GAPS ===
-[NULL] btc_d_delta7: dominance_history only has Jun05+Jun06; no May31 baseline
-       req1 cannot be verified -> FAIL -> contributes to ALT-OFF
-[NULL] etf_flow_today: Jun7 is Sunday, no ETF trading
-[NULL] vix, move, dxy, ndx, tnx: all Yahoo Finance endpoints blocked
+PART B - Dominance & Alt Basket (benthepythondev/crypto-intelligence)
+  Actor run: Jyo1FLJ2excPTSUut | Dataset: WldAZ85FcbDumuzPe
+  Items: 120 coins | Fetched: 2026-06-08T00:04:18Z
+  btc_d: 57.3% [PROXY - computed from top-120 market caps; CoinGecko /global blocked; CoinPaprika /global blocked]
+  eth_d: 9.2% [PROXY]
+  stable_pct: 15.4% [PROXY]
+  others_d: 8.0% [PROXY]
+  total3_d: 18.1% [PROXY]
+  btc_d_delta7: null [NO Jun-01 baseline in dominance_history; earliest is Jun-05]
+  alt_mom7: -14.68% (14/14 valid coins)
+  alt_breadth: 6/14 = 42.9% beating BTC 7D
 
-=== DATA QUALITY NOTES ===
-[WARN] BTC price $60,864 / ETH price $1,568.93 from Apify crypto-intelligence, not direct exchange API
-[WARN] btc_d 55.9% estimated from top-120 MC sample
-[WARN] alt_mom7=-18.2% from 14-coin basket, all coins negative 7D
-[WARN] TIPS 2.17% is Jun5 value (last trading day before Sunday Jun7)
-[WARN] ETF weekly flow -$1.67B from WebSearch (week ~May29); Jun3 confirmed -$397M (Farside)
+PART B - Layer 1 v2 Verdict:
+  req1 (btc_d_delta7 < 0): null (FAIL - no baseline)
+  req2 (alt_mom7 > 0%): FAIL (-14.68% < 0%)
+  bonus_a: null (req1 null)
+  bonus_b: FAIL (-14.68% < +1.5%)
+  bonus_c: FAIL (others_d=8.0% < 12%)
+  Verdict: ALT-OFF
 
-=== c3 SIGNAL ===
-[INFO] c3 ENTRY TRIGGERED: BEAT + H + LAB (Day3 in Top3)
-       Jun05: top3=[lab,beat,h] (Day1)
-       Jun06: top3=[beat,h,lab] (Day2)
-       Jun07: top3=[beat,h,lab] (Day3) -> ENTRY confirmed
-[INFO] NEAR EXIT: was #10 Jun06 (+32.5% 30D), dropped out of today's top10
-[INFO] XLM new entrant #8 (+34.4% 30D)
+PART C - Macro
+  BTC price: $63,187 (+3.79% 24h) [CoinGecko via Apify]
+  ETH price: $1,685.14 (+7.34% 24h) [CoinGecko via Apify]
+  VIX: null [Yahoo Finance blocked in sandbox]
+  MOVE: null [Yahoo Finance blocked in sandbox]
+  DXY: null [Yahoo Finance blocked in sandbox]
+  NDX: null [Yahoo Finance blocked in sandbox]
+  10Y yield: null [Yahoo Finance blocked in sandbox]
+  TIPS real: 2.17% [FRED DFII10 Jun-05 via WebSearch fallback]
+  ETF flow 1D: null [Farside Jun-08 not yet published]
+  BTC-NDX corr: null [curl blocked in sandbox]
 
-=== SENTIMENT SCORES ===
-BTC-EN : 23.7  extreme_bear  n_valid=24  dataset=dm0BYF41FZ0fc0jAI
-ETH-EN : 35.6  bear          n_valid=24  dataset=k1Q1nyEK3mHsBCRNm
-Crypto-EN: 16.7 extreme_bear n_valid=24  dataset=df30odu5Fv2YRz7ZF
-BTC-ZH : 44.7  neutral       n_valid=24  dataset=dm0BYF41FZ0fc0jAI
-ETH-ZH : 29.8  bear          n_valid=24  dataset=k1Q1nyEK3mHsBCRNm
-Crypto-ZH: 47.1 neutral      n_valid=24  dataset=df30odu5Fv2YRz7ZF
-Composite: 32.9  bear/fear
+PART E - Top 10 (30D)
+  #1 BEAT +570.4% 30D | +193.5% 7D | MC $0.98B
+  #2 H +290.7% 30D | +55.8% 7D | MC $1.30B
+  #3 LAB +220.5% 30D | +31.6% 7D | MC $4.00B
+  #4 RAIN +78.2% 30D | -5.9% 7D | MC $8.37B
+  #5 WLD +70.3% 30D | +34.0% 7D | MC $1.58B
+  #6 DEXE +65.1% 30D | +3.8% 7D | MC $0.92B
+  #7 HYPE +37.7% 30D | -17.8% 7D | MC $13.25B
+  #8 NEAR +28.7% 30D | -11.2% 7D | MC $2.66B
+  #9 INJ +28.2% 30D | -17.4% 7D | MC $0.54B
+  #10 XLM +26.0% 30D | -19.8% 7D | MC $6.94B
+  c3 ENTRY: beat, h, lab (Day 4 consecutive) | ALT-OFF -> record only
+  c3 EXIT: vvv (dropped from Jun-07 top10)
+  Filtered: bianrensheng (non-ASCII symbol), canton-network (excluded per rules), stablecoins, exchange tokens
 
-=== LAYER 1 VERDICT ===
-req1 (btc_d_delta7 < 0): FAIL (btc_d_delta7=null, no May31 baseline)
-req2 (alt_mom7 > 0%): FAIL (alt_mom7=-18.2% < 0)
-bonus_a (delta7 <= -0.5pp): FAIL (delta7=null)
-bonus_b (alt_mom7 > +1.5%): FAIL (-18.2% < +1.5%)
-bonus_c (others_d > 12%): FAIL (others_d=11.2% < 12%)
-VERDICT: RED ALT-OFF (0/2 req + 0/3 bonus)
+API FAILURES:
+  - Binance API: blocked (sandbox no network)
+  - CoinGecko /global: blocked (Apify RAG browser 0 results)
+  - CoinPaprika /global: blocked (Apify RAG browser 0 results)
+  - Yahoo Finance (VIX/MOVE/DXY/NDX/TNX): blocked
+  - FRED DFII10: blocked -> WebSearch fallback used (allowed exception)
+  - Farside ETF: no Jun-08 data published yet

@@ -36,5 +36,22 @@
     "overall": 32.9,
     "label": "bear",
     "source": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify"
+  },
+  {
+    "date": "2026-06-08",
+    "btc_en": 49.5,
+    "btc_zh": 53.4,
+    "eth_en": 52.9,
+    "eth_zh": 42.9,
+    "crypto_en": 46.2,
+    "crypto_zh": 50.3,
+    "btc_composite": 51.5,
+    "btc_band": "neutral",
+    "eth_composite": 47.9,
+    "eth_band": "neutral",
+    "overall": 49.2,
+    "overall_band": "neutral",
+    "source": "Apify kaitoeasyapi, 6 terms x25",
+    "fetched_at_utc": "2026-06-08T00:10:00Z"
   }
 ]
