@@ -78,7 +78,7 @@
       "xlm_7d": 77.52,
       "bnb_7d": -6.23,
       "ton_new_entry_7d": 12.1,
-      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3\u7e7c\u7e8c: HYPE+ZEC+NEAR \u00b7 HYPE c3\u6301\u5b88(+87% 21D/ATH $71.44) \u00b7 ZEC c3 Day4(+62% 21D/+14% 7D) \u00b7 NEAR c3 Day11(+45% 21D/+1% 7D) \u00b7 XLM\u5927\u6f32\u65b0#4(+38% 21D/+77.5% 7D) \u00b7 BNB\u8dcc\u51faTop10 \u00b7 TON\u65b0\u5165#10 \u00b7 btc_d_delta7=-1.39pp\u2713 bonus_a\u2713 alt_mom7=+0.47%\u2713(\u52c9\u5f37) \u00b7 1bonus \u2192 \ud83d\udfe2 GO \u00b7 Strategy\u8ce332BTC($2.5M) \u00b7 ETF Flow null"
+      "carry_signal": "🟢 GO · c3繼續: HYPE+ZEC+NEAR · HYPE c3持守(+87% 21D/ATH $71.44) · ZEC c3 Day4(+62% 21D/+14% 7D) · NEAR c3 Day11(+45% 21D/+1% 7D) · XLM大漲新#4(+38% 21D/+77.5% 7D) · BNB跌出Top10 · TON新入#10 · btc_d_delta7=-1.39pp✓ bonus_a✓ alt_mom7=+0.47%✓(勉強) · 1bonus → 🟢 GO · Strategy賣32BTC($2.5M) · ETF Flow null"
     },
     {
       "date": "2026-06-03",
@@ -150,7 +150,7 @@
       "c3_exited": [
         "near"
       ],
-      "near_exits_top3_note": "NEAR drops from top3 (XLM\u66ff\u5165). NEAR\u4ecd#4. c3\u689d\u4ef6: Jun1\u2229Jun2\u2229Jun3 top3 = {hype,zec,near}\u2229{hype,zec,near}\u2229{hype,zec,xlm} = {hype,zec}",
+      "near_exits_top3_note": "NEAR drops from top3 (XLM替入). NEAR仍#4. c3條件: Jun1∩Jun2∩Jun3 top3 = {hype,zec,near}∩{hype,zec,near}∩{hype,zec,xlm} = {hype,zec}",
       "hype_c3_continuing": true,
       "zec_c3_day5": true,
       "near_exits_c3": true,
@@ -160,7 +160,7 @@
       "near_7d": -7.2,
       "bnb_7d": -8.1,
       "render_exit_7d": -15.0,
-      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3: HYPE+ZEC\u7e7c\u7e8c \u00b7 HYPE c3\u6301\u5b88(+73% 21D) \u00b7 ZEC c3 Day5(+45% 21D/+23% 7D,Iran\u96b1\u79c1\u5e63\u6558\u4e8b) \u00b7 XLM\ud83c\udd95#3(+42% 21D/+36.8% 7D) \u00b7 NEAR\u8dcc\u81f3#4(c3\u9000\u51fa) \u00b7 BNB\u65b0\u5165#10 \u00b7 RENDER\u2192\u51fa\u5834 \u00b7 btc_d_delta7=-0.03pp\u2713 alt_mom7=+1.04%\u2713 0 bonus \u2192 \ud83d\udfe2 GO \u00b7 BTC $67,154(-3.41% 24h) \u00b7 Fear&Greed=27(\u6050\u614c) \u00b7 ethconf NYC 6/8"
+      "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+73% 21D) · ZEC c3 Day5(+45% 21D/+23% 7D,Iran隱私幣敘事) · XLM🆕#3(+42% 21D/+36.8% 7D) · NEAR跌至#4(c3退出) · BNB新入#10 · RENDER→出場 · btc_d_delta7=-0.03pp✓ alt_mom7=+1.04%✓ 0 bonus → 🟢 GO · BTC $67,154(-3.41% 24h) · Fear&Greed=27(恐慌) · ethconf NYC 6/8"
     },
     {
       "date": "2026-06-04",
@@ -235,7 +235,7 @@
       "hype_7d": 29.95,
       "zec_7d": 16.26,
       "bnb_exits_7d": -3.69,
-      "carry_signal": "\ud83d\udfe2 GO \u00b7 c3: HYPE+ZEC\u7e7c\u7e8c \u00b7 HYPE c3\u6301\u5b88(+78% 21D/+29.95% 7D) \u00b7 ZEC c3 Day6(+48% 21D/+16.26% 7D) \u00b7 XLM Day2 #3(+40% 21D/\u5f85c3\u660e\u65e5) \u00b7 BNB\u8dcc\u51faTop10(-3.69% 7D) \u00b7 XMR\ud83c\udd95#7(Iran\u96b1\u79c1\u5e63) \u00b7 btc_d_delta7=-0.26pp\u2713 alt_mom7=+7.81%\u2713(6/14 valid) \u00b7 1bonus(bonus_b) \u2192 \ud83d\udfe2 GO \u00b7 BTC $64,265(-4.25% 24h) \u00b7 Fear&Greed=21(\u6975\u5ea6\u6050\u614c) \u00b7 SpaceX IPO\u8def\u6f14Jun4 \u00b7 ethconf NYC 6/8"
+      "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+78% 21D/+29.95% 7D) · ZEC c3 Day6(+48% 21D/+16.26% 7D) · XLM Day2 #3(+40% 21D/待c3明日) · BNB跌出Top10(-3.69% 7D) · XMR🆕#7(Iran隱私幣) · btc_d_delta7=-0.26pp✓ alt_mom7=+7.81%✓(6/14 valid) · 1bonus(bonus_b) → 🟢 GO · BTC $64,265(-4.25% 24h) · Fear&Greed=21(極度恐慌) · SpaceX IPO路演Jun4 · ethconf NYC 6/8"
     },
     {
       "date": "2026-06-05",
@@ -524,92 +524,128 @@
         "lab"
       ],
       "c3_exit": [],
-      "notes": "\ud83d\udd14 c3 ENTRY TRIGGERED: BEAT/H/LAB Day3 in Top3 \u2192 Entry signal. NEAR\u51fa\u5834(+32.5% 30D\u8dcc\u51faTop10). XLM\u65b0\u5165#8(+34.4% 30D). ALT-OFF: req1=null(\u7121May31\u57fa\u6e96) \u00b7 req2 FAIL(alt_mom7=-18.2%). ALT-OFF\u74b0\u5883: \u8a18\u9304c3\u8a0a\u865f\u3002"
+      "notes": "🔔 c3 ENTRY TRIGGERED: BEAT/H/LAB Day3 in Top3 → Entry signal. NEAR出場(+32.5% 30D跌出Top10). XLM新入#8(+34.4% 30D). ALT-OFF: req1=null(無May31基準) · req2 FAIL(alt_mom7=-18.2%). ALT-OFF環境: 記錄c3訊號。"
     },
     {
       "date": "2026-06-08",
       "scan_done": true,
       "regime": "ALT-OFF",
-      "top3_21d": [
+      "method": "benthepythondev/crypto-intelligence via Apify (30D sort, fresh run)",
+      "prev_date": "2026-06-07",
+      "prev_top3": [
         "beat",
         "h",
         "lab"
       ],
-      "top10_21d": [
+      "prev_top10": [
+        "beat",
+        "h",
+        "lab",
+        "rain",
+        "wld",
+        "dexe",
+        "inj",
+        "xlm",
+        "hype",
+        "vvv"
+      ],
+      "top3": [
+        "beat",
+        "h",
+        "lab"
+      ],
+      "top10": [
+        "beat",
+        "h",
+        "lab",
+        "dexe",
+        "rain",
+        "wld",
+        "9bit",
+        "hype",
+        "near",
+        "inj"
+      ],
+      "top10_details": [
         {
           "symbol": "beat",
-          "30d": 570.4,
-          "7d": 193.5,
-          "market_cap_rank": 72
+          "price_change_percentage_30d": 732.8,
+          "price_change_percentage_7d": 260.2,
+          "market_cap_rank": 62
         },
         {
           "symbol": "h",
-          "30d": 290.7,
-          "7d": 55.8,
-          "market_cap_rank": 60
+          "price_change_percentage_30d": 263.5,
+          "price_change_percentage_7d": 8.6,
+          "market_cap_rank": 59
         },
         {
           "symbol": "lab",
-          "30d": 220.5,
-          "7d": 31.6,
-          "market_cap_rank": 28
+          "price_change_percentage_30d": 218.8,
+          "price_change_percentage_7d": 28.7,
+          "market_cap_rank": 26
+        },
+        {
+          "symbol": "dexe",
+          "price_change_percentage_30d": 81.1,
+          "price_change_percentage_7d": 16.0,
+          "market_cap_rank": 66
         },
         {
           "symbol": "rain",
-          "30d": 78.2,
-          "7d": -5.9,
+          "price_change_percentage_30d": 76.0,
+          "price_change_percentage_7d": -6.8,
           "market_cap_rank": 14
         },
         {
           "symbol": "wld",
-          "30d": 70.3,
-          "7d": 34.0,
-          "market_cap_rank": 52
+          "price_change_percentage_30d": 73.5,
+          "price_change_percentage_7d": 23.4,
+          "market_cap_rank": 50
         },
         {
-          "symbol": "dexe",
-          "30d": 65.1,
-          "7d": 3.8,
-          "market_cap_rank": 74
+          "symbol": "9bit",
+          "price_change_percentage_30d": 64.9,
+          "price_change_percentage_7d": -2.8,
+          "market_cap_rank": 120
         },
         {
           "symbol": "hype",
-          "30d": 37.7,
-          "7d": -17.8,
-          "market_cap_rank": 11
+          "price_change_percentage_30d": 43.5,
+          "price_change_percentage_7d": -13.5,
+          "market_cap_rank": 10
         },
         {
           "symbol": "near",
-          "30d": 28.7,
-          "7d": -11.2,
-          "market_cap_rank": 37
+          "price_change_percentage_30d": 37.2,
+          "price_change_percentage_7d": -6.8,
+          "market_cap_rank": 35
         },
         {
           "symbol": "inj",
-          "30d": 28.2,
-          "7d": -17.4,
-          "market_cap_rank": 96
-        },
-        {
-          "symbol": "xlm",
-          "30d": 26.0,
-          "7d": -19.8,
-          "market_cap_rank": 16
+          "price_change_percentage_30d": 28.4,
+          "price_change_percentage_7d": -16.9,
+          "market_cap_rank": 95
         }
+      ],
+      "exits_today": [
+        "xlm",
+        "vvv"
+      ],
+      "new_entrants": [
+        "9bit",
+        "near"
       ],
       "c3_entry": [
         "beat",
         "h",
         "lab"
       ],
-      "c3_note": "Day4 consecutive; ALT-OFF \u2192 record only, no trade",
-      "c3_exit": [
-        "vvv"
-      ],
-      "c3_exit_note": "VVV dropped from Jun-07 top10",
-      "source": "benthepythondev/crypto-intelligence via Apify",
-      "fetched_at_utc": "2026-06-08T00:10:00Z"
+      "c3_day": 5,
+      "c3_exit": [],
+      "notes": "🔔 c3 BEAT/H/LAB Day5 繼續。ALT-OFF(req1=null,req2=alt_mom7=-13.75% FAIL)→僅記錄。XLM/VVV出場，9BIT/NEAR新入。",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
     }
   ],
-  "last_updated": "2026-06-07"
+  "last_updated": "2026-06-08"
 }

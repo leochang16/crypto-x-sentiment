@@ -1,63 +1,180 @@
 {
   "date": "2026-06-08",
   "weekday": "週一",
-  "updated_tpe": "08:30",
+  "updated_tpe": "15:38",
   "verdict": "ALT-OFF",
-  "verdict_reason_code": "req2_fail",
+  "verdict_reason_code": "req1_null_req2_fail",
   "x": {
-    "btc": { "score": 51.5, "band": "neutral", "delta_1d": 17.3 },
-    "eth": { "score": 47.9, "band": "neutral", "delta_1d": 15.2 },
-    "btc_price": 63187, "btc_price_delta_pct": 3.79,
-    "eth_price": 1685, "eth_price_delta_pct": 7.34,
+    "btc": {
+      "score": 42.0,
+      "band": "fear",
+      "delta_1d": 7.8
+    },
+    "eth": {
+      "score": 31.4,
+      "band": "fear",
+      "delta_1d": -1.3
+    },
+    "btc_price": 63167,
+    "btc_price_delta_pct": 1.61,
+    "eth_price": 1674.14,
+    "eth_price_delta_pct": 3.89,
     "top_discussions": [
-      { "title": "BTC/ETH 雙幣技術性反彈，alt basket 仍弱", "eng": 0, "tag": "neutral" },
-      { "title": "ethconf NYC Day2 進行中，ETH 情緒回升", "eng": 0, "tag": "watch" },
-      { "title": "機構 ETF 連週流出，撤退未止", "eng": 0, "tag": "bear" }
+      {
+        "title": "美股單日蒸發$1.75兆，加密市場跟跌恐慌情緒升溫",
+        "tag": "bear"
+      },
+      {
+        "title": "BTC反彈至$63K，一週重挫後企穩獲多頭留意",
+        "tag": "bull"
+      },
+      {
+        "title": "中本聰時代鯨魚清倉3.5億BTC，引發市場震盪討論",
+        "tag": "bear"
+      }
     ]
   },
   "macro": {
-    "vix": null, "move": null, "dxy": null, "dxy_last": 99.41,
-    "tips": 2.17, "etf_flow": null, "etf_flow_last": -397,
+    "vix": 21.51,
+    "move": 75.2,
+    "dxy": 100.04,
+    "dxy_last": 99.41,
+    "tips": 2.16,
+    "etf_flow": null,
+    "etf_flow_last": -397,
     "ndx_corr_30d": null
   },
   "dominance": {
-    "btc_d": 56.1, "btc_d_delta7": null,
-    "others_d": 11.37, "total3_d": 18.1, "ethbtc": 0.02666,
-    "alt_mom7": -14.7, "breadth_pct": 42.9, "n_valid": 14,
-    "req1": false, "req2": false, "bonus_a": false, "bonus_b": false, "bonus_c": false
+    "btc_d": 56.168,
+    "btc_d_delta7": null,
+    "others_d": 11.917,
+    "total3_d": 23.228,
+    "ethbtc": 0.0265,
+    "alt_mom7": -13.75,
+    "breadth_pct": 42.9,
+    "n_valid": 14,
+    "req1": false,
+    "req2": false,
+    "bonus_a": false,
+    "bonus_b": false,
+    "bonus_c": false
   },
   "news": [
-    { "sev": "high", "title": "BTC/ETH 雙幣強力反彈，週跌後技術性回補" },
-    { "sev": "high", "title": "BEAT/H/LAB 連 4 天霸榜 Top 3" },
-    { "sev": "high", "title": "alt basket 14 幣 7D 全面負報酬" },
-    { "sev": "med", "title": "ethconf NYC Day2 進行中" },
-    { "sev": "med", "title": "VVV 跌出 Top 10、NEAR 重返第 8" }
+    {
+      "sev": "high",
+      "title": "BTC ETF 13日連續淨流出，累計流出逾43億美元"
+    },
+    {
+      "sev": "high",
+      "title": "美股單日蒸發$1.75兆，S&P 500那斯達克雙雙重挫"
+    },
+    {
+      "sev": "med",
+      "title": "BTC反彈至$63K，ETH同步漲3.9%，市場情緒回溫"
+    },
+    {
+      "sev": "med",
+      "title": "美伊緊張持續，機構ETF拋售加劇風險情緒"
+    },
+    {
+      "sev": "med",
+      "title": "EthCC NYC (6/8-10) 開幕，以太坊社群聚焦生態進展"
+    }
   ],
   "calendar": {
     "today": [
-      { "time": "全天", "event": "ethconf NYC Day2 進行中", "tag": "crypto" }
+      {
+        "time": "全天",
+        "event": "EthCC NYC Day1 (6/8-10進行中)",
+        "tag": "crypto"
+      }
     ],
     "week": [
-      { "date": "06-10 週三", "event": "CPI 5月數據釋出", "tag": "fed" },
-      { "date": "06-16 週一", "event": "FOMC 利率決策", "tag": "fed" }
+      {
+        "date": "06-10 週三",
+        "event": "美國 CPI 5月數據公布",
+        "tag": "fed"
+      },
+      {
+        "date": "06-16 週一",
+        "event": "FOMC 利率決議",
+        "tag": "fed"
+      }
     ]
   },
   "strong": {
     "window": "30D",
-    "c3_entry": ["BEAT", "H", "LAB"],
-    "c3_day": 4,
-    "exits": ["VVV"],
+    "c3_entry": [
+      "BEAT",
+      "H",
+      "LAB"
+    ],
+    "c3_day": 5,
+    "exits": [
+      "XLM",
+      "VVV"
+    ],
     "top10": [
-      { "rank": 1, "sym": "BEAT", "ret": 570.4, "status": "c3" },
-      { "rank": 2, "sym": "H", "ret": 290.7, "status": "c3" },
-      { "rank": 3, "sym": "LAB", "ret": 220.5, "status": "c3" },
-      { "rank": 4, "sym": "RAIN", "ret": 78.2, "status": "hold" },
-      { "rank": 5, "sym": "WLD", "ret": 70.3, "status": "up" },
-      { "rank": 6, "sym": "DEXE", "ret": 65.1, "status": "hold" },
-      { "rank": 7, "sym": "HYPE", "ret": 37.7, "status": "up" },
-      { "rank": 8, "sym": "NEAR", "ret": 28.7, "status": "reenter" },
-      { "rank": 9, "sym": "INJ", "ret": 28.2, "status": "down" },
-      { "rank": 10, "sym": "XLM", "ret": 26.0, "status": "down" }
+      {
+        "rank": 1,
+        "sym": "BEAT",
+        "ret": 732.8,
+        "status": "c3"
+      },
+      {
+        "rank": 2,
+        "sym": "H",
+        "ret": 263.5,
+        "status": "c3"
+      },
+      {
+        "rank": 3,
+        "sym": "LAB",
+        "ret": 218.8,
+        "status": "c3"
+      },
+      {
+        "rank": 4,
+        "sym": "DEXE",
+        "ret": 81.1,
+        "status": "hold"
+      },
+      {
+        "rank": 5,
+        "sym": "RAIN",
+        "ret": 76.0,
+        "status": "hold"
+      },
+      {
+        "rank": 6,
+        "sym": "WLD",
+        "ret": 73.5,
+        "status": "hold"
+      },
+      {
+        "rank": 7,
+        "sym": "9BIT",
+        "ret": 64.9,
+        "status": "new"
+      },
+      {
+        "rank": 8,
+        "sym": "HYPE",
+        "ret": 43.5,
+        "status": "hold"
+      },
+      {
+        "rank": 9,
+        "sym": "NEAR",
+        "ret": 37.2,
+        "status": "reenter"
+      },
+      {
+        "rank": 10,
+        "sym": "INJ",
+        "ret": 28.4,
+        "status": "hold"
+      }
     ]
   }
 }
