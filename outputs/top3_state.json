@@ -530,7 +530,7 @@
       "date": "2026-06-08",
       "scan_done": true,
       "regime": "ALT-OFF",
-      "method": "benthepythondev/crypto-intelligence via Apify (30D sort, fresh run)",
+      "method": "benthepythondev/crypto-intelligence via Apify (30D sort, fresh PM run)",
       "prev_date": "2026-06-07",
       "prev_top3": [
         "beat",
@@ -561,79 +561,77 @@
         "dexe",
         "rain",
         "wld",
-        "9bit",
         "hype",
         "near",
-        "inj"
+        "inj",
+        "xlm"
       ],
       "top10_details": [
         {
           "symbol": "beat",
-          "price_change_percentage_30d": 732.8,
-          "price_change_percentage_7d": 260.2,
+          "price_change_percentage_30d": 721.5,
+          "price_change_percentage_7d": 270.6,
           "market_cap_rank": 62
         },
         {
           "symbol": "h",
-          "price_change_percentage_30d": 263.5,
-          "price_change_percentage_7d": 8.6,
-          "market_cap_rank": 59
+          "price_change_percentage_30d": 250.7,
+          "price_change_percentage_7d": 6.1,
+          "market_cap_rank": 61
         },
         {
           "symbol": "lab",
-          "price_change_percentage_30d": 218.8,
-          "price_change_percentage_7d": 28.7,
-          "market_cap_rank": 26
+          "price_change_percentage_30d": 201.7,
+          "price_change_percentage_7d": 11.4,
+          "market_cap_rank": 27
         },
         {
           "symbol": "dexe",
-          "price_change_percentage_30d": 81.1,
-          "price_change_percentage_7d": 16.0,
+          "price_change_percentage_30d": 83.5,
+          "price_change_percentage_7d": 18.2,
           "market_cap_rank": 66
         },
         {
           "symbol": "rain",
-          "price_change_percentage_30d": 76.0,
-          "price_change_percentage_7d": -6.8,
+          "price_change_percentage_30d": 76.6,
+          "price_change_percentage_7d": -6.2,
           "market_cap_rank": 14
         },
         {
           "symbol": "wld",
-          "price_change_percentage_30d": 73.5,
-          "price_change_percentage_7d": 23.4,
+          "price_change_percentage_30d": 72.6,
+          "price_change_percentage_7d": 24.1,
           "market_cap_rank": 50
         },
         {
-          "symbol": "9bit",
-          "price_change_percentage_30d": 64.9,
-          "price_change_percentage_7d": -2.8,
-          "market_cap_rank": 120
-        },
-        {
           "symbol": "hype",
-          "price_change_percentage_30d": 43.5,
-          "price_change_percentage_7d": -13.5,
+          "price_change_percentage_30d": 43.1,
+          "price_change_percentage_7d": -13.7,
           "market_cap_rank": 10
         },
         {
           "symbol": "near",
-          "price_change_percentage_30d": 37.2,
-          "price_change_percentage_7d": -6.8,
-          "market_cap_rank": 35
+          "price_change_percentage_30d": 35.5,
+          "price_change_percentage_7d": -7.5,
+          "market_cap_rank": 36
         },
         {
           "symbol": "inj",
-          "price_change_percentage_30d": 28.4,
-          "price_change_percentage_7d": -16.9,
-          "market_cap_rank": 95
+          "price_change_percentage_30d": 30.2,
+          "price_change_percentage_7d": -14.9,
+          "market_cap_rank": 94
+        },
+        {
+          "symbol": "xlm",
+          "price_change_percentage_30d": 22.6,
+          "price_change_percentage_7d": -21.6,
+          "market_cap_rank": 16
         }
       ],
       "exits_today": [
-        "xlm",
         "vvv"
       ],
       "new_entrants": [
-        "9bit",
         "near"
       ],
       "c3_entry": [
@@ -643,8 +641,8 @@
       ],
       "c3_day": 5,
       "c3_exit": [],
-      "notes": "🔔 c3 BEAT/H/LAB Day5 繼續。ALT-OFF(req1=null,req2=alt_mom7=-13.75% FAIL)→僅記錄。XLM/VVV出場，9BIT/NEAR新入。",
-      "fetched_at_utc": "2026-06-08T07:38:00Z"
+      "notes": "🔔 c3 BEAT/H/LAB Day5 繼續(Jun5~Jun8)。VVV出場。NEAR 重回 Top10(reenter)。ALT-OFF(req1✓btc_d_delta7=-1.81pp; req2✗alt_mom7=-13.16% FAIL)→僅記錄。",
+      "fetched_at_utc": "2026-06-08T08:14:01Z"
     }
   ],
   "last_updated": "2026-06-08"
