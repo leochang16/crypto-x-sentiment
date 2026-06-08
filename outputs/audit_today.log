@@ -1,69 +1,52 @@
-=== 2026-06-08 Daily Pipeline Audit Log ===
+=== AUDIT LOG 2026-06-08 (fresh manual run) ===
+Fetched at UTC: 2026-06-08T07:38:00Z
 
-PART A - X Sentiment (Apify kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest)
-  Actor run: 9oX7NKEF7fvfeuc8v | Dataset: Gdw29bJKmBVMzTEGO
-  Items: 238 total | Fetched: 2026-06-08T00:04:16Z
-  BTC-EN: score=49.5 (neutral) n=39
-  BTC-ZH: score=53.4 (neutral) n=39
-  ETH-EN: score=52.9 (neutral) n=39
-  ETH-ZH: score=42.9 (fear) n=38
-  CRYPTO-EN: score=46.2 (neutral) n=40
-  CRYPTO-ZH: score=50.3 (neutral) n=38
-  BTC composite: 51.5 (neutral)
-  ETH composite: 47.9 (neutral)
-  Overall: 49.2 (neutral)
+PART A - X Sentiment:
+  Actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
+  Run ID: cvNCUc6dNYtulnvQK | Status: SUCCEEDED | Items: 240 (6 terms x ~40 each)
+  BTC composite: 42.0 (fear) | delta_1d: 7.8
+  ETH composite: 31.4 (fear) | delta_1d: -1.3
 
-PART B - Dominance & Alt Basket (benthepythondev/crypto-intelligence)
-  Actor run: Jyo1FLJ2excPTSUut | Dataset: WldAZ85FcbDumuzPe
-  Items: 120 coins | Fetched: 2026-06-08T00:04:18Z
-  btc_d: 57.3% [PROXY - computed from top-120 market caps; CoinGecko /global blocked; CoinPaprika /global blocked]
-  eth_d: 9.2% [PROXY]
-  stable_pct: 15.4% [PROXY]
-  others_d: 8.0% [PROXY]
-  total3_d: 18.1% [PROXY]
-  btc_d_delta7: null [NO Jun-01 baseline in dominance_history; earliest is Jun-05]
-  alt_mom7: -14.68% (14/14 valid coins)
-  alt_breadth: 6/14 = 42.9% beating BTC 7D
+PART B-0 - Markets (crypto-intelligence):
+  Actor: benthepythondev/crypto-intelligence
+  Run ID: cAzyAh31NJADqIfV7 | Status: SUCCEEDED | Items: 120
+  BTC: $63167 (+1.61% 24h) | ETH: $1674.14 (+3.89% 24h)
+  ETH/BTC: 0.0265
 
-PART B - Layer 1 v2 Verdict:
-  req1 (btc_d_delta7 < 0): null (FAIL - no baseline)
-  req2 (alt_mom7 > 0%): FAIL (-14.68% < 0%)
-  bonus_a: null (req1 null)
-  bonus_b: FAIL (-14.68% < +1.5%)
-  bonus_c: FAIL (others_d=8.0% < 12%)
-  Verdict: ALT-OFF
+PART B-1 - Dominance (coingecko-scraper):
+  Actor: makework36/coingecko-scraper mode=global
+  Run ID: gDLfDtAFYYfDgEDCo | Status: SUCCEEDED
+  btc_d: 56.168% | eth_d: 8.956% | others_d: 11.917%
+  total3_d: 23.228% | stablecoin_sum: 11.648%
+  btc_d_delta7: null (no Jun1 baseline; history starts Jun5)
 
-PART C - Macro
-  BTC price: $63,187 (+3.79% 24h) [CoinGecko via Apify]
-  ETH price: $1,685.14 (+7.34% 24h) [CoinGecko via Apify]
-  VIX: null [Yahoo Finance blocked in sandbox]
-  MOVE: null [Yahoo Finance blocked in sandbox]
-  DXY: null [Yahoo Finance blocked in sandbox]
-  NDX: null [Yahoo Finance blocked in sandbox]
-  10Y yield: null [Yahoo Finance blocked in sandbox]
-  TIPS real: 2.17% [FRED DFII10 Jun-05 via WebSearch fallback]
-  ETF flow 1D: null [Farside Jun-08 not yet published]
-  BTC-NDX corr: null [curl blocked in sandbox]
+PART B-2 - Alt Basket:
+  14 alts: SOL/BNB/XRP/TRX/TON/AVAX/DOT/UNI/LINK/NEAR/HYPE/SUI/ZEC/ONDO
+  alt_mom7: -13.75% (14 valid) | breadth: 42.9% (6/14 beat BTC 7D)
 
-PART E - Top 10 (30D)
-  #1 BEAT +570.4% 30D | +193.5% 7D | MC $0.98B
-  #2 H +290.7% 30D | +55.8% 7D | MC $1.30B
-  #3 LAB +220.5% 30D | +31.6% 7D | MC $4.00B
-  #4 RAIN +78.2% 30D | -5.9% 7D | MC $8.37B
-  #5 WLD +70.3% 30D | +34.0% 7D | MC $1.58B
-  #6 DEXE +65.1% 30D | +3.8% 7D | MC $0.92B
-  #7 HYPE +37.7% 30D | -17.8% 7D | MC $13.25B
-  #8 NEAR +28.7% 30D | -11.2% 7D | MC $2.66B
-  #9 INJ +28.2% 30D | -17.4% 7D | MC $0.54B
-  #10 XLM +26.0% 30D | -19.8% 7D | MC $6.94B
-  c3 ENTRY: beat, h, lab (Day 4 consecutive) | ALT-OFF -> record only
-  c3 EXIT: vvv (dropped from Jun-07 top10)
-  Filtered: bianrensheng (non-ASCII symbol), canton-network (excluded per rules), stablecoins, exchange tokens
+PART C - Macro:
+  Yahoo Finance (^VIX/^MOVE/DX-Y.NYB):
+  Run ID: QxGzh4X3q5lhSeYre | Status: SUCCEEDED
+  VIX: 21.51 | MOVE: 75.2 | DXY: 100.04
+  TIPS (DFII10 Jun5 last trading day from WebSearch): 2.16%
+  ETF flow Jun8: null (Farside not yet published)
+  ETF flow last (Jun7): $-397M
 
-API FAILURES:
-  - Binance API: blocked (sandbox no network)
-  - CoinGecko /global: blocked (Apify RAG browser 0 results)
-  - CoinPaprika /global: blocked (Apify RAG browser 0 results)
-  - Yahoo Finance (VIX/MOVE/DXY/NDX/TNX): blocked
-  - FRED DFII10: blocked -> WebSearch fallback used (allowed exception)
-  - Farside ETF: no Jun-08 data published yet
+LAYER 1 v2:
+  req1 (btc_d_delta7 < 0): FALSE (null - no Jun1 baseline)
+  req2 (alt_mom7 > 0%): FALSE (-13.75%)
+  bonus_a: FALSE (null) | bonus_b: FALSE | bonus_c: FALSE (11.917% < 12%)
+  VERDICT: ALT-OFF
+
+PART E - Top 10 (30D%):
+  BEAT +732.8% | H +263.5% | LAB +218.8% | DEXE +81.1% | RAIN +76.0%
+  WLD +73.5% | 9BIT +64.9% | HYPE +43.5% | NEAR +37.2% | INJ +28.4%
+  c3: BEAT/H/LAB Day5 (ALT-OFF → record only, no trade)
+  Exits: XLM, VVV
+  New: 9BIT (new), NEAR (reenter)
+
+NULL FIELDS:
+  btc_d_delta7: null (history starts Jun5; need Jun1)
+  etf_flow: null (Farside Jun8 not yet published as of 07:38 UTC)
+  ndx_corr_30d: null (no clean aligned history)
+  price_change_percentage_1h: not used in schema

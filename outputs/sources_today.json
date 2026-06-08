@@ -1,149 +1,69 @@
 {
   "date": "2026-06-08",
-  "btc_price": {
-    "value": 63187,
-    "source": "CoinGecko via Apify benthepythondev/crypto-intelligence",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
+  "fetched_at_utc": "2026-06-08T07:38:00Z",
+  "macro": {
+    "btc_price": {
+      "value": 63167,
+      "source": "benthepythondev/crypto-intelligence markets via Apify",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    },
+    "eth_price": {
+      "value": 1674.14,
+      "source": "benthepythondev/crypto-intelligence markets via Apify",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    },
+    "vix": {
+      "value": 21.51,
+      "source": "benthepythondev/yahoo-finance-scraper (^VIX) via Apify",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    },
+    "move": {
+      "value": 75.2,
+      "source": "benthepythondev/yahoo-finance-scraper (^MOVE) via Apify",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    },
+    "dxy": {
+      "value": 100.04,
+      "source": "benthepythondev/yahoo-finance-scraper (DX-Y.NYB) via Apify",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    },
+    "tips": {
+      "value": 2.16,
+      "source": "WebSearch FRED DFII10 (Jun5 last trading day)",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    },
+    "etf_flow": {
+      "value": null,
+      "source": "WebSearch farside.co.uk - not yet published Jun8",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    }
   },
-  "eth_price": {
-    "value": 1685.14,
-    "source": "CoinGecko via Apify benthepythondev/crypto-intelligence",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
+  "dominance": {
+    "btc_d": {
+      "value": 56.168,
+      "source": "makework36/coingecko-scraper mode=global via Apify",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    },
+    "others_d": {
+      "value": 11.917,
+      "source": "makework36/coingecko-scraper mode=global via Apify",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    }
   },
-  "btc_24h_pct": {
-    "value": 3.79,
-    "source": "CoinGecko via Apify",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
+  "sentiment": {
+    "btc_composite": {
+      "value": 42.0,
+      "source": "kaitoeasyapi/twitter-x-data-tweet-scraper (6 terms, 240 tweets)",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    },
+    "eth_composite": {
+      "value": 31.4,
+      "source": "kaitoeasyapi/twitter-x-data-tweet-scraper (6 terms, 240 tweets)",
+      "fetched_at_utc": "2026-06-08T07:38:00Z"
+    }
   },
-  "eth_24h_pct": {
-    "value": 7.34,
-    "source": "CoinGecko via Apify",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "btc_7d_pct": {
-    "value": -14.47,
-    "source": "CoinGecko via Apify",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "eth_7d_pct": {
-    "value": -15.92,
-    "source": "CoinGecko via Apify",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "btc_d": {
-    "value": 56.14,
-    "source": "top-120 proxy (CoinGecko/CoinPaprika blocked)",
-    "fetched_at_utc": "2026-06-08T00:10:00Z",
-    "note": "CoinGecko /global live=56.137% (verified by CI)"
-  },
-  "eth_d": {
-    "value": 9.02,
-    "source": "top-120 proxy",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "stable_pct": {
-    "value": 15.4,
-    "source": "top-120 proxy",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "others_d": {
-    "value": 11.37,
-    "source": "top-120 proxy",
-    "fetched_at_utc": "2026-06-08T00:10:00Z",
-    "note": "CoinGecko /global live=11.3732% (verified by CI)"
-  },
-  "total3_d": {
-    "value": 18.1,
-    "source": "top-120 proxy",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "btc_d_delta7": {
-    "value": null,
-    "source": "null - no Jun-01 baseline in dominance_history",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "alt_mom7": {
-    "value": -14.68,
-    "source": "14-coin basket 7d mean via CoinGecko/Apify",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "alt_breadth": {
-    "value": 0.429,
-    "source": "6/14 coins beating BTC 7d",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "layer1_verdict": {
-    "value": "ALT-OFF",
-    "source": "computed",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "vix": {
-    "value": null,
-    "source": "Yahoo Finance blocked in sandbox",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "move": {
-    "value": null,
-    "source": "Yahoo Finance blocked in sandbox",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "dxy": {
-    "value": null,
-    "source": "Yahoo Finance blocked in sandbox",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "ndx": {
-    "value": null,
-    "source": "Yahoo Finance blocked in sandbox",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "yield_10y": {
-    "value": null,
-    "source": "Yahoo Finance blocked in sandbox",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "tips_real": {
-    "value": 2.17,
-    "source": "FRED DFII10 via WebSearch (Jun-05 last trading day)",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "etf_flow_1d": {
-    "value": null,
-    "source": "farside.co.uk - Jun-08 data not yet published",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "btc_ndx_corr_30d": {
-    "value": null,
-    "source": "curl blocked in sandbox",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "btc_ndx_corr_7d": {
-    "value": null,
-    "source": "curl blocked in sandbox",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "btc_composite_sentiment": {
-    "value": 51.5,
-    "source": "Apify kaitoeasyapi Twitter",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "eth_composite_sentiment": {
-    "value": 47.9,
-    "source": "Apify kaitoeasyapi Twitter",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "overall_sentiment": {
-    "value": 49.2,
-    "source": "Apify kaitoeasyapi Twitter",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
-  },
-  "top3_30d": {
-    "value": [
-      "beat",
-      "h",
-      "lab"
-    ],
-    "source": "benthepythondev/crypto-intelligence via Apify",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
+  "top10": {
+    "source": "benthepythondev/crypto-intelligence markets (120 coins, 30D sort) via Apify",
+    "fetched_at_utc": "2026-06-08T07:38:00Z"
   }
 }
