@@ -30,7 +30,7 @@
     "verdict": "ALT-OFF",
     "req1_pass": false,
     "btc_d_delta7": null,
-    "req1_reason": "無May31基準數據 (dominance_history最早至Jun05)",
+    "req1_reason": "\u7121May31\u57fa\u6e96\u6578\u64da (dominance_history\u6700\u65e9\u81f3Jun05)",
     "req2_pass": false,
     "alt_mom7": -18.2,
     "bonus_a": false,
@@ -39,5 +39,20 @@
     "n_bonus": 0,
     "breadth": 0.0,
     "n_valid": 14
+  },
+  {
+    "date": "2026-06-08",
+    "verdict": "ALT-OFF",
+    "req1_pass": null,
+    "req2_pass": false,
+    "btc_d_delta7": null,
+    "alt_mom7": -14.68,
+    "alt_breadth": 0.429,
+    "bonus_a": null,
+    "bonus_b": false,
+    "bonus_c": null,
+    "bonus_count": 0,
+    "reason": "req1=null (no Jun-01 baseline); req2 FAIL (alt_mom7=-14.68% < 0%)",
+    "fetched_at_utc": "2026-06-08T00:10:00Z"
   }
 ]

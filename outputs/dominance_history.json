@@ -28,5 +28,20 @@
     "others_d": 11.2,
     "total3_d": 23.4,
     "source": "benthepythondev/crypto-intelligence top120 sample via Apify"
+  },
+  {
+    "date": "2026-06-08",
+    "btc_d": 57.3,
+    "eth_d": 9.2,
+    "stable_pct": 15.4,
+    "others_d": 8.0,
+    "total3_d": 18.1,
+    "btc_d_delta7": null,
+    "alt_mom7": -14.68,
+    "alt_breadth": 0.429,
+    "n_valid": 14,
+    "source": "benthepythondev/crypto-intelligence via Apify (proxy from top-120)",
+    "note": "btc_d/eth_d are top-120 proxy; CoinGecko/CoinPaprika blocked; btc_d_delta7=null (no Jun-01 baseline)",
+    "fetched_at_utc": "2026-06-08T00:10:00Z"
   }
 ]
