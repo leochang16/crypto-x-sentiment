@@ -1,52 +1,48 @@
-=== AUDIT LOG 2026-06-08 (fresh manual run) ===
-Fetched at UTC: 2026-06-08T07:38:00Z
+=== AUDIT LOG 2026-06-08 fresh PM run (16:10 TPE / 2026-06-08T08:14:01Z) ===
 
-PART A - X Sentiment:
+PART A — Twitter X Sentiment
   Actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
-  Run ID: cvNCUc6dNYtulnvQK | Status: SUCCEEDED | Items: 240 (6 terms x ~40 each)
-  BTC composite: 42.0 (fear) | delta_1d: 7.8
-  ETH composite: 31.4 (fear) | delta_1d: -1.3
+  Terms: 6 x 25 maxItems, queryType=Top
+  Results: 235 raw tweets, ~230 valid after spam filter
+  BTC-EN: 51.1 (neutral, n=37) | BTC-ZH: 48.3 (neutral, n=39)
+  ETH-EN: 52.0 (neutral, n=37) | ETH-ZH: 54.3 (neutral, n=40)
+  CRYPTO-EN: 50.5 (n=39) | 加密-ZH: 50.0 (n=38)
+  BTC composite: 49.7 (neutral) Δ+15.5 vs Jun-07
+  ETH composite: 53.2 (neutral) Δ+20.5 vs Jun-07
 
-PART B-0 - Markets (crypto-intelligence):
-  Actor: benthepythondev/crypto-intelligence
-  Run ID: cAzyAh31NJADqIfV7 | Status: SUCCEEDED | Items: 120
-  BTC: $63167 (+1.61% 24h) | ETH: $1674.14 (+3.89% 24h)
-  ETH/BTC: 0.0265
+PART B — Dominance + Markets
+  B-0 Actor: benthepythondev/crypto-intelligence markets 100 coins
+  B-1 Actor: makework36/coingecko-scraper mode=global
+  btc_price=$63,193 | eth_price=$1,670.28 | ethbtc=0.02643
+  btc_d=56.19% | eth_d=8.95% | stablecoin_sum=11.63%
+  others_d=11.91% | total3_d=23.23%
+  BUG FIX: Initial Python script used USDC value twice instead of BNB.
+           Corrected from others_d=15.48 to others_d=11.91.
+  btc_d_delta7=-1.81pp (TRANSITION VALUE: Jun-05 baseline 58.0%, 3 days back)
+  alt_mom7=-13.16% (14 alts, n_valid=14)
+  breadth_pct=50.0% (7/14 alts beating BTC 7d of -13.10%)
+  Layer1 verdict: ALT-OFF (req1=TRUE req2=FALSE bonus_a=TRUE bonus_b=FALSE bonus_c=FALSE)
 
-PART B-1 - Dominance (coingecko-scraper):
-  Actor: makework36/coingecko-scraper mode=global
-  Run ID: gDLfDtAFYYfDgEDCo | Status: SUCCEEDED
-  btc_d: 56.168% | eth_d: 8.956% | others_d: 11.917%
-  total3_d: 23.228% | stablecoin_sum: 11.648%
-  btc_d_delta7: null (no Jun1 baseline; history starts Jun5)
+PART C — Macro
+  Yahoo Finance (VIX/MOVE/DXY): 
+    ^VIX=19.80 | ^MOVE=75.20 | DX-Y.NYB=100.08
+  TIPS (DFII10): WebSearch returned no numeric value. RAG-browser on fred.stlouisfed.org/data/DFII10 returned 0 items.
+    → USING CARRY-FORWARD 2.16% (from Jun-05 FRED DFII10 data, last known value)
+  ETF Flow: farside.co.uk/btc/ scraped via RAG-browser
+    → Jun-05 Total = -325.7M (latest published row)
+    → Jun-04 Total = +3.2M (etf_flow_last)
+  ndx_corr_30d: Pearson correlation BTC-USD vs ^NDX
+    → 30 trading days: 2026-04-24 to 2026-06-05 (NDX data ends Jun-05)
+    → Correlation = 0.46
 
-PART B-2 - Alt Basket:
-  14 alts: SOL/BNB/XRP/TRX/TON/AVAX/DOT/UNI/LINK/NEAR/HYPE/SUI/ZEC/ONDO
-  alt_mom7: -13.75% (14 valid) | breadth: 42.9% (6/14 beat BTC 7D)
+PART E — Top 10 30D
+  Source: benthepythondev/crypto-intelligence (B-0, same call, no re-fetch)
+  Top 10: beat(+721.5%) h(+250.7%) lab(+201.7%) dexe(+83.5%) rain(+76.6%)
+          wld(+72.6%) hype(+43.1%) near(+35.5%) inj(+30.2%) xlm(+22.6%)
+  c3: BEAT+H+LAB Day5 (continuously in Top3 since Jun-05)
+  Exits vs Jun-07: VVV
+  New vs Jun-07: NEAR (reenter)
+  Note: 9BIT was in morning run top10 but dropped from top-100 by PM run; not in result.
 
-PART C - Macro:
-  Yahoo Finance (^VIX/^MOVE/DX-Y.NYB):
-  Run ID: QxGzh4X3q5lhSeYre | Status: SUCCEEDED
-  VIX: 21.51 | MOVE: 75.2 | DXY: 100.04
-  TIPS (DFII10 Jun5 last trading day from WebSearch): 2.16%
-  ETF flow Jun8: null (Farside not yet published)
-  ETF flow last (Jun7): $-397M
-
-LAYER 1 v2:
-  req1 (btc_d_delta7 < 0): FALSE (null - no Jun1 baseline)
-  req2 (alt_mom7 > 0%): FALSE (-13.75%)
-  bonus_a: FALSE (null) | bonus_b: FALSE | bonus_c: FALSE (11.917% < 12%)
-  VERDICT: ALT-OFF
-
-PART E - Top 10 (30D%):
-  BEAT +732.8% | H +263.5% | LAB +218.8% | DEXE +81.1% | RAIN +76.0%
-  WLD +73.5% | 9BIT +64.9% | HYPE +43.5% | NEAR +37.2% | INJ +28.4%
-  c3: BEAT/H/LAB Day5 (ALT-OFF → record only, no trade)
-  Exits: XLM, VVV
-  New: 9BIT (new), NEAR (reenter)
-
-NULL FIELDS:
-  btc_d_delta7: null (history starts Jun5; need Jun1)
-  etf_flow: null (Farside Jun8 not yet published as of 07:38 UTC)
-  ndx_corr_30d: null (no clean aligned history)
-  price_change_percentage_1h: not used in schema
+NULL VALUES:
+  - etf_flow_last_prev: null (previous today.json had null)

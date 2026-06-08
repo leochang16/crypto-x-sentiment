@@ -353,10 +353,10 @@
   },
   {
     "date": "2026-06-08",
-    "btc": 42.0,
-    "btc_band": "fear",
-    "eth": 31.4,
-    "btc_price": 63167,
-    "eth_price": 1674.14
+    "btc": 49.7,
+    "btc_band": "neutral",
+    "eth": 53.2,
+    "btc_price": 63193.0,
+    "eth_price": 1670.28
   }
 ]

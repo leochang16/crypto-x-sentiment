@@ -43,16 +43,16 @@
   {
     "date": "2026-06-08",
     "verdict": "ALT-OFF",
-    "req1": false,
+    "btc_d": 56.19,
+    "btc_d_delta7": -1.81,
+    "alt_mom7": -13.16,
+    "breadth_pct": 50.0,
+    "req1": true,
     "req2": false,
-    "bonus_a": false,
+    "bonus_a": true,
     "bonus_b": false,
-    "bonus_c": false,
-    "btc_d_delta7": null,
-    "alt_mom7": -13.75,
-    "breadth_pct": 42.9,
-    "btc_d": 56.168,
-    "others_d": 11.917,
-    "fetched_at_utc": "2026-06-08T07:38:00Z"
+    "bonus_c": true,
+    "fetched_at_utc": "2026-06-08T08:12:28Z",
+    "note": "btc_d_delta7是過渡值(Jun-05基準,3天前);req2 FAIL: alt_mom7=-13.16%"
   }
 ]

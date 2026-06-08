@@ -31,13 +31,13 @@
   },
   {
     "date": "2026-06-08",
-    "btc_d": 56.168,
-    "eth_d": 8.956,
-    "others_d": 11.917,
-    "total3_d": 23.228,
-    "stablecoin_sum": 11.648,
-    "total_mcp_sum": 88.083,
-    "fetched_at_utc": "2026-06-08T07:38:00Z",
-    "source": "makework36/coingecko-scraper (mode=global)"
+    "btc_d": 56.19,
+    "eth_d": 8.95,
+    "others_d": 11.91,
+    "total3_d": 23.23,
+    "stablecoin_sum": 11.63,
+    "total_mcp_sum": 88.087,
+    "fetched_at_utc": "2026-06-08T08:13:03Z",
+    "source": "makework36/coingecko-scraper (mode=global, fresh run 16:10 TPE)"
   }
 ]

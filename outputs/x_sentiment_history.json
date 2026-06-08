@@ -39,18 +39,18 @@
   },
   {
     "date": "2026-06-08",
-    "btc_en": 42.5,
-    "btc_zh": 41.6,
-    "btc_composite": 42.0,
-    "btc_band": "fear",
-    "eth_en": 30.4,
-    "eth_zh": 32.4,
-    "eth_composite": 31.4,
-    "eth_band": "fear",
-    "crypto_en": 40.4,
-    "crypto_zh": 45.8,
-    "overall": 38.9,
-    "source": "Apify kaitoeasyapi, 6 terms x25 (fresh run)",
-    "fetched_at_utc": "2026-06-08T07:38:00Z"
+    "btc_en": 51.1,
+    "btc_zh": 48.3,
+    "eth_en": 52.0,
+    "eth_zh": 54.3,
+    "crypto_en": 50.5,
+    "crypto_zh": 50.0,
+    "btc_composite": 49.7,
+    "btc_band": "neutral",
+    "eth_composite": 53.2,
+    "eth_band": "neutral",
+    "n_tweets": 230,
+    "fetched_at_utc": "2026-06-08T08:12:28Z",
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper (fresh run 16:10 TPE)"
   }
 ]
