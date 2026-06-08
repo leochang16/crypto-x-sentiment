@@ -201,7 +201,7 @@ function renderBrief(d){
     <div class="metric purple"><div class="label">10Y TIPS 實質</div><div class="value med">${fmtNum(m.tips,2,'%')}</div><div class="sub">${m.tips!=null?'<span class="regime-tag r-pressure">實質利率</span>':naTag(null)}</div></div>
   </div>
   <div class="brief-row r2" style="margin-top:12px">
-    <div class="metric warn"><div class="label">BTC ETF 1D 淨流入</div><div class="value med small">${m.etf_flow!=null?(m.etf_flow>0?'+':'')+'$'+Math.abs(m.etf_flow)+'M':(m.etf_flow_last!=null?'$'+m.etf_flow_last+'M':'—')}</div><div class="sub">${m.etf_flow==null?'<span class="regime-tag r-na">前值</span>':''}</div></div>
+    <div class="metric warn"><div class="label">BTC ETF 1D 淨流入</div><div class="value med small">${m.etf_flow!=null?(m.etf_flow<0?'-$':'+$')+Math.abs(m.etf_flow)+'M':(m.etf_flow_last!=null?(m.etf_flow_last<0?'-$':'+$')+Math.abs(m.etf_flow_last)+'M':'—')}</div><div class="sub">${m.etf_flow==null?'<span class="regime-tag r-na">前值</span>':''}</div></div>
     <div class="metric"><div class="label">BTC-NDX 相關</div><div class="value med">${m.ndx_corr_30d!=null?m.ndx_corr_30d.toFixed(2):'—'}</div><div class="sub">${naTag(m.ndx_corr_30d)}</div></div>
   </div>`;
 
