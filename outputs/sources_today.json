@@ -31,13 +31,13 @@
     "fetched_at_utc": "2026-06-08T00:10:00Z"
   },
   "btc_d": {
-    "value": 57.3,
+    "value": 56.14,
     "source": "top-120 proxy (CoinGecko/CoinPaprika blocked)",
     "fetched_at_utc": "2026-06-08T00:10:00Z",
-    "note": "proxy estimate from top-120 market caps"
+    "note": "CoinGecko /global live=56.137% (verified by CI)"
   },
   "eth_d": {
-    "value": 9.2,
+    "value": 9.02,
     "source": "top-120 proxy",
     "fetched_at_utc": "2026-06-08T00:10:00Z"
   },
@@ -47,9 +47,10 @@
     "fetched_at_utc": "2026-06-08T00:10:00Z"
   },
   "others_d": {
-    "value": 8.0,
+    "value": 11.37,
     "source": "top-120 proxy",
-    "fetched_at_utc": "2026-06-08T00:10:00Z"
+    "fetched_at_utc": "2026-06-08T00:10:00Z",
+    "note": "CoinGecko /global live=11.3732% (verified by CI)"
   },
   "total3_d": {
     "value": 18.1,
