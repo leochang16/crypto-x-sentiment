@@ -123,20 +123,14 @@ body { font-family:var(--sans); background:var(--bg); color:var(--text); font-si
 <div class="dashboard">
   <div class="status-bar">
     <div><span class="live">LIVE</span> &nbsp;總經 &amp; 情緒 &nbsp; <span id="hdrDate">—</span></div>
-    <div><span id="tpeClock">—</span> &nbsp; v5.0</div>
+    <div><span id="tpeClock">—</span> &nbsp; v6.0</div>
   </div>
   <div class="hero">
     <h1>總經 &amp; 情緒 <span class="tag">// 每日交易駕駛艙</span></h1>
-    <div class="subtitle">每天 08:30(台北)自動更新 · <span class="accent">早盤總經 + X 情緒 + 小幣框架 + 強勢幣排行</span></div>
-  </div>
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="sentiment" onclick="switchTab('sentiment')">X 情緒 <span class="badge">BTC/ETH</span></button>
-    <button class="tab-btn" data-tab="brief" onclick="switchTab('brief')">早盤總經 <span class="badge">MACRO</span></button>
-    <button class="tab-btn" data-tab="strong" onclick="switchTab('strong')">強勢幣 <span class="badge">TOP 10</span></button>
+    <div class="subtitle">每天 08:30(台北)自動更新 · <span class="accent">X 情緒 + 強勢幣 Top 10</span></div>
   </div>
   <div class="tab-panel active" id="tab-sentiment"><div class="loading">載入中…</div></div>
-  <div class="tab-panel" id="tab-brief"></div>
-  <div class="tab-panel" id="tab-strong"></div>
+  <div class="tab-panel active" id="tab-strong"></div>
   <div class="foot" id="foot">—</div>
 </div>
 
@@ -253,12 +247,11 @@ function renderStrong(d){
     signalLine = `<div class="indicator-explain ${armed?'good':'danger'}">🔔 ${esc(s.c3_entry.join(' / '))} 連 ${s.c3_day||3} 天進 Top 3` + (armed?'，達標可進場':'，但框架 ALT-OFF，記錄觀察不進場') + (s.exits&&s.exits.length?` · ${esc(s.exits.join('/'))} 出場`:'') + `</div>`;
   }
   el.innerHTML =
-    verdictBanner(d) +
     `<div class="card"><div class="head"><div class="title">🏆 今日強勢幣 Top 10</div><div class="meta">${win} 漲幅排序 · CoinGecko via Apify</div></div><div class="coin-grid">${cards}</div>${signalLine}</div>` +
     `<div class="card"><div class="head"><div class="title">📘 策略規則 (SOP)</div><div class="meta">連續 3 天 Top 3 才進場</div></div><div class="sop-grid">
       <div class="sop-box in"><div class="sop-h">✅ 進場</div><div class="sop-b">連續 <b>3 天</b>在 Top 3 → 買入，最多同時持有 5 個</div></div>
       <div class="sop-box out"><div class="sop-h">🚪 出場（任一）</div><div class="sop-b">① 掉出 Top 10<br>② 進場後高點回撤 <b>-20%</b>（高點需先 +5%）<br>③ 進場後 <b>-30%</b> 災難停損</div></div>
-    </div><div class="indicator-explain warn">配置整體資產 5-10% 跑此策略。${win} 為動能視窗（沙箱限制下最接近的真實區間）。</div></div>`;
+    </div><div class="indicator-explain warn">配置整體資產 5-10% 跑此策略。${win} 為動能視窗。</div></div>`;
 }
 
 function renderCharts(hist){
@@ -295,10 +288,9 @@ async function boot(){
   }
   document.getElementById('hdrDate').textContent = (d.date||'')+' ('+(d.weekday||'')+')';
   try { renderSentiment(d); } catch(e){ document.getElementById('tab-sentiment').innerHTML='<div class="alert-banner danger"><span class="big">⚠</span><div>X 情緒分頁渲染失敗</div></div>'; console.error(e); }
-  try { renderBrief(d); } catch(e){ console.error(e); }
   try { renderStrong(d); } catch(e){ console.error(e); }
   try { renderCharts(hist); } catch(e){ console.error(e); }
-  document.getElementById('foot').textContent = '最近更新 '+(d.date||'')+' '+(d.updated_tpe||'')+' TPE · v5.0 資料驅動 · 排程 daily-crypto-x-sentiment';
+  document.getElementById('foot').textContent = '最近更新 '+(d.date||'')+' '+(d.updated_tpe||'')+' TPE · v6.0 資料驅動 · 排程 daily-crypto-x-sentiment';
 }
 boot();
 </script>
