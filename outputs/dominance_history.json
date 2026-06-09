@@ -39,5 +39,17 @@
     "total_mcp_sum": 88.087,
     "fetched_at_utc": "2026-06-08T08:13:03Z",
     "source": "makework36/coingecko-scraper (mode=global, fresh run 16:10 TPE)"
+  },
+  {
+    "date": "2026-06-09",
+    "btc_d": 56.01,
+    "eth_d": 9.06,
+    "others_d": 11.88,
+    "total3_d": 21.6,
+    "stablecoin_sum": 13.33,
+    "total_mcp_sum": 88.12,
+    "btc_d_delta7": -1.99,
+    "fetched_at_utc": "2026-06-09T00:05:30Z",
+    "source": "makework36/coingecko-scraper (mode=global, fresh run)"
   }
 ]

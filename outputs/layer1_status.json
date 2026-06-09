@@ -54,5 +54,18 @@
     "bonus_c": true,
     "fetched_at_utc": "2026-06-08T08:12:28Z",
     "note": "btc_d_delta7是過渡值(Jun-05基準,3天前);req2 FAIL: alt_mom7=-13.16%"
+  },
+  {
+    "date": "2026-06-09",
+    "verdict": "ALT-OFF",
+    "req1": true,
+    "req2": false,
+    "bonus_a": true,
+    "bonus_b": false,
+    "bonus_c": false,
+    "btc_d_delta7": -1.99,
+    "alt_mom7": -13.63,
+    "others_d": 11.88,
+    "source": "benthepythondev/crypto-intelligence + makework36/coingecko-scraper"
   }
 ]
