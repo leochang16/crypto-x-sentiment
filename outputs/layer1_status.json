@@ -60,12 +60,15 @@
     "verdict": "ALT-OFF",
     "req1": true,
     "req2": false,
+    "btc_d": 56.12,
+    "btc_d_delta7": -1.99,
+    "alt_mom7": -14.81,
+    "breadth_pct": 21.4,
     "bonus_a": true,
     "bonus_b": false,
     "bonus_c": false,
-    "btc_d_delta7": -1.99,
-    "alt_mom7": -13.63,
-    "others_d": 11.88,
-    "source": "benthepythondev/crypto-intelligence + makework36/coingecko-scraper"
+    "n_valid": 14,
+    "note": "req1=True(delta7=-1.99pp); req2=False(alt_mom7=-14.81%) → ALT-OFF",
+    "source": "fresh re-run (manual validation) 21D pipeline"
   }
 ]

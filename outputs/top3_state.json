@@ -568,7 +568,7 @@
       "date": "2026-06-09",
       "scan_done": true,
       "regime": "ALT-OFF",
-      "method": "benthepythondev/crypto-intelligence via Apify (30D sort)",
+      "method": "benthepythondev/crypto-intelligence mode=historical days=21 (fresh re-run)",
       "prev_date": "2026-06-08",
       "prev_top3": [
         "beat",
@@ -592,18 +592,30 @@
         "lab",
         "wld"
       ],
-      "top10": [
+      "top10_21d": [
         "beat",
         "lab",
         "wld",
-        "dexe",
         "rain",
+        "dexe",
+        "xlm",
         "hype",
         "near",
         "inj",
-        "xlm",
-        "xdc"
+        "a7a5"
       ],
+      "top10_gains_21d": {
+        "beat": 577.1,
+        "lab": 156.84,
+        "wld": 100.81,
+        "rain": 76.35,
+        "dexe": 58.83,
+        "xlm": 34.85,
+        "hype": 30.56,
+        "near": 28.41,
+        "inj": 7.43,
+        "a7a5": 6.56
+      },
       "c3_coins": [
         "beat",
         "lab"
@@ -613,9 +625,10 @@
         "h"
       ],
       "new_entries": [
-        "xdc"
+        "wld"
       ],
-      "fetched_at_utc": "2026-06-09T00:06:00Z"
+      "notes": "21D window. H exits top3(day5→出場); WLD enters top3(day1). BEAT/LAB c3 Day5. ALT-OFF: req1✓(delta7=-1.99) req2✗(alt_mom7=-14.81%)",
+      "fetched_at_utc": "2026-06-09T03:00:00Z"
     }
   ],
   "last_updated": "2026-06-09"

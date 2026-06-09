@@ -1,7 +1,7 @@
 {
   "date": "2026-06-09",
   "weekday": "週二",
-  "updated_tpe": "08:14",
+  "updated_tpe": "11:00",
   "verdict": "ALT-OFF",
   "verdict_reason_code": "req2_fail",
   "x": {
@@ -15,21 +15,21 @@
       "band": "neutral",
       "delta_1d": -7.7
     },
-    "btc_price": 63059,
-    "btc_price_delta_pct": -0.24,
-    "eth_price": 1689.67,
-    "eth_price_delta_pct": 0.23,
+    "btc_price": 62619,
+    "btc_price_delta_pct": -0.91,
+    "eth_price": 1659.18,
+    "eth_price_delta_pct": -0.66,
     "top_discussions": [
       {
         "title": "BitMine斥$2.14億購入12.7萬枚ETH",
         "tag": "bull"
       },
       {
-        "title": "比特幣ETF 6/8淨流入$8,210萬,13連出終止",
+        "title": "比特幣ETF 6/8淨流入$1.415億,13連出終止",
         "tag": "bull"
       },
       {
-        "title": "比特幣ETF連續大規模流出後情緒逐步修復",
+        "title": "6/10美CPI數據公布(預估年增4.2%),或影響市場情緒",
         "tag": "neutral"
       }
     ]
@@ -37,21 +37,20 @@
   "macro": {
     "vix": 18.92,
     "move": 76.98,
-    "dxy": 100.05,
-    "dxy_last": 100.08,
-    "tips": 2.16,
-    "etf_flow": 82.1,
+    "dxy": 99.96,
+    "tips": 2.19,
+    "etf_flow": 141.5,
     "etf_flow_last": -325.7,
-    "ndx_corr_30d": 0.46
+    "ndx_corr_30d": -0.52
   },
   "dominance": {
-    "btc_d": 56.01,
+    "btc_d": 56.12,
     "btc_d_delta7": -1.99,
-    "others_d": 11.88,
-    "total3_d": 21.6,
-    "ethbtc": 0.0268,
-    "alt_mom7": -13.63,
-    "breadth_pct": 28.57,
+    "others_d": 11.83,
+    "total3_d": 23.19,
+    "ethbtc": 0.0265,
+    "alt_mom7": -14.81,
+    "breadth_pct": 21.4,
     "n_valid": 14,
     "req1": true,
     "req2": false,
@@ -66,19 +65,19 @@
     },
     {
       "sev": "high",
-      "title": "比特幣ETF 6/8淨流入8,210萬,打破13連出"
+      "title": "比特幣ETF 6/8淨流入1.415億,打破13連出"
     },
     {
       "sev": "med",
-      "title": "Strategy加倉1,550 BTC總持倉超12萬枚"
+      "title": "美CPI將於6/10公布,預估年增4.2%(前值3.8%)"
     },
     {
       "sev": "med",
-      "title": "6月10日美CPI數據公布,市場聚焦通脹走勢"
+      "title": "ECB 6/11利率決議預估升至2.25%(前值2.00%)"
     },
     {
       "sev": "med",
-      "title": "BTC從8萬高點暴跌至6.3萬,累計跌幅逾20%"
+      "title": "BTC從8萬高點跌至6.3萬,累計跌幅逾20%"
     }
   ],
   "calendar": {
@@ -86,8 +85,13 @@
     "week": [
       {
         "date": "06-10 週三",
-        "event": "美國5月CPI通脹數據公布",
+        "event": "美國5月CPI通脹數據公布(預估年增4.2%)",
         "tag": "fed"
+      },
+      {
+        "date": "06-11 週四",
+        "event": "ECB利率決議(預估2.25%);美5月PPI公布",
+        "tag": "ecb"
       },
       {
         "date": "06-16 週二",
@@ -102,7 +106,7 @@
     ]
   },
   "strong": {
-    "window": "30D",
+    "window": "21D",
     "c3_entry": [
       "BEAT",
       "LAB"
@@ -115,61 +119,61 @@
       {
         "rank": 1,
         "sym": "BEAT",
-        "ret": 777.26,
+        "ret": 577.1,
         "status": "c3"
       },
       {
         "rank": 2,
         "sym": "LAB",
-        "ret": 149.71,
+        "ret": 156.84,
         "status": "c3"
       },
       {
         "rank": 3,
         "sym": "WLD",
-        "ret": 83.75,
+        "ret": 100.81,
         "status": "up"
       },
       {
         "rank": 4,
-        "sym": "DEXE",
-        "ret": 80.67,
+        "sym": "RAIN",
+        "ret": 76.35,
         "status": "hold"
       },
       {
         "rank": 5,
-        "sym": "RAIN",
-        "ret": 78.55,
+        "sym": "DEXE",
+        "ret": 58.83,
         "status": "hold"
       },
       {
         "rank": 6,
-        "sym": "HYPE",
-        "ret": 48.41,
+        "sym": "XLM",
+        "ret": 34.85,
         "status": "hold"
       },
       {
         "rank": 7,
-        "sym": "NEAR",
-        "ret": 36.34,
+        "sym": "HYPE",
+        "ret": 30.56,
         "status": "hold"
       },
       {
         "rank": 8,
-        "sym": "INJ",
-        "ret": 33.96,
+        "sym": "NEAR",
+        "ret": 28.41,
         "status": "hold"
       },
       {
         "rank": 9,
-        "sym": "XLM",
-        "ret": 24.17,
+        "sym": "INJ",
+        "ret": 7.43,
         "status": "hold"
       },
       {
         "rank": 10,
-        "sym": "XDC",
-        "ret": 3.45,
+        "sym": "A7A5",
+        "ret": 6.56,
         "status": "new"
       }
     ]

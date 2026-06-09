@@ -1,44 +1,28 @@
-AUDIT LOG 2026-06-09 - Fresh Pipeline Run
-===================================
-Time: 2026-06-09T00:04~00:14 UTC (08:04~08:14 TPE)
+=== AUDIT LOG: 2026-06-09 (manual validation re-run) ===
 
-PART A - Twitter Sentiment
-  Actor: kaitoeasyapi/twitter-x-data-tweet-scraper (run 0u6ltAi6aCSXgDA3d)
-  Items: 238 total, 6 terms x ~39 filtered each
-  BTC composite: 50.7 (neutral) [EN=46.9, ZH=54.6]
-  ETH composite: 45.5 (neutral) [EN=46.6, ZH=44.5]
-  Crypto-EN: 60.1 (greed), 加密-ZH: 50.1 (neutral)
+PART A – X Sentiment:
+  btc_score=50.7 (neutral), eth_score=45.5 (neutral)
+  Source: kaitoeasyapi/twitter-x-data-tweet-scraper (00:07 UTC, carried forward)
 
-PART B - Crypto Intelligence Markets
-  Actor: benthepythondev/crypto-intelligence (run QNc2iDStDkTBruDHh)
-  Items: 100 coins, datasetId=s1y8sojvHDgdSKLva
-  BTC: $63059 (-0.24% 24h), ETH: $1689.67 (0.23% 24h)
-  alt_mom7: -13.63%, breadth: 28.57% (4/14 alts beat BTC 7D)
+PART B – Dominance:
+  btc_d=56.12%, eth_d=8.96%, btc_d_delta7=-1.99pp
+  alt_mom7=-14.81% (n_valid=14), breadth_pct=21.4%
 
-PART B - Dominance (Coingecko)
-  Actor: makework36/coingecko-scraper (run 9ys61ddNR1c7OtA3Z)
-  btc_d=56.01%, eth_d=9.06%
-  btc_d_delta7=-1.99pp (Jun-05 base=58.0%, transition value - oldest available)
-  stablecoin_sum=13.33%, others_d=11.88%, total3_d=21.6%
-  ethbtc=0.0268
+PART C – Macro (Yahoo Finance / FRED):
+  VIX=18.92, MOVE=76.98, DXY=99.96, TIPS(DFII10)=2.19% (2026-06-05 latest)
 
-PART C - Macro
-  Yahoo Finance VIX/MOVE/DXY (run AlK1u7QCVtpgIOqjN):
-    VIX=18.92, MOVE=76.98, DXY=100.05
-  TIPS: 2.16% (carry-forward from Jun-05, FRED DFII10 not updated for Jun-08 at fetch time)
-  ETF Flow: farside.co.uk RAG (run DujQPcZNzbgnNFkrX) - Jun-08=82.1M, Jun-05 last=-325.7M
-  NDX Corr 30D: 0.46 (BTC-USD+^NDX 3mo history, 30 pairs Pearson)
+PART D – ETF / Correlation:
+  ETF Jun 8 inflow: +$141.5M (FBTC+BITB+ARKB+MSBT; farside.co.uk)
+  NDX-BTC 30d Pearson corr: -0.52 (19 matched days May11–Jun5)
 
-LAYER 1 v2 VERDICT: ALT-OFF
-  req1 (True): btc_d_delta7=-1.99pp < 0 → PASS
-  req2 (False): alt_mom7=-13.63% > 0% → FAIL
-  bonus_a(True) bonus_b(False) bonus_c(False)
+PART E – 21D Top 10 (benthepythondev/crypto-intelligence mode=historical days=21):
+  Succeeded: beat(577.1%), lab(156.8%), wld(100.8%), rain(76.4%), xlm(34.9%),
+             hype(30.6%), near(28.4%), inj(7.4%), a7a5(6.6%)
+  Retried successfully: dexe(58.8%)
+  xdc fetched: 1.14% (new in today top10 by 30d, rank 11 by 21D)
+  canton-network, blockchain-capital: not re-fetched (below top12 today, not needed)
 
-PART E - Strong Coins
-  Top10 (30D): BEAT(+777%), LAB(+150%), WLD(+84%), DEXE(+81%), RAIN(+79%), HYPE(+48%), NEAR(+36%), INJ(+34%), XLM(+24%), XDC(+3%)
-  c3 active: BEAT+LAB (day 5)
-  Exits: H (dropped below top100)
-  New: XDC
-
-NULL records:
-  - TIPS: carry-forward (FRED not updated yet for Jun-08)
+LAYER 1:
+  req1=True (btc_d_delta7=-1.99pp < 0)
+  req2=False (alt_mom7=-14.81% < 0) → ALT-OFF
+  bonus_a=True, bonus_b=False, bonus_c=False
