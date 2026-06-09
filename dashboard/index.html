@@ -183,8 +183,7 @@ function renderSentiment(d){
     </div>` +
     `<div class="card"><div class="head"><div class="title">情緒分數 vs BTC 價格</div><div class="meta" id="chartMeta"></div></div><div class="chart-wrap"><canvas id="btcChart"></canvas></div></div>` +
     `<div class="card"><div class="head"><div class="title">情緒分數 vs ETH 價格</div><div class="meta">ETH 獨立檢視</div></div><div class="chart-wrap"><canvas id="ethChart"></canvas></div></div>` +
-    (x.top_discussions&&x.top_discussions.length ? `<div class="card"><div class="head"><div class="title">🔥 今日重點討論</div></div>` +
-      x.top_discussions.map((t,i)=>`<div class="news-item"><div class="news-dot ${t.tag==='bear'?'high':'med'}"></div><div><div class="news-title">#${i+1} ${esc(t.title)}</div></div></div>`).join('') + `</div>` : '');
+    '';
 }
 
 function renderBrief(d){
