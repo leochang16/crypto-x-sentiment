@@ -1,104 +1,102 @@
 {
-  "date": "2026-06-08",
-  "weekday": "週一",
-  "updated_tpe": "16:10",
+  "date": "2026-06-09",
+  "weekday": "週二",
+  "updated_tpe": "08:14",
   "verdict": "ALT-OFF",
   "verdict_reason_code": "req2_fail",
   "x": {
     "btc": {
-      "score": 49.7,
+      "score": 50.7,
       "band": "neutral",
-      "delta_1d": 15.5
+      "delta_1d": 1.0
     },
     "eth": {
-      "score": 53.2,
+      "score": 45.5,
       "band": "neutral",
-      "delta_1d": 20.5
+      "delta_1d": -7.7
     },
-    "btc_price": 63193.0,
-    "btc_price_delta_pct": 1.34,
-    "eth_price": 1670.28,
-    "eth_price_delta_pct": 3.54,
+    "btc_price": 63059,
+    "btc_price_delta_pct": -0.24,
+    "eth_price": 1689.67,
+    "eth_price_delta_pct": 0.23,
     "top_discussions": [
       {
-        "title": "比特幣急漲 5% 至 $64,000，市場情緒明顯回溫",
+        "title": "BitMine斥$2.14億購入12.7萬枚ETH",
         "tag": "bull"
       },
       {
-        "title": "美股蒸發逾 1.5 兆美元，加密市場同步受壓後反彈",
-        "tag": "neutral"
+        "title": "比特幣ETF 6/8淨流入$8,210萬,13連出終止",
+        "tag": "bull"
       },
       {
-        "title": "ETH 持有人情緒悲觀，鏈上鯨魚看空以太坊信心",
-        "tag": "bear"
+        "title": "比特幣ETF連續大規模流出後情緒逐步修復",
+        "tag": "neutral"
       }
     ]
   },
   "macro": {
-    "vix": 19.8,
-    "move": 75.2,
-    "dxy": 100.08,
-    "dxy_last": 100.04,
+    "vix": 18.92,
+    "move": 76.98,
+    "dxy": 100.05,
+    "dxy_last": 100.08,
     "tips": 2.16,
-    "etf_flow": -325.7,
-    "etf_flow_last": 3.2,
+    "etf_flow": 82.1,
+    "etf_flow_last": -325.7,
     "ndx_corr_30d": 0.46
   },
   "dominance": {
-    "btc_d": 56.19,
-    "btc_d_delta7": -1.81,
-    "others_d": 11.91,
-    "total3_d": 23.23,
-    "ethbtc": 0.02643,
-    "alt_mom7": -13.16,
-    "breadth_pct": 50.0,
+    "btc_d": 56.01,
+    "btc_d_delta7": -1.99,
+    "others_d": 11.88,
+    "total3_d": 21.6,
+    "ethbtc": 0.0268,
+    "alt_mom7": -13.63,
+    "breadth_pct": 28.57,
     "n_valid": 14,
     "req1": true,
     "req2": false,
     "bonus_a": true,
     "bonus_b": false,
-    "bonus_c": false,
-    "eth_d": 8.95
+    "bonus_c": false
   },
   "news": [
     {
       "sev": "high",
-      "title": "Strategy 賣 BTC 傳言加速 ETF 出流，本週淨出流超 3 億美元"
+      "title": "BitMine斥逾2億美元購入12.7萬枚ETH"
     },
     {
       "sev": "high",
-      "title": "美伊衝突衝擊通膨預期，聯準會降息時間表再推後"
+      "title": "比特幣ETF 6/8淨流入8,210萬,打破13連出"
     },
     {
       "sev": "med",
-      "title": "美大型銀行推出代幣化存款，正面競逐穩定幣市場"
+      "title": "Strategy加倉1,550 BTC總持倉超12萬枚"
     },
     {
       "sev": "med",
-      "title": "CFTC 批准 Coinbase 加密永續合約，衍生品市場版圖擴大"
+      "title": "6月10日美CPI數據公布,市場聚焦通脹走勢"
     },
     {
       "sev": "med",
-      "title": "加密總市值自高點蒸發 48%，ETH 鑄新低後今日反彈 3.5%"
+      "title": "BTC從8萬高點暴跌至6.3萬,累計跌幅逾20%"
     }
   ],
   "calendar": {
-    "today": [
-      {
-        "time": "全天",
-        "event": "Ethereum 開發者大會 NYC Day 2（6/8-10）",
-        "tag": "crypto"
-      }
-    ],
+    "today": [],
     "week": [
       {
         "date": "06-10 週三",
-        "event": "美國 5 月 CPI 通膨數據公布",
+        "event": "美國5月CPI通脹數據公布",
         "tag": "fed"
       },
       {
         "date": "06-16 週二",
-        "event": "FOMC 利率決議",
+        "event": "FOMC利率決議(含點陣圖)首日",
+        "tag": "fed"
+      },
+      {
+        "date": "06-17 週三",
+        "event": "FOMC利率決議公布",
         "tag": "fed"
       }
     ]
@@ -107,73 +105,72 @@
     "window": "30D",
     "c3_entry": [
       "BEAT",
-      "H",
       "LAB"
     ],
     "c3_day": 5,
     "exits": [
-      "VVV"
+      "H"
     ],
     "top10": [
       {
         "rank": 1,
         "sym": "BEAT",
-        "ret": 721.5,
+        "ret": 777.26,
         "status": "c3"
       },
       {
         "rank": 2,
-        "sym": "H",
-        "ret": 250.7,
+        "sym": "LAB",
+        "ret": 149.71,
         "status": "c3"
       },
       {
         "rank": 3,
-        "sym": "LAB",
-        "ret": 201.7,
-        "status": "c3"
+        "sym": "WLD",
+        "ret": 83.75,
+        "status": "up"
       },
       {
         "rank": 4,
         "sym": "DEXE",
-        "ret": 83.5,
+        "ret": 80.67,
         "status": "hold"
       },
       {
         "rank": 5,
         "sym": "RAIN",
-        "ret": 76.6,
+        "ret": 78.55,
         "status": "hold"
       },
       {
         "rank": 6,
-        "sym": "WLD",
-        "ret": 72.6,
+        "sym": "HYPE",
+        "ret": 48.41,
         "status": "hold"
       },
       {
         "rank": 7,
-        "sym": "HYPE",
-        "ret": 43.1,
+        "sym": "NEAR",
+        "ret": 36.34,
         "status": "hold"
       },
       {
         "rank": 8,
-        "sym": "NEAR",
-        "ret": 35.5,
-        "status": "reenter"
+        "sym": "INJ",
+        "ret": 33.96,
+        "status": "hold"
       },
       {
         "rank": 9,
-        "sym": "INJ",
-        "ret": 30.2,
+        "sym": "XLM",
+        "ret": 24.17,
         "status": "hold"
       },
       {
         "rank": 10,
-        "sym": "XLM",
-        "ret": 22.6,
-        "status": "hold"
+        "sym": "XDC",
+        "ret": 3.45,
+        "status": "new"
       }
     ]
   }

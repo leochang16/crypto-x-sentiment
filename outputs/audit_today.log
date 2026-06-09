@@ -1,48 +1,44 @@
-=== AUDIT LOG 2026-06-08 fresh PM run (16:10 TPE / 2026-06-08T08:14:01Z) ===
+AUDIT LOG 2026-06-09 - Fresh Pipeline Run
+===================================
+Time: 2026-06-09T00:04~00:14 UTC (08:04~08:14 TPE)
 
-PART A — Twitter X Sentiment
-  Actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
-  Terms: 6 x 25 maxItems, queryType=Top
-  Results: 235 raw tweets, ~230 valid after spam filter
-  BTC-EN: 51.1 (neutral, n=37) | BTC-ZH: 48.3 (neutral, n=39)
-  ETH-EN: 52.0 (neutral, n=37) | ETH-ZH: 54.3 (neutral, n=40)
-  CRYPTO-EN: 50.5 (n=39) | 加密-ZH: 50.0 (n=38)
-  BTC composite: 49.7 (neutral) Δ+15.5 vs Jun-07
-  ETH composite: 53.2 (neutral) Δ+20.5 vs Jun-07
+PART A - Twitter Sentiment
+  Actor: kaitoeasyapi/twitter-x-data-tweet-scraper (run 0u6ltAi6aCSXgDA3d)
+  Items: 238 total, 6 terms x ~39 filtered each
+  BTC composite: 50.7 (neutral) [EN=46.9, ZH=54.6]
+  ETH composite: 45.5 (neutral) [EN=46.6, ZH=44.5]
+  Crypto-EN: 60.1 (greed), 加密-ZH: 50.1 (neutral)
 
-PART B — Dominance + Markets
-  B-0 Actor: benthepythondev/crypto-intelligence markets 100 coins
-  B-1 Actor: makework36/coingecko-scraper mode=global
-  btc_price=$63,193 | eth_price=$1,670.28 | ethbtc=0.02643
-  btc_d=56.19% | eth_d=8.95% | stablecoin_sum=11.63%
-  others_d=11.91% | total3_d=23.23%
-  BUG FIX: Initial Python script used USDC value twice instead of BNB.
-           Corrected from others_d=15.48 to others_d=11.91.
-  btc_d_delta7=-1.81pp (TRANSITION VALUE: Jun-05 baseline 58.0%, 3 days back)
-  alt_mom7=-13.16% (14 alts, n_valid=14)
-  breadth_pct=50.0% (7/14 alts beating BTC 7d of -13.10%)
-  Layer1 verdict: ALT-OFF (req1=TRUE req2=FALSE bonus_a=TRUE bonus_b=FALSE bonus_c=FALSE)
+PART B - Crypto Intelligence Markets
+  Actor: benthepythondev/crypto-intelligence (run QNc2iDStDkTBruDHh)
+  Items: 100 coins, datasetId=s1y8sojvHDgdSKLva
+  BTC: $63059 (-0.24% 24h), ETH: $1689.67 (0.23% 24h)
+  alt_mom7: -13.63%, breadth: 28.57% (4/14 alts beat BTC 7D)
 
-PART C — Macro
-  Yahoo Finance (VIX/MOVE/DXY): 
-    ^VIX=19.80 | ^MOVE=75.20 | DX-Y.NYB=100.08
-  TIPS (DFII10): WebSearch returned no numeric value. RAG-browser on fred.stlouisfed.org/data/DFII10 returned 0 items.
-    → USING CARRY-FORWARD 2.16% (from Jun-05 FRED DFII10 data, last known value)
-  ETF Flow: farside.co.uk/btc/ scraped via RAG-browser
-    → Jun-05 Total = -325.7M (latest published row)
-    → Jun-04 Total = +3.2M (etf_flow_last)
-  ndx_corr_30d: Pearson correlation BTC-USD vs ^NDX
-    → 30 trading days: 2026-04-24 to 2026-06-05 (NDX data ends Jun-05)
-    → Correlation = 0.46
+PART B - Dominance (Coingecko)
+  Actor: makework36/coingecko-scraper (run 9ys61ddNR1c7OtA3Z)
+  btc_d=56.01%, eth_d=9.06%
+  btc_d_delta7=-1.99pp (Jun-05 base=58.0%, transition value - oldest available)
+  stablecoin_sum=13.33%, others_d=11.88%, total3_d=21.6%
+  ethbtc=0.0268
 
-PART E — Top 10 30D
-  Source: benthepythondev/crypto-intelligence (B-0, same call, no re-fetch)
-  Top 10: beat(+721.5%) h(+250.7%) lab(+201.7%) dexe(+83.5%) rain(+76.6%)
-          wld(+72.6%) hype(+43.1%) near(+35.5%) inj(+30.2%) xlm(+22.6%)
-  c3: BEAT+H+LAB Day5 (continuously in Top3 since Jun-05)
-  Exits vs Jun-07: VVV
-  New vs Jun-07: NEAR (reenter)
-  Note: 9BIT was in morning run top10 but dropped from top-100 by PM run; not in result.
+PART C - Macro
+  Yahoo Finance VIX/MOVE/DXY (run AlK1u7QCVtpgIOqjN):
+    VIX=18.92, MOVE=76.98, DXY=100.05
+  TIPS: 2.16% (carry-forward from Jun-05, FRED DFII10 not updated for Jun-08 at fetch time)
+  ETF Flow: farside.co.uk RAG (run DujQPcZNzbgnNFkrX) - Jun-08=82.1M, Jun-05 last=-325.7M
+  NDX Corr 30D: 0.46 (BTC-USD+^NDX 3mo history, 30 pairs Pearson)
 
-NULL VALUES:
-  - etf_flow_last_prev: null (previous today.json had null)
+LAYER 1 v2 VERDICT: ALT-OFF
+  req1 (True): btc_d_delta7=-1.99pp < 0 → PASS
+  req2 (False): alt_mom7=-13.63% > 0% → FAIL
+  bonus_a(True) bonus_b(False) bonus_c(False)
+
+PART E - Strong Coins
+  Top10 (30D): BEAT(+777%), LAB(+150%), WLD(+84%), DEXE(+81%), RAIN(+79%), HYPE(+48%), NEAR(+36%), INJ(+34%), XLM(+24%), XDC(+3%)
+  c3 active: BEAT+LAB (day 5)
+  Exits: H (dropped below top100)
+  New: XDC
+
+NULL records:
+  - TIPS: carry-forward (FRED not updated yet for Jun-08)

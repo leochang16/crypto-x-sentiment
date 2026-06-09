@@ -52,5 +52,14 @@
     "n_tweets": 230,
     "fetched_at_utc": "2026-06-08T08:12:28Z",
     "source": "kaitoeasyapi/twitter-x-data-tweet-scraper (fresh run 16:10 TPE)"
+  },
+  {
+    "date": "2026-06-09",
+    "btc_score": 50.7,
+    "btc_band": "neutral",
+    "eth_score": 45.5,
+    "eth_band": "neutral",
+    "fetched_at_utc": "2026-06-09T00:07:00Z",
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 25"
   }
 ]
