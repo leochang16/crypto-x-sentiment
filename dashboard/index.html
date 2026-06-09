@@ -127,9 +127,10 @@ body { font-family:var(--sans); background:var(--bg); color:var(--text); font-si
   </div>
   <div class="hero">
     <h1>總經 &amp; 情緒 <span class="tag">// 每日交易駕駛艙</span></h1>
-    <div class="subtitle">每天 08:30(台北)自動更新 · <span class="accent">X 情緒 + 強勢幣 Top 10</span></div>
+    <div class="subtitle">每天 08:30(台北)自動更新 · <span class="accent">早盤總經 + X 情緒 + 小幣框架 + 強勢幣 Top 10</span></div>
   </div>
   <div class="tab-panel active" id="tab-sentiment"><div class="loading">載入中…</div></div>
+  <div class="tab-panel active" id="tab-brief"></div>
   <div class="tab-panel active" id="tab-strong"></div>
   <div class="foot" id="foot">—</div>
 </div>
@@ -175,8 +176,6 @@ function renderSentiment(d){
       <div class="metric accent"><div class="label">BTC 價</div><div class="value med">${x.btc_price!=null?'$'+(x.btc_price/1000).toFixed(2)+'k':'—'}</div><div class="sub">${fmtPct(x.btc_price_delta_pct)}</div></div>
       <div class="metric purple"><div class="label">ETH 價</div><div class="value med">${x.eth_price!=null?'$'+x.eth_price.toLocaleString():'—'}</div><div class="sub">${fmtPct(x.eth_price_delta_pct)}</div></div>
     </div>` +
-    `<div class="card"><div class="head"><div class="title">情緒分數 vs BTC 價格</div><div class="meta" id="chartMeta"></div></div><div class="chart-wrap"><canvas id="btcChart"></canvas></div></div>` +
-    `<div class="card"><div class="head"><div class="title">情緒分數 vs ETH 價格</div><div class="meta">ETH 獨立檢視</div></div><div class="chart-wrap"><canvas id="ethChart"></canvas></div></div>` +
     '';
 }
 
@@ -227,7 +226,6 @@ function renderBrief(d){
   const calWeek = (cal.week||[]).map(e=>`<div class="cal-day"><div class="cal-day-header"><span class="cal-day-date">${esc(e.date)}</span></div><div class="cal-event"><div class="cal-event-time">—</div><div class="cal-event-content">${esc(e.event)} ${e.tag?`<span class="cal-event-tag ${e.tag}">${e.tag.toUpperCase()}</span>`:''}</div></div></div>`).join('');
 
   el.innerHTML =
-    verdictBanner(d) +
     `<div class="card"><div class="head"><div class="title">🌐 整體市場資金面</div><div class="meta">macro / risk</div></div>${macroCards}</div>` +
     `<div class="card"><div class="head"><div class="title">🎯 小幣框架 (Layer 1 v2)</div><div class="meta">2 必要 + 3 加分</div></div>${domCards}
       <div class="section-label req">必要條件（2 全過 = ALT-ON，任一 fail = ALT-OFF）</div><div class="layer1-grid">${condHtml(reqRows)}</div>
@@ -289,7 +287,7 @@ async function boot(){
   document.getElementById('hdrDate').textContent = (d.date||'')+' ('+(d.weekday||'')+')';
   try { renderSentiment(d); } catch(e){ document.getElementById('tab-sentiment').innerHTML='<div class="alert-banner danger"><span class="big">⚠</span><div>X 情緒分頁渲染失敗</div></div>'; console.error(e); }
   try { renderStrong(d); } catch(e){ console.error(e); }
-  try { renderCharts(hist); } catch(e){ console.error(e); }
+  try { renderBrief(d); } catch(e){ console.error(e); }
   document.getElementById('foot').textContent = '最近更新 '+(d.date||'')+' '+(d.updated_tpe||'')+' TPE · v6.0 資料驅動 · 排程 daily-crypto-x-sentiment';
 }
 boot();
