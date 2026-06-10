@@ -70,5 +70,21 @@
     "n_valid": 14,
     "note": "req1=True(delta7=-1.99pp); req2=False(alt_mom7=-14.81%) → ALT-OFF",
     "source": "fresh re-run (manual validation) 21D pipeline"
+  },
+  {
+    "date": "2026-06-10",
+    "verdict": "ALT-OFF",
+    "req1": true,
+    "req2": false,
+    "btc_d": 55.9,
+    "btc_d_delta7": -2.1,
+    "alt_mom7": -11.95,
+    "breadth_pct": 28.57,
+    "bonus_a": true,
+    "bonus_b": false,
+    "bonus_c": false,
+    "n_valid": 14,
+    "fetched_at_utc": "2026-06-10T00:11:43Z",
+    "note": "req1=True(delta7=-2.10pp); req2=False(alt_mom7=-11.95%) → ALT-OFF; delta7是過渡值(Jun-05基準,5天前)"
   }
 ]

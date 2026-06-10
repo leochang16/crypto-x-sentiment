@@ -51,5 +51,17 @@
     "breadth_pct": 21.4,
     "fetched_at_utc": "2026-06-09T03:00:00Z",
     "source": "benthepythondev/crypto-intelligence + makework36/coingecko-scraper (fresh re-run)"
+  },
+  {
+    "date": "2026-06-10",
+    "btc_d": 55.9,
+    "eth_d": 8.78,
+    "others_d": 11.86,
+    "total3_d": 21.56,
+    "btc_d_delta7": -2.1,
+    "alt_mom7": -11.95,
+    "breadth_pct": 28.57,
+    "fetched_at_utc": "2026-06-10T00:11:43Z",
+    "source": "benthepythondev/crypto-intelligence + makework36/coingecko-scraper"
   }
 ]

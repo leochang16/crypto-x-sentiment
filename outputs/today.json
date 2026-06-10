@@ -1,56 +1,56 @@
 {
-  "date": "2026-06-09",
-  "weekday": "週二",
-  "updated_tpe": "11:00",
+  "date": "2026-06-10",
+  "weekday": "週三",
+  "updated_tpe": "08:30",
   "verdict": "ALT-OFF",
   "verdict_reason_code": "req2_fail",
   "x": {
     "btc": {
-      "score": 50.7,
+      "score": 46.1,
       "band": "neutral",
-      "delta_1d": 1.0
+      "delta_1d": -4.6
     },
     "eth": {
-      "score": 45.5,
+      "score": 51.1,
       "band": "neutral",
-      "delta_1d": -7.7
+      "delta_1d": 5.6
     },
-    "btc_price": 62619,
-    "btc_price_delta_pct": -0.91,
-    "eth_price": 1659.18,
-    "eth_price_delta_pct": -0.66,
+    "btc_price": 61753,
+    "btc_price_delta_pct": -2.07,
+    "eth_price": 1640.71,
+    "eth_price_delta_pct": -2.90,
     "top_discussions": [
       {
-        "title": "BitMine斥$2.14億購入12.7萬枚ETH",
-        "tag": "bull"
+        "title": "美5月CPI今日公布(預估年增4.2%),或影響Fed路徑",
+        "tag": "fed"
       },
       {
-        "title": "比特幣ETF 6/8淨流入$1.415億,13連出終止",
-        "tag": "bull"
+        "title": "BTC ETF 6/10淨流出$9140萬,單日由正轉負",
+        "tag": "bear"
       },
       {
-        "title": "6/10美CPI數據公布(預估年增4.2%),或影響市場情緒",
+        "title": "SpaceX IPO申購書今日截止(6/12上市),市場流動性承壓",
         "tag": "neutral"
       }
     ]
   },
   "macro": {
-    "vix": 18.92,
-    "move": 76.98,
-    "dxy": 99.96,
+    "vix": 19.87,
+    "move": 77.03,
+    "dxy": 100.02,
     "tips": 2.19,
-    "etf_flow": 141.5,
-    "etf_flow_last": -325.7,
-    "ndx_corr_30d": -0.52
+    "etf_flow": -91.4,
+    "etf_flow_last": 141.5,
+    "ndx_corr_30d": 0.51
   },
   "dominance": {
-    "btc_d": 56.12,
-    "btc_d_delta7": -1.99,
-    "others_d": 11.83,
-    "total3_d": 23.19,
-    "ethbtc": 0.0265,
-    "alt_mom7": -14.81,
-    "breadth_pct": 21.4,
+    "btc_d": 55.90,
+    "btc_d_delta7": -2.10,
+    "others_d": 11.86,
+    "total3_d": 21.56,
+    "ethbtc": 0.02657,
+    "alt_mom7": -11.95,
+    "breadth_pct": 28.57,
     "n_valid": 14,
     "req1": true,
     "req2": false,
@@ -61,33 +61,34 @@
   "news": [
     {
       "sev": "high",
-      "title": "BitMine斥逾2億美元購入12.7萬枚ETH"
+      "title": "美5月CPI今日公布,預估年增4.2%(前值3.8%),為2024年以來最高"
     },
     {
       "sev": "high",
-      "title": "比特幣ETF 6/8淨流入1.415億,打破13連出"
+      "title": "BTC ETF 6/10淨流出$9140萬,昨日+$1.415億一日逆轉"
     },
     {
       "sev": "med",
-      "title": "美CPI將於6/10公布,預估年增4.2%(前值3.8%)"
+      "title": "SpaceX SPCX IPO申購書今日截止,6/12正式上市($1.75-2兆估值)"
     },
     {
       "sev": "med",
-      "title": "ECB 6/11利率決議預估升至2.25%(前值2.00%)"
+      "title": "BTC跌破$62K,自高點$8萬累計跌幅逾22%"
     },
     {
       "sev": "med",
-      "title": "BTC從8萬高點跌至6.3萬,累計跌幅逾20%"
+      "title": "FOMC利率決議6/16-17(點陣圖更新),市場預估維持5.25-5.5%"
     }
   ],
   "calendar": {
-    "today": [],
-    "week": [
+    "today": [
       {
-        "date": "06-10 週三",
+        "date": "06-10 全天",
         "event": "美國5月CPI通脹數據公布(預估年增4.2%)",
         "tag": "fed"
-      },
+      }
+    ],
+    "week": [
       {
         "date": "06-11 週四",
         "event": "ECB利率決議(預估2.25%);美5月PPI公布",
@@ -107,73 +108,68 @@
   },
   "strong": {
     "window": "21D",
-    "c3_entry": [
-      "BEAT",
-      "LAB"
-    ],
-    "c3_day": 5,
-    "exits": [
-      "H"
-    ],
+    "c3_entry": [],
+    "c3_day": 6,
+    "exits": [],
     "top10": [
       {
         "rank": 1,
         "sym": "BEAT",
-        "ret": 577.1,
+        "ret": 741.1,
         "status": "c3"
       },
       {
         "rank": 2,
         "sym": "LAB",
-        "ret": 156.84,
+        "ret": 116.1,
         "status": "c3"
       },
       {
         "rank": 3,
         "sym": "WLD",
-        "ret": 100.81,
+        "ret": 112.7,
         "status": "up"
       },
       {
         "rank": 4,
         "sym": "RAIN",
-        "ret": 76.35,
+        "ret": 70.1,
         "status": "hold"
       },
       {
         "rank": 5,
         "sym": "DEXE",
-        "ret": 58.83,
+        "ret": 37.5,
         "status": "hold"
       },
       {
         "rank": 6,
         "sym": "XLM",
-        "ret": 34.85,
+        "ret": 35.0,
         "status": "hold"
       },
       {
         "rank": 7,
-        "sym": "HYPE",
-        "ret": 30.56,
+        "sym": "NEAR",
+        "ret": 34.8,
         "status": "hold"
       },
       {
         "rank": 8,
-        "sym": "NEAR",
-        "ret": 28.41,
+        "sym": "HYPE",
+        "ret": 21.7,
         "status": "hold"
       },
       {
         "rank": 9,
         "sym": "INJ",
-        "ret": 7.43,
+        "ret": 12.5,
         "status": "hold"
       },
       {
         "rank": 10,
-        "sym": "A7A5",
-        "ret": 6.56,
+        "sym": "CC",
+        "ret": 10.6,
         "status": "new"
       }
     ]

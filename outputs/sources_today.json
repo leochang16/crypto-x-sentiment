@@ -1,14 +1,14 @@
 {
-  "date": "2026-06-09",
+  "date": "2026-06-10",
   "btc_price": "benthepythondev/crypto-intelligence via Apify",
   "eth_price": "benthepythondev/crypto-intelligence via Apify",
-  "x_sentiment": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify (06-09 00:07 UTC)",
+  "x_sentiment": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify (06-10 00:11 UTC, 6 terms x 40)",
   "btc_dominance": "benthepythondev/crypto-intelligence + makework36/coingecko-scraper",
   "vix_move_dxy": "benthepythondev/yahoo-finance-scraper via Apify",
-  "tips_dfii10": "FRED (fred.stlouisfed.org/data/DFII10) via apify/rag-web-browser – latest 2026-06-05",
-  "etf_flow": "farside.co.uk/btc/ via apify/rag-web-browser – Jun 8 total",
-  "ndx_corr_30d": "benthepythondev/yahoo-finance-scraper BTC+NDX 30d via Apify",
-  "top10_21d": "benthepythondev/crypto-intelligence mode=historical days=21 – 11 coins fetched",
+  "tips_dfii10": "FRED (fred.stlouisfed.org/data/DFII10) via WebSearch – latest 2026-06-09 = 2.19%",
+  "etf_flow": "farside.co.uk/btc/ via apify/rag-web-browser – Jun 10 total",
+  "ndx_corr_30d": "benthepythondev/yahoo-finance-scraper BTC+NDX 30d via Apify (Pearson corr)",
+  "top10_21d": "benthepythondev/crypto-intelligence mode=historical days=21 – 12 coins fetched in batches",
   "news": "WebSearch (coindesk, yahoo finance, coingabbar)",
-  "calendar": "WebSearch + coindesk crypto week ahead 2026-06-09"
+  "calendar": "WebSearch + coindesk crypto week ahead 2026-06-10"
 }

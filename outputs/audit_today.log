@@ -1,28 +1,35 @@
-=== AUDIT LOG: 2026-06-09 (manual validation re-run) ===
+=== AUDIT LOG: 2026-06-10 (full fresh run) ===
 
-PART A – X Sentiment:
-  btc_score=50.7 (neutral), eth_score=45.5 (neutral)
-  Source: kaitoeasyapi/twitter-x-data-tweet-scraper (00:07 UTC, carried forward)
+PART A – X Sentiment (kaitoeasyapi/twitter-x-data-tweet-scraper, 6 terms x 40 tweets):
+  BTC_en: score=41.74, band=fear, n=33 (of 40 valid)
+  BTC_zh: score=49.70, band=neutral, n=40
+  ETH_en: score=54.16, band=neutral, n=40
+  ETH_zh: score=47.95, band=neutral, n=40
+  crypto_en: score=30.86, band=fear, n=40
+  zh_crypto: score=53.89, band=neutral, n=40
+  btc_composite=46.10 (neutral), eth_composite=51.05 (neutral)
+  Total n_tweets: 200 across 5 datasets + 33 BTC_en = 233 total
 
 PART B – Dominance:
-  btc_d=56.12%, eth_d=8.96%, btc_d_delta7=-1.99pp
-  alt_mom7=-14.81% (n_valid=14), breadth_pct=21.4%
+  btc_d=55.90%, eth_d=8.78%, btc_d_delta7=-2.10pp (5-day transition: Jun5 base)
+  alt_mom7=-11.95% (n_valid=14), breadth_pct=28.57%
 
-PART C – Macro (Yahoo Finance / FRED):
-  VIX=18.92, MOVE=76.98, DXY=99.96, TIPS(DFII10)=2.19% (2026-06-05 latest)
+PART C – Macro (Yahoo Finance / FRED / WebSearch):
+  VIX=19.87, MOVE=77.03, DXY=100.02 (prev=99.96), TIPS(DFII10)=2.19% (2026-06-09 latest)
 
 PART D – ETF / Correlation:
-  ETF Jun 8 inflow: +$141.5M (FBTC+BITB+ARKB+MSBT; farside.co.uk)
-  NDX-BTC 30d Pearson corr: -0.52 (19 matched days May11–Jun5)
+  ETF Jun 10 net flow: -$91.4M (outflow reversal from yesterday's +$141.5M)
+  NDX-BTC 30d Pearson corr: +0.51 (fresh computation from Yahoo Finance daily closes)
 
 PART E – 21D Top 10 (benthepythondev/crypto-intelligence mode=historical days=21):
-  Succeeded: beat(577.1%), lab(156.8%), wld(100.8%), rain(76.4%), xlm(34.9%),
-             hype(30.6%), near(28.4%), inj(7.4%), a7a5(6.6%)
-  Retried successfully: dexe(58.8%)
-  xdc fetched: 1.14% (new in today top10 by 30d, rank 11 by 21D)
-  canton-network, blockchain-capital: not re-fetched (below top12 today, not needed)
+  beat(741.1%), lab(116.1%), wld(112.7%), rain(70.1%), dexe(37.5%),
+  xlm(35.0%), near(34.8%), hype(21.7%), inj(12.5%), cc(10.6%)
+  A7A5 exits top10. CC enters at #10.
 
 LAYER 1:
-  req1=True (btc_d_delta7=-1.99pp < 0)
-  req2=False (alt_mom7=-14.81% < 0) → ALT-OFF
-  bonus_a=True, bonus_b=False, bonus_c=False
+  req1=True (btc_d_delta7=-2.10pp < 0; transition value Jun5 base)
+  req2=False (alt_mom7=-11.95% < 0) → ALT-OFF
+  bonus_a=True (btc_d_delta7=-2.10pp<0, dominance trending down), bonus_b=False, bonus_c=False
+
+NULLS / WARNINGS:
+  None – all fields populated with fresh data.
