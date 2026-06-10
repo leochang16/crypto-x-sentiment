@@ -1,14 +1,14 @@
 === AUDIT LOG: 2026-06-10 (full fresh run) ===
 
 PART A – X Sentiment (kaitoeasyapi/twitter-x-data-tweet-scraper, 6 terms x 40 tweets):
-  BTC_en: score=41.74, band=fear, n=33 (of 40 valid)
-  BTC_zh: score=49.70, band=neutral, n=40
-  ETH_en: score=54.16, band=neutral, n=40
-  ETH_zh: score=47.95, band=neutral, n=40
-  crypto_en: score=30.86, band=fear, n=40
-  zh_crypto: score=53.89, band=neutral, n=40
-  btc_composite=46.10 (neutral), eth_composite=51.05 (neutral)
-  Total n_tweets: 200 across 5 datasets + 33 BTC_en = 233 total
+  BTC_en: score=41.74, band=fear, n=33
+  BTC_zh: score=44.3, band=fear, n=38 [LLM-corrected]
+  ETH_en: score=37.4, band=fear, n=38 [LLM-corrected]
+  ETH_zh: score=40.2, band=fear, n=38 [LLM-corrected]
+  crypto_en: score=47.6, band=neutral, n=38 [LLM-corrected]
+  zh_crypto: score=50.6, band=neutral, n=39 [LLM-corrected]
+  btc_composite=43.11 (fear), eth_composite=38.80 (fear)
+  NOTE: Scores corrected after background agent LLM-based analysis completed
 
 PART B – Dominance:
   btc_d=55.90%, eth_d=8.78%, btc_d_delta7=-2.10pp (5-day transition: Jun5 base)

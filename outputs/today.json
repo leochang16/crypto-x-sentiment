@@ -6,19 +6,19 @@
   "verdict_reason_code": "req2_fail",
   "x": {
     "btc": {
-      "score": 46.1,
-      "band": "neutral",
-      "delta_1d": -4.6
+      "score": 43.1,
+      "band": "fear",
+      "delta_1d": -7.6
     },
     "eth": {
-      "score": 51.1,
-      "band": "neutral",
-      "delta_1d": 5.6
+      "score": 38.8,
+      "band": "fear",
+      "delta_1d": -6.7
     },
     "btc_price": 61753,
     "btc_price_delta_pct": -2.07,
     "eth_price": 1640.71,
-    "eth_price_delta_pct": -2.90,
+    "eth_price_delta_pct": -2.9,
     "top_discussions": [
       {
         "title": "美5月CPI今日公布(預估年增4.2%),或影響Fed路徑",
@@ -44,8 +44,8 @@
     "ndx_corr_30d": 0.51
   },
   "dominance": {
-    "btc_d": 55.90,
-    "btc_d_delta7": -2.10,
+    "btc_d": 55.9,
+    "btc_d_delta7": -2.1,
     "others_d": 11.86,
     "total3_d": 21.56,
     "ethbtc": 0.02657,

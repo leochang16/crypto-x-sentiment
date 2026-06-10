@@ -65,17 +65,18 @@
   {
     "date": "2026-06-10",
     "btc_en": 41.74,
-    "btc_zh": 49.7,
-    "btc_composite": 46.1,
-    "btc_band": "neutral",
-    "eth_en": 54.16,
-    "eth_zh": 47.95,
-    "eth_composite": 51.05,
-    "eth_band": "neutral",
-    "crypto_en": 30.86,
-    "zh_crypto": 53.89,
+    "btc_zh": 44.3,
+    "btc_composite": 43.11,
+    "btc_band": "fear",
+    "eth_en": 37.4,
+    "eth_zh": 40.2,
+    "eth_composite": 38.8,
+    "eth_band": "fear",
+    "crypto_en": 47.6,
+    "zh_crypto": 50.6,
     "n_tweets": 200,
     "fetched_at_utc": "2026-06-10T00:11:43Z",
-    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 40"
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 40",
+    "method": "LLM-based (kaitoeasyapi via Apify + Claude scoring)"
   }
 ]
