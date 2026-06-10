@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>總經 & 情緒</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
 <style>
 :root { color-scheme: light; --bg:#0e1116; --surface:#161a21; --surface-2:#1c2128; --border:#2a2f38; --border-bright:#3a4150; --btc:#f7931a; --eth:#6a7fff; --price:#00d4ff; --text:#e6e6e6; --text-mid:#b5bac4; --text-dim:#8b95a3; --text-faint:#5d6675; --success:#4ade80; --warn:#f59e0b; --danger:#ef4444; --accent:#5dadec; --purple:#a78bfa; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace; }
 * { box-sizing:border-box; margin:0; padding:0; }
@@ -123,11 +122,11 @@ body { font-family:var(--sans); background:var(--bg); color:var(--text); font-si
 <div class="dashboard">
   <div class="status-bar">
     <div><span class="live">LIVE</span> &nbsp;總經 &amp; 情緒 &nbsp; <span id="hdrDate">—</span></div>
-    <div><span id="tpeClock">—</span> &nbsp; v6.0</div>
+    <div><span id="tpeClock">—</span> &nbsp; v6.1</div>
   </div>
   <div class="hero">
     <h1>總經 &amp; 情緒 <span class="tag">// 每日交易駕駛艙</span></h1>
-    <div class="subtitle">每天 08:30(台北)自動更新 · <span class="accent">早盤總經 + X 情緒 + 小幣框架 + 強勢幣 Top 10</span></div>
+    <div class="subtitle">每天 08:00(台北)自動更新 · <span class="accent">早盤總經 + X 情緒 + 小幣框架 + 強勢幣 Top 10</span></div>
   </div>
   <div class="tab-panel active" id="tab-sentiment"><div class="loading">載入中…</div></div>
   <div class="tab-panel active" id="tab-brief"></div>
@@ -151,15 +150,24 @@ const esc = s => String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt
 function tickClock(){ const d=new Date(); const t=new Date(d.getTime()+(d.getTimezoneOffset()+480)*60000); document.getElementById('tpeClock').textContent='TPE '+String(t.getHours()).padStart(2,'0')+':'+String(t.getMinutes()).padStart(2,'0'); }
 function switchTab(n){ document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===n)); document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.id==='tab-'+n)); }
 
+function c3List(d){
+  const s = d.strong || {};
+  const fromStatus = (s.top10||[]).filter(c=>c.status==='c3').map(c=>c.sym);
+  return fromStatus.length ? fromStatus : (s.c3_entry||[]);
+}
 function verdictBanner(d){
   const v = VERDICT[d.verdict] || VERDICT['ALT-OFF'];
   const s = d.strong || {};
+  const c3 = c3List(d);
   let c3line = '';
-  if (s.c3_entry && s.c3_entry.length){
+  if (c3.length){
     const armed = (d.verdict !== 'ALT-OFF');
-    c3line = ` &nbsp;·&nbsp; 🔔 ${esc(s.c3_entry.join('+'))} 連 ${s.c3_day||3} 天` + (armed ? '（達標可進場）' : '（框架未開，記錄觀察）');
+    c3line = ` &nbsp;·&nbsp; 🔔 ${esc(c3.join('+'))} 連 ${s.c3_day||3} 天` + (armed ? '（達標可進場）' : '（框架未開，記錄觀察）');
   }
-  return `<div class="alert-banner ${v.cls}"><span class="big">${v.icon}</span><div style="flex:1"><b>${v.label} · ${v.act}</b>${c3line}</div></div>`;
+  let evline = '';
+  const fed = ((d.calendar||{}).today||[]).find(e=>e.tag==='fed');
+  if (fed) evline = ` &nbsp;·&nbsp; ⚠️ 今日${esc(String(fed.event).split('(')[0])}（數據前後 4h 棄權）`;
+  return `<div class="alert-banner ${v.cls}"><span class="big">${v.icon}</span><div style="flex:1"><b>${v.label} · ${v.act}</b>${c3line}${evline}</div></div>`;
 }
 
 function renderSentiment(d){
@@ -184,17 +192,21 @@ function renderBrief(d){
   const el = document.getElementById('tab-brief');
   const naTag = v => v==null ? '<span class="regime-tag r-na">資料源暫缺</span>' : '';
   const v = VERDICT[d.verdict] || VERDICT['ALT-OFF'];
+  const band3 = (val,lo,hi,tLo,tMid,tHi) => val==null ? naTag(null) :
+    (val<lo ? `<span class="regime-tag r-good">🟢 ${tLo}</span>` : val<=hi ? `<span class="regime-tag r-pressure">🟡 ${tMid}</span>` : `<span class="regime-tag r-danger">🔴 ${tHi}</span>`);
+  const etfVal = m.etf_flow!=null ? m.etf_flow : m.etf_flow_last;
+  const etfTag = etfVal==null ? naTag(null) : (etfVal>=0 ? '<span class="regime-tag r-good">🟢 流入</span>' : '<span class="regime-tag r-danger">🔴 流出</span>')+'<span class="regime-tag r-na">最新公布</span>';
 
-  // Macro cards (each number once; null -> dash + honest note)
+  // Macro cards (判讀門檻寫死前端,不經 agent)
   const macroCards = `<div class="brief-row r4">
-    <div class="metric warn"><div class="label">VIX</div><div class="value med">${fmtNum(m.vix,2)}</div><div class="sub">${naTag(m.vix)}</div></div>
-    <div class="metric accent"><div class="label">MOVE</div><div class="value med">${fmtNum(m.move,2)}</div><div class="sub">${naTag(m.move)}</div></div>
-    <div class="metric accent"><div class="label">DXY 美元</div><div class="value med">${m.dxy!=null?fmtNum(m.dxy,2):(m.dxy_last!=null?fmtNum(m.dxy_last,2):'—')}</div><div class="sub">${m.dxy==null?(m.dxy_last!=null?'<span class="regime-tag r-na">前值</span>':naTag(null)):''}</div></div>
-    <div class="metric purple"><div class="label">10Y TIPS 實質</div><div class="value med">${fmtNum(m.tips,2,'%')}</div><div class="sub">${m.tips!=null?'<span class="regime-tag r-pressure">實質利率</span>':naTag(null)}</div></div>
+    <div class="metric warn"><div class="label">VIX</div><div class="value med">${fmtNum(m.vix,2)}</div><div class="sub">${band3(m.vix,16,22,'平靜','中性','警戒')}</div></div>
+    <div class="metric accent"><div class="label">MOVE</div><div class="value med">${fmtNum(m.move,2)}</div><div class="sub">${band3(m.move,80,100,'平靜','偏高','緊張')}</div></div>
+    <div class="metric accent"><div class="label">DXY 美元</div><div class="value med">${m.dxy!=null?fmtNum(m.dxy,2):(m.dxy_last!=null?fmtNum(m.dxy_last,2):'—')}</div><div class="sub">${band3(m.dxy!=null?m.dxy:m.dxy_last,95,105,'偏弱','中性','強勢壓制')}</div></div>
+    <div class="metric purple"><div class="label">10Y TIPS 實質</div><div class="value med">${fmtNum(m.tips,2,'%')}</div><div class="sub">${band3(m.tips,1,2,'寬鬆','中性','偏緊')}</div></div>
   </div>
   <div class="brief-row r2" style="margin-top:12px">
-    <div class="metric warn"><div class="label">BTC ETF 1D 淨流入</div><div class="value med small">${m.etf_flow!=null?(m.etf_flow<0?'-$':'+$')+Math.abs(m.etf_flow)+'M':(m.etf_flow_last!=null?(m.etf_flow_last<0?'-$':'+$')+Math.abs(m.etf_flow_last)+'M':'—')}</div><div class="sub">${m.etf_flow==null?'<span class="regime-tag r-na">前值</span>':''}</div></div>
-    <div class="metric"><div class="label">BTC-NDX 相關</div><div class="value med">${m.ndx_corr_30d!=null?m.ndx_corr_30d.toFixed(2):'—'}</div><div class="sub">${naTag(m.ndx_corr_30d)}</div></div>
+    <div class="metric warn"><div class="label">BTC ETF 1D 淨流入</div><div class="value med small">${etfVal!=null?(etfVal<0?'-$':'+$')+Math.abs(etfVal)+'M':'—'}</div><div class="sub">${etfTag}</div></div>
+    <div class="metric"><div class="label">BTC-NDX 相關 (30D)</div><div class="value med">${m.ndx_corr_30d!=null?m.ndx_corr_30d.toFixed(2):'—'}</div><div class="sub">${band3(m.ndx_corr_30d,0.3,0.6,'低連動','中度連動','高連動')}</div></div>
   </div>`;
 
   // Dominance cards
@@ -208,16 +220,18 @@ function renderBrief(d){
   <div style="margin-top:12px"><div class="metric danger"><div class="label">Alt Momentum (7D)</div><div class="value med">${fmtNum(dm.alt_mom7,1,'%')}</div><div class="sub"><span class="regime-tag ${dm.req2?'r-good':'r-danger'}">${d.verdict}</span>${dm.breadth_pct!=null?`<span class="delta">breadth ${dm.breadth_pct.toFixed(0)}%</span>`:''}</div></div></div>`;
 
   // Layer1 conditions (rules hardcoded; pass/fail from booleans)
+  const dppCur = dm.btc_d_delta7==null ? '—' : dm.btc_d_delta7.toFixed(2)+'pp';
+  const altCur = dm.alt_mom7==null ? '—' : (dm.alt_mom7>0?'+':'')+dm.alt_mom7.toFixed(1)+'%';
   const reqRows = [
-    {n:'1', ok:dm.req1, rule:'BTC.D 7D 方向往下 (Δ7d < 0)'},
-    {n:'2', ok:dm.req2, rule:'Alt basket 7D 平均 > 0%'}
+    {n:'1', ok:dm.req1, rule:'BTC.D 7D 方向往下 (Δ7d < 0)', cur:'目前 Δ7d '+dppCur},
+    {n:'2', ok:dm.req2, rule:'Alt basket 7D 平均 > 0%', cur:'目前 '+altCur}
   ];
   const bonusRows = [
-    {n:'a', ok:dm.bonus_a, rule:'BTC.D Δ7d ≤ -0.5pp (實質下行)'},
-    {n:'b', ok:dm.bonus_b, rule:'Alt basket 7D > +1.5% (動能明顯)'},
-    {n:'c', ok:dm.bonus_c, rule:'OTHERS.D > 12% (啟動線)'}
+    {n:'a', ok:dm.bonus_a, rule:'BTC.D Δ7d ≤ -0.5pp (實質下行)', cur:'目前 Δ7d '+dppCur},
+    {n:'b', ok:dm.bonus_b, rule:'Alt basket 7D > +1.5% (動能明顯)', cur:'目前 '+altCur},
+    {n:'c', ok:dm.bonus_c, rule:'OTHERS.D > 12% (啟動線)', cur:'目前 '+(dm.others_d==null?'—':dm.others_d.toFixed(2)+'%')}
   ];
-  const condHtml = rows => rows.map(r=>`<div class="layer1-cond ${reqOk(r.ok)}"><div class="cond-num">${r.n}</div><div class="cond-content"><div class="cond-rule">${r.rule}</div></div><div class="cond-status">${reqMk(r.ok)}</div></div>`).join('');
+  const condHtml = rows => rows.map(r=>`<div class="layer1-cond ${reqOk(r.ok)}"><div class="cond-num">${r.n}</div><div class="cond-content"><div class="cond-rule">${r.rule}</div><div class="cond-current">${r.cur}</div></div><div class="cond-status">${reqMk(r.ok)}</div></div>`).join('');
 
   // News + calendar
   const news = (d.news||[]).map(n=>`<div class="news-item"><div class="news-dot ${n.sev==='high'?'high':'med'}"></div><div><div class="news-title">${esc(n.title)}</div></div></div>`).join('');
@@ -238,11 +252,12 @@ function renderStrong(d){
   const s = d.strong||{};
   const el = document.getElementById('tab-strong');
   const win = s.window || '30D';
-  const cards = (s.top10||[]).map(c=>`<div class="coin-card ${c.status==='c3'?'c3':''}"><div class="cc-tag">#${c.rank} ${STATUS_ZH[c.status]||''}</div><div class="cc-sym">${esc(c.sym)}</div><div class="cc-ret">${c.ret>0?'+':''}${c.ret.toFixed(1)}% ${win}</div></div>`).join('');
+  const cards = (s.top10||[]).map(c=>`<div class="coin-card ${c.status==='c3'?'c3':''}"><div class="cc-tag">#${c.rank} ${STATUS_ZH[c.status]||''}</div><div class="cc-sym">${esc(c.sym)}</div><div class="cc-ret">${c.ret>0?'+':''}${c.ret.toFixed(1)}%</div></div>`).join('');
+  const c3 = c3List(d);
   let signalLine = '';
-  if (s.c3_entry&&s.c3_entry.length){
+  if (c3.length){
     const armed = (d.verdict!=='ALT-OFF');
-    signalLine = `<div class="indicator-explain ${armed?'good':'danger'}">🔔 ${esc(s.c3_entry.join(' / '))} 連 ${s.c3_day||3} 天進 Top 3` + (armed?'，達標可進場':'，但框架 ALT-OFF，記錄觀察不進場') + (s.exits&&s.exits.length?` · ${esc(s.exits.join('/'))} 出場`:'') + `</div>`;
+    signalLine = `<div class="indicator-explain ${armed?'good':'danger'}">🔔 ${esc(c3.join(' / '))} 連 ${s.c3_day||3} 天進 Top 3` + (armed?'，達標可進場':'，但框架 ALT-OFF，記錄觀察不進場') + (s.exits&&s.exits.length?` · ${esc(s.exits.join('/'))} 出場`:'') + `</div>`;
   }
   el.innerHTML =
     `<div class="card"><div class="head"><div class="title">🏆 今日強勢幣 Top 10</div><div class="meta">${win} 漲幅排序 · CoinGecko via Apify</div></div><div class="coin-grid">${cards}</div>${signalLine}</div>` +
@@ -252,34 +267,12 @@ function renderStrong(d){
     </div><div class="indicator-explain warn">配置整體資產 5-10% 跑此策略。${win} 為動能視窗。</div></div>`;
 }
 
-function renderCharts(hist){
-  const labels = hist.map(d=>d.date.slice(5));
-  const opt = (yl,yc) => ({ responsive:true, maintainAspectRatio:false,
-    scales:{ y:{type:'linear',position:'left',min:0,max:100,grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#8b95a3'},title:{display:true,text:yl,color:yc}},
-      y2:{type:'linear',position:'right',grid:{display:false},ticks:{color:'#00d4ff'},title:{display:true,text:'USD',color:'#00d4ff'}},
-      x:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#8b95a3'}} },
-    plugins:{ legend:{labels:{color:'#b5bac4'}} } });
-  const c1=document.getElementById('btcChart');
-  if(c1) new Chart(c1,{type:'line',data:{labels,datasets:[
-    {label:'BTC 情緒',data:hist.map(d=>d.btc),borderColor:'#f7931a',backgroundColor:'rgba(247,147,26,0.1)',borderWidth:2,yAxisID:'y',tension:0.3,spanGaps:true},
-    {label:'BTC 價格',data:hist.map(d=>d.btc_price),borderColor:'#00d4ff',backgroundColor:'rgba(0,212,255,0.1)',borderWidth:2,yAxisID:'y2',tension:0.3}
-  ]},options:opt('BTC 情緒 (0-100)','#f7931a')});
-  const c2=document.getElementById('ethChart');
-  if(c2) new Chart(c2,{type:'line',data:{labels,datasets:[
-    {label:'ETH 情緒',data:hist.map(d=>d.eth),borderColor:'#a78bfa',backgroundColor:'rgba(167,139,250,0.1)',borderWidth:2,yAxisID:'y',tension:0.3,spanGaps:true},
-    {label:'ETH 價格',data:hist.map(d=>d.eth_price),borderColor:'#6a7fff',backgroundColor:'rgba(106,127,255,0.1)',borderWidth:2,yAxisID:'y2',tension:0.3,spanGaps:true}
-  ]},options:opt('ETH 情緒 (0-100)','#a78bfa')});
-  const meta=document.getElementById('chartMeta');
-  if(meta&&hist.length) meta.textContent = hist[0].date+' → '+hist[hist.length-1].date+' · '+hist.length+' 天';
-}
-
 async function boot(){
   tickClock(); setInterval(tickClock,30000);
-  let d, hist=[];
+  let d;
   try {
     const bust = '?t='+Date.now();
     d = await fetch('../outputs/today.json'+bust,{cache:'no-store'}).then(r=>r.json());
-    try { hist = await fetch('../outputs/sentiment_history.json'+bust,{cache:'no-store'}).then(r=>r.json()); } catch(e){ hist=[]; }
   } catch(e){
     document.getElementById('tab-sentiment').innerHTML='<div class="alert-banner danger"><span class="big">⚠</span><div>今日資料載入失敗（outputs/today.json）。routine 可能尚未產出或檔案異常。</div></div>';
     return;
@@ -288,7 +281,7 @@ async function boot(){
   try { renderSentiment(d); } catch(e){ document.getElementById('tab-sentiment').innerHTML='<div class="alert-banner danger"><span class="big">⚠</span><div>X 情緒分頁渲染失敗</div></div>'; console.error(e); }
   try { renderStrong(d); } catch(e){ console.error(e); }
   try { renderBrief(d); } catch(e){ console.error(e); }
-  document.getElementById('foot').textContent = '最近更新 '+(d.date||'')+' '+(d.updated_tpe||'')+' TPE · v6.0 資料驅動 · 排程 daily-crypto-x-sentiment';
+  document.getElementById('foot').textContent = '最近更新 '+(d.date||'')+' '+(d.updated_tpe||'')+' TPE · v6.1 資料驅動 · 排程 daily-crypto-x-sentiment';
 }
 boot();
 </script>
