@@ -629,7 +629,76 @@
       ],
       "notes": "21D window. H exits top3(day5→出場); WLD enters top3(day1). BEAT/LAB c3 Day5. ALT-OFF: req1✓(delta7=-1.99) req2✗(alt_mom7=-14.81%)",
       "fetched_at_utc": "2026-06-09T03:00:00Z"
+    },
+    {
+      "date": "2026-06-10",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "method": "benthepythondev/crypto-intelligence mode=historical days=21",
+      "prev_date": "2026-06-09",
+      "prev_top3": [
+        "beat",
+        "lab",
+        "wld"
+      ],
+      "prev_top10": [
+        "beat",
+        "lab",
+        "wld",
+        "rain",
+        "dexe",
+        "xlm",
+        "hype",
+        "near",
+        "inj",
+        "a7a5"
+      ],
+      "top3": [
+        "beat",
+        "lab",
+        "wld"
+      ],
+      "top10": [
+        "beat",
+        "lab",
+        "wld",
+        "rain",
+        "dexe",
+        "xlm",
+        "near",
+        "hype",
+        "inj",
+        "cc"
+      ],
+      "top10_gains_21d": {
+        "beat": 741.1,
+        "lab": 116.1,
+        "wld": 112.7,
+        "rain": 70.1,
+        "dexe": 37.5,
+        "xlm": 35.0,
+        "near": 34.8,
+        "hype": 21.7,
+        "inj": 12.5,
+        "cc": 10.6
+      },
+      "exits_today": [
+        "a7a5"
+      ],
+      "new_entrants": [
+        "cc"
+      ],
+      "c3_coins": [
+        "beat",
+        "lab"
+      ],
+      "c3_day": 6,
+      "c3_entry": [],
+      "c3_exit": [],
+      "wld_top3_day": 2,
+      "notes": "BEAT/LAB c3 Day6(Jun5~Jun10). WLD top3 Day2. A7A5出場. CC新入#10. ALT-OFF: req1✓(delta7=-2.10pp) req2✗(alt_mom7=-11.95%)",
+      "fetched_at_utc": "2026-06-10T00:11:43Z"
     }
   ],
-  "last_updated": "2026-06-09"
+  "last_updated": "2026-06-10"
 }
