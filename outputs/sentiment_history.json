@@ -376,5 +376,14 @@
     "eth_band": "fear",
     "btc_price": 61753,
     "eth_price": 1640.71
+  },
+  {
+    "date": "2026-06-11",
+    "btc": 49.9,
+    "btc_band": "neutral",
+    "eth": 47.2,
+    "eth_band": "neutral",
+    "btc_price": 61574,
+    "eth_price": 1623.06
   }
 ]
