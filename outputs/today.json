@@ -1,56 +1,56 @@
 {
-  "date": "2026-06-10",
-  "weekday": "週三",
+  "date": "2026-06-11",
+  "weekday": "週四",
   "updated_tpe": "08:30",
   "verdict": "ALT-OFF",
   "verdict_reason_code": "req2_fail",
   "x": {
     "btc": {
-      "score": 43.1,
-      "band": "fear",
-      "delta_1d": -7.6
+      "score": 49.9,
+      "band": "neutral",
+      "delta_1d": 6.8
     },
     "eth": {
-      "score": 38.8,
-      "band": "fear",
-      "delta_1d": -6.7
+      "score": 47.2,
+      "band": "neutral",
+      "delta_1d": 8.4
     },
-    "btc_price": 61753,
-    "btc_price_delta_pct": -2.07,
-    "eth_price": 1640.71,
-    "eth_price_delta_pct": -2.9,
+    "btc_price": 61574,
+    "btc_price_delta_pct": -0.27,
+    "eth_price": 1623.06,
+    "eth_price_delta_pct": -1.02,
     "top_discussions": [
       {
-        "title": "美5月CPI今日公布(預估年增4.2%),或影響Fed路徑",
-        "tag": "fed"
+        "title": "Strategy再買1,550 BTC($1.01億),持倉達845,256 BTC",
+        "tag": "bull"
       },
       {
-        "title": "BTC ETF 6/10淨流出$9140萬,單日由正轉負",
-        "tag": "bear"
-      },
-      {
-        "title": "SpaceX IPO申購書今日截止(6/12上市),市場流動性承壓",
+        "title": "BTC觸碰200WMA支撐($61K),歷史上熊市底部區間",
         "tag": "neutral"
+      },
+      {
+        "title": "SpaceX/Anthropic/OpenAI IPO週(6/12起)虹吸市場流動性",
+        "tag": "macro"
       }
     ]
   },
   "macro": {
-    "vix": 19.87,
-    "move": 77.03,
-    "dxy": 100.02,
-    "tips": 2.19,
-    "etf_flow": -91.4,
-    "etf_flow_last": 141.5,
+    "vix": 22.22,
+    "move": 73.95,
+    "dxy": 100.03,
+    "tips": null,
+    "etf_flow": -69.4,
+    "etf_flow_last": -91.4,
     "ndx_corr_30d": 0.51
   },
   "dominance": {
-    "btc_d": 55.9,
-    "btc_d_delta7": -2.1,
-    "others_d": 11.86,
-    "total3_d": 21.56,
-    "ethbtc": 0.02657,
-    "alt_mom7": -11.95,
-    "breadth_pct": 28.57,
+    "btc_d": 56.15,
+    "btc_d_delta7": -1.85,
+    "others_d": 11.75,
+    "total3_d": 23.03,
+    "ethbtc": 0.02636,
+    "alt_mom7": -16.51,
+    "breadth_pct": 0.0,
     "n_valid": 14,
     "req1": true,
     "req2": false,
@@ -61,117 +61,72 @@
   "news": [
     {
       "sev": "high",
-      "title": "美5月CPI今日公布,預估年增4.2%(前值3.8%),為2024年以來最高"
+      "title": "CME+Nasdaq聯合推出頂8加密指數期貨(BTC,ETH,SOL,XRP,LINK,ADA,BNB,DOGE)"
     },
     {
       "sev": "high",
-      "title": "BTC ETF 6/10淨流出$9140萬,昨日+$1.415億一日逆轉"
+      "title": "Strategy再買1,550 BTC($1.01億),累計持倉845,256 BTC"
+    },
+    {
+      "sev": "high",
+      "title": "BitMine(Tom Lee)持有5,416,901 ETH,帳面虧損$89億"
     },
     {
       "sev": "med",
-      "title": "SpaceX SPCX IPO申購書今日截止,6/12正式上市($1.75-2兆估值)"
+      "title": "CFTC批准Kalshi推出首支美國受監管比特幣永續合約(BTCPERP)"
     },
     {
       "sev": "med",
-      "title": "BTC跌破$62K,自高點$8萬累計跌幅逾22%"
-    },
-    {
-      "sev": "med",
-      "title": "FOMC利率決議6/16-17(點陣圖更新),市場預估維持5.25-5.5%"
+      "title": "日本SBI新生銀行6/10起試點:存款利息可轉換BTC/ETH/XRP"
     }
   ],
   "calendar": {
     "today": [
       {
-        "date": "06-10 全天",
-        "event": "美國5月CPI通脹數據公布(預估年增4.2%)",
-        "tag": "fed"
+        "date": "06-11 全天",
+        "event": "FIFA世界杯2026開幕",
+        "tag": "macro"
+      },
+      {
+        "date": "06-11 今日",
+        "event": "ECB利率決議(預估維持2.25%); 美5月PPI公布",
+        "tag": "ecb"
       }
     ],
     "week": [
       {
-        "date": "06-11 週四",
-        "event": "ECB利率決議(預估2.25%);美5月PPI公布",
-        "tag": "ecb"
+        "date": "06-12 週五",
+        "event": "SpaceX IPO上市(估值$1.77兆); 虹吸市場流動性",
+        "tag": "macro"
       },
       {
-        "date": "06-16 週二",
-        "event": "FOMC利率決議(含點陣圖)首日",
-        "tag": "fed"
+        "date": "06-12 週五",
+        "event": "美國清晰法案加密市場結構最新進展",
+        "tag": "reg"
       },
       {
-        "date": "06-17 週三",
-        "event": "FOMC利率決議公布",
+        "date": "06-16 週一",
+        "event": "新任Fed主席Warsh首次FOMC會議(含點陣圖)",
         "tag": "fed"
       }
     ]
   },
   "strong": {
     "window": "21D",
-    "c3_entry": [],
-    "c3_day": 6,
-    "exits": [],
+    "c3_entry": ["wld"],
+    "c3_day": 7,
+    "exits": ["inj"],
     "top10": [
-      {
-        "rank": 1,
-        "sym": "BEAT",
-        "ret": 741.1,
-        "status": "c3"
-      },
-      {
-        "rank": 2,
-        "sym": "LAB",
-        "ret": 116.1,
-        "status": "c3"
-      },
-      {
-        "rank": 3,
-        "sym": "WLD",
-        "ret": 112.7,
-        "status": "up"
-      },
-      {
-        "rank": 4,
-        "sym": "RAIN",
-        "ret": 70.1,
-        "status": "hold"
-      },
-      {
-        "rank": 5,
-        "sym": "DEXE",
-        "ret": 37.5,
-        "status": "hold"
-      },
-      {
-        "rank": 6,
-        "sym": "XLM",
-        "ret": 35.0,
-        "status": "hold"
-      },
-      {
-        "rank": 7,
-        "sym": "NEAR",
-        "ret": 34.8,
-        "status": "hold"
-      },
-      {
-        "rank": 8,
-        "sym": "HYPE",
-        "ret": 21.7,
-        "status": "hold"
-      },
-      {
-        "rank": 9,
-        "sym": "INJ",
-        "ret": 12.5,
-        "status": "hold"
-      },
-      {
-        "rank": 10,
-        "sym": "CC",
-        "ret": 10.6,
-        "status": "new"
-      }
+      {"rank": 1, "sym": "BEAT", "ret": 970.84, "status": "c3"},
+      {"rank": 2, "sym": "LAB", "ret": 84.79, "status": "c3"},
+      {"rank": 3, "sym": "WLD", "ret": 78.45, "status": "c3"},
+      {"rank": 4, "sym": "DEXE", "ret": 33.04, "status": "hold"},
+      {"rank": 5, "sym": "XLM", "ret": 26.99, "status": "hold"},
+      {"rank": 6, "sym": "NEAR", "ret": 16.15, "status": "hold"},
+      {"rank": 7, "sym": "CC", "ret": 5.67, "status": "up"},
+      {"rank": 8, "sym": "BCAP", "ret": 1.15, "status": "new"},
+      {"rank": 9, "sym": "HYPE", "ret": -5.02, "status": "down"},
+      {"rank": 10, "sym": "RAIN", "ret": null, "status": "hold"}
     ]
   }
 }

@@ -1,35 +1,85 @@
-=== AUDIT LOG: 2026-06-10 (full fresh run) ===
+date: 2026-06-11
+run_start_utc: 2026-06-11T00:00:00Z
+pipeline_version: v3-21D
 
-PART A – X Sentiment (kaitoeasyapi/twitter-x-data-tweet-scraper, 6 terms x 40 tweets):
-  BTC_en: score=41.74, band=fear, n=33
-  BTC_zh: score=44.3, band=fear, n=38 [LLM-corrected]
-  ETH_en: score=37.4, band=fear, n=38 [LLM-corrected]
-  ETH_zh: score=40.2, band=fear, n=38 [LLM-corrected]
-  crypto_en: score=47.6, band=neutral, n=38 [LLM-corrected]
-  zh_crypto: score=50.6, band=neutral, n=39 [LLM-corrected]
-  btc_composite=43.11 (fear), eth_composite=38.80 (fear)
-  NOTE: Scores corrected after background agent LLM-based analysis completed
+=== PART A: X/Twitter Sentiment ===
+actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
+terms: btc_en, btc_zh, eth_en, eth_zh, market_en, market_zh
+limit: 25 items per term (150 total)
+method: keyword-based engagement-weighted scoring
+engagement_formula: likes + 2*rt + 1.5*replies + 0.5*bookmarks (floor=1)
+btc_en_score: 48.4
+btc_zh_score: 51.4
+btc_composite: 49.9 (neutral)
+btc_delta_1d: +6.8
+eth_en_score: 44.3
+eth_zh_score: 50.0
+eth_composite: 47.2 (neutral)
+eth_delta_1d: +8.4
+market_en_score: 51.3
+market_zh_score: 59.8
+notable: btc_zh dominated by Strategy 1550 BTC purchase (eng=44052, bullish); eth_zh dominated by SNOW NFT viral tweet (likeCount=611315, neutral)
 
-PART B – Dominance:
-  btc_d=55.90%, eth_d=8.78%, btc_d_delta7=-2.10pp (5-day transition: Jun5 base)
-  alt_mom7=-11.95% (n_valid=14), breadth_pct=28.57%
+=== PART B: Dominance + Layer 1 v2 ===
+actor: benthepythondev/crypto-intelligence + makework36/coingecko-scraper
+btc_d: 56.15%
+eth_d: 8.91%
+others_d: 11.75%
+total3_d: 23.03%
+btc_d_delta7: -1.85pp (base: Jun-05=58.0%, 6d transition)
+alt_mom7: -16.51% (14 alt coins, 0/14 > 0%)
+breadth_pct: 0.0% (0/14 coins positive 7D)
+req1: True (delta7=-1.85 < 0)
+req2: False (alt_mom7=-16.51% NOT > 0%)
+bonus_a: True (delta7=-1.85 <= -0.5pp)
+bonus_b: False
+bonus_c: False (others_d=11.75% NOT > 12%)
+verdict: ALT-OFF (req2_fail)
 
-PART C – Macro (Yahoo Finance / FRED / WebSearch):
-  VIX=19.87, MOVE=77.03, DXY=100.02 (prev=99.96), TIPS(DFII10)=2.19% (2026-06-09 latest)
+=== PART C: Macro ===
+actor: benthepythondev/yahoo-finance-scraper
+vix: 22.22
+move: 73.95
+dxy: 100.03
+tips: null (no FRED data for 2026-06-11)
+etf_flow: -69.4M (Jun 10 Farside; Jun 11 not yet published)
+etf_flow_last: -91.4M (Jun 09, previous day)
+ndx_corr_30d: 0.51 (manual Pearson, 26 trading days May1-Jun9)
 
-PART D – ETF / Correlation:
-  ETF Jun 10 net flow: -$91.4M (outflow reversal from yesterday's +$141.5M)
-  NDX-BTC 30d Pearson corr: +0.51 (fresh computation from Yahoo Finance daily closes)
+=== PART D: Today.json written ===
+btc_price: 61574
+eth_price: 1623.06
+btc_price_delta_pct: -0.27
+eth_price_delta_pct: -1.02
 
-PART E – 21D Top 10 (benthepythondev/crypto-intelligence mode=historical days=21):
-  beat(741.1%), lab(116.1%), wld(112.7%), rain(70.1%), dexe(37.5%),
-  xlm(35.0%), near(34.8%), hype(21.7%), inj(12.5%), cc(10.6%)
-  A7A5 exits top10. CC enters at #10.
+=== PART E: Strong Coins 21D ===
+actor: benthepythondev/crypto-intelligence mode=historical days=21
+window: 2026-05-21 to 2026-06-11
+1. BEAT (audiera): +970.84% [c3 day7]
+2. LAB (lab): +84.79% [c3 day7]
+3. WLD (worldcoin-wld): +78.45% [c3 NEW entry day1]
+4. DEXE (dexe): +33.04% [hold]
+5. XLM (stellar): +26.99% [hold]
+6. NEAR (near): +16.15% [hold]
+7. CC (canton-network): +5.67% [up from #10]
+8. BCAP (blockchain-capital): +1.15% [new entrant]
+9. HYPE (hyperliquid): -5.02% [down]
+10. RAIN: null [actor returned 0 items; hold]
+exits: INJ (21D fell below BCAP in updated ranking)
+note: rain/morpho/just returned 0 items from actor; marked null per rules
 
-LAYER 1:
-  req1=True (btc_d_delta7=-2.10pp < 0; transition value Jun5 base)
-  req2=False (alt_mom7=-11.95% < 0) → ALT-OFF
-  bonus_a=True (btc_d_delta7=-2.10pp<0, dominance trending down), bonus_b=False, bonus_c=False
+=== c3 Signal ===
+c3_entry_today: WLD (Day 3 in top3: Jun9=day1, Jun10=day2, Jun11=day3)
+c3_coins: BEAT(day7), LAB(day7), WLD(day1)
 
-NULLS / WARNINGS:
-  None – all fields populated with fresh data.
+=== Files Written ===
+outputs/today.json: rewritten
+outputs/dominance_history.json: appended Jun-11 entry
+outputs/layer1_status.json: appended Jun-11 entry
+outputs/x_sentiment_history.json: appended Jun-11 entry
+outputs/sentiment_history.json: appended Jun-11 entry
+outputs/top3_state.json: appended Jun-11 entry
+outputs/sources_today.json: rewritten
+outputs/audit_today.log: this file
+
+run_end_utc: 2026-06-11T01:00:00Z
