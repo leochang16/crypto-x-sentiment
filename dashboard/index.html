@@ -252,7 +252,7 @@ function renderStrong(d){
   const s = d.strong||{};
   const el = document.getElementById('tab-strong');
   const win = s.window || '30D';
-  const cards = (s.top10||[]).map(c=>`<div class="coin-card ${c.status==='c3'?'c3':''}"><div class="cc-tag">#${c.rank} ${STATUS_ZH[c.status]||''}</div><div class="cc-sym">${esc(c.sym)}</div><div class="cc-ret">${c.ret>0?'+':''}${c.ret.toFixed(1)}%</div></div>`).join('');
+  const cards = (s.top10||[]).map(c=>`<div class="coin-card ${c.status==='c3'?'c3':''}"><div class="cc-tag">#${c.rank} ${STATUS_ZH[c.status]||''}</div><div class="cc-sym">${esc(c.sym)}</div><div class="cc-ret">${c.ret!=null?(c.ret>0?'+':'')+c.ret.toFixed(1)+'%':'—'}</div></div>`).join('');
   const c3 = c3List(d);
   let signalLine = '';
   if (c3.length){
