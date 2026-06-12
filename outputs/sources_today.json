@@ -1,14 +1,72 @@
 {
-  "date": "2026-06-11",
-  "btc_price": "benthepythondev/crypto-intelligence via Apify",
-  "eth_price": "benthepythondev/crypto-intelligence via Apify",
-  "x_sentiment": "kaitoeasyapi/twitter-x-data-tweet-scraper via Apify (06-11 ~00:30 UTC, 6 terms x 25, keyword-based engagement-weighted scoring)",
-  "btc_dominance": "benthepythondev/crypto-intelligence + makework36/coingecko-scraper",
-  "vix_move_dxy": "benthepythondev/yahoo-finance-scraper via Apify",
-  "tips_dfii10": "null — WebSearch returned no specific value for 2026-06-11",
-  "etf_flow": "farside.co.uk/btc/ via apify/rag-web-browser — Jun 10 data = -69.4M (Jun 11 not yet published)",
-  "ndx_corr_30d": "benthepythondev/yahoo-finance-scraper BTC+NDX 90d via Apify (manual Pearson corr, 26 trading days May1–Jun9)",
-  "top10_21d": "benthepythondev/crypto-intelligence mode=historical days=21 — 9 coins fetched individually; rain=null (actor returned 0 items)",
-  "news": "WebSearch (coindesk, yahoo finance) + tweet analysis",
-  "calendar": "WebSearch + tweet analysis"
+  "date": "2026-06-12",
+  "generated_at_utc": "2026-06-12T00:30:00Z",
+  "data_sources": [
+    {
+      "name": "benthepythondev/crypto-intelligence",
+      "purpose": "21D price history for top12 candidates",
+      "coins": [
+        "beat",
+        "lab",
+        "wld",
+        "rain",
+        "dexe",
+        "hype",
+        "near",
+        "xlm",
+        "inj",
+        "cc",
+        "a7a5",
+        "bcap"
+      ],
+      "apify_runs": 4
+    },
+    {
+      "name": "makework36/coingecko-scraper",
+      "purpose": "Global dominance data (btc_d, eth_d, total3_d, others_d)",
+      "mode": "global"
+    },
+    {
+      "name": "kaitoeasyapi/twitter-x-data-tweet-scraper",
+      "purpose": "X/Twitter sentiment (BTC EN+ZH, ETH combined, Crypto market EN+ZH)",
+      "datasets": [
+        "BTC EN",
+        "BTC ZH",
+        "ETH combined",
+        "Crypto market EN",
+        "加密 ZH"
+      ],
+      "n_tweets": 160
+    },
+    {
+      "name": "benthepythondev/yahoo-finance-scraper",
+      "purpose": "NDX correlation (attempted, ndx_corr_30d=null due to nested data structure)",
+      "run_id": "lb8NOFNzRXz2fcYUi"
+    },
+    {
+      "name": "farside.co.uk",
+      "purpose": "BTC ETF daily flow",
+      "status": "403 Forbidden - etf_flow=null",
+      "fallback": "etf_flow_last from yesterday (-69.4M)"
+    },
+    {
+      "name": "macro (VIX/MOVE/DXY/TIPS)",
+      "purpose": "Macro indicators",
+      "vix_source": "CBOE/Yahoo Finance",
+      "values": {
+        "vix": 19.44,
+        "move": 69.45,
+        "dxy": 99.73,
+        "tips": 2.15
+      }
+    }
+  ],
+  "nulls": [
+    "etf_flow",
+    "ndx_corr_30d"
+  ],
+  "null_reasons": {
+    "etf_flow": "farside.co.uk HTTP 403 Forbidden",
+    "ndx_corr_30d": "Yahoo Finance history data nested structure inaccessible via field projection"
+  }
 }
