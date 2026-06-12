@@ -1,85 +1,44 @@
-date: 2026-06-11
-run_start_utc: 2026-06-11T00:00:00Z
-pipeline_version: v3-21D
+=== DAILY AUDIT 2026-06-12 ===
+Generated: 2026-06-12T00:30:00Z
 
-=== PART A: X/Twitter Sentiment ===
-actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
-terms: btc_en, btc_zh, eth_en, eth_zh, market_en, market_zh
-limit: 25 items per term (150 total)
-method: keyword-based engagement-weighted scoring
-engagement_formula: likes + 2*rt + 1.5*replies + 0.5*bookmarks (floor=1)
-btc_en_score: 48.4
-btc_zh_score: 51.4
-btc_composite: 49.9 (neutral)
-btc_delta_1d: +6.8
-eth_en_score: 44.3
-eth_zh_score: 50.0
-eth_composite: 47.2 (neutral)
-eth_delta_1d: +8.4
-market_en_score: 51.3
-market_zh_score: 59.8
-notable: btc_zh dominated by Strategy 1550 BTC purchase (eng=44052, bullish); eth_zh dominated by SNOW NFT viral tweet (likeCount=611315, neutral)
+--- PRICE DATA ---
+BTC: $63,657 (+3.40% 24h) | ETH: $1,673.99 (+3.17% 24h)
+ETH/BTC: 0.02630
 
-=== PART B: Dominance + Layer 1 v2 ===
-actor: benthepythondev/crypto-intelligence + makework36/coingecko-scraper
-btc_d: 56.15%
-eth_d: 8.91%
-others_d: 11.75%
-total3_d: 23.03%
-btc_d_delta7: -1.85pp (base: Jun-05=58.0%, 6d transition)
-alt_mom7: -16.51% (14 alt coins, 0/14 > 0%)
-breadth_pct: 0.0% (0/14 coins positive 7D)
-req1: True (delta7=-1.85 < 0)
-req2: False (alt_mom7=-16.51% NOT > 0%)
-bonus_a: True (delta7=-1.85 <= -0.5pp)
-bonus_b: False
-bonus_c: False (others_d=11.75% NOT > 12%)
-verdict: ALT-OFF (req2_fail)
+--- DOMINANCE (CoinGecko fresh) ---
+BTC_D: 56.37% | ETH_D: 8.93% | others_d: 11.83% | total3_d: 23.13%
+btc_d_delta7: -1.63pp (vs Jun05 baseline 58.0%) → req1=PASS
 
-=== PART C: Macro ===
-actor: benthepythondev/yahoo-finance-scraper
-vix: 22.22
-move: 73.95
-dxy: 100.03
-tips: null (no FRED data for 2026-06-11)
-etf_flow: -69.4M (Jun 10 Farside; Jun 11 not yet published)
-etf_flow_last: -91.4M (Jun 09, previous day)
-ndx_corr_30d: 0.51 (manual Pearson, 26 trading days May1-Jun9)
+--- ALT BASKET (14 coins) ---
+alt_mom7: -4.04% | breadth_pct: 14.29% (2/14 positive) | n_valid: 14
+req2: FAIL (alt_mom7 < 0) → VERDICT: ALT-OFF
 
-=== PART D: Today.json written ===
-btc_price: 61574
-eth_price: 1623.06
-btc_price_delta_pct: -0.27
-eth_price_delta_pct: -1.02
+--- MACRO ---
+VIX: 19.44 | MOVE: 69.45 | DXY: 99.73 | TIPS: 2.15%
+ETF flow: null (farside.co.uk HTTP 403) | etf_flow_last: -69.4M
+NDX corr: null (Yahoo Finance nested structure inaccessible)
 
-=== PART E: Strong Coins 21D ===
-actor: benthepythondev/crypto-intelligence mode=historical days=21
-window: 2026-05-21 to 2026-06-11
-1. BEAT (audiera): +970.84% [c3 day7]
-2. LAB (lab): +84.79% [c3 day7]
-3. WLD (worldcoin-wld): +78.45% [c3 NEW entry day1]
-4. DEXE (dexe): +33.04% [hold]
-5. XLM (stellar): +26.99% [hold]
-6. NEAR (near): +16.15% [hold]
-7. CC (canton-network): +5.67% [up from #10]
-8. BCAP (blockchain-capital): +1.15% [new entrant]
-9. HYPE (hyperliquid): -5.02% [down]
-10. RAIN: null [actor returned 0 items; hold]
-exits: INJ (21D fell below BCAP in updated ranking)
-note: rain/morpho/just returned 0 items from actor; marked null per rules
+--- SENTIMENT (X/Twitter) ---
+BTC: EN=71.5 ZH=36.5 composite=54.0 [neutral] Δ1d=+4.1
+ETH: EN=56.2 ZH=49.9 composite=53.1 [neutral] Δ1d=+5.9
+Market: EN=59.46 ZH=40.82
 
-=== c3 Signal ===
-c3_entry_today: WLD (Day 3 in top3: Jun9=day1, Jun10=day2, Jun11=day3)
-c3_coins: BEAT(day7), LAB(day7), WLD(day1)
+--- 21D RANKING (fresh historical fetch) ---
+Candidates: beat, lab, wld, rain, dexe, xlm, inj, near, cc, a7a5, hype, bcap
+Top10: BEAT(1095.74%), LAB(93.99%), WLD(86.06%), RAIN(76.65%), DEXE(49.48%)
+       XLM(30.95%), INJ(5.47%), NEAR(4.07%), CC(4.04%), A7A5(3.14%)
+Exits: BCAP(1.15%→#12), HYPE(3.10%→#11)
+New: INJ(#7 re-entry), A7A5(#10)
 
-=== Files Written ===
-outputs/today.json: rewritten
-outputs/dominance_history.json: appended Jun-11 entry
-outputs/layer1_status.json: appended Jun-11 entry
-outputs/x_sentiment_history.json: appended Jun-11 entry
-outputs/sentiment_history.json: appended Jun-11 entry
-outputs/top3_state.json: appended Jun-11 entry
-outputs/sources_today.json: rewritten
-outputs/audit_today.log: this file
+--- C3 SIGNAL ---
+c3_coins: [BEAT, LAB, WLD] | c3_day: 8 | c3_entry: [] | c3_exit: []
+BEAT/LAB c3 Day8 | WLD c3 Day2→Day8 (continuous)
 
-run_end_utc: 2026-06-11T01:00:00Z
+--- VERDICT SUMMARY ---
+ALT-OFF: req1=True req2=False | bonus_a=True bonus_b=False bonus_c=False
+reason: alt_mom7=-4.04% (improve from -16.51% yesterday, but still negative)
+
+--- NULL FIELDS ---
+etf_flow=null (403), ndx_corr_30d=null (nested structure)
+
+=== END AUDIT ===

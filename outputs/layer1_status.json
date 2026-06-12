@@ -102,5 +102,21 @@
     "n_valid": 14,
     "fetched_at_utc": "2026-06-11T00:30:00Z",
     "note": "req1=True(delta7=-1.85pp); req2=False(alt_mom7=-16.51%) → ALT-OFF; delta7是過渡值(Jun-05基準,6天前)"
+  },
+  {
+    "date": "2026-06-12",
+    "verdict": "ALT-OFF",
+    "req1": true,
+    "req2": false,
+    "btc_d": 56.37,
+    "btc_d_delta7": -1.63,
+    "alt_mom7": -4.04,
+    "breadth_pct": 14.29,
+    "bonus_a": true,
+    "bonus_b": false,
+    "bonus_c": false,
+    "n_valid": 14,
+    "fetched_at_utc": "2026-06-12T00:30:00Z",
+    "note": "req1=True(delta7=-1.63pp 7天累降); req2=False(alt_mom7=-4.04%) → ALT-OFF"
   }
 ]
