@@ -1,72 +1,86 @@
 {
-  "date": "2026-06-12",
-  "generated_at_utc": "2026-06-12T00:30:00Z",
+  "date": "2026-06-14",
+  "generated_at_utc": "2026-06-14T00:40:00Z",
   "data_sources": [
     {
       "name": "benthepythondev/crypto-intelligence",
       "purpose": "21D price history for top12 candidates",
-      "coins": [
-        "beat",
-        "lab",
-        "wld",
-        "rain",
-        "dexe",
-        "hype",
-        "near",
-        "xlm",
-        "inj",
-        "cc",
-        "a7a5",
-        "bcap"
-      ],
-      "apify_runs": 4
+      "coins": ["beat", "lab", "wld", "rain", "hype", "near", "dexe", "xlm", "vvv", "bdx", "bcap", "cc"],
+      "apify_runs": 4,
+      "notes": "bdx/bcap CoinGecko historical API returned BTC fallback; cc returned 0 items; all three recorded as null 21D (30d proxy used for ranking)"
+    },
+    {
+      "name": "benthepythondev/crypto-intelligence",
+      "purpose": "Markets data (100 coins, 7d+30d performance)",
+      "mode": "markets",
+      "items": 100,
+      "dataset": "mhSVN6cTYBLIayUOu"
     },
     {
       "name": "makework36/coingecko-scraper",
       "purpose": "Global dominance data (btc_d, eth_d, total3_d, others_d)",
-      "mode": "global"
+      "mode": "global",
+      "values": {
+        "btc_d": 56.55,
+        "eth_d": 8.88,
+        "others_d": 11.82,
+        "total3_d": 23.12
+      }
     },
     {
       "name": "kaitoeasyapi/twitter-x-data-tweet-scraper",
-      "purpose": "X/Twitter sentiment (BTC EN+ZH, ETH combined, Crypto market EN+ZH)",
-      "datasets": [
-        "BTC EN",
-        "BTC ZH",
-        "ETH combined",
-        "Crypto market EN",
-        "加密 ZH"
-      ],
-      "n_tweets": 160
+      "purpose": "X/Twitter sentiment (BTC EN+ZH, ETH EN+ZH, Crypto market EN+ZH)",
+      "datasets": ["BTC EN", "BTC ZH", "ETH EN", "ETH ZH", "Crypto market EN", "加密 ZH"],
+      "n_tweets": 160,
+      "scores": {
+        "btc_en": 62.6,
+        "btc_zh": 38.1,
+        "btc_composite": 50.4,
+        "eth_en": 56.3,
+        "eth_zh": 48.5,
+        "eth_composite": 52.4,
+        "market_en": 49.0,
+        "market_zh": 45.1
+      }
     },
     {
       "name": "benthepythondev/yahoo-finance-scraper",
-      "purpose": "NDX correlation (attempted, ndx_corr_30d=null due to nested data structure)",
-      "run_id": "lb8NOFNzRXz2fcYUi"
+      "purpose": "NDX 30d correlation with BTC (BTC-USD + ^NDX 30-day daily closes)",
+      "run_id": "aJMphv95WfvcEYUP9",
+      "dataset": "ajt5fmlVFiBygZYjq",
+      "result": {
+        "ndx_corr_30d": -0.37,
+        "n_days": 30,
+        "period": "2026-05-01 to 2026-06-12"
+      }
     },
     {
-      "name": "farside.co.uk",
-      "purpose": "BTC ETF daily flow",
-      "status": "403 Forbidden - etf_flow=null",
-      "fallback": "etf_flow_last from yesterday (-69.4M)"
+      "name": "apify/rag-web-browser",
+      "purpose": "BTC ETF daily flow (farside.co.uk/btc/)",
+      "result": {
+        "etf_flow": 85.9,
+        "date": "2026-06-12",
+        "unit": "M USD net inflow"
+      }
     },
     {
-      "name": "macro (VIX/MOVE/DXY/TIPS)",
-      "purpose": "Macro indicators",
-      "vix_source": "CBOE/Yahoo Finance",
+      "name": "benthepythondev/yahoo-finance-scraper",
+      "purpose": "Macro indicators: VIX, MOVE, DXY",
       "values": {
-        "vix": 19.44,
-        "move": 69.45,
-        "dxy": 99.73,
-        "tips": 2.15
+        "vix": 17.68,
+        "move": 69.36,
+        "dxy": 99.75,
+        "tips": null
       }
     }
   ],
-  "nulls": [
-    "etf_flow",
-    "ndx_corr_30d"
-  ],
+  "nulls": ["tips"],
   "null_reasons": {
-    "etf_flow": "farside.co.uk HTTP 403 Forbidden",
-    "ndx_corr_30d": "Yahoo Finance history data nested structure inaccessible via field projection"
+    "tips": "FRED DFII10 unavailable via WebSearch; ANTI-CACHE rule prohibits estimation"
+  },
+  "batch4_notes": {
+    "bdx": {"coingecko_id": "beldex", "30d": 1.16, "21d": null, "reason": "CoinGecko historical API returns BTC fallback"},
+    "bcap": {"coingecko_id": "blockchain-capital", "30d": 1.03, "21d": null, "reason": "CoinGecko historical API returns BTC fallback"},
+    "cc": {"coingecko_id": "canton-network", "30d": 0.30, "21d": null, "reason": "CoinGecko historical API returns 0 items"}
   }
 }

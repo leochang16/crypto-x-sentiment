@@ -841,7 +841,83 @@
       "c3_exit": [],
       "notes": "BEAT/LAB/WLD c3 Day8(Jun5→Jun12). BCAP出場(1.15%→#12). HYPE出場(3.10%→#11). INJ重回#7(5.47%). A7A5新入#10(3.14%). RAIN大漲#4(76.65%,昨日null). ALT-OFF: req1=True(delta7=-1.63pp) req2=False(alt_mom7=-4.04%)",
       "fetched_at_utc": "2026-06-12T00:30:00Z"
+    },
+    {
+      "date": "2026-06-14",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "method": "benthepythondev/crypto-intelligence mode=historical days=21",
+      "prev_date": "2026-06-12",
+      "prev_top3": [
+        "beat",
+        "lab",
+        "wld"
+      ],
+      "prev_top10": [
+        "beat",
+        "lab",
+        "wld",
+        "rain",
+        "dexe",
+        "xlm",
+        "inj",
+        "near",
+        "cc",
+        "a7a5"
+      ],
+      "top3": [
+        "beat",
+        "lab",
+        "rain"
+      ],
+      "top10": [
+        "beat",
+        "lab",
+        "rain",
+        "wld",
+        "dexe",
+        "xlm",
+        "hype",
+        "bdx",
+        "bcap",
+        "cc"
+      ],
+      "top10_gains_21d": {
+        "beat": 520.97,
+        "lab": 119.33,
+        "rain": 71.42,
+        "wld": 68.13,
+        "dexe": 29.49,
+        "xlm": 25.47,
+        "hype": 1.4,
+        "bdx": null,
+        "bcap": null,
+        "cc": null
+      },
+      "exits_today": [
+        "inj",
+        "near",
+        "a7a5"
+      ],
+      "new_entrants": [
+        "hype",
+        "bdx",
+        "bcap"
+      ],
+      "c3_coins": [
+        "beat",
+        "lab"
+      ],
+      "c3_day": 9,
+      "c3_entry": [],
+      "c3_exit": [
+        "wld"
+      ],
+      "rain_top3_day1": true,
+      "wld_c3_exit": true,
+      "notes": "BEAT/LAB c3 Day9(Jun5→Jun14). WLD c3 EXIT: drops #3→#4(68.13%<RAIN 71.42%). RAIN新入Top3 Day1(未達c3). HYPE重回#7(1.40% 21D). BDX新入#8/BCAP重回#9(21D null,CoinGecko歷史API不可用,30d proxy 1.16%/1.03%). CC維持#10(21D null,30d 0.30%). NEAR大跌至-11.47%→#11出場. INJ/A7A5不在本次scan候選池→自動出場. NDX 30d corr=-0.37(負相關:BTC跌NDX相對穩). ALT-OFF: req1=False(btc_d_delta7=+0.65pp,Jun07 55.9→Jun14 56.55); req2=True(alt_mom7=+7.40%)",
+      "fetched_at_utc": "2026-06-14T00:40:00Z"
     }
   ],
-  "last_updated": "2026-06-12"
+  "last_updated": "2026-06-14"
 }

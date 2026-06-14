@@ -118,5 +118,21 @@
     "n_valid": 14,
     "fetched_at_utc": "2026-06-12T00:30:00Z",
     "note": "req1=True(delta7=-1.63pp 7天累降); req2=False(alt_mom7=-4.04%) → ALT-OFF"
+  },
+  {
+    "date": "2026-06-14",
+    "verdict": "ALT-OFF",
+    "req1": false,
+    "req2": true,
+    "btc_d": 56.55,
+    "btc_d_delta7": 0.65,
+    "alt_mom7": 7.4,
+    "breadth_pct": 50.0,
+    "bonus_a": false,
+    "bonus_b": true,
+    "bonus_c": false,
+    "n_valid": 14,
+    "fetched_at_utc": "2026-06-14T00:40:00Z",
+    "note": "req1=False(btc_d_delta7=+0.65pp,BTC dominance↑ Jun07→Jun14: 55.9→56.55); req2=True(alt_mom7=+7.40%) → ALT-OFF(req1 FAIL)"
   }
 ]

@@ -394,5 +394,14 @@
     "eth_band": "neutral",
     "btc_price": 63657,
     "eth_price": 1673.99
+  },
+  {
+    "date": "2026-06-14",
+    "btc": 50.4,
+    "btc_band": "neutral",
+    "eth": 52.4,
+    "eth_band": "neutral",
+    "btc_price": 64429,
+    "eth_price": 1679.75
   }
 ]
