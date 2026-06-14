@@ -1,102 +1,101 @@
 {
-  "date": "2026-06-12",
-  "weekday": "週五",
-  "updated_tpe": "08:30",
+  "date": "2026-06-14",
+  "weekday": "週日",
+  "updated_tpe": "08:40",
   "verdict": "ALT-OFF",
-  "verdict_reason_code": "req2_fail",
+  "verdict_reason_code": "req1_fail",
   "x": {
     "btc": {
-      "score": 54.0,
+      "score": 50.4,
       "band": "neutral",
-      "delta_1d": 4.1
+      "delta_1d": -3.6
     },
     "eth": {
-      "score": 53.1,
+      "score": 52.4,
       "band": "neutral",
-      "delta_1d": 5.9
+      "delta_1d": -0.7
     },
-    "btc_price": 63657,
-    "btc_price_delta_pct": 3.4,
-    "eth_price": 1673.99,
-    "eth_price_delta_pct": 3.17,
+    "market": {
+      "score": 47.1,
+      "band": "neutral"
+    },
+    "btc_price": 64429,
+    "btc_price_delta_pct": 1.41,
+    "eth_price": 1679.75,
+    "eth_price_delta_pct": 0.86,
     "top_discussions": [
       {
-        "title": "BitMine(Tom Lee)三日累計購入126,971 ETH($2.13億),ETH交易所存量歷史新低14.5M",
+        "title": "BTC反彈至$64,429;ETH升至$1,680;判讀為超賣後短期修復",
         "tag": "bull"
       },
       {
-        "title": "SpaceX今日IPO上市(估值$1.75兆),虹吸市場流動性;比特幣漲幅仍遜於美股",
+        "title": "本週FOMC(6/17-18):Warsh首次點陣圖;降息次數若2→1將壓制BTC",
         "tag": "macro"
       },
       {
-        "title": "Trump宣布即將簽署加密市場結構法案;Clarity Act立法加速",
+        "title": "CFTC批准在岸機構BTC永久期貨;Clarity Act立法加速(目標7/4前)",
         "tag": "reg"
       }
     ]
   },
   "macro": {
-    "vix": 19.44,
-    "move": 69.45,
-    "dxy": 99.73,
-    "tips": 2.15,
-    "etf_flow": null,
-    "etf_flow_last": -69.4,
-    "ndx_corr_30d": null
+    "vix": 17.68,
+    "move": 69.36,
+    "dxy": 99.75,
+    "tips": null,
+    "etf_flow": 85.9,
+    "etf_flow_last": null,
+    "ndx_corr_30d": -0.37
   },
   "dominance": {
-    "btc_d": 56.37,
-    "btc_d_delta7": -1.63,
-    "others_d": 11.83,
-    "total3_d": 23.13,
-    "ethbtc": 0.0263,
-    "alt_mom7": -4.04,
-    "breadth_pct": 14.29,
+    "btc_d": 56.55,
+    "btc_d_delta7": 0.65,
+    "eth_d": 8.88,
+    "others_d": 11.82,
+    "total3_d": 23.12,
+    "ethbtc": 0.026072,
+    "alt_mom7": 7.40,
+    "breadth_pct": 50.0,
     "n_valid": 14,
-    "req1": true,
-    "req2": false,
-    "bonus_a": true,
-    "bonus_b": false,
+    "req1": false,
+    "req2": true,
+    "bonus_a": false,
+    "bonus_b": true,
     "bonus_c": false
   },
   "news": [
     {
       "sev": "high",
-      "title": "BitMine三日購入126,971 ETH($2.13億);ETH交易所存量14.5M創歷史新低"
+      "title": "CFTC批准機構在岸BTC永久期貨;擴大機構進場管道(6/12)"
     },
     {
       "sev": "high",
-      "title": "Trump宣布加密市場結構法案即將簽署;估計大量機構資本湧入"
+      "title": "比特幣ETF連13日淨流出共約44億美元;資金持續撤離"
     },
     {
       "sev": "high",
-      "title": "日本正式接受加密為主流金融資產;2028年BTC/ETH稅率降至20%"
+      "title": "本週FOMC(6/17-18):Warsh首次點陣圖;加息預期升溫為主要壓力源"
     },
     {
       "sev": "med",
-      "title": "Coinbase推出Agents平台:AI代理可自主連接用戶帳戶交易加密資產"
+      "title": "ETH佔代幣化股票發行量47.1%;機構鏈上資產敘事持續強化"
     },
     {
       "sev": "med",
-      "title": "日本SBI新生銀行試點持續:存款利息可轉換BTC/ETH/XRP"
+      "title": "TRM Labs警告世界杯2026加密詐騙(虛假票務/博彩平台)"
     }
   ],
   "calendar": {
-    "today": [
-      {
-        "date": "06-12 今日",
-        "event": "SpaceX IPO上市(估值$1.75兆);虹吸市場流動性",
-        "tag": "macro"
-      },
-      {
-        "date": "06-12 今日",
-        "event": "美國加密市場結構法案最新立法進展",
-        "tag": "reg"
-      }
-    ],
+    "today": [],
     "week": [
       {
-        "date": "06-16 週一",
-        "event": "新任Fed主席Warsh首次FOMC會議(含點陣圖)",
+        "date": "06-17 週三",
+        "event": "FOMC利率決策(第1天);Warsh首次主持",
+        "tag": "fed"
+      },
+      {
+        "date": "06-18 週四",
+        "event": "FOMC利率決策公布+點陣圖;若降息次數2→1可能打壓BTC",
         "tag": "fed"
       }
     ]
@@ -104,71 +103,68 @@
   "strong": {
     "window": "21D",
     "c3_entry": [],
-    "c3_day": 8,
-    "exits": [
-      "bcap",
-      "hype"
-    ],
+    "c3_day": 9,
+    "exits": ["inj", "near", "a7a5"],
     "top10": [
       {
         "rank": 1,
         "sym": "BEAT",
-        "ret": 1095.74,
+        "ret": 520.97,
         "status": "c3"
       },
       {
         "rank": 2,
         "sym": "LAB",
-        "ret": 93.99,
+        "ret": 119.33,
         "status": "c3"
       },
       {
         "rank": 3,
-        "sym": "WLD",
-        "ret": 86.06,
-        "status": "c3"
+        "sym": "RAIN",
+        "ret": 71.42,
+        "status": "up"
       },
       {
         "rank": 4,
-        "sym": "RAIN",
-        "ret": 76.65,
-        "status": "up"
+        "sym": "WLD",
+        "ret": 68.13,
+        "status": "down"
       },
       {
         "rank": 5,
         "sym": "DEXE",
-        "ret": 49.48,
+        "ret": 29.49,
         "status": "hold"
       },
       {
         "rank": 6,
         "sym": "XLM",
-        "ret": 30.95,
+        "ret": 25.47,
         "status": "hold"
       },
       {
         "rank": 7,
-        "sym": "INJ",
-        "ret": 5.47,
-        "status": "new"
+        "sym": "HYPE",
+        "ret": 1.40,
+        "status": "re-entry"
       },
       {
         "rank": 8,
-        "sym": "NEAR",
-        "ret": 4.07,
-        "status": "hold"
+        "sym": "BDX",
+        "ret": null,
+        "status": "new"
       },
       {
         "rank": 9,
-        "sym": "CC",
-        "ret": 4.04,
-        "status": "hold"
+        "sym": "BCAP",
+        "ret": null,
+        "status": "re-entry"
       },
       {
         "rank": 10,
-        "sym": "A7A5",
-        "ret": 3.14,
-        "status": "new"
+        "sym": "CC",
+        "ret": null,
+        "status": "hold"
       }
     ]
   }

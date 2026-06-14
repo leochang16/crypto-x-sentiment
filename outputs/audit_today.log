@@ -1,44 +1,46 @@
-=== DAILY AUDIT 2026-06-12 ===
-Generated: 2026-06-12T00:30:00Z
+=== audit_today.log for 2026-06-14 (週日) ===
+Generated: 2026-06-14T00:40:00Z
 
---- PRICE DATA ---
-BTC: $63,657 (+3.40% 24h) | ETH: $1,673.99 (+3.17% 24h)
-ETH/BTC: 0.02630
+[OK]    today.json written: date=2026-06-14, verdict=ALT-OFF (req1_fail)
+[OK]    dominance_history.json appended: btc_d=56.55, delta7=+0.65pp
+[OK]    sentiment_history.json appended: btc=50.4, eth=52.4
+[OK]    layer1_status.json appended: ALT-OFF, req1=False, req2=True
+[OK]    x_sentiment_history.json appended: btc_composite=50.4, eth=52.4, market=47.1
+[OK]    top3_state.json appended: c3_day=9, top3=[beat,lab,rain], wld c3 EXIT
+[OK]    sources_today.json written
 
---- DOMINANCE (CoinGecko fresh) ---
-BTC_D: 56.37% | ETH_D: 8.93% | others_d: 11.83% | total3_d: 23.13%
-btc_d_delta7: -1.63pp (vs Jun05 baseline 58.0%) → req1=PASS
+[WARN]  tips=null: FRED DFII10 不可用 (WebSearch未返回具體數值，ANTI-CACHE規則禁止估值)
+[WARN]  etf_flow_last=null: Jun-13 (週六) 無ETF流量數據
+[WARN]  bdx 21D=null: CoinGecko historical API返回BTC fallback (beldex CoinGecko ID確認但歷史端點不可用)
+[WARN]  bcap 21D=null: CoinGecko historical API返回BTC fallback (blockchain-capital)
+[WARN]  cc 21D=null: CoinGecko historical API返回0 items (canton-network)
+[INFO]  batch4排序依30d proxy: bdx(1.16%)>#8, bcap(1.03%)>#9, cc(0.30%)>#10
 
---- ALT BASKET (14 coins) ---
-alt_mom7: -4.04% | breadth_pct: 14.29% (2/14 positive) | n_valid: 14
-req2: FAIL (alt_mom7 < 0) → VERDICT: ALT-OFF
+[KEY METRICS]
+BTC price: $64,429 (+1.41% 24h)
+ETH price: $1,679.75 (+0.86% 24h)
+BTC dominance: 56.55% (delta7=+0.65pp → ALT-OFF req1 FAIL)
+alt_mom7: +7.40% (req2 PASS)
+VIX: 17.68 | MOVE: 69.36 | DXY: 99.75
+ETF flow: +$85.9M (Jun 12 data) | NDX corr 30d: -0.37
+BTC sentiment: 50.4 (neutral, -3.6 vs yesterday)
+ETH sentiment: 52.4 (neutral, -0.7 vs yesterday)
 
---- MACRO ---
-VIX: 19.44 | MOVE: 69.45 | DXY: 99.73 | TIPS: 2.15%
-ETF flow: null (farside.co.uk HTTP 403) | etf_flow_last: -69.4M
-NDX corr: null (Yahoo Finance nested structure inaccessible)
+[21D TOP10]
+#1 BEAT  +520.97%  c3 Day9
+#2 LAB   +119.33%  c3 Day9
+#3 RAIN  +71.42%   top3 Day1 (↑ from #4)
+#4 WLD   +68.13%   c3 EXIT (↓ from #3)
+#5 DEXE  +29.49%   hold
+#6 XLM   +25.47%   hold
+#7 HYPE  +1.40%    re-entry
+#8 BDX   null      new
+#9 BCAP  null      re-entry
+#10 CC   null      hold
+[EXITS]: inj, near(-11.47%), a7a5
 
---- SENTIMENT (X/Twitter) ---
-BTC: EN=71.5 ZH=36.5 composite=54.0 [neutral] Δ1d=+4.1
-ETH: EN=56.2 ZH=49.9 composite=53.1 [neutral] Δ1d=+5.9
-Market: EN=59.46 ZH=40.82
-
---- 21D RANKING (fresh historical fetch) ---
-Candidates: beat, lab, wld, rain, dexe, xlm, inj, near, cc, a7a5, hype, bcap
-Top10: BEAT(1095.74%), LAB(93.99%), WLD(86.06%), RAIN(76.65%), DEXE(49.48%)
-       XLM(30.95%), INJ(5.47%), NEAR(4.07%), CC(4.04%), A7A5(3.14%)
-Exits: BCAP(1.15%→#12), HYPE(3.10%→#11)
-New: INJ(#7 re-entry), A7A5(#10)
-
---- C3 SIGNAL ---
-c3_coins: [BEAT, LAB, WLD] | c3_day: 8 | c3_entry: [] | c3_exit: []
-BEAT/LAB c3 Day8 | WLD c3 Day2→Day8 (continuous)
-
---- VERDICT SUMMARY ---
-ALT-OFF: req1=True req2=False | bonus_a=True bonus_b=False bonus_c=False
-reason: alt_mom7=-4.04% (improve from -16.51% yesterday, but still negative)
-
---- NULL FIELDS ---
-etf_flow=null (403), ndx_corr_30d=null (nested structure)
-
-=== END AUDIT ===
+[LAYER 1 v2 VERDICT]
+req1 (btc_d_delta7<0): FAIL (+0.65pp, Jun07:55.9→Jun14:56.55)
+req2 (alt_mom7>0%): PASS (+7.40%)
+bonus_a: false | bonus_b: true | bonus_c: false
+VERDICT: ALT-OFF (req1_fail)
