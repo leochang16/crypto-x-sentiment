@@ -130,5 +130,14 @@
     "fetched_at_utc": "2026-06-14T00:40:00Z",
     "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 40",
     "method": "keyword-based engagement-weighted scoring"
+  },
+  {
+    "date": "2026-06-15",
+    "btc_score": 48.7,
+    "eth_score": 45.7,
+    "btc_band": "neutral",
+    "eth_band": "neutral",
+    "btc_price": 65718,
+    "eth_price": 1727.49
   }
 ]

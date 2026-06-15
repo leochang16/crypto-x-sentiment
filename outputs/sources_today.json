@@ -1,86 +1,62 @@
 {
-  "date": "2026-06-14",
-  "generated_at_utc": "2026-06-14T00:40:00Z",
-  "data_sources": [
-    {
-      "name": "benthepythondev/crypto-intelligence",
-      "purpose": "21D price history for top12 candidates",
-      "coins": ["beat", "lab", "wld", "rain", "hype", "near", "dexe", "xlm", "vvv", "bdx", "bcap", "cc"],
-      "apify_runs": 4,
-      "notes": "bdx/bcap CoinGecko historical API returned BTC fallback; cc returned 0 items; all three recorded as null 21D (30d proxy used for ranking)"
-    },
-    {
-      "name": "benthepythondev/crypto-intelligence",
-      "purpose": "Markets data (100 coins, 7d+30d performance)",
-      "mode": "markets",
-      "items": 100,
-      "dataset": "mhSVN6cTYBLIayUOu"
-    },
-    {
-      "name": "makework36/coingecko-scraper",
-      "purpose": "Global dominance data (btc_d, eth_d, total3_d, others_d)",
-      "mode": "global",
-      "values": {
-        "btc_d": 56.55,
-        "eth_d": 8.88,
-        "others_d": 11.82,
-        "total3_d": 23.12
-      }
-    },
-    {
-      "name": "kaitoeasyapi/twitter-x-data-tweet-scraper",
-      "purpose": "X/Twitter sentiment (BTC EN+ZH, ETH EN+ZH, Crypto market EN+ZH)",
-      "datasets": ["BTC EN", "BTC ZH", "ETH EN", "ETH ZH", "Crypto market EN", "加密 ZH"],
-      "n_tweets": 160,
-      "scores": {
-        "btc_en": 62.6,
-        "btc_zh": 38.1,
-        "btc_composite": 50.4,
-        "eth_en": 56.3,
-        "eth_zh": 48.5,
-        "eth_composite": 52.4,
-        "market_en": 49.0,
-        "market_zh": 45.1
-      }
-    },
-    {
-      "name": "benthepythondev/yahoo-finance-scraper",
-      "purpose": "NDX 30d correlation with BTC (BTC-USD + ^NDX 30-day daily closes)",
-      "run_id": "aJMphv95WfvcEYUP9",
-      "dataset": "ajt5fmlVFiBygZYjq",
-      "result": {
-        "ndx_corr_30d": -0.37,
-        "n_days": 30,
-        "period": "2026-05-01 to 2026-06-12"
-      }
-    },
-    {
-      "name": "apify/rag-web-browser",
-      "purpose": "BTC ETF daily flow (farside.co.uk/btc/)",
-      "result": {
-        "etf_flow": 85.9,
-        "date": "2026-06-12",
-        "unit": "M USD net inflow"
-      }
-    },
-    {
-      "name": "benthepythondev/yahoo-finance-scraper",
-      "purpose": "Macro indicators: VIX, MOVE, DXY",
-      "values": {
-        "vix": 17.68,
-        "move": 69.36,
-        "dxy": 99.75,
-        "tips": null
-      }
-    }
-  ],
-  "nulls": ["tips"],
-  "null_reasons": {
-    "tips": "FRED DFII10 unavailable via WebSearch; ANTI-CACHE rule prohibits estimation"
+  "btc_price": {
+    "value": 65718,
+    "source": "benthepythondev/crypto-intelligence markets",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
   },
-  "batch4_notes": {
-    "bdx": {"coingecko_id": "beldex", "30d": 1.16, "21d": null, "reason": "CoinGecko historical API returns BTC fallback"},
-    "bcap": {"coingecko_id": "blockchain-capital", "30d": 1.03, "21d": null, "reason": "CoinGecko historical API returns BTC fallback"},
-    "cc": {"coingecko_id": "canton-network", "30d": 0.30, "21d": null, "reason": "CoinGecko historical API returns 0 items"}
+  "eth_price": {
+    "value": 1727.49,
+    "source": "benthepythondev/crypto-intelligence markets",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "btc_d": {
+    "value": 56.65,
+    "source": "makework36/coingecko-scraper mode=global",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "eth_d": {
+    "value": 8.95,
+    "source": "makework36/coingecko-scraper mode=global",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "vix": {
+    "value": 17.68,
+    "source": "benthepythondev/yahoo-finance-scraper ^VIX quote",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "move": {
+    "value": 69.36,
+    "source": "benthepythondev/yahoo-finance-scraper ^MOVE quote",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "dxy": {
+    "value": 99.49,
+    "source": "benthepythondev/yahoo-finance-scraper DX-Y.NYB quote",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "tips": {
+    "value": null,
+    "source": "WebSearch FRED DFII10 - numeric value unavailable",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "etf_flow": {
+    "value": 85.9,
+    "source": "farside.co.uk/btc/ - Jun12 row Total (latest; Jun13-14 weekend)",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "ndx_corr_30d": {
+    "value": 0.55,
+    "source": "Yahoo Finance BTC-USD+^NDX history 3mo, Pearson 30 trading days",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "btc_sentiment": {
+    "value": 48.7,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms 150 tweets",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
+  },
+  "eth_sentiment": {
+    "value": 45.7,
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms 150 tweets",
+    "fetched_at_utc": "2026-06-15T00:23:13Z"
   }
 }
