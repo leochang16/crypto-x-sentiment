@@ -1,46 +1,35 @@
-=== audit_today.log for 2026-06-14 (週日) ===
-Generated: 2026-06-14T00:40:00Z
+=== 2026-06-15 audit log (fresh run) ===
+PART A: Twitter X sentiment
+  kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 25 maxItems = 160 tweets returned
+  Spam filter: airdrop/giveaway/faucet removed
+  BTC composite: 48.7 (neutral, -1.7 vs yesterday 50.4)
+  ETH composite: 45.7 (neutral, -6.7 vs yesterday 52.4)
+  market_en/zh: 50.0 (neutral - no valid tweets after filtering)
+  
+PART B:
+  B-0 benthepythondev/crypto-intelligence markets: 100 coins OK
+  B-1 makework36/coingecko-scraper global: OK
+  btc_d=56.654769% (today) vs Jun08=56.19% → delta7=+0.46pp → req1=FALSE (FAIL)
+  alt_mom7=+4.03%, breadth=42.86% (6/14 coins > BTC 7d) → req2=TRUE (PASS)
+  VERDICT: ALT-OFF (req1_fail)
+  bonus_a=False(+0.46>-0.5), bonus_b=True(4.03>1.5), bonus_c=False(11.83<12)
 
-[OK]    today.json written: date=2026-06-14, verdict=ALT-OFF (req1_fail)
-[OK]    dominance_history.json appended: btc_d=56.55, delta7=+0.65pp
-[OK]    sentiment_history.json appended: btc=50.4, eth=52.4
-[OK]    layer1_status.json appended: ALT-OFF, req1=False, req2=True
-[OK]    x_sentiment_history.json appended: btc_composite=50.4, eth=52.4, market=47.1
-[OK]    top3_state.json appended: c3_day=9, top3=[beat,lab,rain], wld c3 EXIT
-[OK]    sources_today.json written
+PART C:
+  C-1: BTC=$65,718 (+2.07% 24h), ETH=$1,727.49 (+2.88% 24h) from markets
+  C-2: VIX=17.68, MOVE=69.36, DXY=99.49 (yesterday 99.75)
+  C-3: FRED DFII10 TIPS=NULL (WebSearch unable to extract numeric value)
+  C-4: Farside farside.co.uk/btc/ - latest row: Jun12 Total=$85.9M (net inflow)
+       Jun13-14 weekend; Jun15 data not yet published
+  C-5: NDX corr 30d=0.55 (Pearson, 30 trading days BTC-USD vs ^NDX via Yahoo Finance)
 
-[WARN]  tips=null: FRED DFII10 不可用 (WebSearch未返回具體數值，ANTI-CACHE規則禁止估值)
-[WARN]  etf_flow_last=null: Jun-13 (週六) 無ETF流量數據
-[WARN]  bdx 21D=null: CoinGecko historical API返回BTC fallback (beldex CoinGecko ID確認但歷史端點不可用)
-[WARN]  bcap 21D=null: CoinGecko historical API返回BTC fallback (blockchain-capital)
-[WARN]  cc 21D=null: CoinGecko historical API返回0 items (canton-network)
-[INFO]  batch4排序依30d proxy: bdx(1.16%)>#8, bcap(1.03%)>#9, cc(0.30%)>#10
+PART E: 12 historical actors (4 batches of 3, serial-within-batch)
+  1. audiera(beat): +371.11% | 2. lab: +156.28% | 3. worldcoin-wld: +79.73%
+  4. humanity(h): +117.48% | 5. rain: +72.34% | 6. hyperliquid(hype): +3.14%
+  7. near: -6.38% | 8. dexe: +17.37% | 9. stellar(xlm): +29.24%
+  10. venice-token(vvv): -11.48% | 11. morpho: -12.70% | 12. cosmos(atom): -2.60%
+  
+  Final Top 10: BEAT(1) LAB(2) H(3) WLD(4) RAIN(5) XLM(6) DEXE(7) HYPE(8) ATOM(9) NEAR(10)
+  c3: BEAT+LAB Day10 | H new Day1 in top3 | RAIN drops #3→#5
+  Exits: BDX, BCAP, CC (dropped from top10)
 
-[KEY METRICS]
-BTC price: $64,429 (+1.41% 24h)
-ETH price: $1,679.75 (+0.86% 24h)
-BTC dominance: 56.55% (delta7=+0.65pp → ALT-OFF req1 FAIL)
-alt_mom7: +7.40% (req2 PASS)
-VIX: 17.68 | MOVE: 69.36 | DXY: 99.75
-ETF flow: +$85.9M (Jun 12 data) | NDX corr 30d: -0.37
-BTC sentiment: 50.4 (neutral, -3.6 vs yesterday)
-ETH sentiment: 52.4 (neutral, -0.7 vs yesterday)
-
-[21D TOP10]
-#1 BEAT  +520.97%  c3 Day9
-#2 LAB   +119.33%  c3 Day9
-#3 RAIN  +71.42%   top3 Day1 (↑ from #4)
-#4 WLD   +68.13%   c3 EXIT (↓ from #3)
-#5 DEXE  +29.49%   hold
-#6 XLM   +25.47%   hold
-#7 HYPE  +1.40%    re-entry
-#8 BDX   null      new
-#9 BCAP  null      re-entry
-#10 CC   null      hold
-[EXITS]: inj, near(-11.47%), a7a5
-
-[LAYER 1 v2 VERDICT]
-req1 (btc_d_delta7<0): FAIL (+0.65pp, Jun07:55.9→Jun14:56.55)
-req2 (alt_mom7>0%): PASS (+7.40%)
-bonus_a: false | bonus_b: true | bonus_c: false
-VERDICT: ALT-OFF (req1_fail)
+NULL FIELDS: tips (FRED DFII10 unavailable)

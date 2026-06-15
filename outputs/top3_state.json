@@ -1,452 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-03",
-      "scan_done": true,
-      "layer1_verdict": "GO",
-      "method": "CoinDesk 30d proxy + CMC Apify RAG (CoinGecko API 403)",
-      "prev_date": "2026-06-02",
-      "prev_top3": [
-        "hype",
-        "zec",
-        "near"
-      ],
-      "prev_top10": [
-        "hype",
-        "zec",
-        "near",
-        "xlm",
-        "fet",
-        "uni",
-        "dot",
-        "ondo",
-        "render",
-        "ton"
-      ],
-      "top3_21d": [
-        "hype",
-        "zec",
-        "xlm"
-      ],
-      "top10_21d": [
-        "hype",
-        "zec",
-        "xlm",
-        "near",
-        "fet",
-        "ondo",
-        "dot",
-        "uni",
-        "ton",
-        "bnb"
-      ],
-      "top10_gains_21d": {
-        "hype": 73,
-        "zec": 45,
-        "xlm": 42,
-        "near": 35,
-        "fet": 25,
-        "ondo": 18,
-        "dot": 12,
-        "uni": 10,
-        "ton": 9,
-        "bnb": 3
-      },
-      "exits_today": [
-        "render"
-      ],
-      "new_entrants": [
-        "bnb"
-      ],
-      "c3_signals": [
-        "hype",
-        "zec"
-      ],
-      "c3_new_today": [],
-      "c3_continuing": [
-        "hype",
-        "zec"
-      ],
-      "c3_exited": [
-        "near"
-      ],
-      "near_exits_top3_note": "NEAR drops from top3 (XLM替入). NEAR仍#4. c3條件: Jun1∩Jun2∩Jun3 top3 = {hype,zec,near}∩{hype,zec,near}∩{hype,zec,xlm} = {hype,zec}",
-      "hype_c3_continuing": true,
-      "zec_c3_day5": true,
-      "near_exits_c3": true,
-      "hype_7d": 7.0,
-      "zec_7d": 23.0,
-      "xlm_7d": 36.82,
-      "near_7d": -7.2,
-      "bnb_7d": -8.1,
-      "render_exit_7d": -15.0,
-      "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+73% 21D) · ZEC c3 Day5(+45% 21D/+23% 7D,Iran隱私幣敘事) · XLM🆕#3(+42% 21D/+36.8% 7D) · NEAR跌至#4(c3退出) · BNB新入#10 · RENDER→出場 · btc_d_delta7=-0.03pp✓ alt_mom7=+1.04%✓ 0 bonus → 🟢 GO · BTC $67,154(-3.41% 24h) · Fear&Greed=27(恐慌) · ethconf NYC 6/8"
-    },
-    {
-      "date": "2026-06-04",
-      "scan_done": true,
-      "layer1_verdict": "GO",
-      "method": "CMC via Apify RAG + 7d% proxy (CoinGecko API 403)",
-      "prev_date": "2026-06-03",
-      "prev_top3": [
-        "hype",
-        "zec",
-        "xlm"
-      ],
-      "prev_top10": [
-        "hype",
-        "zec",
-        "xlm",
-        "near",
-        "fet",
-        "ondo",
-        "dot",
-        "uni",
-        "ton",
-        "bnb"
-      ],
-      "top3_21d": [
-        "hype",
-        "zec",
-        "xlm"
-      ],
-      "top10_21d": [
-        "hype",
-        "zec",
-        "xlm",
-        "near",
-        "fet",
-        "ondo",
-        "xmr",
-        "dot",
-        "uni",
-        "ton"
-      ],
-      "top10_gains_21d": {
-        "hype": 78,
-        "zec": 48,
-        "xlm": 40,
-        "near": 34,
-        "fet": 27,
-        "ondo": 21,
-        "xmr": 16,
-        "dot": 12,
-        "uni": 11,
-        "ton": 8
-      },
-      "exits_today": [
-        "bnb"
-      ],
-      "new_entrants": [
-        "xmr"
-      ],
-      "c3_signals": [
-        "hype",
-        "zec"
-      ],
-      "c3_new_today": [],
-      "c3_continuing": [
-        "hype",
-        "zec"
-      ],
-      "xlm_c3_day2": true,
-      "hype_c3_continuing": true,
-      "zec_c3_day6": true,
-      "hype_7d": 29.95,
-      "zec_7d": 16.26,
-      "bnb_exits_7d": -3.69,
-      "carry_signal": "🟢 GO · c3: HYPE+ZEC繼續 · HYPE c3持守(+78% 21D/+29.95% 7D) · ZEC c3 Day6(+48% 21D/+16.26% 7D) · XLM Day2 #3(+40% 21D/待c3明日) · BNB跌出Top10(-3.69% 7D) · XMR🆕#7(Iran隱私幣) · btc_d_delta7=-0.26pp✓ alt_mom7=+7.81%✓(6/14 valid) · 1bonus(bonus_b) → 🟢 GO · BTC $64,265(-4.25% 24h) · Fear&Greed=21(極度恐慌) · SpaceX IPO路演Jun4 · ethconf NYC 6/8"
-    },
-    {
-      "date": "2026-06-05",
-      "top3_21d": [
-        "lab",
-        "beat",
-        "h"
-      ],
-      "top10_21d": [
-        "lab",
-        "beat",
-        "h",
-        "wld",
-        "rain",
-        "dexe",
-        "near",
-        "vvv",
-        "hype",
-        "inj"
-      ],
-      "top3_gains_30d": {
-        "lab": 271.7,
-        "beat": 198.5,
-        "h": 183.9
-      },
-      "top10_gains_30d": {
-        "lab": 271.7,
-        "beat": 198.5,
-        "h": 183.9,
-        "wld": 97.9,
-        "rain": 91.7,
-        "dexe": 87.6,
-        "near": 65.9,
-        "vvv": 55.3,
-        "hype": 41.8,
-        "inj": 39.5
-      },
-      "c3_entry": [],
-      "c3_exit": [
-        "zec",
-        "xlm",
-        "fet",
-        "ondo",
-        "xmr",
-        "dot",
-        "uni",
-        "ton"
-      ],
-      "regime": "ALT-OFF",
-      "layer1_verdict": "ALT-OFF",
-      "prev_top3": [
-        "hype",
-        "zec",
-        "xlm"
-      ],
-      "prev_top10": [
-        "hype",
-        "zec",
-        "xlm",
-        "near",
-        "fet",
-        "ondo",
-        "xmr",
-        "dot",
-        "uni",
-        "ton"
-      ]
-    },
-    {
-      "date": "2026-06-06",
-      "scan_done": true,
-      "regime": "ALT-OFF",
-      "method": "benthepythondev/crypto-intelligence via Apify (30D sort)",
-      "prev_date": "2026-06-05",
-      "prev_top3": [
-        "lab",
-        "beat",
-        "h"
-      ],
-      "prev_top10": [
-        "lab",
-        "beat",
-        "h",
-        "wld",
-        "rain",
-        "dexe",
-        "near",
-        "vvv",
-        "hype",
-        "inj"
-      ],
-      "top3": [
-        "beat",
-        "h",
-        "lab"
-      ],
-      "top10": [
-        "beat",
-        "h",
-        "lab",
-        "wld",
-        "rain",
-        "dexe",
-        "vvv",
-        "hype",
-        "inj",
-        "near"
-      ],
-      "top10_details": [
-        {
-          "symbol": "beat",
-          "name": "Audiera",
-          "price_change_percentage_30d": 204.7,
-          "price_change_percentage_7d": 45.8,
-          "market_cap_rank": 106
-        },
-        {
-          "symbol": "h",
-          "name": "Humanity",
-          "price_change_percentage_30d": 194.6,
-          "price_change_percentage_7d": 108.8,
-          "market_cap_rank": 62
-        },
-        {
-          "symbol": "lab",
-          "name": "LAB",
-          "price_change_percentage_30d": 115.1,
-          "price_change_percentage_7d": 46.0,
-          "market_cap_rank": 30
-        },
-        {
-          "symbol": "wld",
-          "name": "Worldcoin",
-          "price_change_percentage_30d": 107.0,
-          "price_change_percentage_7d": 80.9,
-          "market_cap_rank": 44
-        },
-        {
-          "symbol": "rain",
-          "name": "Rain",
-          "price_change_percentage_30d": 81.8,
-          "price_change_percentage_7d": -9.2,
-          "market_cap_rank": 14
-        },
-        {
-          "symbol": "dexe",
-          "name": "DeXe",
-          "price_change_percentage_30d": 71.9,
-          "price_change_percentage_7d": 5.8,
-          "market_cap_rank": 72
-        },
-        {
-          "symbol": "vvv",
-          "name": "Venice Token",
-          "price_change_percentage_30d": 46.4,
-          "price_change_percentage_7d": 13.4,
-          "market_cap_rank": 81
-        },
-        {
-          "symbol": "hype",
-          "name": "Hyperliquid",
-          "price_change_percentage_30d": 39.5,
-          "price_change_percentage_7d": -7.0,
-          "market_cap_rank": 10
-        },
-        {
-          "symbol": "inj",
-          "name": "Injective",
-          "price_change_percentage_30d": 32.6,
-          "price_change_percentage_7d": -20.7,
-          "market_cap_rank": 99
-        },
-        {
-          "symbol": "near",
-          "name": "NEAR Protocol",
-          "price_change_percentage_30d": 32.5,
-          "price_change_percentage_7d": -17.4,
-          "market_cap_rank": 39
-        }
-      ],
-      "c3_entry": [],
-      "c3_exit": [],
-      "notes": "BEAT/H/LAB Day2 in Top3 (need day3 for c3). No exits. ALT-OFF: alt_mom7=-15.89%(req2 FAIL)."
-    },
-    {
-      "date": "2026-06-07",
-      "scan_done": true,
-      "regime": "ALT-OFF",
-      "method": "benthepythondev/crypto-intelligence via Apify (30D sort)",
-      "prev_date": "2026-06-06",
-      "prev_top3": [
-        "beat",
-        "h",
-        "lab"
-      ],
-      "prev_top10": [
-        "beat",
-        "h",
-        "lab",
-        "wld",
-        "rain",
-        "dexe",
-        "vvv",
-        "hype",
-        "inj",
-        "near"
-      ],
-      "top3": [
-        "beat",
-        "h",
-        "lab"
-      ],
-      "top10": [
-        "beat",
-        "h",
-        "lab",
-        "rain",
-        "wld",
-        "dexe",
-        "inj",
-        "xlm",
-        "hype",
-        "vvv"
-      ],
-      "top10_details": [
-        {
-          "symbol": "beat",
-          "name": "Audiera",
-          "price_change_percentage_30d": 357.8
-        },
-        {
-          "symbol": "h",
-          "name": "Humanity",
-          "price_change_percentage_30d": 223.3
-        },
-        {
-          "symbol": "lab",
-          "name": "LAB",
-          "price_change_percentage_30d": 194.6
-        },
-        {
-          "symbol": "rain",
-          "name": "Rain",
-          "price_change_percentage_30d": 73.4
-        },
-        {
-          "symbol": "wld",
-          "name": "Worldcoin",
-          "price_change_percentage_30d": 64.8
-        },
-        {
-          "symbol": "dexe",
-          "name": "DeXe",
-          "price_change_percentage_30d": 64.3
-        },
-        {
-          "symbol": "inj",
-          "name": "Injective",
-          "price_change_percentage_30d": 34.9
-        },
-        {
-          "symbol": "xlm",
-          "name": "Stellar",
-          "price_change_percentage_30d": 34.4
-        },
-        {
-          "symbol": "hype",
-          "name": "Hyperliquid",
-          "price_change_percentage_30d": 33.5
-        },
-        {
-          "symbol": "vvv",
-          "name": "Venice Token",
-          "price_change_percentage_30d": 27.5
-        }
-      ],
-      "exits_today": [
-        "near"
-      ],
-      "new_entrants": [
-        "xlm"
-      ],
-      "c3_entry": [
-        "beat",
-        "h",
-        "lab"
-      ],
-      "c3_exit": [],
-      "notes": "🔔 c3 ENTRY TRIGGERED: BEAT/H/LAB Day3 in Top3 → Entry signal. NEAR出場(+32.5% 30D跌出Top10). XLM新入#8(+34.4% 30D). ALT-OFF: req1=null(無May31基準) · req2 FAIL(alt_mom7=-18.2%). ALT-OFF環境: 記錄c3訊號。"
-    },
-    {
       "date": "2026-06-08",
       "scan_done": true,
       "regime": "ALT-OFF",
@@ -917,7 +471,79 @@
       "wld_c3_exit": true,
       "notes": "BEAT/LAB c3 Day9(Jun5→Jun14). WLD c3 EXIT: drops #3→#4(68.13%<RAIN 71.42%). RAIN新入Top3 Day1(未達c3). HYPE重回#7(1.40% 21D). BDX新入#8/BCAP重回#9(21D null,CoinGecko歷史API不可用,30d proxy 1.16%/1.03%). CC維持#10(21D null,30d 0.30%). NEAR大跌至-11.47%→#11出場. INJ/A7A5不在本次scan候選池→自動出場. NDX 30d corr=-0.37(負相關:BTC跌NDX相對穩). ALT-OFF: req1=False(btc_d_delta7=+0.65pp,Jun07 55.9→Jun14 56.55); req2=True(alt_mom7=+7.40%)",
       "fetched_at_utc": "2026-06-14T00:40:00Z"
+    },
+    {
+      "date": "2026-06-15",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "method": "benthepythondev/crypto-intelligence mode=historical days=21",
+      "prev_date": "2026-06-14",
+      "prev_top3": [
+        "beat",
+        "lab",
+        "rain"
+      ],
+      "prev_top10": [
+        "beat",
+        "lab",
+        "rain",
+        "wld",
+        "dexe",
+        "xlm",
+        "hype",
+        "bdx",
+        "bcap",
+        "cc"
+      ],
+      "top3": [
+        "beat",
+        "lab",
+        "h"
+      ],
+      "top10": [
+        "beat",
+        "lab",
+        "h",
+        "wld",
+        "rain",
+        "xlm",
+        "dexe",
+        "hype",
+        "atom",
+        "near"
+      ],
+      "top10_gains_21d": {
+        "beat": 371.11,
+        "lab": 156.28,
+        "h": 117.48,
+        "wld": 79.73,
+        "rain": 72.34,
+        "xlm": 29.24,
+        "dexe": 17.37,
+        "hype": 3.14,
+        "atom": -2.6,
+        "near": -6.38
+      },
+      "exits_today": [
+        "bdx",
+        "bcap",
+        "cc"
+      ],
+      "new_entrants": [
+        "h",
+        "atom",
+        "near"
+      ],
+      "c3_coins": [
+        "beat",
+        "lab"
+      ],
+      "c3_day": 10,
+      "c3_entry": [],
+      "c3_exit": [],
+      "notes": "BEAT/LAB c3 Day10(Jun5→Jun15). H新入Top3 Day1(+117.48%, Humanity). RAIN從Top3降至#5(72.34%). BDX/BCAP/CC出場. ATOM新入#9(cosmos,-2.60%). NEAR重返#10(-6.38%). ALT-OFF: req1=False(btc_d_delta7=+0.46pp,Jun08:56.19%→Jun15:56.65%) req2=True(alt_mom7=+4.03%)",
+      "fetched_at_utc": "2026-06-15T00:22:23Z"
     }
   ],
-  "last_updated": "2026-06-14"
+  "last_updated": "2026-06-15"
 }

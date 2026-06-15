@@ -134,5 +134,15 @@
     "n_valid": 14,
     "fetched_at_utc": "2026-06-14T00:40:00Z",
     "note": "req1=False(btc_d_delta7=+0.65pp,BTC dominance↑ Jun07→Jun14: 55.9→56.55); req2=True(alt_mom7=+7.40%) → ALT-OFF(req1 FAIL)"
+  },
+  {
+    "date": "2026-06-15",
+    "verdict": "ALT-OFF",
+    "reason": "req1_fail",
+    "btc_d": 56.65,
+    "btc_d_delta7": 0.46,
+    "alt_mom7": 4.03,
+    "req1": false,
+    "req2": true
   }
 ]
