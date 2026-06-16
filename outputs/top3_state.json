@@ -543,7 +543,79 @@
       "c3_exit": [],
       "notes": "BEAT/LAB c3 Day10(Jun5→Jun15). H新入Top3 Day1(+117.48%, Humanity). RAIN從Top3降至#5(72.34%). BDX/BCAP/CC出場. ATOM新入#9(cosmos,-2.60%). NEAR重返#10(-6.38%). ALT-OFF: req1=False(btc_d_delta7=+0.46pp,Jun08:56.19%→Jun15:56.65%) req2=True(alt_mom7=+4.03%)",
       "fetched_at_utc": "2026-06-15T00:22:23Z"
+    },
+    {
+      "date": "2026-06-16",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "method": "benthepythondev/crypto-intelligence mode=historical days=21 (wld/lab/rain/inj/vvv/cc fallback to 30d)",
+      "prev_date": "2026-06-15",
+      "prev_top3": [
+        "beat",
+        "lab",
+        "h"
+      ],
+      "prev_top10": [
+        "beat",
+        "lab",
+        "h",
+        "wld",
+        "rain",
+        "xlm",
+        "dexe",
+        "hype",
+        "atom",
+        "near"
+      ],
+      "top3": [
+        "beat",
+        "wld",
+        "lab"
+      ],
+      "top10": [
+        "beat",
+        "wld",
+        "lab",
+        "rain",
+        "xlm",
+        "inj",
+        "vvv",
+        "hype",
+        "dexe",
+        "cc"
+      ],
+      "top10_gains_21d": {
+        "beat": 329.97,
+        "wld": 150.29,
+        "lab": 115.16,
+        "rain": 83.60,
+        "xlm": 45.32,
+        "inj": 17.46,
+        "vvv": 14.84,
+        "hype": 12.86,
+        "dexe": 9.02,
+        "cc": 8.10
+      },
+      "exits_today": [
+        "h",
+        "atom",
+        "near"
+      ],
+      "new_entrants": [
+        "inj",
+        "vvv",
+        "cc"
+      ],
+      "c3_coins": [
+        "beat",
+        "lab"
+      ],
+      "c3_day": 11,
+      "c3_entry": [],
+      "c3_exit": [],
+      "notes": "BEAT/LAB c3 Day11(Jun5→Jun16). WLD新入Top3 Day1(+150.29%fallback,30d; actor返回0項). H退出Top3(Day1結束). H/ATOM/NEAR退出Top10. INJ/VVV/CC新入Top10. ALT-OFF: req1=False(btc_d_delta7=+0.35pp,Jun09:56.12%→Jun16:56.47%) req2=True(alt_mom7=+5.81%)",
+      "fetched_at_utc": "2026-06-16T01:04:00Z"
     }
   ],
-  "last_updated": "2026-06-15"
+  "last_updated": "2026-06-16"
 }

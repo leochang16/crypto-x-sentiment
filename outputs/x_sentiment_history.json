@@ -139,5 +139,23 @@
     "eth_band": "neutral",
     "btc_price": 65718,
     "eth_price": 1727.49
+  },
+  {
+    "date": "2026-06-16",
+    "btc_en": 51.4,
+    "btc_zh": 50.1,
+    "btc_composite": 50.3,
+    "btc_band": "neutral",
+    "eth_en": 52.5,
+    "eth_zh": 51.1,
+    "eth_composite": 51.3,
+    "eth_band": "neutral",
+    "market_en": 46.3,
+    "market_zh": 57.1,
+    "market_composite": 54.8,
+    "n_tweets": 224,
+    "fetched_at_utc": "2026-06-16T00:55:28Z",
+    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 40",
+    "method": "keyword-based engagement-weighted scoring"
   }
 ]
