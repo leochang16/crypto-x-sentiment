@@ -51,7 +51,7 @@
     "total3_d": 23.22,
     "ethbtc": 0.02704,
     "alt_mom7": 5.81,
-    "breadth_pct": 50.0,
+    "breadth_pct": 50,
     "n_valid": 14,
     "req1": false,
     "req2": true,
@@ -114,61 +114,71 @@
         "rank": 1,
         "sym": "BEAT",
         "ret": 273.96,
-        "status": "c3"
+        "status": "c3",
+        "id": "audiera"
       },
       {
         "rank": 2,
         "sym": "LAB",
         "ret": 124.51,
-        "status": "c3"
+        "status": "c3",
+        "id": "lab"
       },
       {
         "rank": 3,
         "sym": "RAIN",
         "ret": 70.9,
-        "status": "up"
+        "status": "up",
+        "id": "rain"
       },
       {
         "rank": 4,
         "sym": "WLD",
         "ret": 64.16,
-        "status": "hold"
+        "status": "hold",
+        "id": "worldcoin-wld"
       },
       {
         "rank": 5,
         "sym": "XLM",
         "ret": 44.52,
-        "status": "up"
+        "status": "up",
+        "id": "stellar"
       },
       {
         "rank": 6,
         "sym": "LIT",
         "ret": 36.76,
-        "status": "new"
+        "status": "new",
+        "id": "lighter"
       },
       {
         "rank": 7,
         "sym": "HYPE",
         "ret": 18.73,
-        "status": "up"
+        "status": "up",
+        "id": "hyperliquid"
       },
       {
         "rank": 8,
         "sym": "DEXE",
         "ret": 12.81,
-        "status": "down"
+        "status": "down",
+        "id": "dexe"
       },
       {
         "rank": 9,
         "sym": "NIGHT",
         "ret": 4.85,
-        "status": "new"
+        "status": "new",
+        "id": "midnight-3"
       },
       {
         "rank": 10,
         "sym": "CC",
-        "ret": 1.0,
-        "status": "new"
+        "ret": 1,
+        "status": "new",
+        "id": "canton-network"
       }
     ]
   }
