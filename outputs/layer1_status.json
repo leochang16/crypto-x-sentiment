@@ -144,5 +144,21 @@
     "alt_mom7": 4.03,
     "req1": false,
     "req2": true
+  },
+  {
+    "date": "2026-06-16",
+    "verdict": "ALT-OFF",
+    "req1": false,
+    "req2": true,
+    "btc_d": 56.47,
+    "btc_d_delta7": 0.35,
+    "alt_mom7": 5.81,
+    "breadth_pct": 50.0,
+    "bonus_a": false,
+    "bonus_b": true,
+    "bonus_c": false,
+    "n_valid": 14,
+    "fetched_at_utc": "2026-06-16T00:55:36Z",
+    "note": "req1=False(btc_d_delta7=+0.35pp, Jun09:56.12%→Jun16:56.47%); req2=True(alt_mom7=+5.81%) → ALT-OFF(req1 FAIL)"
   }
 ]

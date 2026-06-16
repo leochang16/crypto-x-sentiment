@@ -1,57 +1,57 @@
 {
-  "date": "2026-06-15",
-  "weekday": "週一",
-  "updated_tpe": "08:21",
+  "date": "2026-06-16",
+  "weekday": "週二",
+  "updated_tpe": "09:05",
   "verdict": "ALT-OFF",
   "verdict_reason_code": "req1_fail",
   "x": {
     "btc": {
-      "score": 48.7,
+      "score": 50.3,
       "band": "neutral",
-      "delta_1d": -1.7
+      "delta_1d": 1.6
     },
     "eth": {
-      "score": 45.7,
+      "score": 51.3,
       "band": "neutral",
-      "delta_1d": -6.7
+      "delta_1d": 5.6
     },
-    "btc_price": 65718,
-    "btc_price_delta_pct": 2.07,
-    "eth_price": 1727.49,
-    "eth_price_delta_pct": 2.88,
+    "btc_price": 66301,
+    "btc_price_delta_pct": 1.21,
+    "eth_price": 1793.17,
+    "eth_price_delta_pct": 4.31,
     "top_discussions": [
       {
-        "title": "BTC重回$6.4萬ETH逼近$1700空頭遭爆倉",
+        "title": "XLM大漲+15%ALT情緒回暖FOMC前夕佈局",
         "tag": "bull"
       },
       {
-        "title": "技術分析BTC圖形看漲ETH結構極度看漲",
-        "tag": "bull"
-      },
-      {
-        "title": "BOJ 48H可能升息歷史上每次均壓制BTC",
+        "title": "BTC ETF 6/15淨流出-131M機構觀望Warsh首次FOMC",
         "tag": "bear"
+      },
+      {
+        "title": "WLD+12.8%UNI+15%DeFi幣共振上漲鏈上活躍回升",
+        "tag": "bull"
       }
     ]
   },
   "macro": {
-    "vix": 17.68,
-    "move": 69.36,
-    "dxy": 99.49,
-    "dxy_last": 99.75,
+    "vix": 16.20,
+    "move": 69.38,
+    "dxy": 99.65,
+    "dxy_last": 99.49,
     "tips": null,
-    "etf_flow": 85.9,
+    "etf_flow": -131.2,
     "etf_flow_last": 85.9,
-    "ndx_corr_30d": 0.55
+    "ndx_corr_30d": 0.59
   },
   "dominance": {
-    "btc_d": 56.65,
-    "btc_d_delta7": 0.46,
-    "others_d": 11.83,
-    "total3_d": 21.18,
-    "ethbtc": 0.02629,
-    "alt_mom7": 4.03,
-    "breadth_pct": 42.86,
+    "btc_d": 56.47,
+    "btc_d_delta7": 0.35,
+    "others_d": 11.81,
+    "total3_d": 23.22,
+    "ethbtc": 0.02704,
+    "alt_mom7": 5.81,
+    "breadth_pct": 50.0,
     "n_valid": 14,
     "req1": false,
     "req2": true,
@@ -62,33 +62,34 @@
   "news": [
     {
       "sev": "high",
-      "title": "FOMC 6/17 Warsh首次會議+點陣圖，持平98%但降息路徑決定BTC方向"
+      "title": "Fed Warsh主持首次FOMC今日開幕明17日利率+點陣圖主導BTC方向"
     },
     {
       "sev": "high",
-      "title": "ZEC單日+12%隱私幣需求升溫，HYPE+5.4%打破整理格局"
+      "title": "BTC ETF 6/15淨流出-131.2M,GBTC砸盤-124M機構觀望FOMC結果"
     },
     {
       "sev": "med",
-      "title": "BTC ETF 6/12淨流入+$85.9M，終結5日淨流出，IBIT主力回歸"
+      "title": "XLM 24h+15%創波段新高,Stellar生態訊號引發山寨跟進"
     },
     {
       "sev": "med",
-      "title": "SpaceX Nasdaq IPO攜18,712 BTC戰略儲備，機構錨定效應增強"
+      "title": "WLD+12.8%/UNI+15%/AAVE+9%,DeFi協議同步走強"
     },
     {
       "sev": "med",
-      "title": "BOJ傳48H內升息，歷次升息均引發BTC回調防外部流動性風險"
+      "title": "ZEC 24h+9%/XMR+3.5%隱私幣需求回暖,監管鬆動預期升溫"
     }
   ],
   "calendar": {
-    "today": [],
-    "week": [
+    "today": [
       {
-        "date": "06-16 週二",
-        "event": "FOMC開始(Warsh首次主持)",
+        "time": "全天",
+        "event": "FOMC第一天(Warsh首次主持)",
         "tag": "fed"
-      },
+      }
+    ],
+    "week": [
       {
         "date": "06-17 週三",
         "event": "FOMC利率決定+點陣圖+記者會",
@@ -102,72 +103,72 @@
       "BEAT",
       "LAB"
     ],
-    "c3_day": 10,
+    "c3_day": 11,
     "exits": [
-      "BDX",
-      "BCAP",
-      "CC"
+      "H",
+      "ATOM",
+      "NEAR"
     ],
     "top10": [
       {
         "rank": 1,
         "sym": "BEAT",
-        "ret": 371.11,
+        "ret": 329.97,
         "status": "c3"
       },
       {
         "rank": 2,
-        "sym": "LAB",
-        "ret": 156.28,
-        "status": "c3"
+        "sym": "WLD",
+        "ret": 150.29,
+        "status": "up"
       },
       {
         "rank": 3,
-        "sym": "H",
-        "ret": 117.48,
-        "status": "new"
+        "sym": "LAB",
+        "ret": 115.16,
+        "status": "c3"
       },
       {
         "rank": 4,
-        "sym": "WLD",
-        "ret": 79.73,
-        "status": "hold"
+        "sym": "RAIN",
+        "ret": 83.60,
+        "status": "up"
       },
       {
         "rank": 5,
-        "sym": "RAIN",
-        "ret": 72.34,
-        "status": "down"
+        "sym": "XLM",
+        "ret": 45.32,
+        "status": "up"
       },
       {
         "rank": 6,
-        "sym": "XLM",
-        "ret": 29.24,
-        "status": "hold"
+        "sym": "INJ",
+        "ret": 17.46,
+        "status": "new"
       },
       {
         "rank": 7,
-        "sym": "DEXE",
-        "ret": 17.37,
-        "status": "down"
+        "sym": "VVV",
+        "ret": 14.84,
+        "status": "new"
       },
       {
         "rank": 8,
         "sym": "HYPE",
-        "ret": 3.14,
+        "ret": 12.86,
         "status": "hold"
       },
       {
         "rank": 9,
-        "sym": "ATOM",
-        "ret": -2.6,
-        "status": "new"
+        "sym": "DEXE",
+        "ret": 9.02,
+        "status": "down"
       },
       {
         "rank": 10,
-        "sym": "NEAR",
-        "ret": -6.38,
-        "status": "reenter"
+        "sym": "CC",
+        "ret": 8.10,
+        "status": "new"
       }
     ]
   }

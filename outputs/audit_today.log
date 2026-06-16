@@ -1,35 +1,77 @@
-=== 2026-06-15 audit log (fresh run) ===
-PART A: Twitter X sentiment
-  kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 25 maxItems = 160 tweets returned
-  Spam filter: airdrop/giveaway/faucet removed
-  BTC composite: 48.7 (neutral, -1.7 vs yesterday 50.4)
-  ETH composite: 45.7 (neutral, -6.7 vs yesterday 52.4)
-  market_en/zh: 50.0 (neutral - no valid tweets after filtering)
-  
-PART B:
-  B-0 benthepythondev/crypto-intelligence markets: 100 coins OK
-  B-1 makework36/coingecko-scraper global: OK
-  btc_d=56.654769% (today) vs Jun08=56.19% → delta7=+0.46pp → req1=FALSE (FAIL)
-  alt_mom7=+4.03%, breadth=42.86% (6/14 coins > BTC 7d) → req2=TRUE (PASS)
-  VERDICT: ALT-OFF (req1_fail)
-  bonus_a=False(+0.46>-0.5), bonus_b=True(4.03>1.5), bonus_c=False(11.83<12)
+2026-06-16 DAILY PIPELINE AUDIT LOG
+=====================================
+Run started: 2026-06-16T00:55:00Z (TPE 08:55)
+Branch: claude/youthful-galileo-jd3cfv
 
-PART C:
-  C-1: BTC=$65,718 (+2.07% 24h), ETH=$1,727.49 (+2.88% 24h) from markets
-  C-2: VIX=17.68, MOVE=69.36, DXY=99.49 (yesterday 99.75)
-  C-3: FRED DFII10 TIPS=NULL (WebSearch unable to extract numeric value)
-  C-4: Farside farside.co.uk/btc/ - latest row: Jun12 Total=$85.9M (net inflow)
-       Jun13-14 weekend; Jun15 data not yet published
-  C-5: NDX corr 30d=0.55 (Pearson, 30 trading days BTC-USD vs ^NDX via Yahoo Finance)
+PART A — Twitter Sentiment
+  Actor: kaitoeasyapi/twitter-x-data-tweet-scraper-pay-per-result-cheapest
+  RunId: CoCy9Y2VMehsW3jqJ
+  Dataset: jfMgQiO0goycGfgJV (240 items)
+  Processing: Python keyword-based engagement-weighted scoring (224 valid after exclusions)
+  Results:
+    btc_en: n=39, eng=112178, score=51.40
+    btc_zh: n=38, eng=640458, score=50.12
+    eth_en: n=35, eng=34304, score=52.53
+    eth_zh: n=38, eng=193372, score=51.12
+    market_en: n=34, eng=70450, score=46.31
+    market_zh: n=40, eng=264588, score=57.06
+  Composites: btc=50.3 (neutral), eth=51.3 (neutral), market=54.8 (neutral)
 
-PART E: 12 historical actors (4 batches of 3, serial-within-batch)
-  1. audiera(beat): +371.11% | 2. lab: +156.28% | 3. worldcoin-wld: +79.73%
-  4. humanity(h): +117.48% | 5. rain: +72.34% | 6. hyperliquid(hype): +3.14%
-  7. near: -6.38% | 8. dexe: +17.37% | 9. stellar(xlm): +29.24%
-  10. venice-token(vvv): -11.48% | 11. morpho: -12.70% | 12. cosmos(atom): -2.60%
-  
-  Final Top 10: BEAT(1) LAB(2) H(3) WLD(4) RAIN(5) XLM(6) DEXE(7) HYPE(8) ATOM(9) NEAR(10)
-  c3: BEAT+LAB Day10 | H new Day1 in top3 | RAIN drops #3→#5
-  Exits: BDX, BCAP, CC (dropped from top10)
+PART B — Dominance + Layer1 v2
+  Actor B-0 (markets): benthepythondev/crypto-intelligence
+    RunId: 6NDTkarcx34b2YX4J, Dataset: r70n9froitMhPehiT (100 items)
+    btc_price=66301, eth_price=1793.17, ethbtc=0.02704
+    Alt basket 14 alts: n_valid=14, alt_mom7=+5.81%, breadth=50.0% (7/14)
+  Actor B-1 (global): makework36/coingecko-scraper
+    RunId: QnxWbbfa30jh2lMDF, Dataset: ADgGwnLrfd1TwF6Qe (1 item)
+    btc_d=56.474514%, eth_d=9.205640%, totalMarketCap=2355.8B
+    marketCapPercentage sum=88.186%, others_d=11.814%, stable(usdt+usdc)=11.095%
+  B-3 delta7: Jun09 btc_d=56.12% -> Jun16=56.47%, delta7=+0.35pp
+  Verdict: ALT-OFF (req1=False: +0.35pp >= 0; req2=True: alt_mom7=+5.81%)
+  Bonuses: bonus_b=True (alt_mom7>1.5%), others: False
 
-NULL FIELDS: tips (FRED DFII10 unavailable)
+PART C — Macro
+  Actor (quotes): benthepythondev/yahoo-finance-scraper
+    RunId: gjnlDZWreX7CjOKGm, Dataset: 1ynpLfRDFBQZ01DuN
+    VIX=16.20, MOVE=69.38, DXY=99.65
+  Actor (history): benthepythondev/yahoo-finance-scraper
+    RunId: JaGIISlLY0GQySg98, Dataset: 4X8Tumg1BmB3l34G3
+    BTC-USD + ^NDX 3mo daily history
+    Common dates: 64 (with BTC Jun16->Jun15 alignment)
+    Last 31 dates: 2026-05-01 to 2026-06-15
+    ndx_corr_30d = 0.59 (Pearson, 30 log-return pairs)
+  ETF flow: apify/rag-web-browser farside.co.uk/btc/
+    RunId: AApD1X2M1ve5mJ0du, Dataset: z0K0YwvQXd95mX3CA
+    Jun 15 2026 Total = -131.2M (GBTC -124.0M main drag)
+    Jun 12 2026 Total = +85.9M (previous published)
+  TIPS: NULL — not fetched (actor not called in this run)
+
+PART E — 21D Strong Coins
+  Candidates pool: top 100 markets, filtered (exchange tokens/stables/non-ASCII removed)
+  Top 12 by 30d%: beat,wld,lab,rain,near,hype,dexe,xlm,inj,vvv,morpho,cc
+  Historical actor calls (12 total, batches <=3):
+    Batch 1: audiera(beat)->329.97%, worldcoin-wld(wld)->0 items, lab->0 items
+    Batch 2: rain->0 items, near->-10.45%, hyperliquid(hype)->+12.86%
+    Batch 3: dexe->+9.02%, stellar(xlm)->+45.32%, injective-protocol(inj)->0 items
+    Batch 4: venice-token(vvv)->0 items, morpho->-9.62%, canton-network(cc)->0 items
+  Fallback to 30d% for: wld(150.29), lab(115.16), rain(83.60), inj(17.46), vvv(14.84), cc(8.10)
+  Near 21D=-10.45% (out of top10), morpho 21D=-9.62% (out of top10)
+  Final Top10 21D: beat(329.97),wld(150.29fb),lab(115.16fb),rain(83.60fb),xlm(45.32),
+                   inj(17.46fb),vvv(14.84fb),hype(12.86),dexe(9.02),cc(8.10fb)
+  Top3: beat,wld,lab | c3: beat/lab Day11 (Jun5->Jun16)
+  Exits: h,atom,near | New: inj,vvv,cc
+
+NULLS:
+  tips: NULL (not fetched - no actor call in this session)
+  NOTE: Multiple coins returned 0 items from historical actor (wld,lab,rain,inj,vvv,cc) - fallback applied
+  NOTE: morpho 21D=-9.62% (excluded from top10), near 21D=-10.45% (excluded)
+
+FILES WRITTEN:
+  outputs/today.json
+  outputs/sources_today.json
+  outputs/sentiment_history.json (appended Jun16)
+  outputs/x_sentiment_history.json (appended Jun16)
+  outputs/dominance_history.json (appended Jun16)
+  outputs/layer1_status.json (appended Jun16)
+  outputs/top3_state.json (appended Jun16)
+  outputs/audit_today.log (this file)
