@@ -260,11 +260,51 @@ function renderStrong(d){
     signalLine = `<div class="indicator-explain ${armed?'good':'danger'}">🔔 ${esc(c3.join(' / '))} 連 ${s.c3_day||3} 天進 Top 3` + (armed?'，達標可進場':'，但框架 ALT-OFF，記錄觀察不進場') + (s.exits&&s.exits.length?` · ${esc(s.exits.join('/'))} 出場`:'') + `</div>`;
   }
   el.innerHTML =
-    `<div class="card"><div class="head"><div class="title">🏆 今日強勢幣 Top 10</div><div class="meta">${win} 漲幅排序 · CoinGecko via Apify</div></div><div class="coin-grid">${cards}</div>${signalLine}</div>` +
+    `<div class="card"><div class="head"><div class="title">🏆 今日強勢幣 Top 10</div><div class="meta">${win} 漲幅排序 · ${s._live===true?'✓ 前端即時重算':(s._live==='partial'?'部分即時·其餘排程值':'CoinGecko')}</div></div><div class="coin-grid">${cards}</div>${signalLine}</div>` +
     `<div class="card"><div class="head"><div class="title">📘 策略規則 (SOP)</div><div class="meta">連續 3 天 Top 3 才進場</div></div><div class="sop-grid">
       <div class="sop-box in"><div class="sop-h">✅ 進場</div><div class="sop-b">連續 <b>3 天</b>在 Top 3 → 買入，最多同時持有 5 個</div></div>
       <div class="sop-box out"><div class="sop-h">🚪 出場（任一）</div><div class="sop-b">① 掉出 Top 10<br>② 進場後高點回撤 <b>-20%</b>（高點需先 +5%）<br>③ 進場後 <b>-30%</b> 災難停損</div></div>
     </div><div class="indicator-explain warn">配置整體資產 5-10% 跑此策略。${win} 為動能視窗。</div></div>`;
+}
+
+// ---- 前端即時重算真 21D（決定性防呆：不靠 routine 的 21D，直接從 CoinGecko 原始價格自己算）----
+function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+async function fetch21D(id){
+  try{
+    const r = await fetch(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=21`,{cache:'no-store'});
+    if(!r.ok) return null;
+    const j = await r.json();
+    const p = j.prices||[];
+    if(p.length<2) return null;
+    const a=p[0][1], b=p[p.length-1][1];
+    if(!a) return null;
+    return +(((b-a)/a)*100).toFixed(2);
+  }catch(e){ return null; }
+}
+async function liveUpgrade(d){
+  const s = d.strong||{};
+  const list = (s.top10||[]).map(c=>Object.assign({},c));
+  if(!list.some(c=>c.id)) return;            // 舊格式無 id → 維持排程值（向後相容）
+  const dateKey = d.date || 'x';
+  let any=false, all=true;
+  for(const c of list){
+    if(!c.id){ all=false; continue; }
+    const ck = `cg21d:${dateKey}:${c.id}`;
+    let pct = null;
+    try{ const v=localStorage.getItem(ck); if(v!=null) pct=parseFloat(v); }catch(e){}
+    if(pct==null || isNaN(pct)){
+      pct = await fetch21D(c.id);
+      if(pct!=null){ try{ localStorage.setItem(ck,String(pct)); }catch(e){} }
+      await sleep(900);   // 節流:CoinGecko 匿名額度約 5-8/min,放慢避免限流;抓不到的下次載入再補(已抓的存 localStorage 當日快取)
+    }
+    if(pct!=null){ c.ret=pct; any=true; } else { all=false; }
+  }
+  if(!any) return;
+  list.sort((a,b)=> (b.ret==null?-1e9:b.ret) - (a.ret==null?-1e9:a.ret));
+  list.forEach((c,i)=>c.rank=i+1);
+  s.top10 = list;
+  s._live = all ? true : 'partial';
+  try { renderStrong(d); } catch(e){ console.error('renderStrong(live)',e); }
 }
 
 async function boot(){
@@ -280,6 +320,7 @@ async function boot(){
   document.getElementById('hdrDate').textContent = (d.date||'')+' ('+(d.weekday||'')+')';
   try { renderSentiment(d); } catch(e){ document.getElementById('tab-sentiment').innerHTML='<div class="alert-banner danger"><span class="big">⚠</span><div>X 情緒分頁渲染失敗</div></div>'; console.error(e); }
   try { renderStrong(d); } catch(e){ console.error(e); }
+  liveUpgrade(d).catch(e=>console.error('liveUpgrade',e));
   try { renderBrief(d); } catch(e){ console.error(e); }
   document.getElementById('foot').textContent = '最近更新 '+(d.date||'')+' '+(d.updated_tpe||'')+' TPE · v6.1 資料驅動 · 排程 daily-crypto-x-sentiment';
 }
