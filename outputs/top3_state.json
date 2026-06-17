@@ -1,190 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-06-08",
-      "scan_done": true,
-      "regime": "ALT-OFF",
-      "method": "benthepythondev/crypto-intelligence via Apify (30D sort, fresh PM run)",
-      "prev_date": "2026-06-07",
-      "prev_top3": [
-        "beat",
-        "h",
-        "lab"
-      ],
-      "prev_top10": [
-        "beat",
-        "h",
-        "lab",
-        "rain",
-        "wld",
-        "dexe",
-        "inj",
-        "xlm",
-        "hype",
-        "vvv"
-      ],
-      "top3": [
-        "beat",
-        "h",
-        "lab"
-      ],
-      "top10": [
-        "beat",
-        "h",
-        "lab",
-        "dexe",
-        "rain",
-        "wld",
-        "hype",
-        "near",
-        "inj",
-        "xlm"
-      ],
-      "top10_details": [
-        {
-          "symbol": "beat",
-          "price_change_percentage_30d": 721.5,
-          "price_change_percentage_7d": 270.6,
-          "market_cap_rank": 62
-        },
-        {
-          "symbol": "h",
-          "price_change_percentage_30d": 250.7,
-          "price_change_percentage_7d": 6.1,
-          "market_cap_rank": 61
-        },
-        {
-          "symbol": "lab",
-          "price_change_percentage_30d": 201.7,
-          "price_change_percentage_7d": 11.4,
-          "market_cap_rank": 27
-        },
-        {
-          "symbol": "dexe",
-          "price_change_percentage_30d": 83.5,
-          "price_change_percentage_7d": 18.2,
-          "market_cap_rank": 66
-        },
-        {
-          "symbol": "rain",
-          "price_change_percentage_30d": 76.6,
-          "price_change_percentage_7d": -6.2,
-          "market_cap_rank": 14
-        },
-        {
-          "symbol": "wld",
-          "price_change_percentage_30d": 72.6,
-          "price_change_percentage_7d": 24.1,
-          "market_cap_rank": 50
-        },
-        {
-          "symbol": "hype",
-          "price_change_percentage_30d": 43.1,
-          "price_change_percentage_7d": -13.7,
-          "market_cap_rank": 10
-        },
-        {
-          "symbol": "near",
-          "price_change_percentage_30d": 35.5,
-          "price_change_percentage_7d": -7.5,
-          "market_cap_rank": 36
-        },
-        {
-          "symbol": "inj",
-          "price_change_percentage_30d": 30.2,
-          "price_change_percentage_7d": -14.9,
-          "market_cap_rank": 94
-        },
-        {
-          "symbol": "xlm",
-          "price_change_percentage_30d": 22.6,
-          "price_change_percentage_7d": -21.6,
-          "market_cap_rank": 16
-        }
-      ],
-      "exits_today": [
-        "vvv"
-      ],
-      "new_entrants": [
-        "near"
-      ],
-      "c3_entry": [
-        "beat",
-        "h",
-        "lab"
-      ],
-      "c3_day": 5,
-      "c3_exit": [],
-      "notes": "🔔 c3 BEAT/H/LAB Day5 繼續(Jun5~Jun8)。VVV出場。NEAR 重回 Top10(reenter)。ALT-OFF(req1✓btc_d_delta7=-1.81pp; req2✗alt_mom7=-13.16% FAIL)→僅記錄。",
-      "fetched_at_utc": "2026-06-08T08:14:01Z"
-    },
-    {
-      "date": "2026-06-09",
-      "scan_done": true,
-      "regime": "ALT-OFF",
-      "method": "benthepythondev/crypto-intelligence mode=historical days=21 (fresh re-run)",
-      "prev_date": "2026-06-08",
-      "prev_top3": [
-        "beat",
-        "h",
-        "lab"
-      ],
-      "prev_top10": [
-        "beat",
-        "h",
-        "lab",
-        "dexe",
-        "rain",
-        "wld",
-        "hype",
-        "near",
-        "inj",
-        "xlm"
-      ],
-      "top3": [
-        "beat",
-        "lab",
-        "wld"
-      ],
-      "top10_21d": [
-        "beat",
-        "lab",
-        "wld",
-        "rain",
-        "dexe",
-        "xlm",
-        "hype",
-        "near",
-        "inj",
-        "a7a5"
-      ],
-      "top10_gains_21d": {
-        "beat": 577.1,
-        "lab": 156.84,
-        "wld": 100.81,
-        "rain": 76.35,
-        "dexe": 58.83,
-        "xlm": 34.85,
-        "hype": 30.56,
-        "near": 28.41,
-        "inj": 7.43,
-        "a7a5": 6.56
-      },
-      "c3_coins": [
-        "beat",
-        "lab"
-      ],
-      "c3_day": 5,
-      "exits": [
-        "h"
-      ],
-      "new_entries": [
-        "wld"
-      ],
-      "notes": "21D window. H exits top3(day5→出場); WLD enters top3(day1). BEAT/LAB c3 Day5. ALT-OFF: req1✓(delta7=-1.99) req2✗(alt_mom7=-14.81%)",
-      "fetched_at_utc": "2026-06-09T03:00:00Z"
-    },
-    {
       "date": "2026-06-10",
       "scan_done": true,
       "regime": "ALT-OFF",
@@ -588,13 +404,13 @@
         "beat": 329.97,
         "wld": 150.29,
         "lab": 115.16,
-        "rain": 83.60,
+        "rain": 83.6,
         "xlm": 45.32,
         "inj": 17.46,
         "vvv": 14.84,
         "hype": 12.86,
         "dexe": 9.02,
-        "cc": 8.10
+        "cc": 8.1
       },
       "exits_today": [
         "h",
@@ -615,7 +431,86 @@
       "c3_exit": [],
       "notes": "BEAT/LAB c3 Day11(Jun5→Jun16). WLD新入Top3 Day1(+150.29%fallback,30d; actor返回0項). H退出Top3(Day1結束). H/ATOM/NEAR退出Top10. INJ/VVV/CC新入Top10. ALT-OFF: req1=False(btc_d_delta7=+0.35pp,Jun09:56.12%→Jun16:56.47%) req2=True(alt_mom7=+5.81%)",
       "fetched_at_utc": "2026-06-16T01:04:00Z"
+    },
+    {
+      "date": "2026-06-17",
+      "scan_done": true,
+      "regime": "ALT-OFF",
+      "window": "21D",
+      "method": "benthepythondev/crypto-intelligence historical days=21, real 21D per coin (15 candidates, all succeeded); morpho/canton/aster needed 1 retry each",
+      "prev_date": "2026-06-16",
+      "prev_top3": [
+        "beat",
+        "wld",
+        "lab"
+      ],
+      "top3": [
+        "lab",
+        "beat",
+        "wld"
+      ],
+      "top10": [
+        "lab",
+        "beat",
+        "wld",
+        "xlm",
+        "hype",
+        "rain",
+        "dexe",
+        "cc",
+        "night",
+        "inj"
+      ],
+      "top10_details": [
+        {
+          "symbol": "lab",
+          "ret_21d": 198.2
+        },
+        {
+          "symbol": "audiera",
+          "ret_21d": 157.7
+        },
+        {
+          "symbol": "worldcoin-wld",
+          "ret_21d": 78.8
+        },
+        {
+          "symbol": "stellar",
+          "ret_21d": 48.4
+        },
+        {
+          "symbol": "hyperliquid",
+          "ret_21d": 22.3
+        },
+        {
+          "symbol": "rain",
+          "ret_21d": 22.1
+        },
+        {
+          "symbol": "dexe",
+          "ret_21d": 13.9
+        },
+        {
+          "symbol": "canton-network",
+          "ret_21d": 2.4
+        },
+        {
+          "symbol": "midnight-3",
+          "ret_21d": -1.6
+        },
+        {
+          "symbol": "injective-protocol",
+          "ret_21d": -2.1
+        }
+      ],
+      "c3_entry": [
+        "LAB",
+        "BEAT"
+      ],
+      "exits": [
+        "VVV"
+      ]
     }
   ],
-  "last_updated": "2026-06-16"
+  "last_updated": "2026-06-17T00:26:31Z"
 }

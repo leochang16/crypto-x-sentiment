@@ -419,5 +419,13 @@
     "eth": 51.3,
     "btc_price": 66301,
     "eth_price": 1793.17
+  },
+  {
+    "date": "2026-06-17",
+    "btc": 64.8,
+    "btc_band": "greed",
+    "eth": 64.9,
+    "btc_price": 65670,
+    "eth_price": 1793.77
   }
 ]

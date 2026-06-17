@@ -157,5 +157,21 @@
     "fetched_at_utc": "2026-06-16T00:55:28Z",
     "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 40",
     "method": "keyword-based engagement-weighted scoring"
+  },
+  {
+    "date": "2026-06-17",
+    "btc_score": 64.8,
+    "btc_band": "greed",
+    "eth_score": 64.9,
+    "eth_band": "greed",
+    "terms": {
+      "BTC_en": 68.9,
+      "BTC_zh": 50.0,
+      "ETH_en": 60.0,
+      "ETH_zh": 72.1,
+      "mkt_en": 57.9,
+      "mkt_zh": 62.0
+    },
+    "fetched_at_utc": "2026-06-17T00:26:31Z"
   }
 ]

@@ -1,58 +1,41 @@
 {
-  "date": "2026-06-16",
-  "weekday": "週二",
-  "updated_tpe": "09:05",
+  "date": "2026-06-17",
+  "weekday": "週三",
+  "updated_tpe": "08:25",
   "verdict": "ALT-OFF",
   "verdict_reason_code": "req1_fail",
   "x": {
-    "btc": {
-      "score": 50.3,
-      "band": "neutral",
-      "delta_1d": 1.6
-    },
-    "eth": {
-      "score": 51.3,
-      "band": "neutral",
-      "delta_1d": 5.6
-    },
-    "btc_price": 66301,
-    "btc_price_delta_pct": 1.21,
-    "eth_price": 1793.17,
-    "eth_price_delta_pct": 4.31,
+    "btc": {"score": 64.8, "band": "greed", "delta_1d": 14.5},
+    "eth": {"score": 64.9, "band": "greed", "delta_1d": 13.6},
+    "btc_price": 65670,
+    "btc_price_delta_pct": -0.99,
+    "eth_price": 1793.77,
+    "eth_price_delta_pct": -0.13,
     "top_discussions": [
-      {
-        "title": "XLM大漲+15%ALT情緒回暖FOMC前夕佈局",
-        "tag": "bull"
-      },
-      {
-        "title": "BTC ETF 6/15淨流出-131M機構觀望Warsh首次FOMC",
-        "tag": "bear"
-      },
-      {
-        "title": "WLD+12.8%UNI+15%DeFi幣共振上漲鏈上活躍回升",
-        "tag": "bull"
-      }
+      {"title": "BTC重返$66K 較低點反彈逾11%", "tag": "bull"},
+      {"title": "Tom Lee旗下BitMine再買2億美元ETH", "tag": "bull"},
+      {"title": "SpaceX IPO抽乾流動性 崩盤憂慮", "tag": "bear"}
     ]
   },
   "macro": {
-    "vix": 16.2,
-    "move": 69.38,
-    "dxy": 99.65,
-    "dxy_last": 99.49,
+    "vix": 16.41,
+    "move": 67.28,
+    "dxy": 99.54,
+    "dxy_last": 99.65,
     "tips": null,
-    "etf_flow": -131.2,
-    "etf_flow_last": 85.9,
-    "ndx_corr_30d": 0.59
+    "etf_flow": -10.5,
+    "etf_flow_last": -64.8,
+    "ndx_corr_30d": 0.6
   },
   "dominance": {
-    "btc_d": 56.47,
-    "btc_d_delta7": 0.35,
-    "others_d": 11.81,
-    "total3_d": 23.22,
-    "ethbtc": 0.02704,
-    "alt_mom7": 5.81,
-    "breadth_pct": 50,
-    "n_valid": 14,
+    "btc_d": 56.29,
+    "btc_d_delta7": 0.39,
+    "others_d": 11.92,
+    "total3_d": 23.28,
+    "ethbtc": 0.02731,
+    "alt_mom7": 10.1,
+    "breadth_pct": 53.8,
+    "n_valid": 13,
     "req1": false,
     "req2": true,
     "bonus_a": false,
@@ -60,126 +43,38 @@
     "bonus_c": false
   },
   "news": [
-    {
-      "sev": "high",
-      "title": "Fed Warsh主持首次FOMC今日開幕明17日利率+點陣圖主導BTC方向"
-    },
-    {
-      "sev": "high",
-      "title": "BTC ETF 6/15淨流出-131.2M,GBTC砸盤-124M機構觀望FOMC結果"
-    },
-    {
-      "sev": "med",
-      "title": "XLM 24h+15%創波段新高,Stellar生態訊號引發山寨跟進"
-    },
-    {
-      "sev": "med",
-      "title": "WLD+12.8%/UNI+15%/AAVE+9%,DeFi協議同步走強"
-    },
-    {
-      "sev": "med",
-      "title": "ZEC 24h+9%/XMR+3.5%隱私幣需求回暖,監管鬆動預期升溫"
-    }
+    {"sev": "high", "title": "FOMC利率決議本週登場 市場聚焦政策路徑"},
+    {"sev": "high", "title": "BTC自$59K低點反彈重返$66K 為近兩週新高"},
+    {"sev": "med", "title": "Tom Lee旗下BitMine再加碼買入2.13億美元ETH"},
+    {"sev": "med", "title": "SpaceX史詩級IPO抽乾流動性 引發崩盤憂慮"},
+    {"sev": "med", "title": "6/16比特幣ETF淨流出1,050萬美元 連日流出收斂"}
   ],
   "calendar": {
     "today": [
-      {
-        "time": "全天",
-        "event": "FOMC第一天(Warsh首次主持)",
-        "tag": "fed"
-      }
+      {"time": "全天", "event": "FOMC利率決議 (本週市場焦點)", "tag": "fed"}
     ],
     "week": [
-      {
-        "date": "06-17 週三",
-        "event": "FOMC利率決定+點陣圖+記者會",
-        "tag": "fed"
-      }
+      {"date": "06-17 週三", "event": "FOMC利率決議", "tag": "fed"},
+      {"date": "06-18 週四", "event": "美國初請失業金人數", "tag": "fed"},
+      {"date": "06-26 週五", "event": "BitMine (BMNR) 結構性買盤啟動", "tag": "crypto"}
     ]
   },
   "strong": {
     "window": "21D",
-    "c3_entry": [
-      "BEAT",
-      "LAB"
-    ],
-    "c3_day": 11,
-    "exits": [
-      "H",
-      "ATOM",
-      "NEAR"
-    ],
+    "c3_entry": ["LAB", "BEAT"],
+    "c3_day": 4,
+    "exits": ["VVV"],
     "top10": [
-      {
-        "rank": 1,
-        "sym": "BEAT",
-        "ret": 273.96,
-        "status": "c3",
-        "id": "audiera"
-      },
-      {
-        "rank": 2,
-        "sym": "LAB",
-        "ret": 124.51,
-        "status": "c3",
-        "id": "lab"
-      },
-      {
-        "rank": 3,
-        "sym": "RAIN",
-        "ret": 70.9,
-        "status": "up",
-        "id": "rain"
-      },
-      {
-        "rank": 4,
-        "sym": "WLD",
-        "ret": 64.16,
-        "status": "hold",
-        "id": "worldcoin-wld"
-      },
-      {
-        "rank": 5,
-        "sym": "XLM",
-        "ret": 44.52,
-        "status": "up",
-        "id": "stellar"
-      },
-      {
-        "rank": 6,
-        "sym": "LIT",
-        "ret": 36.76,
-        "status": "new",
-        "id": "lighter"
-      },
-      {
-        "rank": 7,
-        "sym": "HYPE",
-        "ret": 18.73,
-        "status": "up",
-        "id": "hyperliquid"
-      },
-      {
-        "rank": 8,
-        "sym": "DEXE",
-        "ret": 12.81,
-        "status": "down",
-        "id": "dexe"
-      },
-      {
-        "rank": 9,
-        "sym": "NIGHT",
-        "ret": 4.85,
-        "status": "new",
-        "id": "midnight-3"
-      },
-      {
-        "rank": 10,
-        "sym": "CC",
-        "ret": 1,
-        "status": "new",
-        "id": "canton-network"
-      }
+      {"rank": 1, "sym": "LAB", "ret": 198.2, "status": "c3", "id": "lab"},
+      {"rank": 2, "sym": "BEAT", "ret": 157.7, "status": "c3", "id": "audiera"},
+      {"rank": 3, "sym": "WLD", "ret": 78.8, "status": "down", "id": "worldcoin-wld"},
+      {"rank": 4, "sym": "XLM", "ret": 48.4, "status": "up", "id": "stellar"},
+      {"rank": 5, "sym": "HYPE", "ret": 22.3, "status": "up", "id": "hyperliquid"},
+      {"rank": 6, "sym": "RAIN", "ret": 22.1, "status": "down", "id": "rain"},
+      {"rank": 7, "sym": "DEXE", "ret": 13.9, "status": "up", "id": "dexe"},
+      {"rank": 8, "sym": "CC", "ret": 2.4, "status": "up", "id": "canton-network"},
+      {"rank": 9, "sym": "NIGHT", "ret": -1.6, "status": "new", "id": "midnight-3"},
+      {"rank": 10, "sym": "INJ", "ret": -2.1, "status": "down", "id": "injective-protocol"}
     ]
   }
 }
