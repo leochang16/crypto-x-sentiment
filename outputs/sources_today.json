@@ -1,92 +1,26 @@
 {
-  "btc_price": {
-    "value": 66301,
-    "source": "benthepythondev/crypto-intelligence markets (current_price)",
-    "fetched_at_utc": "2026-06-16T00:55:29Z"
-  },
-  "eth_price": {
-    "value": 1793.17,
-    "source": "benthepythondev/crypto-intelligence markets (current_price)",
-    "fetched_at_utc": "2026-06-16T00:55:29Z"
-  },
-  "btc_d": {
-    "value": 56.47,
-    "source": "makework36/coingecko-scraper mode=global (btcDominance)",
-    "fetched_at_utc": "2026-06-16T00:55:36Z"
-  },
-  "eth_d": {
-    "value": 9.21,
-    "source": "makework36/coingecko-scraper mode=global (ethDominance)",
-    "fetched_at_utc": "2026-06-16T00:55:36Z"
-  },
-  "others_d": {
-    "value": 11.81,
-    "source": "makework36/coingecko-scraper mode=global (100 - sum of all marketCapPercentage entries)",
-    "fetched_at_utc": "2026-06-16T00:55:36Z"
-  },
-  "total3_d": {
-    "value": 23.22,
-    "source": "computed: 100 - btc_d - eth_d - stable_pct(usdt+usdc=11.095%)",
-    "fetched_at_utc": "2026-06-16T00:55:36Z"
-  },
-  "alt_mom7": {
-    "value": 5.81,
-    "source": "benthepythondev/crypto-intelligence markets 14-alt basket mean 7d%",
-    "fetched_at_utc": "2026-06-16T00:55:29Z"
-  },
-  "btc_d_delta7": {
-    "value": 0.35,
-    "source": "today btc_d(56.47%) - Jun09 btc_d(56.12%) from dominance_history.json",
-    "fetched_at_utc": "2026-06-16T00:55:36Z"
-  },
-  "vix": {
-    "value": 16.20,
-    "source": "benthepythondev/yahoo-finance-scraper ^VIX quote.price",
-    "fetched_at_utc": "2026-06-16T00:55:41Z"
-  },
-  "move": {
-    "value": 69.38,
-    "source": "benthepythondev/yahoo-finance-scraper ^MOVE quote.price",
-    "fetched_at_utc": "2026-06-16T00:55:41Z"
-  },
-  "dxy": {
-    "value": 99.65,
-    "source": "benthepythondev/yahoo-finance-scraper DX-Y.NYB quote.price",
-    "fetched_at_utc": "2026-06-16T00:55:41Z"
-  },
-  "tips": {
-    "value": null,
-    "source": "FRED DFII10 - not fetched (no actor call; source unavailable in sandbox)",
-    "fetched_at_utc": "2026-06-16T01:00:00Z"
-  },
-  "etf_flow": {
-    "value": -131.2,
-    "source": "farside.co.uk/btc/ via apify/rag-web-browser - Jun 15 2026 row Total",
-    "fetched_at_utc": "2026-06-16T00:56:20Z"
-  },
-  "etf_flow_last": {
-    "value": 85.9,
-    "source": "farside.co.uk/btc/ Jun 12 2026 row Total (prior published value)",
-    "fetched_at_utc": "2026-06-16T00:56:20Z"
-  },
-  "ndx_corr_30d": {
-    "value": 0.59,
-    "source": "benthepythondev/yahoo-finance-scraper BTC-USD+^NDX 3mo history, Pearson 30 trading days (2026-05-01 to 2026-06-15, 64 common dates)",
-    "fetched_at_utc": "2026-06-16T00:55:52Z"
-  },
-  "btc_sentiment": {
-    "value": 50.3,
-    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 40, engagement-weighted keyword scoring",
-    "fetched_at_utc": "2026-06-16T00:55:28Z"
-  },
-  "eth_sentiment": {
-    "value": 51.3,
-    "source": "kaitoeasyapi/twitter-x-data-tweet-scraper 6 terms x 40, engagement-weighted keyword scoring",
-    "fetched_at_utc": "2026-06-16T00:55:28Z"
-  },
-  "strong_21d": {
-    "value": "beat:329.97,wld:150.29(30d_fb),lab:115.16(30d_fb),rain:83.60(30d_fb),xlm:45.32,inj:17.46(30d_fb),vvv:14.84(30d_fb),hype:12.86,dexe:9.02,cc:8.10(30d_fb)",
-    "source": "benthepythondev/crypto-intelligence mode=historical days=21; fallback to 30d for wld/lab/rain/inj/vvv/cc (actor returned 0 items)",
-    "fetched_at_utc": "2026-06-16T01:01:00Z"
-  }
+  "date": "2026-06-17",
+  "btc_price": {"value": 65670, "source": "benthepythondev/crypto-intelligence markets", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "btc_price_delta_pct": {"value": -0.99, "source": "crypto-intelligence price_change_percentage_24h", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "eth_price": {"value": 1793.77, "source": "benthepythondev/crypto-intelligence markets", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "eth_price_delta_pct": {"value": -0.13, "source": "crypto-intelligence price_change_percentage_24h", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "x_btc_score": {"value": 64.8, "source": "kaitoeasyapi twitter scraper, 6 terms weighted", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "x_eth_score": {"value": 64.9, "source": "kaitoeasyapi twitter scraper, 6 terms weighted", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "vix": {"value": 16.41, "source": "benthepythondev/yahoo-finance-scraper ^VIX", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "move": {"value": 67.28, "source": "benthepythondev/yahoo-finance-scraper ^MOVE", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "dxy": {"value": 99.54, "source": "benthepythondev/yahoo-finance-scraper DX-Y.NYB", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "dxy_last": {"value": 99.65, "source": "prior day today.json", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "tips": {"value": null, "source": "FRED DFII10 WebFetch 403 + WebSearch only stale (Apr); null per anti-cache", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "etf_flow": {"value": -10.5, "source": "farside.co.uk/btc via Apify rag-web-browser, 16 Jun 2026 Total", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "etf_flow_last": {"value": -64.8, "source": "farside 15 Jun 2026 Total", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "ndx_corr_30d": {"value": 0.6, "source": "yahoo-finance-scraper history BTC-USD vs ^NDX, 30 daily returns Pearson", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "btc_d": {"value": 56.29, "source": "makework36/coingecko-scraper global btcDominance", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "eth_d": {"value": 9.25, "source": "makework36/coingecko-scraper global ethDominance", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "btc_d_delta7": {"value": 0.39, "source": "today btc_d - dominance_history 2026-06-10 (55.9)", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "others_d": {"value": 11.92, "source": "100 - sum(marketCapPercentage entries)", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "total3_d": {"value": 23.28, "source": "100 - btc_d - eth_d - stablecoin_sum(11.18)", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "ethbtc": {"value": 0.02731, "source": "eth_price/btc_price from markets", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "alt_mom7": {"value": 10.1, "source": "mean 7d% of 13 valid alts (ton missing, symbol=gram)", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "breadth_pct": {"value": 53.8, "source": "alts with 7d>BTC 7d / n_valid", "fetched_at_utc": "2026-06-17T00:18:35Z"},
+  "n_valid": {"value": 13, "source": "alt basket valid count", "fetched_at_utc": "2026-06-17T00:18:35Z"}
 }
