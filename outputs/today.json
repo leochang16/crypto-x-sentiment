@@ -1,80 +1,195 @@
 {
-  "date": "2026-06-17",
-  "weekday": "週三",
-  "updated_tpe": "08:25",
-  "verdict": "ALT-OFF",
-  "verdict_reason_code": "req1_fail",
+  "date": "2026-06-18",
+  "weekday": "週四",
+  "updated_tpe": "08:27",
+  "verdict": "GO",
+  "verdict_reason_code": "req1_req2_pass",
   "x": {
-    "btc": {"score": 64.8, "band": "greed", "delta_1d": 14.5},
-    "eth": {"score": 64.9, "band": "greed", "delta_1d": 13.6},
-    "btc_price": 65670,
-    "btc_price_delta_pct": -0.99,
-    "eth_price": 1793.77,
-    "eth_price_delta_pct": -0.13,
+    "btc": {
+      "score": 42.9,
+      "band": "fear",
+      "delta_1d": -21.9
+    },
+    "eth": {
+      "score": 37.0,
+      "band": "fear",
+      "delta_1d": -27.9
+    },
+    "btc_price": 64554,
+    "btc_price_delta_pct": -1.7,
+    "eth_price": 1752.05,
+    "eth_price_delta_pct": -2.33,
     "top_discussions": [
-      {"title": "BTC重返$66K 較低點反彈逾11%", "tag": "bull"},
-      {"title": "Tom Lee旗下BitMine再買2億美元ETH", "tag": "bull"},
-      {"title": "SpaceX IPO抽乾流動性 崩盤憂慮", "tag": "bear"}
+      {
+        "title": "Strategy斥1億美元增持1,587枚BTC",
+        "tag": "bull"
+      },
+      {
+        "title": "美股重挫 標普與那斯達克急跌",
+        "tag": "bear"
+      },
+      {
+        "title": "AI建設吸納龐大資本 全球市場短期承壓",
+        "tag": "watch"
+      }
     ]
   },
   "macro": {
-    "vix": 16.41,
-    "move": 67.28,
-    "dxy": 99.54,
-    "dxy_last": 99.65,
-    "tips": null,
-    "etf_flow": -10.5,
-    "etf_flow_last": -64.8,
-    "ndx_corr_30d": 0.6
+    "vix": 18.44,
+    "move": 70.66,
+    "dxy": 100.35,
+    "dxy_last": 99.54,
+    "tips": 2.12,
+    "etf_flow": -54.9,
+    "etf_flow_last": -10.5,
+    "ndx_corr_30d": 0.61
   },
   "dominance": {
-    "btc_d": 56.29,
-    "btc_d_delta7": 0.39,
-    "others_d": 11.92,
-    "total3_d": 23.28,
-    "ethbtc": 0.02731,
-    "alt_mom7": 10.1,
-    "breadth_pct": 53.8,
+    "btc_d": 56.11,
+    "btc_d_delta7": -0.04,
+    "others_d": 11.99,
+    "total3_d": 23.38,
+    "ethbtc": 0.02714,
+    "alt_mom7": 12.58,
+    "breadth_pct": 84.6,
     "n_valid": 13,
-    "req1": false,
+    "req1": true,
     "req2": true,
     "bonus_a": false,
     "bonus_b": true,
     "bonus_c": false
   },
   "news": [
-    {"sev": "high", "title": "FOMC利率決議本週登場 市場聚焦政策路徑"},
-    {"sev": "high", "title": "BTC自$59K低點反彈重返$66K 為近兩週新高"},
-    {"sev": "med", "title": "Tom Lee旗下BitMine再加碼買入2.13億美元ETH"},
-    {"sev": "med", "title": "SpaceX史詩級IPO抽乾流動性 引發崩盤憂慮"},
-    {"sev": "med", "title": "6/16比特幣ETF淨流出1,050萬美元 連日流出收斂"}
+    {
+      "sev": "high",
+      "title": "FOMC決議揭曉 市場押注鷹派 風險資產回落"
+    },
+    {
+      "sev": "high",
+      "title": "美股重挫 標普與那斯達克急跌 加密同步承壓"
+    },
+    {
+      "sev": "med",
+      "title": "Strategy斥資1億美元增持1,587枚BTC 儲備達846,842枚"
+    },
+    {
+      "sev": "med",
+      "title": "比特幣6月累跌12% $86億選擇權價外 多頭部位水下"
+    },
+    {
+      "sev": "med",
+      "title": "6/17比特幣ETF淨流出5,490萬美元 連日資金外流"
+    }
   ],
   "calendar": {
     "today": [
-      {"time": "全天", "event": "FOMC利率決議 (本週市場焦點)", "tag": "fed"}
+      {
+        "time": "20:30",
+        "event": "美國上週初請失業金人數",
+        "tag": "fed"
+      }
     ],
     "week": [
-      {"date": "06-17 週三", "event": "FOMC利率決議", "tag": "fed"},
-      {"date": "06-18 週四", "event": "美國初請失業金人數", "tag": "fed"},
-      {"date": "06-26 週五", "event": "BitMine (BMNR) 結構性買盤啟動", "tag": "crypto"}
+      {
+        "date": "06-19 週五",
+        "event": "Juneteenth美股休市·Deribit週度BTC/ETH選擇權到期",
+        "tag": "crypto"
+      },
+      {
+        "date": "06-25 週四",
+        "event": "美國5月PCE物價指數+Q1 GDP終值",
+        "tag": "fed"
+      },
+      {
+        "date": "06-26 週五",
+        "event": "Deribit季度BTC/ETH選擇權結算",
+        "tag": "crypto"
+      }
     ]
   },
   "strong": {
     "window": "21D",
-    "c3_entry": ["LAB", "BEAT"],
-    "c3_day": 4,
-    "exits": ["VVV"],
+    "c3_entry": [
+      "LAB",
+      "WLD",
+      "BEAT"
+    ],
+    "c3_day": 13,
+    "exits": [
+      "DEXE",
+      "NIGHT"
+    ],
     "top10": [
-      {"rank": 1, "sym": "LAB", "ret": 198.2, "status": "c3", "id": "lab"},
-      {"rank": 2, "sym": "BEAT", "ret": 157.7, "status": "c3", "id": "audiera"},
-      {"rank": 3, "sym": "WLD", "ret": 78.8, "status": "down", "id": "worldcoin-wld"},
-      {"rank": 4, "sym": "XLM", "ret": 48.4, "status": "up", "id": "stellar"},
-      {"rank": 5, "sym": "HYPE", "ret": 22.3, "status": "up", "id": "hyperliquid"},
-      {"rank": 6, "sym": "RAIN", "ret": 22.1, "status": "down", "id": "rain"},
-      {"rank": 7, "sym": "DEXE", "ret": 13.9, "status": "up", "id": "dexe"},
-      {"rank": 8, "sym": "CC", "ret": 2.4, "status": "up", "id": "canton-network"},
-      {"rank": 9, "sym": "NIGHT", "ret": -1.6, "status": "new", "id": "midnight-3"},
-      {"rank": 10, "sym": "INJ", "ret": -2.1, "status": "down", "id": "injective-protocol"}
+      {
+        "rank": 1,
+        "sym": "LAB",
+        "ret": 189.9,
+        "status": "c3",
+        "id": "lab"
+      },
+      {
+        "rank": 2,
+        "sym": "WLD",
+        "ret": 99.7,
+        "status": "c3",
+        "id": "worldcoin-wld"
+      },
+      {
+        "rank": 3,
+        "sym": "BEAT",
+        "ret": 55.3,
+        "status": "c3",
+        "id": "audiera"
+      },
+      {
+        "rank": 4,
+        "sym": "XLM",
+        "ret": 31.7,
+        "status": "hold",
+        "id": "stellar"
+      },
+      {
+        "rank": 5,
+        "sym": "HYPE",
+        "ret": 23.9,
+        "status": "hold",
+        "id": "hyperliquid"
+      },
+      {
+        "rank": 6,
+        "sym": "ASTER",
+        "ret": 6.0,
+        "status": "new",
+        "id": "aster-2"
+      },
+      {
+        "rank": 7,
+        "sym": "WLFI",
+        "ret": 5.5,
+        "status": "new",
+        "id": "world-liberty-financial"
+      },
+      {
+        "rank": 8,
+        "sym": "CC",
+        "ret": 4.8,
+        "status": "hold",
+        "id": "canton-network"
+      },
+      {
+        "rank": 9,
+        "sym": "RAIN",
+        "ret": 0.6,
+        "status": "down",
+        "id": "rain"
+      },
+      {
+        "rank": 10,
+        "sym": "INJ",
+        "ret": -0.5,
+        "status": "hold",
+        "id": "injective-protocol"
+      }
     ]
   }
 }
