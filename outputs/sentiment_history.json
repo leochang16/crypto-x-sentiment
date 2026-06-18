@@ -1,431 +1,439 @@
 [
-  {
-    "date": "2026-04-21",
-    "btc": 63.7,
-    "btc_band": "greed",
-    "eth": null,
-    "btc_price": 75901,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-22",
-    "btc": 71.2,
-    "btc_band": "greed",
-    "eth": null,
-    "btc_price": 79000,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-23",
-    "btc": 57.9,
-    "btc_band": "greed",
-    "eth": null,
-    "btc_price": 77500,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-24",
-    "btc": 61.4,
-    "btc_band": "greed",
-    "eth": null,
-    "btc_price": 78126,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-25",
-    "btc": 66.8,
-    "btc_band": "greed",
-    "eth": null,
-    "btc_price": 78000,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-26",
-    "btc": 69.5,
-    "btc_band": "greed",
-    "eth": null,
-    "btc_price": 77875,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-27",
-    "btc": 74.2,
-    "btc_band": "greed",
-    "eth": null,
-    "btc_price": 78661,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-28",
-    "btc": 62.8,
-    "btc_band": "greed",
-    "eth": 58.4,
-    "btc_price": 76472,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-29",
-    "btc": 42.8,
-    "btc_band": "fear",
-    "eth": 39.5,
-    "btc_price": 77044,
-    "eth_price": null
-  },
-  {
-    "date": "2026-04-30",
-    "btc": 38.0,
-    "btc_band": "fear",
-    "eth": 35.0,
-    "btc_price": 76300,
-    "eth_price": null
-  },
-  {
-    "date": "2026-05-01",
-    "btc": 47.0,
-    "btc_band": "neutral",
-    "eth": 43.0,
-    "btc_price": 78420,
-    "eth_price": null
-  },
-  {
-    "date": "2026-05-04",
-    "btc": 54.0,
-    "btc_band": "neutral",
-    "eth": 48.0,
-    "btc_price": 78863,
-    "eth_price": null
-  },
-  {
-    "date": "2026-05-05",
-    "btc": 42.0,
-    "btc_band": "fear",
-    "eth": 45.0,
-    "btc_price": 80425,
-    "eth_price": null
-  },
-  {
-    "date": "2026-05-06",
-    "btc": 52.0,
-    "btc_band": "neutral",
-    "eth": 54.0,
-    "btc_price": 81317,
-    "eth_price": null
-  },
-  {
-    "date": "2026-05-07",
-    "btc": 69.0,
-    "btc_band": "greed",
-    "eth": 31.0,
-    "btc_price": 80991,
-    "eth_price": 2321
-  },
-  {
-    "date": "2026-05-08",
-    "btc": 56.0,
-    "btc_band": "greed",
-    "eth": 53.0,
-    "btc_price": 79572,
-    "eth_price": 2277
-  },
-  {
-    "date": "2026-05-11",
-    "btc": 66.5,
-    "btc_band": "greed",
-    "eth": 62.2,
-    "btc_price": 81505,
-    "eth_price": 2358
-  },
-  {
-    "date": "2026-05-12",
-    "btc": 55.1,
-    "btc_band": "greed",
-    "eth": 54.1,
-    "btc_price": 81307.86,
-    "eth_price": 2315.04
-  },
-  {
-    "date": "2026-05-13",
-    "btc": 76.9,
-    "btc_band": "euphoric",
-    "eth": 67.0,
-    "btc_price": 80727,
-    "eth_price": 2267
-  },
-  {
-    "date": "2026-05-14",
-    "btc": 78.2,
-    "btc_band": "euphoric",
-    "eth": 73.1,
-    "btc_price": 79300,
-    "eth_price": 2270
-  },
-  {
-    "date": "2026-05-15",
-    "btc": 65.0,
-    "btc_band": "greed",
-    "eth": 59.9,
-    "btc_price": 79500,
-    "eth_price": 2246
-  },
-  {
-    "date": "2026-05-16",
-    "btc": 45.0,
-    "btc_band": "neutral",
-    "eth": 50.0,
-    "btc_price": 79127,
-    "eth_price": 2226
-  },
-  {
-    "date": "2026-05-17",
-    "btc": 31.0,
-    "btc_band": "fear",
-    "eth": 40.0,
-    "btc_price": 78195,
-    "eth_price": 2173
-  },
-  {
-    "date": "2026-05-18",
-    "btc": 47.0,
-    "btc_band": "neutral",
-    "eth": 35.0,
-    "btc_price": 77400,
-    "eth_price": 2179
-  },
-  {
-    "date": "2026-05-19",
-    "btc": 63.6,
-    "btc_band": "greed",
-    "eth": 40.6,
-    "btc_price": 77087,
-    "eth_price": 2107
-  },
-  {
-    "date": "2026-05-20",
-    "btc": 40.0,
-    "btc_band": "fear",
-    "eth": 32.0,
-    "btc_price": 76985,
-    "eth_price": 2115
-  },
-  {
-    "date": "2026-05-21",
-    "btc": 36.0,
-    "btc_band": "fear",
-    "eth": 33.0,
-    "btc_price": 77350,
-    "eth_price": 2128
-  },
-  {
-    "date": "2026-05-22",
-    "btc": 65.4,
-    "btc_band": "greed",
-    "eth": 20.2,
-    "btc_price": 77895,
-    "eth_price": 2130
-  },
-  {
-    "date": "2026-05-23",
-    "btc": 59.55,
-    "btc_band": "greed",
-    "eth": 61.69,
-    "btc_price": 77400,
-    "eth_price": 2128
-  },
-  {
-    "date": "2026-05-24",
-    "btc": 82.9,
-    "btc_band": "euphoric",
-    "eth": 72.0,
-    "btc_price": 75400,
-    "eth_price": 2061
-  },
-  {
-    "date": "2026-05-25",
-    "btc": 71.7,
-    "btc_band": "greed",
-    "eth": 46.0,
-    "btc_price": 76700,
-    "eth_price": 2093
-  },
-  {
-    "date": "2026-05-26",
-    "btc": 73.2,
-    "btc_band": "greed",
-    "eth": 60.5,
-    "btc_price": 77400,
-    "eth_price": 2100
-  },
-  {
-    "date": "2026-05-27",
-    "btc": 68.67,
-    "btc_band": "greed",
-    "eth": 31.37,
-    "btc_price": 76200,
-    "eth_price": 2100
-  },
-  {
-    "date": "2026-05-28",
-    "btc": 59.0,
-    "btc_band": "greed",
-    "eth": 48.0,
-    "btc_price": 75139,
-    "eth_price": 2065
-  },
-  {
-    "date": "2026-05-29",
-    "btc": 58.5,
-    "btc_band": "greed",
-    "eth": 53.6,
-    "btc_price": 74116,
-    "eth_price": 2039
-  },
-  {
-    "date": "2026-05-30",
-    "btc": 55.7,
-    "btc_band": "greed",
-    "eth": 64.2,
-    "btc_price": 73675,
-    "eth_price": 2034
-  },
-  {
-    "date": "2026-05-31",
-    "btc": 37.3,
-    "btc_band": "fear",
-    "eth": 59.2,
-    "btc_price": 73906,
-    "eth_price": 2013
-  },
-  {
-    "date": "2026-06-01",
-    "btc": 86.7,
-    "btc_band": "euphoric",
-    "eth": 33.5,
-    "btc_price": 73600,
-    "eth_price": 2008
-  },
-  {
-    "date": "2026-06-02",
-    "btc": 50.5,
-    "btc_band": "neutral",
-    "eth": 47.7,
-    "btc_price": 73594,
-    "eth_price": 1997
-  },
-  {
-    "date": "2026-06-03",
-    "btc": 46.5,
-    "btc_band": "neutral",
-    "eth": 51.8,
-    "btc_price": 67154,
-    "eth_price": 1882
-  },
-  {
-    "date": "2026-06-04",
-    "btc": 49.0,
-    "btc_band": "neutral",
-    "eth": 35.6,
-    "btc_price": 64265,
-    "eth_price": 1814
-  },
-  {
-    "date": "2026-06-05",
-    "btc": 39.7,
-    "btc_band": "fear",
-    "eth": 46.4,
-    "btc_price": 63011,
-    "eth_price": 1729
-  },
-  {
-    "date": "2026-06-06",
-    "btc": 39.1,
-    "btc_band": "fear",
-    "eth": 48.4,
-    "btc_price": 61274,
-    "eth_price": 1594
-  },
-  {
-    "date": "2026-06-07",
-    "btc": 34.2,
-    "btc_band": "fear",
-    "eth": 32.7,
-    "btc_price": 60864,
-    "eth_price": 1569
-  },
-  {
-    "date": "2026-06-08",
-    "btc": 49.7,
-    "btc_band": "neutral",
-    "eth": 53.2,
-    "btc_price": 63193.0,
-    "eth_price": 1670.28
-  },
-  {
-    "date": "2026-06-09",
-    "btc": 50.7,
-    "btc_band": "neutral",
-    "eth": 45.5,
-    "eth_band": "neutral",
-    "btc_price": 62619,
-    "eth_price": 1659.18
-  },
-  {
-    "date": "2026-06-10",
-    "btc": 43.1,
-    "btc_band": "fear",
-    "eth": 38.8,
-    "eth_band": "fear",
-    "btc_price": 61753,
-    "eth_price": 1640.71
-  },
-  {
-    "date": "2026-06-11",
-    "btc": 49.9,
-    "btc_band": "neutral",
-    "eth": 47.2,
-    "eth_band": "neutral",
-    "btc_price": 61574,
-    "eth_price": 1623.06
-  },
-  {
-    "date": "2026-06-12",
-    "btc": 54.0,
-    "btc_band": "neutral",
-    "eth": 53.1,
-    "eth_band": "neutral",
-    "btc_price": 63657,
-    "eth_price": 1673.99
-  },
-  {
-    "date": "2026-06-14",
-    "btc": 50.4,
-    "btc_band": "neutral",
-    "eth": 52.4,
-    "eth_band": "neutral",
-    "btc_price": 64429,
-    "eth_price": 1679.75
-  },
-  {
-    "date": "2026-06-15",
-    "btc": 48.7,
-    "btc_band": "neutral",
-    "eth": 45.7,
-    "eth_price": 1727.49,
-    "btc_price": 65718
-  },
-  {
-    "date": "2026-06-16",
-    "btc": 50.3,
-    "btc_band": "neutral",
-    "eth": 51.3,
-    "btc_price": 66301,
-    "eth_price": 1793.17
-  },
-  {
-    "date": "2026-06-17",
-    "btc": 64.8,
-    "btc_band": "greed",
-    "eth": 64.9,
-    "btc_price": 65670,
-    "eth_price": 1793.77
-  }
+ {
+  "date": "2026-04-21",
+  "btc": 63.7,
+  "btc_band": "greed",
+  "eth": null,
+  "btc_price": 75901,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-22",
+  "btc": 71.2,
+  "btc_band": "greed",
+  "eth": null,
+  "btc_price": 79000,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-23",
+  "btc": 57.9,
+  "btc_band": "greed",
+  "eth": null,
+  "btc_price": 77500,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-24",
+  "btc": 61.4,
+  "btc_band": "greed",
+  "eth": null,
+  "btc_price": 78126,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-25",
+  "btc": 66.8,
+  "btc_band": "greed",
+  "eth": null,
+  "btc_price": 78000,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-26",
+  "btc": 69.5,
+  "btc_band": "greed",
+  "eth": null,
+  "btc_price": 77875,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-27",
+  "btc": 74.2,
+  "btc_band": "greed",
+  "eth": null,
+  "btc_price": 78661,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-28",
+  "btc": 62.8,
+  "btc_band": "greed",
+  "eth": 58.4,
+  "btc_price": 76472,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-29",
+  "btc": 42.8,
+  "btc_band": "fear",
+  "eth": 39.5,
+  "btc_price": 77044,
+  "eth_price": null
+ },
+ {
+  "date": "2026-04-30",
+  "btc": 38.0,
+  "btc_band": "fear",
+  "eth": 35.0,
+  "btc_price": 76300,
+  "eth_price": null
+ },
+ {
+  "date": "2026-05-01",
+  "btc": 47.0,
+  "btc_band": "neutral",
+  "eth": 43.0,
+  "btc_price": 78420,
+  "eth_price": null
+ },
+ {
+  "date": "2026-05-04",
+  "btc": 54.0,
+  "btc_band": "neutral",
+  "eth": 48.0,
+  "btc_price": 78863,
+  "eth_price": null
+ },
+ {
+  "date": "2026-05-05",
+  "btc": 42.0,
+  "btc_band": "fear",
+  "eth": 45.0,
+  "btc_price": 80425,
+  "eth_price": null
+ },
+ {
+  "date": "2026-05-06",
+  "btc": 52.0,
+  "btc_band": "neutral",
+  "eth": 54.0,
+  "btc_price": 81317,
+  "eth_price": null
+ },
+ {
+  "date": "2026-05-07",
+  "btc": 69.0,
+  "btc_band": "greed",
+  "eth": 31.0,
+  "btc_price": 80991,
+  "eth_price": 2321
+ },
+ {
+  "date": "2026-05-08",
+  "btc": 56.0,
+  "btc_band": "greed",
+  "eth": 53.0,
+  "btc_price": 79572,
+  "eth_price": 2277
+ },
+ {
+  "date": "2026-05-11",
+  "btc": 66.5,
+  "btc_band": "greed",
+  "eth": 62.2,
+  "btc_price": 81505,
+  "eth_price": 2358
+ },
+ {
+  "date": "2026-05-12",
+  "btc": 55.1,
+  "btc_band": "greed",
+  "eth": 54.1,
+  "btc_price": 81307.86,
+  "eth_price": 2315.04
+ },
+ {
+  "date": "2026-05-13",
+  "btc": 76.9,
+  "btc_band": "euphoric",
+  "eth": 67.0,
+  "btc_price": 80727,
+  "eth_price": 2267
+ },
+ {
+  "date": "2026-05-14",
+  "btc": 78.2,
+  "btc_band": "euphoric",
+  "eth": 73.1,
+  "btc_price": 79300,
+  "eth_price": 2270
+ },
+ {
+  "date": "2026-05-15",
+  "btc": 65.0,
+  "btc_band": "greed",
+  "eth": 59.9,
+  "btc_price": 79500,
+  "eth_price": 2246
+ },
+ {
+  "date": "2026-05-16",
+  "btc": 45.0,
+  "btc_band": "neutral",
+  "eth": 50.0,
+  "btc_price": 79127,
+  "eth_price": 2226
+ },
+ {
+  "date": "2026-05-17",
+  "btc": 31.0,
+  "btc_band": "fear",
+  "eth": 40.0,
+  "btc_price": 78195,
+  "eth_price": 2173
+ },
+ {
+  "date": "2026-05-18",
+  "btc": 47.0,
+  "btc_band": "neutral",
+  "eth": 35.0,
+  "btc_price": 77400,
+  "eth_price": 2179
+ },
+ {
+  "date": "2026-05-19",
+  "btc": 63.6,
+  "btc_band": "greed",
+  "eth": 40.6,
+  "btc_price": 77087,
+  "eth_price": 2107
+ },
+ {
+  "date": "2026-05-20",
+  "btc": 40.0,
+  "btc_band": "fear",
+  "eth": 32.0,
+  "btc_price": 76985,
+  "eth_price": 2115
+ },
+ {
+  "date": "2026-05-21",
+  "btc": 36.0,
+  "btc_band": "fear",
+  "eth": 33.0,
+  "btc_price": 77350,
+  "eth_price": 2128
+ },
+ {
+  "date": "2026-05-22",
+  "btc": 65.4,
+  "btc_band": "greed",
+  "eth": 20.2,
+  "btc_price": 77895,
+  "eth_price": 2130
+ },
+ {
+  "date": "2026-05-23",
+  "btc": 59.55,
+  "btc_band": "greed",
+  "eth": 61.69,
+  "btc_price": 77400,
+  "eth_price": 2128
+ },
+ {
+  "date": "2026-05-24",
+  "btc": 82.9,
+  "btc_band": "euphoric",
+  "eth": 72.0,
+  "btc_price": 75400,
+  "eth_price": 2061
+ },
+ {
+  "date": "2026-05-25",
+  "btc": 71.7,
+  "btc_band": "greed",
+  "eth": 46.0,
+  "btc_price": 76700,
+  "eth_price": 2093
+ },
+ {
+  "date": "2026-05-26",
+  "btc": 73.2,
+  "btc_band": "greed",
+  "eth": 60.5,
+  "btc_price": 77400,
+  "eth_price": 2100
+ },
+ {
+  "date": "2026-05-27",
+  "btc": 68.67,
+  "btc_band": "greed",
+  "eth": 31.37,
+  "btc_price": 76200,
+  "eth_price": 2100
+ },
+ {
+  "date": "2026-05-28",
+  "btc": 59.0,
+  "btc_band": "greed",
+  "eth": 48.0,
+  "btc_price": 75139,
+  "eth_price": 2065
+ },
+ {
+  "date": "2026-05-29",
+  "btc": 58.5,
+  "btc_band": "greed",
+  "eth": 53.6,
+  "btc_price": 74116,
+  "eth_price": 2039
+ },
+ {
+  "date": "2026-05-30",
+  "btc": 55.7,
+  "btc_band": "greed",
+  "eth": 64.2,
+  "btc_price": 73675,
+  "eth_price": 2034
+ },
+ {
+  "date": "2026-05-31",
+  "btc": 37.3,
+  "btc_band": "fear",
+  "eth": 59.2,
+  "btc_price": 73906,
+  "eth_price": 2013
+ },
+ {
+  "date": "2026-06-01",
+  "btc": 86.7,
+  "btc_band": "euphoric",
+  "eth": 33.5,
+  "btc_price": 73600,
+  "eth_price": 2008
+ },
+ {
+  "date": "2026-06-02",
+  "btc": 50.5,
+  "btc_band": "neutral",
+  "eth": 47.7,
+  "btc_price": 73594,
+  "eth_price": 1997
+ },
+ {
+  "date": "2026-06-03",
+  "btc": 46.5,
+  "btc_band": "neutral",
+  "eth": 51.8,
+  "btc_price": 67154,
+  "eth_price": 1882
+ },
+ {
+  "date": "2026-06-04",
+  "btc": 49.0,
+  "btc_band": "neutral",
+  "eth": 35.6,
+  "btc_price": 64265,
+  "eth_price": 1814
+ },
+ {
+  "date": "2026-06-05",
+  "btc": 39.7,
+  "btc_band": "fear",
+  "eth": 46.4,
+  "btc_price": 63011,
+  "eth_price": 1729
+ },
+ {
+  "date": "2026-06-06",
+  "btc": 39.1,
+  "btc_band": "fear",
+  "eth": 48.4,
+  "btc_price": 61274,
+  "eth_price": 1594
+ },
+ {
+  "date": "2026-06-07",
+  "btc": 34.2,
+  "btc_band": "fear",
+  "eth": 32.7,
+  "btc_price": 60864,
+  "eth_price": 1569
+ },
+ {
+  "date": "2026-06-08",
+  "btc": 49.7,
+  "btc_band": "neutral",
+  "eth": 53.2,
+  "btc_price": 63193.0,
+  "eth_price": 1670.28
+ },
+ {
+  "date": "2026-06-09",
+  "btc": 50.7,
+  "btc_band": "neutral",
+  "eth": 45.5,
+  "eth_band": "neutral",
+  "btc_price": 62619,
+  "eth_price": 1659.18
+ },
+ {
+  "date": "2026-06-10",
+  "btc": 43.1,
+  "btc_band": "fear",
+  "eth": 38.8,
+  "eth_band": "fear",
+  "btc_price": 61753,
+  "eth_price": 1640.71
+ },
+ {
+  "date": "2026-06-11",
+  "btc": 49.9,
+  "btc_band": "neutral",
+  "eth": 47.2,
+  "eth_band": "neutral",
+  "btc_price": 61574,
+  "eth_price": 1623.06
+ },
+ {
+  "date": "2026-06-12",
+  "btc": 54.0,
+  "btc_band": "neutral",
+  "eth": 53.1,
+  "eth_band": "neutral",
+  "btc_price": 63657,
+  "eth_price": 1673.99
+ },
+ {
+  "date": "2026-06-14",
+  "btc": 50.4,
+  "btc_band": "neutral",
+  "eth": 52.4,
+  "eth_band": "neutral",
+  "btc_price": 64429,
+  "eth_price": 1679.75
+ },
+ {
+  "date": "2026-06-15",
+  "btc": 48.7,
+  "btc_band": "neutral",
+  "eth": 45.7,
+  "eth_price": 1727.49,
+  "btc_price": 65718
+ },
+ {
+  "date": "2026-06-16",
+  "btc": 50.3,
+  "btc_band": "neutral",
+  "eth": 51.3,
+  "btc_price": 66301,
+  "eth_price": 1793.17
+ },
+ {
+  "date": "2026-06-17",
+  "btc": 64.8,
+  "btc_band": "greed",
+  "eth": 64.9,
+  "btc_price": 65670,
+  "eth_price": 1793.77
+ },
+ {
+  "date": "2026-06-18",
+  "btc": 42.9,
+  "btc_band": "fear",
+  "eth": 37.0,
+  "btc_price": 64554,
+  "eth_price": 1752.05
+ }
 ]

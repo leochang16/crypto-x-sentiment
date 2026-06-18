@@ -1,6 +1,11 @@
-# audit 2026-06-17 (fetched 2026-06-17T00:26:31Z)
-tips=null: FRED DFII10 WebFetch 403 (fredgraph.csv + tradingeconomics both 403); WebSearch only returned stale Apr-7 value -> null per anti-cache rule
-alt basket: ton MISSING (markets symbol is 'gram' id=the-open-network, not 'ton') -> n_valid=13 not 14
-PART E historical: morpho/canton-network/aster-2 returned 0 items once (CoinGecko rate-limit) -> sleep+retry succeeded; all 15 candidates got real 21D, NO 30d substitution
-markets actor returned 100 items (top100). dominance via makework36 global ok.
-etf_flow=-10.5 from farside 16 Jun 2026 Total row (latest published, T-1)
+=== AUDIT 2026-06-18 (fetched 2026-06-18T00:27:55Z) ===
+PART A: kaitoeasyapi/twitter-x-data-tweet-scraper FAILED exitCode1 x5 (actor-side outage, all inputs). LunarCrush topic = subscription-gated (402). FALLBACK -> xquik/x-tweet-scraper SUCCEEDED 125 tweets/6 terms. Sentiment via keyword engagement-weighted (same method family).
+  -> BTC 42.9 fear (delta_1d -21.9), ETH 37.0 fear (delta_1d -27.9). Large drop consistent w/ risk-off (VIX 16.4->18.4, equities sell-off).
+PART B: crypto-intelligence markets OK (100 coins). coingecko-scraper global OK. btc_d 56.11. ton missing (symbol now 'gram') -> alt n_valid=13.
+  btc_d_delta7=-0.04 (7d-ago=06-11 56.15). req1 PASS req2 PASS, bonus_b only -> GO (flip from yesterday ALT-OFF).
+PART C: yahoo-finance-scraper quote OK (VIX/MOVE/DXY). DFII10 via WebSearch=2.12. farside via rag-web-browser OK: last data row 17 Jun Total=(54.9). ndx_corr_30d=0.61 (yahoo history).
+  Memory note: 8192MB cap hit when 3 actors concurrent; yahoo re-run at memory=2048 each OK.
+PART E: 14 candidates (top30d, excl stables/exchange/non-ascii). historical sequential, 1-at-a-time. Rate-limit(0 items) retries: lab x1, wld x1, inj x2. All resolved.
+  Real 21D: LAB189.9 WLD99.7 BEAT55.3 XLM31.7 HYPE23.9 ASTER6.0 WLFI5.5 CC4.8 RAIN0.6 INJ-0.5 | below: VVV-3.6 MORPHO-5.7 DEXE-12.0 NEAR-11.1.
+  NOTE: RAIN/BEAT/NEAR/MORPHO had high 30d but weak real 21D -> NOT promoted on 30d (6/16 lesson honored). No 30d substitution.
+NULLS: none critical. All core fields populated with fresh fetch.
