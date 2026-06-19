@@ -187,5 +187,19 @@
   },
   "method": "xquik/x-tweet-scraper 6 terms x25; keyword engagement-weighted (kaitoeasyapi actor down, fallback)",
   "fetched_at_utc": "2026-06-18T00:27:20Z"
+ },
+ {
+  "date": "2026-06-19",
+  "btc_score": null,
+  "btc_band": null,
+  "eth_score": null,
+  "eth_band": null,
+  "terms": {
+   "BTC_en": null,
+   "ETH_en": null,
+   "mkt_en": null
+  },
+  "method": "kaitoeasyapi actor FAILED exitCode1 (provider-side, control run also failed); X sentiment null",
+  "fetched_at_utc": "2026-06-19T00:17:00Z"
  }
 ]

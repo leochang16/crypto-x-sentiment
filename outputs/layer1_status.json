@@ -186,5 +186,17 @@
   "btc_d_delta7": -0.04,
   "alt_mom7": 12.58,
   "fetched_at_utc": "2026-06-18T00:27:20Z"
+ },
+ {
+  "date": "2026-06-19",
+  "verdict": "STRONG GO",
+  "req1": true,
+  "req2": true,
+  "bonus_a": false,
+  "bonus_b": true,
+  "bonus_c": true,
+  "btc_d_delta7": -0.47,
+  "alt_mom7": 3.66,
+  "fetched_at_utc": "2026-06-19T00:17:00Z"
  }
 ]

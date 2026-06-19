@@ -1,11 +1,9 @@
-=== AUDIT 2026-06-18 (fetched 2026-06-18T00:27:55Z) ===
-PART A: kaitoeasyapi/twitter-x-data-tweet-scraper FAILED exitCode1 x5 (actor-side outage, all inputs). LunarCrush topic = subscription-gated (402). FALLBACK -> xquik/x-tweet-scraper SUCCEEDED 125 tweets/6 terms. Sentiment via keyword engagement-weighted (same method family).
-  -> BTC 42.9 fear (delta_1d -21.9), ETH 37.0 fear (delta_1d -27.9). Large drop consistent w/ risk-off (VIX 16.4->18.4, equities sell-off).
-PART B: crypto-intelligence markets OK (100 coins). coingecko-scraper global OK. btc_d 56.11. ton missing (symbol now 'gram') -> alt n_valid=13.
-  btc_d_delta7=-0.04 (7d-ago=06-11 56.15). req1 PASS req2 PASS, bonus_b only -> GO (flip from yesterday ALT-OFF).
-PART C: yahoo-finance-scraper quote OK (VIX/MOVE/DXY). DFII10 via WebSearch=2.12. farside via rag-web-browser OK: last data row 17 Jun Total=(54.9). ndx_corr_30d=0.61 (yahoo history).
-  Memory note: 8192MB cap hit when 3 actors concurrent; yahoo re-run at memory=2048 each OK.
-PART E: 14 candidates (top30d, excl stables/exchange/non-ascii). historical sequential, 1-at-a-time. Rate-limit(0 items) retries: lab x1, wld x1, inj x2. All resolved.
-  Real 21D: LAB189.9 WLD99.7 BEAT55.3 XLM31.7 HYPE23.9 ASTER6.0 WLFI5.5 CC4.8 RAIN0.6 INJ-0.5 | below: VVV-3.6 MORPHO-5.7 DEXE-12.0 NEAR-11.1.
-  NOTE: RAIN/BEAT/NEAR/MORPHO had high 30d but weak real 21D -> NOT promoted on 30d (6/16 lesson honored). No 30d substitution.
-NULLS: none critical. All core fields populated with fresh fetch.
+AUDIT 2026-06-19 (2026-06-19T00:17:00Z)
+PART A X sentiment: kaitoeasyapi/twitter-x-data-tweet-scraper FAILED exitCode1 across all 6 terms + control run (subagent) + direct retry. Provider-side. x.btc/x.eth scores=null, delta_1d=null. top_discussions derived from news fallback.
+PART B markets: crypto-intelligence returned 100 coins OK. dominance via makework36/coingecko-scraper OK.
+  btc_d=55.90 delta7=-0.47 (baseline 06-12=56.37); alt_mom7=+3.66 (14/14 alts); breadth=71.4; others_d=12.11; total3_d=23.38
+  verdict=STRONG GO (req1 T, req2 T, bonus_b T, bonus_c T, bonus_a F)
+PART C macro: VIX/MOVE/DXY via yahoo OK (16.40/65.39/100.84). TIPS=2.23 FRED DFII10 06-17. ETF flow=+10.4M (farside 6/18, partial). ndx_corr_30d=0.61 (30 pairs). dxy_last=100.35.
+PART E 21D: all 15 candidates fetched sequentially (lab,wld,rain,stellar,hyperliquid,near,morpho,inj,dexe,canton,beldex,jup,hash-2,wlfi,midnight-3). NONE failed. Real 21D used for all top10. No 30d substitution.
+  Divergences caught: rain 30d+95% but 21D+1.7%; near 30d+40% but 21D-11.1%; BEAT dropped out of top-100 mcap -> exit.
+  top3=LAB/WLD/XLM; c3=LAB+WLD Day14; exits=BEAT/ASTER/INJ
