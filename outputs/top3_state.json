@@ -510,7 +510,84 @@
    "exits": [
     "VVV"
    ]
+  },
+  {
+   "date": "2026-06-19",
+   "scan_done": true,
+   "regime": "STRONG GO",
+   "method": "benthepythondev/crypto-intelligence mode=historical days=21 (15 candidates fetched sequentially)",
+   "prev_date": "2026-06-18",
+   "prev_top3": [
+    "lab",
+    "wld",
+    "beat"
+   ],
+   "prev_top10": [
+    "lab",
+    "wld",
+    "beat",
+    "xlm",
+    "hype",
+    "aster",
+    "wlfi",
+    "cc",
+    "rain",
+    "inj"
+   ],
+   "top3": [
+    "lab",
+    "wld",
+    "xlm"
+   ],
+   "top10": [
+    "lab",
+    "wld",
+    "xlm",
+    "jup",
+    "hype",
+    "bdx",
+    "cc",
+    "rain",
+    "wlfi",
+    "hash"
+   ],
+   "top10_gains_21d": {
+    "lab": 310.4,
+    "wld": 123.8,
+    "xlm": 16.8,
+    "jup": 11.1,
+    "hype": 9.7,
+    "bdx": 5.2,
+    "cc": 3.4,
+    "rain": 1.7,
+    "wlfi": 0.8,
+    "hash": 0.8
+   },
+   "exits_today": [
+    "beat",
+    "aster",
+    "inj"
+   ],
+   "new_entrants": [
+    "jup",
+    "bdx",
+    "hash"
+   ],
+   "c3_coins": [
+    "lab",
+    "wld"
+   ],
+   "c3_day": 14,
+   "c3_entry": [
+    "lab",
+    "wld"
+   ],
+   "c3_exit": [
+    "beat"
+   ],
+   "notes": "LAB/WLD c3 Day14(BEAT跌出Top3斷c3). XLM升#3. JUP/BDX/HASH新入. 出場BEAT(跌出百大)/ASTER/INJ. STRONG GO: req1✓(delta7=-0.47pp) req2✓(alt_mom7=+3.66%) bonus_b+bonus_c. X情緒源掛(actor FAILED). [註:06-18未入top3_state,prev手動補正自當日today.json]",
+   "fetched_at_utc": "2026-06-19T00:17:00Z"
   }
  ],
- "last_updated": "2026-06-17T00:26:31Z"
+ "last_updated": "2026-06-19T00:17:00Z"
 }

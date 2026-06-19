@@ -1,99 +1,104 @@
 {
-  "date": "2026-06-18",
-  "weekday": "週四",
-  "updated_tpe": "08:27",
-  "verdict": "GO",
+  "date": "2026-06-19",
+  "weekday": "週五",
+  "updated_tpe": "08:17",
+  "verdict": "STRONG GO",
   "verdict_reason_code": "req1_req2_pass",
   "x": {
     "btc": {
-      "score": 42.9,
-      "band": "fear",
-      "delta_1d": -21.9
+      "score": null,
+      "band": null,
+      "delta_1d": null
     },
     "eth": {
-      "score": 37.0,
-      "band": "fear",
-      "delta_1d": -27.9
+      "score": null,
+      "band": null,
+      "delta_1d": null
     },
-    "btc_price": 64554,
-    "btc_price_delta_pct": -1.7,
-    "eth_price": 1752.05,
-    "eth_price_delta_pct": -2.33,
+    "btc_price": 62887,
+    "btc_price_delta_pct": -2.55,
+    "eth_price": 1708.91,
+    "eth_price_delta_pct": -2.45,
     "top_discussions": [
       {
-        "title": "Strategy斥1億美元增持1,587枚BTC",
-        "tag": "bull"
-      },
-      {
-        "title": "美股重挫 標普與那斯達克急跌",
+        "title": "聯準會鷹派+強美元 風險資產退潮",
         "tag": "bear"
       },
       {
-        "title": "AI建設吸納龐大資本 全球市場短期承壓",
+        "title": "多單爆倉逾1億美元 槓桿快速去化",
+        "tag": "bear"
+      },
+      {
+        "title": "Juneteenth美股休市 留意選擇權到期",
         "tag": "watch"
       }
     ]
   },
   "macro": {
-    "vix": 18.44,
-    "move": 70.66,
-    "dxy": 100.35,
-    "dxy_last": 99.54,
-    "tips": 2.12,
-    "etf_flow": -54.9,
-    "etf_flow_last": -10.5,
+    "vix": 16.4,
+    "move": 65.39,
+    "dxy": 100.84,
+    "dxy_last": 100.35,
+    "tips": 2.23,
+    "etf_flow": 10.4,
+    "etf_flow_last": -54.9,
     "ndx_corr_30d": 0.61
   },
   "dominance": {
-    "btc_d": 56.11,
-    "btc_d_delta7": -0.04,
-    "others_d": 11.99,
+    "btc_d": 55.9,
+    "btc_d_delta7": -0.47,
+    "others_d": 12.11,
     "total3_d": 23.38,
-    "ethbtc": 0.02714,
-    "alt_mom7": 12.58,
-    "breadth_pct": 84.6,
-    "n_valid": 13,
+    "ethbtc": 0.02717,
+    "alt_mom7": 3.66,
+    "breadth_pct": 71.4,
+    "n_valid": 14,
     "req1": true,
     "req2": true,
     "bonus_a": false,
     "bonus_b": true,
-    "bonus_c": false
+    "bonus_c": true
   },
   "news": [
     {
       "sev": "high",
-      "title": "FOMC決議揭曉 市場押注鷹派 風險資產回落"
+      "title": "聯準會釋鷹派訊號 美元走強 加密承壓BTC跌破$63,000"
     },
     {
       "sev": "high",
-      "title": "美股重挫 標普與那斯達克急跌 加密同步承壓"
+      "title": "比特幣24小時清算1.02億美元 逾七成為多單"
     },
     {
       "sev": "med",
-      "title": "Strategy斥資1億美元增持1,587枚BTC 儲備達846,842枚"
+      "title": "恐懼貪婪指數跌至19 落入極度恐懼區間"
     },
     {
       "sev": "med",
-      "title": "比特幣6月累跌12% $86億選擇權價外 多頭部位水下"
+      "title": "ETH跌破$1,700 XRP單日重挫逾6%"
     },
     {
       "sev": "med",
-      "title": "6/17比特幣ETF淨流出5,490萬美元 連日資金外流"
+      "title": "6/18比特幣ETF淨流入1,040萬美元 結束連日外流"
     }
   ],
   "calendar": {
     "today": [
       {
-        "time": "20:30",
-        "event": "美國上週初請失業金人數",
+        "time": "全天",
+        "event": "Juneteenth美股與債市休市",
         "tag": "fed"
+      },
+      {
+        "time": "16:00",
+        "event": "Deribit週度BTC/ETH選擇權到期",
+        "tag": "crypto"
       }
     ],
     "week": [
       {
-        "date": "06-19 週五",
-        "event": "Juneteenth美股休市·Deribit週度BTC/ETH選擇權到期",
-        "tag": "crypto"
+        "date": "06-23 週二",
+        "event": "FedEx財報 全球貿易風向",
+        "tag": "fed"
       },
       {
         "date": "06-25 週四",
@@ -102,7 +107,7 @@
       },
       {
         "date": "06-26 週五",
-        "event": "Deribit季度BTC/ETH選擇權結算",
+        "event": "Deribit季度BTC/ETH選擇權到期",
         "tag": "crypto"
       }
     ]
@@ -111,84 +116,84 @@
     "window": "21D",
     "c3_entry": [
       "LAB",
-      "WLD",
-      "BEAT"
+      "WLD"
     ],
-    "c3_day": 13,
+    "c3_day": 14,
     "exits": [
-      "DEXE",
-      "NIGHT"
+      "BEAT",
+      "ASTER",
+      "INJ"
     ],
     "top10": [
       {
         "rank": 1,
         "sym": "LAB",
-        "ret": 189.9,
+        "ret": 310.4,
         "status": "c3",
         "id": "lab"
       },
       {
         "rank": 2,
         "sym": "WLD",
-        "ret": 99.7,
+        "ret": 123.8,
         "status": "c3",
         "id": "worldcoin-wld"
       },
       {
         "rank": 3,
-        "sym": "BEAT",
-        "ret": 55.3,
-        "status": "c3",
-        "id": "audiera"
+        "sym": "XLM",
+        "ret": 16.8,
+        "status": "up",
+        "id": "stellar"
       },
       {
         "rank": 4,
-        "sym": "XLM",
-        "ret": 31.7,
-        "status": "hold",
-        "id": "stellar"
+        "sym": "JUP",
+        "ret": 11.1,
+        "status": "new",
+        "id": "jupiter-exchange-solana"
       },
       {
         "rank": 5,
         "sym": "HYPE",
-        "ret": 23.9,
+        "ret": 9.7,
         "status": "hold",
         "id": "hyperliquid"
       },
       {
         "rank": 6,
-        "sym": "ASTER",
-        "ret": 6.0,
+        "sym": "BDX",
+        "ret": 5.2,
         "status": "new",
-        "id": "aster-2"
+        "id": "beldex"
       },
       {
         "rank": 7,
-        "sym": "WLFI",
-        "ret": 5.5,
-        "status": "new",
-        "id": "world-liberty-financial"
-      },
-      {
-        "rank": 8,
         "sym": "CC",
-        "ret": 4.8,
-        "status": "hold",
+        "ret": 3.4,
+        "status": "up",
         "id": "canton-network"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "sym": "RAIN",
-        "ret": 0.6,
-        "status": "down",
+        "ret": 1.7,
+        "status": "up",
         "id": "rain"
       },
       {
+        "rank": 9,
+        "sym": "WLFI",
+        "ret": 0.8,
+        "status": "down",
+        "id": "world-liberty-financial"
+      },
+      {
         "rank": 10,
-        "sym": "INJ",
-        "ret": -0.5,
-        "status": "hold",
-        "id": "injective-protocol"
+        "sym": "HASH",
+        "ret": 0.8,
+        "status": "new",
+        "id": "hash-2"
       }
     ]
   }
