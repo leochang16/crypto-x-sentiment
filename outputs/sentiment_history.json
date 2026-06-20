@@ -443,5 +443,13 @@
   "eth": null,
   "btc_price": 62887,
   "eth_price": 1708.91
+ },
+ {
+  "date": "2026-06-20",
+  "btc": null,
+  "btc_band": null,
+  "eth": null,
+  "btc_price": 63475,
+  "eth_price": 1707.6
  }
 ]

@@ -201,5 +201,19 @@
   },
   "method": "kaitoeasyapi actor FAILED exitCode1 (provider-side, control run also failed); X sentiment null",
   "fetched_at_utc": "2026-06-19T00:17:00Z"
+ },
+ {
+  "date": "2026-06-20",
+  "btc_score": null,
+  "btc_band": null,
+  "eth_score": null,
+  "eth_band": null,
+  "terms": {
+   "BTC_en": 67,
+   "ETH_en": null,
+   "mkt_en": null
+  },
+  "method": "kaitoeasyapi actor FAILED exitCode1 (provider outage, 3rd day). Fallback xquik/x-tweet-scraper run1 returned 29 tweets BTC-EN only (5/6 terms empty); junk-heavy, one viral tweet swings band neutral<->greed -> sample unreliable, BTC/ETH score=null. Re-run for ETH/zh terms failed (provider: Maximum charged results must be greater than zero).",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
  }
 ]
