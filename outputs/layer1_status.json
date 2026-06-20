@@ -198,5 +198,22 @@
   "btc_d_delta7": -0.47,
   "alt_mom7": 3.66,
   "fetched_at_utc": "2026-06-19T00:17:00Z"
+ },
+ {
+  "date": "2026-06-20",
+  "verdict": "GO",
+  "req1": true,
+  "req2": true,
+  "bonus_a": false,
+  "bonus_b": true,
+  "bonus_c": false,
+  "btc_d": 56.19,
+  "btc_d_delta7": -0.27,
+  "alt_mom7": 3.59,
+  "others_d": 11.93,
+  "breadth_pct": 71.4,
+  "n_valid": 14,
+  "note": "base GO (req1+req2 pass), 1 bonus(bonus_b) -> GO. delta7 -0.27pp (interp 06-13 baseline)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
  }
 ]

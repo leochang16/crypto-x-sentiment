@@ -587,7 +587,71 @@
    ],
    "notes": "LAB/WLD c3 Day14(BEAT跌出Top3斷c3). XLM升#3. JUP/BDX/HASH新入. 出場BEAT(跌出百大)/ASTER/INJ. STRONG GO: req1✓(delta7=-0.47pp) req2✓(alt_mom7=+3.66%) bonus_b+bonus_c. X情緒源掛(actor FAILED). [註:06-18未入top3_state,prev手動補正自當日today.json]",
    "fetched_at_utc": "2026-06-19T00:17:00Z"
+  },
+  {
+   "date": "2026-06-20",
+   "scan_done": true,
+   "regime": "GO",
+   "method": "benthepythondev/crypto-intelligence mode=historical days=21, sequential per-coin. PARTIAL SCAN: Apify account hit MONTHLY USAGE HARD LIMIT after 7/20 candidates (ena onward + beat/near/dexe/qnt/morpho/bdx/cc/wlfi/hash/pol/night unreachable). NO 30d substitution, NO fabrication (6/16 rule).",
+   "prev_date": "2026-06-19",
+   "prev_top3": [
+    "lab",
+    "wld",
+    "xlm"
+   ],
+   "prev_top10": [
+    "lab",
+    "wld",
+    "xlm",
+    "jup",
+    "hype",
+    "bdx",
+    "cc",
+    "rain",
+    "wlfi",
+    "hash"
+   ],
+   "top3": [
+    "wld",
+    "lab",
+    "hype"
+   ],
+   "top10": [
+    "wld",
+    "lab",
+    "hype",
+    "jup",
+    "uni",
+    "aave",
+    "xlm"
+   ],
+   "top10_gains_21d": {
+    "wld": 115.7,
+    "lab": 95.3,
+    "hype": 7.3,
+    "jup": 1.0,
+    "uni": 0.9,
+    "aave": -11.3,
+    "xlm": -19.4
+   },
+   "exits_today": [],
+   "new_entrants": [
+    "uni",
+    "aave"
+   ],
+   "c3_coins": [
+    "lab",
+    "wld"
+   ],
+   "c3_day": 15,
+   "c3_entry": [
+    "lab",
+    "wld"
+   ],
+   "c3_exit": [],
+   "notes": "LAB+WLD c3 Day15 (clear #1/#2: WLD +115.7%, LAB +95.3%). XLM 21D collapsed +16.8%->-19.4% (30d +51% front-loaded pump faded). exits=[] NOT computed: Apify monthly hard-limit truncated scan at 7 coins so bdx/cc/rain/wlfi/hash 21D unknown -> cannot assert exit (honest, not fabricated). Ranks 3-7 partial; front-end recomputes via coin id as backstop.",
+   "fetched_at_utc": "2026-06-20T00:18:00Z"
   }
  ],
- "last_updated": "2026-06-19T00:17:00Z"
+ "last_updated": "2026-06-20"
 }

@@ -1,9 +1,9 @@
-AUDIT 2026-06-19 (2026-06-19T00:17:00Z)
-PART A X sentiment: kaitoeasyapi/twitter-x-data-tweet-scraper FAILED exitCode1 across all 6 terms + control run (subagent) + direct retry. Provider-side. x.btc/x.eth scores=null, delta_1d=null. top_discussions derived from news fallback.
-PART B markets: crypto-intelligence returned 100 coins OK. dominance via makework36/coingecko-scraper OK.
-  btc_d=55.90 delta7=-0.47 (baseline 06-12=56.37); alt_mom7=+3.66 (14/14 alts); breadth=71.4; others_d=12.11; total3_d=23.38
-  verdict=STRONG GO (req1 T, req2 T, bonus_b T, bonus_c T, bonus_a F)
-PART C macro: VIX/MOVE/DXY via yahoo OK (16.40/65.39/100.84). TIPS=2.23 FRED DFII10 06-17. ETF flow=+10.4M (farside 6/18, partial). ndx_corr_30d=0.61 (30 pairs). dxy_last=100.35.
-PART E 21D: all 15 candidates fetched sequentially (lab,wld,rain,stellar,hyperliquid,near,morpho,inj,dexe,canton,beldex,jup,hash-2,wlfi,midnight-3). NONE failed. Real 21D used for all top10. No 30d substitution.
-  Divergences caught: rain 30d+95% but 21D+1.7%; near 30d+40% but 21D-11.1%; BEAT dropped out of top-100 mcap -> exit.
-  top3=LAB/WLD/XLM; c3=LAB+WLD Day14; exits=BEAT/ASTER/INJ
+2026-06-20 X SENTIMENT: kaitoeasyapi/twitter-x-data-tweet-scraper FAILED exitCode1 (provider outage, 3rd consecutive day).
+  Fallback xquik/x-tweet-scraper run1 (6 terms, queryType=Top, within_time=1d) -> 29 tweets, ALL from 'BTC OR Bitcoin lang:en'; other 5 terms (ETH en, BTC zh, ETH zh, crypto market en, alt zh) returned 0.
+  Sample junk-heavy (giveaways/iPhone/price-bot shills removed). Engagement-weighted BTC score computed ~67 but dominated by single viral tweet whose bull/neutral classification swings band neutral<->greed -> deemed unreliable. BTC & ETH score=null.
+  xquik re-run for ETH/zh terms FAILED: 'Maximum charged results must be greater than zero' (provider error, 3 attempts).
+2026-06-20 STRONG 21D: benthepythondev/crypto-intelligence mode=historical SUCCEEDED for 7 coins: wld +115.68, lab +95.29, xlm -19.37, hype +7.28, jup +0.97, uni +0.90, aave -11.31.
+  ena returned 0 items (rate-limit) then Apify 'Monthly usage hard limit exceeded' -> ALL further actor runs blocked. Could NOT fetch: ena,beat,near,dexe,qnt,morpho,bdx,cc,wlfi,hash,pol,night.
+  Per 6/16 rule: NO 30d substitution, NO fabrication. Board reported as PARTIAL (7 real-21D coins). exits=[] (cannot verify bdx/cc/rain/wlfi/hash without data). top10 carries coin id so front-end recomputes 21D live as backstop.
+2026-06-20 TIPS: FRED DFII10 WebSearch did not surface a number; used tradingeconomics 10Y TIPS Yield 2.18 (Jun/19) via rag-web-browser.
+2026-06-20 btc_d_delta7: 7d-prior date 06-13 absent in history; linear-interpolated baseline 56.46 (06-12 56.37 / 06-14 56.55) -> delta7 -0.27pp (all candidate baselines negative, req1=True robust).

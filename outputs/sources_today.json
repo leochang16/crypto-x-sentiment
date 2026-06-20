@@ -1,108 +1,107 @@
 {
-  "date": "2026-06-19",
-  "btc_price": {
-    "value": 62887,
-    "source": "benthepythondev/crypto-intelligence markets",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "btc_price_delta_pct": {
-    "value": -2.55,
-    "source": "benthepythondev/crypto-intelligence markets",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "eth_price": {
-    "value": 1708.91,
-    "source": "benthepythondev/crypto-intelligence markets",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "eth_price_delta_pct": {
-    "value": -2.45,
-    "source": "benthepythondev/crypto-intelligence markets",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "btc_x_score": {
-    "value": null,
-    "source": "kaitoeasyapi twitter actor FAILED exitCode1 (provider-side)",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "eth_x_score": {
-    "value": null,
-    "source": "kaitoeasyapi twitter actor FAILED exitCode1 (provider-side)",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "btc_d": {
-    "value": 55.9,
-    "source": "makework36/coingecko-scraper global",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "eth_d": {
-    "value": 9.15,
-    "source": "makework36/coingecko-scraper global",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "others_d": {
-    "value": 12.11,
-    "source": "makework36/coingecko-scraper global",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "total3_d": {
-    "value": 23.38,
-    "source": "makework36/coingecko-scraper global",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "btc_d_delta7": {
-    "value": -0.47,
-    "source": "dominance_history 06-12 baseline",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "ethbtc": {
-    "value": 0.02717,
-    "source": "benthepythondev/crypto-intelligence markets",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "alt_mom7": {
-    "value": 3.66,
-    "source": "benthepythondev/crypto-intelligence markets 14-alt basket 7d",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "breadth_pct": {
-    "value": 71.4,
-    "source": "benthepythondev/crypto-intelligence markets",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "vix": {
-    "value": 16.4,
-    "source": "benthepythondev/yahoo-finance-scraper ^VIX",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "move": {
-    "value": 65.39,
-    "source": "benthepythondev/yahoo-finance-scraper ^MOVE",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "dxy": {
-    "value": 100.84,
-    "source": "benthepythondev/yahoo-finance-scraper DX-Y.NYB",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "tips": {
-    "value": 2.23,
-    "source": "FRED DFII10 2026-06-17 via rag-web-browser",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "etf_flow": {
-    "value": 10.4,
-    "source": "farside.co.uk/btc 6/18 Total +10.4M",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "ndx_corr_30d": {
-    "value": 0.61,
-    "source": "benthepythondev/yahoo-finance-scraper BTC-USD vs ^NDX 30d Pearson",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  },
-  "strong_21d": {
-    "value": "LAB+310.4/WLD+123.8/XLM+16.8 top3",
-    "source": "crypto-intelligence historical days=21, 15 candidates",
-    "fetched_at_utc": "2026-06-19T00:17:00Z"
-  }
+ "btc_price": {
+  "value": 63475,
+  "source": "benthepythondev/crypto-intelligence markets (coingecko)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "btc_price_delta_pct": {
+  "value": 1.07,
+  "source": "crypto-intelligence markets price_change_percentage_24h",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "eth_price": {
+  "value": 1707.6,
+  "source": "crypto-intelligence markets",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "eth_price_delta_pct": {
+  "value": 0.02,
+  "source": "crypto-intelligence markets 24h",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "btc_d": {
+  "value": 56.19,
+  "source": "makework36/coingecko-scraper global btcDominance",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "eth_d": {
+  "value": 9.11,
+  "source": "makework36/coingecko-scraper global ethDominance",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "others_d": {
+  "value": 11.93,
+  "source": "100 - sum(marketCapPercentage top10)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "total3_d": {
+  "value": 23.19,
+  "source": "100 - btc_d - eth_d - stable(usdt+usdc=11.52)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "btc_d_delta7": {
+  "value": -0.27,
+  "source": "dominance_history; baseline interp 06-13=56.46 (from 06-12 56.37 / 06-14 56.55)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "ethbtc": {
+  "value": 0.0269,
+  "source": "eth_price/btc_price",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "alt_mom7": {
+  "value": 3.59,
+  "source": "mean 7d% of 14 alts (crypto-intelligence markets)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "breadth_pct": {
+  "value": 71.4,
+  "source": "10/14 alts 7d>BTC 7d(-0.09%)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "vix": {
+  "value": 16.78,
+  "source": "benthepythondev/yahoo-finance-scraper ^VIX quote",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "move": {
+  "value": 65.39,
+  "source": "yahoo-finance-scraper ^MOVE quote",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "dxy": {
+  "value": 100.85,
+  "source": "yahoo-finance-scraper DX-Y.NYB quote",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "tips": {
+  "value": 2.18,
+  "source": "tradingeconomics 10Y TIPS Yield (US 10Y TIPS Jun/19) via Apify rag-web-browser",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "etf_flow": {
+  "value": -90.7,
+  "source": "farside.co.uk/btc last data row 18 Jun 2026 Total via rag-web-browser (6/18, latest published)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "etf_flow_last": {
+  "value": 10.4,
+  "source": "prior day (06-19 today.json)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "ndx_corr_30d": {
+  "value": 0.55,
+  "source": "Pearson of 30 daily returns BTC-USD vs ^NDX (yahoo-finance-scraper history 3mo, inner-join)",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "x_sentiment": {
+  "value": null,
+  "source": "kaitoeasyapi actor FAILED (3rd day); xquik fallback BTC-EN-only thin/junk sample -> null",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ "strong_21d": {
+  "value": "PARTIAL",
+  "source": "crypto-intelligence historical days=21; Apify MONTHLY HARD LIMIT after 7/20 coins -> partial board, no 30d substitution",
+  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ }
 }
