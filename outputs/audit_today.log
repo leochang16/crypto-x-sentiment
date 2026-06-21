@@ -1,9 +1,10 @@
-2026-06-20 X SENTIMENT: kaitoeasyapi/twitter-x-data-tweet-scraper FAILED exitCode1 (provider outage, 3rd consecutive day).
-  Fallback xquik/x-tweet-scraper run1 (6 terms, queryType=Top, within_time=1d) -> 29 tweets, ALL from 'BTC OR Bitcoin lang:en'; other 5 terms (ETH en, BTC zh, ETH zh, crypto market en, alt zh) returned 0.
-  Sample junk-heavy (giveaways/iPhone/price-bot shills removed). Engagement-weighted BTC score computed ~67 but dominated by single viral tweet whose bull/neutral classification swings band neutral<->greed -> deemed unreliable. BTC & ETH score=null.
-  xquik re-run for ETH/zh terms FAILED: 'Maximum charged results must be greater than zero' (provider error, 3 attempts).
-2026-06-20 STRONG 21D: benthepythondev/crypto-intelligence mode=historical SUCCEEDED for 7 coins: wld +115.68, lab +95.29, xlm -19.37, hype +7.28, jup +0.97, uni +0.90, aave -11.31.
-  ena returned 0 items (rate-limit) then Apify 'Monthly usage hard limit exceeded' -> ALL further actor runs blocked. Could NOT fetch: ena,beat,near,dexe,qnt,morpho,bdx,cc,wlfi,hash,pol,night.
-  Per 6/16 rule: NO 30d substitution, NO fabrication. Board reported as PARTIAL (7 real-21D coins). exits=[] (cannot verify bdx/cc/rain/wlfi/hash without data). top10 carries coin id so front-end recomputes 21D live as backstop.
-2026-06-20 TIPS: FRED DFII10 WebSearch did not surface a number; used tradingeconomics 10Y TIPS Yield 2.18 (Jun/19) via rag-web-browser.
-2026-06-20 btc_d_delta7: 7d-prior date 06-13 absent in history; linear-interpolated baseline 56.46 (06-12 56.37 / 06-14 56.55) -> delta7 -0.27pp (all candidate baselines negative, req1=True robust).
+2026-06-21 FULL DATA-SOURCE OUTAGE.
+  APIFY: every actor call returns 'Monthly usage hard limit exceeded' (account-wide, exhausted from start of session). Blocked: benthepythondev/crypto-intelligence (markets+historical), makework36/coingecko-scraper (global dominance), benthepythondev/yahoo-finance-scraper (VIX/MOVE/DXY + NDX/BTC history), kaitoeasyapi twitter X scraper + fallbacks, rag-web-browser (farside ETF).
+  LUNARCRUSH MCP: all tools (cryptocurrencies/list/topic/fetch) return 'Subscription required'; auth = not authenticated. Unusable.
+  WEBFETCH crypto APIs: CoinGecko /global + /coins/markets -> 403; Coinpaprika /global -> 403; CoinLore /global + /tickers -> 403; Binance 24hr -> 403; CryptoCompare -> 403; CoinCap -> ECONNREFUSED; data-api.coindesk -> 403. Sandbox proxy blocked by all crypto-API CDNs.
+  RESULT: prices, dominance, alt momentum, 21D rankings, VIX/MOVE/DXY, ndx_corr = null (rules forbid WebSearch estimation for these). verdict defaults ALT-OFF (req1/req2 unconfirmable; NOT a real bearish signal).
+2026-06-21 OBTAINED via WebSearch (allowed): TIPS DFII10 = 2.19% (Jun 18, FRED/St.Louis Fed). News (Fed hawkish hold 6/17, BTC ETF weekly outflow $1.67B, Fannie Mae crypto collateral, ETH Foundation co-ED Hsiao-Wei Wang resigns, USD strength). Calendar (6/23 PMI flash, 6/26 May core PCE).
+2026-06-21 CARRY-FORWARD: dxy_last=100.85, etf_flow_last=-90.7 (from 2026-06-20 today.json).
+2026-06-21 ETF flow: farside.co.uk 403 (WebFetch) + Apify rag blocked; WebSearch snippets had no dated daily Total -> etf_flow=null (no fabrication).
+2026-06-21 STRONG 21D: markets list + per-coin historical both blocked -> top10=[] empty, c3_entry=[], exits=[]. NO 30d substitution, NO fabrication (6/16 rule). Front-end has no rows to recompute today.
+2026-06-21 dominance_history.json + top3_state.json: NOT appended today (no valid btc_d / no Top10) to avoid corrupting future delta7 & exit calculations.

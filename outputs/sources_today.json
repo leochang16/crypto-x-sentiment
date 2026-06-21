@@ -1,107 +1,82 @@
 {
  "btc_price": {
-  "value": 63475,
-  "source": "benthepythondev/crypto-intelligence markets (coingecko)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "btc_price_delta_pct": {
-  "value": 1.07,
-  "source": "crypto-intelligence markets price_change_percentage_24h",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
+  "value": null,
+  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules)",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
  },
  "eth_price": {
-  "value": 1707.6,
-  "source": "crypto-intelligence markets",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
+  "value": null,
+  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules)",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
  },
- "eth_price_delta_pct": {
-  "value": 0.02,
-  "source": "crypto-intelligence markets 24h",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "btc_d": {
-  "value": 56.19,
-  "source": "makework36/coingecko-scraper global btcDominance",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "eth_d": {
-  "value": 9.11,
-  "source": "makework36/coingecko-scraper global ethDominance",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "others_d": {
-  "value": 11.93,
-  "source": "100 - sum(marketCapPercentage top10)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "total3_d": {
-  "value": 23.19,
-  "source": "100 - btc_d - eth_d - stable(usdt+usdc=11.52)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "btc_d_delta7": {
-  "value": -0.27,
-  "source": "dominance_history; baseline interp 06-13=56.46 (from 06-12 56.37 / 06-14 56.55)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "ethbtc": {
-  "value": 0.0269,
-  "source": "eth_price/btc_price",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "alt_mom7": {
-  "value": 3.59,
-  "source": "mean 7d% of 14 alts (crypto-intelligence markets)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "breadth_pct": {
-  "value": 71.4,
-  "source": "10/14 alts 7d>BTC 7d(-0.09%)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "vix": {
-  "value": 16.78,
-  "source": "benthepythondev/yahoo-finance-scraper ^VIX quote",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "move": {
-  "value": 65.39,
-  "source": "yahoo-finance-scraper ^MOVE quote",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "dxy": {
-  "value": 100.85,
-  "source": "yahoo-finance-scraper DX-Y.NYB quote",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "tips": {
-  "value": 2.18,
-  "source": "tradingeconomics 10Y TIPS Yield (US 10Y TIPS Jun/19) via Apify rag-web-browser",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "etf_flow": {
-  "value": -90.7,
-  "source": "farside.co.uk/btc last data row 18 Jun 2026 Total via rag-web-browser (6/18, latest published)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "etf_flow_last": {
-  "value": 10.4,
-  "source": "prior day (06-19 today.json)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
- },
- "ndx_corr_30d": {
-  "value": 0.55,
-  "source": "Pearson of 30 daily returns BTC-USD vs ^NDX (yahoo-finance-scraper history 3mo, inner-join)",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
+ "btc_eth_24h": {
+  "value": null,
+  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules)",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
  },
  "x_sentiment": {
   "value": null,
-  "source": "kaitoeasyapi actor FAILED (3rd day); xquik fallback BTC-EN-only thin/junk sample -> null",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
+  "source": "FAILED: Apify twitter scraper + fallbacks blocked (monthly hard-limit); LunarCrush gated -> null",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "dominance": {
+  "value": null,
+  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules) [makework36/coingecko-scraper global blocked]",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "alt_mom7_breadth": {
+  "value": null,
+  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules)",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "btc_d_delta7": {
+  "value": null,
+  "source": "null: today btc_d unobtainable (source down) -> cannot compute delta",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "vix": {
+  "value": null,
+  "source": "FAILED: benthepythondev/yahoo-finance-scraper blocked (Apify monthly hard-limit); WebSearch macro-index estimation forbidden -> null",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "move": {
+  "value": null,
+  "source": "FAILED: benthepythondev/yahoo-finance-scraper blocked (Apify monthly hard-limit); WebSearch macro-index estimation forbidden -> null",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "dxy": {
+  "value": null,
+  "source": "FAILED: benthepythondev/yahoo-finance-scraper blocked (Apify monthly hard-limit); WebSearch macro-index estimation forbidden -> null",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "dxy_last": {
+  "value": 100.85,
+  "source": "carry-forward from 2026-06-20 today.json dxy",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "tips": {
+  "value": 2.19,
+  "source": "WebSearch FRED DFII10 = 2.19% as of 2026-06-18 (St. Louis Fed / TradingView)",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "etf_flow": {
+  "value": null,
+  "source": "FAILED: farside.co.uk/btc/ 403 via WebFetch; Apify rag-web-browser blocked; no dated daily total in WebSearch snippets -> null",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "etf_flow_last": {
+  "value": -90.7,
+  "source": "carry-forward from 2026-06-20 today.json etf_flow",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ "ndx_corr_30d": {
+  "value": null,
+  "source": "FAILED: benthepythondev/yahoo-finance-scraper blocked (Apify monthly hard-limit); WebSearch macro-index estimation forbidden -> null [BTC-USD & ^NDX history unobtainable]",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
  },
  "strong_21d": {
-  "value": "PARTIAL",
-  "source": "crypto-intelligence historical days=21; Apify MONTHLY HARD LIMIT after 7/20 coins -> partial board, no 30d substitution",
-  "fetched_at_utc": "2026-06-20T00:18:00Z"
+  "value": null,
+  "source": "FAILED: markets list + per-coin historical (crypto-intelligence) blocked by Apify monthly hard-limit -> top10 empty, NO 30d substitution per 6/16 rule",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
  }
 }
