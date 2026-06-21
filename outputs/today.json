@@ -1,9 +1,9 @@
 {
-  "date": "2026-06-20",
-  "weekday": "週六",
-  "updated_tpe": "08:18",
-  "verdict": "GO",
-  "verdict_reason_code": "req1_req2_pass",
+  "date": "2026-06-21",
+  "weekday": "週日",
+  "updated_tpe": "08:10",
+  "verdict": "ALT-OFF",
+  "verdict_reason_code": "source_down",
   "x": {
     "btc": {
       "score": null,
@@ -15,70 +15,70 @@
       "band": null,
       "delta_1d": null
     },
-    "btc_price": 63475,
-    "btc_price_delta_pct": 1.07,
-    "eth_price": 1707.6,
-    "eth_price_delta_pct": 0.02,
+    "btc_price": null,
+    "btc_price_delta_pct": null,
+    "eth_price": null,
+    "eth_price_delta_pct": null,
     "top_discussions": [
       {
-        "title": "BTC 反彈守 200 週均線 抄底聲量升溫",
-        "tag": "bull"
-      },
-      {
-        "title": "選擇權交易員壓 7 月 $52K 看跌避險",
+        "title": "聯準會釋鷹派訊號 加密連日承壓 風險偏好轉弱",
         "tag": "bear"
       },
       {
-        "title": "逾半 BTC 籌碼套牢 市場觀望最終一砸",
+        "title": "BTC 現貨 ETF 單週淨流出逾 $1.6B 機構撤離",
+        "tag": "bear"
+      },
+      {
+        "title": "美元走強+利率預期升溫 市場觀望 PCE 數據",
         "tag": "watch"
       }
     ]
   },
   "macro": {
-    "vix": 16.78,
-    "move": 65.39,
-    "dxy": 100.85,
-    "dxy_last": 100.84,
-    "tips": 2.18,
-    "etf_flow": -90.7,
-    "etf_flow_last": 10.4,
-    "ndx_corr_30d": 0.55
+    "vix": null,
+    "move": null,
+    "dxy": null,
+    "dxy_last": 100.85,
+    "tips": 2.19,
+    "etf_flow": null,
+    "etf_flow_last": -90.7,
+    "ndx_corr_30d": null
   },
   "dominance": {
-    "btc_d": 56.19,
-    "btc_d_delta7": -0.27,
-    "others_d": 11.93,
-    "total3_d": 23.19,
-    "ethbtc": 0.0269,
-    "alt_mom7": 3.59,
-    "breadth_pct": 71.4,
-    "n_valid": 14,
-    "req1": true,
-    "req2": true,
+    "btc_d": null,
+    "btc_d_delta7": null,
+    "others_d": null,
+    "total3_d": null,
+    "ethbtc": null,
+    "alt_mom7": null,
+    "breadth_pct": null,
+    "n_valid": 0,
+    "req1": false,
+    "req2": false,
     "bonus_a": false,
-    "bonus_b": true,
+    "bonus_b": false,
     "bonus_c": false
   },
   "news": [
     {
       "sev": "high",
-      "title": "BTC 現貨 ETF 6/18 淨流出 $90.7M 機構續調節"
+      "title": "聯準會 6/17 維持利率不變並釋鷹派訊號 BTC/ETH 連日下跌"
     },
     {
       "sev": "high",
-      "title": "聯準會維持利率不變 美元指數逼近一年高"
+      "title": "BTC 現貨 ETF 6 月持續淨流出 單週規模達 $1.67B"
     },
     {
       "sev": "med",
-      "title": "BTC 反彈至 $63.5K 守 200 週均線 多空拉鋸"
+      "title": "Fannie Mae 將接受加密貨幣作為房貸抵押品 (FHFA 指示)"
     },
     {
       "sev": "med",
-      "title": "榜首 LAB 單日暴跌 29% 21D 漲幅收斂至 95%"
+      "title": "以太坊基金會共同執行董事 Hsiao-Wei Wang 請辭 領導層動盪"
     },
     {
       "sev": "med",
-      "title": "Nasdaq100 6/18 收漲 2.5% 科技股帶動風險偏好"
+      "title": "美元走強+利率預期升溫 壓抑加密與貴金屬等無息資產"
     }
   ],
   "calendar": {
@@ -91,75 +91,22 @@
     ],
     "week": [
       {
-        "date": "06-25 週四",
-        "event": "美國 5 月 PCE 物價指數 (聯準會偏好通膨指標)",
+        "date": "06-23 週二",
+        "event": "美國 6 月 Markit 製造業/服務業 PMI 初值",
         "tag": "fed"
       },
       {
-        "date": "06-25 週四",
-        "event": "美國初領失業金人數",
+        "date": "06-26 週五",
+        "event": "美國 5 月核心 PCE 物價指數 (聯準會偏好通膨指標)",
         "tag": "fed"
       }
     ]
   },
   "strong": {
     "window": "21D",
-    "c3_entry": [
-      "LAB",
-      "WLD"
-    ],
-    "c3_day": 15,
+    "c3_entry": [],
+    "c3_day": 0,
     "exits": [],
-    "top10": [
-      {
-        "rank": 1,
-        "sym": "WLD",
-        "ret": 115.7,
-        "status": "c3",
-        "id": "worldcoin-wld"
-      },
-      {
-        "rank": 2,
-        "sym": "LAB",
-        "ret": 95.3,
-        "status": "c3",
-        "id": "lab"
-      },
-      {
-        "rank": 3,
-        "sym": "HYPE",
-        "ret": 7.3,
-        "status": "hold",
-        "id": "hyperliquid"
-      },
-      {
-        "rank": 4,
-        "sym": "JUP",
-        "ret": 1.0,
-        "status": "down",
-        "id": "jupiter-exchange-solana"
-      },
-      {
-        "rank": 5,
-        "sym": "UNI",
-        "ret": 0.9,
-        "status": "new",
-        "id": "uniswap"
-      },
-      {
-        "rank": 6,
-        "sym": "AAVE",
-        "ret": -11.3,
-        "status": "new",
-        "id": "aave"
-      },
-      {
-        "rank": 7,
-        "sym": "XLM",
-        "ret": -19.4,
-        "status": "down",
-        "id": "stellar"
-      }
-    ]
+    "top10": []
   }
 }

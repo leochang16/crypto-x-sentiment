@@ -215,5 +215,15 @@
   },
   "method": "kaitoeasyapi actor FAILED exitCode1 (provider outage, 3rd day). Fallback xquik/x-tweet-scraper run1 returned 29 tweets BTC-EN only (5/6 terms empty); junk-heavy, one viral tweet swings band neutral<->greed -> sample unreliable, BTC/ETH score=null. Re-run for ETH/zh terms failed (provider: Maximum charged results must be greater than zero).",
   "fetched_at_utc": "2026-06-20T00:18:00Z"
+ },
+ {
+  "date": "2026-06-21",
+  "btc_score": null,
+  "eth_score": null,
+  "btc_band": null,
+  "eth_band": null,
+  "terms": {},
+  "method": "FULL SOURCE OUTAGE. Apify account 'Monthly usage hard limit exceeded' from start -> kaitoeasyapi/twitter X scraper + all fallback actors blocked. LunarCrush MCP requires paid subscription (gated). No X sentiment obtainable. btc/eth score=null.",
+  "fetched_at_utc": "2026-06-21T00:10:08Z"
  }
 ]
