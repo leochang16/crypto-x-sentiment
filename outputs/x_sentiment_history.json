@@ -225,5 +225,15 @@
   "terms": {},
   "method": "FULL SOURCE OUTAGE. Apify account 'Monthly usage hard limit exceeded' from start -> kaitoeasyapi/twitter X scraper + all fallback actors blocked. LunarCrush MCP requires paid subscription (gated). No X sentiment obtainable. btc/eth score=null.",
   "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ {
+  "date": "2026-06-22",
+  "btc_score": null,
+  "eth_score": null,
+  "btc_band": null,
+  "eth_band": null,
+  "terms": {},
+  "method": "FULL SOURCE OUTAGE (2nd consecutive day). Apify 'Monthly usage hard limit exceeded' -> kaitoeasyapi/twitter X scraper + all fallback actors blocked. LunarCrush MCP requires paid subscription (gated). No X sentiment obtainable. btc/eth score=null.",
+  "fetched_at_utc": "2026-06-22T00:08:43Z"
  }
 ]

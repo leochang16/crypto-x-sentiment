@@ -232,5 +232,22 @@
   "n_valid": 0,
   "note": "SOURCE DOWN: Apify monthly hard-limit exhausted, LunarCrush gated, all crypto APIs 403 via WebFetch. dominance/alt momentum unobtainable -> req1/req2 cannot be confirmed -> default ALT-OFF (not a true bearish signal, data outage).",
   "fetched_at_utc": "2026-06-21T00:10:08Z"
+ },
+ {
+  "date": "2026-06-22",
+  "verdict": "ALT-OFF",
+  "req1": false,
+  "req2": false,
+  "bonus_a": false,
+  "bonus_b": false,
+  "bonus_c": false,
+  "btc_d": null,
+  "btc_d_delta7": null,
+  "alt_mom7": null,
+  "others_d": null,
+  "breadth_pct": null,
+  "n_valid": 0,
+  "note": "SOURCE DOWN (2nd consecutive day): Apify monthly hard-limit exhausted, LunarCrush gated. dominance/alt momentum unobtainable -> req1/req2 cannot be confirmed -> default ALT-OFF (data outage, not a true bearish signal).",
+  "fetched_at_utc": "2026-06-22T00:08:43Z"
  }
 ]

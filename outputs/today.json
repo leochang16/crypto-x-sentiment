@@ -1,7 +1,7 @@
 {
-  "date": "2026-06-21",
-  "weekday": "週日",
-  "updated_tpe": "08:10",
+  "date": "2026-06-22",
+  "weekday": "週一",
+  "updated_tpe": "08:08",
   "verdict": "ALT-OFF",
   "verdict_reason_code": "source_down",
   "x": {
@@ -21,15 +21,15 @@
     "eth_price_delta_pct": null,
     "top_discussions": [
       {
-        "title": "聯準會釋鷹派訊號 加密連日承壓 風險偏好轉弱",
+        "title": "機構撤離+ETF連日流出 加密風險偏好轉弱",
         "tag": "bear"
       },
       {
-        "title": "BTC 現貨 ETF 單週淨流出逾 $1.6B 機構撤離",
+        "title": "ETH/BTC 跌至 0.027 山寨弱勢 結構疑慮升溫",
         "tag": "bear"
       },
       {
-        "title": "美元走強+利率預期升溫 市場觀望 PCE 數據",
+        "title": "市場觀望週四 PCE 通膨數據 多空僵持",
         "tag": "watch"
       }
     ]
@@ -40,7 +40,7 @@
     "dxy": null,
     "dxy_last": 100.85,
     "tips": 2.19,
-    "etf_flow": null,
+    "etf_flow": -113.08,
     "etf_flow_last": -90.7,
     "ndx_corr_30d": null
   },
@@ -62,31 +62,31 @@
   "news": [
     {
       "sev": "high",
-      "title": "聯準會 6/17 維持利率不變並釋鷹派訊號 BTC/ETH 連日下跌"
+      "title": "BTC 今年來累跌約 30% 機構持續撤離 槓桿多單遭清算"
     },
     {
       "sev": "high",
-      "title": "BTC 現貨 ETF 6 月持續淨流出 單週規模達 $1.67B"
+      "title": "BTC 現貨 ETF 6/19 淨流出約 $113M ETH 現貨 ETF 連續流出"
     },
     {
       "sev": "med",
-      "title": "Fannie Mae 將接受加密貨幣作為房貸抵押品 (FHFA 指示)"
+      "title": "ETH/BTC 比值 6/21 跌至 0.027（2023 初水準）結構性弱勢引爭論"
     },
     {
       "sev": "med",
-      "title": "以太坊基金會共同執行董事 Hsiao-Wei Wang 請辭 領導層動盪"
+      "title": "美國加密市場結構法案 CLARITY Act 兩黨推進 SEC/CFTC 分權監管"
     },
     {
       "sev": "med",
-      "title": "美元走強+利率預期升溫 壓抑加密與貴金屬等無息資產"
+      "title": "BTC 測試 $63,830 關鍵支撐 守住有望反彈至 $65,800-66,000"
     }
   ],
   "calendar": {
     "today": [
       {
         "time": "全天",
-        "event": "週末現貨量能偏低 留意永續合約清算",
-        "tag": "crypto"
+        "event": "美股無重大數據 市場觀望 ETF 資金流與週四 PCE 前布局",
+        "tag": "fed"
       }
     ],
     "week": [
