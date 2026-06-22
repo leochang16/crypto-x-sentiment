@@ -1,82 +1,72 @@
 {
- "btc_price": {
-  "value": null,
-  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules)",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "eth_price": {
-  "value": null,
-  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules)",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "btc_eth_24h": {
-  "value": null,
-  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules)",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "x_sentiment": {
-  "value": null,
-  "source": "FAILED: Apify twitter scraper + fallbacks blocked (monthly hard-limit); LunarCrush gated -> null",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "dominance": {
-  "value": null,
-  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules) [makework36/coingecko-scraper global blocked]",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "alt_mom7_breadth": {
-  "value": null,
-  "source": "FAILED: Apify 'Monthly usage hard limit exceeded' (account-wide, all actors blocked); LunarCrush MCP gated (paid); CoinGecko/Coinpaprika/CoinLore/Binance/CryptoCompare/CoinCap all 403/ECONNREFUSED via WebFetch -> null (WebSearch price estimation forbidden by rules)",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "btc_d_delta7": {
-  "value": null,
-  "source": "null: today btc_d unobtainable (source down) -> cannot compute delta",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "vix": {
-  "value": null,
-  "source": "FAILED: benthepythondev/yahoo-finance-scraper blocked (Apify monthly hard-limit); WebSearch macro-index estimation forbidden -> null",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "move": {
-  "value": null,
-  "source": "FAILED: benthepythondev/yahoo-finance-scraper blocked (Apify monthly hard-limit); WebSearch macro-index estimation forbidden -> null",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "dxy": {
-  "value": null,
-  "source": "FAILED: benthepythondev/yahoo-finance-scraper blocked (Apify monthly hard-limit); WebSearch macro-index estimation forbidden -> null",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "dxy_last": {
-  "value": 100.85,
-  "source": "carry-forward from 2026-06-20 today.json dxy",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "tips": {
-  "value": 2.19,
-  "source": "WebSearch FRED DFII10 = 2.19% as of 2026-06-18 (St. Louis Fed / TradingView)",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "etf_flow": {
-  "value": null,
-  "source": "FAILED: farside.co.uk/btc/ 403 via WebFetch; Apify rag-web-browser blocked; no dated daily total in WebSearch snippets -> null",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "etf_flow_last": {
-  "value": -90.7,
-  "source": "carry-forward from 2026-06-20 today.json etf_flow",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "ndx_corr_30d": {
-  "value": null,
-  "source": "FAILED: benthepythondev/yahoo-finance-scraper blocked (Apify monthly hard-limit); WebSearch macro-index estimation forbidden -> null [BTC-USD & ^NDX history unobtainable]",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- },
- "strong_21d": {
-  "value": null,
-  "source": "FAILED: markets list + per-coin historical (crypto-intelligence) blocked by Apify monthly hard-limit -> top10 empty, NO 30d substitution per 6/16 rule",
-  "fetched_at_utc": "2026-06-21T00:10:08Z"
- }
+  "x_btc_score": {
+    "value": null,
+    "source": "Apify kaitoeasyapi twitter scraper — DOWN: monthly usage hard limit exceeded; LunarCrush paywall",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "x_eth_score": {
+    "value": null,
+    "source": "Apify twitter scraper DOWN (monthly limit); LunarCrush paywall",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "btc_price": {
+    "value": null,
+    "source": "Apify benthepythondev/crypto-intelligence DOWN (monthly limit); no WebSearch est. allowed",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "eth_price": {
+    "value": null,
+    "source": "Apify crypto-intelligence DOWN (monthly limit)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "btc_d": {
+    "value": null,
+    "source": "Apify makework36/coingecko-scraper DOWN (monthly limit)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "eth_d": {
+    "value": null,
+    "source": "Apify makework36/coingecko-scraper DOWN (monthly limit)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "alt_mom7": {
+    "value": null,
+    "source": "Apify crypto-intelligence markets DOWN (monthly limit)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "vix": {
+    "value": null,
+    "source": "Apify benthepythondev/yahoo-finance-scraper DOWN (monthly limit)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "move": {
+    "value": null,
+    "source": "Apify yahoo-finance-scraper DOWN (monthly limit)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "dxy": {
+    "value": null,
+    "source": "Apify yahoo-finance-scraper DOWN (monthly limit); dxy_last=100.85 carried",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "tips": {
+    "value": 2.19,
+    "source": "WebSearch FRED DFII10 — 10Y TIPS real yield held 2.19% (as of 2026-06-18)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "etf_flow": {
+    "value": -113.08,
+    "source": "WebSearch — BTC spot ETF net flow 2026-06-19 ≈ -$113.08M (Lookonchain; farside via Apify rag-web-browser DOWN). etf_flow_last=-90.7 (6/18)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "ndx_corr_30d": {
+    "value": null,
+    "source": "Apify yahoo-finance-scraper history DOWN (monthly limit)",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  },
+  "strong_21d": {
+    "value": null,
+    "source": "Apify crypto-intelligence historical DOWN (monthly limit); no CMC/WebSearch est. allowed",
+    "fetched_at_utc": "2026-06-22T00:08:43Z"
+  }
 }

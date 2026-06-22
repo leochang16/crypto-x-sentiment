@@ -459,5 +459,13 @@
   "eth": null,
   "btc_price": null,
   "eth_price": null
+ },
+ {
+  "date": "2026-06-22",
+  "btc": null,
+  "btc_band": null,
+  "eth": null,
+  "btc_price": null,
+  "eth_price": null
  }
 ]

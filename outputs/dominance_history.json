@@ -178,5 +178,18 @@
   "n_valid": 14,
   "fetched_at_utc": "2026-06-20T00:18:00Z",
   "source": "makework36/coingecko-scraper (global) + benthepythondev/crypto-intelligence (markets). delta7 baseline=interpolated 06-13 (56.46 from 06-12/06-14)"
+ },
+ {
+  "date": "2026-06-22",
+  "btc_d": null,
+  "eth_d": null,
+  "others_d": null,
+  "total3_d": null,
+  "btc_d_delta7": null,
+  "alt_mom7": null,
+  "breadth_pct": null,
+  "n_valid": 0,
+  "fetched_at_utc": "2026-06-22T00:08:43Z",
+  "source": "Apify makework36/coingecko-scraper + crypto-intelligence DOWN (monthly usage hard limit exceeded). all null."
  }
 ]

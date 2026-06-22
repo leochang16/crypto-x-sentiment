@@ -651,7 +651,24 @@
    "c3_exit": [],
    "notes": "LAB+WLD c3 Day15 (clear #1/#2: WLD +115.7%, LAB +95.3%). XLM 21D collapsed +16.8%->-19.4% (30d +51% front-loaded pump faded). exits=[] NOT computed: Apify monthly hard-limit truncated scan at 7 coins so bdx/cc/rain/wlfi/hash 21D unknown -> cannot assert exit (honest, not fabricated). Ranks 3-7 partial; front-end recomputes via coin id as backstop.",
    "fetched_at_utc": "2026-06-20T00:18:00Z"
+  },
+  {
+   "date": "2026-06-22",
+   "scan_done": false,
+   "regime": "ALT-OFF",
+   "method": "Apify benthepythondev/crypto-intelligence historical DOWN (monthly usage hard limit exceeded). 21D scan impossible; no 30d/WebSearch substitution allowed.",
+   "top3": [],
+   "top10": [],
+   "top10_gains_21d": {},
+   "exits_today": [],
+   "new_entrants": [],
+   "c3_coins": [],
+   "c3_day": 0,
+   "c3_entry": [],
+   "c3_exit": [],
+   "notes": "SOURCE DOWN: strong-coin scan skipped. all null.",
+   "fetched_at_utc": "2026-06-22T00:08:43Z"
   }
  ],
- "last_updated": "2026-06-20"
+ "last_updated": "2026-06-22T00:08:43Z"
 }
