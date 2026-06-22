@@ -15,10 +15,10 @@
       "band": null,
       "delta_1d": null
     },
-    "btc_price": null,
-    "btc_price_delta_pct": null,
-    "eth_price": null,
-    "eth_price_delta_pct": null,
+    "btc_price": 64206,
+    "btc_price_delta_pct": -0.12,
+    "eth_price": 1734.59,
+    "eth_price_delta_pct": -0.09,
     "top_discussions": [
       {
         "title": "機構撤離+ETF連日流出 加密風險偏好轉弱",
@@ -106,7 +106,75 @@
     "window": "21D",
     "c3_entry": [],
     "c3_day": 0,
-    "exits": [],
-    "top10": []
+    "exits": [
+      "HYPE",
+      "JUP",
+      "UNI",
+      "AAVE",
+      "XLM"
+    ],
+    "top10": [
+      {
+        "rank": 1,
+        "sym": "BTW",
+        "ret": 689.24,
+        "status": "new"
+      },
+      {
+        "rank": 2,
+        "sym": "VELVET",
+        "ret": 407.07,
+        "status": "new"
+      },
+      {
+        "rank": 3,
+        "sym": "BP",
+        "ret": 284.47,
+        "status": "new"
+      },
+      {
+        "rank": 4,
+        "sym": "SKYAI",
+        "ret": 128.11,
+        "status": "new"
+      },
+      {
+        "rank": 5,
+        "sym": "WLD",
+        "ret": 64.0,
+        "status": "hold"
+      },
+      {
+        "rank": 6,
+        "sym": "LAB",
+        "ret": 53.2,
+        "status": "hold"
+      },
+      {
+        "rank": 7,
+        "sym": "BC",
+        "ret": 46.79,
+        "status": "new"
+      },
+      {
+        "rank": 8,
+        "sym": "BEAT",
+        "ret": 44.5,
+        "status": "new"
+      },
+      {
+        "rank": 9,
+        "sym": "EIGEN",
+        "ret": 39.27,
+        "status": "new"
+      },
+      {
+        "rank": 10,
+        "sym": "LIT",
+        "ret": 22.53,
+        "status": "new"
+      }
+    ],
+    "note": "6/22 Apify 月配額用罄→全pipeline空;此榜由 CoinGecko 直抓真21D人工補回"
   }
 }
